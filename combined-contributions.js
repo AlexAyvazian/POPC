@@ -35,11 +35,12 @@ function sector(name){const n=String(name||"").toUpperCase().trim();if(!n||statu
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
 const colors=["#b28b4c","#467d89","#a06354","#657d59","#7c709b","#b28b9c","#5c748d","#c4ad68","#527d70","#a57b65","#8c93b2","#9a9b62","#b96f83","#819bba","#877457","#b1a89c"];
 const indColor="#b28b4c",orgColor="#467d89";
-let selected="",sectorSelected="",query="",page=0,orgRecords=null,loadError=false;
+let selected="",sectorSelected="",query="",page=0,allRecords=null,mode="organization",loadFailures=[],loadedCommittees=0;
 const pageSize=50;
 const normalize=s=>String(s||"").trim().replace(/\s+/g," ").toUpperCase();
 function harmonize(name,label){
-const l=String(label||"");if(/unconfirmed|unverified|unclear/i.test(l)){const s=sector(name);return /unconfirmed|personal or unreported/i.test(s)?"Sector unconfirmed":harmonize(name,s);}
+const l=String(label||"");if(/unconfirmed|unverified|unclear/i.test(l))return "Sector unconfirmed";
+if(/personal|self.employ|not employed|non.employer|unreported|non.individual/i.test(l))return "Personal status / unreported employer";
 if(/tribal/i.test(l))return "Tribal nations & governments";
 if(/health insurance|managed care/i.test(l))return "Health insurance";
 if(/pharma|biotech|medical products/i.test(l))return "Pharmaceuticals & biotechnology";
@@ -59,7 +60,8 @@ if(/automotive|manufacturing/i.test(l))return "Manufacturing & automotive";
 if(/airline|transport|logistic|aviation/i.test(l))return "Transportation";
 if(/agricultur|food & beverage/i.test(l))return "Agriculture, food & beverage";
 if(/hospitality|horse racing|gaming/i.test(l))return "Hospitality & gaming";
-if(/retail|consumer/i.test(l))return "Retail & consumer";
+if(/retail|consumer|foodservice/i.test(l))return "Retail & consumer";
+if(/cannabis/i.test(l))return "Cannabis";
 if(/school|education/i.test(l))return "Education";
 if(/political|candidate|fundraising/i.test(l))return "Political committees & advocacy";
 if(/foreign policy/i.test(l))return "Foreign policy & advocacy";
@@ -68,7 +70,22 @@ if(/government|public sector/i.test(l))return "Government & public sector";
 if(/professional|accounting/i.test(l))return "Professional services";
 if(/civil rights|advocacy/i.test(l))return "Other advocacy";
 return l||"Sector unconfirmed";}
-function group(rows,key){const m=new Map();for(const r of rows){const k=key(r);let x=m.get(k);if(!x){x={name:k,value:0,count:0,committees:new Set(),sectors:new Set()};m.set(k,x);}x.value+=r.amount;x.count++;x.committees.add(r.committee);x.sectors.add(r.sector);}return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));}
+function aggregateDonors(rows,mode){
+ const m=new Map();
+ for(const r of rows){
+   if(mode==="organization"&&r.type!=="organization"||mode!=="organization"&&r.type!=="individual")continue;
+   const key=normalize(mode==="employer"?r.employer||"NOT REPORTED":r.name||"NOT REPORTED");
+   let v=m.get(key);if(!v){v={name:key,value:0,count:0,committees:new Map(),sectors:new Set(),employers:new Set()};m.set(key,v);}
+   v.value+=r.amount;v.count++;v.committees.set(r.committee,(v.committees.get(r.committee)||0)+r.amount);
+   v.sectors.add(r.sector);if(r.type==="individual")v.employers.add(normalize(r.employer||"NOT REPORTED"));
+ }
+ return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
+}
+function aggregateSectors(rows){
+ const m=new Map();
+ for(const r of rows){let v=m.get(r.sector);if(!v){v={name:r.sector,key:r.sector,value:0,individual:0,organization:0,count:0};m.set(r.sector,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
+ return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
+}
 function donut(host,items,onSelect,active,label){host.replaceChildren();const positive=items.filter(x=>x.value>0),den=sum(positive,"value");if(!den){host.textContent="No positive receipts in this selection.";return;}const wrap=document.createElement("div");wrap.className="ca-chart";const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 220 220");svg.setAttribute("class","ca-donut");svg.setAttribute("role","group");svg.setAttribute("aria-label",label);const radius=84,circ=2*Math.PI*radius;let off=0;const legend=document.createElement("div");legend.className="ca-legend";
 positive.forEach((item,i)=>{const color=item.color||colors[i%colors.length],c=document.createElementNS(svg.namespaceURI,"circle"),frac=item.value/den;for(const [k,v] of Object.entries({cx:110,cy:110,r:radius,fill:"none",stroke:color,"stroke-width":34,"stroke-dasharray":(frac*circ)+" "+circ,"stroke-dashoffset":-off,transform:"rotate(-90 110 110)"}))c.setAttribute(k,v);off+=frac*circ;const desc=item.name+": "+money(item.value)+" ("+pct(item.value,den)+")";const title=document.createElementNS(svg.namespaceURI,"title");title.textContent=desc;c.append(title);if(onSelect){c.setAttribute("role","button");c.setAttribute("tabindex","0");c.setAttribute("aria-label",desc);c.addEventListener("click",()=>onSelect(item));c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();onSelect(item);}});}svg.append(c);
 const b=document.createElement(onSelect?"button":"div");if(onSelect){b.type="button";b.addEventListener("click",()=>onSelect(item));b.setAttribute("aria-pressed",String(active===item.key));}else{b.style.display="flex";b.style.alignItems="center";b.style.gap="9px";b.style.padding="7px";}if(active===item.key&&onSelect)b.classList.add("ca-selected");b.innerHTML='<span class="ca-swatch" style="background:'+color+'"></span><span class="ca-legend-name">'+esc(item.name)+'</span><span class="ca-legend-value">'+money(item.value)+'<small>'+pct(item.value,den)+'</small></span>';legend.append(b);});
@@ -84,12 +101,58 @@ donut($("ca-source-pie"),[{name:"Individual receipts",key:"ind",value:ic,color:i
 const bars=$("ca-bars");bars.replaceChildren();const key=document.createElement("div");key.className="ca-bar-key";key.innerHTML='<span><i class="ca-swatch" style="background:'+indColor+'"></i>Individual</span><span><i class="ca-swatch" style="background:'+orgColor+'"></i>PAC / organization</span>';bars.append(key);const max=gross(ordered[0]);for(const x of ordered){const b=document.createElement("button");b.type="button";b.className="ca-bar"+(x.key===selected?" ca-selected":"");b.setAttribute("aria-pressed",String(x.key===selected));b.title=x.name+": "+money(gross(x));b.innerHTML='<span>'+esc(x.name)+'</span><span class="ca-track"><span style="background:'+indColor+';width:'+100*x.individual/max+'%"></span><span style="background:'+orgColor+';width:'+100*x.organization/max+'%"></span></span><span class="ca-bar-amount">'+money(gross(x))+'</span>';b.addEventListener("click",()=>chooseCommittee(x.key));bars.append(b);}
 $("ca-committee-rows").innerHTML=ordered.map(x=>'<tr><td><a href="'+x.slug+'.html">'+esc(x.name)+'</a></td><td class="jvf-money">'+money(x.individual)+'</td><td class="jvf-money">'+money(x.organization)+'</td><td class="jvf-money"><strong>'+money(gross(x))+'</strong></td><td>'+pct(gross(x),all)+'</td></tr>').join("")+'<tr><th scope="row">Combined total</th><td>'+money(sum(config,"individual"))+'</td><td>'+money(sum(config,"organization"))+'</td><td><strong>'+money(all)+'</strong></td><td>100.00%</td></tr>';
 renderOrganizations();}
-function renderOrganizations(){if(!orgRecords){$("ca-org-rows").innerHTML='<tr><td colspan="5">'+(loadError?"Organization detail unavailable. Reload to retry.":"Loading organization records…")+'</td></tr>';$("ca-prev").disabled=$("ca-next").disabled=true;return;}
-const records=selected?orgRecords.filter(x=>x.committee===selected):orgRecords;const groups=group(records,r=>r.sector);const opt=$("ca-sector");opt.replaceChildren(new Option("All sectors",""));for(const x of [...groups].sort((a,b)=>a.name.localeCompare(b.name)))opt.add(new Option(x.name,x.name));if(!groups.some(x=>x.name===sectorSelected))sectorSelected="";opt.value=sectorSelected;donut($("ca-sector-pie"),groups.map(x=>({...x,key:x.name})),x=>chooseSector(x.key),sectorSelected,"Organizational receipts by sector");const filtered=records.filter(r=>(!sectorSelected||r.sector===sectorSelected)&&(!query||normalize(r.name).includes(query)));const donors=group(filtered,r=>normalize(r.name));const max=Math.max(1,Math.ceil(donors.length/pageSize));page=Math.max(0,Math.min(page,max-1));const rows=donors.slice(page*pageSize,(page+1)*pageSize);$("ca-org-rows").innerHTML=rows.length?rows.map(x=>'<tr><td class="jvf-contributor">'+esc(x.name)+'</td><td>'+esc([...x.sectors].sort().join("; "))+'</td><td>'+[...x.committees].map(k=>{const c=config.find(y=>y.key===k);return '<a href="'+c.slug+'.html">'+esc(c.name)+'</a>';}).join("; ")+'</td><td>'+num(x.count)+'</td><td class="jvf-money">'+money(x.value)+'</td></tr>').join(""):'<tr><td colspan="5">No matching organization receipts.</td></tr>';$("ca-result-count").textContent=num(donors.length)+" reported names · "+money(sum(donors,"value"));$("ca-page").textContent="Page "+(page+1)+" of "+max;$("ca-prev").disabled=page===0;$("ca-next").disabled=page>=max-1;}
+function renderOrganizations(){
+if(!allRecords){$("ca-org-rows").innerHTML='<tr><td colspan="5">Loading all eight committee datasets…</td></tr>';$("ca-prev").disabled=$("ca-next").disabled=true;return;}
+const records=selected?allRecords.filter(x=>x.committee===selected):allRecords;
+const groups=aggregateSectors(records),opt=$("ca-sector");opt.replaceChildren(new Option("All sectors",""));for(const x of [...groups].sort((a,b)=>a.name.localeCompare(b.name)))opt.add(new Option(x.name,x.name));if(!groups.some(x=>x.name===sectorSelected))sectorSelected="";opt.value=sectorSelected;
+donut($("ca-all-sector-pie"),groups,x=>chooseSector(x.key),sectorSelected,"All direct receipts by sector");
+donut($("ca-sector-pie"),groups.filter(x=>x.organization!==0).map(x=>({...x,value:x.organization})),x=>{mode="organization";$("ca-mode").value=mode;chooseSector(x.key);},sectorSelected,"Direct organizations by sector");
+donut($("ca-ind-sector-pie"),groups.filter(x=>x.individual!==0).map(x=>({...x,value:x.individual})),x=>{mode="individual";$("ca-mode").value=mode;chooseSector(x.key);},sectorSelected,"Individual receipts by employer sector");
+const denominator=sum(groups,"value");
+$("ca-sector-rows").innerHTML=groups.map(x=>'<tr><td><button type="button" class="ca-sector-link" data-sector="'+esc(x.name)+'">'+esc(x.name)+'</button></td><td class="jvf-money">'+money(x.organization)+'</td><td class="jvf-money">'+money(x.individual)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td><td>'+pct(x.value,denominator)+'</td></tr>').join("")+'<tr><th scope="row">'+(loadFailures.length?"Loaded subtotal":"Total")+'</th><td>'+money(sum(groups,"organization"))+'</td><td>'+money(sum(groups,"individual"))+'</td><td><strong>'+money(denominator)+'</strong></td><td>'+(denominator?"100.00%":"—")+'</td></tr>';
+for(const b of $("ca-sector-rows").querySelectorAll("button"))b.addEventListener("click",()=>chooseSector(b.dataset.sector));
+$("ca-name-heading").textContent=mode==="organization"?"Organization / PAC":mode==="individual"?"Individual donor":"Reported employer";
+const candidates=aggregateDonors(records,mode);
+const donors=candidates.filter(x=>(!sectorSelected||x.sectors.has(sectorSelected))&&(!query||x.name.includes(query)||[...x.employers].some(v=>v.includes(query))));
+const max=Math.max(1,Math.ceil(donors.length/pageSize));page=Math.max(0,Math.min(page,max-1));const rows=donors.slice(page*pageSize,(page+1)*pageSize);
+$("ca-org-rows").innerHTML=rows.length?rows.map(x=>'<tr><td class="jvf-contributor">'+esc(x.name)+'</td><td>'+esc([...x.sectors].sort().join("; "))+(mode==="individual"?'<small class="jvf-row-note">'+esc([...x.employers].sort().join("; "))+'</small>':"")+'</td><td><details><summary>'+x.committees.size+' '+(x.committees.size===1?"committee":"committees")+'</summary><div class="ca-breakdown">'+[...x.committees].sort((a,b)=>b[1]-a[1]).map(([k,v])=>{const c=config.find(y=>y.key===k);return '<div><a href="'+c.slug+'.html">'+esc(c.name)+'</a><strong>'+money(v)+'</strong></div>';}).join("")+'</div></details></td><td>'+num(x.count)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td></tr>').join(""):'<tr><td colspan="5">No matching donors.</td></tr>';
+$("ca-result-count").textContent=num(donors.length)+" reported names · "+money(sum(donors,"value"))+(sectorSelected?" · Full donor totals within selected committees":"");$("ca-page").textContent="Page "+(page+1)+" of "+max;$("ca-prev").disabled=page===0;$("ca-next").disabled=page>=max-1;
+}
 async function json(path){const r=await fetch(path);if(!r.ok)throw Error("Unable to load "+path);return r.json();}
 async function unpack([count,base64]){const bytes=Uint8Array.from(atob(base64),c=>c.charCodeAt(0));const rows=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text());if(rows.length!==count)throw Error("Invalid compressed chunk");return rows;}
 function paths(c,kind,n){return n?Array.from({length:n},(_,i)=>"data/"+c.key+"-"+kind+"-"+(i+1)+".json"):["data/"+c.key+"-"+kind+".json"];}
-async function loadCommittee(c){if(c.key==="jcavf")return [];let rows;if(c.key==="jfc"){const m=await json("data/jfc-manifest.json");if(m.directIndividualCents!==c.individual||m.directOrganizationCents!==c.organization||m.groups.individual.count!==c.individualCount)throw Error("Congress manifest totals changed");const blocks=(await Promise.all(m.groups.organization.paths.map(json))).flat();const decoded=(await Promise.all(blocks.map(unpack))).flat();rows=decoded.map(r=>({name:r[0],sector:harmonize(r[0],sector(r[0])),amount:r[3],committee:c.key}));}else{const raw=(await Promise.all(paths(c,"organizations",c.no).map(json))).flat();rows=raw.filter(r=>!r[4]).map(r=>({name:r[0],sector:harmonize(r[0],r[1]),amount:r[3],committee:c.key}));const ind=(await Promise.all(paths(c,"individuals",c.ni).map(json))).flat().filter(r=>!r[5]);if(ind.length!==c.individualCount||ind.reduce((n,r)=>n+r[4],0)!==c.individual)throw Error("Individual totals changed: "+c.name);}
-if(rows.length!==c.organizationCount||sum(rows,"amount")!==c.organization)throw Error("Organization totals changed: "+c.name);return rows;}
-async function start(){for(const c of config)$("ca-committee").add(new Option(c.name,c.key));$("ca-committee").addEventListener("change",e=>{selected=e.target.value;sectorSelected="";page=0;render();});$("ca-sector").addEventListener("change",e=>{sectorSelected=e.target.value;page=0;renderOrganizations();});$("ca-search").addEventListener("input",e=>{query=normalize(e.target.value);page=0;renderOrganizations();});$("ca-reset").addEventListener("click",()=>{selected=sectorSelected=query="";page=0;$("ca-committee").value=$("ca-search").value="";render();});$("ca-prev").addEventListener("click",()=>{page--;renderOrganizations();});$("ca-next").addEventListener("click",()=>{page++;renderOrganizations();});$("ca-status").textContent="Reconciling source files…";render();try{orgRecords=(await Promise.all(config.map(loadCommittee))).flat();if(sum(orgRecords,"amount")!==sum(config,"organization"))throw Error("Combined organization total mismatch");$("ca-status").textContent="Source totals reconciled";renderOrganizations();}catch(e){loadError=true;$("ca-status").textContent="Some detailed data could not be loaded.";$("ca-sector-pie").textContent="Unable to reconcile detailed data. Reload to retry.";renderOrganizations();console.error(e);}}
-start();})();
+async function loadCommittee(c){
+let org=[],ind=[],emp=[];
+if(c.key==="jcavf"){ind=[["VRADENBURG, GEORGE","NOT EMPLOYED","RETIRED","2025-09-16",500000]];}
+else if(c.key==="jfc"){
+const m=await json("data/jfc-manifest.json");
+async function load(g){const blocks=(await Promise.all(g.paths.map(json))).flat();const chunks=await Promise.all(blocks.map(unpack));const r=chunks.flat();if(r.length!==g.count)throw Error("Incomplete compressed data: "+c.name);return r;}
+[org,ind]=await Promise.all([load(m.groups.organization),load(m.groups.individual)]);
+}else{
+const sources=await Promise.all([Promise.all(paths(c,"organizations",c.no).map(json)),Promise.all(paths(c,"individuals",c.ni).map(json)),c.key==="jvf"?Promise.resolve([]):json("data/"+c.key+"-employers.json")]);
+org=sources[0].flat().filter(r=>!r[4]);ind=sources[1].flat().filter(r=>!r[5]);emp=sources[2];
+}
+if(org.length!==c.organizationCount||org.reduce((n,r)=>n+r[3],0)!==c.organization)throw Error("Organization totals mismatch: "+c.name);
+if(ind.length!==c.individualCount||ind.reduce((n,r)=>n+r[4],0)!==c.individual)throw Error("Individual totals mismatch: "+c.name);
+const emap=new Map(emp.filter(r=>typeof r[1]==="string").map(r=>[normalize(r[0]),r[1]]));
+const employerSector=name=>{const n=normalize(name);if(!n||status.test(n))return "Personal status / unreported employer";return harmonize(n,emap.get(n)||sector(n));};
+return [...org.map(r=>({name:r[0],type:"organization",sector:harmonize(r[0],c.key==="jfc"?sector(r[0]):r[1]),amount:r[3],committee:c.key})),...ind.map(r=>({name:r[0],type:"individual",employer:r[1]||"NOT REPORTED",sector:employerSector(r[1]),amount:r[4],committee:c.key}))];
+}
+async function start(){
+for(const c of config)$("ca-committee").add(new Option(c.name,c.key));
+$("ca-committee").addEventListener("change",e=>{selected=e.target.value;sectorSelected="";page=0;render();});
+$("ca-sector").addEventListener("change",e=>{sectorSelected=e.target.value;page=0;renderOrganizations();});
+$("ca-mode").addEventListener("change",e=>{mode=e.target.value;page=0;renderOrganizations();});
+$("ca-search").addEventListener("input",e=>{query=normalize(e.target.value);page=0;renderOrganizations();});
+$("ca-reset").addEventListener("click",()=>{selected=sectorSelected=query="";mode="organization";page=0;$("ca-committee").value=$("ca-search").value="";$("ca-mode").value=mode;render();});
+$("ca-prev").addEventListener("click",()=>{page--;renderOrganizations();});$("ca-next").addEventListener("click",()=>{page++;renderOrganizations();});
+$("ca-status").textContent="Reconciling all eight committees…";render();
+const results=await Promise.allSettled(config.map(loadCommittee));allRecords=[];loadFailures=[];
+results.forEach((r,i)=>{if(r.status==="fulfilled"){allRecords.push(...r.value);loadedCommittees++;}else{loadFailures.push(config[i].name+": "+String(r.reason?.message||r.reason));console.error(r.reason);}});
+const expected=sum(config,"individual")+sum(config,"organization"),actual=sum(allRecords,"amount");
+if(!loadFailures.length&&(actual!==expected||allRecords.length!==sum(config,"individualCount")+sum(config,"organizationCount")))loadFailures.push("Combined source reconciliation failed");
+$("ca-status").textContent=loadFailures.length?"PARTIAL DATA: "+loadedCommittees+" of 8 committees loaded. "+loadFailures.join("; "):"All 8 committees reconciled · "+num(allRecords.length)+" direct records";
+if(loadFailures.length){for(const id of ["ca-all-sector-pie","ca-sector-pie","ca-ind-sector-pie","ca-sector-rows","ca-org-rows"]){$(id).closest("section")?.classList.add("ca-partial");}}
+renderOrganizations();
+}
+start().catch(e=>{$("ca-status").textContent="Dashboard error: "+e.message;console.error(e);});})();
