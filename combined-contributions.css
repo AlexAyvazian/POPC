@@ -16,3 +16,10 @@
 .ca-roosevelt-page .jvf-header{margin:0 auto clamp(24px,3vw,42px)}
 .ca-roosevelt-page .jvf-header h1{font-size:clamp(30px,4.5vw,56px)}
 @media(max-width:600px){.ca-roosevelt-page .ca-roosevelt-hero{width:100%}.ca-roosevelt-page .ca-shell{padding-top:8px}}
+
+/* Restrict the moving ambient highlight to the edge-connected neutral background. */
+.ca-roosevelt-hero .ca-background-shimmer{position:absolute;left:0;right:0;bottom:0;width:100%;z-index:1;pointer-events:none;visibility:hidden;mask-size:100% 100%;-webkit-mask-size:100% 100%;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat}
+.ca-roosevelt-hero .ca-background-shimmer.is-ready{visibility:visible;background:linear-gradient(115deg,transparent 20%,rgba(219,196,151,.15) 40%,rgba(255,255,255,.65) 50%,rgba(231,212,177,.20) 60%,transparent 80%);background-size:270% 100%;animation:ca-ambient-shimmer 14s ease-in-out infinite alternate}
+.ca-roosevelt-hero::after{z-index:2}
+@keyframes ca-ambient-shimmer{from{background-position:100% 0}to{background-position:0% 0}}
+@media(prefers-reduced-motion:reduce){.ca-roosevelt-hero .ca-background-shimmer{display:none!important}}
