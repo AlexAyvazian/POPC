@@ -10,16 +10,16 @@
 @media(prefers-reduced-motion:reduce){.title-shimmer{display:none!important}}
 
 /* Ivory and gold committee directory — landing-page visual identity. */
-.donor-page{color-scheme:light;background:radial-gradient(ellipse at 50% 0%,#fffdf7 0%,#f7f4ee 52%,#f7f7f8 100%);color:#9c825e;overflow-x:hidden}
+.donor-page{color-scheme:light;background:radial-gradient(ellipse at 50% 0%,#fffdf7 0%,#f7f4ee 52%,#f7f7f8 100%);color:#b69b79;overflow-x:hidden}
 .donor-page .pac-shell{width:min(1120px,calc(100% - 48px));padding:clamp(64px,7vw,100px) 0 64px}
 .donor-page .pac-header{max-width:880px;margin:0 auto clamp(32px,4vw,52px)}
-.donor-page .eyebrow{color:#9c825e;font-size:clamp(12px,1.3vw,16px);letter-spacing:.12em;font-weight:700}
-.donor-page .pac-header h1{font-size:clamp(26px,3.5vw,46px);line-height:1.14;color:#9c825e;text-shadow:none;letter-spacing:-.035em}
+.donor-page .eyebrow{color:#b69b79;font-size:clamp(12px,1.3vw,16px);letter-spacing:.12em;font-weight:700}
+.donor-page .pac-header h1{font-size:clamp(26px,3.5vw,46px);line-height:1.14;color:#b69b79;text-shadow:none;letter-spacing:-.035em}
 .donor-page .pac-grid{gap:clamp(14px,2vw,24px)}
-.donor-page .pac-glass{display:flex;align-items:center;justify-content:center;text-align:center;min-height:108px;padding:24px 28px;border:2px solid #b58b46;border-radius:20px;background:linear-gradient(145deg,#ffffff 0%,#fffdf9 48%,#f4ead8 100%);color:#9c825e;box-shadow:inset 0 1px 0 #fff,0 7px 22px rgba(120,86,36,.08);backdrop-filter:none;-webkit-backdrop-filter:none;font-size:clamp(16px,1.65vw,20px);font-weight:700;letter-spacing:-.015em}
+.donor-page .pac-glass{display:flex;align-items:center;justify-content:center;text-align:center;min-height:108px;padding:24px 28px;border:2px solid #b58b46;border-radius:20px;background:linear-gradient(145deg,#ffffff 0%,#fffdf9 48%,#f4ead8 100%);color:#b69b79;box-shadow:inset 0 1px 0 #fff,0 7px 22px rgba(120,86,36,.08);backdrop-filter:none;-webkit-backdrop-filter:none;font-size:clamp(16px,1.65vw,20px);font-weight:700;letter-spacing:-.015em}
 .donor-page .pac-glass::before{display:none}
 .donor-page .pac-glass::after{background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent)}
 .donor-page .pac-glass:hover,.donor-page .pac-glass:focus-visible{transform:translateY(-2px);border-color:#9a702e;background:linear-gradient(145deg,#fff,#fff9ec 60%,#edddbf);box-shadow:0 10px 26px rgba(120,86,36,.16),inset 0 1px 0 #fff}
 .donor-page .pac-glass:focus-visible{outline:2px solid #765122;outline-offset:4px}
-.donor-page .back-link{position:absolute;left:0;top:22px;background:#fffdf9;border:1px solid #b58b46;color:#9c825e;box-shadow:0 4px 14px rgba(120,86,36,.08);backdrop-filter:none;-webkit-backdrop-filter:none}
+.donor-page .back-link{position:absolute;left:0;top:22px;background:#fffdf9;border:1px solid #b58b46;color:#b69b79;box-shadow:0 4px 14px rgba(120,86,36,.08);backdrop-filter:none;-webkit-backdrop-filter:none}
 @media(max-width:760px){.donor-page .pac-shell{width:calc(100% - 28px);padding-top:84px}.donor-page .pac-glass{min-height:84px;padding:20px 18px;border-radius:18px}}
