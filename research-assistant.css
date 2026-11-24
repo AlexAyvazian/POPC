@@ -1,0 +1,37 @@
+/* Native CSS interpretation of SmoothUI's layered Siri-orb states. */
+@property --popc-orb-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+.popc-ai-launcher,.popc-ai-panel{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;color:#473823}
+.popc-ai-launcher{position:fixed;z-index:900;right:0;top:48%;display:flex;align-items:center;gap:9px;writing-mode:vertical-rl;transform:rotate(180deg);padding:18px 11px;border:1px solid #b79254;border-left:0;border-radius:0 18px 18px 0;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(239,224,193,.76));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 5px 24px #72522d22,inset 0 0 0 1px #ffffff85;cursor:pointer;font-size:13px;letter-spacing:.035em;font-weight:600}
+.popc-ai-mini{width:19px;height:19px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff 0%,#e8d5a7 37%,#b58a42 68%,#f3e9d3);box-shadow:inset -2px -2px 5px #795c2e44,0 0 8px #d3b36b66}
+.popc-ai-panel[hidden]{display:none!important}
+.popc-ai-panel{position:fixed;right:28px;top:clamp(12px,5vh,56px);bottom:clamp(12px,5vh,56px);width:min(440px,calc(100vw - 58px));z-index:901;display:flex;flex-direction:column;box-sizing:border-box;padding:18px 20px 13px;border:1px solid #b79254;border-radius:29px;background:linear-gradient(145deg,rgba(255,255,255,.87),rgba(250,245,235,.77) 45%,rgba(235,220,193,.72));backdrop-filter:blur(36px) saturate(135%);-webkit-backdrop-filter:blur(36px) saturate(135%);box-shadow:0 18px 70px #3f302b30,inset 0 0 0 1px #fff9,inset 0 2px 2px #fff,0 0 0 1px #c5a36c25;overflow:hidden;animation:popc-ai-in .25s ease-out}
+@keyframes popc-ai-in{from{opacity:0;transform:translateX(12px) scale(.985)}to{opacity:1;transform:none}}
+.popc-ai-header{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#83663d}
+.popc-ai-close{border:1px solid #d5c2a4;background:#fff8;border-radius:50%;width:30px;height:30px;color:#604c2c;font-size:23px;line-height:1;cursor:pointer}
+.popc-ai-hero{text-align:center;flex-shrink:0;padding:13px 0 8px}
+.popc-ai-hero h2{font-size:23px;letter-spacing:-.04em;margin:12px 0 3px;font-weight:600;color:#514028}
+.popc-ai-state{margin:0;font-size:12px;color:#836d4d}
+.popc-ai-orb{--duration:20s;position:relative;isolation:isolate;width:108px;height:108px;margin:auto;border-radius:50%;display:grid;grid-template-areas:"stack";overflow:hidden;background:#f6f0e4;box-shadow:0 0 28px #d6b46d55,0 7px 18px #9e78362b,inset 0 0 1px 1px #fff}
+.popc-ai-orb::before,.popc-ai-orb::after,.popc-ai-orb i,.popc-ai-orb b{content:"";display:block;grid-area:stack;width:100%;height:100%;border-radius:50%;pointer-events:none}
+.popc-ai-orb::before{background:conic-gradient(from calc(var(--popc-orb-angle)*2) at 25% 70%,#c4ad8b,transparent 20% 80%,#c4ad8b),conic-gradient(from calc(var(--popc-orb-angle)*2) at 45% 75%,#d9b46b,transparent 35% 65%,#d9b46b),conic-gradient(from calc(var(--popc-orb-angle)*-1) at 70% 30%,#fffdf7,transparent 30% 70%,#fffdf7),conic-gradient(from var(--popc-orb-angle) at 65% 68%,#b38b44,transparent 28% 72%,#b38b44),conic-gradient(from calc(var(--popc-orb-angle)*-2) at 35% 30%,#e4d9ca,transparent 23% 77%,#e4d9ca),conic-gradient(from var(--popc-orb-angle),#fdfbf7,#bd9c63,#f7ead1,#e3ddd5,#fdfbf7);filter:blur(4px) contrast(1.28);transform:scale(1.12);animation:popc-orb-spin var(--duration) linear infinite}
+.popc-ai-orb::after{background:radial-gradient(ellipse at 31% 22%,#ffffffc9,transparent 42%),radial-gradient(ellipse at 75% 78%,#fff8,transparent 40%);mix-blend-mode:screen;animation:popc-orb-sheen 9s ease-in-out infinite alternate}
+.popc-ai-orb i{background:repeating-linear-gradient(132deg,transparent 0 17px,#a79b8720 18px,transparent 20px 34px);filter:blur(1px);mix-blend-mode:multiply}
+.popc-ai-orb b{box-shadow:inset 0 0 0 1px #fff9,inset 0 6px 14px #fff9,inset 0 -9px 18px #81603755}
+@keyframes popc-orb-spin{to{--popc-orb-angle:360deg}}@keyframes popc-orb-sheen{from{transform:translate(-6%,-4%) scale(1.04)}to{transform:translate(7%,6%) scale(1.12)}}
+.popc-ai-orb[data-state="thinking"]{--duration:9s}
+.popc-ai-orb[data-state="idle"]{animation:popc-orb-breathe 5.5s ease-in-out infinite}
+.popc-ai-orb[data-state="done"]{animation:popc-orb-settle .45s ease-out}
+.popc-ai-orb[data-state="error"]{filter:saturate(.45);animation:popc-orb-shake .18s ease-out}
+@keyframes popc-orb-breathe{50%{transform:scale(1.035)}}@keyframes popc-orb-settle{50%{transform:scale(1.04)}}@keyframes popc-orb-shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.popc-ai-messages{overflow-y:auto;min-height:0;flex:1;padding:8px 2px 10px;scrollbar-width:thin;display:flex;flex-direction:column;gap:12px}
+.popc-ai-welcome h3{font-size:17px;font-weight:600;margin:12px 0 5px}.popc-ai-welcome p{font-size:14px;line-height:1.45;margin:0 0 14px;color:#75634a}
+.popc-ai-prompts{display:flex;flex-direction:column;gap:7px}.popc-ai-prompts button{font:inherit;font-size:13px;text-align:left;color:#624c2e;padding:10px 12px;border:1px solid #d7c4a0;background:#ffffff70;border-radius:12px;cursor:pointer}
+.popc-ai-message{padding:12px 14px;border-radius:17px;font-size:13px;line-height:1.5;overflow-wrap:anywhere}.popc-ai-message.user{align-self:flex-end;max-width:86%;background:#bfa47728;border:1px solid #cbb18a66}.popc-ai-message.answer{align-self:stretch;background:#ffffff85;border:1px solid #d3c09a90}.popc-ai-message p{margin:0 0 7px}.popc-ai-amount{display:block;font-size:25px;font-weight:650;letter-spacing:-.045em;color:#644c26;margin:6px 0}.popc-ai-message small{display:block;color:#776951;font-size:11px}.popc-ai-message dl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 12px;margin:8px 0 12px}.popc-ai-message dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.popc-ai-form{display:flex;align-items:center;gap:8px;background:#fff9;border:1px solid #c4a774;border-radius:19px;padding:6px 7px 6px 12px;box-shadow:inset 0 1px 2px #fff8;flex-shrink:0}
+.popc-ai-form input{min-width:0;flex:1;border:0;background:transparent;font:inherit;font-size:14px;color:#473823;outline:none;padding:8px 0}
+.popc-ai-send{border:1px solid #a88448;background:linear-gradient(#dfc28a,#b18a48);color:#fff;width:32px;height:32px;border-radius:50%;font-size:22px;cursor:pointer;flex-shrink:0}.popc-ai-send:disabled{opacity:.45;cursor:wait}
+.popc-ai-foot{font-size:10px;line-height:1.45;color:#74664e;margin:8px 3px 0}.popc-ai-foot a{color:#78552b}
+.popc-ai-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.popc-ai-panel button:focus-visible,.popc-ai-launcher:focus-visible,.popc-ai-form:focus-within{outline:2px solid #a17b3d;outline-offset:2px}
+@media(max-width:560px){.popc-ai-panel{inset:12px 9px;width:auto;padding:14px 15px 10px;border-radius:23px}.popc-ai-launcher{top:auto;bottom:22px;right:0;writing-mode:horizontal-tb;transform:none;border:1px solid #b79254;border-right:0;border-radius:18px 0 0 18px;padding:10px 12px}.popc-ai-orb{width:84px;height:84px}.popc-ai-hero{padding:8px 0 5px}}
+@media(prefers-reduced-motion:reduce){.popc-ai-panel,.popc-ai-orb,.popc-ai-orb::before,.popc-ai-orb::after{animation:none!important}}
