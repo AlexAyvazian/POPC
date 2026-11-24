@@ -21,8 +21,8 @@
 /* Individual firefly points; the header background itself never changes color. */
 .ca-header-fireflies{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;visibility:hidden;mask-size:100% 100%;-webkit-mask-size:100% 100%;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat}
 .ca-header-fireflies.is-ready{visibility:visible}
-.ca-header-fireflies i{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border-radius:50%;background:#c7a15b;box-shadow:0 0 3px 1px #f4e5bd,0 0 8px 2px rgba(203,162,86,.28);opacity:0;animation:ca-firefly-drift var(--time) ease-in-out var(--delay) infinite;will-change:transform,opacity}
-.ca-header-fireflies i:nth-child(3n){background:#fff;box-shadow:0 0 2px 1px #d1b377,0 0 7px 2px rgba(203,162,86,.22)}
+.ca-header-fireflies i{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border-radius:50%;background:#b58b46;box-shadow:0 0 3px 1px #fff8dd,0 0 9px 3px rgba(193,143,56,.48),0 0 16px 4px rgba(220,180,97,.18);opacity:0;animation:ca-firefly-drift var(--time) ease-in-out var(--delay) infinite;will-change:transform,opacity}
+.ca-header-fireflies i:nth-child(3n){background:#fffdf1;box-shadow:0 0 3px 1.5px #c6a261,0 0 10px 3px rgba(193,143,56,.36)}
 .ca-roosevelt-hero::after{z-index:2}
-@keyframes ca-firefly-drift{0%,100%{opacity:0;transform:translate(0,0) scale(.55)}22%{opacity:.8}48%{opacity:.22;transform:translate(var(--dx),var(--dy)) scale(.75)}69%{opacity:1;transform:translate(calc(var(--dx)*.7),calc(var(--dy)*1.4)) scale(1.05)}88%{opacity:.4}}
+@keyframes ca-firefly-drift{0%,100%{opacity:0;transform:translate(0,0) scale(.55)}22%{opacity:1}48%{opacity:.48;transform:translate(var(--dx),var(--dy)) scale(.75)}69%{opacity:1;transform:translate(calc(var(--dx)*.7),calc(var(--dy)*1.4)) scale(1.05)}88%{opacity:.65}}
 @media(prefers-reduced-motion:reduce){.ca-header-fireflies{display:none!important;animation:none!important}}

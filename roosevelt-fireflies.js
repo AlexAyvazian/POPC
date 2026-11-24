@@ -27,7 +27,7 @@ function prepare(){
   const x=rect.left-bounds.left,y=rect.top-bounds.top;
   ctx.fillStyle="#fff";ctx.fillRect(0,0,w,h);ctx.clearRect(x,y,rect.width,rect.height);ctx.drawImage(artworkMask,x,y,rect.width,rect.height);
   const url="url("+canvas.toDataURL("image/png")+")";layer.style.maskImage=url;layer.style.webkitMaskImage=url;
-  if(!layer.childElementCount){const n=window.innerWidth<600?20:42;for(let i=0;i<n;i++){const dot=document.createElement("i");const rand=(a,b)=>a+Math.random()*(b-a);const vars={"--x":rand(2,98)+"%","--y":rand(4,90)+"%","--size":rand(1.8,3.8)+"px","--dx":rand(-32,32)+"px","--dy":rand(-24,16)+"px","--time":rand(5,11)+"s","--delay":(-rand(0,11))+"s"};for(const [k,v] of Object.entries(vars))dot.style.setProperty(k,v);layer.append(dot);}}
+  if(!layer.childElementCount){const n=window.innerWidth<600?55:120;for(let i=0;i<n;i++){const dot=document.createElement("i");const rand=(a,b)=>a+Math.random()*(b-a);const vars={"--x":rand(2,98)+"%","--y":rand(4,90)+"%","--size":rand(3,6.5)+"px","--dx":rand(-46,46)+"px","--dy":rand(-40,24)+"px","--time":rand(4,9)+"s","--delay":(-rand(0,11))+"s"};for(const [k,v] of Object.entries(vars))dot.style.setProperty(k,v);layer.append(dot);}}
   layer.classList.add("is-ready");
  }catch(e){console.warn("Header fireflies unavailable",e);}
 }
