@@ -113,3 +113,8 @@
 .jvf-fec-link:hover{color:#5e401d}
 .jvf-footer{font-size:13px;color:#76624b;text-align:center;margin-top:34px}
 @media(max-width:760px){.jvf-shell{width:calc(100% - 26px);padding-top:20px}.jvf-header{margin-bottom:40px}.jvf-table{font-size:13px}.jvf-table th,.jvf-table td{padding:11px}.jvf-table-wrap{border-radius:16px}}
+
+/* Transactions directory: reuse the homepage mission statement's ivory-and-gold box. */
+.donor-page .committee-intro{width:100%;min-height:0;margin:0 auto clamp(24px,3vw,36px);padding:clamp(22px,4vw,48px);border:2px solid #b58b46;border-radius:24px;background:#fffdf9;color:#29241e;font-size:clamp(16px,1.3vw,18px);line-height:1.65;box-shadow:0 8px 28px rgba(120,86,36,.06);text-align:left}
+.donor-page .committee-intro p:last-child{margin-bottom:0}
+@media(max-width:600px){.donor-page .committee-intro{border-radius:20px;padding:22px;line-height:1.6}}
