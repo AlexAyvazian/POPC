@@ -1,0 +1,9 @@
+
+.jfc-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:.65rem;margin:1rem 0}
+.jfc-toolbar input,.jfc-toolbar select,.jfc-control{font:inherit;color:#28251f;background:#fffdf9;border:1px solid #c3aa77;border-radius:10px;padding:.55rem .75rem;min-height:40px;box-sizing:border-box}
+.jfc-toolbar input{flex:1 1 240px;min-width:0}
+.jfc-control{cursor:pointer}.jfc-control:disabled{opacity:.45;cursor:default}
+.jfc-pagination{display:flex;gap:.6rem;align-items:center;justify-content:flex-end;flex-wrap:wrap;margin:.6rem 0 1.2rem}
+.jfc-count{font-size:.9rem;color:inherit;opacity:.8}
+.jfc-toolbar label{font-size:.9rem}
+@media(max-width:600px){.jfc-toolbar input{flex-basis:100%}}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#fffdf9"/>
+  <title>Jeffries for Congress — Contributions | People Over Power Coalition</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="jfc.css"/>
+</head>
+<body class="jvf-page">
+  <main class="jvf-shell">
+    <a class="jvf-back" href="transactions.html" aria-label="Back to PAC directory">← Back to PACs</a>
+    <header class="jvf-header">
+      <p class="jvf-brand">People Over Power Coalition</p>
+      <h1>JEFFRIES FOR CONGRESS</h1>
+      <p class="jvf-kicker">2025–2026 FEC contributions · Committee C00503052</p>
+      <p class="jvf-summary" id="jvf-summary"></p>
+    </header>
+    <p id="jvf-status" role="status">Loading FEC contribution records…</p>
+    <section class="jvf-main-section" aria-labelledby="jvf-org-title">
+      <h2 class="jvf-main-title" id="jvf-org-title">Organizations &amp; Political Committees by Sector</h2>
+      <p class="jvf-description">Direct itemized organizational and political committee receipts, organized by industry or sector.</p>
+      <div id="jvf-sectors"></div>
+    </section>
+    <section class="jvf-main-section" aria-labelledby="jmf-employer-title">
+      <h2 class="jvf-main-title" id="jmf-employer-title">Reported Employers by Sector</h2>
+      <p class="jvf-description">Individual direct receipts grouped by the donor's reported employer. These are not donations from the employer and are not added again to the committee's total. Sector assignments are editorial; unresolved entries are retained.</p>
+      <div id="jmf-employers"></div>
+    </section>
+    <section class="jvf-main-section" aria-labelledby="jvf-ind-title">
+      <h2 class="jvf-main-title" id="jvf-ind-title">Individual Donors</h2>
+      <p class="jvf-description">Sorted by reported employer, keeping individuals associated with the same employer together. Employers listed here identify the donors’ reported workplaces, not contributions from those employers.</p>
+      <div id="jvf-individuals"></div>
+    </section>
+    <section class="jvf-main-section" aria-labelledby="jvf-memo-title">
+      <h2 class="jvf-main-title" id="jvf-memo-title">Reattribution &amp; Earmarking Memos</h2>
+      <p class="jvf-description" id="jvf-memo-summary"></p>
+      <h3 class="jvf-memo-heading">Individual reattribution and other memo detail</h3>
+      <div id="jvf-individual-memo"></div>
+      <h3 class="jvf-memo-heading">Political committee intermediaries &amp; other organization memos</h3>
+      <button id="jfc-load-org-memos" type="button" class="jfc-control">Load organization memo records</button><div id="jvf-organization-memo"></div>
+    </section>
+    <footer class="jvf-footer">Source: Federal Election Commission itemized receipts, 2025–2026 cycle. Receipt rows link to underlying filings. Employer totals are derived from the individual receipts. Overlapping uploaded FEC exports are reconciled by filing number and transaction ID. Memo records are retained separately and excluded from direct receipt totals. Sector labels are based on recognizable reported names; unresolved classifications are explicitly marked.</footer>
+  </main>
+  <script src="jfc.js" defer></script>
+</body>
+</html>

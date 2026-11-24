@@ -1,0 +1,50 @@
+{
+  "committee": "C00503052",
+  "cycle": 2026,
+  "groups": {
+    "individual": {
+      "count": 107722,
+      "paths": [
+        "data/jfc-individual-1.json",
+        "data/jfc-individual-2.json",
+        "data/jfc-individual-3.json",
+        "data/jfc-individual-4.json",
+        "data/jfc-individual-5.json",
+        "data/jfc-individual-6.json",
+        "data/jfc-individual-7.json"
+      ]
+    },
+    "individual-memo": {
+      "count": 2974,
+      "paths": [
+        "data/jfc-individual-memo-1.json"
+      ]
+    },
+    "organization": {
+      "count": 774,
+      "paths": [
+        "data/jfc-organization-1.json"
+      ]
+    },
+    "organization-memo": {
+      "count": 107611,
+      "paths": [
+        "data/jfc-organization-memo-1.json",
+        "data/jfc-organization-memo-2.json",
+        "data/jfc-organization-memo-3.json",
+        "data/jfc-organization-memo-4.json"
+      ]
+    },
+    "employers": {
+      "count": 2121,
+      "paths": [
+        "data/jfc-employers-1.json"
+      ]
+    }
+  },
+  "directIndividualCents": 431228139,
+  "directOrganizationCents": 282420000,
+  "sourceRows": 219081,
+  "uniqueIndividualNames": 9849,
+  "uniqueOrganizationNames": 485
+}
