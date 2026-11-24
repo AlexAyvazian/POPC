@@ -39,7 +39,7 @@ const committeeColors={"jvf":"#ecfeff","jfc":"#74cbf5","jbpf":"#66a8e5","jeff-pa
 const sequence=[...chartPalette.blue,...chartPalette.teal,...chartPalette.green,...chartPalette.yellow,...chartPalette.orange,...chartPalette.red,...chartPalette.pink,...chartPalette.purple];
 const indColor=chartPalette.blue[4],orgColor=chartPalette.teal[4];
 function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:sequence[i%sequence.length]}));}
-let selected="",sectorSelected="",query="",page=0,allRecords=null,mode="organization",loadFailures=[],loadedCommittees=0;
+let selected="",sectorSelected="",query="",page=0,allRecords=null,mode="organization",roleSelected="",loadFailures=[],loadedCommittees=0;
 const pageSize=50;
 const normalize=s=>String(s||"").trim().replace(/\s+/g," ").toUpperCase();
 function harmonize(name,label){
@@ -74,14 +74,36 @@ if(/government|public sector/i.test(l))return "Government & public sector";
 if(/professional|accounting/i.test(l))return "Professional services";
 if(/civil rights|advocacy/i.test(l))return "Other advocacy";
 return l||"Sector unconfirmed";}
+function occupationGroup(raw){
+ const t=String(raw??"").toUpperCase().trim().replace(/\./g,"").replace(/[-–]/g," ").replace(/\s+/g," ");
+ if(!t||/^(N\/?A|NONE|UNKNOWN|NOT PROVIDED|NOT REPORTED|INFORMATION REQUESTED|REFUSED|REQUESTED|NULL)$/.test(t))return "Occupation unreported";
+ if(/\b(RETIRED|NOT EMPLOYED|UNEMPLOYED|HOMEMAKER|STAY AT HOME|STUDENT)\b/.test(t))return "Retired / not employed / student";
+ if(/\b(ASSISTANT TO|SECRETARY TO|AIDE TO|ADVISOR TO|ADVISER TO)\b/.test(t))return "Other reported occupations";
+ if(/\b(CEO|CO CEO|CHIEF EXECUTIVE OFFICER)\b/.test(t))return "Chief executive officers";
+ if(/\b(CHAIRMAN|CHAIRWOMAN|CHAIRPERSON|CHAIR|CO CHAIR|BOARD MEMBER|BOARD DIRECTOR|TRUSTEE)\b/.test(t))return "Chairs / board members / trustees";
+ if(/\b(CFO|COO|CTO|CIO|CMO|CHRO|CLO|CSO|CPO|CRO|CHIEF (FINANCIAL|OPERATING|TECHNOLOGY|INFORMATION|INVESTMENT|MARKETING|LEGAL|STRATEGY|PEOPLE|PRODUCT|RISK|HUMAN RESOURCES) OFFICER)\b/.test(t))return "Other C-suite officers";
+ if(/\b(VICE PRESIDENT|VP|SVP|EVP|AVP)\b/.test(t))return "Vice presidents";
+ if(/\bPRESIDENT\b/.test(t))return "Presidents";
+ if(/\b(FOUNDER|COFOUNDER|CO FOUNDER|OWNER|PROPRIETOR)\b/.test(t))return "Founders / business owners";
+ if(/\b(PARTNER|PRINCIPAL)\b/.test(t))return "Partners / principals";
+ if(/\b(MANAGING DIRECTOR|EXECUTIVE DIRECTOR|EXECUTIVE|EXEC|GENERAL COUNSEL|CHIEF OF STAFF)\b/.test(t))return "Other executives / managing directors";
+ if(/\b(MANAGER|DIRECTOR|SUPERVISOR|HEAD OF)\b/.test(t))return "Managers / directors";
+ if(/\b(SELF EMPLOYED|SELF)\b/.test(t))return "Self-employed (role unspecified)";
+ return "Other reported occupations";
+}
+function roleTotals(rows){
+ const m=new Map();
+ for(const r of rows){if(r.type!=="individual")continue;const key=occupationGroup(r.occupation);let x=m.get(key);if(!x){x={name:key,key,value:0,count:0};m.set(key,x);}x.value+=r.amount;x.count++;}
+ return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
+}
 function aggregateDonors(rows,mode){
  const m=new Map();
  for(const r of rows){
    if(mode==="organization"&&r.type!=="organization"||mode!=="organization"&&r.type!=="individual")continue;
    const key=normalize(mode==="employer"?r.employer||"NOT REPORTED":r.name||"NOT REPORTED");
-   let v=m.get(key);if(!v){v={name:key,value:0,count:0,committees:new Map(),sectors:new Set(),employers:new Set()};m.set(key,v);}
+   let v=m.get(key);if(!v){v={name:key,value:0,count:0,committees:new Map(),sectors:new Set(),employers:new Set(),occupations:new Set(),roleDetails:new Map()};m.set(key,v);}
    v.value+=r.amount;v.count++;v.committees.set(r.committee,(v.committees.get(r.committee)||0)+r.amount);
-   v.sectors.add(r.sector);if(r.type==="individual")v.employers.add(normalize(r.employer||"NOT REPORTED"));
+   v.sectors.add(r.sector);if(r.type==="individual"){const employer=normalize(r.employer||"NOT REPORTED"),occupation=normalize(r.occupation||"NOT REPORTED"),k=JSON.stringify([employer,occupation]);v.employers.add(employer);v.occupations.add(occupation);let d=v.roleDetails.get(k);if(!d){d={employer,occupation,amount:0,count:0};v.roleDetails.set(k,d);}d.amount+=r.amount;d.count++;}
  }
  return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
 }
@@ -118,11 +140,20 @@ const denominator=sum(groups,"value");
 $("ca-sector-rows").innerHTML=groups.map(x=>'<tr><td><button type="button" class="ca-sector-link" data-sector="'+esc(x.name)+'"><span class="ca-swatch ca-sector-swatch" style="background:'+(combinedColors.get(x.name)||'transparent')+'" aria-hidden="true"></span>'+esc(x.name)+'</button></td><td class="jvf-money">'+money(x.organization)+'</td><td class="jvf-money">'+money(x.individual)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td><td>'+pct(x.value,denominator)+'</td></tr>').join("")+'<tr><th scope="row">'+(loadFailures.length?"Loaded subtotal":"Total")+'</th><td>'+money(sum(groups,"organization"))+'</td><td>'+money(sum(groups,"individual"))+'</td><td><strong>'+money(denominator)+'</strong></td><td>'+(denominator?"100.00%":"—")+'</td></tr>';
 for(const b of $("ca-sector-rows").querySelectorAll("button"))b.addEventListener("click",()=>chooseSector(b.dataset.sector));
 $("ca-name-heading").textContent=mode==="organization"?"Organization / PAC":mode==="individual"?"Individual donor":"Reported employer";
-const candidates=aggregateDonors(records,mode);
-const donors=candidates.filter(x=>(!sectorSelected||x.sectors.has(sectorSelected))&&(!query||x.name.includes(query)||[...x.employers].some(v=>v.includes(query))));
+const roleGroups=roleTotals(records);const roleSum=sum(roleGroups,"value"),individualCount=roleGroups.reduce((n,r)=>n+r.count,0);
+$("ca-role-summary").textContent=num(individualCount)+" individual receipts · "+money(roleSum);
+const roleOpt=$("ca-role");roleOpt.replaceChildren(new Option("All reported roles",""));for(const r of [...roleGroups].sort((a,b)=>a.name.localeCompare(b.name)))roleOpt.add(new Option(r.name,r.key));if(!roleGroups.some(r=>r.key===roleSelected))roleSelected="";if(mode==="organization")roleSelected="";roleOpt.value=roleSelected;roleOpt.disabled=mode==="organization";
+function selectRole(key){mode="individual";$("ca-mode").value=mode;roleSelected=roleSelected===key?"":key;page=0;renderOrganizations();}
+donut($("ca-role-pie"),sequentialItems(roleGroups),r=>selectRole(r.key),roleSelected,"Individual contributions by reported occupation group");
+$("ca-role-rows").innerHTML=roleGroups.map(r=>'<tr><td><button type="button" class="ca-sector-link" data-role="'+esc(r.key)+'">'+esc(r.name)+'</button></td><td>'+num(r.count)+'</td><td class="jvf-money">'+money(r.value)+'</td><td>'+pct(r.value,roleSum)+'</td></tr>').join("")+'<tr><th scope="row">Total</th><td>'+num(individualCount)+'</td><td>'+money(roleSum)+'</td><td>'+(roleSum?"100.00%":"—")+'</td></tr>';
+for(const b of $("ca-role-rows").querySelectorAll("button"))b.addEventListener("click",()=>selectRole(b.dataset.role));
+const roleRecords=roleSelected?records.filter(r=>r.type==="individual"&&occupationGroup(r.occupation)===roleSelected):records;
+const candidates=aggregateDonors(roleRecords,mode);
+$("ca-role-heading").hidden=mode==="organization";
+const donors=candidates.filter(x=>(!sectorSelected||x.sectors.has(sectorSelected))&&(!query||x.name.includes(query)||[...x.employers,...x.occupations].some(v=>v.includes(query))));
 const max=Math.max(1,Math.ceil(donors.length/pageSize));page=Math.max(0,Math.min(page,max-1));const rows=donors.slice(page*pageSize,(page+1)*pageSize);
-$("ca-org-rows").innerHTML=rows.length?rows.map(x=>'<tr><td class="jvf-contributor">'+esc(x.name)+'</td><td>'+esc([...x.sectors].sort().join("; "))+(mode==="individual"?'<small class="jvf-row-note">'+esc([...x.employers].sort().join("; "))+'</small>':"")+'</td><td><details><summary>'+x.committees.size+' '+(x.committees.size===1?"committee":"committees")+'</summary><div class="ca-breakdown">'+[...x.committees].sort((a,b)=>b[1]-a[1]).map(([k,v])=>{const c=config.find(y=>y.key===k);return '<div><a href="'+c.slug+'.html">'+esc(c.name)+'</a><strong>'+money(v)+'</strong></div>';}).join("")+'</div></details></td><td>'+num(x.count)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td></tr>').join(""):'<tr><td colspan="5">No matching donors.</td></tr>';
-$("ca-result-count").textContent=num(donors.length)+" reported names · "+money(sum(donors,"value"))+(sectorSelected?" · Full donor totals within selected committees":"");$("ca-page").textContent="Page "+(page+1)+" of "+max;$("ca-prev").disabled=page===0;$("ca-next").disabled=page>=max-1;
+$("ca-org-rows").innerHTML=rows.length?rows.map(x=>'<tr><td class="jvf-contributor">'+esc(x.name)+'</td><td>'+esc([...x.sectors].sort().join("; "))+(mode==="individual"?'<small class="jvf-row-note">'+esc([...x.employers].sort().join("; "))+'</small>':"")+'</td>'+(mode==="organization"?"":'<td class="ca-occupation-cell"><details><summary>'+esc([...x.occupations].sort().join("; "))+'</summary><div class="ca-role-details">'+[...x.roleDetails.values()].sort((a,b)=>b.amount-a.amount||a.occupation.localeCompare(b.occupation)).map(d=>'<div><span>'+esc(d.occupation)+'<small>'+esc(d.employer)+'</small></span><strong>'+money(d.amount)+'</strong></div>').join("")+'</div></details></td>')+'<td><details><summary>'+x.committees.size+' '+(x.committees.size===1?"committee":"committees")+'</summary><div class="ca-breakdown">'+[...x.committees].sort((a,b)=>b[1]-a[1]).map(([k,v])=>{const c=config.find(y=>y.key===k);return '<div><a href="'+c.slug+'.html">'+esc(c.name)+'</a><strong>'+money(v)+'</strong></div>';}).join("")+'</div></details></td><td>'+num(x.count)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td></tr>').join(""):'<tr><td colspan="'+(mode==="organization"?5:6)+'">No matching donors.</td></tr>';
+$("ca-result-count").textContent=num(donors.length)+" reported names · "+money(sum(donors,"value"))+(roleSelected?" · Amounts restricted to matching reported-role receipts":"")+(sectorSelected?" · Matching donor sectors":"");$("ca-page").textContent="Page "+(page+1)+" of "+max;$("ca-prev").disabled=page===0;$("ca-next").disabled=page>=max-1;
 }
 async function json(path){const r=await fetch(path);if(!r.ok)throw Error("Unable to load "+path);return r.json();}
 async function unpack([count,base64]){const bytes=Uint8Array.from(atob(base64),c=>c.charCodeAt(0));const rows=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text());if(rows.length!==count)throw Error("Invalid compressed chunk");return rows;}
@@ -142,15 +173,16 @@ if(org.length!==c.organizationCount||org.reduce((n,r)=>n+r[3],0)!==c.organizatio
 if(ind.length!==c.individualCount||ind.reduce((n,r)=>n+r[4],0)!==c.individual)throw Error("Individual totals mismatch: "+c.name);
 const emap=new Map(emp.filter(r=>typeof r[1]==="string").map(r=>[normalize(r[0]),r[1]]));
 const employerSector=name=>{const n=normalize(name);if(!n||status.test(n))return "Personal status / unreported employer";return harmonize(n,emap.get(n)||sector(n));};
-return [...org.map(r=>({name:r[0],type:"organization",sector:harmonize(r[0],c.key==="jfc"?sector(r[0]):r[1]),amount:r[3],committee:c.key})),...ind.map(r=>({name:r[0],type:"individual",employer:r[1]||"NOT REPORTED",sector:employerSector(r[1]),amount:r[4],committee:c.key}))];
+return [...org.map(r=>({name:r[0],type:"organization",sector:harmonize(r[0],c.key==="jfc"?sector(r[0]):r[1]),amount:r[3],committee:c.key})),...ind.map(r=>({name:r[0],type:"individual",employer:r[1]||"NOT REPORTED",occupation:r[2]||"NOT REPORTED",sector:employerSector(r[1]),amount:r[4],committee:c.key}))];
 }
 async function start(){
 for(const c of config)$("ca-committee").add(new Option(c.name,c.key));
 $("ca-committee").addEventListener("change",e=>{selected=e.target.value;sectorSelected="";page=0;render();});
 $("ca-sector").addEventListener("change",e=>{sectorSelected=e.target.value;page=0;renderOrganizations();});
-$("ca-mode").addEventListener("change",e=>{mode=e.target.value;page=0;renderOrganizations();});
+$("ca-mode").addEventListener("change",e=>{mode=e.target.value;if(mode==="organization")roleSelected="";page=0;renderOrganizations();});
+$("ca-role").addEventListener("change",e=>{roleSelected=e.target.value;page=0;renderOrganizations();});
 $("ca-search").addEventListener("input",e=>{query=normalize(e.target.value);page=0;renderOrganizations();});
-$("ca-reset").addEventListener("click",()=>{selected=sectorSelected=query="";mode="organization";page=0;$("ca-committee").value=$("ca-search").value="";$("ca-mode").value=mode;render();});
+$("ca-reset").addEventListener("click",()=>{selected=sectorSelected=query=roleSelected="";mode="organization";page=0;$("ca-committee").value=$("ca-search").value="";$("ca-mode").value=mode;render();});
 $("ca-prev").addEventListener("click",()=>{page--;renderOrganizations();});$("ca-next").addEventListener("click",()=>{page++;renderOrganizations();});
 $("ca-status").textContent="Reconciling all eight committees…";render();
 const results=await Promise.allSettled(config.map(loadCommittee));allRecords=[];loadFailures=[];
@@ -158,7 +190,7 @@ results.forEach((r,i)=>{if(r.status==="fulfilled"){allRecords.push(...r.value);l
 const expected=sum(config,"individual")+sum(config,"organization"),actual=sum(allRecords,"amount");
 if(!loadFailures.length&&(actual!==expected||allRecords.length!==sum(config,"individualCount")+sum(config,"organizationCount")))loadFailures.push("Combined source reconciliation failed");
 $("ca-status").textContent=loadFailures.length?"PARTIAL DATA: "+loadedCommittees+" of 8 committees loaded. "+loadFailures.join("; "):"All 8 committees reconciled · "+num(allRecords.length)+" direct records";
-if(loadFailures.length){for(const id of ["ca-all-sector-pie","ca-sector-pie","ca-ind-sector-pie","ca-sector-rows","ca-org-rows"]){$(id).closest("section")?.classList.add("ca-partial");}}
+if(loadFailures.length){for(const id of ["ca-all-sector-pie","ca-sector-pie","ca-ind-sector-pie","ca-sector-rows","ca-org-rows","ca-role-pie","ca-role-rows"]){$(id).closest("section")?.classList.add("ca-partial");}}
 renderOrganizations();
 }
 start().catch(e=>{$("ca-status").textContent="Dashboard error: "+e.message;console.error(e);});})();
