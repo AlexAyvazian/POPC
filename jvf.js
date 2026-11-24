@@ -63,7 +63,7 @@
       const sectors=[...sections].sort(([a],[b])=>a.localeCompare(b)).map(([sector,rows])=>{
         rows.sort((a,b)=>a[0].localeCompare(b[0])||a[2].localeCompare(b[2]));
         const total=rows.reduce((n,r)=>n+r[3],0);
-        const caption=`<h2>${escape(sector)}</h2><p class="jvf-section-meta">${rows.length} records · ${money(total)}</p>`;
+        const caption=`<h2>${escape(sector)}</h2><p class="jvf-section-meta">${rows.length} ${rows.length===1?"record":"records"} · ${money(total)}</p>`;
         return `<section class="jvf-sector-section">${caption}${table(["Organization / committee","FEC classification","Date","Amount","Source"],rows.map(orgRow))}</section>`;
       }).join("");
       document.getElementById("jvf-sectors").innerHTML=sectors;
