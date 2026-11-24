@@ -5,7 +5,7 @@
 .ca-occupation-cell{min-width:150px;max-width:320px}.ca-occupation-cell summary{overflow-wrap:anywhere;font-size:.86rem}.ca-role-details{display:grid;gap:7px;margin-top:8px}.ca-role-details>div{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;font-size:.8rem}.ca-role-details small{display:block;color:#6d6457}.ca-role-details strong{white-space:nowrap}.ca-table [hidden]{display:none!important}#ca-role-pie{margin-bottom:20px}
 /* Centered, responsive hero at the top of the page, with the original image intact. */
 .ca-roosevelt-page .ca-roosevelt-hero{width:min(100%,1050px,98svh);margin:0 auto;background:#f7f7f8}
-.ca-roosevelt-hero .coalition-header{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.ca-roosevelt-hero .coalition-header{width:100%;height:auto;display:block;mix-blend-mode:darken}
 .ca-roosevelt-hero::after{height:24%;background:linear-gradient(to bottom,rgba(247,247,248,0) 0%,rgba(247,247,248,.18) 28%,rgba(247,247,248,.72) 72%,#f7f7f8 100%)}
 .ca-roosevelt-page{position:relative}
 .ca-roosevelt-back{position:absolute;top:22px;left:max(14px,calc((100% - 1320px)/2));z-index:5;display:grid;place-items:center;width:44px;height:44px;border:1px solid #b58b46;border-radius:14px;background:#fffdf9;color:#B69B79;box-shadow:0 4px 14px rgba(120,86,36,.08);text-decoration:none;font-size:22px;line-height:1}

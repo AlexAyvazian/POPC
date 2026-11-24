@@ -9,13 +9,14 @@ function backgroundMask(data,w,h){
 }
 const image=document.querySelector(".ca-roosevelt-hero .coalition-header"),overlay=document.querySelector(".ca-background-shimmer");
 if(!image||!overlay||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+function feather(x,y,w,h){const t=Math.max(0,Math.min(1,x/Math.max(1,w*.14),(w-1-x)/Math.max(1,w*.14),y/Math.max(1,h*.07),(h-1-y)/Math.max(1,h*.09)));return Math.round(255*t*t*(3-2*t));}
 function prepare(){
  if(!image.naturalWidth||!image.naturalHeight)return;
  try{
  const canvas=document.createElement("canvas");const w=Math.min(900,image.naturalWidth),h=Math.round(w*image.naturalHeight/image.naturalWidth);canvas.width=w;canvas.height=h;
  const ctx=canvas.getContext("2d",{willReadFrequently:true});if(!ctx)return;ctx.drawImage(image,0,0,w,h);
  const pixels=ctx.getImageData(0,0,w,h),mask=backgroundMask(pixels.data,w,h);if(!mask.some(Boolean))return;
- for(let y=0;y<h;y++)for(let x=0;x<w;x++){const i=y*w+x,p=i*4;const interior=mask[i]&&(x===0||mask[i-1])&&(x===w-1||mask[i+1])&&(y===0||mask[i-w])&&(y===h-1||mask[i+w]);pixels.data[p]=pixels.data[p+1]=pixels.data[p+2]=255;pixels.data[p+3]=interior?255:0;}
+ for(let y=0;y<h;y++)for(let x=0;x<w;x++){const i=y*w+x,p=i*4;const interior=mask[i]&&(x===0||mask[i-1])&&(x===w-1||mask[i+1])&&(y===0||mask[i-w])&&(y===h-1||mask[i+w]);pixels.data[p]=pixels.data[p+1]=pixels.data[p+2]=255;pixels.data[p+3]=interior?feather(x,y,w,h):0;}
  ctx.putImageData(pixels,0,0);
  const url="url("+canvas.toDataURL("image/png")+")";overlay.style.maskImage=url;overlay.style.webkitMaskImage=url;overlay.style.aspectRatio=image.naturalWidth+" / "+image.naturalHeight;overlay.classList.add("is-ready");
  }catch(e){console.warn("Header background shimmer unavailable",e);}
