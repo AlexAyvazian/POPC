@@ -39,7 +39,7 @@ const committeeColors={"jvf":"#ecfeff","jfc":"#74cbf5","jbpf":"#66a8e5","jeff-pa
 const sequence=[...chartPalette.blue,...chartPalette.teal,...chartPalette.green,...chartPalette.yellow,...chartPalette.orange,...chartPalette.red,...chartPalette.pink,...chartPalette.purple];
 const indColor=chartPalette.blue[4],orgColor=chartPalette.teal[4];
 function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:sequence[i%sequence.length]}));}
-let selected="",sectorSelected="",query="",page=0,allRecords=null,mode="organization",roleSelected="",loadFailures=[],loadedCommittees=0;
+let selected="",sectorSelected="",query="",page=0,allRecords=null,mode="organization",roleSelected="",exactOccupation="",occupationPage=0,occupationQuery="",loadFailures=[],loadedCommittees=0;
 const pageSize=50;
 const normalize=s=>String(s||"").trim().replace(/\s+/g," ").toUpperCase();
 function harmonize(name,label){
@@ -96,6 +96,12 @@ function roleTotals(rows){
  for(const r of rows){if(r.type!=="individual")continue;const key=occupationGroup(r.occupation);let x=m.get(key);if(!x){x={name:key,key,value:0,count:0};m.set(key,x);}x.value+=r.amount;x.count++;}
  return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
 }
+const nonExecutiveGroups=new Set(["Other reported occupations","Managers / directors"]);
+function nonExecutiveTotals(rows,classify){
+ const m=new Map();
+ for(const r of rows){if(r.type!=="individual")continue;const group=classify(r.occupation);if(!nonExecutiveGroups.has(group))continue;const name=normalize(r.occupation);if(!name)continue;let v=m.get(name);if(!v){v={name,group,value:0,count:0,names:new Set()};m.set(name,v);}v.value+=r.amount;v.count++;v.names.add(normalize(r.name));}
+ return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
+}
 function aggregateDonors(rows,mode){
  const m=new Map();
  for(const r of rows){
@@ -143,11 +149,23 @@ $("ca-name-heading").textContent=mode==="organization"?"Organization / PAC":mode
 const roleGroups=roleTotals(records);const roleSum=sum(roleGroups,"value"),individualCount=roleGroups.reduce((n,r)=>n+r.count,0);
 $("ca-role-summary").textContent=num(individualCount)+" individual receipts · "+money(roleSum);
 const roleOpt=$("ca-role");roleOpt.replaceChildren(new Option("All reported roles",""));for(const r of [...roleGroups].sort((a,b)=>a.name.localeCompare(b.name)))roleOpt.add(new Option(r.name,r.key));if(!roleGroups.some(r=>r.key===roleSelected))roleSelected="";if(mode==="organization")roleSelected="";roleOpt.value=roleSelected;roleOpt.disabled=mode==="organization";
-function selectRole(key){mode="individual";$("ca-mode").value=mode;roleSelected=roleSelected===key?"":key;page=0;renderOrganizations();}
+function selectRole(key){exactOccupation="";mode="individual";$("ca-mode").value=mode;roleSelected=roleSelected===key?"":key;page=0;renderOrganizations();}
 donut($("ca-role-pie"),sequentialItems(roleGroups),r=>selectRole(r.key),roleSelected,"Individual contributions by reported occupation group");
 $("ca-role-rows").innerHTML=roleGroups.map(r=>'<tr><td><button type="button" class="ca-sector-link" data-role="'+esc(r.key)+'">'+esc(r.name)+'</button></td><td>'+num(r.count)+'</td><td class="jvf-money">'+money(r.value)+'</td><td>'+pct(r.value,roleSum)+'</td></tr>').join("")+'<tr><th scope="row">Total</th><td>'+num(individualCount)+'</td><td>'+money(roleSum)+'</td><td>'+(roleSum?"100.00%":"—")+'</td></tr>';
 for(const b of $("ca-role-rows").querySelectorAll("button"))b.addEventListener("click",()=>selectRole(b.dataset.role));
-const roleRecords=roleSelected?records.filter(r=>r.type==="individual"&&occupationGroup(r.occupation)===roleSelected):records;
+const nonExec=nonExecutiveTotals(records,occupationGroup),nonExecSum=sum(nonExec,"value"),nonExecCount=sum(nonExec,"count");
+const expectedNonExec=roleGroups.filter(r=>nonExecutiveGroups.has(r.key));
+if(nonExecSum!==sum(expectedNonExec,"value")||nonExecCount!==sum(expectedNonExec,"count"))throw Error("Reported occupation totals do not reconcile");
+$("ca-nonexec-summary").textContent=num(nonExec.length)+" distinct reported titles · "+num(nonExecCount)+" individual receipts · "+money(nonExecSum);
+const nonExecFiltered=nonExec.filter(r=>!occupationQuery||r.name.includes(occupationQuery));
+const occMax=Math.max(1,Math.ceil(nonExecFiltered.length/pageSize));occupationPage=Math.max(0,Math.min(occupationPage,occMax-1));
+$("ca-nonexec-rows").innerHTML=nonExecFiltered.slice(occupationPage*pageSize,(occupationPage+1)*pageSize).map(r=>'<tr><td><button type="button" class="ca-sector-link" data-occupation="'+esc(r.name)+'">'+esc(r.name)+'</button></td><td>'+esc(r.group)+'</td><td>'+num(r.names.size)+'</td><td>'+num(r.count)+'</td><td class="jvf-money">'+money(r.value)+'</td><td>'+pct(r.value,nonExecSum)+'</td></tr>').join("")||'<tr><td colspan="6">No matching occupations.</td></tr>';
+$("ca-nonexec-total").innerHTML='<tr><th scope="row">All non-executive / other reported titles</th><td>—</td><td>—</td><td>'+num(nonExecCount)+'</td><td class="jvf-money">'+money(nonExecSum)+'</td><td>'+(nonExecSum?"100.00%":"—")+'</td></tr>';
+$("ca-nonexec-page").textContent="Page "+(occupationPage+1)+" of "+occMax;
+$("ca-nonexec-prev").disabled=occupationPage===0;$("ca-nonexec-next").disabled=occupationPage>=occMax-1;
+for(const b of $("ca-nonexec-rows").querySelectorAll("button"))b.addEventListener("click",()=>{mode="individual";$("ca-mode").value=mode;roleSelected="";sectorSelected="";query="";$("ca-search").value="";exactOccupation=b.dataset.occupation;page=0;renderOrganizations();$("ca-org-rows").closest("section")?.scrollIntoView({block:"start"});});
+$("ca-exact-occupation").hidden=!exactOccupation;$("ca-exact-occupation-label").textContent=exactOccupation;
+const roleRecords=records.filter(r=>(!roleSelected||(r.type==="individual"&&occupationGroup(r.occupation)===roleSelected))&&(!exactOccupation||(r.type==="individual"&&normalize(r.occupation)===exactOccupation)));
 const candidates=aggregateDonors(roleRecords,mode);
 $("ca-role-heading").hidden=mode==="organization";
 const donors=candidates.filter(x=>(!sectorSelected||x.sectors.has(sectorSelected))&&(!query||x.name.includes(query)||[...x.employers,...x.occupations].some(v=>v.includes(query))));
@@ -179,10 +197,14 @@ async function start(){
 for(const c of config)$("ca-committee").add(new Option(c.name,c.key));
 $("ca-committee").addEventListener("change",e=>{selected=e.target.value;sectorSelected="";page=0;render();});
 $("ca-sector").addEventListener("change",e=>{sectorSelected=e.target.value;page=0;renderOrganizations();});
-$("ca-mode").addEventListener("change",e=>{mode=e.target.value;if(mode==="organization")roleSelected="";page=0;renderOrganizations();});
-$("ca-role").addEventListener("change",e=>{roleSelected=e.target.value;page=0;renderOrganizations();});
+$("ca-mode").addEventListener("change",e=>{mode=e.target.value;if(mode==="organization"){roleSelected="";exactOccupation="";}page=0;renderOrganizations();});
+$("ca-role").addEventListener("change",e=>{roleSelected=e.target.value;exactOccupation="";page=0;renderOrganizations();});
 $("ca-search").addEventListener("input",e=>{query=normalize(e.target.value);page=0;renderOrganizations();});
-$("ca-reset").addEventListener("click",()=>{selected=sectorSelected=query=roleSelected="";mode="organization";page=0;$("ca-committee").value=$("ca-search").value="";$("ca-mode").value=mode;render();});
+$("ca-reset").addEventListener("click",()=>{selected=sectorSelected=query=roleSelected=exactOccupation=occupationQuery="";occupationPage=0;$("ca-nonexec-search").value="";mode="organization";page=0;$("ca-committee").value=$("ca-search").value="";$("ca-mode").value=mode;render();});
+$("ca-nonexec-search").addEventListener("input",e=>{occupationQuery=normalize(e.target.value);occupationPage=0;renderOrganizations();});
+$("ca-nonexec-prev").addEventListener("click",()=>{occupationPage--;renderOrganizations();});
+$("ca-nonexec-next").addEventListener("click",()=>{occupationPage++;renderOrganizations();});
+$("ca-clear-occupation").addEventListener("click",()=>{exactOccupation="";page=0;renderOrganizations();});
 $("ca-prev").addEventListener("click",()=>{page--;renderOrganizations();});$("ca-next").addEventListener("click",()=>{page++;renderOrganizations();});
 $("ca-status").textContent="Reconciling all eight committees…";render();
 const results=await Promise.allSettled(config.map(loadCommittee));allRecords=[];loadFailures=[];
@@ -190,7 +212,7 @@ results.forEach((r,i)=>{if(r.status==="fulfilled"){allRecords.push(...r.value);l
 const expected=sum(config,"individual")+sum(config,"organization"),actual=sum(allRecords,"amount");
 if(!loadFailures.length&&(actual!==expected||allRecords.length!==sum(config,"individualCount")+sum(config,"organizationCount")))loadFailures.push("Combined source reconciliation failed");
 $("ca-status").textContent=loadFailures.length?"PARTIAL DATA: "+loadedCommittees+" of 8 committees loaded. "+loadFailures.join("; "):"All 8 committees reconciled · "+num(allRecords.length)+" direct records";
-if(loadFailures.length){for(const id of ["ca-all-sector-pie","ca-sector-pie","ca-ind-sector-pie","ca-sector-rows","ca-org-rows","ca-role-pie","ca-role-rows"]){$(id).closest("section")?.classList.add("ca-partial");}}
+if(loadFailures.length){for(const id of ["ca-all-sector-pie","ca-sector-pie","ca-ind-sector-pie","ca-sector-rows","ca-org-rows","ca-role-pie","ca-role-rows","ca-nonexec-rows"]){$(id).closest("section")?.classList.add("ca-partial");}}
 renderOrganizations();
 }
 start().catch(e=>{$("ca-status").textContent="Dashboard error: "+e.message;console.error(e);});})();
