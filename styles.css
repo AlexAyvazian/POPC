@@ -79,3 +79,37 @@
 .landing-actions-grid .donor-transactions-cta:last-child{grid-column:1/-1;width:calc(50% - 8px);justify-self:center}
 .landing-actions-grid button.donor-transactions-cta{font-family:inherit;cursor:default}
 @media(max-width:680px){.landing-actions-grid{grid-template-columns:minmax(0,1fr);gap:12px}.landing-actions-grid .donor-transactions-cta:last-child{grid-column:auto;width:100%}.landing-page .landing-actions{width:calc(100% - 28px)}}
+
+
+/* JEFFRIES VICTORY FUND: bold gold gridded ivory tables. */
+.jvf-page{color-scheme:light;margin:0;background:radial-gradient(circle at 50% 0%,#fffdf7 0%,#f7f4ee 42%,#f7f7f8 100%);color:#493d30;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+.jvf-shell{max-width:1180px;width:calc(100% - 48px);margin:0 auto;padding:34px 0 82px}
+.jvf-back{display:inline-flex;align-items:center;gap:8px;color:#987448;text-decoration:none;font-weight:700;margin-bottom:18px;padding:12px 14px;border:2px solid #b58b46;border-radius:13px;background:#fffdf9}
+.jvf-header{text-align:center;margin:0 auto 60px}
+.jvf-brand{margin:6px 0 10px;text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:700;color:#B69B79}
+.jvf-header h1{font-size:clamp(36px,5.5vw,68px);line-height:1.08;letter-spacing:-.05em;margin:0;color:#B69B79}
+.jvf-kicker{font-size:16px;color:#906b42;margin:18px 0 10px}
+.jvf-summary{margin:0;color:#66513b;font-size:14px}
+.jvf-main-section{margin:0 0 60px}
+.jvf-main-title{font-size:clamp(26px,3.1vw,38px);margin:0 0 6px;color:#906b42;line-height:1.2;letter-spacing:-.025em}
+.jvf-description{font-size:15px;margin:0 0 22px;line-height:1.55;max-width:860px;color:#655341}
+.jvf-sector-section{margin:0 0 40px}
+.jvf-sector-section h2,.jvf-memo-heading{font-size:22px;line-height:1.3;color:#9a702e;margin:0 0 3px}
+.jvf-memo-heading{margin-top:30px;margin-bottom:14px}
+.jvf-section-meta{font-size:13px;margin:0 0 12px;color:#79624a}
+.jvf-table-wrap{width:100%;overflow:auto;border:3px solid #ae8243;border-radius:20px;background:#fffdf9;box-shadow:0 7px 23px rgba(99,76,45,.07)}
+.jvf-table{border-spacing:0;border-collapse:separate;width:100%;min-width:780px;font-size:14px;line-height:1.45}
+.jvf-table th,.jvf-table td{padding:12px 14px;text-align:left;vertical-align:middle;border-right:2px solid #b58b46;border-bottom:2px solid #b58b46}
+.jvf-table th:last-child,.jvf-table td:last-child{border-right:none}
+.jvf-table tbody tr:last-child td{border-bottom:none}
+.jvf-table th{background:#f4ead8;color:#73532b;font-weight:760;letter-spacing:.01em;white-space:nowrap}
+.jvf-table td{background:#fffdf9;color:#42372d}
+.jvf-table tbody tr.jvf-new-employer:not(:first-child) td{border-top:2px solid #aa7e3a}
+.jvf-table .jvf-contributor{font-weight:600;min-width:200px}
+.jvf-row-note{display:block;color:#8b7456;font-weight:400;font-size:12px;margin-top:4px;line-height:1.3}
+.jvf-money{white-space:nowrap;text-align:right!important;font-variant-numeric:tabular-nums}
+.jvf-nowrap{white-space:nowrap}
+.jvf-fec-link{color:#8a6030;font-weight:600;text-underline-offset:3px;white-space:nowrap}
+.jvf-fec-link:hover{color:#5e401d}
+.jvf-footer{font-size:13px;color:#76624b;text-align:center;margin-top:34px}
+@media(max-width:760px){.jvf-shell{width:calc(100% - 26px);padding-top:20px}.jvf-header{margin-bottom:40px}.jvf-table{font-size:13px}.jvf-table th,.jvf-table td{padding:11px}.jvf-table-wrap{border-radius:16px}}
