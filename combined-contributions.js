@@ -34,9 +34,9 @@ function sector(name){const n=String(name||"").toUpperCase().trim();if(!n||statu
 
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
 // Chart colors sampled from the supplied palette, converted to sRGB.
-const chartPalette={"blue":["#ecfeff","#74cbf5","#66a8e5","#5ca6f1","#599aee","#4063c7"],"teal":["#f2feff","#acfaf1","#a2f2ea","#7fdfd1","#65c9bd"],"green":["#f5fef2","#c0fb74","#b6f16e","#86ec4f","#7fe148","#5a9e31"],"orange":["#f2a43b","#ec722f","#f09638"],"red":["#f1a38a","#e74a41","#ea3a2e","#ed7147","#e04033"],"pink":["#f9d9ef","#f19dc7","#e46cac","#ea8cae"],"purple":["#f9dafa","#dc64d4","#dc69d1"]};
+const chartPalette={"blue":["#ecfeff","#74cbf5","#66a8e5","#5ca6f1","#599aee","#4063c7"],"teal":["#f2feff","#acfaf1","#a2f2ea","#7fdfd1","#65c9bd"],"green":["#f5fef2","#c0fb74","#b6f16e","#86ec4f","#7fe148","#5a9e31"],"orange":["#f2a43b","#ec722f","#f09638"],"red":["#f1a38a","#e74a41","#ea3a2e","#ed7147","#e04033"],"pink":["#f9d9ef","#f19dc7","#e46cac","#ea8cae"],"purple":["#f9dafa","#dc64d4","#dc69d1"],"yellow":["#fffed9","#fcef6e","#f4e14a","#f2ce45"]};
 const committeeColors={"jvf":"#ecfeff","jfc":"#74cbf5","jbpf":"#66a8e5","jeff-pac":"#5ca6f1","jmf":"#599aee","jcvf":"#4063c7","dvtlf":"#f2feff","jcavf":"#acfaf1"};
-const sequence=[...chartPalette.blue,...chartPalette.teal,...chartPalette.green,...chartPalette.orange,...chartPalette.red,...chartPalette.pink,...chartPalette.purple];
+const sequence=[...chartPalette.blue,...chartPalette.teal,...chartPalette.green,...chartPalette.yellow,...chartPalette.orange,...chartPalette.red,...chartPalette.pink,...chartPalette.purple];
 const indColor=chartPalette.blue[4],orgColor=chartPalette.teal[4];
 function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:sequence[i%sequence.length]}));}
 let selected="",sectorSelected="",query="",page=0,allRecords=null,mode="organization",loadFailures=[],loadedCommittees=0;
