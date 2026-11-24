@@ -33,11 +33,23 @@
 .donor-page .liberty-illustration[hidden]{display:none}
 @media(max-width:760px){.donor-page .committee-layout{grid-template-columns:minmax(0,1fr)}.donor-page .liberty-illustration{width:min(78%,360px);justify-self:center}.donor-page .committee-layout .pac-glass{min-height:68px}}
 
-/* Subtle 7-second gold-letter shimmer on the small coalition heading only. */
-.donor-page .pac-header .eyebrow{transform:translateY(-38px)}
+/* Larger coalition title, placed high with a restrained gold shimmer and fine white outline. */
+.donor-page .pac-header{max-width:100%}
+.donor-page .pac-header h1{max-width:880px;margin-inline:auto}
+.donor-page .pac-header .eyebrow{
+  margin:0 0 24px;
+  font-size:clamp(34px,4.7vw,60px);
+  line-height:1.08;
+  letter-spacing:-.025em;
+  transform:translateY(-18px);
+  text-wrap:balance;
+}
 .donor-page .coalition-mark-shimmer{
   display:inline-block;
   color:#B69B79;
+  -webkit-text-stroke:.8px rgba(255,255,255,.85);
+  paint-order:stroke fill;
+  text-shadow:0 1px 1px rgba(255,255,255,.46);
   background-image:linear-gradient(110deg,#B69B79 0%,#B69B79 37%,#cfb487 46%,#f7dda4 50%,#cfb487 54%,#B69B79 63%,#B69B79 100%);
   background-size:260% 100%;
   background-position:100% 0;
