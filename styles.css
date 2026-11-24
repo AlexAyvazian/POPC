@@ -10,7 +10,7 @@
 @media(prefers-reduced-motion:reduce){.title-shimmer{display:none!important}}
 
 /* Ivory and gold committee directory — landing-page visual identity. */
-.donor-page{color-scheme:light;background:radial-gradient(ellipse at 50% 0%,#fffdf7 0%,#f7f4ee 52%,#f7f7f8 100%);color:#B69B79;overflow-x:hidden}
+.donor-page{color-scheme:light;background:#f7f7f8;color:#B69B79;overflow-x:hidden}
 .donor-page .pac-shell{width:min(1120px,calc(100% - 48px));padding:clamp(64px,7vw,100px) 0 64px}
 .donor-page .pac-header{max-width:880px;margin:0 auto clamp(32px,4vw,52px)}
 .donor-page .eyebrow{color:#B69B79;font-size:clamp(12px,1.3vw,16px);letter-spacing:.12em;font-weight:700}
@@ -82,7 +82,7 @@
 
 
 /* JEFFRIES VICTORY FUND: bold gold gridded ivory tables. */
-.jvf-page{color-scheme:light;margin:0;background:radial-gradient(circle at 50% 0%,#fffdf7 0%,#f7f4ee 42%,#f7f7f8 100%);color:#493d30;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+.jvf-page{color-scheme:light;margin:0;background:#f7f7f8;color:#493d30;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
 .jvf-shell{max-width:1180px;width:calc(100% - 48px);margin:0 auto;padding:34px 0 82px}
 .jvf-back{display:inline-flex;align-items:center;gap:8px;color:#987448;text-decoration:none;font-weight:700;margin-bottom:18px;padding:12px 14px;border:2px solid #b58b46;border-radius:13px;background:#fffdf9}
 .jvf-header{text-align:center;margin:0 auto 60px}
