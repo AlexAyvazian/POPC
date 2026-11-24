@@ -69,5 +69,5 @@
   background-clip:text;
   animation:coalition-mark-sweep 7s ease-in-out infinite;
 }
-@keyframes coalition-mark-sweep{0%,12%{background-position:100% 0}55%,100%{background-position:-100% 0}}
+@keyframes coalition-mark-sweep{0%,12%{background-position:100% 0}72%,100%{background-position:0% 0}}
 @media(prefers-reduced-motion:reduce){.donor-page .coalition-mark-shimmer::after{display:none}}
