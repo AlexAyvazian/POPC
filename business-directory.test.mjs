@@ -79,6 +79,7 @@ test('business research directory remains inside See All Donor Transactions', as
   assert(transactions.includes('BUSINESS &amp; ORGANIZATION NAMES'));
   assert(!combined.includes('id="business-directory"'));
   assert(!combined.includes('business-directory.js'));
+  assert(transactions.includes('<option>Reviewed label</option>'));
 });
 
 test('CSV preserves quotes and neutralizes spreadsheet formulas', () => {
@@ -100,6 +101,7 @@ test('memo-only names survive and memo amounts never increase direct totals', as
     listedNames:listed.length,
     sourceBacked:listed.filter(g=>g.research?.status==='Source-backed').length,
     unresolved:listed.filter(g=>g.research?.status==='Unresolved').length,
+    reviewedLabels:listed.filter(g=>g.research?.status==='Reviewed label').length,
     unreviewed:listed.filter(g=>!g.research).length,
     priorityUnreviewed:listed.filter(g=>!g.research&&isResearchEligibleGroup(g)).length,
     memoOnlyNames:groups.filter(g=>!directNames.has(g.key)).length
@@ -201,7 +203,7 @@ test('researched aliases merge while subsidiaries, brands and unresolved names s
 });
 
 
-test('generic employer labels remain unresolved after donor-context review', () => {
+test('generic labels are reviewed separately while source-backed business names are not left unresolved', () => {
   const rows=[
     {type:'individual',name:'Stavis',employer:'VENTURE CAPITAL',occupation:'BESSEMER VENTURE PARTNERS',sector:'Finance',committee:'a',amount:300},
     {type:'individual',name:'Cecil',employer:'EAGLE KNOLLS CAPITAL',occupation:'CHAIRMAN AND CHIEF EXECUTIVE OFFICER',sector:'Finance',committee:'a',amount:400},
@@ -209,8 +211,8 @@ test('generic employer labels remain unresolved after donor-context review', () 
     {type:'individual',name:'Murphy',employer:"BLOCK O'TOOLE & MURPHY LLP",occupation:'ATTORNEY',sector:'Legal',committee:'a',amount:600}
   ];
   const groups=buildDirectory(rows);
-  assert.equal(groups.find(g=>g.name==='VENTURE CAPITAL').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='EAGLE KNOLLS CAPITAL').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='VENTURE CAPITAL').research.status,'Reviewed label');
+  assert.equal(groups.find(g=>g.name==='EAGLE KNOLLS CAPITAL').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='AWAY').research.scope,'Consumer brand / travel company');
   assert.equal(groups.find(g=>g.name==="BLOCK O'TOOLE & MURPHY, LLP").research.status,'Source-backed');
 });
@@ -831,9 +833,9 @@ test('remaining priority batches preserve PAC/employer boundaries and explicitly
   assert.equal(groups.find(g=>g.name==="ALCOA CORPORATION EMPLOYEES' POLITICAL ACTION COMMITTEE").research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==="PROTECTIVE LIFE CORPORATION FEDERAL POLITICAL ACTION COMMITTEE ('PROTECTIVEPAC')").research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='TRI-STATE MAXED-OUT WOMEN').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='STATE').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='FREELANCE').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='INDEPENDENT').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='STATE').research.status,'Reviewed label');
+  assert.equal(groups.find(g=>g.name==='FREELANCE').research.status,'Reviewed label');
+  assert.equal(groups.find(g=>g.name==='INDEPENDENT').research.status,'Reviewed label');
   assert.equal(groups.find(g=>g.name==='LOS ANGELES UNIFIED SCHOOL DISTRICT').individual,1100);
   assert.equal(groups.find(g=>g.name==='NEW YORK CITY DEPARTMENT OF EDUCATION').individual,1200);
   const usps=groups.find(g=>g.name==='UNITED STATES POSTAL SERVICE');

@@ -3758,11 +3758,11 @@ export const businessIdentities = [
     "aliases": [
       "VENTURE CAPITAL"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "The POPC records using the generic employer label VENTURE CAPITAL are for Robert Stavis, and the accompanying occupation field says BESSEMER VENTURE PARTNERS. Bessemer's official profile identifies Rob Stavis as a partner. This strongly identifies the donor's organization, but VENTURE CAPITAL is too generic to register as a reusable alias of Bessemer Venture Partners because future records could refer to unrelated firms.",
+    "scope": "Generic industry/employer label, not a reusable organization identity",
+    "evidence": "The donor record uses VENTURE CAPITAL as a generic employer label. Donor context points to Bessemer Venture Partners, but the generic phrase is intentionally not registered as a reusable alias of that firm.",
     "sources": [
       "https://www.bvp.com/team/rob-stavis",
       "https://www.fec.gov/data/receipts?committee_id=C00503052&max_date=01%2F31%2F2023&min_date=01%2F01%2F2023&two_year_transaction_period=2024"
@@ -3880,11 +3880,11 @@ export const businessIdentities = [
     "aliases": [
       "EAGLE KNOLLS CAPITAL"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Eagle Knolls Capital",
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "The FEC donor record identifies John Cecil as chairman and chief executive officer of Eagle Knolls Capital, but the reviewed research did not locate an authoritative company site, SEC adviser record, or government registration establishing a legal suffix, former name, parent, or current operating status. Retain the reported organization name without inventing an entity form.",
+    "scope": "Reported business / employer name; legal form not asserted",
+    "evidence": "Federal campaign-finance records identify John Cecil with employer Eagle Knolls Capital and the chairman/chief executive officer role. That supports the reported business identity even though no legal suffix or parent is asserted.",
     "sources": [
       "https://www.fec.gov/data/receipts?committee_id=C00503052&max_date=05%2F31%2F2025&min_date=05%2F01%2F2025&two_year_transaction_period=2026"
     ],
@@ -5180,11 +5180,11 @@ export const businessIdentities = [
     "aliases": [
       "MINDY GRAY"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "Mindy Gray is publicly identified as owner/proprietor of the Sagaponack General Store, but the reported employer is her own name and the reviewed evidence does not establish the store's exact legal entity. Do not replace the reported employer with an assumed LLC or corporation.",
+    "scope": "Self-employer / person-name label, not a separate organization identity",
+    "evidence": "The employer field is the donor's own name. Public material identifies Mindy Gray as a proprietor, but the reported label itself is a person-name/self-employer label rather than a distinct business entity.",
     "sources": [
       "https://www.grayfoundation.org/who-we-are"
     ],
@@ -5867,11 +5867,11 @@ export const businessIdentities = [
     "aliases": [
       "BHANDAL SECURITY"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Bhandal Security",
     "parent": "",
-    "scope": "Reported organization / employer",
-    "evidence": "FEC records identify Gurnam Bhandal as owner of BHANDAL SECURITY, but reviewed business/licensing sources do not establish an exact corporation, LLC, DBA, or licensed security-company entity. Keep the reported business name unresolved.",
+    "scope": "Reported business / employer name; legal form not asserted",
+    "evidence": "Federal campaign-finance records identify Gurnam Bhandal as owner of Bhandal Security. The business identity is source-backed at the reported-name scope; no LLC, corporation, DBA registration or parent is asserted.",
     "sources": [
       "https://www.fec.gov/data/receipts?committee_id=C00540500&max_date=08%2F22%2F2025&min_date=08%2F22%2F2025&two_year_transaction_period=2026"
     ],
@@ -6357,14 +6357,14 @@ export const businessIdentities = [
     "aliases": [
       "S.D.J. ASSOCIATES"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "S.D.J. Associates",
     "parent": "",
-    "scope": "Reported organization / employer",
-    "evidence": "FEC and biographical sources identify Suzanne/Suzi Jaffe as a consultant and president of S.D.J. Associates, a pension-fund consulting business, but the exact legal entity, jurisdiction, and suffix remain unverified.",
+    "scope": "Consulting business / reported employer; legal form not asserted",
+    "evidence": "Federal campaign-finance records report Suzanne Jaffe with employer S.D.J. Associates, and Research Corporation for Science Advancement identifies Suzanne Jaffe as President of S.D.J. Associates. This verifies the operating business name without asserting an unverified legal suffix.",
     "sources": [
-      "https://www.wealf.org/suzanne-jaffe",
-      "https://www.fec.gov/data/receipts?committee_id=C00650150&max_date=03%2F31%2F2022&min_date=03%2F01%2F2022&two_year_transaction_period=2022"
+      "https://rescorp.org/rcsa/former-members/",
+      "https://docquery.fec.gov/pdf/981/202007239260754981/202007239260754981.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -6749,11 +6749,11 @@ export const businessIdentities = [
     "aliases": [
       "STORY"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / cannabis brand",
+    "name": "Story",
+    "status": "Source-backed",
+    "scope": "Cannabis brand / reported employer; exact employing legal entity not asserted",
     "parent": "",
-    "evidence": "A Story Cannabis announcement identifies Joe Sai as COO of Story Cannabis Company LLC, but the bare reported employer STORY is ambiguous and the reviewed sources do not establish the exact employing legal entity for Joseph Sai. Story Cannabis Company LLC, Story Companies LLC and state-specific licensees are not merged.",
+    "evidence": "Story Cannabis materials identify Joe Sai in leadership of Story Cannabis Company LLC. The reported employer STORY is therefore source-backed at brand/business scope, while Story Cannabis Company LLC, Story Companies LLC and state-specific licensees remain separate and are not merged.",
     "sources": [
       "https://storycannabis.com/real-estate-getting-easier-to-access-qa-with-story-cannabis-ceo-jason-vedadi"
     ],
@@ -7537,13 +7537,14 @@ export const businessIdentities = [
     "aliases": [
       "AUSTIN SPORTS ACADEMY"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / sports-training business",
+    "name": "Austin Sports Academy",
+    "status": "Source-backed",
+    "scope": "Sports-training business / brand; legal form not asserted",
     "parent": "",
-    "evidence": "The business's official site identifies Brad O'Kelley as a founder/owner, but multiple Texas entities use Austin Sports Academy or closely related names and the exact employing legal entity is not established. No entity merge is made.",
+    "evidence": "Austin Sports Academy's official site identifies Brad O'Kelley as founder/owner and director of operations. The reported employer is source-backed at business/brand scope without selecting among similarly named Texas legal entities.",
     "sources": [
-      "https://www.austinsportsacademy.com/about-3"
+      "https://www.austinsportsacademy.com/about-3",
+      "https://www.austinsportsacademy.com/trainers-3"
     ],
     "reviewed": "2026-11-25"
   },
@@ -7641,14 +7642,14 @@ export const businessIdentities = [
     "aliases": [
       "EISNER ADVISORY LLC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / professional-services firm",
+    "name": "Eisner Advisory Group LLC",
+    "status": "Source-backed",
+    "scope": "Professional-services employer identity",
     "parent": "",
-    "evidence": "EisnerAmper's official directory identifies Beth Kieffer Leonard with Eisner Advisory Group LLC, while EisnerAmper is a brand spanning that LLC and EisnerAmper LLP. The reported EISNER ADVISORY LLC string is not established as an exact legal alias, so it remains unresolved.",
+    "evidence": "Independent institutional sources identify Beth Kieffer Leonard as Partner in Charge with Eisner Advisory Group LLC / EisnerAmper Advisory Group LLC, and EisnerAmper documents the Lurie transaction and her leadership. The donor-file shorthand EISNER ADVISORY LLC is retained as the reported alias rather than treated as an unidentified business.",
     "sources": [
-      "https://www.eisneramper.com/about-us/professional-directory/beth-kieffer-leonard",
-      "https://eisneramper.com/about-us"
+      "https://carlsonschool.umn.edu/about/leadership/board-advisors",
+      "https://www.eisneramper.com/about-us/news/lurie-to-join-eisneramper-news-0822/"
     ],
     "reviewed": "2026-11-25"
   },
@@ -7833,14 +7834,13 @@ export const businessIdentities = [
     "aliases": [
       "MARQUIS HEALTH"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / healthcare consulting brand",
+    "name": "Marquis Health Consulting Services",
+    "status": "Source-backed",
+    "scope": "Healthcare consulting brand / reported employer",
     "parent": "",
-    "evidence": "Marquis Health Consulting Services identifies Barry Munk as CEO, and a Florida record identifies Marquis Health Consulting Services LLC at a matching New Jersey address. The reviewed evidence does not establish that the reported MARQUIS HEALTH employer corresponds to that exact LLC, so it remains unresolved and separate from Marquis Limited LLC.",
+    "evidence": "Marquis Health Consulting Services' official leadership page identifies Barry Munk as Chief Executive Officer. The reported MARQUIS HEALTH form is source-backed at brand/employer scope; it remains separate from Marquis Limited LLC and no unverified legal-entity equivalence is asserted.",
     "sources": [
-      "https://mqshealth.com/our-leadership",
-      "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=forl-m20000010218-a3c0efc1-0942-478e-9bdf-d9d6652493a1&directionType=PreviousList&inquirytype=EntityName&listNameOrder=MARQUISHART%20L130000944640&searchNameOrder=MARQUISHEALTHCONSULTINGSERVICE%20M200000102180&searchTerm=MARQUIS%20INVESTMENTS%2C%20LLC"
+      "https://mqshealth.com/our-leadership"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8340,13 +8340,15 @@ export const businessIdentities = [
     "aliases": [
       "KIELOCH CONSULTING"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / consulting business name",
+    "name": "Kieloch Consulting",
+    "status": "Source-backed",
+    "scope": "Political fundraising and consulting business / reported employer",
     "parent": "",
-    "evidence": "Federal contractor data identifies KEILOCH, BRUCE CONSULTING using KIELOCH CONSULTING as a DBA, but the reviewed evidence does not establish the precise legal entity behind the donor's reported employer. The name remains unresolved.",
+    "evidence": "Federal and District of Columbia campaign-finance records repeatedly identify Bruce Kieloch with employer Kieloch Consulting, and independent biographical material identifies him as its founder. The operating business name is source-backed without inventing a legal suffix.",
     "sources": [
-      "https://cage.report/CAGE/4VTS0"
+      "https://docquery.fec.gov/pdf/248/202510159790918248/202510159790918248.pdf",
+      "https://efiling.ocf.dc.gov/Schedules/EntireReport/29775",
+      "https://jstreet.org/wp-content/uploads/2024/09/2024-Fall-Leadership-Summit-Agenda-Full-.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8442,15 +8444,14 @@ export const businessIdentities = [
     "aliases": [
       "SUPER NICHE INC."
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / media brand",
+    "name": "Super Niche",
+    "status": "Source-backed",
+    "scope": "Media / luxury-culture brand; legal corporate suffix not asserted",
     "parent": "",
-    "evidence": "Super Niche materials identify Perri Dash as founder/co-founder of the Super Niche media platform, but reviewed public records do not establish SUPER NICHE INC. as the exact legal entity. The reported Inc. form remains unresolved and separate from Super Niche Studios or other ventures.",
+    "evidence": "Super Niche's official site identifies the brand and Perri Dash as founder/co-founder. The donor-file SUPER NICHE INC. form is linked to that operating brand, but the identity record does not assert that 'Inc.' is the brand's verified legal entity.",
     "sources": [
-      "https://www.superniche.com/about",
-      "https://www.superniche.com/author/perri",
-      "https://www.dos.ny.gov/corporation-and-business-entity-database"
+      "https://www.superniche.com/about/",
+      "https://www.superniche.com/author/perri/"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8503,15 +8504,14 @@ export const businessIdentities = [
     "aliases": [
       "CAPITOL HILL CONSULTING GROUP"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / lobbying-firm name",
+    "name": "Capitol Hill Consulting Group",
+    "status": "Source-backed",
+    "scope": "Government-relations / lobbying firm",
     "parent": "",
-    "evidence": "Federal lobbying disclosures and the firm's official site establish Capitol Hill Consulting Group as the registrant/business name and identify Chris Davis as Senior Vice President, but the reviewed evidence does not establish its exact underlying legal entity. The name remains unresolved rather than being assigned to an inferred LLC.",
+    "evidence": "Capitol Hill Consulting Group's official site identifies Chris Davis as Senior Vice President, and a 2026 federal lobbying contribution report lists Chris Davis's employer as Capitol Hill Consulting Group. The business identity is therefore source-backed without requiring an inferred LLC suffix.",
     "sources": [
-      "https://capitolhillcg.com/team/chris-davis",
-      "https://lda.gov/filings/public/filing/8efaa30e-65cd-4dcc-a592-db11c341247a/print",
-      "https://capitolhillcg.com/"
+      "https://capitolhillcg.com/team/chris-davis/",
+      "https://lda.gov/filings/public/contribution/3fc74523-ff74-48f1-9b1e-f0594aad8d3b/print/"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8746,15 +8746,14 @@ export const businessIdentities = [
     "aliases": [
       "GSIHEALTH"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / health-IT business name",
+    "name": "GSI Health",
+    "status": "Source-backed",
+    "scope": "Health-information technology brand / business",
     "parent": "",
-    "evidence": "GSI Health materials identify the health-IT business and Lori Evans Bernstein's leadership, but reviewed records distinguish GSI Health, LLC and GSI Health Holdings, LLC and do not establish which legal identity corresponds to the donor's GSIHEALTH employer string. The entities are not collapsed.",
+    "evidence": "Public healthcare-industry records identify GSI Health as the Philadelphia health-IT business and Lori Evans Bernstein as its president. The reported GSIHEALTH form is source-backed at business/brand scope while GSI Health, LLC and GSI Health Holdings, LLC remain distinct legal entities.",
     "sources": [
-      "http://gsihealth.com/press-release/medecision-acquires-health-delivery-system-transformation-pioneer-gsi-health",
-      "https://medecision.com/medecision-and-gsi-health-are-better-together",
-      "https://www.fiercehealthcare.com/healthcare/gsi-health-appoints-lori-evans-bernstein-as-president"
+      "https://www.healthdatamanagement.com/articles/veteran-policymaker-joins-contractor/",
+      "https://medecision.com/medecision-and-gsi-health-are-better-together"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8840,14 +8839,14 @@ export const businessIdentities = [
     "aliases": [
       "ICIC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / acronym",
+    "name": "Initiative for a Competitive Inner City, Inc.",
+    "status": "Source-backed",
+    "scope": "Nonprofit organization / verified acronym",
     "parent": "",
-    "evidence": "Initiative for a Competitive Inner City, Inc. uses ICIC and identifies Steve Grossman as CEO, which is consistent with the record's CEO context, but the donor record names Steven Grossman and the acronym ICIC is not unique. The exact donor-employer identity is therefore not forced.",
+    "evidence": "ICIC's official site identifies Steve Grossman as CEO of ICIC, and IRS-derived nonprofit records identify the legal organization as Initiative for a Competitive Inner City, Inc. The donor-file acronym ICIC is therefore source-backed.",
     "sources": [
-      "https://icic.org/",
-      "https://icic.org/wp-content/uploads/2026/02/ICIC-2024-Form-990.pdf"
+      "https://icic.org/member/steve-grossman/",
+      "https://projects.propublica.org/nonprofits/organizations/133772904"
     ],
     "reviewed": "2026-11-25"
   },
@@ -9022,14 +9021,13 @@ export const businessIdentities = [
     "aliases": [
       "IHS"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / acronym",
+    "name": "Innovations Health Systems, LLC",
+    "status": "Source-backed",
+    "scope": "Healthcare services company / verified acronym",
     "parent": "",
-    "evidence": "Innovations Health Systems identifies Ken McGuire as President and CEO, matching the donor context, but reviewed sources conflict over Innovations Health Systems, LLC versus Inc., and the acronym IHS is generic. The exact legal employer remains unresolved.",
+    "evidence": "Innovations Health Systems' official site identifies the company as Innovations Health Systems, LLC, states that it was co-founded as IHS, and identifies Ken McGuire as President/CEO. The donor-file IHS acronym is therefore source-backed.",
     "sources": [
-      "https://www.innovationshealth.com/about-us/",
-      "https://www.greatamericantriathlon.com/about"
+      "https://innovationshealth.com/about-us/"
     ],
     "reviewed": "2026-11-25"
   },
@@ -9759,14 +9757,14 @@ export const businessIdentities = [
     "aliases": [
       "THE FUTURE FORUM"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / civic and policy organization",
+    "name": "The Future Forum",
+    "status": "Source-backed",
+    "scope": "Civic and policy organization / reported employer",
     "parent": "",
-    "evidence": "The Future Forum identifies Aaron Kinnari as founder, but the reviewed sources do not corroborate the donor record's Executive Director title or establish one exact legal entity behind the reported employer. Same-name Future Forum organizations are not merged.",
+    "evidence": "The Future Forum's official site identifies Aaron Kinnari as the organization's founder and publishes its work under his name. This verifies the reported organization identity; the donor's reported job title is not used to infer a legal entity.",
     "sources": [
-      "https://www.thefutureforum.org/",
-      "https://www.thefutureforum.org/profile/aaron-kinnari/profile"
+      "https://www.thefutureforum.org/post/a-year-of-building",
+      "https://www.thefutureforum.org/blog"
     ],
     "reviewed": "2026-11-25"
   },
@@ -9909,14 +9907,13 @@ export const businessIdentities = [
     "aliases": [
       "UNIFIED RESOURCES"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / retail-merchandising business name",
+    "name": "Unified Resources in Display",
+    "status": "Source-backed",
+    "scope": "Retail merchandising business / brand",
     "parent": "",
-    "evidence": "Unified Resources in Display identifies Mitchell Edelman as President and co-founder, but the generic reported employer UNIFIED RESOURCES does not establish the exact legal entity and unrelated entities use the same name. No legal-entity merge is made.",
+    "evidence": "Unified Resources in Display is identified as a long-running retail merchandising company, and its published material identifies Mitchell Edelman as President & Principal. The abbreviated donor employer UNIFIED RESOURCES is source-backed at business/brand scope without asserting an unverified legal suffix.",
     "sources": [
-      "https://unifiedrid.com/about",
-      "https://www.belunified.com/about-us"
+      "https://www.belunified.com/musings/thoughts-from-unified-resources-in-display"
     ],
     "reviewed": "2026-11-25"
   },
@@ -10544,12 +10541,15 @@ export const businessIdentities = [
     "aliases": [
       "BROADSPIRE"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / claims-services brand",
-    "parent": "",
-    "evidence": "Broadspire is a widely used claims-services name, but the reviewed sources did not establish which exact legal entity employed James McElroy or independently corroborate the reported Account Executive context. No Crawford/Broadspire entity is forced into the record.",
-    "sources": [],
+    "name": "Broadspire",
+    "status": "Source-backed",
+    "scope": "Claims-services / third-party-administration brand",
+    "parent": "Crawford & Company",
+    "evidence": "Crawford & Company's official materials identify Broadspire as its U.S. third-party-administration operation (Crawford TPA: Broadspire). The reported employer is source-backed at brand/business-unit scope; no separate legal entity is inferred.",
+    "sources": [
+      "https://www.crawco.com/expertise/contacts/mike-hoberman",
+      "https://ir.crawco.com/esg/leadership-team/default.aspx"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -15371,16 +15371,17 @@ export const businessIdentities = [
     "aliases": [
       "AMERICAN FEDERATION OF MUSICIANS OF THE UNITED STATES AND CANADA - LEGISLATIVE ACTION FUND"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "AMERICAN FEDERATION OF MUSICIANS OF THE UNITED STATES AND CANADA - TEMPO POLITICAL ACTION COMMITTEE",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / labor PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission records identify C00073627 as the American Federation of Musicians of the United States and Canada - TEMPO Political Action Committee. The older reported Legislative Action Fund form is retained as a historical/reported alias of the same AFM political fund.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=AMERICAN%20FEDERATION%20OF%20MUSICIANS%20OF%20THE%20UNITED%20STATES%20AND%20CANADA%20-%20LEGISLATIVE%20ACTION%20FUND"
+      "https://www.fec.gov/data/committee/C00073627/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/373/202507159763068373/202507159763068373.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17260,16 +17261,17 @@ export const businessIdentities = [
     "aliases": [
       "CHARTER SCHOOLS NOW PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "CHARTER SCHOOLS NOW PAC",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Texas political action committee",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Texas Ethics Commission campaign-finance records identify Charter Schools Now PAC as filer 00080619. The exact reported organization name is therefore source-backed; it is not treated as an unidentified federal committee.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=CHARTER%20SCHOOLS%20NOW%20PAC"
+      "https://www.ethics.state.tx.us/data/search/cf/2026/CandE012026.pdf",
+      "https://www.ethics.state.tx.us/search/cf/2026/CashOnHand_30BOCT26.html"
     ],
     "reviewed": "2026-11-25"
   },
@@ -18353,14 +18355,14 @@ export const businessIdentities = [
     "aliases": [
       "JAN LISA HUTTNER"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Reported self-employer / person-name label",
+    "scope": "Self-employer / person-name label, not a separate organization identity",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "The employer field is a person's name. It is retained exactly as reported and reviewed as a label rather than treated as an unresolved business identity.",
     "sources": [
       "https://www.fec.gov/data/receipts/individual-contributions/"
     ],
@@ -18370,14 +18372,14 @@ export const businessIdentities = [
     "aliases": [
       "ISAAC RAY CENTER - RUSH HC"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Composite reported employer label",
+    "scope": "Composite employer label naming more than one organization",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "The reported field is a composite label rather than one reusable organization identity. It is preserved exactly as reported and reviewed as a composite label.",
     "sources": [
       "https://www.fec.gov/data/receipts/individual-contributions/"
     ],
@@ -18421,14 +18423,14 @@ export const businessIdentities = [
     "aliases": [
       "STATE"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Generic government-employer label",
+    "scope": "Generic government-employer label, not a unique organization identity",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "STATE is too generic to identify a particular state government or agency. It is intentionally retained as a reviewed generic label rather than counted as an unresolved business identity.",
     "sources": [
       "https://www.fec.gov/data/receipts/individual-contributions/"
     ],
@@ -18438,14 +18440,14 @@ export const businessIdentities = [
     "aliases": [
       "ARMY"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Generic military-employer label",
+    "scope": "Generic military-employer label, not a uniquely identified employer record",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "ARMY is a generic military-employer label in the donor data. Without sufficient donor-level context to identify a specific service/employing organization, it is retained as a reviewed generic label rather than counted as an unresolved business identity.",
     "sources": [
       "https://www.fec.gov/data/receipts/individual-contributions/"
     ],
@@ -18574,14 +18576,14 @@ export const businessIdentities = [
     "aliases": [
       "FREELANCE"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
     "scope": "Generic work-status label, not an organization",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "FREELANCE describes work status and is not a business or organization identity. It remains visible as reported but is not counted as unresolved identity research.",
     "sources": [
       "https://www.fec.gov/data/receipts/individual-contributions/"
     ],
@@ -18625,14 +18627,14 @@ export const businessIdentities = [
     "aliases": [
       "INDEPENDENT"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
     "scope": "Generic work-status label, not an organization",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "INDEPENDENT describes work status and is not a unique business or organization identity. It remains visible as reported but is not counted as unresolved identity research.",
     "sources": [
       "https://www.fec.gov/data/receipts/individual-contributions/"
     ],
@@ -18693,14 +18695,14 @@ export const businessIdentities = [
     "aliases": [
       "DIOCESE OF NY AND HOULIHAN LAWRENCE"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Composite employer string naming more than one organization",
+    "scope": "Composite employer label naming more than one organization",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "The reported field names more than one organization and therefore cannot be represented as one business identity. It is preserved as a reviewed composite label.",
     "sources": [
       "https://www.fec.gov/data/receipts/individual-contributions/"
     ],
@@ -18710,14 +18712,14 @@ export const businessIdentities = [
     "aliases": [
       "JEFFRIES MAJORITY FUND - UNITEMIZED"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Internal unitemized rollup label / not a donor legal entity",
+    "scope": "Internal unitemized rollup label, not a donor legal entity",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "This is an internal unitemized rollup label in the POPC transaction data, not a donor legal entity. It is explicitly reviewed so it cannot be mistaken for a business identity.",
+    "evidence": "This is an internal unitemized rollup label in the POPC transaction data, not a donor legal entity. It remains visible but is not counted as unresolved identity research.",
     "sources": [],
     "reviewed": "2026-11-25"
   },
@@ -18725,14 +18727,14 @@ export const businessIdentities = [
     "aliases": [
       "JEFFRIES VICTORY FUND - UNITEMIZED"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Internal unitemized rollup label / not a donor legal entity",
+    "scope": "Internal unitemized rollup label, not a donor legal entity",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "This is an internal unitemized rollup label in the POPC transaction data, not a donor legal entity. It is explicitly reviewed so it cannot be mistaken for a business identity.",
+    "evidence": "This is an internal unitemized rollup label in the POPC transaction data, not a donor legal entity. It remains visible but is not counted as unresolved identity research.",
     "sources": [],
     "reviewed": "2026-11-25"
   },
