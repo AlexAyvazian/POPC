@@ -7,6 +7,7 @@
   <title>PACs Tied to Representative Hakeem Jeffries | People Over Power Coalition</title>
   <link rel="stylesheet" href="styles.css?v=base-f7f7f8" />
 <link rel="stylesheet" href="combined-contributions.css?v=12">
+<link rel="stylesheet" href="business-directory.css?v=2">
 </head>
 <body class="donor-page">
   <main class="pac-shell">
@@ -24,6 +25,7 @@
 
     <div class="committee-layout">
     <nav class="pac-grid" aria-label="Jeffries-linked committees">
+      <a class="pac-glass" href="#business-directory" style="text-decoration:none">BUSINESS &amp; ORGANIZATION NAMES</a>
       <a class="pac-glass" href="combined-contributions.html" data-committee="combined-contributions" style="text-decoration:none">COMBINED TOTAL CONTRIBUTIONS AND ANALYSIS</a>
       <a class="pac-glass" href="jeff-pac.html" data-committee="jeff-pac" style="text-decoration:none">JEFF PAC</a>
       <a class="pac-glass" href="jeffries-victory-fund.html" data-committee="jeffries-victory-fund" style="text-decoration:none">JEFFRIES VICTORY FUND</a>
@@ -38,6 +40,42 @@
         <img src="bria-rmbg3-cutout.png" alt="Statue of Liberty" width="540" height="720" />
       </figure>
     </div>
+    <div class="jvf-page ca-shell">
+<section id="business-directory" class="ca-panel ca-wide" aria-labelledby="bd-heading">
+<h2 id="bd-heading">Business &amp; Organization Identity Research</h2>
+<p class="ca-muted">This research directory is part of the combined eight-committee analysis. By default it shows actual PAC / organization receipt identities plus business and employer names that have been researched. Raw employer-only names from individual donors are preserved in the data but are not promoted into this table unless you search for them or switch the Show menu to reported employers.</p>
+<p class="ca-muted">Open a name to see original reported forms, individual donors, receiving committees, identity scope, parent-company context and source links. Memo records remain visible for identity research, but memo amounts are excluded from contribution totals.</p>
+<p id="bd-status" role="status" aria-live="polite">Loading all eight committees…</p>
+<div class="ca-controls">
+<label for="bd-search">Business name</label><input id="bd-search" type="search" placeholder="Search business, employer, parent or original PAC name" disabled>
+<label for="bd-committee">Committee</label><select id="bd-committee" disabled><option value="">All eight committees</option></select>
+<label for="bd-sector">Sector</label><select id="bd-sector" disabled><option value="">All sectors</option></select>
+<label for="bd-view">Show</label><select id="bd-view" disabled>
+<option value="promoted">Research + PAC / organization identities</option>
+<option value="organizations">PAC / organization receipt identities only</option>
+<option value="employers">Reported employers from individual donors</option>
+<option value="names">All business / organization names</option>
+<option value="personal">Personal / unreported employers</option>
+<option value="all">Everything</option>
+</select>
+<label for="bd-research">Research status</label><select id="bd-research" disabled><option value="">All research statuses</option><option>Source-backed</option><option>Unresolved</option><option>Not reviewed</option></select>
+<button id="bd-reset" type="button" disabled>Reset</button><button id="bd-download" type="button" disabled>Download table CSV</button>
+</div>
+<p id="bd-summary" class="ca-muted" aria-live="polite"></p>
+<div class="jvf-table-wrap" tabindex="0" role="region" aria-label="Business identity table; scroll horizontally for all columns">
+<table class="jvf-table ca-table bd-table"><thead><tr><th scope="col">Business / organization name</th><th scope="col">Sector</th><th scope="col">Research / parent company</th><th scope="col">PAC / organization receipts</th><th scope="col">Individual receipts</th><th scope="col">Records</th></tr></thead><tbody id="bd-rows"></tbody><tfoot id="bd-total"></tfoot></table>
+</div>
+<div class="ca-controls ca-page"><button id="bd-prev" type="button" disabled>Previous</button><span id="bd-page" aria-live="polite"></span><button id="bd-next" type="button" disabled>Next</button></div>
+</section>
+<section id="bd-detail" class="ca-panel ca-wide bd-detail" aria-labelledby="bd-detail-title" hidden>
+<h2 id="bd-detail-title" tabindex="-1"></h2><button id="bd-close" type="button">Close details</button>
+<p id="bd-originals" class="ca-muted"></p>
+<div id="bd-evidence" class="ca-muted"></div>
+<div class="jvf-table-wrap" tabindex="0" role="region" aria-label="Original donor entries"><table class="jvf-table ca-table"><thead><tr><th scope="col">Original donor name</th><th scope="col">Reported employer</th><th scope="col">Occupation</th><th scope="col">Receipt type</th><th scope="col">Receiving committee / source table</th><th scope="col">Records</th><th scope="col">Amount</th></tr></thead><tbody id="bd-detail-rows"></tbody></table></div>
+<div class="ca-controls ca-page"><button id="bd-detail-prev" type="button">Previous</button><span id="bd-detail-page"></span><button id="bd-detail-next" type="button">Next</button></div>
+</section>
+    </div>
   </main>
+<script type="module" src="business-directory.js?v=13"></script>
 <script type="module" src="/research-assistant.js?v=4"></script></body>
 </html>

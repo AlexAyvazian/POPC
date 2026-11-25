@@ -55,15 +55,16 @@ test('combined business view does not promote unreviewed employer-only small don
   assert(selectDirectory(groups,{view:'employers'}).some(g=>g.name==='CLOVIS HOSPITAL'));
 });
 
-test('business research directory lives in combined analysis, not transactions landing page', async () => {
+test('business research directory remains inside See All Donor Transactions', async () => {
   const [combined,transactions]=await Promise.all([
     fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8'),
     fs.readFile(new URL('./transactions.html', import.meta.url),'utf8')
   ]);
-  assert(combined.includes('id="business-directory"'));
-  assert(combined.includes('business-directory.js'));
-  assert(!transactions.includes('id="business-directory"'));
-  assert(!transactions.includes('business-directory.js'));
+  assert(transactions.includes('id="business-directory"'));
+  assert(transactions.includes('business-directory.js'));
+  assert(transactions.includes('BUSINESS &amp; ORGANIZATION NAMES'));
+  assert(!combined.includes('id="business-directory"'));
+  assert(!combined.includes('business-directory.js'));
 });
 
 test('CSV preserves quotes and neutralizes spreadsheet formulas', () => {
