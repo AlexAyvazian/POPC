@@ -398,3 +398,21 @@ test('sixth executive-priority batch consolidates verified variants without coll
   assert.equal(groups.find(g=>g.name==='GSIHEALTH').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='QP HEALTH CARE SERVICES, LLC').research.status,'Source-backed');
 });
+
+
+test('seventh executive-priority batch resolves contextual acronyms without forcing ambiguous ones', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Grossman',employer:'ICIC',occupation:'CEO',sector:'Advocacy',committee:'a',amount:100},
+    {type:'individual',name:'Vida',employer:'ROCKET LLC',occupation:'SVP',sector:'Finance',committee:'a',amount:200},
+    {type:'individual',name:'McGuire',employer:'IHS',occupation:'CEO',sector:'Healthcare',committee:'a',amount:300},
+    {type:'individual',name:'Levin',employer:'T:PZ',occupation:'CHAIR - NON PROFIT',sector:'Education',committee:'a',amount:400},
+    {type:'individual',name:'Galvin',employer:'DCA',occupation:'EXEC DIR',sector:'Advocacy',committee:'a',amount:500},
+    {type:'individual',name:'Frymoyer',employer:'MEMA',occupation:'VICE PRESIDENT PUBLIC POLICY',sector:'Manufacturing',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='ICIC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='ROCKET LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='IHS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='THE POSSIBLE ZONE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='DIGITAL CITIZENS ALLIANCE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MOTOR & EQUIPMENT MANUFACTURERS ASSOCIATION').research.status,'Source-backed');
+});

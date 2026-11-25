@@ -8752,5 +8752,313 @@ export const businessIdentities = [
       "https://www.fiercehealthcare.com/healthcare/gsi-health-appoints-lori-evans-bernstein-as-president"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FAMILY GATEWAY"
+    ],
+    "name": "FAMILY GATEWAY, INC.",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit entity / family homelessness services organization",
+    "parent": "",
+    "evidence": "Family Gateway's IRS filings identify Family Gateway, Inc., EIN 75-2105579, and organization materials identify Ellen Magnis as President and CEO. The reported employer omits the corporate suffix.",
+    "sources": [
+      "https://familygateway.org/wp-content/uploads/2025/11/Family-Gateway-2024-990.pdf",
+      "https://familygateway.org/about/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CHARTWELL STRATEGY GROUP"
+    ],
+    "name": "CHARTWELL STRATEGY GROUP LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / government-relations and strategic-advisory firm",
+    "parent": "",
+    "evidence": "Federal lobbying and FARA records identify Chartwell Strategy Group LLC, and the firm's official site identifies Matthew Epperly in senior leadership. The shortened reported employer maps to the LLC.",
+    "sources": [
+      "https://lda.gov/filings/public/contribution/bee0f997-addb-4b36-b1d9-dd1e337529ba/print",
+      "https://efile.fara.gov/ords/fara/f?p=1381%3A201%3A0%3A%3A%3ARP%2C201%3AP201_REG_NUMBER%3A6518",
+      "https://www.chartwellstrategy.com/team/matthew-epperly"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ENTERTAINMENT SOFTWARE ASSOCIATION"
+    ],
+    "name": "ENTERTAINMENT SOFTWARE ASSOCIATION",
+    "status": "Source-backed",
+    "scope": "Video-game industry trade association / 501(c)(6)",
+    "parent": "",
+    "evidence": "IRS records identify Entertainment Software Association, EIN 13-3768378, and ESA identifies Stanley Pierre-Louis as President and CEO. The association remains separate from any political committee.",
+    "sources": [
+      "https://apps.irs.gov/pub/epostcard/cor/133768378_202303_990O_2024050722380476.pdf",
+      "http://theesa.com/staff/stanley-pierre-louis/",
+      "https://www.theesa.com/about-esa"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EXCEL SECURITY CORP."
+    ],
+    "name": "EXCEL SECURITY CORP.",
+    "status": "Source-backed",
+    "scope": "Legal entity / security-services company",
+    "parent": "",
+    "evidence": "New York business records identify Excel Security Corp. as a domestic business corporation, and the company's site identifies the security-services business. Same-name security companies are not merged.",
+    "sources": [
+      "https://apps.dos.ny.gov/publicInquiry",
+      "http://excelsecurity.com/about-us"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HILLEL INTERNATIONAL"
+    ],
+    "name": "HILLEL INTERNATIONAL",
+    "status": "Source-backed",
+    "scope": "Nonprofit organization / public-facing name of Hillel The Foundation for Jewish Campus Life",
+    "parent": "",
+    "evidence": "IRS filings identify Hillel The Foundation for Jewish Campus Life, EIN 52-1844823, while the organization operates publicly as Hillel International. Mark Rotenberg's senior leadership context is documented in Hillel materials. The identity is not merged with campus-level Hillel affiliates.",
+    "sources": [
+      "https://www.hillel.org/",
+      "https://docs.candid.org/990/521/521844823/521844823_2025_202601339349307120_990.pdf",
+      "http://hillel.org/executive-leadership"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ICIC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / acronym",
+    "parent": "",
+    "evidence": "Initiative for a Competitive Inner City, Inc. uses ICIC and identifies Steve Grossman as CEO, which is consistent with the record's CEO context, but the donor record names Steven Grossman and the acronym ICIC is not unique. The exact donor-employer identity is therefore not forced.",
+    "sources": [
+      "https://icic.org/",
+      "https://icic.org/wp-content/uploads/2026/02/ICIC-2024-Form-990.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RESOLUTION PUBLIC AFFAIRS"
+    ],
+    "name": "RESOLUTION PUBLIC AFFAIRS, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / public-affairs and government-relations firm",
+    "parent": "",
+    "evidence": "Federal lobbying disclosures identify Resolution Public Affairs, LLC and Elizabeth Grey Stanley as a lobbyist for the firm; the firm's official biography identifies her as a principal. The entity is kept separate from clients and political committees.",
+    "sources": [
+      "https://resolutionpublicaffairs.com/about-us/about-elizabeth-stanley",
+      "https://lda.gov/filings/public/contribution/4bd2aab2-e3da-4a40-8e79-7176bf214c29/print",
+      "https://lda.gov/filings/public/contribution/6b9f1035-1c01-4e1c-a7cf-981bf0aa663d/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ROCKET LLC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / Rocket-branded entity",
+    "parent": "",
+    "evidence": "Rocket Companies filings describe multiple distinct Rocket-branded subsidiaries and operating entities. The bare reported ROCKET LLC string does not establish which legal entity employed Sam Vida, so it remains separate and unresolved.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1805284/000180528425000010/rkt-20241231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WACHTELL LIPTON"
+    ],
+    "name": "WACHTELL, LIPTON, ROSEN & KATZ",
+    "status": "Source-backed",
+    "scope": "Law firm / established business name",
+    "parent": "",
+    "evidence": "The firm's official materials identify Wachtell, Lipton, Rosen & Katz. Public professional reporting identifies Constance Monte as the firm's CFO historically; the shortened WACHTELL LIPTON employer is treated as the firm's common business name.",
+    "sources": [
+      "http://wlrk.com/firm",
+      "https://news.bloomberglaw.com/business-and-practice/m-a-power-wachtell-could-be-last-true-law-partnership"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OHBALTO MEDIA LLC"
+    ],
+    "name": "OHBALTO MEDIA LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / media company",
+    "parent": "",
+    "evidence": "New York corporate records identify OHBALTO MEDIA LLC, and federal campaign records identify Jessica Nevins with that employer and Principal occupation. The entity remains separate from similarly named media businesses.",
+    "sources": [
+      "https://apps.dos.ny.gov/publicInquiry",
+      "https://openbaseusa.com/company/ny-4249064"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN DEFENSE INTERNATIONAL INC."
+    ],
+    "name": "AMERICAN DEFENSE INTERNATIONAL, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / government-relations and defense consulting firm",
+    "parent": "",
+    "evidence": "American Defense International identifies the firm and Michael Herson as President and CEO; federal lobbying contribution reports also identify him with American Defense International. The company remains separate from clients and defense contractors it represents.",
+    "sources": [
+      "https://www.americandefense.com/about/",
+      "https://lda.gov/filings/public/contribution/3c04c66f-6eca-435e-809f-6c4eb979ddb1/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CABINETRY & CONSTRUCTION INC."
+    ],
+    "name": "CABINETRY & CONSTRUCTION, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / construction and cabinetry company",
+    "parent": "",
+    "evidence": "The company's official site identifies Cabinetry & Construction, Inc. as a Richmond-area design-build and construction business. The exact reported employer is retained without merging unrelated construction firms.",
+    "sources": [
+      "https://cabinetry-construction.com/services/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "3D MOLECULAR DESIGNS"
+    ],
+    "name": "3D MOLECULAR DESIGNS, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / molecular education and model-design company",
+    "parent": "",
+    "evidence": "3D Molecular Designs' official materials identify the LLC and Diane Herman as Partner and Chief Strategy Officer. The shortened reported employer maps to the LLC.",
+    "sources": [
+      "https://3dmoleculardesigns.com/about-us",
+      "https://3dmoleculardesigns.com/about-us/diane-herman"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "T:PZ"
+    ],
+    "name": "THE POSSIBLE ZONE",
+    "status": "Source-backed",
+    "scope": "Nonprofit operating name of The Possible Project, Inc.",
+    "parent": "",
+    "evidence": "The Possible Zone identifies Mark Levin as co-founder and board chair; nonprofit records identify The Possible Project Inc. d/b/a The Possible Zone, EIN 27-1544896. The reported T:PZ abbreviation is resolved using the matching board-chair context.",
+    "sources": [
+      "https://possiblezone.org/about-us/board-of-directors",
+      "https://possiblezone.org/team-member/mark-levin",
+      "https://www.charitynavigator.org/ein/271544896"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE BERGER COMPANY"
+    ],
+    "name": "THE BERGER COMPANY, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / New Orleans real-estate investment and development company",
+    "parent": "",
+    "evidence": "The Berger Company's official materials identify Darryl D. Berger as founder and chairman of the real-estate firm. The reported employer maps to the company and is not merged with project-level entities.",
+    "sources": [
+      "https://thebergerco.com/about/",
+      "https://thebergerco.com/leadership-team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DCA"
+    ],
+    "name": "DIGITAL CITIZENS ALLIANCE",
+    "status": "Source-backed",
+    "scope": "Nonprofit advocacy organization / public-facing name of Digital Citizens Action Alliance",
+    "parent": "",
+    "evidence": "Digital Citizens Alliance identifies Tom Galvin as Executive Director, while nonprofit records identify Digital Citizens Action Alliance, EIN 46-0820996. The DCA acronym is resolved using the matching executive-director context and is not generalized to other DCA organizations.",
+    "sources": [
+      "https://www.guidestar.org/profile/46-0820996",
+      "https://www.digitalcitizensalliance.org/about/meet-digital-citizens-alliance-team",
+      "https://www.digitalcitizensalliance.org/about/about-the-digital-citizens-alliance"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GODDARD RIVERSIDE"
+    ],
+    "name": "GODDARD RIVERSIDE COMMUNITY CENTER",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit entity / community-services organization",
+    "parent": "",
+    "evidence": "Nonprofit records identify Goddard Riverside Community Center, EIN 13-1893908, and organization materials identify Roderick L. Jones in executive leadership. The public shortened name Goddard Riverside maps to the nonprofit.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/131893908",
+      "https://goddard.org/about/staff",
+      "https://goddard.org/press-releases/testimony-of-executive-director-roderick-l-jones-on-the-city-budget"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "IHS"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / acronym",
+    "parent": "",
+    "evidence": "Innovations Health Systems identifies Ken McGuire as President and CEO, matching the donor context, but reviewed sources conflict over Innovations Health Systems, LLC versus Inc., and the acronym IHS is generic. The exact legal employer remains unresolved.",
+    "sources": [
+      "https://www.innovationshealth.com/about-us/",
+      "https://www.greatamericantriathlon.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MEMA"
+    ],
+    "name": "MOTOR & EQUIPMENT MANUFACTURERS ASSOCIATION",
+    "status": "Source-backed",
+    "scope": "Legal trade association / current brand MEMA, The Vehicle Suppliers Association",
+    "parent": "",
+    "evidence": "MEMA bylaws and history identify Motor & Equipment Manufacturers Association, while the organization identifies Bill Frymoyer as Vice President of Public Policy. Federal lobbying disclosures also identify him with the association. MEMA PAC or member companies are not merged.",
+    "sources": [
+      "https://www.mema.org/system/files/MEMA%20Bylaws%20-%20Approved%2020221117%20-%20Effective%2020230101.pdf",
+      "https://www.mema.org/about-mema/history",
+      "https://www.mema.org/bill-frymoyer",
+      "https://lda.gov/filings/public/contribution/92c0f35e-13a8-4328-b78e-9212e00d697a/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SHERMAN RESIDENTIAL"
+    ],
+    "name": "SHERMAN RESIDENTIAL",
+    "status": "Source-backed",
+    "scope": "Real-estate business division / brand",
+    "parent": "Benj. E. Sherman & Sons, Inc.",
+    "evidence": "Sherman Residential's official materials identify it as the multifamily residential division of Benj. E. Sherman & Sons, Inc. and identify David Sherman as Chairman. The division/brand remains separate from the corporate parent and property-level entities.",
+    "sources": [
+      "https://www.shermanresidential.com/about-us",
+      "https://shermanresidential.com/team",
+      "https://mma.prnewswire.com/media/2790837/Press_Release_Sherman_Residential_Acquires_Axis_at_the_Park_Apartments_in_Charlotte__NC.pdf?p=original"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

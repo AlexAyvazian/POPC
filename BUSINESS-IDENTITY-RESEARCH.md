@@ -116,3 +116,10 @@ Chelsea Piers, ExxonMobil, Fisher Brothers and Hilton are retained at business-g
 This batch reviewed the next executive-linked tier from Air Ventures through GSIHealth. The two reported strings “NFP AN AON COMPANY” and “NFP AND AON COMPANY” were verified as variants of the same NFP employer identity and consolidated at the directory-identity layer only; all underlying receipts remain unchanged.
 
 Capitol Hill Consulting Group, GoValidate and GSIHealth remain unresolved because the reviewed evidence does not support one exact employing legal entity. Lilette Advisors and PWR are source-backed at firm/brand scope. Air Ventures, Ark Restaurants, Empire State Realty Trust, Host Hotels & Resorts, Maximus, RLJ Lodging Trust, Thomas Safran & Associates, QP Health Care Services d/b/a Vivage, Veterans Services Corporation and ZMC Advisors were resolved to source-backed entities. The National Association of Broadcasters remains separate from NABPAC.
+
+
+## Executive-priority identity research — batch 7 — November 25, 2026
+
+The next 20 executive-linked priority identities were reviewed from Family Gateway through Sherman Residential. ICIC, Rocket LLC and IHS remain explicitly unresolved because their acronyms or legal-entity forms cannot be tied to one exact employer without inference.
+
+Family Gateway, Chartwell Strategy Group, Entertainment Software Association, Excel Security, Resolution Public Affairs, Wachtell Lipton, OHBALTO Media, American Defense International, Cabinetry & Construction, 3D Molecular Designs, The Berger Company, Goddard Riverside and MEMA were resolved to source-backed identities. T:PZ was resolved to The Possible Zone using Mark Levin's matching board-chair context, and DCA was resolved to Digital Citizens Alliance using Tom Galvin's matching executive-director context. Hillel International remains a public-facing nonprofit identity of Hillel The Foundation for Jewish Campus Life. Sherman Residential remains a division/brand with Benj. E. Sherman & Sons, Inc. shown only as parent context.
