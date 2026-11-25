@@ -231,3 +231,11 @@ OB- GYN PAC and American College of OB-GYNS PAC (OB-GYN PAC) resolve to FEC comm
 The Walt Disney Productions Employees PAC is a historical name of durable FEC committee C00197749; the current committee name is the TWDC Enterprises 18 Corp./Disney PAC name. The two American Council of Life Insurers rows also resolve to one FEC committee, C00147066; one local row simply omits the space between INSURERS and POLITICAL. That malformed spelling is preserved as an alias rather than promoted as a second organization.
 
 The Chickasaw Nation remains a sovereign tribal-government identity rather than being collapsed into a political committee. Schneider National Inc., TRANSPAC is kept at its FEC committee identity, and no connected organization is inferred because the current FEC committee page does not list one.
+
+## PAC / organization priority research — batch 22 — November 25, 2026
+
+Twenty additional $5,000 priority groups were reviewed from American Crystal Sugar Company through Dow Inc. PAC. Federal political committees are keyed to their FEC committee identities and kept separate from connected companies, associations and unions.
+
+Three donor-file normalization cases were resolved without fuzzy merging. ARCHIPAC's donor-file spacing variants resolve to FEC committee C00139071 and the registered name ARCHIPAC - THE AMERICAN INSTITUTE OF ARCHITECTS. Covington & Burling LLP PAC resolves to FEC committee C00462630, whose registered name spells out AND. Democrats for Education Reform PAC resolves to FEC committee C00417733, whose registered committee name is DEMOCRATS FOR EDUCATION REFORM; the generic PAC suffix in the reported donor string does not create a second identity.
+
+The Cow Creek Band of Umpqua Tribe of Indians remains classified as a sovereign federally recognized tribal government based on the Tribe's official government materials, rather than being reclassified as a PAC.

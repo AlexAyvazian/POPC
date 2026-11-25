@@ -692,3 +692,18 @@ test('twenty-first priority batch consolidates durable PAC aliases without mergi
   assert.equal(life.organizationCount,2);
   assert.equal(life.research.status,'Source-backed');
 });
+
+test('twenty-second priority batch resolves PAC spelling variants without collapsing tribal governments', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'ARCHIPAC  -THE AMERICAN INSTITUTE OF ARCHITECTS',sector:'Professional Services',committee:'a',amount:100},
+    {type:'organization',name:'COVINGTON & BURLING LLP PAC',sector:'Legal',committee:'a',amount:200},
+    {type:'organization',name:'DEMOCRATS FOR EDUCATION REFORM PAC',sector:'Education',committee:'a',amount:300},
+    {type:'organization',name:'COW CREEK BAND OF UMPQUA TRIBE OF INDIANS',sector:'Tribal Government',committee:'a',amount:400}
+  ]);
+  assert.equal(groups.find(g=>g.name==='ARCHIPAC - THE AMERICAN INSTITUTE OF ARCHITECTS').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='COVINGTON AND BURLING LLP PAC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='DEMOCRATS FOR EDUCATION REFORM').research.status,'Source-backed');
+  const cowCreek=groups.find(g=>g.name==='COW CREEK BAND OF UMPQUA TRIBE OF INDIANS');
+  assert.equal(cowCreek.organization,400);
+  assert.equal(cowCreek.research.scope,'Sovereign tribal government / federally recognized tribe');
+});
