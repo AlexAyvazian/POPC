@@ -1,4 +1,4 @@
-import {businessIdentities} from './business-identities.js?v=11';
+import {businessIdentities} from './business-identities.js?v=12';
 import {normalize, config, loadResearchRecords} from './research-data.js?v=1';
 
 export async function loadDirectoryRecords() {
@@ -75,23 +75,35 @@ export function buildDirectory(records) {
     const key = JSON.stringify([identity.personal, identity.name]);
     let group = groups.get(key);
     if (!group) {
-      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), committees: new Set(), individual: 0, organization: 0, count: 0, memoCount: 0, records: [], research: identity.research};
+      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), committees: new Set(), individual: 0, organization: 0, individualCount: 0, organizationCount: 0, individualMemoCount: 0, organizationMemoCount: 0, count: 0, memoCount: 0, records: [], research: identity.research};
       groups.set(key, group);
     }
     group.names.add(identity.reported);
     group.methods.add(identity.method);
     group.sectors.add(record.sector);
     group.committees.add(record.committee);
-    if (record.memo) group.memoCount++;
-    else {group[record.type] += record.amount;group.count++;}
+    if (record.memo) {group.memoCount++;group[record.type+'MemoCount']++;}
+    else {group[record.type] += record.amount;group[record.type+'Count']++;group.count++;}
     group.records.push(record);
   }
   return [...groups.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 
-export function selectDirectory(groups, {query = '', sector = '', view = 'names', research = ''} = {}) {
+export function selectDirectory(groups, {query = '', sector = '', view = 'promoted', research = ''} = {}) {
   const q = normalize(query);
-  return groups.filter(g => (view === 'all' || (view === 'personal' ? g.personal : !g.personal))
+  const matchesView = g => {
+    if (view === 'all') return true;
+    if (view === 'personal') return g.personal;
+    if (g.personal) return false;
+    if (view === 'organizations') return g.organizationCount > 0 || g.organizationMemoCount > 0;
+    if (view === 'employers') return g.individualCount > 0 || g.individualMemoCount > 0;
+    if (view === 'names') return true;
+    // Default combined research view: actual PAC/organization receipt identities
+    // plus names that have been researched. A typed search can still surface any
+    // preserved employer-only name without promoting all one-off employers.
+    return Boolean(g.research) || g.organizationCount > 0 || g.organizationMemoCount > 0 || Boolean(q);
+  };
+  return groups.filter(g => matchesView(g)
     && (!research || (g.research?.status || 'Not reviewed') === research)
     && (!sector || g.sectors.has(sector))
     && (!q || [g.name, ...g.names, g.research?.parent || ''].some(n => normalize(n).includes(q))));

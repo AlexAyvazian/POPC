@@ -41,6 +41,31 @@ test('explicit PAC titles retain originals, legal suffixes and separate amounts'
   assert.equal(identifyName({type:'individual',employer:'SELF EMPLOYED - A BUSINESS'}).personal,false);
 });
 
+test('combined business view does not promote unreviewed employer-only small donors', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Small Donor',employer:'CLOVIS HOSPITAL',occupation:'NURSE',sector:'Healthcare',committee:'a',amount:3000},
+    {type:'individual',name:'Research Donor',employer:'NETFLIX',occupation:'CEO',sector:'Media',committee:'a',amount:5000},
+    {type:'organization',name:'TINY COMMUNITY PAC',sector:'Advocacy',committee:'a',amount:1000}
+  ]);
+  const promoted=selectDirectory(groups,{view:'promoted'});
+  assert(!promoted.some(g=>g.name==='CLOVIS HOSPITAL'));
+  assert(promoted.some(g=>g.name==='NETFLIX, INC.'));
+  assert(promoted.some(g=>g.organizationCount===1));
+  assert(selectDirectory(groups,{view:'promoted',query:'CLOVIS HOSPITAL'}).some(g=>g.name==='CLOVIS HOSPITAL'));
+  assert(selectDirectory(groups,{view:'employers'}).some(g=>g.name==='CLOVIS HOSPITAL'));
+});
+
+test('business research directory lives in combined analysis, not transactions landing page', async () => {
+  const [combined,transactions]=await Promise.all([
+    fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8'),
+    fs.readFile(new URL('./transactions.html', import.meta.url),'utf8')
+  ]);
+  assert(combined.includes('id="business-directory"'));
+  assert(combined.includes('business-directory.js'));
+  assert(!transactions.includes('id="business-directory"'));
+  assert(!transactions.includes('business-directory.js'));
+});
+
 test('CSV preserves quotes and neutralizes spreadsheet formulas', () => {
   const groups=buildDirectory([{type:'individual',name:'Donor',employer:'=FORMULA("x")',occupation:'Role',sector:'Unknown',committee:'a',amount:100}]);
   assert(directoryCSV(groups).includes("\"'=FORMULA(\"\"X\"\")\""));

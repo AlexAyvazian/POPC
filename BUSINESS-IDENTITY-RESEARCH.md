@@ -49,3 +49,14 @@ GitHub Actions ran `node --test business-directory.test.mjs` against the full re
 Workflow run: https://github.com/AlexAyvazian/POPC/actions/runs/45575589333
 
 Live deployment was **not** treated as verified by this repository test. Repository state and live Cloudflare Pages deployment remain separate verification steps.
+
+
+## Combined-page placement and default visibility — November 25, 2026
+
+The business/organization identity research interface now lives inside `combined-contributions.html`, alongside the consolidated eight-committee analysis. It was removed from `transactions.html`, which returns to serving as the committee-navigation landing page.
+
+The default identity view no longer promotes every raw employer string from individual contributions. It shows:
+- identities with PAC / organization receipt records; and
+- identities that have been researched (source-backed or researched-but-unresolved).
+
+Unreviewed employer-only names remain fully preserved in the underlying records. They are still available through direct search and through the “Reported employers from individual donors” / “All business / organization names” views. This prevents one-off small-donor employer strings from crowding the main research table without deleting or changing any donor record or amount.

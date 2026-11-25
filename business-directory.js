@@ -1,5 +1,5 @@
 import {config} from './research-data.js?v=1';
-import {buildDirectory, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js?v=12';
+import {buildDirectory, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js?v=13';
 
 const $ = id => document.getElementById(id);
 const money = n => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD'}).format(n / 100);
@@ -71,7 +71,7 @@ $('bd-next').addEventListener('click', () => {page++;render();});
 $('bd-detail-prev').addEventListener('click', () => {detailPage--;renderDetails();});
 $('bd-detail-next').addEventListener('click', () => {detailPage++;renderDetails();});
 $('bd-close').addEventListener('click', () => {closeDetails();$('bd-search').focus();});
-$('bd-reset').addEventListener('click', () => {$('bd-search').value=$('bd-sector').value=$('bd-committee').value=$('bd-research').value='';$('bd-view').value='names';updateGroups();});
+$('bd-reset').addEventListener('click', () => {$('bd-search').value=$('bd-sector').value=$('bd-committee').value=$('bd-research').value='';$('bd-view').value='promoted';updateGroups();});
 $('bd-download').addEventListener('click', () => {
   const url = URL.createObjectURL(new Blob(['\uFEFF'+directoryCSV(filtered)],{type:'text/csv;charset=utf-8'}));
   const a = document.createElement('a');a.href=url;a.download='popc-business-organization-names.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -81,7 +81,7 @@ try {
   records = await loadDirectoryRecords();
   for (const c of config) $('bd-committee').add(new Option(c.name,c.key));
   updateGroups();
-  $('bd-status').textContent = `All eight committees loaded · ${number(records.filter(r=>!r.memo).length)} direct records and ${number(records.filter(r=>r.memo).length)} memo records accounted for. Personal / unreported employers are available in the Show menu.`;
+  $('bd-status').textContent = `All eight committees loaded · ${number(records.filter(r=>!r.memo).length)} direct records and ${number(records.filter(r=>r.memo).length)} memo records accounted for. Employer-only names from individual donors remain preserved and are available by search or from the Show menu.`;
   for (const el of document.querySelectorAll('.ca-controls input,.ca-controls select,#bd-reset,#bd-download')) el.disabled=false;
 } catch (error) {
   $('bd-status').textContent = 'Unable to load all committee records. Reload to retry.';
