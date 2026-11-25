@@ -249,3 +249,13 @@ General Electric Company Political Action Committee and General Electric Company
 Humane Society Legislative Fund Political Action Committee and Humane World Action Fund Political Action Committee are likewise the same durable FEC committee, C00466813. The 2024 FEC record uses the former name and the 2026 record uses the latter, so the two donor-file rows are consolidated without deleting either reported name.
 
 HNTB HOLDINGS PAC is retained as the exact donor-file shorthand for FEC committee C00386029, whose registered name is HNTB HOLDINGS LTD. PAC. Federation of Exchange Accomodators 1031 PAC retains the FEC's own ACCOMODATORS spelling rather than silently correcting it.
+
+## PAC / organization priority research — batch 24 — November 25, 2026
+
+Twenty additional $5,000 priority groups were reviewed from International Trademark Association through the NetJets Association of Shared Aircraft Pilots PAC. Nineteen new source-backed identity definitions were added, and the existing source-backed JStreetPAC identity was expanded with the donor-file alias JSTREET PAC.
+
+JSTREET PAC is mapped to durable FEC committee C00441949, whose current registered name is JSTREETPAC. A 2026 FEC filing for that same committee ID uses the spaced JStreet PAC form. Micron Technology, Inc. PAC is a historical name of FEC committee C00443671; the current 2026 name is Micron Technology, Inc. Employee PAC.
+
+National Association of Professional Employer Organizations PAC (NAPEO PAC) is a recipient-file form of C00447284, currently registered as National Association of Professional Employer Organizations (NAPEO PAC). National Ready Mixed Concrete Assn. PAC is likewise a recipient-file shortened form of C00114025, currently registered with the additional (CONCRETEPAC) designation. National Thoroughbred Racing Association PAC is retained as a donor-file shorthand for C00360008, whose registered name is National Thoroughbred Racing Association Political Action Committee/HORSE PAC.
+
+No raw donor transaction is rewritten by these mappings; the original reported names remain searchable and visible in the detail records.

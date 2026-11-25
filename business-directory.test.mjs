@@ -726,3 +726,18 @@ test('twenty-third priority batch consolidates durable GE and Humane PAC renames
   assert.equal(humane.research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='HNTB HOLDINGS LTD. PAC').research.status,'Source-backed');
 });
+
+test('twenty-fourth priority batch resolves donor-file PAC names through durable committee identities', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'JSTREET PAC',sector:'Advocacy',committee:'a',amount:100},
+    {type:'organization',name:'MICRON TECHNOLOGY, INC. PAC',sector:'Technology',committee:'a',amount:200},
+    {type:'organization',name:'NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS PAC (NAPEO PAC)',sector:'Professional Services',committee:'a',amount:300},
+    {type:'organization',name:'NATIONAL READY MIXED CONCRETE ASSN. PAC',sector:'Construction',committee:'a',amount:400},
+    {type:'organization',name:'NATIONAL THOROUGHBRED RACING ASSOCIATION PAC',sector:'Trade Association',committee:'a',amount:500}
+  ]);
+  assert.equal(groups.find(g=>g.name==='JSTREETPAC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MICRON TECHNOLOGY, INC. EMPLOYEE PAC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS (NAPEO PAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='NATIONAL READY MIXED CONCRETE ASSN. PAC (CONCRETEPAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='NATIONAL THOROUGHBRED RACING ASSOCIATION POLITICAL ACTION COMMITTEE/HORSE PAC').research.status,'Source-backed');
+});
