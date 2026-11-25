@@ -3414,17 +3414,19 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "D.E. SHAW"
+      "D.E. SHAW",
+      "D.E. SHAW GROUP"
     ],
     "name": "The D. E. Shaw Group",
     "status": "Source-backed",
     "scope": "Investment and technology business group",
     "parent": "",
-    "evidence": "The D. E. Shaw Group is the donor-facing business group. Its official leadership material identifies Eddie Fishman as a managing director of D. E. Shaw & Co., L.P. and an executive-committee member, matching Edward Fishman's donor context while preserving group-level scope.",
+    "evidence": "The D. E. Shaw Group is the donor-facing business group. Its official leadership material identifies Eddie Fishman as a managing director of D. E. Shaw & Co., L.P. and an executive-committee member, matching Edward Fishman's donor context while preserving group-level scope. The firm's public styling and adviser records support D.E. Shaw Group as a group-brand variant.",
     "sources": [
       "https://www.deshaw.com/who-we-are",
       "https://www.deshawgroup.com/",
-      "https://www.deshaw.com/assets/important-disclosure/MSAStatement.pdf"
+      "https://www.deshaw.com/assets/important-disclosure/MSAStatement.pdf",
+      "https://www.deshaw.com/"
     ],
     "reviewed": "2026-11-25"
   },
@@ -6561,13 +6563,14 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "CAP CITY GROUP"
+      "CAP CITY GROUP",
+      "CAPITOL CITY GROUP"
     ],
     "name": "CAPITOL CITY GROUP, LTD.",
     "status": "Source-backed",
     "scope": "Legal entity / lobbying and government-relations firm",
     "parent": "",
-    "evidence": "Federal lobbying records identify Capitol City Group, Ltd. as the registrant and Gerald T. Harrington as a lobbyist for it; the firm's official biography identifies Harrington as founder and president. CAP CITY GROUP is retained as the reported shorthand alias.",
+    "evidence": "Federal lobbying records identify Capitol City Group, Ltd. as the registrant and Gerald T. Harrington as a lobbyist for it; the firm's official biography identifies Harrington as founder and president. CAP CITY GROUP is retained as the reported shorthand alias. Gerald T. Harrington's official Capitol City Group biography matches the donor context for both CAP CITY GROUP and CAPITOL CITY GROUP, supporting the latter as the full reported variant.",
     "sources": [
       "https://lda.gov/filings/public/contribution/a935427c-1615-415f-80ef-c6b8ab337694/print",
       "https://www.capitolcitygrp.com/gerald-t-harrington"
@@ -6825,6 +6828,630 @@ export const businessIdentities = [
     "sources": [
       "https://www.mackregroup.com/",
       "https://www.sec.gov/Archives/edgar/data/1666291/000119312526170450/d898643dars.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "7PILLARS GLOBAL INSIGHTS"
+    ],
+    "name": "7Pillars Global Insights, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / geopolitical consulting firm",
+    "parent": "",
+    "evidence": "The firm's site and reviewed registration evidence identify 7Pillars Global Insights, LLC. No parent is established.",
+    "sources": [
+      "https://www.7pillarsglobal-insights.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ADVENT CAPITAL MANAGEMENT LLC"
+    ],
+    "name": "Advent Capital Management, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Advent Capital Management, LLC; Tracy Maitland is founder, president and CIO. The firm became independent from Utendahl Capital Management in 2001.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1032155"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN UNIVERSITY OF ANTIGUA"
+    ],
+    "name": "American University of Antigua",
+    "status": "Source-backed",
+    "scope": "University / institutional brand",
+    "parent": "Manipal Education Americas, LLC",
+    "evidence": "Institutional materials identify American University of Antigua, Inc. and parent Manipal Education Americas, LLC. The College of Arts and Sciences is distinct.",
+    "sources": [
+      "https://www.auacas.org/wp-content/uploads/2026/11/AUACAS-College-Catalog-2026-FALL.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BARON & BUDD, P.C."
+    ],
+    "name": "Baron & Budd, P.C.",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "The firm's official site uses Baron & Budd, P.C.; no parent is established.",
+    "sources": [
+      "https://www.baronandbudd.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BEGINNING WITH CHILDREN FOUNDATION"
+    ],
+    "name": "Beginning With Children Foundation, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / nonprofit education organization",
+    "parent": "",
+    "evidence": "The foundation's site identifies Beginning With Children Foundation and CEO Geri Licurse; the New York not-for-profit corporation also uses BwC.",
+    "sources": [
+      "https://beginningwithchildren.org/about-us/overview",
+      "https://beginningwithchildren.org/about-us/team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLAKE JONES LAW FIRM LLC"
+    ],
+    "name": "Blake Jones Law Firm, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "The firm's official site identifies Blake Jones Law Firm, LLC.",
+    "sources": [
+      "https://blakejoneslaw.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROWN AND BROWN INSURANCE"
+    ],
+    "name": "Brown & Brown",
+    "status": "Source-backed",
+    "scope": "Insurance group / brand",
+    "parent": "Brown & Brown, Inc.",
+    "evidence": "Brown & Brown's official legal-entity list shows the group spans many agencies and subsidiaries. The donor's exact employing subsidiary is not proven, so the reported employer remains at group/brand scope.",
+    "sources": [
+      "https://www.bbrown.com/about/",
+      "https://www.bbrown.com/wp-content/uploads/2026/01/6a.-BB-Legal-Entities-and-Registered-Trade-Names-1.1.2026.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ERNESTA HOME INC."
+    ],
+    "name": "Ernesta Home, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / home furnishings company",
+    "parent": "",
+    "evidence": "SEC Form D records identify Ernesta Home, Inc.; Ernesta is the consumer brand.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1954034/000195403426000001/xslFormDX01/primary_doc.xml"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "POLITICAL ACTION COMMITTEE OF THE INTERNATIONAL ALLIANCE OF THEATRICAL STAGE EMPLOYEES",
+      "POLITICAL ACTION COMMITTEE OF THE INTERNATIONAL ALLIANCE OF THEATRICAL STAGE EMPLOYES"
+    ],
+    "name": "Political Action Committee of the International Alliance of Theatrical Stage Employees",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00344325 identifies the IATSE PAC. FEC filings support both EMPLOYEES and earlier EMPLOYES spellings under the same committee ID. IATSE is the separate connected union.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00344325",
+      "https://docquery.fec.gov/cgi-bin/forms/C00344325/954031"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE DESOTO GROUP"
+    ],
+    "name": "The DeSoto Group, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / infrastructure contractor",
+    "parent": "",
+    "evidence": "Florida corporate records and the company's site identify The DeSoto Group, LLC.",
+    "sources": [
+      "https://desotogroup.com/",
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/ByName"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TJ FARMS LLC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "Numerous unrelated entities use TJ Farms LLC / T.J. Farms LLC. The organization receipt lacks enough jurisdiction or address context to assign one exact entity safely.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TPD GROUP"
+    ],
+    "name": "TPD Group LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / consulting firm",
+    "parent": "",
+    "evidence": "Public biographies identify TPD Group LLC and Marcy Syms as president; The TPD Group is a usage variant.",
+    "sources": [
+      "https://www.ethics.harvard.edu/people/marcy-syms"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TROUTMANPEPPER"
+    ],
+    "name": "Troutman Pepper Hamilton Sanders LLP",
+    "status": "Source-backed",
+    "scope": "Historical legal entity / law firm brand",
+    "parent": "",
+    "evidence": "Troutman Pepper Hamilton Sanders LLP was formed in 2020. In 2025 it combined with Locke Lord to form Troutman Pepper Locke LLP; the successor is not treated as a simple alias.",
+    "sources": [
+      "https://www.troutman.com/insights/troutman-pepper-officially-launches/",
+      "https://www.troutman.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HUMAN RIGHTS CAMPAIGN PAC"
+    ],
+    "name": "Human Rights Campaign PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00235853 identifies HRC PAC. Human Rights Campaign is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00235853"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HUMAN RIGHTS CAMPAIGN"
+    ],
+    "name": "Human Rights Campaign",
+    "status": "Source-backed",
+    "scope": "Advocacy organization",
+    "parent": "",
+    "evidence": "Human Rights Campaign is the separate civil-rights organization connected with HRC PAC; the PAC and organization remain distinct.",
+    "sources": [
+      "https://www.hrc.org/about",
+      "https://www.fec.gov/data/committee/C00235853"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARBELLA CAPITAL"
+    ],
+    "name": "Arbella Capital",
+    "status": "Source-backed",
+    "scope": "Investment-management / family-office brand",
+    "parent": "",
+    "evidence": "Public professional records resolve the donor's investment context to Arbella Capital, but the reviewed evidence does not establish a unique legal entity or parent; this remains at brand scope.",
+    "sources": [
+      "https://www.linkedin.com/company/arbella-capital"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MEHLMAN CONSULTING"
+    ],
+    "name": "Mehlman Consulting, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / government-relations firm",
+    "parent": "",
+    "evidence": "The firm's official site and federal lobbying filings identify Mehlman Consulting, Inc.",
+    "sources": [
+      "https://www.mehlmanconsulting.com/about-us",
+      "https://lda.gov/filings/public/filing/08af4b32-592a-4cfe-846e-8ef3b24a038f/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL COMMUNITY PHARMACISTS ASSOCIATION - PAC"
+    ],
+    "name": "National Community Pharmacists Association - PAC",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00030809 identifies NCPA's PAC. National Community Pharmacists Association is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00030809"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL COMMUNITY PHARMACISTS ASSOCIATION"
+    ],
+    "name": "National Community Pharmacists Association",
+    "status": "Source-backed",
+    "scope": "Professional membership association",
+    "parent": "",
+    "evidence": "FEC records identify NCPA as the separate connected organization of its PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00030809"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BHFS-E, PC PAC (BROWNSTEIN HYATT FARBER SCHRECK POLITICAL ACTION COMMITTEE)"
+    ],
+    "name": "BHFS-E, PC PAC (Brownstein Hyatt Farber Schreck Political Action Committee)",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00390583 identifies this PAC and BHFS-E, PC as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00390583"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AGUA CALIENTE BAND OF CAHUILLA INDIANS GENERAL FUND"
+    ],
+    "name": "Agua Caliente Band of Cahuilla Indians",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal government",
+    "parent": "",
+    "evidence": "Agua Caliente Band of Cahuilla Indians is the sovereign tribal government; General Fund denotes a governmental fund/account, not a separate company or PAC.",
+    "sources": [
+      "https://www.aguacaliente.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARYLAND ASSOCIATION FOR CONCERNED CITIZENS PAC"
+    ],
+    "name": "Maryland Association for Concerned Citizens Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00195024 identifies Maryland Association for Concerned Citizens Political Action Committee as a qualified unauthorized PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00195024"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ASPIRE HEALTHCARE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "The physician context is compatible with Aspire Health / Aspire Health, Inc., but many unrelated medical organizations use Aspire Healthcare. Without donor location or another identifier, the exact entity remains unresolved.",
+    "sources": [
+      "https://npiregistry.cms.hhs.gov/provider-view/1215372354"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PITTMAN LAW GROUP"
+    ],
+    "name": "Pittman Law Group, P.L.",
+    "status": "Source-backed",
+    "scope": "Legal entity / law and government-relations firm",
+    "parent": "",
+    "evidence": "The firm's official site identifies Pittman Law Group, P.L.",
+    "sources": [
+      "https://pittman-law.com/about-us"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PROPER"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "The generic employer PROPER plus a real-estate occupation matches multiple unrelated businesses. The donor record lacks enough context to select an exact organization safely.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RADICAL VENTURES"
+    ],
+    "name": "Radical Ventures",
+    "status": "Source-backed",
+    "scope": "Venture-capital brand / group",
+    "parent": "",
+    "evidence": "Radical Ventures' official site identifies the AI-focused investment brand. Legal materials identify related entities, but the broad brand is not equated to one legal entity.",
+    "sources": [
+      "https://radical.vc/about",
+      "https://radical.vc/legal/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN UNIVERSITY"
+    ],
+    "name": "American University",
+    "status": "Source-backed",
+    "scope": "University / legal entity",
+    "parent": "",
+    "evidence": "The institution's charter identifies The American University as the incorporated body; American University and AU are standard public short forms.",
+    "sources": [
+      "https://www.american.edu/trustees/charter.cfm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HS LAW GROUP APC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "Public listings support an H S Law Group APC law office in San Jose, but an authoritative state registry record confirming the exact legal identity and status was not located.",
+    "sources": [
+      "https://www.sanjose.com/samuelson-peter-g-h-s-law-group-apc-b260320"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ACRISURE"
+    ],
+    "name": "Acrisure",
+    "status": "Source-backed",
+    "scope": "Financial-services group / brand",
+    "parent": "",
+    "evidence": "GLEIF identifies Acrisure, LLC, while Acrisure is the operating brand for the broader financial-services platform. The donor label remains at brand/group scope.",
+    "sources": [
+      "https://www.gleif.org/lei/549300R0Z1Q47XRTGO22",
+      "https://www.acrisure.com/legal"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BRIDGE 360 ADVISORY"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "The exact donor-entered label could not be tied confidently to a unique legal entity; similarly named advisory firms are unrelated. Keep unresolved pending donor/location context.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GOODY5 ASSET MGMT"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "The donor context points to Ian Goodman's Goody5 investment business and likely Goody5 Capital Management, LLC, but the reviewed evidence does not establish that equivalence with an authoritative source.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PAULSON & CO."
+    ],
+    "name": "Paulson & Co. Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / private investment office",
+    "parent": "",
+    "evidence": "SEC adviser records identify Paulson & Co. Inc.; its adviser registration terminated in 2020 when John Paulson converted the business to a family office.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/127831"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PLYMOUTH BEEF COMPANY"
+    ],
+    "name": "Plymouth Beef Company, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / food company",
+    "parent": "",
+    "evidence": "USDA records identify Plymouth Beef Company, Inc.; Andrew Sussman is publicly identified as president.",
+    "sources": [
+      "https://www.fsis.usda.gov/inspection/fsis-inspected-establishments/plymouth-beef-company-inc."
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STONECOURT CAPITAL"
+    ],
+    "name": "Stonecourt Capital LP",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Stonecourt Capital LP; the firm's official site identifies Jason Epstein as an affiliate partner.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/286234",
+      "https://www.stonecourtlp.com/jason-epstein"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRI-STAR CONSTRUCTION"
+    ],
+    "name": "Tri-Star Construction Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / construction company",
+    "parent": "",
+    "evidence": "The company's official site identifies Tri-Star Construction Corporation and Jack Irushalmi as principal.",
+    "sources": [
+      "https://tristarconstruction.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PROPERTY RESOURCES CORPORATION"
+    ],
+    "name": "People Restoring Communities",
+    "status": "Source-backed",
+    "scope": "Real-estate / affordable-housing company; former name",
+    "parent": "",
+    "evidence": "Property Resources Corporation announced in 2025 that new ownership changed the company name to People Restoring Communities, making PRC a documented former company name.",
+    "sources": [
+      "http://www.prcny.com/",
+      "https://www.prnewswire.com/news-releases/prominent-affordable-housing-developer-prc-announces-new-ownership-company-name-and-expansion-into-national-markets-302529221.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CINQCARE"
+    ],
+    "name": "CINQCARE Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / healthcare company",
+    "parent": "",
+    "evidence": "CINQCARE's official site identifies the company and Anthony Welters as founder, chairman and CEO.",
+    "sources": [
+      "https://www.cinq.care/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ANALYSIS GROUP"
+    ],
+    "name": "Analysis Group, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / economic consulting firm",
+    "parent": "",
+    "evidence": "GLEIF identifies Analysis Group, Inc. and former name Analysis Group/Economics, Inc.; company materials identify Martha Samuelson as chairman/former CEO.",
+    "sources": [
+      "https://www.gleif.org/lei/549300NZ46OY4YL0LN14",
+      "http://www.analysisgroup.com/news-and-events/news/analysis-group-announces-leadership-transition"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ANBRYCE FOUNDATION"
+    ],
+    "name": "The AnBryce Foundation",
+    "status": "Source-backed",
+    "scope": "Nonprofit foundation / public brand",
+    "parent": "",
+    "evidence": "IRS records identify An-Bryce Foundation and the organization publicly uses The AnBryce Foundation; Beatrice Welters is founder/co-chair.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/541766299",
+      "https://anbrycefoundation.net/about/our-founders/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CP LLC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "FEC/OpenSecrets donor records connect Allan Mutchnik to CP, LLC with occupation Executive, but the generic LLC name is insufficient to identify one legal entity or parent.",
+    "sources": [
+      "https://www.opensecrets.org/donor-lookup/results?name=Allan+Mutchnik&order=desc&page=1&sort=D"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FELDMAN DEVELOPMENT"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "Lawrence Feldman's biography points to Feldman Equities, LLC, but FELDMAN DEVELOPMENT is not established as a verified legal alias or former name. Keep unresolved.",
+    "sources": [
+      "https://www.feldmanequities.com/about-feldman-equities/",
+      "https://www.feldmanequities.com/team/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PEBBLEBROOK HOTEL TRUST"
+    ],
+    "name": "Pebblebrook Hotel Trust",
+    "status": "Source-backed",
+    "scope": "Legal entity / REIT",
+    "parent": "",
+    "evidence": "Pebblebrook's official materials and SEC filings identify Pebblebrook Hotel Trust; Jonathan Bortz is founder, chairman and CEO.",
+    "sources": [
+      "https://pebblebrookhotels.com/overview",
+      "https://www.sec.gov/Archives/edgar/data/1474098/000147409826000055/peb-20260630.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SUTHERLAND CAPITAL MANAGEMENT"
+    ],
+    "name": "Sutherland Capital Management, Inc.",
+    "status": "Source-backed",
+    "scope": "Historical investment-management entity",
+    "parent": "",
+    "evidence": "Public biographies identify Ira Riklis with Sutherland Capital Management, Inc. The reviewed evidence supports the historical donor employer identity.",
+    "sources": [
+      "http://www.irariklis.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PISCES INC."
+    ],
+    "name": "Pisces, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / family management company",
+    "parent": "",
+    "evidence": "Current SEC ownership filings identify Pisces, Inc. as a family management company and Robert J. Fisher as managing director.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/39911/000110465926105518/xslSCHEDULE_13D_X02/primary_doc.xml"
     ],
     "reviewed": "2026-11-25"
   }

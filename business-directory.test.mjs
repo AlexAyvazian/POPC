@@ -292,3 +292,20 @@ test('executive-priority research batch resolves exact identities without forcin
   assert.equal(groups.find(g=>g.name==='STORY').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='JSI').research.scope,'Business group / brand covering related entities');
 });
+
+
+test('remaining executive batch preserves PAC, brand and unresolved boundaries', () => {
+  const rows=[
+    {type:'organization',name:'HUMAN RIGHTS CAMPAIGN PAC',sector:'Advocacy',committee:'a',amount:100},
+    {type:'individual',name:'Staff',employer:'HUMAN RIGHTS CAMPAIGN',occupation:'STAFF',sector:'Advocacy',committee:'a',amount:200},
+    {type:'individual',name:'Lawrence',employer:'FELDMAN DEVELOPMENT',occupation:'CEO',sector:'Real Estate',committee:'a',amount:300},
+    {type:'individual',name:'Consultant',employer:'BRIDGE 360 ADVISORY',occupation:'ADVISOR',sector:'Professional',committee:'a',amount:400},
+    {type:'organization',name:'POLITICAL ACTION COMMITTEE OF THE INTERNATIONAL ALLIANCE OF THEATRICAL STAGE EMPLOYES',sector:'Labor',committee:'a',amount:500}
+  ];
+  const g=buildDirectory(rows);
+  const hp=g.find(x=>x.name==='HUMAN RIGHTS CAMPAIGN PAC'),h=g.find(x=>x.name==='HUMAN RIGHTS CAMPAIGN');
+  assert(hp&&h&&hp.key!==h.key);
+  assert.equal(g.find(x=>x.name==='FELDMAN DEVELOPMENT').research.status,'Unresolved');
+  assert.equal(g.find(x=>x.name==='BRIDGE 360 ADVISORY').research.status,'Unresolved');
+  assert(g.some(x=>x.name==='POLITICAL ACTION COMMITTEE OF THE INTERNATIONAL ALLIANCE OF THEATRICAL STAGE EMPLOYEES'));
+});
