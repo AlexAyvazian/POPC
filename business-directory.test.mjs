@@ -175,7 +175,7 @@ test('researched aliases merge while subsidiaries, brands and unresolved names s
   const aristeia=groups.find(g=>g.name==='ARISTEIA CAPITAL, LLC');
   assert.equal(aristeia.count,2);assert.equal(aristeia.names.size,2);
 
-  assert.equal(groups.find(g=>g.name==='CREI').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==="THE CHILDREN'S RESEARCH AND EDUCATION INSTITUTE, INC.").research.status,'Source-backed');
 
   const amazonServices=groups.find(g=>g.name==='AMAZON.COM SERVICES LLC');
   assert.equal(amazonServices.research.status,'Source-backed');
@@ -354,7 +354,7 @@ test('fourth executive-priority batch keeps legal, brand and unresolved identity
     {type:'individual',name:'Pelman',employer:'UNION PLAZA CARE CENTER',occupation:'CEO',sector:'Healthcare',committee:'a',amount:500},
     {type:'individual',name:'Grace',employer:'MORTGAGE BANKERS ASSOCIATION',occupation:'SENIOR EXECUTIVE',sector:'Real Estate',committee:'a',amount:600}
   ]);
-  assert.equal(groups.find(g=>g.name==='MG CAPITAL HOLDINGS INC.').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='MG CAPITAL HOLDINGS, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MONUMENTAL SPORTS & ENTERTAINMENT').research.scope,'Sports and entertainment business group / operating brand');
   assert.equal(groups.find(g=>g.name==='ROSEN HARBOTTLE COMMERCIAL REAL ESTATE').research.scope,'Commercial real-estate firm / brand; exact legal entity not established');
   assert.equal(groups.find(g=>g.name==='VISTRIA PRG, LLC').research.status,'Source-backed');
@@ -430,7 +430,7 @@ test('eighth executive-priority batch keeps ambiguous names separate from suppor
     {type:'individual',name:'Murphy',employer:'COASTAL CONSTRUCTION',occupation:'EXECUTIVE VICE PRESIDENT',sector:'Construction',committee:'a',amount:600},
     {type:'individual',name:'Berlin',employer:'DREAM',occupation:'CEO',sector:'Education',committee:'a',amount:700}
   ]);
-  assert.equal(groups.find(g=>g.name==='KILLER MEXICAN MANAGEMENT LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='KILLER MEXICAN MANAGEMENT, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MARYSIA, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='TXP SERVICES').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='BRUNSWICK GROUP').research.status,'Source-backed');
@@ -488,7 +488,7 @@ test('eleventh executive-priority batch preserves unresolved farm and entertainm
     {type:'individual',name:'Cotton',employer:'PORT AUTHORITY OF NY AND NJ',occupation:'EXECUTIVE',sector:'Government',committee:'a',amount:500},
     {type:'individual',name:'Shitama',employer:'AKIRA',occupation:'CEO',sector:'Manufacturing',committee:'a',amount:600}
   ]);
-  assert.equal(groups.find(g=>g.name==='EMERALD PEAK ENTERTAINMENT').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='EMERALD PEAK ENTERTAINMENT').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='JD DOVE FARMS').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='JERSEYCAN').research.parent,'50CAN, Inc.');
   assert.equal(groups.find(g=>g.name==='LOS BARRIOS UNIDOS COMMUNITY CLINIC, INC.').research.status,'Source-backed');
@@ -542,7 +542,7 @@ test('fourteenth executive-priority batch keeps generic shorthand unresolved and
     {type:'individual',name:'Kenney',employer:'XCEL ENERGY COLORADO',occupation:'PRESIDENT',sector:'Energy',committee:'a',amount:500},
     {type:'individual',name:'Mingo',employer:'SIP N CHAT',occupation:'BUSINESS EXECUTIVE',sector:'Hospitality',committee:'a',amount:600}
   ]);
-  assert.equal(groups.find(g=>g.name==='PDX GALLERY INC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='PDX GALLERY, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='FOX HOLLOW VENTURES LLC').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='RSS-TGP').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='WESTCOAST BLACK THEATRE TROUPE OF FLORIDA, INC.').research.status,'Source-backed');

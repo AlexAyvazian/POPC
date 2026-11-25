@@ -1139,14 +1139,14 @@ export const businessIdentities = [
       "MALLARD INVESTMENTS",
       "MALLARD INVESTMENTS INC."
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Mallard Investments, Inc.",
     "parent": "",
-    "scope": "Reported name",
-    "evidence": "An official FEC filing identifies Timothy F. Wuliger of Moreland Hills, Ohio as president of Mallard Investments, Inc. That supports a likely identity for matching Wuliger records, but it does not prove that every suffixless Mallard Investments entry is the same entity or establish a registered alias. Keep the reported forms separate until the POPC donor row can be tied to Wuliger or matching location context.",
+    "scope": "Investment business / reported employer",
+    "evidence": "Federal campaign-finance filings repeatedly identify Timothy F. Wuliger of Moreland Hills/Chagrin Falls, Ohio as President of Mallard Investments, Inc. Historical FEC-derived contribution records for the same Timothy Wuliger and Ohio location use both MALLARD INVESTMENTS and MALLARD INVESTMENTS INC., supporting the suffixless reported form as the same employer identity.",
     "sources": [
-      "https://docquery.fec.gov/pdf/977/202210279541739977/202210279541739977.pdf",
-      "https://businesssearch.ohiosos.gov/"
+      "https://docquery.fec.gov/pdf/377/202107229451959377/202107229451959377.pdf",
+      "https://www.campaignmoney.com/political/contributions/timothy-wuliger.asp?cycle=00"
     ],
     "reviewed": "2026-11-25"
   },
@@ -1267,14 +1267,13 @@ export const businessIdentities = [
     "aliases": [
       "CREI"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "The Children's Research and Education Institute, Inc.",
     "parent": "",
-    "scope": "Reported name",
-    "evidence": "David B. Harris's donor context points to the Children's Research and Education Institute, where Stanford identifies him as president. The reviewed sources do not expressly establish CREI as that organization's official acronym, DBA, or registered alias, so the reported acronym remains unresolved.",
+    "scope": "Nonprofit research organization / verified acronym",
+    "evidence": "A grant report headed 'CREI — Children's Research and Education Institute, Inc.' names David B. Harris and expressly uses CREI for the organization. This directly verifies the donor-file acronym and organization identity.",
     "sources": [
-      "https://inequality.stanford.edu/about/people/david-b-harris",
-      "https://projects.propublica.org/nonprofits/organizations/521317889"
+      "https://www.foundationsearch.com/990/ARCHIVE/3/THE%20IRVING%20HARRIS%20FOUNDATION%202000%20366055115.PDF"
     ],
     "reviewed": "2026-11-25"
   },
@@ -7222,13 +7221,14 @@ export const businessIdentities = [
     "aliases": [
       "HS LAW GROUP APC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "HS Law Group APC",
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "Public listings support an H S Law Group APC law office in San Jose, but an authoritative state registry record confirming the exact legal identity and status was not located.",
+    "scope": "Historical law firm / predecessor business name",
+    "evidence": "Samuelson, Wilson & Roe's official history states that the firm operates through predecessors including HS LAW GROUP APC. This independently establishes HS Law Group APC as a real predecessor law-firm identity matching the reported employer.",
     "sources": [
-      "https://www.sanjose.com/samuelson-peter-g-h-s-law-group-apc-b260320"
+      "https://www.swr-law.com/about-us",
+      "https://www.eff.org/files/2015/10/29/20011224_bunner_casupct_reply.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -7263,12 +7263,15 @@ export const businessIdentities = [
     "aliases": [
       "GOODY5 ASSET MGMT"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Goody5 Asset Mgmt",
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "The donor context points to Ian Goodman's Goody5 investment business and likely Goody5 Capital Management, LLC, but the reviewed evidence does not establish that equivalence with an authoritative source.",
-    "sources": [],
+    "scope": "Investment-management business / reported employer; legal form not asserted",
+    "evidence": "Federal contribution records report Ian Goodman of New York with employer GOODY5 ASSET MGMT, and Ian Goodman's professional profile independently identifies Goody5 Asset Mgmt as his employer. The operating business name is source-backed without asserting that it is legally identical to any similarly named LLC.",
+    "sources": [
+      "https://www.linkedin.com/in/ian-goodman-7b7a9147",
+      "https://www.writetheus.com/officials/john-cornyn-c001056.html"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -7862,13 +7865,13 @@ export const businessIdentities = [
     "aliases": [
       "MG CAPITAL HOLDINGS INC."
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / holding-company name",
+    "name": "MG Capital Holdings, Inc.",
+    "status": "Source-backed",
+    "scope": "Holding / investment company",
     "parent": "",
-    "evidence": "An entity with the exact MG Capital Holdings, Inc. name exists in public business data, but reviewed sources do not establish that it is the company associated with donor Mark Goodman. Multiple unrelated MG Capital/Mark Goodman records make an exact match unsafe.",
+    "evidence": "Santa Clara University's Leavey School of Business independently identifies Mark Goodman as Chairman of MG Capital Holdings, Inc., directly matching the donor name, reported employer and chairman role.",
     "sources": [
-      "https://im.williamblair.com/about/meet-our-team/mark-goodman"
+      "https://www.scu.edu/execed/bcbr/community/"
     ],
     "reviewed": "2026-11-25"
   },
@@ -9097,14 +9100,14 @@ export const businessIdentities = [
     "aliases": [
       "KILLER MEXICAN MANAGEMENT LLC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / restaurant-management entity",
+    "name": "Killer Mexican Management, LLC",
+    "status": "Source-backed",
+    "scope": "Restaurant-management company / legal entity",
     "parent": "",
-    "evidence": "Red Iguana materials connect William Coker with management of the Cardenas family's restaurant business, but the reviewed sources did not independently verify the exact Killer Mexican Management LLC legal entity. The reported LLC remains separate from the Red Iguana restaurant brand.",
+    "evidence": "Federal campaign records identify William Coker of Salt Lake City as a restaurant executive at Killer Mexican Management LLC. Independent employer and retirement-plan records identify the exact Killer Mexican Management, LLC entity at 736 West North Temple in Salt Lake City as administrator of the Red Iguana 401(k) plan, supporting the exact reported company identity.",
     "sources": [
-      "https://www.rediguana.com/about-us",
-      "https://business.utah.gov/articles/red-iguana-serving-up-authentic-mexican-food-since-1985"
+      "https://projects.propublica.org/coronavirus/bailouts/search?q=KILLER%20MEXICAN%20MANAGEMENT%20LLC",
+      "https://qdro.com/retirement-qdro/RED-IGUANA-401K-PLAN/"
     ],
     "reviewed": "2026-11-25"
   },
@@ -9994,13 +9997,14 @@ export const businessIdentities = [
     "aliases": [
       "EMERALD PEAK ENTERTAINMENT"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / entertainment business name",
+    "name": "Emerald Peak Entertainment",
+    "status": "Source-backed",
+    "scope": "Film / entertainment production business",
     "parent": "",
-    "evidence": "Public profiles connect Sylvia D'Ambrosio with Emerald Peak Entertainment, but reviewed sources do not verify an exact legal entity or independently corroborate the reported Executive Producer role. No LLC form is asserted.",
+    "evidence": "Official FEC filings repeatedly identify Sylvia Dambrosio of Utah with employer Emerald Peak Entertainment and occupation Executive Producer. The repeated same-person employer/role record supports the reported production-company identity; no unverified LLC or corporate suffix is asserted.",
     "sources": [
-      "https://www.imdb.com/name/nm4653821"
+      "https://docquery.fec.gov/pdf/488/202504159755643488/202504159755643488.pdf",
+      "https://docquery.fec.gov/pdf/853/202410159698293853/202410159698293853.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -10825,13 +10829,15 @@ export const businessIdentities = [
     "aliases": [
       "PDX GALLERY INC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / art-gallery business",
+    "name": "PDX Gallery, Inc.",
+    "status": "Source-backed",
+    "scope": "Portland art-gallery business / reported legal name",
     "parent": "",
-    "evidence": "Federal campaign records identify Jane Beebe with employer PDX GALLERY INC and gallery-owner occupation, but reviewed sources did not establish the exact legal entity behind that reported name. It is not automatically merged with similarly named Portland galleries.",
+    "evidence": "Federal campaign records identify Jane Beebe with employer PDX GALLERY INC and occupation Gallery Owner. PDX Contemporary Art's official site identifies Jane Beebe as Owner and Director, and Smithsonian collection metadata describes PDX Contemporary Art as 'PDX Gallery' and identifies Jane Beebe as its owner. Together these sources establish the reported gallery identity without merging unrelated galleries.",
     "sources": [
-      "https://docquery.fec.gov/pdf/977/202602209834829977/202602209834829977.pdf"
+      "https://docquery.fec.gov/pdf/977/202602209834829977/202602209834829977.pdf",
+      "https://pdxcontemporaryart.com/about",
+      "https://americanindian.si.edu/collections-search/object/NMAI_282033"
     ],
     "reviewed": "2026-11-25"
   },
@@ -10966,12 +10972,13 @@ export const businessIdentities = [
     "aliases": [
       "IAG LTD."
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / corporate name",
+    "name": "IAG Ltd.",
+    "status": "Source-backed",
+    "scope": "Reported employer / business entity",
     "parent": "",
-    "evidence": "Public restructuring records reference IAG LTD with Michele Pierro, but reviewed sources do not establish the company's exact operating identity or independently corroborate the Executive Vice President role. No IAG-branded company is inferred.",
+    "evidence": "Court-administered restructuring records list IAG LTD, attention Michele Pierro, at a Rutherford, New Jersey business address. Federal contribution records independently report Michele Pierro with employer IAG LTD. This directly ties the donor to the reported entity; no industry or parent is inferred.",
     "sources": [
+      "https://document.epiq11.com/document/getdocumentbycode?docId=4182614&projectCode=MSJ&source=DM",
       "https://document.epiq11.com/document/getdocumentbycode?docId=4178149&projectCode=MSJ&source=DM"
     ],
     "reviewed": "2026-11-25"
