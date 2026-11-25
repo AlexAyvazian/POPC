@@ -186,7 +186,7 @@ test('next research batch preserves PAC boundaries and unresolved same-name empl
   const visa=groups.find(g=>g.name==='VISA INC.');
   assert.equal(visa.organization,1000);
   assert.equal(visa.research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='TRISOLARIS LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='TRISOLARIS, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='HBJ INVESTMENTS, LLC').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='KAUFMAN, HALL & ASSOCIATES, LLC').research.parent,'Vizient, Inc.');
 });
