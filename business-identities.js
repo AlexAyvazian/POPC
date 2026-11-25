@@ -9354,5 +9354,309 @@ export const businessIdentities = [
       "https://wearedream.org/our-leadership"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EXELON"
+    ],
+    "name": "EXELON CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / public utility holding company",
+    "parent": "",
+    "evidence": "SEC filings identify Exelon Corporation as the holding company, while federal election filings identify Marie Sylla-Dixon in senior federal-affairs leadership associated with Exelon. Operating utilities, the Exelon Foundation and Exelon PAC remain separate.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1109357/000110935726000042/exc-20251231ars.pdf",
+      "https://docquery.fec.gov/cgi-bin/forms/C00141218/1848179"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FONTHEIM INTERNATIONAL LLC"
+    ],
+    "name": "FONTHEIM INTERNATIONAL, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / lobbying and consulting firm",
+    "parent": "",
+    "evidence": "Federal lobbying registrations identify Fontheim International, LLC with Claude G.B. Fontheim as its principal. The LLC remains separate from Fontheim Partners, P.C.",
+    "sources": [
+      "https://lda.gov/filings/public/filing/8e1cfe7b-17b5-419c-ad52-450ff963c6f2/print",
+      "http://fontheim.com/bios/Claude%20G.B.%20Fontheim"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FRIED FRANK LLP"
+    ],
+    "name": "FRIED, FRANK, HARRIS, SHRIVER & JACOBSON LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / international law firm",
+    "parent": "",
+    "evidence": "Fried Frank's official materials identify the firm and Kenneth Rosh in firm leadership. The abbreviated reported employer maps to the full law-firm name.",
+    "sources": [
+      "https://friedfrank.com/our-people/kenneth-rosh",
+      "https://www.friedfrank.com/news-and-insights/fried-frank-announces-new-leadership-team-11353"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "G&C EQUIPMENT"
+    ],
+    "name": "G&C EQUIPMENT CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / equipment and supplier business",
+    "parent": "",
+    "evidence": "SBA certification records and the company's official materials identify G&C Equipment Corporation. The reported G&C Equipment form is retained as its shorthand and is not merged with other diversity-supplier businesses.",
+    "sources": [
+      "https://search.certifications.sba.gov/profile/EYVSKZACMGP6/4AN95",
+      "https://gandccorp.com/about-us"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GENENTECH"
+    ],
+    "name": "GENENTECH, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / biotechnology company; member of Roche Group",
+    "parent": "",
+    "evidence": "SEC materials identify Genentech, Inc. as part of the Roche Group, and Genentech materials identify Quita Highsmith in vice-president-level leadership. Genentech remains distinct from Roche parent and affiliate entities.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/875045/000087504525000009/R27.htm",
+      "https://www.gene.com/diversity-inclusion/chief-diversity-officer"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GNE"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / acronym",
+    "parent": "",
+    "evidence": "A Joy Russell has held vice-president roles at Genentech, while another public executive with the same name is associated with Holtec. The generic GNE employer string and donor name do not establish which entity is intended, so no acronym expansion is made.",
+    "sources": [
+      "https://www.califesciences.org/joy-russell",
+      "https://holtecinternational.com/company/leadership/corporate-leadership/ms-joy-russell"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "H&M STRATEGIES"
+    ],
+    "name": "H&M STRATEGIES LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / government-affairs consulting firm",
+    "parent": "",
+    "evidence": "H&M Strategies' official team page identifies Kristen Bautz as Vice President, Government Affairs, and federal lobbying disclosures identify H&M Strategies LLP as her registrant.",
+    "sources": [
+      "https://www.hm-strategies.com/team",
+      "https://www.hm-strategies.com/about",
+      "https://lda.gov/filings/public/contribution/9ba5a392-583f-47cd-9ed6-61f53d5b0655/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HOLISTIC SOLUTIONS LLC"
+    ],
+    "name": "HOLISTIC SOLUTIONS LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / New Jersey cannabis company",
+    "parent": "",
+    "evidence": "Holistic Solutions identifies Suzan Nickelson as founder and CEO, and New Jersey cannabis records document Holistic Solutions in the state's licensing process. The company is retained separately from unrelated Holistic-named businesses.",
+    "sources": [
+      "https://myholisticsolutions.com/our-founder",
+      "https://myholisticsolutions.com/about",
+      "http://www.nj.gov/cannabis/documents/mmp/2019_RFA_Dispensaries/2019%20RFA%20Award%20Letter%20Holistic%20Solutions%2019-0102.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HOLT HOSPITALITY LLC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / hospitality company",
+    "parent": "",
+    "evidence": "Holt Hospitality, LLC exists as an Atlanta hospitality business, but public materials also identify Kevin Holt with the distinct H&H Hospitality organization. The reviewed evidence does not establish which employer corresponds to the donor record, so the names are not merged.",
+    "sources": [
+      "https://www.holt-hosp.com/",
+      "https://www.hh-hospitality.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTEGRATED LOGISTICAL SUPPORT INC."
+    ],
+    "name": "INTEGRATED LOGISTICAL SUPPORT, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / engineering and construction-management firm",
+    "parent": "",
+    "evidence": "ILSI Engineering identifies Integrated Logistical Support, Inc. and Iam Tucker as President and CEO; Louisiana legislative materials also document her ownership and leadership.",
+    "sources": [
+      "https://www.ilsiengineering.com/iam-tucker-bio",
+      "https://www.ilsiengineering.com/",
+      "https://www.legis.la.gov/Legis/ViewDocument.aspx?d=1373813"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KENNEDY DEMOCRATS"
+    ],
+    "name": "KENNEDY DEMOCRATS",
+    "status": "Source-backed",
+    "scope": "Pennsylvania political organization",
+    "parent": "",
+    "evidence": "Kennedy Democrats' official site identifies the statewide Pennsylvania political organization, while FEC receipts identify Liam Parsons with Kennedy Democrats and the Executive Director title. The organization is not treated as a candidate committee.",
+    "sources": [
+      "https://kennedydemocrats.com/about-1",
+      "https://www.fec.gov/data/receipts?committee_id=C00503052&max_date=08%2F31%2F2026&min_date=08%2F01%2F2026&two_year_transaction_period=2026"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LDR EQUITIES"
+    ],
+    "name": "LDR EQUITIES, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / real-estate investment company",
+    "parent": "",
+    "evidence": "New Jersey public records identify LDR Equities, LLC, and federal campaign records independently report Daniel Rubin with employer LDR Equities. The shortened employer maps to the LLC without inferring affiliates.",
+    "sources": [
+      "http://www.nj.gov/bpu/pdf/boardorders/2019/20190418/4-18-19-VIIB.pdf",
+      "https://docquery.fec.gov/cgi-bin/forms/C00703975/1440320/sa/18/100"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LEVERAGED"
+    ],
+    "name": "LEVERAGED FOUNDATION",
+    "status": "Source-backed",
+    "scope": "Education-leadership nonprofit / public-facing organization",
+    "parent": "",
+    "evidence": "LeveragED Foundation's official materials identify the nonprofit and Harvard materials identify Meghan Mackay in executive leadership. The reported shorthand is resolved at organization scope, not to an inferred corporate entity.",
+    "sources": [
+      "https://www.leveragedfoundation.org/",
+      "https://scl.gse.harvard.edu/people/meghan-mackay"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MILLENNIUM MANAGEMENT"
+    ],
+    "name": "MILLENNIUM MANAGEMENT LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment-management firm",
+    "parent": "",
+    "evidence": "LEI records identify Millennium Management LLC and public professional materials identify Dan Berkovitz as Vice Chairman for External and Regulatory Affairs. The employer remains separate from Millennium funds and affiliated management entities.",
+    "sources": [
+      "https://lei.bloomberg.com/leis/view/549300D0DN3CHSCJ0I36",
+      "https://fedsoc.org/bio/dan-berkovitz"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MOINIAN"
+    ],
+    "name": "THE MOINIAN GROUP",
+    "status": "Source-backed",
+    "scope": "Real-estate business group / brand",
+    "parent": "",
+    "evidence": "Public real-estate leadership materials identify Joseph Moinian as founder and CEO of The Moinian Group. The short reported employer is retained at group/brand scope rather than assigned to a specific property or project entity.",
+    "sources": [
+      "https://www.ctbuh.org/people-profile/joseph-moinian"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NECSN"
+    ],
+    "name": "NORTHEAST CHARTER SCHOOLS NETWORK, INC.",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit entity / charter-school advocacy network",
+    "parent": "",
+    "evidence": "Nonprofit records identify Northeast Charter Schools Network, Inc., EIN 74-2952223, and public materials identify Anna Hall in CEO leadership. The New York and Connecticut state associations are not merged into the network entity.",
+    "sources": [
+      "https://necharters.org/",
+      "https://philanthropy.org/990/report/742952223/northeast-charter-schools-network-inc/2022"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NORTHERN COMPASS GROUP LLC"
+    ],
+    "name": "NORTHERN COMPASS GROUP LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / business and government consulting firm",
+    "parent": "",
+    "evidence": "Northern Compass Group identifies Mark Begich as President and CEO, and federal lobbying disclosures identify NORTHERN COMPASS GROUP LLC as his registrant. Similar Compass-named firms are not merged.",
+    "sources": [
+      "https://northerncompassgroup.com/team-members/mark-begich/",
+      "https://northerncompassgroup.com/",
+      "https://lda.gov/filings/public/contribution/fa032a47-1cbf-4f5a-9161-932fb0d6f366/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PENN AVENUE"
+    ],
+    "name": "PENN AVENUE PARTNERS LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / government-affairs and public-policy firm",
+    "parent": "",
+    "evidence": "Federal lobbying records identify Penn Avenue Partners and Daniella Landau as a lobbyist for the firm; professional records identify the legal firm as Penn Avenue Partners LLC. The shortened donor employer maps to that firm.",
+    "sources": [
+      "https://lda.gov/filings/public/contribution/f49256e7-39b3-4481-ba5d-939c80a0a929/print",
+      "https://www.legistorm.com/organization/summary/109769/Penn_Avenue_Partners_LLC.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "REGAL DOMESTICS"
+    ],
+    "name": "B&G REGAL DOMESTICS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / domestic staffing and placement company",
+    "parent": "",
+    "evidence": "Regal Domestics' official site identifies Barbara Goldberg Goldman as founder/president, and business listings identify B&G Regal Domestics, Inc. as the underlying company. The shorter reported employer is retained as a trade-name variant.",
+    "sources": [
+      "https://www.regaldomesticsinc.com/about-us",
+      "https://www.regaldomesticsinc.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOLO FUNDS"
+    ],
+    "name": "SOLO FUNDS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / fintech public-benefit corporation",
+    "parent": "",
+    "evidence": "LEI and state financial-regulator records identify SoLo Funds, Inc. and Travis Holoway as CEO. SoLo Cooperative, Inc. is a separate legal entity and is not merged.",
+    "sources": [
+      "https://www.gleif.org/lei/984500065F37B3LEE735",
+      "https://labor.maryland.gov/finance/consumers/frfy2024-solofunds.pdf",
+      "https://dfpi.ca.gov/wp-content/uploads/sites/337/2023/05/Consent-Order-SoLo-Funds-Inc.pdf"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

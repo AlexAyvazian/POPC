@@ -436,3 +436,21 @@ test('eighth executive-priority batch keeps ambiguous names separate from suppor
   assert.equal(groups.find(g=>g.name==='COASTAL CONSTRUCTION').research.scope,'Florida construction business group / brand');
   assert.equal(groups.find(g=>g.name==='HARLEM RBI, INC. D/B/A DREAM').research.status,'Source-backed');
 });
+
+
+test('ninth executive-priority batch resolves organizations while retaining ambiguous acronym and employer matches', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Russell',employer:'GNE',occupation:'VICE PRESIDENT',sector:'Technology',committee:'a',amount:100},
+    {type:'individual',name:'Holt',employer:'HOLT HOSPITALITY LLC',occupation:'EXECUTIVE',sector:'Hospitality',committee:'a',amount:200},
+    {type:'individual',name:'Mackay',employer:'LEVERAGED',occupation:'EXECUTIVE DIRECTOR',sector:'Education',committee:'a',amount:300},
+    {type:'individual',name:'Berkovitz',employer:'MILLENNIUM MANAGEMENT',occupation:'VICE CHAIR',sector:'Finance',committee:'a',amount:400},
+    {type:'individual',name:'Landau',employer:'PENN AVENUE',occupation:'PARTNER',sector:'Lobbying',committee:'a',amount:500},
+    {type:'individual',name:'Holoway',employer:'SOLO FUNDS',occupation:'CEO',sector:'Finance',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='GNE').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='HOLT HOSPITALITY LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='LEVERAGED FOUNDATION').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MILLENNIUM MANAGEMENT LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='PENN AVENUE PARTNERS LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='SOLO FUNDS, INC.').research.status,'Source-backed');
+});

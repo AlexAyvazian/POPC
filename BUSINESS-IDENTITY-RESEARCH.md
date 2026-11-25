@@ -130,3 +130,10 @@ Family Gateway, Chartwell Strategy Group, Entertainment Software Association, Ex
 The next 20 priority identities from K & M Office through DREAM were reviewed. Killer Mexican Management LLC, Marysia LLC, TXP Services and Brunswick Group remain unresolved rather than being matched through brand similarity or a donor-name assumption.
 
 K & M Office, Parkway Corporation, Jewish Federation of Cleveland, Novartis Pharmaceuticals Corporation, Authors Guild, QXO, 50CAN, Access Leasing, Anisa International, Apple Hospitality REIT, Ascend Learning, Bellwether Enterprise, Blue Star Strategies and Harlem RBI d/b/a DREAM were source-backed. Advent International and Coastal Construction remain source-backed only at firm/group scope. Ascend Learning is specifically the Brooklyn charter-school organization associated with Maryann Li and is not merged with the unrelated commercial Ascend Learning company.
+
+
+## Executive-priority identity research — batch 9 — November 25, 2026
+
+The next 20 priority identities from Exelon through SoLo Funds were reviewed. GNE and Holt Hospitality LLC remain unresolved because the donor-name/employer context points to multiple plausible identities and does not support a safe merge.
+
+Exelon Corporation, Fontheim International, Fried Frank, G&C Equipment Corporation, Genentech, H&M Strategies, Holistic Solutions, Integrated Logistical Support, Kennedy Democrats, LDR Equities, LeveragED Foundation, Millennium Management, Northeast Charter Schools Network, Northern Compass Group, Penn Avenue Partners, B&G Regal Domestics and SoLo Funds were source-backed. The Moinian Group remains at real-estate group/brand scope. Genentech remains separate from its Roche-group parent context and all political committees remain separate from connected organizations.
