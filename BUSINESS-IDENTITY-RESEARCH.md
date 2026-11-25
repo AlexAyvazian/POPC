@@ -269,3 +269,13 @@ Several PAC donor-file names resolve through durable FEC committee IDs rather th
 Plasterers' and Cement Masons' Action Committee is a historical name of C00134742; current FEC records use Operative Plasterers' and Cement Masons' Intl Association Action Committee. Real Estate Roundtable Political Action Committee (REALPAC) without the leading THE appears in earlier C00033779 records; current records use The Real Estate Roundtable Political Action Committee (REALPAC).
 
 The donor-file Seafarers NA-AGLIWD/NMU form and the current NA-AGLIW form are both tied to C00004325. SEIU COPE is the recipient-file shorthand for C00004036, currently registered as SEIU COPE (Service Employees International Union Committee on Political Education). Raw transaction names remain preserved and searchable.
+
+## PAC priority research — batch 26 — November 25, 2026
+
+Twenty additional priority organization receipts were reviewed: eighteen $5,000 rows followed by the next two $4,500 rows. All twenty are mapped as organization-only identities using federal committee records.
+
+TargetCitizens Political Forum is a donor-file shorthand for C00098061, currently registered as Target Corporation Citizens Political Forum (TargetCitizens Political Forum). The Grant Thornton donor-file name is part of a verified name history for C00408260: older filings used The Grant Thornton LLP Political Action Committee LLC, a 2026 recipient filing uses The Grant Thornton LLC Political Action Committee, and the current committee registration is The Grant Thornton Advisors LLC Political Action Committee.
+
+Universal Music Group Political Action Committee is the historical 2018 name of C00392464, now registered as Universal Music Group Employee Action Fund. US Travel Association PAC is the punctuation-normalized donor form of C00457754, currently U.S. Travel Association PAC. VEN-PAC is the shorthand for C00369660, Venable PAC (VEN-PAC), and Walgreen Co PAC is the shortened donor form of C00160770, Walgreen Co PAC (WalgreensPAC).
+
+The UA Union Plumbers & Pipefitters row maps to C00012476 because that committee's registered name exactly matches the donor string. It is deliberately kept separate from C00331918, a different committee whose registered name adds a trailing PAC. Three Rivers Holdings Inc Dobbs Unison Health Plans Federal PAC is preserved as its own terminated federal committee, C00418491, rather than being attached to a present-day company identity. Raw transaction names remain unchanged.
