@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f7f8">
+<title>Open Letter | People Over Power Coalition</title>
+<link rel="stylesheet" href="styles.css?v=base-f7f7f8">
+<link rel="stylesheet" href="roosevelt-header.css?v=1">
+<link rel="stylesheet" href="open-letter.css?v=1">
+</head>
+<body class="jvf-page ca-roosevelt-page">
+<a class="ca-roosevelt-back" href="index.html" aria-label="Back to home" title="Back to home">←</a>
+<header class="site-hero ca-roosevelt-hero" aria-label="Theodore Roosevelt illustration"><img class="coalition-header" src="Theodore_Roosevelt_named.png" alt="Theodore Roosevelt illustration with quotation" fetchpriority="high" decoding="async"><div class="ca-header-fireflies" aria-hidden="true"></div></header>
+<main class="jvf-shell letter-shell">
+<header class="jvf-header"><h1>Sign the Open Letter</h1><p class="jvf-kicker">People Over Power Coalition</p></header>
+<section class="letter-panel" aria-labelledby="letter-sign-title">
+<div class="letter-panel-top"><h2 id="letter-sign-title">Add your name</h2><p class="letter-count"><strong id="letter-count">—</strong> signatures</p></div>
+<form id="letter-form" method="post" action="/api/letter">
+<div class="letter-fields">
+<label>Full name<input name="full_name" autocomplete="name" maxlength="100" required></label>
+<label>Email address<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+<label>City<input name="city" autocomplete="address-level2" maxlength="80" required></label>
+<label>ZIP code<input name="zip" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required></label>
+</div>
+<p class="letter-privacy">Your full name, city and ZIP code will appear on the public signed letter and may be included in copies delivered to recipients and retained in the public archive. Your email address will be stored privately and will not appear on the letter.</p>
+<label class="letter-consent"><input type="checkbox" name="consent" required> I have read the open letter and agree to publish my name, city and ZIP code as described above.</label>
+<div id="letter-challenge"></div>
+<button class="letter-submit" type="submit" id="letter-submit" disabled>Add my name</button>
+<p class="letter-status" id="letter-status" role="status" aria-live="polite">Loading signing service…</p>
+</form>
+</section>
+<section class="letter-panel letter-document" aria-labelledby="letter-document-title">
+<div class="letter-panel-top"><h2 id="letter-document-title">The open letter</h2><a class="letter-link" id="letter-download" href="POPC%20-%20OPEN%20LETTER.pdf" download="POPC Open Letter.pdf">Download PDF</a></div>
+<p class="letter-status" id="letter-document-status" role="status">Loading the signed document…</p>
+<iframe id="letter-document" title="The open letter and signature pages" src="POPC%20-%20OPEN%20LETTER.pdf#toolbar=0" loading="eager"></iframe>
+<p class="letter-privacy">If your browser does not display embedded PDFs, use Download PDF to open the document.</p>
+</section>
+<section class="letter-panel" aria-labelledby="letter-archive-title"><h2 id="letter-archive-title">Previously delivered letters</h2><div id="letter-archive" role="status">Loading archive…</div></section>
+</main>
+<script src="roosevelt-fireflies.js?v=2" defer></script>
+<script type="module" src="open-letter.js?v=1"></script>
+<script type="module" src="/research-assistant.js?v=4"></script>
+</body>
+</html>
