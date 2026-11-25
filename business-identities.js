@@ -17287,5 +17287,1485 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committees/?q=CHARTER%20SCHOOLS%20NOW%20PAC"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ABBVIE"
+    ],
+    "name": "AbbVie",
+    "scope": "Pharmaceutical company / reported employer",
+    "parent": "AbbVie Inc.",
+    "sources": [
+      "https://www.abbvie.com/"
+    ],
+    "evidence": "AbbVie's official site identifies the pharmaceutical company. This employer identity is restricted to individual records and kept separate from AbbVie Political Action Committee.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE OF MARYLAND"
+    ],
+    "name": "State of Maryland",
+    "scope": "State government / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.maryland.gov/"
+    ],
+    "evidence": "Maryland's official state website identifies the State of Maryland government. The donor context includes a Maryland state senator and state administrator.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COMPASS"
+    ],
+    "name": "Compass",
+    "scope": "Real-estate brokerage brand / reported employer",
+    "parent": "Compass, Inc.",
+    "sources": [
+      "https://www.compass.com/agents/pamela-culp/"
+    ],
+    "evidence": "Compass's official agent page identifies donor Pamela Rummage Culp as a Compass real-estate professional, directly tying the reported employer to the Compass brokerage.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "22BEACON"
+    ],
+    "name": "22Beacon",
+    "scope": "Nonprofit school-facilities and finance organization / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.22beacon.org/"
+    ],
+    "evidence": "22Beacon's official site identifies it as a 501(c)(3) nonprofit providing school real-estate, finance and advisory resources.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ELEVATE GOVERNMENT AFFAIRS"
+    ],
+    "name": "Elevate Government Affairs",
+    "scope": "Government-affairs firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.elevatega.com/"
+    ],
+    "evidence": "Elevate Government Affairs' official site identifies the Washington government-affairs firm.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MASON CONSULTING LLC"
+    ],
+    "name": "Mason Consulting, LLC",
+    "scope": "Federal lobbying firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://lda.gov/filings/public/filing/351cec0d-b090-485a-85a2-80145230904d/print/"
+    ],
+    "evidence": "An official Lobbying Disclosure Act filing identifies Mason Consulting, LLC and G. David Mason, matching the donor employer context.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PROSPECT SCHOOLS"
+    ],
+    "name": "Prospect Schools",
+    "scope": "Brooklyn public-charter-school network / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.brooklynprospect.org/"
+    ],
+    "evidence": "Prospect Schools' official site identifies its Brooklyn K-12 public charter-school network.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE COCHRAN FIRM"
+    ],
+    "name": "The Cochran Firm",
+    "scope": "Law firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.cochranfirm.com/"
+    ],
+    "evidence": "The Cochran Firm's official site identifies the law firm matching the attorney donor records.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF MICHIGAN"
+    ],
+    "name": "University of Michigan",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://umich.edu/"
+    ],
+    "evidence": "The University of Michigan's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF OREGON"
+    ],
+    "name": "University of Oregon",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.uoregon.edu/"
+    ],
+    "evidence": "The University of Oregon's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WILLIG WILLIAMS & DAVIDSON"
+    ],
+    "name": "Willig, Williams & Davidson",
+    "scope": "Law firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.wwdlaw.com/"
+    ],
+    "evidence": "The firm's official site identifies Willig, Williams & Davidson as a union-side labor law firm.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RAYTHEON"
+    ],
+    "name": "Raytheon",
+    "scope": "Defense and aerospace business / reported employer",
+    "parent": "RTX Corporation",
+    "sources": [
+      "https://www.rtx.com/raytheon"
+    ],
+    "evidence": "RTX's official site identifies Raytheon as its defense and aerospace business. The bare employer label is retained at business-brand scope, not forced into a specific subsidiary.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AON"
+    ],
+    "name": "Aon",
+    "scope": "Professional-services business / reported employer",
+    "parent": "Aon plc",
+    "sources": [
+      "https://www.aon.com/about-us"
+    ],
+    "evidence": "Aon's official site identifies the global professional-services firm; the employer label is retained at business-group scope.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UCSF"
+    ],
+    "name": "University of California, San Francisco",
+    "scope": "Public university / reported employer; abbreviation",
+    "parent": "University of California",
+    "sources": [
+      "https://www.ucsf.edu/about"
+    ],
+    "evidence": "UCSF's official site identifies the University of California, San Francisco. The reported UCSF abbreviation maps to the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UCLA"
+    ],
+    "name": "University of California, Los Angeles",
+    "scope": "Public university / reported employer; abbreviation",
+    "parent": "University of California",
+    "sources": [
+      "https://www.ucla.edu/"
+    ],
+    "evidence": "UCLA's official site identifies the University of California, Los Angeles.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "USC"
+    ],
+    "name": "University of Southern California",
+    "scope": "Private university / reported employer; abbreviation resolved by donor context",
+    "parent": "",
+    "sources": [
+      "https://www.usc.edu/"
+    ],
+    "evidence": "The donor record identifies a USC professor, and USC's official site identifies the University of Southern California.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COAXUM ENTERPRISES INC."
+    ],
+    "name": "Coaxum Enterprises, Inc.",
+    "scope": "Restaurant-franchise management company / reported employer",
+    "parent": "",
+    "sources": [
+      "https://coaxumenterprises.com/"
+    ],
+    "evidence": "Coaxum Enterprises' official site identifies Coaxum Enterprises, Inc. and founder Henry L. Coaxum Jr., matching the donor context.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MONDELEZ"
+    ],
+    "name": "Mondelēz International",
+    "scope": "Food and beverage business / reported employer; brand shorthand",
+    "parent": "Mondelēz International, Inc.",
+    "sources": [
+      "https://www.mondelezinternational.com/"
+    ],
+    "evidence": "Mondelēz International's official site identifies the global snacking company. The reported MONDELEZ form is retained at company/brand scope.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JONATHAN ROSE COMPANIES"
+    ],
+    "name": "Jonathan Rose Companies",
+    "scope": "Real-estate development and investment firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.rosecompanies.com/about/"
+    ],
+    "evidence": "Jonathan Rose Companies' official site identifies the firm and its real-estate development, investment and planning work.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KLEIN/JOHNSON GROUP"
+    ],
+    "name": "Klein/Johnson Group",
+    "scope": "Federal lobbying firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://lda.gov/filings/public/"
+    ],
+    "evidence": "Federal Lobbying Disclosure Act records identify Klein/Johnson Group as a registrant/lobbying firm. The exact reported employer name is retained.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE OF TEXAS"
+    ],
+    "name": "State of Texas",
+    "scope": "State government / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.texas.gov/"
+    ],
+    "evidence": "Texas's official state website identifies the State of Texas government.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CITY OF MINNEAPOLIS"
+    ],
+    "name": "City of Minneapolis",
+    "scope": "Municipal government / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.minneapolismn.gov/"
+    ],
+    "evidence": "The City of Minneapolis official website confirms the municipal government.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE OF CA",
+      "STATE OF CALIFORNIA"
+    ],
+    "name": "State of California",
+    "scope": "State government / reported employer; abbreviation alias",
+    "parent": "",
+    "sources": [
+      "https://www.ca.gov/"
+    ],
+    "evidence": "California's official state website identifies the State of California. STATE OF CA is retained as the donor-file abbreviation.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALBERT EINSTEIN COLLEGE OF MEDICINE"
+    ],
+    "name": "Albert Einstein College of Medicine",
+    "scope": "Medical school / reported employer",
+    "parent": "",
+    "sources": [
+      "https://einsteinmed.edu/"
+    ],
+    "evidence": "Albert Einstein College of Medicine's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "USPS",
+      "US POSTAL SERVICE"
+    ],
+    "name": "United States Postal Service",
+    "scope": "Independent federal postal agency / reported employer; abbreviations",
+    "parent": "",
+    "sources": [
+      "https://about.usps.com/"
+    ],
+    "evidence": "USPS official materials identify the United States Postal Service. USPS and US POSTAL SERVICE are donor-file forms of the same employer.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MD ANDERSON CANCER CENTER",
+      "UT MD ANDERSON CANCER CENTER"
+    ],
+    "name": "The University of Texas MD Anderson Cancer Center",
+    "scope": "Cancer center / reported employer; shortened forms",
+    "parent": "The University of Texas System",
+    "sources": [
+      "https://www.mdanderson.org/"
+    ],
+    "evidence": "MD Anderson's official site identifies The University of Texas MD Anderson Cancer Center. Both donor-file forms map to the same institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RANDOM HOUSE"
+    ],
+    "name": "Random House",
+    "scope": "Publishing imprint/business / reported employer",
+    "parent": "Penguin Random House",
+    "sources": [
+      "https://www.penguinrandomhouse.com/"
+    ],
+    "evidence": "Penguin Random House's official site identifies Random House within its publishing business. The donor employer is retained at the Random House business/imprint level.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DULY"
+    ],
+    "name": "Duly Health and Care",
+    "scope": "Medical group / reported employer; brand shorthand",
+    "parent": "",
+    "sources": [
+      "https://www.dulyhealthandcare.com/providers/jean-m-houlihan-md"
+    ],
+    "evidence": "Duly Health and Care's official provider page identifies donor Jean M. Houlihan, MD, directly tying the DULY employer label to Duly Health and Care.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TEXAS TECH UNIVERSITY"
+    ],
+    "name": "Texas Tech University",
+    "scope": "Public university / reported employer",
+    "parent": "Texas Tech University System",
+    "sources": [
+      "https://www.ttu.edu/"
+    ],
+    "evidence": "Texas Tech University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OREGON STATE UNIVERSITY"
+    ],
+    "name": "Oregon State University",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://oregonstate.edu/"
+    ],
+    "evidence": "Oregon State University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NYU"
+    ],
+    "name": "New York University",
+    "scope": "Private university / reported employer; abbreviation",
+    "parent": "",
+    "sources": [
+      "https://www.nyu.edu/"
+    ],
+    "evidence": "NYU's official site identifies New York University.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF CALIFORNIA"
+    ],
+    "name": "University of California",
+    "scope": "Public university system / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.universityofcalifornia.edu/"
+    ],
+    "evidence": "The University of California's official site identifies the statewide university system.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LOS ANGELES UNIFIED SCHOOL DISTRICT",
+      "LAUSD"
+    ],
+    "name": "Los Angeles Unified School District",
+    "scope": "Public school district / reported employer; abbreviation",
+    "parent": "",
+    "sources": [
+      "https://www.lausd.org/"
+    ],
+    "evidence": "LAUSD's official site identifies the Los Angeles Unified School District. Both donor-file forms map to the district.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SAINT PETER'S UNIVERSITY"
+    ],
+    "name": "Saint Peter's University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.saintpeters.edu/"
+    ],
+    "evidence": "Saint Peter's University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRINITY HEALTH"
+    ],
+    "name": "Trinity Health",
+    "scope": "Health system / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.trinity-health.org/"
+    ],
+    "evidence": "Trinity Health's official site identifies the health system.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COLUMBIA UNIVERSITY"
+    ],
+    "name": "Columbia University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.columbia.edu/"
+    ],
+    "evidence": "Columbia University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UCSD"
+    ],
+    "name": "University of California San Diego",
+    "scope": "Public university / reported employer; abbreviation",
+    "parent": "University of California",
+    "sources": [
+      "https://ucsd.edu/"
+    ],
+    "evidence": "UC San Diego's official site identifies the University of California San Diego.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOBLIS"
+    ],
+    "name": "Noblis",
+    "scope": "Science, technology and research organization / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.noblis.org/"
+    ],
+    "evidence": "Noblis's official site identifies the organization.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RUTGERS UNIVERSITY"
+    ],
+    "name": "Rutgers University",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.rutgers.edu/"
+    ],
+    "evidence": "Rutgers University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STANFORD UNIVERSITY"
+    ],
+    "name": "Stanford University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.stanford.edu/"
+    ],
+    "evidence": "Stanford University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF IOWA"
+    ],
+    "name": "University of Iowa",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://uiowa.edu/"
+    ],
+    "evidence": "The University of Iowa's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FDA"
+    ],
+    "name": "U.S. Food and Drug Administration",
+    "scope": "Federal agency / reported employer; abbreviation",
+    "parent": "U.S. Department of Health and Human Services",
+    "sources": [
+      "https://www.fda.gov/"
+    ],
+    "evidence": "FDA's official site identifies the U.S. Food and Drug Administration.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ORCHID BAY REALTY LLC"
+    ],
+    "name": "Orchid Bay Realty LLC",
+    "scope": "Florida limited liability company / reported employer",
+    "parent": "",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=flal-l22000095741-197e692b-a79a-4f2d-806f-fdcce852ec59&directionType=ForwardList&inquirytype=EntityName&listNameOrder=ORCHIDAVIATION+L220004870080&searchNameOrder=ORCHIDBAYREALTY+L220000957410&searchTerm=THE+ORCHID+AGENCY+LLC"
+    ],
+    "evidence": "Florida's official business registry identifies ORCHID BAY REALTY LLC as an active LLC and Annie Ryan as manager, matching the donor context.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DEPARTMENT OF STATE"
+    ],
+    "name": "U.S. Department of State",
+    "scope": "Federal department / reported employer",
+    "parent": "United States Government",
+    "sources": [
+      "https://www.state.gov/"
+    ],
+    "evidence": "The Department of State's official site identifies the U.S. Department of State.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FORDHAM UNIVERSITY"
+    ],
+    "name": "Fordham University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.fordham.edu/"
+    ],
+    "evidence": "Fordham University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF KENTUCKY"
+    ],
+    "name": "University of Kentucky",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.uky.edu/"
+    ],
+    "evidence": "The University of Kentucky's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CUNY"
+    ],
+    "name": "City University of New York",
+    "scope": "Public university system / reported employer; abbreviation",
+    "parent": "",
+    "sources": [
+      "https://www.cuny.edu/"
+    ],
+    "evidence": "CUNY's official site identifies the City University of New York.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DOD",
+      "DEPT OF DEFENSE"
+    ],
+    "name": "U.S. Department of Defense",
+    "scope": "Federal department / reported employer; abbreviations",
+    "parent": "United States Government",
+    "sources": [
+      "https://www.defense.gov/"
+    ],
+    "evidence": "The Department of Defense's official site identifies the U.S. Department of Defense. DOD and DEPT OF DEFENSE are donor-file abbreviations.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WATSON CLINIC"
+    ],
+    "name": "Watson Clinic LLP",
+    "scope": "Medical group / reported employer; business-name shorthand",
+    "parent": "",
+    "sources": [
+      "https://www.watsonclinic.com/"
+    ],
+    "evidence": "Watson Clinic's official site identifies Watson Clinic LLP.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "US ARMY"
+    ],
+    "name": "United States Army",
+    "scope": "Military service / reported employer; abbreviation",
+    "parent": "U.S. Department of Defense",
+    "sources": [
+      "https://www.army.mil/"
+    ],
+    "evidence": "The Army's official site identifies the United States Army; the donor-file US ARMY form is retained as an alias.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EMORY UNIVERSITY"
+    ],
+    "name": "Emory University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.emory.edu/"
+    ],
+    "evidence": "Emory University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KAISER PERMANENTE"
+    ],
+    "name": "Kaiser Permanente",
+    "scope": "Integrated health-care organization / reported employer",
+    "parent": "",
+    "sources": [
+      "https://about.kaiserpermanente.org/"
+    ],
+    "evidence": "Kaiser Permanente's official site identifies the health-care organization. The entry is retained at organization/brand scope rather than forced into one regional legal entity.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GEORGE NAKASHIMA WOODWORKERS"
+    ],
+    "name": "George Nakashima Woodworkers",
+    "scope": "Furniture and woodworking studio / reported employer",
+    "parent": "",
+    "sources": [
+      "https://nakashimawoodworkers.com/"
+    ],
+    "evidence": "George Nakashima Woodworkers' official site identifies the studio and its team.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WALMART"
+    ],
+    "name": "Walmart",
+    "scope": "Retail business / reported employer; brand scope",
+    "parent": "Walmart Inc.",
+    "sources": [
+      "https://corporate.walmart.com/"
+    ],
+    "evidence": "Walmart's corporate site identifies the retail company. The bare donor employer is retained at brand/business scope.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CORCORAN"
+    ],
+    "name": "Corcoran",
+    "scope": "Real-estate brokerage brand / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.corcoran.com/"
+    ],
+    "evidence": "Corcoran's official site identifies the real-estate brokerage brand, consistent with the donor records' real-estate occupations.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CORNELL UNIVERSITY"
+    ],
+    "name": "Cornell University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.cornell.edu/"
+    ],
+    "evidence": "Cornell University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF WASHINGTON"
+    ],
+    "name": "University of Washington",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.washington.edu/"
+    ],
+    "evidence": "The University of Washington's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF VIRGINIA"
+    ],
+    "name": "University of Virginia",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.virginia.edu/"
+    ],
+    "evidence": "The University of Virginia's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NYC DOE"
+    ],
+    "name": "New York City Department of Education",
+    "scope": "Public school system / reported employer; abbreviation",
+    "parent": "City of New York",
+    "sources": [
+      "https://www.schools.nyc.gov/"
+    ],
+    "evidence": "NYC Public Schools' official site identifies New York City's public-school system. NYC DOE is retained as the donor-file abbreviation.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NYCTA"
+    ],
+    "name": "New York City Transit Authority",
+    "scope": "Public transit authority / reported employer; abbreviation",
+    "parent": "Metropolitan Transportation Authority",
+    "sources": [
+      "https://new.mta.info/agency/new-york-city-transit"
+    ],
+    "evidence": "MTA's official site identifies New York City Transit. NYCTA is retained as the donor-file abbreviation.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DELTA"
+    ],
+    "name": "Delta Air Lines",
+    "scope": "Airline / reported employer; brand shorthand",
+    "parent": "Delta Air Lines, Inc.",
+    "sources": [
+      "https://www.delta.com/us/en/about-delta/overview"
+    ],
+    "evidence": "Delta's official site identifies Delta Air Lines; donor occupations include pilot and flight attendant, tying the shorthand to the airline.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UPS"
+    ],
+    "name": "UPS",
+    "scope": "Package delivery and logistics business / reported employer; brand scope",
+    "parent": "United Parcel Service, Inc.",
+    "sources": [
+      "https://about.ups.com/"
+    ],
+    "evidence": "UPS's official site identifies the logistics company. The donor employer is retained at brand/business scope.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOVANT HEALTH"
+    ],
+    "name": "Novant Health",
+    "scope": "Health system / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.novanthealth.org/"
+    ],
+    "evidence": "Novant Health's official site identifies the health system.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JAN LISA HUTTNER"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported self-employer / person-name label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ISAAC RAY CENTER - RUSH HC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Composite reported employer label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BST"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BHFS"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer acronym not independently tied to one reusable legal identity",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Generic government-employer label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARMY"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Generic military-employer label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MOBILEGIS LTD"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer; exact legal entity not independently verified",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROWN BROWN INSURANCE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported insurance-employer form; not safely established as an alias of Brown & Brown",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COLUMBIA"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique shorthand employer label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TLC BEATRICE LLC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer; current legal status/identity not independently verified",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PPI"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VA"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CSU"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique university acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FREELANCE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Generic work-status label, not an organization",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "C3 LEADERSHIP"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer; exact legal entity not independently verified",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "USG"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INDEPENDENT"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Generic work-status label, not an organization",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ST. GABRIEL CHURCH"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique religious-organization name without location context",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "IU"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique university acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PIET RETIEF INC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer; exact legal entity not independently verified",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DIOCESE OF NY AND HOULIHAN LAWRENCE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Composite employer string naming more than one organization",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JEFFRIES MAJORITY FUND - UNITEMIZED"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Internal unitemized rollup label / not a donor legal entity",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "This is an internal unitemized rollup label in the POPC transaction data, not a donor legal entity. It is explicitly reviewed so it cannot be mistaken for a business identity.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JEFFRIES VICTORY FUND - UNITEMIZED"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Internal unitemized rollup label / not a donor legal entity",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "This is an internal unitemized rollup label in the POPC transaction data, not a donor legal entity. It is explicitly reviewed so it cannot be mistaken for a business identity.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KRAMER DILLOF LIVINGSTON & MOORE ESQS."
+    ],
+    "name": "Kramer, Dillof, Livingston & Moore",
+    "status": "Source-backed",
+    "scope": "Law firm / reported employer; donor-file suffix variant",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "KDLM's official site identifies Kramer, Dillof, Livingston & Moore. The donor-file ESQS. suffix is retained as an alias of the law firm.",
+    "sources": [
+      "https://kdlm.com/about-us-kdlm/"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
