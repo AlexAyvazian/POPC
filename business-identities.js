@@ -7152,13 +7152,14 @@ export const businessIdentities = [
     "aliases": [
       "ASPIRE HEALTHCARE"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Aspire Healthcare",
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "The physician context is compatible with Aspire Health / Aspire Health, Inc., but many unrelated medical organizations use Aspire Healthcare. Without donor location or another identifier, the exact entity remains unresolved.",
+    "scope": "Palliative-care healthcare brand / reported physician employer",
+    "evidence": "The POPC donor is Lisa Minsky-Primus. Independent provider and public campaign-finance sources identify Dr. Lisa Minsky-Primus as a physician with Aspire Healthcare in New York. The identity is supported at the healthcare-brand/employer scope; no specific Aspire legal subsidiary is asserted.",
     "sources": [
-      "https://npiregistry.cms.hhs.gov/provider-view/1215372354"
+      "https://doctor.webmd.com/doctor/lisa-minsky-primus-91f73f0d-43f7-470c-bbc9-7ccaaf74071c-overview",
+      "https://www.wisdc.org/news/press-releases/136-press-release-2022/7044-check-out-gov-tony-evers-top-campaign-contributors"
     ],
     "reviewed": "2026-11-25"
   },
@@ -7394,13 +7395,14 @@ export const businessIdentities = [
     "aliases": [
       "CP LLC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Central Purchasing LLC",
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "FEC/OpenSecrets donor records connect Allan Mutchnik to CP, LLC with occupation Executive, but the generic LLC name is insufficient to identify one legal entity or parent.",
+    "scope": "Harbor Freight operating company / verified donor shorthand",
+    "evidence": "NHTSA's manufacturer database identifies CENTRAL PURCHASING LLC, lists Allan Mutchnik as President, and identifies Harbor Freight Tools as a DBA. FEC-derived contribution records for the same Allan Mutchnik in Beverly Hills repeatedly alternate CP LLC / CP, LLC with CENTRAL PURCHASING LLC while retaining the same Executive occupation, establishing CP LLC as the donor's shorthand for Central Purchasing LLC.",
     "sources": [
-      "https://www.opensecrets.org/donor-lookup/results?name=Allan+Mutchnik&order=desc&page=1&sort=D"
+      "https://vpic.nhtsa.dot.gov/mid/manufacturer/details/13533",
+      "https://furp.org/politics/donor/90210/allan-mutchnik"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8535,14 +8537,14 @@ export const businessIdentities = [
     "aliases": [
       "GOVALIDATE"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / digital-identity brand",
-    "parent": "",
-    "evidence": "GoValidate's terms identify Mobile DMV, LLC d/b/a GoValidate, but reviewed sources associate Alton Ashy with Advanced Strategies Inc. rather than independently establishing him as an owner of GoValidate. The donor-employer string therefore remains unresolved.",
+    "name": "GoValidate",
+    "status": "Source-backed",
+    "scope": "Digital-identity brand / DBA of Mobile DMV, LLC",
+    "parent": "Mobile DMV, LLC",
+    "evidence": "GoValidate's terms identify Mobile DMV, LLC d/b/a GoValidate. Official Louisiana Board of Pharmacy meeting minutes list Alton Ashy as representing Mobile DMV, directly tying the donor context to the legal operator behind the GoValidate brand.",
     "sources": [
       "https://go-validate.com/terms-of-service",
-      "https://www.advancedstrategiesusa.com/about"
+      "https://wwwcfprd.doa.louisiana.gov/boardsandcommissions/MeetingMinutes/336_PMP-AC_2024-0207_Minutes_PKG_Approved.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17206,16 +17208,16 @@ export const businessIdentities = [
     "aliases": [
       "PRICE FOR CONGRESS"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "PRICE FOR CONGRESS",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal principal campaign committee",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission records identify PRICE FOR CONGRESS as FEC committee C00195628, the principal campaign committee of David Price (D-NC-04). The exact reported organization name is therefore source-backed rather than unresolved.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=PRICE%20FOR%20CONGRESS"
+      "https://www.fec.gov/data/committee/C00195628/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
