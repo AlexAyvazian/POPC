@@ -12773,5 +12773,333 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00094581/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF BENEFITS AND INSURANCE PROFESSIONALS PAC (NABIP PAC)"
+    ],
+    "name": "NATIONAL ASSOCIATION OF BENEFITS AND INSURANCE PROFESSIONALS PAC (NABIP PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00283135 identifies National Association of Benefits and Insurance Professionals PAC (NABIP PAC) as an active qualified trade-association PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00283135/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL POSTAL MAIL HANDLERS UNION - DIVISION OF LABORERS' INT'L UNION OF NORTH AMERICA"
+    ],
+    "name": "NATIONAL POSTAL MAIL HANDLERS UNION - DIVISION OF LABORERS' INT'L UNION OF NORTH AMERICA",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00345306 uses this exact committee name and identifies Laborers' International Union of North America as the connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00345306/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONWIDE MUTUAL INSURANCE COMPANY FINANCIAL & INVESTMENTS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "NATIONWIDE MUTUAL INSURANCE COMPANY FINANCIAL & INVESTMENTS POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00406215 identifies Nationwide Mutual Insurance Company Financial & Investments Political Action Committee as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00406215/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OB- GYN PAC",
+      "OB-GYN PAC",
+      "AMERICAN COLLEGE OF OB-GYNS PAC (OB-GYN PAC)"
+    ],
+    "name": "AMERICAN COLLEGE OF OB-GYNS PAC (OB-GYN PAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee; historical recipient-file shorthand",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00364158 is the durable committee identity. Current FEC records use American College of OB-GYNS PAC (OB-GYN PAC); historical FEC recipient filings report OB-GYN PAC with the same C00364158 committee ID. The local 'OB- GYN PAC' spacing form is retained as an exact donor-file alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00364158/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/528/201704149052157528/201704149052157528.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ORACLE AMERICA, INC. POLITICAL ACTION COMMITTEE (ORACLE PAC)"
+    ],
+    "name": "ORACLE AMERICA, INC. POLITICAL ACTION COMMITTEE (ORACLE PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00323048 identifies Oracle America, Inc. Political Action Committee (Oracle PAC) as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00323048/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PARSONS CORPORATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "PARSONS CORPORATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00103549 identifies Parsons Corporation Political Action Committee. No current connected-organization relationship is inferred from historical registration data.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00103549/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SCHNEIDER NATIONAL INC., TRANSPAC"
+    ],
+    "name": "SCHNEIDER NATIONAL INC., TRANSPAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00563924 identifies Schneider National Inc., TRANSPAC as an active qualified PAC. The current FEC committee page does not list a connected organization, so none is inferred.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00563924/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE STREET BANK AND TRUST COMPANY VOLUNTARY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "STATE STREET BANK AND TRUST COMPANY VOLUNTARY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "Current FEC filings identify State Street Bank and Trust Company Voluntary Political Action Committee as committee C00072751.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00072751/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE CHICKASAW NATION"
+    ],
+    "name": "THE CHICKASAW NATION",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The Chickasaw Nation's official government site identifies the Nation's constitutional government and governmental structure. The donor record is retained as the sovereign tribal government, not reclassified as a PAC.",
+    "sources": [
+      "https://www.chickasaw.net/Our-Nation/Government"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE WALT DISNEY PRODUCTIONS EMPLOYEES PAC"
+    ],
+    "name": "TWDC ENTERPRISES 18 CORP. EMPLOYEES PAC AKA 'THE WALT DISNEY COMPANY EMPLOYEES PAC' OR 'DISNEY PAC'",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; historical committee name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00197749 is the durable committee identity. Historical FEC records used The Walt Disney Productions Employees PAC; current records use the TWDC Enterprises 18 Corp./Disney PAC name. The historical donor-file name therefore resolves to the same committee rather than a separate organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00197749/?cycle=2026&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00197749/?cycle=2002&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNITED MINE WORKERS OF AMERICA - COAL MINERS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "UNITED MINE WORKERS OF AMERICA - COAL MINERS POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00013342 identifies United Mine Workers of America - Coal Miners Political Action Committee as an active qualified labor-organization PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00013342/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WESTERN ALLIANCE BANCORPORATION POLITICAL ACTION COMMITTEE (WABPAC)"
+    ],
+    "name": "WESTERN ALLIANCE BANCORPORATION POLITICAL ACTION COMMITTEE (WABPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00817585 identifies Western Alliance Bancorporation Political Action Committee (WABPAC).",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00817585/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "3M COMPANY PAC"
+    ],
+    "name": "3M COMPANY PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00084475 identifies 3M Company PAC as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00084475/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMALGAMATED TRANSIT UNION - COPE"
+    ],
+    "name": "AMALGAMATED TRANSIT UNION - COPE",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00032995 identifies Amalgamated Transit Union - COPE as an active qualified labor PAC and Amalgamated Transit Union as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00032995/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF OTOLARYNGOLOGY-HEAD AND NECK SURGERY ENT PAC"
+    ],
+    "name": "AMERICAN ACADEMY OF OTOLARYNGOLOGY-HEAD AND NECK SURGERY ENT PAC",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00306449 identifies American Academy of Otolaryngology-Head and Neck Surgery ENT PAC as an active qualified membership-organization PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00306449/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ASSOCIATION OF ORAL AND MAXILLOFACIAL SURGEONS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "AMERICAN ASSOCIATION OF ORAL & MAXILLOFACIAL SURGEONS POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00005660 identifies the American Association of Oral & Maxillofacial Surgeons Political Action Committee. The donor-file 'AND' spelling is retained as an alias of the same committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00005660/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN CLEAN POWER ASSOCIATION CLEANPOWER PAC"
+    ],
+    "name": "AMERICAN CLEAN POWER ASSOCIATION CLEANPOWER PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00259572 identifies American Clean Power Association CleanPower PAC as an active qualified trade-association PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00259572/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COUNCIL OF ENGINEERING COMPANIES (ACEC/PAC)"
+    ],
+    "name": "AMERICAN COUNCIL OF ENGINEERING COMPANIES (ACEC/PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00010868 identifies American Council of Engineering Companies (ACEC/PAC) as the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00010868/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COUNCIL OF LIFE INSURERS POLITICAL ACTION COMMITTEE",
+      "AMERICAN COUNCIL OF LIFE INSURERSPOLITICAL ACTION COMMITTEE"
+    ],
+    "name": "AMERICAN COUNCIL OF LIFE INSURERS POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; donor-file spacing correction",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00147066 identifies American Council of Life Insurers Political Action Committee. The second local donor-file form is otherwise identical but omits the space between 'INSURERS' and 'POLITICAL'; it is retained as a transparent spelling alias rather than a separate identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00147066/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

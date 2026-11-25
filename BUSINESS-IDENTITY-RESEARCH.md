@@ -221,3 +221,13 @@ The next 20 highest-dollar priority groups after batch 19 were reviewed from AEC
 AECOM PAC is now restricted to organization records and kept separate from the AECOM employer identity; all original receipts remain unchanged. The remaining federal PACs are likewise kept distinct from connected companies, trade associations and membership organizations.
 
 The donor-file name American Osteopathic Association PAC is mapped through durable FEC committee ID C00113803 to the current American Osteopathic Information Association - Osteopathic Political Action Committee. The Mastercard donor-file name is similarly mapped through C00410274 to the current committee name while preserving the reported recipient-file form as an alias. American Soybean Association PAC currently lists no connected organization on its FEC committee page, and the Holland & Knight and K&L Gates committee pages do not list connected organizations; no relationship is inferred where the FEC record does not state one.
+
+## PAC / organization priority research — batch 21 — November 25, 2026
+
+The next $5,000 priority tier was reviewed through American Council of Life Insurers. Nineteen source-backed identity definitions resolve 21 queue groups because two pairs were duplicate report-name forms of the same durable committee identities.
+
+OB- GYN PAC and American College of OB-GYNS PAC (OB-GYN PAC) resolve to FEC committee C00364158. A historical FEC recipient filing reports OB-GYN PAC with that same committee ID, while the current FEC committee name is American College of OB-GYNS PAC (OB-GYN PAC). The local space-after-hyphen form is retained as a donor-file spelling alias.
+
+The Walt Disney Productions Employees PAC is a historical name of durable FEC committee C00197749; the current committee name is the TWDC Enterprises 18 Corp./Disney PAC name. The two American Council of Life Insurers rows also resolve to one FEC committee, C00147066; one local row simply omits the space between INSURERS and POLITICAL. That malformed spelling is preserved as an alias rather than promoted as a second organization.
+
+The Chickasaw Nation remains a sovereign tribal-government identity rather than being collapsed into a political committee. Schneider National Inc., TRANSPAC is kept at its FEC committee identity, and no connected organization is inferred because the current FEC committee page does not list one.
