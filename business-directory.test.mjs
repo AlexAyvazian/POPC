@@ -735,7 +735,7 @@ test('twenty-fourth priority batch resolves donor-file PAC names through durable
     {type:'organization',name:'NATIONAL READY MIXED CONCRETE ASSN. PAC',sector:'Construction',committee:'a',amount:400},
     {type:'organization',name:'NATIONAL THOROUGHBRED RACING ASSOCIATION PAC',sector:'Trade Association',committee:'a',amount:500}
   ]);
-  assert.equal(groups.find(g=>g.name==='JStreetPAC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='JSTREETPAC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MICRON TECHNOLOGY, INC. EMPLOYEE PAC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS (NAPEO PAC)').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL READY MIXED CONCRETE ASSN. PAC (CONCRETEPAC)').research.status,'Source-backed');
