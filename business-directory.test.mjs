@@ -29,9 +29,9 @@ test('explicit PAC titles retain originals, legal suffixes and separate amounts'
     {type:'individual',name:'RETIREE',employer:'RETIRED',sector:'Personal',committee:'one',amount:1000},
   ];
   const groups=buildDirectory(rows), company=groups.find(g=>g.name==='MICROSOFT CORPORATION');
-  assert.equal(company.organization,50000);assert.equal(company.individual,20000);
+  assert.equal(company.organization,50000);assert.equal(company.individual,19000);
   assert(company.names.has('MICROSOFT CORPORATION PAC'));
-  assert.equal(groups.length,3);
+  assert.equal(groups.length,2);
   assert.equal(selectDirectory(groups,{query:'CORPORATION PAC'}).length,1);
   assert.equal(selectDirectory(groups,{view:'personal'}).length,1);
   assert.equal(selectDirectory(groups,{sector:'Missing'}).length,0);
@@ -55,4 +55,20 @@ test('memo-only names survive and memo amounts never increase direct totals', as
   assert(groups.some(g=>g.memoCount>0&&g.count===0));
   const directNames = new Set(buildDirectory(rows.filter(r=>!r.memo)).map(g=>g.key));
   console.log(JSON.stringify({allRecords:rows.length,listedNames:groups.filter(g=>!g.personal).length,memoOnlyNames:groups.filter(g=>!directNames.has(g.key)).length}));
+});
+
+test('researched aliases merge while subsidiaries and unresolved names stay separate', () => {
+  const employers=['ARISTEIA CAPITAL','ARISTEIA CAPITAL LLC','MICROSOFT','LINKEDIN CORP','CREI','AMAZON.COM SERVICES, INC.','AMAZON','WARNER RECORDS','WARNER MUSIC INC.'];
+  const groups=buildDirectory(employers.map(employer=>({type:'individual',name:'Donor',employer,sector:'Test',committee:'one',amount:100})));
+  assert.equal(groups.length,8);
+  const aristeia=groups.find(g=>g.name==='ARISTEIA CAPITAL, LLC');
+  assert.equal(aristeia.count,2);assert.equal(aristeia.names.size,2);
+  const microsoft=selectDirectory(groups,{query:'Microsoft'});
+  assert.equal(microsoft.length,2);
+  assert.equal(microsoft.find(g=>g.name==='LINKEDIN CORPORATION').research.parent,'Microsoft Corporation');
+  assert.equal(selectDirectory(groups,{research:'Unresolved'}).length,2);
+  assert.equal(groups.find(g=>g.name==='CREI').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='AMAZON.COM SERVICES, INC.').count,1);
+  assert.equal(groups.filter(g=>g.research?.parent==='Warner Music Group Corp.').length,2);
+  assert(directoryCSV(groups).includes('https://adviserinfo.sec.gov/firm/summary/135986'));
 });

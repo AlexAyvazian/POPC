@@ -1,3 +1,4 @@
+import {businessIdentities} from './business-identities.js?v=1';
 import {normalize, config, loadResearchRecords} from './research-data.js?v=1';
 
 export async function loadDirectoryRecords() {
@@ -36,7 +37,7 @@ const personal = /^(?:NOT EMPLOYED|RETIRED|SELF[ -]?EMPLOYED|SELF|N\/?A|NONE|NUL
 // Extract only explicit organization names from common PAC titles. Preserve the
 // full reported title and extraction method on every group for inspection.
 // Do not remove legal suffixes, infer parent companies, or expand acronyms.
-export function identifyName(record) {
+function reportedIdentity(record) {
   const reported = normalize(record.type === 'individual' ? record.employer : record.name) || 'NOT REPORTED';
   if (record.type === 'individual' && personal.test(reported)) {
     return {name: reported, reported, method: 'Personal / unreported employer', personal: true};
@@ -50,6 +51,23 @@ export function identifyName(record) {
   return {name: reported, reported, method: 'Reported organization / PAC', personal: false};
 }
 
+const identityIndex = new Map();
+for (const entry of businessIdentities) {
+  for (const alias of [...entry.aliases, ...(entry.name ? [entry.name] : [])]) {
+    const key = normalize(alias);
+    if (identityIndex.has(key) && identityIndex.get(key) !== entry) throw Error('Duplicate researched alias: '+key);
+    identityIndex.set(key, entry);
+  }
+}
+
+export function identifyName(record) {
+  const identity = reportedIdentity(record);
+  const research = !identity.personal && (identityIndex.get(identity.reported) || identityIndex.get(identity.name));
+  if (!research) return {...identity, research: null};
+  return {...identity, name: research.name ? normalize(research.name) : identity.name,
+    method: research.name ? 'Source-backed: '+research.scope : identity.method, research};
+}
+
 export function buildDirectory(records) {
   const groups = new Map();
   for (const record of records) {
@@ -57,7 +75,7 @@ export function buildDirectory(records) {
     const key = JSON.stringify([identity.personal, identity.name]);
     let group = groups.get(key);
     if (!group) {
-      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), committees: new Set(), individual: 0, organization: 0, count: 0, memoCount: 0, records: []};
+      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), committees: new Set(), individual: 0, organization: 0, count: 0, memoCount: 0, records: [], research: identity.research};
       groups.set(key, group);
     }
     group.names.add(identity.reported);
@@ -71,11 +89,12 @@ export function buildDirectory(records) {
   return [...groups.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 
-export function selectDirectory(groups, {query = '', sector = '', view = 'names'} = {}) {
+export function selectDirectory(groups, {query = '', sector = '', view = 'names', research = ''} = {}) {
   const q = normalize(query);
   return groups.filter(g => (view === 'all' || (view === 'personal' ? g.personal : !g.personal))
+    && (!research || (g.research?.status || 'Not reviewed') === research)
     && (!sector || g.sectors.has(sector))
-    && (!q || [g.name, ...g.names].some(n => n.includes(q))));
+    && (!q || [g.name, ...g.names, g.research?.parent || ''].some(n => normalize(n).includes(q))));
 }
 
 export function directoryCSV(groups) {
@@ -84,7 +103,7 @@ export function directoryCSV(groups) {
     if (/^[=+@\-\t\r]/.test(s)) s = "'" + s;
     return '"' + s.replaceAll('"', '""') + '"';
   };
-  const rows = [['Business / organization name', 'Reported names', 'Name basis', 'Sectors', 'Committee keys', 'PAC / organization receipts USD', 'Individual receipts USD', 'Direct receipt records', 'Memo records (amounts excluded)']];
-  for (const g of groups) rows.push([g.name, [...g.names].join('; '), [...g.methods].join('; '), [...g.sectors].join('; '), [...g.committees].join('; '), (g.organization / 100).toFixed(2), (g.individual / 100).toFixed(2), g.count, g.memoCount]);
+  const rows = [['Business / organization name', 'Reported names', 'Name basis', 'Research status', 'Identity scope', 'Parent company', 'Research note', 'Sources', 'Reviewed', 'Sectors', 'Committee keys', 'PAC / organization receipts USD', 'Individual receipts USD', 'Direct receipt records', 'Memo records (amounts excluded)']];
+  for (const g of groups) rows.push([g.name, [...g.names].join('; '), [...g.methods].join('; '), g.research?.status || 'Not reviewed', g.research?.scope || '', g.research?.parent || '', g.research?.evidence || '', g.research?.sources.join('; ') || '', g.research?.reviewed || '', [...g.sectors].join('; '), [...g.committees].join('; '), (g.organization / 100).toFixed(2), (g.individual / 100).toFixed(2), g.count, g.memoCount]);
   return rows.map(r => r.map(quote).join(',')).join('\r\n');
 }
