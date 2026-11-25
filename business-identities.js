@@ -11093,5 +11093,283 @@ export const businessIdentities = [
       "https://media.nyam.org/filer_public/c5/05/c5055683-b75b-42f2-9b94-c7375e04118e/nyam_annual_meeting_2023_program_111623.pdf"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "XXV HOLDINGS INC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / holding-company name",
+    "parent": "",
+    "evidence": "Reviewed sources did not establish an authoritative XXV Holdings Inc. entity tied to Laurence Evans and the reported business-owner role. Same-name holding companies are not merged.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HARTFORD DISTRIBUTORS INC."
+    ],
+    "name": "HARTFORD DISTRIBUTORS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / beverage distributor",
+    "parent": "",
+    "evidence": "Connecticut public records and testimony identify Hartford Distributors, Inc. and Ross Hollander as CEO and chairman. The distributor is retained separately from suppliers and merged predecessor entities.",
+    "sources": [
+      "https://www.cga.ct.gov/2018/EXNdata/Tmy/2018HJ-00145-R000329-Hollander%2C%20Ross-TMY.PDF",
+      "https://forms.irs.gov/app/pod/basicSearch/downloadFile?formId=169662&formType=e8872"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HUMAN ENERGY RESOURCES"
+    ],
+    "name": "HUMAN ENERGY RESOURCES",
+    "status": "Source-backed",
+    "scope": "Executive-coaching and consulting business / brand",
+    "parent": "",
+    "evidence": "Public professional materials identify Jane Cocking with Human Energy Resources and an executive-coach role. The exact legal form is not established, so the reported employer remains at business/brand scope.",
+    "sources": [
+      "https://www.linkedin.com/in/jane-cocking-a9695b3"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DIAGEO NA"
+    ],
+    "name": "DIAGEO NORTH AMERICA",
+    "status": "Source-backed",
+    "scope": "North American operating-region / business identity of Diageo",
+    "parent": "Diageo plc",
+    "evidence": "Diageo's public reporting identifies North America as a core business region. The reported DIAGEO NA employer is retained at regional operating scope rather than collapsed into a particular U.S. subsidiary.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/835403/000162828026057527/dia045-arax2026annualrep.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AUTOMATED FOOD SYSTEMS INC."
+    ],
+    "name": "AUTOMATED FOOD SYSTEMS, INC.",
+    "status": "Source-backed",
+    "scope": "Business entity / food-processing equipment company",
+    "parent": "",
+    "evidence": "U.S. patent records identify Automated Food Systems, Inc. as assignee and Glenn E. Walser as inventor in company technology, supporting the exact employer identity. Current ownership status is not inferred.",
+    "sources": [
+      "https://patents.google.com/patent/US4842181"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CAMBIA"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / health-services brand shorthand",
+    "parent": "",
+    "evidence": "The generic CAMBIA employer string could refer to Cambia Health Solutions or another Cambia-named organization, and reviewed sources did not establish Jennifer Dhaliwal's exact employer. No expansion is forced.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SWAN PACKAGING"
+    ],
+    "name": "SWAN PACKAGING, INC.",
+    "status": "Source-backed",
+    "scope": "Packaging business / incorporated company",
+    "parent": "",
+    "evidence": "Swan Packaging's official site identifies Swan Packaging Inc. and public professional material identifies Mary Swanson as founder/owner. The reported President role is treated as donor context rather than current-title proof.",
+    "sources": [
+      "https://swanpackaginginc.com/contact/",
+      "https://www.linkedin.com/in/mary-swanson-17b5298"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GREATER SPOKANE INC"
+    ],
+    "name": "GREATER SPOKANE INC.",
+    "status": "Source-backed",
+    "scope": "Regional economic-development and business organization",
+    "parent": "",
+    "evidence": "Greater Spokane Inc. is the regional business/economic-development organization, and Washington State materials identify Robin Toth's former Vice President, Business Development role there. The historical title is preserved as donor context.",
+    "sources": [
+      "https://greaterspokane.org/about-us/staff/",
+      "https://www.commerce.wa.gov/wp-content/uploads/2019/06/2019-Aerospace-Sector-Strategic-Plan.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PRECISION AUTO GLASS"
+    ],
+    "name": "PRECISION AUTO GLASS",
+    "status": "Source-backed",
+    "scope": "Sacramento auto-glass business / sole-proprietorship brand",
+    "parent": "",
+    "evidence": "BBB business records identify Precision Auto Glass in Sacramento and list Lori Terry as office manager while John Phillips is listed as owner. The employer identity is source-backed, but the donor record's OWNER/OPERATOR title conflicts with public business-role data and is not treated as verified.",
+    "sources": [
+      "https://www.bbb.org/us/ca/sacramento/profile/windshield-repair/precision-auto-glass-1156-7000499/addressId/5308"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WOODRUFF ARTS CENTER"
+    ],
+    "name": "ROBERT W. WOODRUFF ARTS CENTER, INC.",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit arts organization",
+    "parent": "",
+    "evidence": "Nonprofit filings identify Robert W. Woodruff Arts Center, Inc., and the center's official site identifies Eleanor Tarvin in senior people/HR leadership. The shorter reported employer maps to the nonprofit.",
+    "sources": [
+      "https://www.woodruffcenter.org/people/eleanor-tarvin/",
+      "https://projects.propublica.org/nonprofits/organizations/580633971"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PENNSYLVANIA MEDICAL BILLING INC"
+    ],
+    "name": "PENNSYLVANIA MEDICAL BILLING, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / medical-billing company",
+    "parent": "",
+    "evidence": "Pennsylvania Medical Billing's official site identifies the company and Rosa Rossello as founder and President. The donor-reported small-business-owner role is consistent with the business identity.",
+    "sources": [
+      "https://www.pamedbill.com/about-us",
+      "https://www.pamedbill.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CARGILLE SACHER LABS"
+    ],
+    "name": "CARGILLE-SACHER LABORATORIES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / laboratory and chemical-products company",
+    "parent": "",
+    "evidence": "EPA enforcement records identify Cargille-Sacher Laboratories, Inc. and William Sacher as President. The shortened reported employer maps to the exact corporation.",
+    "sources": [
+      "https://yosemite.epa.gov/oa/rhc/epaadmin.nsf/CAFOs%20and%20ESAs/1E80B52621B5EDC085258AA80073F775/%24File/Cargille249103CAFO.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RM ELECTRIC CO"
+    ],
+    "name": "RM ELECTRIC CO., INC.",
+    "status": "Source-backed",
+    "scope": "Licensed electrical-contracting firm",
+    "parent": "",
+    "evidence": "New York City licensing records identify RM Electric Co., Inc. and Eusebio McQueen as the licensed professional associated with the firm. The reported President title is not independently used to infer ownership.",
+    "sources": [
+      "https://a810-lmpaca.nyc.gov/CitizenAccessBuildings/cap/CapDetail.aspx?agencyCode=BUILDINGS&capID1=DUB15&capID2=00000&capID3=0RNC5&module=DOB&type=1000"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EUSCLID SYSTEMS CORP"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / possibly misspelled corporate name",
+    "parent": "",
+    "evidence": "The EUSCLID SYSTEMS CORP spelling did not resolve to one authoritative entity tied to Joann Glady. It is not silently corrected to Euclid or another similarly named systems company.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DATA NET SOLUTIONS INC."
+    ],
+    "name": "DATA NET SOLUTIONS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / information-technology services company",
+    "parent": "",
+    "evidence": "A municipal procurement document identifies Data Net Solutions, Inc., federal identifiers, and Rob Slaughter as President. The reported employer maps directly to the company.",
+    "sources": [
+      "https://adelanto.granicus.com/DocumentViewer.php?file=adelanto_27849b014a793d45cd4269ef245b767b.pdf&view=1"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SHANAHAN LEADERSHIP STRATEGIES INC"
+    ],
+    "name": "SHANAHAN LEADERSHIP STRATEGIES INC.",
+    "status": "Source-backed",
+    "scope": "Leadership-coaching and consulting business",
+    "parent": "",
+    "evidence": "National Roofing Contractors Association materials identify Tom Shanahan as President of Shanahan Leadership Strategies Inc. The reported employer is retained at business identity scope.",
+    "sources": [
+      "https://nrca.net/education/fei/courses/instructors"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ELM PARK GROUP"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / business-group name",
+    "parent": "",
+    "evidence": "Reviewed sources did not establish one authoritative Elm Park Group entity tied to Paul T. Willingham and the reported business-owner role. No same-name real-estate or investment group is merged.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LUMANITY"
+    ],
+    "name": "LUMANITY",
+    "status": "Source-backed",
+    "scope": "Life-sciences strategy and commercialization business / global brand",
+    "parent": "",
+    "evidence": "Lumanity's official site identifies the global life-sciences business and current executive leadership. The reported employer remains at brand/group scope; Chetan Gandhi's donor-reported executive role is not used to assign a particular subsidiary.",
+    "sources": [
+      "https://lumanity.com/company/leadership/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CANTEBURY CAPITAL INC."
+    ],
+    "name": "CANTERBURY CAPITAL, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / investment advisory company",
+    "parent": "",
+    "evidence": "SEC adviser records identify Thomas Guy Carpenter's employment with Canterbury Capital, Inc. as Owner. The donor string's CANTEBURY spelling is treated as a supported misspelling of the employer tied to the named owner.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/individual/individual_1509964.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CLAYMONT SOC."
+    ],
+    "name": "CLAYMONT SOCIETY FOR CONTINUOUS EDUCATION",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit education organization / public-facing name",
+    "parent": "",
+    "evidence": "West Virginia corporate and nonprofit records identify the Claymont Society for Continuous Education and Amy Silver as Executive Director. The abbreviated reported employer maps to the organization.",
+    "sources": [
+      "https://remaininghuman.org/",
+      "https://apps.sos.wv.gov/business/corporations/organization.aspx?org=902"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

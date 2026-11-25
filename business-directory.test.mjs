@@ -547,3 +547,21 @@ test('fourteenth executive-priority batch keeps generic shorthand unresolved and
   assert.equal(groups.find(g=>g.name==='XCEL ENERGY – COLORADO').research.scope,'Colorado operating-company / public-facing utility identity');
   assert.equal(groups.find(g=>g.name==='SIP N CHAT COCKTAIL LOUNGE INC.').research.status,'Source-backed');
 });
+
+
+test('fifteenth executive-priority batch records role conflicts and supported spelling corrections without over-merging', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Dhaliwal',employer:'CAMBIA',occupation:'ACCOUNT EXECUTIVE',sector:'Healthcare',committee:'a',amount:100},
+    {type:'individual',name:'Glady',employer:'EUSCLID SYSTEMS CORP',occupation:'EXECUTIVE',sector:'Technology',committee:'a',amount:200},
+    {type:'individual',name:'Willingham',employer:'ELM PARK GROUP',occupation:'BUSINESS OWNER',sector:'Finance',committee:'a',amount:300},
+    {type:'individual',name:'Terry',employer:'PRECISION AUTO GLASS',occupation:'OWNER/OPERATOR',sector:'Auto',committee:'a',amount:400},
+    {type:'individual',name:'Carpenter',employer:'CANTEBURY CAPITAL INC.',occupation:'OWNER',sector:'Finance',committee:'a',amount:500},
+    {type:'individual',name:'Silver',employer:'CLAYMONT SOC.',occupation:'EXEC. DIRECTOR',sector:'Nonprofit',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='CAMBIA').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='EUSCLID SYSTEMS CORP').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='ELM PARK GROUP').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='PRECISION AUTO GLASS').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='CANTERBURY CAPITAL, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='CLAYMONT SOCIETY FOR CONTINUOUS EDUCATION').research.status,'Source-backed');
+});

@@ -172,3 +172,10 @@ Alsco, WPG International, Bitter Root RC&D, Beatrice Advisors, CareOregon, Easte
 The next 20 priority identities from PDX Gallery through Greater New York Hospital Association were reviewed. PDX Gallery Inc, Settlement Systems Arbitration and Mediation, KermitsPad, Fox Hollow Ventures LLC, IAG Ltd. and RSS-TGP remain unresolved because the reported strings do not identify one exact employer without inference.
 
 SRAM Corporation, The ALS Association, Westcoast Black Theatre Troupe of Florida, Corpus Christi Housing Authority, ASCAP, Citizens Union, Sip N Chat Cocktail Lounge, T K Group and Greater New York Hospital Association were source-backed. Xcel Energy–Colorado, Teachers Pay Teachers, The Doctors Company and uSherpa are retained at operating-company, brand or business-group scope rather than being over-normalized into a parent or affiliate. Williams-Sonoma, Inc. is retained as the public-company employer.
+
+
+## Executive-priority identity research — batch 15 — November 25, 2026
+
+The next 20 priority identities from XXV Holdings through Claymont Society were reviewed. XXV Holdings, Cambia, Eusclid Systems Corp and Elm Park Group remain unresolved because the exact employer cannot be established from the reported shorthand without inference.
+
+Hartford Distributors, Automated Food Systems, Swan Packaging, Greater Spokane Inc., Robert W. Woodruff Arts Center, Pennsylvania Medical Billing, Cargille-Sacher Laboratories, RM Electric, Data Net Solutions, Shanahan Leadership Strategies, Canterbury Capital and Claymont Society were source-backed. Human Energy Resources, Diageo North America and Lumanity remain source-backed only at business/brand or operating-region scope. Precision Auto Glass is source-backed as the employer business, but public business records conflict with the donor's OWNER/OPERATOR title, so the title is not treated as verified. The CANTEBURY spelling was resolved to Canterbury Capital through the named owner's SEC employment history.
