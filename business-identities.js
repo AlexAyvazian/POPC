@@ -4203,5 +4203,467 @@ export const businessIdentities = [
       "https://www.bizprofile.net/ny/new-york/aurora-pictures-corp"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLUE WOLF CAPITAL"
+    ],
+    "name": "Blue Wolf Capital Partners LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC Form ADV identifies Blue Wolf Capital Partners LLC and the firm's official biography identifies Adam Blumenthal as founder and co-managing partner. Blue Wolf and Blue Wolf Capital are supported shorthand forms.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/162475/PDF/162475.pdf",
+      "https://www.bluewolfcapital.com/team/adam-blumenthal/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EDGEWOOD MANAGEMENT LLC"
+    ],
+    "name": "Edgewood Management LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "Edgewood's official Form ADV brochure identifies Edgewood Management LLC and the firm biography identifies Nicholas Stephens, matching the donor's investment-advisor context.",
+    "sources": [
+      "https://www.edgewood.com/documents/Edgewood_Management_LLC_Form_ADV_Part_2A_March_27_2026.pdf",
+      "https://www.edgewood.com/team/nicholas-a-stephens"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ELEFTERAKIS ELEFTERAKIS & PANEK"
+    ],
+    "name": "Elefterakis, Elefterakis & Panek",
+    "status": "Source-backed",
+    "scope": "Law-firm brand",
+    "parent": "",
+    "evidence": "The firm's official site identifies Elefterakis, Elefterakis & Panek and EEP Law and identifies John Elefterakis as a founding partner. The reviewed materials do not establish a legal suffix or parent.",
+    "sources": [
+      "https://eeplaw.com/about-us",
+      "https://eeplaw.com/attorneys/john-elefterakis-esq"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KAUFMAN HALL"
+    ],
+    "name": "Kaufman, Hall & Associates, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / advisory firm",
+    "parent": "Vizient, Inc.",
+    "evidence": "SEC materials identify Kaufman, Hall & Associates, LLC. Vizient announced completion of its acquisition of Kaufman Hall in 2024, establishing the parent relationship; Kenneth Kaufman is the firm's founder.",
+    "sources": [
+      "https://www.sec.gov/files/litigation/admin/2024/34-101043.pdf",
+      "https://vizientinc.com/newsroom/news-releases/2024/vizient-completes-acquisition-of-kaufman-hall-consolidates-strategic-advisory-services",
+      "https://www.kaufmanhall.com/experts/kenneth-kaufman"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OAKTREE CAPITAL"
+    ],
+    "name": "Oaktree",
+    "status": "Source-backed",
+    "scope": "Alternative-investment group / brand",
+    "parent": "",
+    "evidence": "SEC adviser records identify Oaktree Capital Management, L.P. as a principal adviser and official biographies identify Howard Marks as co-chair and co-founder. The broader Oaktree label spans multiple legal entities, so it remains a group/brand identity.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/106793/PDF/106793.pdf",
+      "http://www.brookfield.com/about-us/leadership/howard-marks"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RICE UNIVERSITY"
+    ],
+    "name": "Rice University",
+    "status": "Source-backed",
+    "scope": "University / legal name William Marsh Rice University",
+    "parent": "",
+    "evidence": "Rice's official materials identify the institution's legal name as William Marsh Rice University and public name as Rice University. Diana Strassmann's Rice profile confirms the donor's faculty context.",
+    "sources": [
+      "https://ga.rice.edu/important-notices/contact-information/",
+      "https://profiles.rice.edu/faculty/diana-strassmann"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE ELEEMOSYNARY GROUP"
+    ],
+    "name": "The Eleemosynary Group",
+    "status": "Source-backed",
+    "scope": "Nonprofit consulting firm / brand",
+    "parent": "",
+    "evidence": "Jewish Women's Archive identifies Sally Gottesman as founder of The Eleemosynary Group, a management-consulting firm serving nonprofits. The exact legal suffix and current operating status are not established.",
+    "sources": [
+      "https://jwa.org/encyclopedia/article/gottesman-sally"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ULYSSES MANAGEMENT"
+    ],
+    "name": "Ulysses Management LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC Form ADV identifies Ulysses Management LLC and its ownership structure; Joshua Nash's relationship to the firm matches the donor record. Ownership by Joshua Nash-related entities is not recorded as a corporate parent.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/157251/PDF/157251.pdf",
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1018593"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WARBURG PINCUS"
+    ],
+    "name": "Warburg Pincus LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment firm",
+    "parent": "",
+    "evidence": "SEC adviser records identify Warburg Pincus LLC and its affiliates, and the firm's official biography identifies John Vogelstein as Special Limited Partner. Warburg Pincus is the supported shorthand.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1034638",
+      "https://warburgpincus.com/team/john-vogelstein"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CORNERSTONE GOVERNMENT AFFAIRS"
+    ],
+    "name": "Cornerstone Government Affairs, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / government-relations firm",
+    "parent": "",
+    "evidence": "Cornerstone's official personnel pages identify Robin Juliano and Alisa Nave-Worth in senior roles, matching the donor context. The firm uses Cornerstone Government Affairs as its public name.",
+    "sources": [
+      "https://cgagroup.com/people",
+      "https://cgagroup.com/offices/mountain-west/people"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VENN STRATEGIES"
+    ],
+    "name": "Venn Strategies, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / public-affairs firm",
+    "parent": "",
+    "evidence": "Venn's official site identifies Stephanie Silverman as founder and CEO and uses Venn Strategies as the firm brand. No parent or former name is established.",
+    "sources": [
+      "https://vennstrategies.com/our-team",
+      "https://vennstrategies.com/news/venn-strategies-announces-new-senior-management-team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WELLS FARGO"
+    ],
+    "name": "Wells Fargo",
+    "status": "Source-backed",
+    "scope": "Financial-services group / brand",
+    "parent": "",
+    "evidence": "Wells Fargo's SEC filing defines Wells Fargo as Wells Fargo & Company and consolidated subsidiaries. Donor records can correspond to Wells Fargo Securities, Wells Fargo Bank or other subsidiaries, so the bare employer remains at group/brand scope.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-20251231_d2.htm",
+      "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/wfc-1231x2025xex21.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE NEA FUND FOR CHILDREN & PUBLIC EDUCATION"
+    ],
+    "name": "NEA Fund for Children and Public Education",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00003251 identifies the NEA Fund for Children and Public Education as an active qualified labor-organization PAC. The National Education Association is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00003251"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ENGINEERS POLITICAL EDUCATION COMMITTEE OF THE INTERNATIONAL UNION OF OPERATING ENGINEERS (IUOE/EPEC)"
+    ],
+    "name": "Engineers Political Education Committee (EPEC) / International Union of Operating Engineers",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00029504 identifies EPEC as an active qualified labor PAC. The International Union of Operating Engineers is the separate labor organization named in the committee identity and is not an alias of the PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00029504"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MORTGAGE BANKERS ASSOCIATION POLITICAL ACTION COMMITTEE (MORPAC)"
+    ],
+    "name": "Mortgage Bankers Association Political Action Committee (MORPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00004812 identifies MORPAC as the Mortgage Bankers Association's separate qualified political committee. The association remains a distinct connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00004812",
+      "https://docquery.fec.gov/cgi-bin/forms/C00004812/1987030"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRANSPORT WORKERS UNION POLITICAL CONTRIBUTIONS COMMITTEE",
+      "TRANSPORT WORKERS UNION OF AMERICA POLITICAL CONTRIBUTIONS COMMITTEE"
+    ],
+    "name": "Transport Workers Union of America Political Contributions Committee",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00008268 identifies the current name Transport Workers Union of America Political Contributions Committee and documents the earlier Transport Workers Union Political Contributions Committee wording. The union is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00008268"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "A R KRONSTADT REALTY INVESTORS"
+    ],
+    "name": "A. R. Kronstadt Realty Investors, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / real-estate company",
+    "parent": "",
+    "evidence": "The company's official site identifies A. R. Kronstadt Realty Investors, Inc. and Allen Kronstadt as president, matching the donor's owner/real-estate context.",
+    "sources": [
+      "http://www.kronstadtrealty.com/contact.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HBJ INVESTMENTS, LLC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "Attorney records identify Beryl L. Snyder with employer HBJ Investments LLC in New York, but multiple unrelated HBJ Investments LLC entities exist and the reviewed evidence does not tie this donor to one authoritative state registration. Keep the exact legal entity unresolved.",
+    "sources": [
+      "https://iapps.courts.state.ny.us/attorneyservices/search"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LSN PARTNERS, LLC"
+    ],
+    "name": "LSN Partners, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / consulting firm",
+    "parent": "",
+    "evidence": "LSN's official site identifies Alexander Heckler as founder/managing partner and Tiffany Heckler as co-founder, while Florida records identify LSN Partners, LLC. Their donor occupations match the firm's consulting and legal work.",
+    "sources": [
+      "https://lsnpartners.com/team/",
+      "https://lsnpartners.com/staff/alexander-p-heckler",
+      "https://lsnpartners.com/staff/zientz-heckler-tiffany/",
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/ByName"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RA COHEN & ASSOCIATES, INC."
+    ],
+    "name": "R. A. Cohen & Associates, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / real-estate company",
+    "parent": "",
+    "evidence": "R. A. Cohen & Associates' official site identifies Robert A. Cohen as CEO and founder. The reported form differs only in spacing and punctuation.",
+    "sources": [
+      "https://racohen.com/",
+      "https://racohen.com/team/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL ASSOCIATION OF SHEET METAL, AIR, RAIL AND TRANSPORTATION WORKERS POLITICAL A"
+    ],
+    "name": "International Association of Sheet Metal, Air, Rail and Transportation Workers Political Action League",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00007542 supplies the full committee name behind the truncated reported value and documents the former Sheet Metal Workers' International Association Political Action League name. The SMART union is the separate connected labor organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00007542",
+      "https://docquery.fec.gov/cgi-bin/forms/C00007542/1816604"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TIBER CREEK GROUP"
+    ],
+    "name": "Tiber Creek Group",
+    "status": "Source-backed",
+    "scope": "Government-relations firm / brand",
+    "parent": "",
+    "evidence": "Tiber Creek Group's official site identifies Timothy Molino and Nikole Burroughs as partners and states that the firm was formerly Peck Madigan Jones. No parent or legal suffix is established.",
+    "sources": [
+      "https://www.tibercreekgroup.com/about",
+      "https://www.tibercreekgroup.com/team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WALNUT RIDGE"
+    ],
+    "name": "Walnut Ridge Family Office",
+    "status": "Source-backed",
+    "scope": "Family office / private-capital brand",
+    "parent": "",
+    "evidence": "Walnut Ridge's official site identifies Joe Kanfer as founding partner and describes Walnut Ridge as the Kanfer family office and private-capital firm. Another donor reported under the same employer is not independently tied to the firm, so the mapping is organization-level rather than a claim about every individual's role.",
+    "sources": [
+      "https://wrfo.com/team/joe-kanfer",
+      "https://wrfo.com/team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INVARIANT"
+    ],
+    "name": "Invariant",
+    "status": "Source-backed",
+    "scope": "Public-affairs and lobbying firm / brand",
+    "parent": "",
+    "evidence": "Invariant's official site identifies Maia Hunt Estes in government relations. A documented 2017 announcement states that the firm was formerly Heather Podesta + Partners.",
+    "sources": [
+      "https://www.weareinvariant.com/team/maia-hunt-estes",
+      "https://www.politico.com/f/?id=0000015b-19a4-d8ae-addf-99b545e40001"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARNOLD VENTURES"
+    ],
+    "name": "Arnold Ventures",
+    "status": "Source-backed",
+    "scope": "Philanthropy / public-facing organization",
+    "parent": "",
+    "evidence": "Arnold Ventures' official materials identify Laura and John Arnold as founders and sole funders. The public name spans the philanthropy's structure, so no unsupported corporate form or parent is assigned.",
+    "sources": [
+      "https://www.arnoldventures.org/about",
+      "https://assets.arnoldventures.org/uploads/PDFs/AV_1P_About-Us.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MERITAGE GROUP LP"
+    ],
+    "name": "Meritage Group LP",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser materials identify Meritage Group LP and its governance structure, and Meritage's official site supports the investment-firm identity. Nat Simons's role matches the donor context.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1027369",
+      "https://meritagegroup.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SESSA CAPITAL"
+    ],
+    "name": "Sessa Capital IM, L.P.",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Sessa Capital IM, L.P. and Sessa Capital as its trade name and document the former Sissa Capital name. John Petry is identified as principal owner.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/166403",
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1038442"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HEART TO HEART"
+    ],
+    "name": "Heart to Heart Hospice",
+    "status": "Source-backed",
+    "scope": "Hospice-care company / brand",
+    "parent": "",
+    "evidence": "Heart to Heart Hospice's official company release identifies Kelly Mitchell as founder and CEO, matching the donor record. The reported HEART TO HEART form is mapped to the hospice brand without inventing a company-wide legal suffix or parent.",
+    "sources": [
+      "https://hearttohearthospice.com/wp-content/uploads/2026/03/Press-Release-East-Texas-Opening-2026-03-03.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GEORGE MASON UNIVERSITY"
+    ],
+    "name": "George Mason University",
+    "status": "Source-backed",
+    "scope": "Public university",
+    "parent": "",
+    "evidence": "George Mason's official records identify the university and faculty context matching the donor records. No corporate parent relationship applies.",
+    "sources": [
+      "https://www.gmu.edu/profiles/gdonohue",
+      "https://www.gmu.edu/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE DASCHLE GROUP"
+    ],
+    "name": "The Daschle Group",
+    "status": "Source-backed",
+    "scope": "Historical government-relations / strategic-consulting firm",
+    "parent": "",
+    "evidence": "The Daschle Group was founded by Tom Daschle and in 2025 its practice joined Baker Donelson's public-policy practice to form DB3. The merger of practices does not establish a simple legal-name succession, so the historical employer remains separately identified.",
+    "sources": [
+      "https://db-3.co/",
+      "https://www.bakerdonelson.com/federal-aerospace-and-defense-policy"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VISA, INC."
+    ],
+    "name": "Visa Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / payments company; connected corporation",
+    "parent": "",
+    "evidence": "Visa Inc. is the connected corporation. The raw organization receipts in POPC are from the separate VISA, INC. POLITICAL ACTION COMMITTEE, FEC C00365122; the PAC is not an alias of Visa Inc. and remains preserved in original transaction details.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00365122",
+      "https://www.visa.com/en-us/company/political-engagement"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

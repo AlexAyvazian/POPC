@@ -173,3 +173,20 @@ test('generic employer labels remain unresolved after donor-context review', () 
   assert.equal(groups.find(g=>g.name==='AWAY').research.scope,'Consumer brand / travel company');
   assert.equal(groups.find(g=>g.name==="BLOCK O'TOOLE & MURPHY, LLP").research.status,'Source-backed');
 });
+
+
+test('next research batch preserves PAC boundaries and unresolved same-name employers', () => {
+  const rows=[
+    {type:'organization',name:'VISA, INC. POLITICAL ACTION COMMITTEE',sector:'Finance',committee:'a',amount:1000},
+    {type:'individual',name:'Donor',employer:'TRISOLARIS LLC',occupation:'CEO',sector:'Energy',committee:'a',amount:200},
+    {type:'individual',name:'Donor',employer:'HBJ INVESTMENTS, LLC',occupation:'EXECUTIVE',sector:'Finance',committee:'a',amount:300},
+    {type:'individual',name:'Donor',employer:'KAUFMAN HALL',occupation:'CONSULTANT',sector:'Professional',committee:'a',amount:400}
+  ];
+  const groups=buildDirectory(rows);
+  const visa=groups.find(g=>g.name==='VISA INC.');
+  assert.equal(visa.organization,1000);
+  assert.equal(visa.research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='TRISOLARIS LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='HBJ INVESTMENTS, LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='KAUFMAN, HALL & ASSOCIATES, LLC').research.parent,'Vizient, Inc.');
+});
