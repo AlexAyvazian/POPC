@@ -565,3 +565,21 @@ test('fifteenth executive-priority batch records role conflicts and supported sp
   assert.equal(groups.find(g=>g.name==='CANTERBURY CAPITAL, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CLAYMONT SOCIETY FOR CONTINUOUS EDUCATION').research.status,'Source-backed');
 });
+
+
+test('sixteenth executive-priority batch consolidates Raben shorthand and preserves independent-agent boundaries', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Raben',employer:'RABEN',occupation:'PRESIDENT',sector:'Lobbying',committee:'a',amount:100},
+    {type:'individual',name:'Polanco',employer:'STATE FARM',occupation:'INSURANCE AGENCY OWNER',sector:'Insurance',committee:'a',amount:200},
+    {type:'individual',name:'Stettner',employer:'ASC',occupation:'PHYSICIST/BOARD CHAIRMAN',sector:'Technology',committee:'a',amount:300},
+    {type:'individual',name:'Nelson',employer:'CALVERT SYSTEMS',occupation:'EXECUTIVE',sector:'Technology',committee:'a',amount:400},
+    {type:'individual',name:'Arnett',employer:'ORBIT MOVERS AND ERECTORS',occupation:'BUSINESS OWNER',sector:'Services',committee:'a',amount:500},
+    {type:'individual',name:'McCreery',employer:'MCCREERY INC.',occupation:'CHAIRMAN',sector:'Services',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='THE RABEN GROUP, LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='STATE FARM').research.scope,'Insurance brand / independent-agent relationship; not the donor\'s legal employing entity');
+  assert.equal(groups.find(g=>g.name==='ADVANCED SCIENTIFIC CONCEPTS, LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='CALVERT SYSTEMS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='ORBIT MOVERS AND ERECTORS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='MCCREERY INC.').research.status,'Unresolved');
+});

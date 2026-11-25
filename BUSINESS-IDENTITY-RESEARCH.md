@@ -179,3 +179,12 @@ SRAM Corporation, The ALS Association, Westcoast Black Theatre Troupe of Florida
 The next 20 priority identities from XXV Holdings through Claymont Society were reviewed. XXV Holdings, Cambia, Eusclid Systems Corp and Elm Park Group remain unresolved because the exact employer cannot be established from the reported shorthand without inference.
 
 Hartford Distributors, Automated Food Systems, Swan Packaging, Greater Spokane Inc., Robert W. Woodruff Arts Center, Pennsylvania Medical Billing, Cargille-Sacher Laboratories, RM Electric, Data Net Solutions, Shanahan Leadership Strategies, Canterbury Capital and Claymont Society were source-backed. Human Energy Resources, Diageo North America and Lumanity remain source-backed only at business/brand or operating-region scope. Precision Auto Glass is source-backed as the employer business, but public business records conflict with the donor's OWNER/OPERATOR title, so the title is not treated as verified. The CANTEBURY spelling was resolved to Canterbury Capital through the named owner's SEC employment history.
+
+
+## Executive-priority identity research — batch 16 — November 25, 2026
+
+The next executive-linked priority batch reviewed Nonna's Kitchen Chair through Bridge Philanthropic Consulting. Calvert Systems, Orbit Movers and Erectors, and McCreery Inc. remain unresolved because the reported employer cannot be tied to one exact entity without inference.
+
+RABEN was added as a verified shorthand alias of the already researched The Raben Group, LLC identity. Superior Test & Balance, East Coast Abstract, Sheppard Mullin, Tylie Jones & Associates, Lamesa Delinting Company, Advanced Scientific Concepts and Bridge Philanthropic Consulting were resolved to source-backed entities. Viejas Casino, Kohl's, Alive Hospice, Learning Exchange, Mostardi Nursery and DSB Group New York are retained at the business or organization scope supported by public evidence.
+
+The STATE FARM record is intentionally not treated as an individual contribution from a State Farm corporate employee: State Farm's own agent page identifies Rey Polanco as an independent contractor operating Reynaldo Polanco Insurance Agency, Inc. The reported employer remains searchable as STATE FARM while the research evidence records the agency/legal-employer boundary.

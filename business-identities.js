@@ -8033,7 +8033,8 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "THE RABEN GROUP"
+      "THE RABEN GROUP",
+      "RABEN"
     ],
     "name": "THE RABEN GROUP, LLC",
     "status": "Source-backed",
@@ -11369,6 +11370,281 @@ export const businessIdentities = [
     "sources": [
       "https://remaininghuman.org/",
       "https://apps.sos.wv.gov/business/corporations/organization.aspx?org=902"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NONNA'S KITCHEN CHAIR LLC"
+    ],
+    "name": "NONNA'S KITCHEN CHAIR, LLC",
+    "status": "Source-backed",
+    "scope": "Small culinary publishing and food business / reported LLC identity",
+    "parent": "",
+    "evidence": "Public professional materials identify Joanne Snow with Nonna's Kitchen Chair, LLC in Saratoga, California and link the business to its cookbook and food content. The exact state-registration details were not independently retrieved, so the identity is retained at the reported business/LLC scope.",
+    "sources": [
+      "https://www.linkedin.com/in/joanne-snow-0922553"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DSB GROUP NY"
+    ],
+    "name": "DSB GROUP NEW YORK INC.",
+    "status": "Source-backed",
+    "scope": "Apparel product-development and production company",
+    "parent": "",
+    "evidence": "CFDA's production directory identifies DSB Group NY as a New York apparel development and production company, while public professional records identify David Balaban with DSB Group New York Inc. The reported shorthand maps to the business.",
+    "sources": [
+      "https://cfda.com/resources/supply-chain-manufacturing/production-directory/dsb-group-ny/",
+      "https://www.linkedin.com/in/david-balaban-0a08a52b"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SUPERIOR TEST & BALANCE INC."
+    ],
+    "name": "SUPERIOR TEST & BALANCE, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / HVAC testing and balancing contractor",
+    "parent": "",
+    "evidence": "Sheet Metal Workers Local 73 lists Superior Test & Balance, Inc. as an Algonquin, Illinois contractor, and FEC records independently identify Mort Bretsnyder with the same employer and business-owner occupation.",
+    "sources": [
+      "https://www.smw73.org/contractors/test-and-balance.html",
+      "https://docquery.fec.gov/pdf/223/202601319808244223/202601319808244223.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARIA RETIREMENT SOLUTIONS"
+    ],
+    "name": "ARIA RETIREMENT SOLUTIONS, LLC",
+    "status": "Source-backed",
+    "scope": "Historical legal entity / retirement-services company",
+    "parent": "",
+    "evidence": "Florida corporate records identify Aria Retirement Solutions, LLC as a Delaware foreign LLC that later withdrew from Florida. The exact reported employer string maps to the historical entity; Brent Hamann's executive title is retained only as donor-reported context.",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forl-m11000004988-a87b17d9-1daa-47c4-977d-927e896a5fa5&directionType=PreviousList&inquirytype=EntityName&listNameOrder=ARIARESERVE5804+L220001518190&searchNameOrder=ARIARETIREMENTSOLUTIONS+M110000049880&searchTerm=ARIAS+BUILDERSLING+LLC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CALVERT SYSTEMS"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / systems-engineering business name",
+    "parent": "",
+    "evidence": "Public employee-directory material connects a Bruce Nelson to Calvert Systems Engineering, Incorporated as a vice president, but the reviewed evidence is not strong enough to establish that this is the exact donor/employer identity behind the generic CALVERT SYSTEMS string. No legal-entity normalization is forced.",
+    "sources": [
+      "https://www.signalhire.com/companies/calvert-systems-engineering-incorporated/email-format"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LEARNING EXCHANGE"
+    ],
+    "name": "LEARNING EXCHANGE",
+    "status": "Source-backed",
+    "scope": "Education and test-preparation business / operating name",
+    "parent": "",
+    "evidence": "Public business-directory records identify Learning Exchange in Brookfield, Wisconsin with Ellen Sternig as owner, and 2026 political-spending data independently reports her as Business Owner at Learning Exchange. The exact corporate suffix is not promoted without registry evidence.",
+    "sources": [
+      "https://bizstanding.com/p/learning%2Bexchange-171812513",
+      "https://projects.propublica.org/527-explorer/orgs/270160261/details/9776126"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ORBIT MOVERS AND ERECTORS"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / moving and rigging business",
+    "parent": "",
+    "evidence": "Reviewed public sources did not establish one authoritative Orbit Movers and Erectors entity tied to James Arnett and the reported business-owner role. No same-name moving or rigging firm is merged.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VIEJAS CASINO"
+    ],
+    "name": "VIEJAS CASINO & RESORT",
+    "status": "Source-backed",
+    "scope": "Tribal casino and resort / public-facing operating brand",
+    "parent": "",
+    "evidence": "Viejas Casino & Resort's official group-tour materials identify Farrah Espinoza as the contact for group tours, confirming the employer relationship. Public professional records describe her current role as Group Tour Manager, so the donor record's generic EXEC title is not treated as a verified senior-executive title.",
+    "sources": [
+      "https://viejas.com/images/group-tours/group_tours_02.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MCCREERY INC."
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / corporate name",
+    "parent": "",
+    "evidence": "Roxanne McCreery is well documented as a longtime leader of ABPM/GACEP, but reviewed sources did not establish an entity named McCreery Inc. tied to her. The reported employer remains unresolved instead of being replaced with ABPM/GACEP.",
+    "sources": [
+      "https://www.gacep.com/gacepteam",
+      "https://www.gacep.com/files/2018MultiClientStudyProposal.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EAST COAST ABSTRACT INC."
+    ],
+    "name": "EAST COAST ABSTRACT, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / title and abstract company",
+    "parent": "",
+    "evidence": "BBB business records identify East Coast Abstract, Inc. as an incorporated New York title business and list Stanley Levine as President & Partner. The reported employer maps directly to the company.",
+    "sources": [
+      "https://www.bbb.org/us/ny/garden-city/profile/title-agent/east-coast-abstract-inc-0121-37243"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KOHLS"
+    ],
+    "name": "KOHL'S",
+    "status": "Source-backed",
+    "scope": "National retail brand / employer identity",
+    "parent": "",
+    "evidence": "Public litigation records identify Holly Renee Henson as a Kohl's employee in management, confirming the employer relationship. The reviewed records identify her historically as a regional manager rather than substantiating the donor record's SVP title, so the identity remains at retailer-brand scope and the title discrepancy is preserved.",
+    "sources": [
+      "https://crottyandson.com/wp-content/uploads/2018/03/2018-02-22-Complaint-Heinen-Kohls.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SHEPPARD FIRM"
+    ],
+    "name": "SHEPPARD, MULLIN, RICHTER & HAMPTON LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "Legal-industry records identify Victoria Spang as Chief Marketing Officer of Sheppard, Mullin, Richter & Hampton, and campaign-contribution records separately use SHEPPARD MULLIN as her employer. The generic SHEPPARD FIRM donor string is resolved to the law firm.",
+    "sources": [
+      "https://www.foley.com/wp-content/uploads/imported/e5720d723aa04e978f661ebfd1adacc6.pdf",
+      "https://www.city-data.com/elec2/20/elec-SAN-FRANCISCO-CA-20-part66.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALIVE HOSPICE"
+    ],
+    "name": "ALIVE HOSPICE",
+    "status": "Source-backed",
+    "scope": "Nonprofit hospice organization / public-facing identity",
+    "parent": "",
+    "evidence": "Alive Hospice is the nonprofit organization associated with Kira Hilley, and design-industry records identify her historically as Vice President of Community Development. The reported employer is retained at organization scope.",
+    "sources": [
+      "https://gallery.gdusa.com/project/keeping-it-original-for-alive-cd-packaging"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TJ&A"
+    ],
+    "name": "TYLIE JONES & ASSOCIATES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / advertising and media-services company",
+    "parent": "",
+    "evidence": "USPTO and California business records identify Tylie Jones & Associates, Inc. with Tylie Jones as owner/executive. The TJ&A abbreviation is resolved to the corporation; later Tylie Ad Solutions and its acquisition history are not merged into this historical employer identity.",
+    "sources": [
+      "https://tmng-al.uspto.gov/resting2/api/casedoc/cms/case/99349812/office-action/OfficeAction8145624.pdf",
+      "https://www.bizprofile.net/ca/burbank/tylie-jones-associates-inc"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LAMESA DELINTING COMPANYINC."
+    ],
+    "name": "LAMESA DELINTING COMPANY INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / seed-cleaning company",
+    "parent": "",
+    "evidence": "Texas Department of Agriculture registration material identifies Lamesa Delinting Company Inc. d/b/a WS Roxie Seed Cleaning, while public professional material identifies Vicki Vaszauskas as CFO. The donor string's missing space is treated as a formatting variant.",
+    "sources": [
+      "https://texasagriculture.gov/Portals/0/Files/ACP/Hemp/HEMP_Processor_Registrations.pdf",
+      "https://www.worldwidewomensassociation.com/new_announcement/vicki-vaszauskas/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ASC"
+    ],
+    "name": "ADVANCED SCIENTIFIC CONCEPTS, LLC",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / 3D flash-LIDAR technology company",
+    "parent": "",
+    "evidence": "Advanced Scientific Concepts' official site identifies ASC, LLC and Dr. Roger Stettner as Chairman of the Board, President and CEO. It also documents the 2016 sale of the former ASC Inc. commercial business while the independent LLC continued in designated markets.",
+    "sources": [
+      "https://asc3d.com/about/",
+      "https://asc3d.com/roger-stettner/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MOSTARDI NURSERY"
+    ],
+    "name": "MOSTARDI NURSERY",
+    "status": "Source-backed",
+    "scope": "Family-owned garden-center business / operating name",
+    "parent": "",
+    "evidence": "Newtown Township and the Pennsylvania Horticultural Society identify Mostardi Nursery as a family-owned Newtown Square garden center and Steve Mostardi as owner. The exact corporate legal form is not asserted.",
+    "sources": [
+      "https://www.newtowntownship.org/m/newsflash/home/detail/809",
+      "https://phsonline.org/board-of-directors/stephen-l-mostardi"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE FARM"
+    ],
+    "name": "STATE FARM",
+    "status": "Source-backed",
+    "scope": "Insurance brand / independent-agent relationship; not the donor's legal employing entity",
+    "parent": "",
+    "evidence": "State Farm's official agent page identifies Rey Polanco as a State Farm insurance agent operating Reynaldo Polanco Ins Agcy Inc. and explicitly states that State Farm agents are independent contractors, not employees of State Farm insurance companies. The reported STATE FARM employer is therefore retained only as the brand/agency relationship.",
+    "sources": [
+      "https://www.statefarm.com/agent/us/ny/new-york/rey-polanco-4xf1k1ys000",
+      "https://reypolanco.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BRIDGE PHILANTHROPIC CONSULTING LLC"
+    ],
+    "name": "BRIDGE PHILANTHROPIC CONSULTING LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / fundraising and social-impact consulting firm",
+    "parent": "",
+    "evidence": "New York City procurement data identifies Bridge Philanthropic Consulting LLC as a limited liability company and Dwayne Ashley as CEO and principal owner; the firm's official site independently identifies him as Founder and CEO.",
+    "sources": [
+      "https://databook.nyc/procurement/vendor/1873164",
+      "https://bridgephilanthropicconsulting.com/our-team/"
     ],
     "reviewed": "2026-11-25"
   }
