@@ -95,3 +95,10 @@ Austin Sports Academy remains explicitly unresolved because the operating busine
 The next 20 highest-dollar executive-linked priority identities were reviewed: CityBridge Foundation, Cornerstone Automation Systems, DADA, DraftKings, Drink Willie's, Eisner Advisory LLC, Embrace Inc, Estée Lauder, Fox Searchlight Pictures, Fried Companies, Future Standard, Hunt Companies, Ignite Medical Resorts, Jackson Offshore Operators, Jain Global, Jushi, Leadership Now Project, LIPA, Marquis Health and Marquis Limited LLC.
 
 Eisner Advisory LLC and Marquis Health remain explicitly unresolved because the donor strings cannot be safely equated to one exact legal entity. Drink Willie's, DADA, Future Standard, Fox Searchlight Pictures and Ignite Medical Resorts are source-backed only at brand/group/label scope. Marquis Limited LLC remains separate from Marquis Health. All parent, subsidiary and affiliate boundaries remain non-aggregating context.
+
+
+## Executive-priority identity research — batch 4 — November 25, 2026
+
+The next 20 executive-linked priority identities were reviewed from MG Capital Holdings through Mortgage Bankers Association. MG Capital Holdings remains unresolved because the exact reported company name could not be tied to the donor without relying on a same-name inference.
+
+Molecule Ventures, Niagara Bottling, NOLA Education, PAFCO, Saba Capital Management, Standard Wellness Holdings, SunMed Growers, The Raben Group, Vistria PRG, Trulieve Cannabis, Wolfe Research, Spellman High Voltage Electronics and The Millstone Evans Group were resolved to source-backed entities. Monumental Sports & Entertainment, Rosen Harbottle and The Premier Companies remain source-backed at firm/group/brand scope. Union Plaza Care Center is linked to the government-listed operator Union Plaza Nursing Home Inc. Mortgage Bankers Association remains separate from its PAC.

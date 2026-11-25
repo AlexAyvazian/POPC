@@ -7854,5 +7854,301 @@ export const businessIdentities = [
       "https://www.ahcancal.org/News-and-Communications/Press-Releases/Pages/More-Than-500-Long-Term-Care-Professionals-Assemble-on-Capitol-Hill-to-Advocate-for-Residents,-Staff.aspx"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MG CAPITAL HOLDINGS INC."
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / holding-company name",
+    "parent": "",
+    "evidence": "An entity with the exact MG Capital Holdings, Inc. name exists in public business data, but reviewed sources do not establish that it is the company associated with donor Mark Goodman. Multiple unrelated MG Capital/Mark Goodman records make an exact match unsafe.",
+    "sources": [
+      "https://im.williamblair.com/about/meet-our-team/mark-goodman"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MOLECULE VENTURES"
+    ],
+    "name": "MOLECULE VENTURES LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / venture and commodity-investment manager",
+    "parent": "",
+    "evidence": "LEI and securities records identify Molecule Ventures LLC, while the firm's official team page identifies Nikhil (Nik) Mittal as co-founder and managing partner. Molecule Ventures LP remains a separate fund entity.",
+    "sources": [
+      "https://www.gleif.org/lei/254900IGPA35YFZEZ862",
+      "https://molecule-ventures.com/team/",
+      "https://www.sec.gov/Archives/edgar/data/1812786/000181278623000002/xslFormDX01/primary_doc.xml"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MONUMENTAL SPORTS"
+    ],
+    "name": "MONUMENTAL SPORTS & ENTERTAINMENT",
+    "status": "Source-backed",
+    "scope": "Sports and entertainment business group / operating brand",
+    "parent": "",
+    "evidence": "Monumental Sports & Entertainment's official site identifies Monica Dixon as President, External Affairs and Chief Administrative Officer. The reported MONUMENTAL SPORTS shorthand is retained at group/brand scope and is not merged with Monumental Sports Network, the MSE Foundation or any PAC.",
+    "sources": [
+      "https://monumentalsports.com/people/monica-dixon-2",
+      "https://www.monumentalsports.com/who-we-are"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NIAGARA BOTTLING, LLC"
+    ],
+    "name": "NIAGARA BOTTLING, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / beverage manufacturer",
+    "parent": "",
+    "evidence": "Niagara's official site identifies the family-owned bottling company and public registration data identifies Niagara Bottling, LLC at its Diamond Bar headquarters. Andy Peykoff II is the company's President and CEO.",
+    "sources": [
+      "https://www.niagarawater.com/about-us",
+      "https://opengovwa.com/corporation/603022045"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOLA EDUCATION LLC"
+    ],
+    "name": "NOLA EDUCATION, LLC",
+    "status": "Source-backed",
+    "scope": "Education company / legal entity",
+    "parent": "",
+    "evidence": "NOLA Education operates the Star Academy program and company materials identify John Alvendia as founder and CEO. Star Academy is treated as a program/brand, not as a separate alias for the legal employer.",
+    "sources": [
+      "https://www.staracademyprogram.com/leadership-spotlight-john-alvendia-ceo/",
+      "https://www.nola.com/news/business/nola-education-expands-with-new-julia-street-center/article_441afbd7-d335-4f43-8e4e-ab5471c96df3.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PAFCO"
+    ],
+    "name": "PACIFIC AMERICAN FISH CO., INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / seafood company; PAFCO business name",
+    "parent": "",
+    "evidence": "PAFCO's official materials identify Pacific American Fish Co., Inc. and use PAFCO as the operating business name. The reported acronym is therefore resolved to the company without merging unrelated PAFCO entities.",
+    "sources": [
+      "https://www.pafco.net/terms-conditions",
+      "http://www.pafco.net/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PINK'S HOT DOGS INC."
+    ],
+    "name": "PINK'S HOT DOGS, INC.",
+    "status": "Source-backed",
+    "scope": "Restaurant business / reported corporate identity",
+    "parent": "",
+    "evidence": "Pink's official history identifies the Pink family operation and Richard Pink's leadership of the Hollywood restaurant business. The reported corporate form is retained as the employer identity and is not generalized to unrelated Pink-named companies.",
+    "sources": [
+      "https://www.pinkshollywood.com/about/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ROSEN HARBOTTLE COMMERCIAL REAL ESTATE"
+    ],
+    "name": "ROSEN HARBOTTLE COMMERCIAL REAL ESTATE",
+    "status": "Source-backed",
+    "scope": "Commercial real-estate firm / brand; exact legal entity not established",
+    "parent": "",
+    "evidence": "The firm's official site identifies Rosen Harbottle Commercial Real Estate and Stanley Rosen as a principal. The site does not establish a fuller registered legal entity name, so the reported employer remains at firm/brand scope.",
+    "sources": [
+      "https://www.rosenharbottle.com/who-we-are",
+      "https://www.rosenharbottle.com/who-we-are/stan-rosen"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SABA CAPITAL"
+    ],
+    "name": "SABA CAPITAL MANAGEMENT, L.P.",
+    "status": "Source-backed",
+    "scope": "Legal entity / registered investment adviser",
+    "parent": "",
+    "evidence": "SEC Form ADV identifies Saba Capital Management, L.P. as the legal and primary business name. Boaz Weinstein's CIO/founder context matches the adviser; other Saba funds remain separate entities.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/154362/PDF/154362.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STANDARD WELLNESS"
+    ],
+    "name": "STANDARD WELLNESS HOLDINGS, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / cannabis company",
+    "parent": "",
+    "evidence": "Standard Wellness company materials identify Standard Wellness Holdings, LLC and Jared Maloof as CEO. Product and dispensary brands are not treated as aliases of the holding company.",
+    "sources": [
+      "http://standardwellness.com/blog/standard-wellness-announces-acquisition-of-greenstock-expands-ohio-dispensary-footprint"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SUNMED GROWERS"
+    ],
+    "name": "SUNMED GROWERS, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / cannabis cultivator",
+    "parent": "",
+    "evidence": "Maryland legislative materials identify SunMed Growers, LLC and Jake Van Wingerden in connection with the company he formed. The shortened reported employer maps to the LLC.",
+    "sources": [
+      "https://mgaleg.maryland.gov/cmte_testimony/2022/fin/1nSZQrH376hrZpVsAYScI0qTeNQz2uwuo.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE PREMIER COMPANIES"
+    ],
+    "name": "THE PREMIER COMPANIES",
+    "status": "Source-backed",
+    "scope": "Real-estate business group / brand",
+    "parent": "",
+    "evidence": "The Premier Companies' official site identifies Jonathan Cutler as founder and describes the real-estate organization. Related entities including The Premier Companies, Inc. and Premier Management Services, LC are kept distinct rather than collapsed into the brand.",
+    "sources": [
+      "https://www.premierinvestment.com/about",
+      "https://www.premierinvestment.com/founderprofile"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE RABEN GROUP"
+    ],
+    "name": "THE RABEN GROUP, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / public-affairs and consulting firm",
+    "parent": "",
+    "evidence": "Public registration materials and the firm's identity support The Raben Group, LLC, while Robert Raben is the firm's founder and president. The LLC is retained separately from any affiliates or clients.",
+    "sources": [
+      "https://efile.fara.gov/docs/7140-Exhibit-C-20220716-1.pdf",
+      "https://rabengroup.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE VISTRIA GROUP PRG"
+    ],
+    "name": "VISTRIA PRG, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / policy and regulatory group",
+    "parent": "",
+    "evidence": "Vistria materials identify Jonathan Samuels as co-head of PRG and distinguish Vistria PRG, LLC from The Vistria Group, LP. The donor-employer string is therefore kept with the PRG entity rather than the broader investment firm.",
+    "sources": [
+      "https://vistria.com/team/jon-samuels",
+      "https://vistria.com/team?refresh=20261105"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRULIEVE"
+    ],
+    "name": "TRULIEVE CANNABIS CORP.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public cannabis company",
+    "parent": "",
+    "evidence": "SEC filings identify Trulieve Cannabis Corp. as the registrant and Kim Rivers as its chief executive officer. The Trulieve brand is not used to collapse operating subsidiaries into the parent corporation.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1754195/000175419526000027/ars.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNION PLAZA CARE CENTER"
+    ],
+    "name": "UNION PLAZA NURSING HOME INC.",
+    "status": "Source-backed",
+    "scope": "Licensed nursing-home operator / facility identity",
+    "parent": "",
+    "evidence": "Medicare and New York State health records identify Union Plaza Care Center and its legal business/operator name as Union Plaza Nursing Home Inc., with Simon Pelman tied to ownership. The reported CEO title is not independently used to establish the entity match.",
+    "sources": [
+      "https://www.medicare.gov/care-compare/details/nursing-home/335799/view-all/?state=NY",
+      "https://profiles.health.ny.gov/hospital/view/150892"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WOLFE RESEARCH, LLC"
+    ],
+    "name": "WOLFE RESEARCH, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / research firm",
+    "parent": "Wolfe HoldCo, LLC",
+    "evidence": "LEI and firm materials identify Wolfe Research, LLC, while Wolfe's official leadership page identifies Yin Luo as Vice Chairman. SEC affiliate disclosures distinguish Wolfe Research, LLC from WR Securities, LLC and establish Wolfe HoldCo, LLC as parent context.",
+    "sources": [
+      "https://www.gleif.org/lei/25490055RCIM412FC286",
+      "https://www.wolferesearch.com/leadership/yin-luo-2",
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1037918"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SPELLMAN HIGH VOLTAGE ELECTRONICS"
+    ],
+    "name": "SPELLMAN HIGH VOLTAGE ELECTRONICS CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / electronics manufacturer",
+    "parent": "",
+    "evidence": "Spellman's official site identifies Spellman High Voltage Electronics Corporation and Loren Skeist as President and CEO. International facilities and product brands remain separate from the corporation identity.",
+    "sources": [
+      "https://www.spellmanhv.com/en/About",
+      "https://www.spellmanhv.com/en/News/Spellman-Holds-Ground-Breaking-Ceremony-for-New-China-Design-and-Manufacturing-Center"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MILLSTONE EVANS GROUP"
+    ],
+    "name": "THE MILLSTONE EVANS GROUP, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / registered investment adviser",
+    "parent": "",
+    "evidence": "SEC Form ADV identifies The Millstone Evans Group, LLC as the legal and primary advisory business name; firm materials identify Sacha Millstone as President and an owner/manager.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/311142/PDF/311142.pdf",
+      "https://www.millstoneevansgroup.com/acquaint/bio?_=sacha"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MORTGAGE BANKERS ASSOCIATION"
+    ],
+    "name": "MORTGAGE BANKERS ASSOCIATION",
+    "status": "Source-backed",
+    "scope": "National real-estate-finance trade association",
+    "parent": "",
+    "evidence": "The association's IRS return identifies Mortgage Bankers Association as the organization name, and its official leadership page identifies Peter Grace as a senior vice president. The association remains separate from MORPAC and other political committees.",
+    "sources": [
+      "https://apps.irs.gov/pub/epostcard/cor/361505650_202409_990O_2026012323876848.pdf",
+      "https://www.mba.org/about-mba/leadership/peter-grace"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

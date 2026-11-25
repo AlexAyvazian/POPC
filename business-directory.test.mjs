@@ -341,3 +341,21 @@ test('third executive-priority batch preserves labels, legal entities and unreso
   assert.equal(groups.find(g=>g.name==='MARQUIS HEALTH').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='MARQUIS LIMITED LLC').research.status,'Source-backed');
 });
+
+
+test('fourth executive-priority batch keeps legal, brand and unresolved identity scopes distinct', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Goodman',employer:'MG CAPITAL HOLDINGS INC.',occupation:'CHAIRMAN',sector:'Finance',committee:'a',amount:100},
+    {type:'individual',name:'Dixon',employer:'MONUMENTAL SPORTS',occupation:'PRESIDENT',sector:'Sports',committee:'a',amount:200},
+    {type:'individual',name:'Rosen',employer:'ROSEN HARBOTTLE COMMERCIAL REAL ESTATE',occupation:'PRINCIPAL',sector:'Real Estate',committee:'a',amount:300},
+    {type:'individual',name:'Samuels',employer:'THE VISTRIA GROUP PRG',occupation:'PARTNER AND CO-HEAD',sector:'Finance',committee:'a',amount:400},
+    {type:'individual',name:'Pelman',employer:'UNION PLAZA CARE CENTER',occupation:'CEO',sector:'Healthcare',committee:'a',amount:500},
+    {type:'individual',name:'Grace',employer:'MORTGAGE BANKERS ASSOCIATION',occupation:'SENIOR EXECUTIVE',sector:'Real Estate',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='MG CAPITAL HOLDINGS INC.').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='MONUMENTAL SPORTS & ENTERTAINMENT').research.scope,'Sports and entertainment business group / operating brand');
+  assert.equal(groups.find(g=>g.name==='ROSEN HARBOTTLE COMMERCIAL REAL ESTATE').research.scope,'Commercial real-estate firm / brand; exact legal entity not established');
+  assert.equal(groups.find(g=>g.name==='VISTRIA PRG, LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='UNION PLAZA NURSING HOME INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MORTGAGE BANKERS ASSOCIATION').research.scope,'National real-estate-finance trade association');
+});
