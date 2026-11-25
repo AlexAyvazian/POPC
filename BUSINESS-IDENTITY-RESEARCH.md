@@ -72,3 +72,12 @@ For display and batch ordering only, the interface may prioritize PAC / organiza
 The master unreviewed backlog continues to preserve every non-personal unreviewed identity. The priority queue now also includes single-donor employers when at least one associated individual receipt reports a high-influence role in one of these existing occupation groups: chief executive officer; chair/board member/trustee; other C-suite officer; vice president; president; founder/business owner; partner/principal; or other executive/managing director.
 
 This uses the same `occupationGroup()` classifier already used by Combined Total Contributions and Analysis. Ordinary one-person employer strings such as a staff-level hospital employer remain outside the priority view, while executive-linked employer identities move into the research queue without changing any underlying record or amount.
+
+
+## Executive-priority identity research — batch 1 — November 25, 2026
+
+The first executive-linked priority batch reviewed the highest-dollar single-donor employer identities using donor name and reported executive role as context. Nineteen new identity records were added in this commit; BHANDAL SECURITY had already been independently reviewed and retained as unresolved by a concurrent research commit.
+
+Source-backed additions include Bed Bath & Beyond, Capitol City Group, Cibus at group/brand scope, Cityview Management Services, Everest Clinical Research Corporation, Firefly3 LLC, Forest Management Company LLC, Gjelaj Law PLLC, JSI at group/brand scope, Lightyear Capital LLC, Mapleton Investments LLC, Green Thumb Industries Inc., State of Colorado, Verano Holdings Corp., Centric Brands LLC, Eminence Capital LP, Empire Office Inc. and Mack Real Estate Group at group/brand scope.
+
+STORY remains explicitly unresolved because available evidence connects Joe Sai to Story Cannabis Company LLC but does not establish which Story legal entity corresponds to the bare employer string in the donor record. No Story entities were merged.

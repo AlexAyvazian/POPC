@@ -274,3 +274,21 @@ test('PAC former-name batch preserves current FEC identity and union/company bou
   assert(g.some(x=>x.name==='CISCO SYSTEMS, INC. FEDERAL PAC (AKA CISCO SYSTEMS E-PAC)'));
   assert(g.some(x=>x.name==='CISCO'));
 });
+
+
+test('executive-priority research batch resolves exact identities without forcing ambiguous brands', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Harrington',employer:'CAP CITY GROUP',occupation:'PRESIDENT',sector:'Lobbying',committee:'a',amount:100},
+    {type:'individual',name:'Burton',employer:'CITYVIEW',occupation:'CEO',sector:'Finance',committee:'a',amount:200},
+    {type:'individual',name:'Freston',employer:'FIREFLY3',occupation:'PRINCIPAL',sector:'Finance',committee:'a',amount:300},
+    {type:'individual',name:'Nathanson',employer:'MAPLETON INVESTMENTS',occupation:'CHAIR',sector:'Finance',committee:'a',amount:400},
+    {type:'individual',name:'Sai',employer:'STORY',occupation:'COO',sector:'Cannabis',committee:'a',amount:500},
+    {type:'individual',name:'Crotty',employer:'JSI',occupation:'CEO',sector:'Services',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='CAPITOL CITY GROUP, LTD.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='CITYVIEW MANAGEMENT SERVICES, LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='FIREFLY3 LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MAPLETON INVESTMENTS, LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='STORY').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='JSI').research.scope,'Business group / brand covering related entities');
+});

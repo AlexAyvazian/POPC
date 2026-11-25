@@ -6544,5 +6544,288 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00147173?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BED BATH & BEYOND"
+    ],
+    "name": "BED BATH & BEYOND INC.",
+    "status": "Source-backed",
+    "scope": "Historical legal entity / retailer",
+    "parent": "",
+    "evidence": "SEC proxy materials identify Warren Eisenberg as co-founder and co-chairman of Bed Bath & Beyond Inc. The historical employer is kept distinct from the later issuer that adopted the Bed Bath & Beyond name after the original retailer's bankruptcy.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/886158/000117184315003199/def14a_052215.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CAP CITY GROUP"
+    ],
+    "name": "CAPITOL CITY GROUP, LTD.",
+    "status": "Source-backed",
+    "scope": "Legal entity / lobbying and government-relations firm",
+    "parent": "",
+    "evidence": "Federal lobbying records identify Capitol City Group, Ltd. as the registrant and Gerald T. Harrington as a lobbyist for it; the firm's official biography identifies Harrington as founder and president. CAP CITY GROUP is retained as the reported shorthand alias.",
+    "sources": [
+      "https://lda.gov/filings/public/contribution/a935427c-1615-415f-80ef-c6b8ab337694/print",
+      "https://www.capitolcitygrp.com/gerald-t-harrington"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CIBUS"
+    ],
+    "name": "CIBUS",
+    "status": "Source-backed",
+    "scope": "Agricultural-technology business group / brand",
+    "parent": "",
+    "evidence": "Cibus materials identify Rory Riggs as a co-founder of Cibus and SEC filings distinguish Cibus, Inc. from operating entity Cibus Global. The bare employer is therefore kept at group/brand scope rather than assigned to one legal entity.",
+    "sources": [
+      "https://ir.cibus.com/news-releases/news-release-details/cibus-appoints-co-founder-rory-riggs-chief-executive-officer",
+      "https://www.sec.gov/Archives/edgar/data/1705843/000162828024016939/cbus-20240419.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CITYVIEW"
+    ],
+    "name": "CITYVIEW MANAGEMENT SERVICES, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / registered investment adviser",
+    "parent": "",
+    "evidence": "SEC Form ADV identifies Cityview Management Services, LLC as the adviser's legal and primary business name and lists Sean O. Burton as chief executive officer and board member; Cityview's official site identifies Burton as co-founder and CEO.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/158370/PDF/158370.pdf",
+      "https://www.cityview.com/who-we-are"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EVEREST CLINICAL RESEARCH"
+    ],
+    "name": "EVEREST CLINICAL RESEARCH CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / clinical research organization",
+    "parent": "",
+    "evidence": "Everest's leadership materials identify Dana Leff Niedzielska as Senior Vice President, Global Clinical Operations, and the LEI record identifies Everest Clinical Research Corporation as the legal entity. Arlington Capital Partners is described as an investor/portfolio sponsor, not asserted here as a legal parent.",
+    "sources": [
+      "https://everestclinical.com/leadership/",
+      "https://lei.bloomberg.com/leis/view/549300EVMUDTR6IK3H93"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FIREFLY3"
+    ],
+    "name": "FIREFLY3 LLC",
+    "status": "Source-backed",
+    "scope": "Investment and consultancy firm",
+    "parent": "",
+    "evidence": "New America and ONE identify Tom Freston as principal of Firefly3, an investment and consultancy firm; New America gives the entity form as Firefly3 LLC.",
+    "sources": [
+      "https://www.newamerica.org/people/tom-freston",
+      "https://www.one.org/person/tom-freston"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FOREST MANAGEMENT COMPANY LLC"
+    ],
+    "name": "FOREST MANAGEMENT COMPANY, LLC",
+    "status": "Source-backed",
+    "scope": "Business entity / investment-management company",
+    "parent": "",
+    "evidence": "The Aspen Institute identifies Russell Goldsmith as chairman of Forest Management Company, LLC, matching the reported employer and chairman context.",
+    "sources": [
+      "https://www.aspeninstitute.org/people/russell-goldsmith"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GJELAJ LAW"
+    ],
+    "name": "GJELAJ LAW PLLC",
+    "status": "Source-backed",
+    "scope": "Professional legal practice",
+    "parent": "",
+    "evidence": "The firm's official site identifies the practice as Gjelaj Law PLLC and lists Nick Gjelaj as an attorney at the firm. The reported GJELAJ LAW form is treated as the firm's shortened name.",
+    "sources": [
+      "https://gjelajlaw.com/",
+      "https://gjelajlaw.com/attorneys/nick-gjelaj-esq"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JSI"
+    ],
+    "name": "JSI",
+    "status": "Source-backed",
+    "scope": "Business group / brand covering related entities",
+    "parent": "",
+    "evidence": "JSI materials and the leadership announcement identify Margaret Crotty as CEO across the JSI family, including John Snow, Inc., JSI Research & Training Institute, Inc. and World Education, Inc. The bare employer JSI is kept at group/brand scope because those are legally distinct entities.",
+    "sources": [
+      "https://www.prnewswire.com/news-releases/margaret-crotty-to-lead-jsi-and-world-education-family-of-global-agencies-301343498.html",
+      "https://jsi.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LIGHTYEAR CAPITAL LLC"
+    ],
+    "name": "LIGHTYEAR CAPITAL LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / registered investment adviser",
+    "parent": "Lightyear Capital Management LP",
+    "evidence": "SEC Form ADV identifies Lightyear Capital LLC as a Delaware LLC and registered investment adviser and states it is wholly owned by Lightyear Capital Management LP. Lightyear and Columbia biographies identify Stewart Gross as a senior investment professional at the firm.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/156781/PDF/156781.pdf",
+      "https://www.lycap.com/bio/Stewart-Gross",
+      "https://business.columbia.edu/private-equity-program/people/stewart-kp-gross-87"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MAPLETON INVESTMENTS"
+    ],
+    "name": "MAPLETON INVESTMENTS, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment company",
+    "parent": "",
+    "evidence": "An SEC-filed agreement identifies Mapleton Investments, LLC and Marc Nathanson as parties, while FEC records separately report Nathanson's employer as Mapleton Investments and occupation as chairman. Similar Mapleton names are not merged.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1091667/000095012303004266/y85418exv10w13wb.htm",
+      "https://www.fec.gov/data/receipts?committee_id=C00167130&max_date=09%2F22%2F2020&min_date=09%2F22%2F2020&two_year_transaction_period=2020"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GREEN THUMB INDUSTRIES"
+    ],
+    "name": "GREEN THUMB INDUSTRIES INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public cannabis company",
+    "parent": "",
+    "evidence": "SEC filings identify Green Thumb Industries Inc. as the registrant and Anthony Georgiadis as President. Subsidiaries listed by the issuer remain separate entities.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1795139/000119312524082642/d815805ds3asr.htm",
+      "https://www.sec.gov/Archives/edgar/data/1795139/000119312522303218/d413016d8k.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE OF COLORADO"
+    ],
+    "name": "STATE OF COLORADO",
+    "status": "Source-backed",
+    "scope": "State government / public employer",
+    "parent": "",
+    "evidence": "Colorado's official governor page identifies Jared Polis as Governor of Colorado. The reported occupation EXECUTIVE is treated as a broad role label and does not imply a separate agency or private employer.",
+    "sources": [
+      "https://governorsoffice.colorado.gov/gov-polis"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STORY"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / cannabis brand",
+    "parent": "",
+    "evidence": "A Story Cannabis announcement identifies Joe Sai as COO of Story Cannabis Company LLC, but the bare reported employer STORY is ambiguous and the reviewed sources do not establish the exact employing legal entity for Joseph Sai. Story Cannabis Company LLC, Story Companies LLC and state-specific licensees are not merged.",
+    "sources": [
+      "https://storycannabis.com/real-estate-getting-easier-to-access-qa-with-story-cannabis-ceo-jason-vedadi"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VERANO"
+    ],
+    "name": "VERANO HOLDINGS CORP.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public cannabis company",
+    "parent": "",
+    "evidence": "Verano's SEC proxy and investor leadership materials identify George Archos as founder, chair and CEO of Verano Holdings Corp. Verano Holdings, LLC remains a separate subsidiary.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1848416/000149315226019596/formdef14a.htm",
+      "https://investors.verano.com/corporate-governance/board-of-directors"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CENTRIC BRANDS"
+    ],
+    "name": "CENTRIC BRANDS LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / apparel and consumer-brand company",
+    "parent": "",
+    "evidence": "Centric's official leadership page identifies Jason Rabin as CEO of Centric Brands LLC. Historical Centric Brands Inc. filings are not treated as proof that the LLC and corporation are the same legal entity.",
+    "sources": [
+      "https://www.centricbrands.com/leadership",
+      "https://www.centricbrands.com/press-releases/ceo-jason-rabin-leads-management-buyout-of-centric-brands-takes-majority-stake"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EMINENCE CAPITAL, LP"
+    ],
+    "name": "EMINENCE CAPITAL, LP",
+    "status": "Source-backed",
+    "scope": "Legal entity / registered investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser materials identify Eminence Capital, LP and the firm's biography identifies Ricky Sandler as founder and CEO/CIO. The earlier Eminence Capital, LLC was merged into the LP and is not treated as a current alias.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1033837",
+      "https://www.eminencecapital.com/about-us/ricky-sandler/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EMPIRE OFFICE INC."
+    ],
+    "name": "EMPIRE OFFICE, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / commercial interiors company",
+    "parent": "",
+    "evidence": "Empire Office's official history identifies Peter Gaslow as President and CEO, and FEC receipts for Jeffries for Congress report his employer as EMPIRE OFFICE INC. The LEI record identifies the legal entity as Empire Office, Inc.",
+    "sources": [
+      "https://www.empireoffice.com/about/history/",
+      "https://www.fec.gov/data/receipts?committee_id=C00503052&max_date=08%2F31%2F2025&min_date=08%2F01%2F2025&two_year_transaction_period=2026",
+      "https://www.gleif.org/lei/549300O924O43LX3HU12"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MACK REAL ESTATE GROUP"
+    ],
+    "name": "MACK REAL ESTATE GROUP",
+    "status": "Source-backed",
+    "scope": "Real-estate business group / brand",
+    "parent": "",
+    "evidence": "The official MREG site describes Mack Real Estate Group as operating through multiple entities, while SEC material identifies Richard Mack as CEO of Mack Real Estate Group, LLC. The bare reported employer is therefore retained at group/brand scope rather than merged into one legal entity.",
+    "sources": [
+      "https://www.mackregroup.com/",
+      "https://www.sec.gov/Archives/edgar/data/1666291/000119312526170450/d898643dars.pdf"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
