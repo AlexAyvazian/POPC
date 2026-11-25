@@ -673,3 +673,22 @@ test('twentieth priority batch keeps PAC receipts separate from connected employ
   assert.equal(groups.find(g=>g.name==='MASTERCARD INTERNATIONAL INC. EMPLOYEE PAC (MASTERCARD PAC) OR (MASTERCARD EMPLOYEE PAC)').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='AMERICAN CHIROPRACTIC ASSOCIATION POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
 });
+
+test('twenty-first priority batch consolidates durable PAC aliases without merging connected organizations', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'OB- GYN PAC',sector:'Healthcare',committee:'a',amount:100},
+    {type:'organization',name:'AMERICAN COLLEGE OF OB-GYNS PAC (OB-GYN PAC)',sector:'Healthcare',committee:'a',amount:200},
+    {type:'organization',name:'THE WALT DISNEY PRODUCTIONS EMPLOYEES PAC',sector:'Entertainment',committee:'a',amount:300},
+    {type:'organization',name:'AMERICAN COUNCIL OF LIFE INSURERS POLITICAL ACTION COMMITTEE',sector:'Insurance',committee:'a',amount:400},
+    {type:'organization',name:'AMERICAN COUNCIL OF LIFE INSURERSPOLITICAL ACTION COMMITTEE',sector:'Insurance',committee:'a',amount:500}
+  ]);
+  const obgyn=groups.find(g=>g.name==='AMERICAN COLLEGE OF OB-GYNS PAC (OB-GYN PAC)');
+  assert.equal(obgyn.organization,300);
+  assert.equal(obgyn.organizationCount,2);
+  assert.equal(obgyn.research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==="TWDC ENTERPRISES 18 CORP. EMPLOYEES PAC AKA 'THE WALT DISNEY COMPANY EMPLOYEES PAC' OR 'DISNEY PAC'").research.status,'Source-backed');
+  const life=groups.find(g=>g.name==='AMERICAN COUNCIL OF LIFE INSURERS POLITICAL ACTION COMMITTEE');
+  assert.equal(life.organization,900);
+  assert.equal(life.organizationCount,2);
+  assert.equal(life.research.status,'Source-backed');
+});
