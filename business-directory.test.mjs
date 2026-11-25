@@ -583,3 +583,22 @@ test('sixteenth executive-priority batch consolidates Raben shorthand and preser
   assert.equal(groups.find(g=>g.name==='ORBIT MOVERS AND ERECTORS').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='MCCREERY INC.').research.status,'Unresolved');
 });
+
+
+test('seventeenth executive-priority batch keeps Noodle legal identities separate and preserves role discrepancies', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Katzman',employer:'NOODLE EDUCATION',occupation:'FOUNDER AND CEO',sector:'Education',committee:'a',amount:100},
+    {type:'individual',name:'Katzman',employer:'NOODLE PARTNERS PBC',occupation:'CEO',sector:'Education',committee:'b',amount:200},
+    {type:'individual',name:'Rich',employer:'TRANSITION EXPRESS INC',occupation:'NONPROFIT CEO',sector:'Nonprofit',committee:'a',amount:300},
+    {type:'individual',name:'Boepple',employer:'PACWTC',occupation:'PRESIDENT',sector:'Arts',committee:'a',amount:400},
+    {type:'individual',name:'Polanco',employer:'STATE FARM',occupation:'INSURANCE AGENCY OWNER',sector:'Insurance',committee:'a',amount:500},
+    {type:'individual',name:'Radow',employer:'RADCO MANAGEMENT',occupation:'CEO',sector:'Real Estate',committee:'a',amount:600}
+  ]);
+  assert(groups.some(g=>g.name==='NOODLE EDUCATION INC.'));
+  assert(groups.some(g=>g.name==='NOODLE'));
+  assert.notEqual(groups.find(g=>g.name==='NOODLE EDUCATION INC.').key,groups.find(g=>g.name==='NOODLE').key);
+  assert.equal(groups.find(g=>g.name==='TRANSITION EXPRESS INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='WORLD TRADE CENTER PERFORMING ARTS CENTER, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='STATE FARM').research.scope,'Insurance brand / independent-agent relationship; not the donor\'s legal employing entity');
+  assert.equal(groups.find(g=>g.name==='RADCO MANAGEMENT, INC.').research.status,'Source-backed');
+});

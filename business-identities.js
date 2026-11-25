@@ -11647,5 +11647,197 @@ export const businessIdentities = [
       "https://bridgephilanthropicconsulting.com/our-team/"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DRUCK ENTERPRISES INC"
+    ],
+    "name": "DRUCK ENTERPRISES INC.",
+    "status": "Source-backed",
+    "scope": "Executive coaching, consulting and personal-development business",
+    "parent": "",
+    "evidence": "Dr. Ken Druck's official site identifies Druck Enterprises Inc. in its contact information, and public professional materials identify Druck with the company. The exact corporate registration is not separately inferred.",
+    "sources": [
+      "https://www.kendruck.com/media/",
+      "https://www.linkedin.com/in/kendruck"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "R/GA"
+    ],
+    "name": "R/GA",
+    "status": "Source-backed",
+    "scope": "Global creative and innovation agency / operating brand",
+    "parent": "",
+    "evidence": "R/GA's official site identifies the global creative innovation company, while advertising-industry records identify Bob Greenberg as founder and historical chairman/CEO. The reported employer is retained at brand/agency scope rather than forced into a particular corporate subsidiary.",
+    "sources": [
+      "https://www.rga.com/about",
+      "https://advertisinghalloffame.org/inductee/bob-greenberg/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GALINDO GROUP"
+    ],
+    "name": "GALINDO GROUP",
+    "status": "Source-backed",
+    "scope": "Real-estate and business-development group / operating brand",
+    "parent": "",
+    "evidence": "Galindo Group's official site identifies Ramiro Galindo as owner and director and describes the group's real-estate and business-development activities. The donor record's CEO title is not corroborated and is retained only as reported context.",
+    "sources": [
+      "https://www.galindogroup.com/ramiro-galindo"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UW HEALTH"
+    ],
+    "name": "SWEDISHAMERICAN HOSPITAL D/B/A UW HEALTH",
+    "status": "Source-backed",
+    "scope": "Public-body hospital operating under the UW Health name",
+    "parent": "",
+    "evidence": "Illinois health-facility filings identify Patricia A. DeWane as Chief Financial Officer and Treasurer of SwedishAmerican Hospital d/b/a UW Health. The reported UW HEALTH employer is therefore linked to that Rockford hospital identity rather than generalized to the entire UW Health system.",
+    "sources": [
+      "https://hfsrb.illinois.gov/content/dam/soi/en/web/hfsrb/projects/projectdocuments/2024/exemptions/e-012-24-rockford-ambulatory-surgery-center/2024-07-01%20E-012-24%20APPLICATION%20FOR%20EXEMPTION.pdf",
+      "https://forms.irs.gov/app/pod/basicSearch/downloadFile?formId=157341&formType=e8872"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PAJARITO POWDER LLC"
+    ],
+    "name": "PAJARITO POWDER, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / clean-energy catalyst manufacturer",
+    "parent": "",
+    "evidence": "SEC Form D and the company's official site identify Pajarito Powder, LLC as the Albuquerque catalyst manufacturer. The donor-reported CFO title is not independently corroborated in current leadership materials and is retained only as record context.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1557966/000155796613000001/xslFormDX01/primary_doc.xml",
+      "https://pajaritopowder.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRANSITION EXPRESS INC"
+    ],
+    "name": "TRANSITION EXPRESS INC.",
+    "status": "Source-backed",
+    "scope": "501(c)(3) human-services nonprofit",
+    "parent": "",
+    "evidence": "IRS-derived nonprofit records identify Transition Express Inc., EIN 47-2566672, and list Priscilla Rich as President. The donor record's NONPROFIT CEO title differs from the filed title and is not treated as verified.",
+    "sources": [
+      "https://philanthropy.org/990/report/472566672/transition-express-inc",
+      "https://www.charitynavigator.org/ein/472566672"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PACWTC"
+    ],
+    "name": "WORLD TRADE CENTER PERFORMING ARTS CENTER, INC.",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit performing-arts organization / historical PACWTC identity",
+    "parent": "",
+    "evidence": "IRS nonprofit records identify World Trade Center Performing Arts Center Inc. and Maggie Boepple as President/Director, while contemporary architecture sources explicitly use PACWTC for the World Trade Center performing-arts center. The historical organization is kept distinct from later branding.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/455316035",
+      "https://www.archdaily.com/777536/rex-to-design-world-trade-center-performing-arts-building"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARIPOSA LABS"
+    ],
+    "name": "MARIPOSA LABS",
+    "status": "Source-backed",
+    "scope": "Personal-care contract manufacturing business / operating brand",
+    "parent": "",
+    "evidence": "Mariposa Labs' official team page identifies Hollis Brookover as Owner and Director of Research & Development and states that Brookover acquired the company with Milt Gillespie in 2003. The exact corporate suffix is not asserted.",
+    "sources": [
+      "https://mariposalabs.com/awards/our-team/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BHINDER HOSPITALITY"
+    ],
+    "name": "BHINDER HOSPITALITY LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / New York hospitality company",
+    "parent": "",
+    "evidence": "New York State health-operation records identify Bhinder Hospitality LLC as the permitted corporation for the Watertown Ramada Inn and Kulwinderjit Bhinder as the permitted operator. The donor-reported President & CEO title is retained as record context.",
+    "sources": [
+      "https://opengovus.com/new-york-state-food-service/361994"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GUAC-LOCK"
+    ],
+    "name": "GUAC-LOCK, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / consumer-products company",
+    "parent": "",
+    "evidence": "The University of Michigan Ross School identifies Jane C. Och as founder and inventor of Guac-Lock, LLC and states that she founded the consumer-goods company in 2012. The reported founder role is directly supported.",
+    "sources": [
+      "https://michiganross.umich.edu/about/profile/jane-c-och",
+      "https://www.newyorkangels.com/members/jane-och"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOODLE EDUCATION"
+    ],
+    "name": "NOODLE EDUCATION INC.",
+    "status": "Source-backed",
+    "scope": "Historical Delaware education-technology corporation; kept separate from Noodle Partners PBC",
+    "parent": "",
+    "evidence": "University of Pennsylvania materials identify John Katzman as Founder, Chairman and CEO of Noodle Education, Inc., and trademark records identify Noodle Education Inc. as the original Delaware corporate owner of the NOODLE mark. It remains a distinct research identity from separately named Noodle Partners PBC.",
+    "sources": [
+      "https://archives.upenn.edu/media/2017/11/20141031res.pdf",
+      "https://uspto.report/TM/86043919"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PENNSYLVANIA HOUSING FINANCE AGENCY"
+    ],
+    "name": "PENNSYLVANIA HOUSING FINANCE AGENCY",
+    "status": "Source-backed",
+    "scope": "Pennsylvania public housing-finance agency",
+    "parent": "",
+    "evidence": "PHFA's official site identifies Robin L. Wiessmann as Executive Director and CEO of the Pennsylvania Housing Finance Agency. The public agency remains distinct from private lenders, servicers and affiliated programs.",
+    "sources": [
+      "https://www.phfa.org/about/organization/robin-wiessmann.aspx",
+      "https://annualreport.phfa.org/2025-report/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RADCO MANAGEMENT"
+    ],
+    "name": "RADCO MANAGEMENT, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / real-estate management company",
+    "parent": "",
+    "evidence": "Florida corporate filings identify RADCO Management, Inc. as an active foreign corporation and Norman J. Radow as CEO; RADCO's official site identifies Radow as founder and CEO of the broader RADCO business. Related RADCO LLCs and property entities remain separate.",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=forp-f12000000993-b30f42a8-5aeb-462c-b376-170850130a36&directionType=Initial&inquirytype=EntityName&listNameOrder=RADCOM+3915470&searchNameOrder=RADCOMANAGEMENT+F120000009930&searchTerm=RAD-COM%2C+INC.",
+      "https://radco.us/"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

@@ -188,3 +188,10 @@ The next executive-linked priority batch reviewed Nonna's Kitchen Chair through 
 RABEN was added as a verified shorthand alias of the already researched The Raben Group, LLC identity. Superior Test & Balance, East Coast Abstract, Sheppard Mullin, Tylie Jones & Associates, Lamesa Delinting Company, Advanced Scientific Concepts and Bridge Philanthropic Consulting were resolved to source-backed entities. Viejas Casino, Kohl's, Alive Hospice, Learning Exchange, Mostardi Nursery and DSB Group New York are retained at the business or organization scope supported by public evidence.
 
 The STATE FARM record is intentionally not treated as an individual contribution from a State Farm corporate employee: State Farm's own agent page identifies Rey Polanco as an independent contractor operating Reynaldo Polanco Insurance Agency, Inc. The reported employer remains searchable as STATE FARM while the research evidence records the agency/legal-employer boundary.
+
+
+## Executive-priority identity research — batch 17 — November 25, 2026
+
+The remaining single-donor executive-priority names from Druck Enterprises through RADCO Management were reviewed. This batch intentionally preserves historical and legal boundaries rather than merging on a shared founder or brand.
+
+Noodle Education Inc. is source-backed as its own historical Delaware corporation and remains separate from the already researched Noodle Partners PBC / NOODLE identity. World Trade Center Performing Arts Center, Inc. is the source-backed historical PACWTC nonprofit. Guac-Lock, Pajarito Powder, Bhinder Hospitality, Transition Express, Pennsylvania Housing Finance Agency and RADCO Management were resolved to source-backed entities. R/GA, Galindo Group and Mariposa Labs remain source-backed at agency/group/business scope. The UW HEALTH donor record is specifically mapped to SwedishAmerican Hospital d/b/a UW Health because that filing directly identifies Patricia DeWane as CFO and Treasurer.
