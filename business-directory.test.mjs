@@ -92,6 +92,17 @@ test('FedEx parent and operating subsidiary remain separate', () => {
   assert.notEqual(operating.key,parent.key);
 });
 
+test('Illinois government aliases merge without losing records', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Pritzker A',employer:'THE STATE OF ILLINOIS',sector:'Government',committee:'a',amount:100},
+    {type:'individual',name:'Pritzker B',employer:'STATE OF IL',sector:'Government',committee:'b',amount:200}
+  ]);
+  assert.equal(groups.length,1);
+  assert.equal(groups[0].name,'STATE OF ILLINOIS');
+  assert.equal(groups[0].individual,300);
+  assert.equal(groups[0].names.size,2);
+});
+
 test('researched aliases merge while subsidiaries, brands and unresolved names stay separate', () => {
   const employers=[
     'ARISTEIA CAPITAL','ARISTEIA CAPITAL LLC',

@@ -3282,5 +3282,317 @@ export const businessIdentities = [
       "https://www.sifma.org/pac"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NETFLIX"
+    ],
+    "name": "Netflix, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / media and technology company",
+    "parent": "",
+    "evidence": "Netflix's SEC charter identifies Netflix, Inc. as the current corporate name and Kibble, Inc. as its original name. Reed Hastings's donor context matches the company he co-founded and formerly led as CEO.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000216/ex-31amendedandrestatedcer.htm",
+      "https://www.sec.gov/Archives/edgar/data/1065280/000119312526159286/d20613ddef14a.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERSYSTEMS CORPORATION"
+    ],
+    "name": "InterSystems Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / software company",
+    "parent": "",
+    "evidence": "InterSystems' official materials identify InterSystems Corporation and Phillip T. Ragon as founder and CEO; company materials also identify Susan Ragon in senior finance/administration leadership, matching the donor context.",
+    "sources": [
+      "https://www.intersystems.com/contact/phillip-t-terry-ragon/",
+      "https://www.intersystems.com/intersystems-media-fact-sheet.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PEAK6 INDUSTRIES"
+    ],
+    "name": "PEAK6 Investments",
+    "status": "Source-backed",
+    "scope": "Business group / investment brand",
+    "parent": "",
+    "evidence": "PEAK6's official site identifies Matt Hulsizer as co-founder and managing partner of PEAK6 Investments. The reported PEAK6 Industries form is retained as the donor-entered label; the reviewed source does not establish it as a separate legal entity or former name.",
+    "sources": [
+      "https://www.peak6.com/about",
+      "https://www.peak6.com/a-history-of-peak6"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "Q INVESTMENTS"
+    ],
+    "name": "Q Investments",
+    "status": "Source-backed",
+    "scope": "Business group / investment brand",
+    "parent": "",
+    "evidence": "SEC adviser records identify Q Investments as the primary business name of Amalgamated Gadget, L.P.; separate regulatory records also exist for a former Q Investments, L.P. broker-dealer. Geoffrey P. Raynor's control-person context supports the brand match, but no single legal entity is inferred for the donor-facing umbrella name.",
+    "sources": [
+      "https://qinvestments.com/",
+      "https://reports.adviserinfo.sec.gov/reports/ADV/157478/PDF/157478.pdf",
+      "https://files.brokercheck.finra.org/firm/firm_41686.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GREYLOCK"
+    ],
+    "name": "Greylock",
+    "status": "Source-backed",
+    "scope": "Venture-capital brand / business group",
+    "parent": "",
+    "evidence": "Greylock is the donor-facing venture-capital brand. SEC adviser records identify Greylock Management Corporation with primary business name Greylock Partners, while Reid Hoffman is independently documented as a Greylock partner. The brand mapping does not assert one payroll legal entity.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/161537/PDF/161537.pdf",
+      "https://adviserinfo.sec.gov/firm/summary/161537",
+      "https://igp.sipa.columbia.edu/distinguished-fellows/reid-hoffman"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PALO ALTO UNIFIED SCHOOL DISTRICT"
+    ],
+    "name": "Palo Alto Unified School District",
+    "status": "Source-backed",
+    "scope": "Public school district",
+    "parent": "",
+    "evidence": "California Department of Education records identify Palo Alto Unified School District (PAUSD), matching the donor's educator employer entry. It is a public school district, not a corporate subsidiary.",
+    "sources": [
+      "https://www.cde.ca.gov/schooldirectory/details?cdscode=43696410000000",
+      "https://www.pausd.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SESAME WORKSHOP",
+      "CHILDREN'S TELEVISION WORKSHOP"
+    ],
+    "name": "Sesame Workshop",
+    "status": "Source-backed",
+    "scope": "Nonprofit educational-media organization",
+    "parent": "",
+    "evidence": "Sesame Workshop's official history states that the organization was formerly Children's Television Workshop and was renamed Sesame Workshop in 2000. Joan Ganz Cooney is identified by the organization as co-founder and lifetime honorary trustee.",
+    "sources": [
+      "https://sesameworkshop.org/about-us/leadership/joan-ganz-cooney",
+      "https://sesameworkshop.org/who-we-are/our-history",
+      "https://sesameworkshop.org/about-us/legal"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE STATE OF ILLINOIS",
+      "STATE OF IL"
+    ],
+    "name": "State of Illinois",
+    "status": "Source-backed",
+    "scope": "State government",
+    "parent": "",
+    "evidence": "Official Illinois sources identify JB Pritzker as Governor of Illinois. The reported forms THE STATE OF ILLINOIS and STATE OF IL are safe abbreviated/name variants of the same state-government employer and are consolidated without implying a corporate parent.",
+    "sources": [
+      "https://gov.illinois.gov/about/the-governor.html",
+      "https://www.usa.gov/states/illinois",
+      "https://pe.usps.com/text/pub28/pub28apb.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "D.E. SHAW"
+    ],
+    "name": "The D. E. Shaw Group",
+    "status": "Source-backed",
+    "scope": "Investment and technology business group",
+    "parent": "",
+    "evidence": "The D. E. Shaw Group is the donor-facing business group. Its official leadership material identifies Eddie Fishman as a managing director of D. E. Shaw & Co., L.P. and an executive-committee member, matching Edward Fishman's donor context while preserving group-level scope.",
+    "sources": [
+      "https://www.deshaw.com/who-we-are",
+      "https://www.deshawgroup.com/",
+      "https://www.deshaw.com/assets/important-disclosure/MSAStatement.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BAIN CAPITAL"
+    ],
+    "name": "Bain Capital, LP",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment firm",
+    "parent": "",
+    "evidence": "Bain Capital's official materials identify Jonathan S. Lavine as a senior partner-level leader, and the active legal-entity record identifies Bain Capital, LP, formerly Bain Capital, LLC. Bain Capital remains separate from Bain & Company.",
+    "sources": [
+      "https://www.baincapital.com/people/jonathan-s-lavine",
+      "https://www.baincapital.com/about-us",
+      "https://www.gleif.org/lei/F5UBQYY43K0L53B9SF55"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE WONDERFUL COMPANY"
+    ],
+    "name": "The Wonderful Company",
+    "status": "Source-backed",
+    "scope": "Private consumer-products company / business group",
+    "parent": "",
+    "evidence": "The Wonderful Company's official site identifies the privately held company and Lynda Resnick as co-owner. Its individual product brands remain separate brand identities rather than aliases of the company.",
+    "sources": [
+      "https://www.wonderful.com/who-we-are",
+      "https://www.wonderful.com/stewartresnick"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ANDURIL INDUSTRIES"
+    ],
+    "name": "Anduril Industries, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / defense-technology company",
+    "parent": "",
+    "evidence": "State records identify Anduril Industries, Inc. as a Delaware corporation, while Anduril's official biography identifies Matthew Grimm as co-founder and COO, matching the donor context.",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forp-f24000004507-870adebf-19dc-4a00-a248-ee69406b1d7e&directionType=Initial&inquirytype=EntityName&searchNameOrder=ANDURILINDUSTRIES%20F240000045070",
+      "https://www.anduril.com/profile/matt-grimm",
+      "https://www.anduril.com/anduril-leadership"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ANDELL"
+    ],
+    "name": "Andell",
+    "status": "Source-backed",
+    "scope": "Family investment office / business brand",
+    "parent": "",
+    "evidence": "Official and SEC materials link Andrew Hauptman to the Andell investment organization, including Andell Holdings, LLC and a separate Andell Holdings, Inc. record. Because the reviewed evidence does not establish those legal entities as aliases, the donor label is retained at Andell brand/family-office scope.",
+    "sources": [
+      "https://thecharlesbronfmanprize.org/who-we-are",
+      "https://www.sec.gov/Archives/edgar/data/828747/000110465910014835/a10-6417_1sc13da.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CALIGAN PARTNERS LP"
+    ],
+    "name": "Caligan Partners, LP",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "The SEC adviser brochure identifies Caligan Partners, LP as a Delaware limited partnership and David Johnson as a founder. Caligan Partners GP, LLC is its general partner, not treated here as a parent company.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1046672"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COLLIS TEMPLE CONTRACTORS, INC"
+    ],
+    "name": "Collis Temple Contractors, Inc.",
+    "status": "Source-backed",
+    "scope": "Reported legal business name",
+    "parent": "",
+    "evidence": "FEC filings identify Collis B. Temple Jr.'s employer as Collis Temple Contractors, Inc. and his occupation as real-estate developer and builder. The reviewed sources do not establish a parent, alias, or successor relationship.",
+    "sources": [
+      "https://www.fec.gov/data/receipts?committee_id=C00793760&max_date=04%2F30%2F2026&min_date=04%2F01%2F2026&two_year_transaction_period=2026",
+      "https://docquery.fec.gov/cgi-bin/forms/C00887547/1980588"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EVERCORE"
+    ],
+    "name": "Evercore Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment-banking parent",
+    "parent": "",
+    "evidence": "SEC filings identify Evercore Inc. as the public registrant and Evercore Partners Inc. as its former name. Evercore's official biography identifies Roger Altman as founder and senior chairman, matching the donor context.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1360901/000162828026010273/evr-20251231.htm",
+      "https://www.evercore.com/who-we-are/overview",
+      "http://investors.evercore.com/board-member/roger-altman"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FORTRESS INVESTMENT GROUP"
+    ],
+    "name": "Fortress Investment Group LLC",
+    "status": "Source-backed",
+    "scope": "Alternative-investment business group",
+    "parent": "",
+    "evidence": "Fortress and SEC materials identify Fortress Investment Group LLC as the broader organization and FIG LLC as an SEC-registered adviser doing business as Fortress Investment Group. Constantine 'Dean' Dakolias is documented as a managing partner, matching the donor context. No conventional corporate parent is assigned.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1036170",
+      "https://www.fortress.com/who-we-are/team/dean-dakolias",
+      "https://www.fortress.com/media/2024-05-15-fortress-management-and-mubadala-complete-acquisition-of-fortress-investment-group"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GOLUB CAPITAL"
+    ],
+    "name": "Golub Capital LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / private-credit business group",
+    "parent": "",
+    "evidence": "SEC filings define Golub Capital across Golub Capital LLC and affiliated advisers/funds; Golub Capital LLC was formerly Golub Capital Management LLC. David Golub is documented as a senior executive, matching the donor context.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1930087/000193008726000131/gcred-20260930.htm",
+      "https://golubcapital.com/team-member/david-golub"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WILLETT ADVISORS"
+    ],
+    "name": "Willett Advisors LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment organization",
+    "parent": "",
+    "evidence": "Willett's official site and legal-entity record identify Willett Advisors LLC. Institutional biographies identify Steven Rattner as chairman and CEO, matching the donor context. No corporate parent is established.",
+    "sources": [
+      "https://www.willettadvisors.com/",
+      "https://www.gleif.org/lei/549300NLS2UP1LQ0XH67",
+      "https://www.economicstrategygroup.org/publication/aspen-economic-strategy-group-welcomes-five-new-members"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE PRITZKER ORGANIZATION"
+    ],
+    "name": "The Pritzker Organization, L.L.C.",
+    "status": "Source-backed",
+    "scope": "Legal entity / family investment organization",
+    "parent": "",
+    "evidence": "The Pritzker Organization's official materials identify The Pritzker Organization, L.L.C. (TPO) and Joseph Gleberman as a senior executive. 1902 Capital, LLC is described as TPO's primary investment vehicle, not its parent.",
+    "sources": [
+      "https://pritzkerorg.com/aboutus/who-we-are-section/",
+      "https://pritzkerorg.com/team",
+      "https://sec.gov/Archives/edgar/data/0001468174/000149315226000215/xslSCHEDULE_13D_X01/primary_doc.xml"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
