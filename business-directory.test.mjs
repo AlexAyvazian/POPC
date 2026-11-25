@@ -741,3 +741,22 @@ test('twenty-fourth priority batch resolves donor-file PAC names through durable
   assert.equal(groups.find(g=>g.name==='NATIONAL READY MIXED CONCRETE ASSN. PAC (CONCRETEPAC)').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL THOROUGHBRED RACING ASSOCIATION POLITICAL ACTION COMMITTEE/HORSE PAC').research.status,'Source-backed');
 });
+
+test('twenty-fifth priority batch resolves PAC name variants and multi-donor employers', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'OFFICE AND PROFESSIONAL EMPLOYEES INTERNATIONAL UNION (OPEIU VOTES)',sector:'Labor',committee:'a',amount:100},
+    {type:'organization',name:"PLASTERERS' AND CEMENT MASONS' ACTION COMMITTEE",sector:'Labor',committee:'a',amount:200},
+    {type:'organization',name:'PLANNED PARENTHOOD ACTION FUND INC. PAC, DBA PLANNED PARENTHOOD FEDERAL PAC',sector:'Advocacy',committee:'a',amount:300},
+    {type:'organization',name:'REAL ESTATE ROUNDTABLE POLITICAL ACTION COMMITTEE (REALPAC)',sector:'Real Estate',committee:'a',amount:400},
+    {type:'organization',name:'SEAFARERS POLITICAL ACTIVITY DONATION - SEAFARERS INTERNATIONAL UNION OF NA-AGLIWD/NMU',sector:'Labor',committee:'a',amount:500},
+    {type:'organization',name:'SEIU COPE',sector:'Labor',committee:'a',amount:600},
+    {type:'individual',name:'PORTER, DAVID M.',employer:'PNL COMPANIES',occupation:'FOUNDING PARTNER',sector:'Real Estate',committee:'a',amount:700}
+  ]);
+  assert.equal(groups.find(g=>g.name==='OFFICE AND PROFESSIONAL EMPLOYEES INTERNATIONAL UNION (OPEIU) JB MOSS VOICE OF THE ELECTORATE (VOTE)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==="OPERATIVE PLASTERERS' AND CEMENT MASONS' INTL ASSOCIATION ACTION COMMITTEE").research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='PLANNED PARENTHOOD ACTION FUND INC PAC, DBA PLANNED PARENTHOOD FEDERAL PAC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='THE REAL ESTATE ROUNDTABLE POLITICAL ACTION COMMITTEE (REALPAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='SEAFARERS POLITICAL ACTIVITY DONATION - SEAFARERS INTERNATIONAL UNION OF NA-AGLIW').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='SEIU COPE (SERVICE EMPLOYEES INTERNATIONAL UNION COMMITTEE ON POLITICAL EDUCATION)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='PNL COMPANIES').research.status,'Source-backed');
+});
