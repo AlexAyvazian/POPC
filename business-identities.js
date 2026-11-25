@@ -1981,5 +1981,361 @@ export const businessIdentities = [
       "https://investor.honeywell.com/node/7876/html"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ACTBLUE"
+    ],
+    "name": "ActBlue",
+    "status": "Source-backed",
+    "scope": "Federal political committee / contribution conduit",
+    "parent": "",
+    "evidence": "FEC committee C00401224 identifies ACTBLUE as an active federal hybrid PAC that also operates as a contribution conduit. ActBlue Civics, AB Charities, and ActBlue Technical Services are separate entities and are not aliases.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00401224/?tab=about",
+      "https://help.actblue.com/hc/en-us/articles/19343028274583-what-is-the-difference-between-actblue-actblue-civics-ab-charities-and-actblue-technical-services"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE"
+    ],
+    "name": "American Israel Public Affairs Committee",
+    "status": "Source-backed",
+    "scope": "Membership / advocacy organization",
+    "parent": "",
+    "evidence": "The organization uses American Israel Public Affairs Committee and AIPAC. Its federal political action committee is a separate FEC committee (C00797670), so PAC receipts remain transaction-level PAC records rather than being treated as the association itself.",
+    "sources": [
+      "https://www.aipac.org/about",
+      "https://www.fec.gov/data/committee/C00797670/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TED LIEU FOR CONGRESS"
+    ],
+    "name": "Ted Lieu for Congress",
+    "status": "Source-backed",
+    "scope": "Principal campaign committee",
+    "parent": "",
+    "evidence": "FEC committee C00556506 identifies Ted Lieu for Congress as Representative Ted Lieu's House principal campaign committee. Ted Lieu Victory Fund is a separate organization, not an alias or parent.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00556506"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JSTREETPAC"
+    ],
+    "name": "JStreetPAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00441949 identifies JSTREETPAC as a qualified membership-organization PAC and lists J Street as a separate connected organization. The PAC is retained as its own political-committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00441949/?cycle=2026&tab=about-committee",
+      "https://jstreet.org/wp-content/uploads/2021/01/JStreet-LeadershipManual2021.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EVERYTOWN FOR GUN SAFETY ACTION FUND, INC."
+    ],
+    "name": "Everytown for Gun Safety Action Fund, Inc.",
+    "status": "Source-backed",
+    "scope": "501(c)(4) advocacy organization / connected organization",
+    "parent": "",
+    "evidence": "Everytown identifies Everytown for Gun Safety Action Fund, Inc. as an advocacy organization. Its federal Everytown PAC (FEC C00640086) is a separate political committee and is not treated as an alias of the corporation.",
+    "sources": [
+      "https://www.everytown.org/charitable-solicitation-disclosures",
+      "https://www.fec.gov/data/committee/C00640086"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DIRECT SUPPLY, INC. PARTNERS"
+    ],
+    "name": "Direct Supply, Inc. Partners PAC (DSI Partners PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00409516 identifies Direct Supply, Inc. Partners PAC (DSI Partners PAC) as a qualified corporate PAC. Direct Supply, Inc. is its separate connected organization rather than an alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00409516/?tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN HEALTH CARE ASSOCIATION"
+    ],
+    "name": "American Health Care Association",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "FEC records identify American Health Care Association as the connected trade association of the separate American Health Care Association Political Action Committee (C00006080). The association and PAC remain distinct.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00006080/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AT&T INC. EMPLOYEE FEDERAL"
+    ],
+    "name": "AT&T Inc. Employee Federal Political Action Committee (AT&T Employee Federal PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00109017 identifies this as a qualified corporate PAC and records AT&T Inc. as the separate connected corporation. Historical AT&T Federal PAC wording is retained as committee history rather than a corporate alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00109017?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NJASAP"
+    ],
+    "name": "NetJets Association of Shared Aircraft Pilots",
+    "status": "Source-backed",
+    "scope": "Labor organization",
+    "parent": "",
+    "evidence": "NJASAP is the NetJets Association of Shared Aircraft Pilots, an independent pilot labor organization. Its NJASAP PAC (FEC C00488262) is a separate qualified labor-organization PAC.",
+    "sources": [
+      "https://www.njasap.com/",
+      "https://www.fec.gov/data/committee/C00488262"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CHEROKEE NATION"
+    ],
+    "name": "Cherokee Nation",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal nation / government",
+    "parent": "",
+    "evidence": "Cherokee Nation's official site identifies it as a sovereign tribal government headquartered in Tahlequah, Oklahoma. It is retained as a tribal-government identity, not a corporation or PAC.",
+    "sources": [
+      "https://www.cherokee.gov/about-the-nation"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AFLAC"
+    ],
+    "name": "Aflac",
+    "status": "Source-backed",
+    "scope": "Corporate brand / FEC connected-organization label",
+    "parent": "",
+    "evidence": "FEC records use AFLAC as the connected-organization label for Aflac PAC. SEC materials distinguish top-level Aflac Incorporated from its principal insurance subsidiary American Family Life Assurance Company of Columbus, so a bare AFLAC identity is kept at brand scope rather than assigned to one legal entity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00034157",
+      "https://www.sec.gov/Archives/edgar/data/4977/000095014408001495/g11443e10vk.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICA'S ELECTRIC COOPERATIVES"
+    ],
+    "name": "America's Electric Cooperatives",
+    "status": "Source-backed",
+    "scope": "Association brand",
+    "parent": "",
+    "evidence": "America's Electric Cooperatives is the public-facing identity of the National Rural Electric Cooperative Association (NRECA). The federal PAC is a separate committee connected to NRECA and is not an alias of the association.",
+    "sources": [
+      "https://www.cooperative.com/nreca/governance-reporting/Documents/NRECA_Bylaws_and_Articles_of_Incorporation_-_March_11_2025.pdf",
+      "https://docquery.fec.gov/cgi-bin/forms/C00002972/1766263"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ASSOCIATION OF NURSE ANESTHETISTS"
+    ],
+    "name": "American Association of Nurse Anesthesiology",
+    "status": "Source-backed",
+    "scope": "Professional association; former name",
+    "parent": "",
+    "evidence": "AANA documents American Association of Nurse Anesthetists as its legacy name and American Association of Nurse Anesthesiology as its current public-facing name. The separately registered CRNA-PAC retains the legacy wording in FEC records.",
+    "sources": [
+      "https://www.aana.com/nurse-anesthesiology-and-the-association-name-change/",
+      "https://www.aana.com/about-us/history",
+      "https://www.fec.gov/data/committee/C00173153"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN BANKERS ASSOCIATION PAC (BANKPAC)"
+    ],
+    "name": "American Bankers Association",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "American Bankers Association (ABA) is the connected trade association of the separate American Bankers Association PAC (BANKPAC), FEC C00004275. The directory identity is the association while raw PAC records remain preserved in transaction details.",
+    "sources": [
+      "https://www.aba.com/about-us/our-story",
+      "https://www.fec.gov/data/committee/C00004275"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN DENTAL ASSOCIATION"
+    ],
+    "name": "American Dental Association",
+    "status": "Source-backed",
+    "scope": "Professional membership association",
+    "parent": "",
+    "evidence": "The American Dental Association is the connected membership organization of the separate American Dental Association Political Action Committee (FEC C00000729). The PAC is not treated as an alias of the association.",
+    "sources": [
+      "https://www.ada.org/resources/ada-library/dental-history/founding-of-the-american-dental-association",
+      "https://www.fec.gov/data/committee/C00000729"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN FEDERATION OF STATE COUNTY & MUNICIPAL EMPLOYEES P E O P L E"
+    ],
+    "name": "American Federation of State County & Municipal Employees P E O P L E",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00011114 identifies AFSCME P E O P L E as a qualified labor-organization political committee. AFSCME, AFL-CIO is its separate connected labor organization and is not collapsed into the PAC entry.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00011114",
+      "https://afscme.org/about/faq/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN HOSPITAL ASSOCIATION"
+    ],
+    "name": "American Hospital Association",
+    "status": "Source-backed",
+    "scope": "Healthcare trade / membership association",
+    "parent": "",
+    "evidence": "AHA identifies the American Hospital Association as the national organization representing hospitals and health systems. Its federal PAC (C00106146) is a separate committee connected to the association.",
+    "sources": [
+      "https://www.aha.org/about",
+      "https://www.fec.gov/data/committee/C00106146"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN INSTITUTE OF CERTIFIED PUBLIC ACCOUNTANTS"
+    ],
+    "name": "American Institute of Certified Public Accountants",
+    "status": "Source-backed",
+    "scope": "Professional membership organization",
+    "parent": "",
+    "evidence": "AICPA is the connected membership organization of the separate AICPA Political Action Committee (FEC C00077321). The broader AICPA & CIMA branding does not replace the exact organization identity here.",
+    "sources": [
+      "https://www.aicpa-cima.com/",
+      "https://www.fec.gov/data/committee/C00077321"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BUILD POLITICAL ACTION COMMITTEE OF THE NATIONAL ASSOCIATION OF HOME BUILDERS (BUILDPAC)"
+    ],
+    "name": "Build Political Action Committee of the National Association of Home Builders (BUILDPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00000901 identifies BUILDPAC as the separate segregated fund of the National Association of Home Builders. The PAC remains its own political-committee identity rather than being renamed to the connected association.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00000901",
+      "https://www.nahb.org/Why-NAHB/About-NAHB"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CSX CORPORATION GOOD GOVERNMENT FUND"
+    ],
+    "name": "CSX Corporation Good Government Fund",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00163832 identifies CSX Corporation Good Government Fund as a qualified corporate PAC connected to CSX Corporation. CSX Corporation and CSX Transportation, Inc. remain separate corporate entities.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00163832",
+      "https://www.sec.gov/Archives/edgar/data/277948/000027794826000006/csx-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DELOITTE"
+    ],
+    "name": "Deloitte",
+    "status": "Source-backed",
+    "scope": "Professional-services network / brand",
+    "parent": "",
+    "evidence": "Deloitte's official legal description explains that Deloitte USA LLP, Deloitte LLP, and Deloitte LLP subsidiaries are separate legal entities. A bare Deloitte identity is therefore retained at network/brand scope rather than assigned to a single U.S. legal entity.",
+    "sources": [
+      "https://www.deloitte.com/us/en/about",
+      "https://www.fec.gov/data/committee/C00211318"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DELTA AIR LINES"
+    ],
+    "name": "Delta Air Lines, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / airline",
+    "parent": "",
+    "evidence": "Delta's SEC filing identifies Delta Air Lines, Inc. as the exact registrant. DeltaPAC is a separate FEC-registered political committee funded by voluntary employee contributions.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/27904/000002790426000013/dal-20251231.htm",
+      "https://www.fec.gov/data/committee/C00104802"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS"
+    ],
+    "name": "International Brotherhood of Electrical Workers",
+    "status": "Source-backed",
+    "scope": "Labor union",
+    "parent": "",
+    "evidence": "IBEW is the International Brotherhood of Electrical Workers. Its federal political action committee (FEC C00027342) is a separate segregated fund connected to the union.",
+    "sources": [
+      "https://www.ibew.org/",
+      "https://www.fec.gov/data/committee/C00027342"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JPMORGAN CHASE & CO."
+    ],
+    "name": "JPMorgan Chase & Co.",
+    "status": "Source-backed",
+    "scope": "Legal entity / financial holding company",
+    "parent": "",
+    "evidence": "SEC filings identify JPMorgan Chase & Co. as the top-level Delaware bank and financial holding company. JPMorgan Chase Bank, N.A. is a separate principal bank subsidiary, and the company's federal PACs remain separate political committees.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+      "https://www.fec.gov/data/committee/C00104299"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
