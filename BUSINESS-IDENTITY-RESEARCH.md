@@ -279,3 +279,15 @@ TargetCitizens Political Forum is a donor-file shorthand for C00098061, currentl
 Universal Music Group Political Action Committee is the historical 2018 name of C00392464, now registered as Universal Music Group Employee Action Fund. US Travel Association PAC is the punctuation-normalized donor form of C00457754, currently U.S. Travel Association PAC. VEN-PAC is the shorthand for C00369660, Venable PAC (VEN-PAC), and Walgreen Co PAC is the shortened donor form of C00160770, Walgreen Co PAC (WalgreensPAC).
 
 The UA Union Plumbers & Pipefitters row maps to C00012476 because that committee's registered name exactly matches the donor string. It is deliberately kept separate from C00331918, a different committee whose registered name adds a trailing PAC. Three Rivers Holdings Inc Dobbs Unison Health Plans Federal PAC is preserved as its own terminated federal committee, C00418491, rather than being attached to a present-day company identity. Raw transaction names remain unchanged.
+
+## Mixed priority identity research — batch 27 — November 25, 2026
+
+The next twenty priority groups were reviewed as eleven PACs, five sovereign tribal governments, three multi-donor reported employers, and one direct law-firm organization receipt. Nineteen new identity definitions were added and the existing source-backed SIFMA committee identity was expanded with the exact donor-file alias SIFMA-PAC.
+
+Cummins Inc PAC resolves to durable FEC committee C00377952, currently registered as Cummins Inc. Political Action Committee (CIPAC). The donor-file Motion Picture Association of America Inc Political Action Committee resolves through C00139519 to the current Motion Picture Association Inc Political Action Committee (MPAAMERICA PAC). SIFMA-PAC is a shorthand recipient-file name for C00431312, whose full registered name is Securities Industry and Financial Markets Association Political Action Committee.
+
+The Match-E-Be-Nash-She-Wish Band of Pottawatomi Indians, Puyallup Tribe of Indians, Seminole Tribe of Florida, Shingle Springs Band of Miwok Indians and Snoqualmie Indian Tribe are retained as sovereign tribal-government identities, not PACs or companies. Snoqualmie Tribe is preserved as the donor-file shorthand alias for the official Snoqualmie Indian Tribe name.
+
+The Century Foundation and Mayo Clinic are restricted to individual employer records. Forbes Tate Partners is likewise restricted to individual records and mapped to its current FTP brand; the firm's official materials document the April 2026 name change, and Public Policy Holding Company filings identify Forbes Tate Partners LLC as a wholly owned subsidiary. Pond Lehocky Giordano Disability LLC remains a direct organization identity based on the firm's own legal-entity disclosures.
+
+Raw transaction names and the 221,839 underlying donor records remain unchanged; these mappings operate only in the identity layer.

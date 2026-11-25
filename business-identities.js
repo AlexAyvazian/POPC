@@ -3275,15 +3275,17 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION POLITICAL ACTION COMMITTEE"
+      "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION POLITICAL ACTION COMMITTEE",
+      "SIFMA-PAC"
     ],
     "name": "Securities Industry and Financial Markets Association Political Action Committee",
     "status": "Source-backed",
     "scope": "Federal trade-association political committee",
     "parent": "",
-    "evidence": "FEC committee C00431312 identifies the SIFMA political action committee. SIFMA's official PAC page uses SIFMA PAC; the trade association remains separate.",
+    "evidence": "FEC committee C00431312 identifies the Securities Industry and Financial Markets Association political action committee. FEC recipient filings use SIFMA-PAC as a shorthand for the same committee ID; the trade association remains separate.",
     "sources": [
-      "https://www.fec.gov/data/committee/C00431312/",
+      "https://www.fec.gov/data/committee/C00431312/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/798/14941800798/14941800798.pdf",
       "https://www.sifma.org/pac"
     ],
     "reviewed": "2026-11-25"
@@ -14791,6 +14793,339 @@ export const businessIdentities = [
     "evidence": "FEC committee C00089086 identifies The American Occupational Therapy Association, Inc. Political Action Committee (AOTPAC) and The American Occupational Therapy Association, Inc. as its connected organization.",
     "sources": [
       "https://www.fec.gov/data/committee/C00089086/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CUMMINS INC PAC",
+      "CUMMINS INC. POLITICAL ACTION COMMITTEE (CIPAC)"
+    ],
+    "name": "CUMMINS INC. POLITICAL ACTION COMMITTEE (CIPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; donor-file shorthand",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00377952 identifies Cummins Inc. Political Action Committee (CIPAC) and Cummins Inc. as its separate connected organization. FEC recipient filings use the shortened donor form Cummins Inc PAC under the same committee ID.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00377952/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/859/202001319184847859/202001319184847859.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MOTION PICTURE ASSOCIATION OF AMERICA INC POLITICAL ACTION COMMITTEE",
+      "MOTION PICTURE ASSOCIATION INC POLITICAL ACTION COMMITTEE (MPAAMERICA PAC)"
+    ],
+    "name": "MOTION PICTURE ASSOCIATION INC POLITICAL ACTION COMMITTEE (MPAAMERICA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; historical committee name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00139519 is the durable committee identity. Historical FEC records used Motion Picture Association of America, Inc. Political Action Committee; the current registration is Motion Picture Association Inc Political Action Committee (MPAAMERICA PAC).",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00139519/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/322/96030400322/96030400322.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNITED AIRLINES, INC. POLITICAL ACTION COMMITTEE (UAPAC)"
+    ],
+    "name": "UNITED AIRLINES, INC. POLITICAL ACTION COMMITTEE (UAPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00101766 identifies United Airlines, Inc. Political Action Committee (UAPAC) as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00101766/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GE VERNOVA INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "GE VERNOVA INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00861161 identifies GE Vernova Inc. Political Action Committee as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00861161/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF RESIDENTIAL PROPERTY MANGERS, INC. POLITICAL ACTION COMMITTEE (NARPM PAC)"
+    ],
+    "name": "NATIONAL ASSOCIATION OF RESIDENTIAL PROPERTY MANGERS, INC. POLITICAL ACTION COMMITTEE (NARPM PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00567792 identifies the National Association of Residential Property Managers, Inc. Political Action Committee (NARPM PAC). The PAC is retained as its own organization identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00567792/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE CENTURY FOUNDATION"
+    ],
+    "name": "THE CENTURY FOUNDATION",
+    "status": "Source-backed",
+    "scope": "Independent public-policy think tank / reported employer",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The Century Foundation's official site identifies TCF as an independent public-policy think tank. This identity is restricted to individual employer records, including the reported president and fellow donations in the donor data.",
+    "sources": [
+      "https://tcf.org/about/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COURIER PLUS, INC. D/B/A DUTCHIE POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "COURIER PLUS, INC. D/B/A DUTCHIE POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00849398 identifies Courier Plus, Inc. d/b/a Dutchie Political Action Committee as an active corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00849398/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MATCH-E-BE-NASH-SHE-WISH BAND OF POTTAWATOMI INDIANS"
+    ],
+    "name": "MATCH-E-BE-NASH-SHE-WISH BAND OF POTTAWATOMI INDIANS",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The Gun Lake Tribe's official government materials identify the Match-E-Be-Nash-She-Wish Band of Pottawatomi and its tribal government and sovereignty. The donor receipt remains the sovereign tribal-government identity.",
+    "sources": [
+      "https://gunlaketribe-nsn.gov/",
+      "https://gunlaketribe-nsn.gov/tribal-justice/tribal-court/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "POND LEHOCKY GIORDANO DISABILITY LLC"
+    ],
+    "name": "POND LEHOCKY GIORDANO DISABILITY LLC",
+    "status": "Source-backed",
+    "scope": "Disability-law legal entity / direct organization donor",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "Pond Lehocky's official terms identify Pond Lehocky Giordano Disability LLC as one of the legal entities operating the firm's site. The direct organization receipt is retained under that exact LLC rather than collapsed into another Pond Lehocky affiliate.",
+    "sources": [
+      "https://www.pondlehocky.com/terms-of-use/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PUYALLUP TRIBE OF INDIANS"
+    ],
+    "name": "PUYALLUP TRIBE OF INDIANS",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The Puyallup Tribe's official government website identifies the Puyallup Tribe of Indians and its tribal community. The donor receipt remains the sovereign tribal-government identity.",
+    "sources": [
+      "https://www.puyalluptribe-nsn.gov/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SEMINOLE TRIBE OF FLORIDA"
+    ],
+    "name": "SEMINOLE TRIBE OF FLORIDA",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The Seminole Tribe of Florida's official website explicitly identifies it as a federally recognized Indian Tribe. The donor receipt remains the sovereign tribal-government identity.",
+    "sources": [
+      "https://www.semtribe.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SHINGLE SPRINGS BAND OF MIWOK INDIANS"
+    ],
+    "name": "SHINGLE SPRINGS BAND OF MIWOK INDIANS",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The Shingle Springs Band of Miwok Indians' official Tribal government website identifies it as a federally recognized Tribal nation. The donor receipt remains the sovereign tribal-government identity.",
+    "sources": [
+      "https://shinglespringsrancheria.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SNOQUALMIE TRIBE",
+      "SNOQUALMIE INDIAN TRIBE"
+    ],
+    "name": "SNOQUALMIE INDIAN TRIBE",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe; donor-file shortened name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The Tribe's official website uses Snoqualmie Indian Tribe. The donor-file shortened form Snoqualmie Tribe is retained as an alias of the same sovereign tribal government.",
+    "sources": [
+      "https://snoqualmietribe.us/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MAYO CLINIC"
+    ],
+    "name": "MAYO CLINIC",
+    "status": "Source-backed",
+    "scope": "Not-for-profit medical group practice / reported employer",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "Mayo Clinic's official materials identify Mayo Clinic as an integrated not-for-profit medical group practice. This identity is restricted to individual employer records in the donor data.",
+    "sources": [
+      "https://jobs.mayoclinic.org/about-us"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FORBES TATE PARTNERS",
+      "FORBES TATE PARTNERS LLC",
+      "FTP"
+    ],
+    "name": "FTP",
+    "status": "Source-backed",
+    "scope": "Government-relations and public-affairs firm / reported employer; current brand name",
+    "parent": "Public Policy Holding Company, Inc.",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The firm's official site states that Forbes Tate Partners formally changed its name to FTP in April 2026 and that it became part of Public Policy Holding Company. PPHC filings identify Forbes Tate Partners LLC as a wholly owned subsidiary. The donor-file employer name is preserved as an alias.",
+    "sources": [
+      "https://ftpadvocacy.com/who-we-are/",
+      "https://ftpadvocacy.com/forbes-tate-partners-announces-new-name-and-management-structure/",
+      "https://www.sec.gov/Archives/edgar/data/1903508/000162828025041613/filename13.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CTIA - THE WIRELESS ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "CTIA - THE WIRELESS ASSOCIATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00262295 identifies CTIA - The Wireless Association Political Action Committee and CTIA - The Wireless Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00262295/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN CONCRETE PIPE ASSOCIATION PAC"
+    ],
+    "name": "AMERICAN CONCRETE PIPE ASSOCIATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00425686 identifies American Concrete Pipe Association PAC and American Concrete Pipe Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00425686/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BEER INSTITUTE PAC (BEER PAC)"
+    ],
+    "name": "BEER INSTITUTE PAC (BEER PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00582999 identifies Beer Institute PAC (Beer PAC) and Beer Institute as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00582999/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ORGANIZATION FOR WOMEN, INC. PAC"
+    ],
+    "name": "NATIONAL ORGANIZATION FOR WOMEN, INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00092247 identifies National Organization for Women, Inc. PAC as an active qualified federal PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00092247/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   }

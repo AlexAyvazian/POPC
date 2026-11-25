@@ -777,3 +777,26 @@ test('twenty-sixth priority batch resolves PAC historical and shorthand names th
   assert.equal(groups.find(g=>g.name==='VENABLE PAC (VEN-PAC)').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='WALGREEN CO PAC (WALGREENSPAC)').research.status,'Source-backed');
 });
+
+test('twenty-seventh priority batch separates PACs, tribes, employers, and direct organizations', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'CUMMINS INC PAC',sector:'Manufacturing',committee:'a',amount:100},
+    {type:'organization',name:'MOTION PICTURE ASSOCIATION OF AMERICA INC POLITICAL ACTION COMMITTEE',sector:'Entertainment',committee:'a',amount:200},
+    {type:'organization',name:'SIFMA-PAC',sector:'Finance',committee:'a',amount:300},
+    {type:'organization',name:'GE VERNOVA INC. POLITICAL ACTION COMMITTEE',sector:'Energy',committee:'a',amount:400},
+    {type:'organization',name:'MATCH-E-BE-NASH-SHE-WISH BAND OF POTTAWATOMI INDIANS',sector:'Tribal Government',committee:'a',amount:500},
+    {type:'organization',name:'POND LEHOCKY GIORDANO DISABILITY LLC',sector:'Legal',committee:'a',amount:600},
+    {type:'individual',name:'ZUCKERMAN, MARK',employer:'THE CENTURY FOUNDATION',occupation:'PRESIDENT',sector:'Nonprofit',committee:'a',amount:700},
+    {type:'individual',name:'KAUR, RAVINDER JEET',employer:'MAYO CLINIC',occupation:'FACULTY',sector:'Healthcare',committee:'a',amount:800},
+    {type:'individual',name:'TATE JR., DANIEL',employer:'FORBES TATE PARTNERS',occupation:'CONSULTANT',sector:'Professional Services',committee:'a',amount:900}
+  ]);
+  assert.equal(groups.find(g=>g.name==='CUMMINS INC. POLITICAL ACTION COMMITTEE (CIPAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MOTION PICTURE ASSOCIATION INC POLITICAL ACTION COMMITTEE (MPAAMERICA PAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='GE VERNOVA INC. POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MATCH-E-BE-NASH-SHE-WISH BAND OF POTTAWATOMI INDIANS').research.scope,'Sovereign tribal government / federally recognized tribe');
+  assert.equal(groups.find(g=>g.name==='POND LEHOCKY GIORDANO DISABILITY LLC').organization,600);
+  assert.equal(groups.find(g=>g.name==='THE CENTURY FOUNDATION').individual,700);
+  assert.equal(groups.find(g=>g.name==='MAYO CLINIC').individual,800);
+  assert.equal(groups.find(g=>g.name==='FTP').individual,900);
+});
