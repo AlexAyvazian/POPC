@@ -3895,5 +3895,313 @@ export const businessIdentities = [
       "https://www.njcourts.gov/system/files/court-opinions/2025/a2068-23.pdf"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LTD X LIZZIE TISCH"
+    ],
+    "name": "LTD by Lizzie Tisch",
+    "status": "Source-backed",
+    "scope": "Brand / experiential retail and curation venture",
+    "parent": "",
+    "evidence": "The venture's official materials use LTD, LTD by Lizzie Tisch, and LTD x LIZZIE TISCH. They identify Lizzie Tisch as founder and Chief Curator, matching the donor record. No separate legal entity or parent was established.",
+    "sources": [
+      "https://www.ltdxlizzietisch.com/regarding-the-ltd-story",
+      "https://www.ltdxlizzietisch.com/press-release"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MICHAEL S. SMITH, INC"
+    ],
+    "name": "Michael S. Smith, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / interior-design firm",
+    "parent": "",
+    "evidence": "California business records identify Michael S. Smith, Inc. as an active domestic corporation, while the firm's official site uses Michael S Smith Inc. for the interior-design business. The donor's Michael Smith / Interior Designer context matches the firm.",
+    "sources": [
+      "https://www.michaelsmithinc.com/the-company",
+      "https://bizfileonline.sos.ca.gov/search/business"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SACKS & SACKS LLP"
+    ],
+    "name": "Sacks & Sacks, LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "New York records and the firm's official site identify Sacks & Sacks, LLP. The official attorney profile identifies Evan Sacks as senior partner, matching the donor's attorney context.",
+    "sources": [
+      "https://sacks-sacks.com/",
+      "https://sacks-sacks.com/attorneys/evan-sacks",
+      "https://dos.ny.gov/corporation-and-business-entity-search-database"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WEST CARROLL HEALTH SYSTEMS"
+    ],
+    "name": "West Carroll Health Systems LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / rural healthcare system",
+    "parent": "",
+    "evidence": "The federal NPI registry identifies West Carroll Health Systems LLC and records West Carroll Memorial Hospital as a DBA. LSU identifies Raymond R. Morris as owner of West Carroll Health Systems, matching the donor's healthcare-administration context.",
+    "sources": [
+      "https://npiregistry.cms.hhs.gov/provider-view/1306843826",
+      "https://wchsystems.com/locations/",
+      "https://lsusystem.edu/board-of-supervisors/raymond-r-randy-morris"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLACKSTONE"
+    ],
+    "name": "Blackstone Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / alternative-asset-management parent",
+    "parent": "",
+    "evidence": "SEC records identify Blackstone Inc. as the top-level public registrant and The Blackstone Group Inc. as its former name. Blackstone's official profile identifies Robert Sitman as a Senior Managing Director, matching the donor record.",
+    "sources": [
+      "https://www.blackstone.com/people/robert-sitman/",
+      "https://www.sec.gov/Archives/edgar/data/1393818/000119312521239233/R10.htm",
+      "https://www.sec.gov/Archives/edgar/data/1393818/000119312526340208/d158269d10q.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VEDANTA CAPITAL"
+    ],
+    "name": "Vedanta Capital LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment firm",
+    "parent": "",
+    "evidence": "Vedanta Capital's official site identifies Parag Saxena as co-founder and managing partner, and an FEC filing reports him with employer Vedanta Capital. The reported employer is mapped to Vedanta Capital LLC without merging similarly named Vedanta businesses.",
+    "sources": [
+      "https://vedacap.com/bios/parag_saxena",
+      "https://www.vedacap.com/team",
+      "https://docquery.fec.gov/cgi-bin/forms/C00575092/1763354"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HOLLIS PUBLIC AFFAIRS INC."
+    ],
+    "name": "Hollis Public Affairs, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public-affairs and government-relations firm",
+    "parent": "",
+    "evidence": "Hollis Public Affairs identifies Brian W. Simon as founder and managing partner, while federal lobbying records identify him as a lobbyist for Hollis Public Affairs. New York records identify Hollis Public Affairs, Inc.",
+    "sources": [
+      "https://hollispublicaffairs.com/firm",
+      "https://hollispublicaffairs.com/team",
+      "https://lda.gov/filings/public/filing/6de13c21-6340-4a1c-a43b-1340ed88c0ba/print",
+      "https://www.dos.ny.gov/corporation-and-business-entity-database"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LYNDON HAVILAND & CO"
+    ],
+    "name": "Lyndon Haviland & Co, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / public-health strategy and communications firm",
+    "parent": "",
+    "evidence": "Official and organizational sources identify M. Lyndon Haviland as founder of Lyndon Haviland & Co. LLC and a public-health strategist. The donor's strategic-public-health-communications context matches the firm; no parent is established.",
+    "sources": [
+      "https://www.lyndonhaviland.com/",
+      "https://www.savethechildren.org/us/about-us/leadership-and-trustees/m-lyndon-haviland"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRISOLARIS LLC"
+    ],
+    "name": "Trisolaris, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / renewable-energy development business",
+    "parent": "",
+    "evidence": "Trisolaris' official site identifies the renewable-energy business and uses the Trisolaris brand. The reported Trisolaris LLC form is retained as the legal-entity identity; similarly named European businesses are not merged.",
+    "sources": [
+      "https://trisolaris.net/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WILLIAMS HART & BOUNDAS LLP"
+    ],
+    "name": "Williams Hart & Boundas, LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "The firm's official site identifies Williams Hart & Boundas, LLP as the Houston plaintiff-side law firm and John Eddie Williams Jr. as its founder and trial lawyer. No parent is established; predecessor/related firm names are not treated as aliases without legal continuity evidence.",
+    "sources": [
+      "https://www.whlaw.com/",
+      "https://whlaw.com/lawyers/john-eddie-williams"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HEYDAY"
+    ],
+    "name": "The Heyday Foundation",
+    "status": "Source-backed",
+    "scope": "Private grantmaking foundation",
+    "parent": "",
+    "evidence": "Foundation records identify The Heyday Foundation, and authoritative biography material identifies Fred P. Hochberg as Principal, Heyday Foundation, matching the donor record. The historical Heyday Company is not merged into this identity.",
+    "sources": [
+      "https://www.cfr.org/event/conversation-adam-boehler",
+      "https://projects.propublica.org/nonprofits/organizations/136956580"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PHIBRO"
+    ],
+    "name": "Phibro Animal Health Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / public animal-health company",
+    "parent": "",
+    "evidence": "SEC records identify Phibro Animal Health Corporation as the public registrant, and its official biography identifies Jack C. Bendheim as chairman, president and CEO. This matches the donor's Phibro / President context.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1069899/000110465925091650/pahc-20251104xdef14a.htm",
+      "https://www.sec.gov/Archives/edgar/data/1069899/000110465926101493/pahc-20260630x10k.htm",
+      "https://www.pahc.com/executives/jack-c-bendheim"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BGR GROUP"
+    ],
+    "name": "BGR Group",
+    "status": "Source-backed",
+    "scope": "Public-affairs and government-relations business group / brand",
+    "parent": "",
+    "evidence": "BGR Group is the public-facing business group. Its official biography identifies Jonathan Mantz as a principal at BGR Government Affairs, and federal lobbying records tie him to that firm. The mapping remains at group/brand scope rather than treating BGR Government Affairs, LLC as an alias of the entire group.",
+    "sources": [
+      "https://bgrdc.com/team/jonathan-mantz/",
+      "https://lda.gov/filings/public/contribution/a8f1c488-0235-4327-ba2b-2fd714bebbc2/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARQUIS MANAGEMENT, LLC"
+    ],
+    "name": "Marquis Management LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / business-management organization",
+    "parent": "",
+    "evidence": "Federal lobbying records identify MARQUIS MANAGEMENT LLC at the Hennepin, Illinois Marquis address and describe business-management services. Official Marquis leadership material and FEC records match the Marquis-family donor cluster. Similar Florida entities are not merged.",
+    "sources": [
+      "https://lda.gov/filings/public/filing/a47d1d69-b71a-4fac-a613-a7a9ee425ac5/print",
+      "https://marquisinc.com/about-us",
+      "https://www.fec.gov/data/committee/C00816728"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SULLIVAN & CROMWELL LLP"
+    ],
+    "name": "Sullivan & Cromwell LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / international law firm",
+    "parent": "",
+    "evidence": "The firm's official biography identifies H. Rodgin Cohen as Senior Chair, matching the donor record. Sullivan & Cromwell LLP remains the U.S. firm identity; separately named overseas vehicles are not aliases or parents.",
+    "sources": [
+      "https://www.sullcrom.com/lawyers/H-Rodgin-Cohen",
+      "https://www.sec.gov/Archives/edgar/data/313807/000119312524260654/d858313dex52.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FOUR M INVESTMENTS"
+    ],
+    "name": "Four M Investments, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / family investment firm",
+    "parent": "",
+    "evidence": "An FEC filing reports Dennis Mehiel with employer Four M Investments, LLC and occupation Administrator at the White Plains address. SEC-hosted material describes Four M Investments as Mehiel's private family investment firm.",
+    "sources": [
+      "https://docquery.fec.gov/pdf/396/202610159915639396/202610159915639396.pdf",
+      "https://www.sec.gov/Archives/edgar/data/1002425/000167025425000774/document_2.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLOOMBERG LP"
+    ],
+    "name": "Bloomberg L.P.",
+    "status": "Source-backed",
+    "scope": "Legal entity / financial-data and media company",
+    "parent": "Bloomberg Inc.",
+    "evidence": "GLEIF identifies Bloomberg L.P. as the legal entity and Bloomberg Inc. as its direct parent. Bloomberg's official materials identify Joshua Steiner as a senior adviser and Thomas Secunda as a co-founder, matching the donor context.",
+    "sources": [
+      "https://www.gleif.org/lei/549300B56MD0ZC402L06",
+      "https://www.bloomberg.com/company/press/bloomberg-announces-new-board-of-directors",
+      "https://www.bloomberg.com/company/values/tech-at-bloomberg/features/tom-secunda"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ACTUM LLC"
+    ],
+    "name": "Actum LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / consulting firm",
+    "parent": "",
+    "evidence": "Actum's official site identifies Fabian Nunez as Founder & Managing Partner and identifies Actum as the consulting firm. The donor employer is mapped to Actum LLC; Actium, LLP and other similarly named firms are explicitly excluded.",
+    "sources": [
+      "https://actumllc.com/people/fabian-nunez",
+      "https://actumllc.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARBELLA CONSULTING"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported name / legal entity not confirmed",
+    "evidence": "The donor record reports Morgan Farrington of Chevy Chase, Maryland with employer Arbella Consulting and occupation Operations. Public records show multiple entities named Arbella Consulting, but the reviewed evidence does not tie this donor to one specific legal entity. Keep the reported employer visible and unresolved.",
+    "sources": [
+      "https://www.fec.gov/data/receipts?committee_id=C00000935&max_date=11%2F30%2F2025&min_date=11%2F01%2F2025&two_year_transaction_period=2026",
+      "https://bizfileonline.sos.ca.gov/search/business"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AURORA PICTURES"
+    ],
+    "name": "Aurora Pictures Corp.",
+    "status": "Source-backed",
+    "scope": "Legal entity / film-production business",
+    "parent": "",
+    "evidence": "New York corporate records identify Aurora Pictures Corp. and Debbie Goodstein as its CEO, matching the donor's Aurora Pictures / Filmmaker context. The shortened Aurora Pictures form is retained as the reported business name.",
+    "sources": [
+      "https://dos.ny.gov/corporation-and-business-entity-database",
+      "https://www.bizprofile.net/ny/new-york/aurora-pictures-corp"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

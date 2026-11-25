@@ -103,6 +103,19 @@ test('Illinois government aliases merge without losing records', () => {
   assert.equal(groups[0].names.size,2);
 });
 
+test('Bloomberg parent remains context, not an aggregation key', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'A',employer:'BLOOMBERG LP',sector:'Media',committee:'a',amount:100},
+    {type:'individual',name:'B',employer:'BLOOMBERG INC.',sector:'Media',committee:'a',amount:200},
+    {type:'individual',name:'C',employer:'ARBELLA CONSULTING',sector:'Consulting',committee:'a',amount:300}
+  ]);
+  const lp=groups.find(g=>g.name==='BLOOMBERG L.P.');
+  assert(lp);
+  assert.equal(lp.research.parent,'Bloomberg Inc.');
+  assert(groups.some(g=>g.name==='BLOOMBERG INC.'));
+  assert.equal(groups.find(g=>g.name==='ARBELLA CONSULTING').research.status,'Unresolved');
+});
+
 test('researched aliases merge while subsidiaries, brands and unresolved names stay separate', () => {
   const employers=[
     'ARISTEIA CAPITAL','ARISTEIA CAPITAL LLC',
