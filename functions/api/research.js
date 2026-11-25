@@ -1,3 +1,4 @@
+import {keyRouter} from "../lib/key-router.js";
 const json=(data,status=200)=>Response.json(data,{status,headers:{"Cache-Control":"no-store","X-Content-Type-Options":"nosniff"}});
 function parseQuery(result,cat){
  let parsed=result;
@@ -17,11 +18,16 @@ function parseQuery(result,cat){
 function cloudflareEnabled(env){return env.WORKERS_AI_FREE_CONFIRMED==="true"&&typeof env.AI?.run==="function";}
 function groqEnabled(env){return !!env.GROQ_API_KEY&&env.GROQ_FREE_CONFIRMED==="true";}
 const groqModels=["openai/gpt-oss-20b","qwen/qwen3.8-27b","openai/gpt-oss-120b"];
-function providers(env){return {cloudflare:{bound:typeof env.AI?.run==="function",enabled:cloudflareEnabled(env)},groq:{configured:!!env.GROQ_API_KEY,enabled:groqEnabled(env)},openrouter:{configured:!!env.OPENROUTER_API_KEY},horde:{configured:!!env.HORDE_API_KEY},novita:{configured:!!env.NOVITA_API_KEY,enabled:false},zai:{configured:!!env.ZAI_API_KEY,enabled:false}};}
+function zaiEnabled(env){return env.ZAI_PUBLIC_USE_AUTHORIZED==="true"&&env.ZAI_FREE_CONFIRMED==="true"&&keyRouter.status(env,"ZAI").eligible>0;}
+function providers(env){return {cloudflare:{bound:typeof env.AI?.run==="function",enabled:cloudflareEnabled(env)},groq:{configured:!!env.GROQ_API_KEY,enabled:groqEnabled(env)},openrouter:{configured:!!env.OPENROUTER_API_KEY},horde:{configured:!!env.HORDE_API_KEY},novita:{configured:!!env.NOVITA_API_KEY,enabled:false},zai:{...keyRouter.status(env,"ZAI"),enabled:zaiEnabled(env)},keenable:keyRouter.status(env,"KEENABLE"),tinyfish:keyRouter.status(env,"TINYFISH")};}
 async function interpret(env,messages,cat,fetcher,signalFor){
  async function chat(base,key,model,extra={},ms=7000){
   try{const r=await fetcher(base+"/chat/completions",{method:"POST",headers:{"Authorization":"Bearer "+key,"Content-Type":"application/json"},body:JSON.stringify({model,messages,max_tokens:180,temperature:0,...extra}),signal:signalFor(ms)});if(!r.ok)return undefined;const data=await r.json();return parseQuery(data.choices?.[0]?.message?.content,cat);}catch{return undefined;}
  }
+ if(zaiEnabled(env)){try{
+  const r=await keyRouter.request(env,"ZAI",key=>fetcher("https://api.z.ai/api/paas/v4/chat/completions",{method:"POST",headers:{"Authorization":"Bearer "+key,"Content-Type":"application/json"},body:JSON.stringify({model:"glm-4.7-flash",messages,max_tokens:180,temperature:0,thinking:{type:"disabled"}}),signal:signalFor(7000)}));
+  if(r){const data=await r.json();const q=parseQuery(data.choices?.[0]?.message?.content,cat);if(q!==undefined)return {query:q,provider:"zai"};}
+ }catch{}}
  if(cloudflareEnabled(env)){try{const r=await env.AI.run("@cf/meta/llama-3.1-8b-instruct-fast",{messages,max_tokens:180,temperature:0});const q=parseQuery(r?.response??r?.choices?.[0]?.message?.content,cat);if(q!==undefined)return {query:q,provider:"cloudflare"};}catch{}}
  if(env.HORDE_API_KEY){try{
   const r=await fetcher("https://oai.aihorde.net/v1/models",{headers:{"Authorization":"Bearer "+env.HORDE_API_KEY},signal:signalFor(5000)});if(r.ok){const data=await r.json();const list=Array.isArray(data.data)?data.data:[];const models=list.filter(m=>typeof m.id==="string"&&m.id.length<200&&/instruct|hermes|qwen|gemma|gpt-oss/i.test(m.id)&&!/embed|vision|uncensor|roleplay|nsfw/i.test(m.id));const model=models.find(m=>/qwen|gpt-oss/i.test(m.id))||models[0];if(model){const q=await chat("https://oai.aihorde.net/v1",env.HORDE_API_KEY,model.id,{},18000);if(q!==undefined)return {query:q,provider:"horde",model:model.id};}}
@@ -31,7 +37,7 @@ async function interpret(env,messages,cat,fetcher,signalFor){
 
  return null;
 }
-function available(env){return cloudflareEnabled(env)||groqEnabled(env)||!!env.OPENROUTER_API_KEY||!!env.HORDE_API_KEY;}
+function available(env){return zaiEnabled(env)||cloudflareEnabled(env)||groqEnabled(env)||!!env.OPENROUTER_API_KEY||!!env.HORDE_API_KEY;}
 export function onRequestGet({env}){return json({available:available(env),providers:providers(env),mode:"free-only"});}
 export async function onRequestPost({request,env}){
  if(!available(env))return json({error:"Unavailable"},503);
