@@ -15728,16 +15728,16 @@ export const businessIdentities = [
     "aliases": [
       "EBAY INC-COMMITTEE FOR RESPONSIBLE INTERNET COMMERCE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "EBAY INC-COMMITTEE FOR RESPONSIBLE INTERNET COMMERCE, (EBAY PAC)",
+    "parent": "eBay, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00342394. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=EBAY%20INC-COMMITTEE%20FOR%20RESPONSIBLE%20INTERNET%20COMMERCE"
+      "https://www.fec.gov/data/committee/C00342394/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -15745,16 +15745,16 @@ export const businessIdentities = [
     "aliases": [
       "ENDEAVOR ACTION"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "ENDEAVOR ACTION",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00639674. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=ENDEAVOR%20ACTION"
+      "https://www.fec.gov/data/committee/C00639674/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -15830,16 +15830,16 @@ export const businessIdentities = [
     "aliases": [
       "HSBC NORTH AMERICA FEDERAL, STATE AND LOCAL POLITICAL ACTION COMMITTEE (HSBC COMBINED PAC)"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "HSBC TECHNOLOGY AND SERVICES USA INC. FEDERAL, STATE, AND LOCAL PAC (HSBC COMBINED PAC)",
+    "parent": "HSBC Technology and Services USA Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00033423. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=HSBC%20NORTH%20AMERICA%20FEDERAL%2C%20STATE%20AND%20LOCAL%20POLITICAL%20ACTION%20COMMITTEE%20(HSBC%20COMBINED%20PAC)"
+      "https://www.fec.gov/data/committee/C00033423/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -15966,16 +15966,16 @@ export const businessIdentities = [
     "aliases": [
       "LAND O'LAKES, INC., PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "LAND O'LAKES, INC., PAC",
+    "parent": "Land O'Lakes, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00009423. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=LAND%20O'LAKES%2C%20INC.%2C%20PAC"
+      "https://www.fec.gov/data/committee/C00009423/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16408,16 +16408,16 @@ export const businessIdentities = [
     "aliases": [
       "SANTANDER PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "SANTANDER HOLDINGS USA INC. PAC (SANTANDER US PAC)",
+    "parent": "Santander Holdings USA Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00327072. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=SANTANDER%20PAC"
+      "https://www.fec.gov/data/committee/C00327072/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16425,16 +16425,16 @@ export const businessIdentities = [
     "aliases": [
       "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION VOLUNTARY POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION VOLUNTARY POLITICAL ACTION COMMITTEE",
+    "parent": "Science Applications International Corporation",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00300418. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=SCIENCE%20APPLICATIONS%20INTERNATIONAL%20CORPORATION%20VOLUNTARY%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00300418/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16457,24 +16457,8 @@ export const businessIdentities = [
   },
   {
     "aliases": [
+      "SOUTHWEST AIRLINES CO. POLITICAL ACTION COMMITTEE (SWAPAC)",
       "SOUTHWEST AIRLINES CO. FREEDOM FUND"
-    ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
-    "recordTypes": [
-      "organization"
-    ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/committees/?q=SOUTHWEST%20AIRLINES%20CO.%20FREEDOM%20FUND"
-    ],
-    "reviewed": "2026-11-25"
-  },
-  {
-    "aliases": [
-      "SOUTHWEST AIRLINES CO. POLITICAL ACTION COMMITTEE (SWAPAC)"
     ],
     "name": "SOUTHWEST AIRLINES CO. POLITICAL ACTION COMMITTEE (SWAPAC)",
     "status": "Source-backed",
@@ -16483,9 +16467,10 @@ export const businessIdentities = [
     "recordTypes": [
       "organization"
     ],
-    "evidence": "FEC committee C00341602 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "evidence": "Federal Election Commission records identify C00341602 as Southwest Airlines Co. Political Action Committee (SWAPAC). FEC filings also show the reported former name Southwest Airlines Co. Freedom Fund under the same committee ID; the historical name is retained as an alias.",
     "sources": [
-      "https://www.fec.gov/data/committee/C00341602/?cycle=2026&tab=about-committee"
+      "https://www.fec.gov/data/committee/C00341602/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/217/202407159659842217/202407159659842217.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16561,16 +16546,16 @@ export const businessIdentities = [
     "aliases": [
       "THE AMERICAN SOCIETY OF PENSION PROFESSIONALS AND ACTUARIES POLITICAL ACTION COMMITTEE (ASPPA-NAPA PAC)"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "THE AMERICAN SOCIETY OF PENSION PROFESSIONALS AND ACTUARIES POLITICAL ACTION COMMITTEE (ASPPA-NAPA PAC) A/K/A AMERICAN RETIREMENT ASSOCIATION POLITICAL ACTION COMMITTEE (ARA PAC)",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00333104. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=THE%20AMERICAN%20SOCIETY%20OF%20PENSION%20PROFESSIONALS%20AND%20ACTUARIES%20POLITICAL%20ACTION%20COMMITTEE%20(ASPPA-NAPA%20PAC)"
+      "https://www.fec.gov/data/committee/C00333104/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16680,16 +16665,16 @@ export const businessIdentities = [
     "aliases": [
       "US RENAL CARE PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "U.S. RENAL CARE PAC",
+    "parent": "U.S. Renal Care",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00639260. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=US%20RENAL%20CARE%20PAC"
+      "https://www.fec.gov/data/committee/C00639260/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16697,16 +16682,16 @@ export const businessIdentities = [
     "aliases": [
       "VILLAGEMD PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "VILLAGEMD PAC",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00743344. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=VILLAGEMD%20PAC"
+      "https://www.fec.gov/data/committee/C00743344/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16748,16 +16733,16 @@ export const businessIdentities = [
     "aliases": [
       "ZILLOW GROUP, INC. POLITICAL ACTION COMMITTEE (ZG PAC)"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "ZILLOW GROUP, INC. POLITICAL ACTION COMMITTEE (ZG PAC)",
+    "parent": "Zillow Group, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00699439. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=ZILLOW%20GROUP%2C%20INC.%20POLITICAL%20ACTION%20COMMITTEE%20(ZG%20PAC)"
+      "https://www.fec.gov/data/committee/C00699439/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16765,16 +16750,16 @@ export const businessIdentities = [
     "aliases": [
       "APPRAISAL INSTITUTE PAC (AI PAC)"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "APPRAISAL INSTITUTE PAC (AI PAC)",
+    "parent": "Appraisal Institute",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00144261. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=APPRAISAL%20INSTITUTE%20PAC%20(AI%20PAC)"
+      "https://www.fec.gov/data/committee/C00144261/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16782,16 +16767,16 @@ export const businessIdentities = [
     "aliases": [
       "AUSTIN INDUSTRIES COMPANIES POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "AUSTIN INDUSTRIES COMPANIES POLITICAL ACTION COMMITTEE",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00093179. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=AUSTIN%20INDUSTRIES%20COMPANIES%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00093179/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16799,16 +16784,16 @@ export const businessIdentities = [
     "aliases": [
       "BEST BUY CO., INC EMPLOYEE POLITICAL FORUM"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "BEST BUY CO., INC. EMPLOYEE POLITICAL FORUM",
+    "parent": "Best Buy Co., Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00405076. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=BEST%20BUY%20CO.%2C%20INC%20EMPLOYEE%20POLITICAL%20FORUM"
+      "https://www.fec.gov/data/committee/C00405076/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16833,16 +16818,16 @@ export const businessIdentities = [
     "aliases": [
       "ERICSSON INC. U.S. EMPLOYEES POLITICAL ACTION COMMITTEE ('ERICSSON PAC')"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "ERICSSON INC. U.S. EMPLOYEES POLITICAL ACTION COMMITTEE ('ERICSSON PAC')",
+    "parent": "Ericsson Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00568410. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=ERICSSON%20INC.%20U.S.%20EMPLOYEES%20POLITICAL%20ACTION%20COMMITTEE%20('ERICSSON%20PAC')"
+      "https://www.fec.gov/data/committee/C00568410/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16850,16 +16835,16 @@ export const businessIdentities = [
     "aliases": [
       "HIGHLAND ELECTRIC FLEETS, INC. PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "HIGHLAND ELECTRIC FLEETS, INC. PAC",
+    "parent": "Highland Electric Fleets, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00888727. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=HIGHLAND%20ELECTRIC%20FLEETS%2C%20INC.%20PAC"
+      "https://www.fec.gov/data/committee/C00888727/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16867,16 +16852,16 @@ export const businessIdentities = [
     "aliases": [
       "SONY MUSIC ENTERTAINMENT EMPLOYEE ACTION FUND"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "SONY MUSIC ENTERTAINMENT EMPLOYEE ACTION FUND",
+    "parent": "Sony Music Entertainment",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00680561. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=SONY%20MUSIC%20ENTERTAINMENT%20EMPLOYEE%20ACTION%20FUND"
+      "https://www.fec.gov/data/committee/C00680561/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16884,16 +16869,16 @@ export const businessIdentities = [
     "aliases": [
       "THE RECORDING INDUSTRY ASSOCIATION OF AMERICA POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "THE RECORDING INDUSTRY ASSOCIATION OF AMERICA, INC. POLITICAL ACTION COMMITTEE",
+    "parent": "The Recording Industry Association of America, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00009357. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=THE%20RECORDING%20INDUSTRY%20ASSOCIATION%20OF%20AMERICA%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00009357/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16901,16 +16886,16 @@ export const businessIdentities = [
     "aliases": [
       "TORCH TECHNOLOGIES, INC POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "TORCH TECHNOLOGIES, INC POLITICAL ACTION COMMITTEE",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00400424. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=TORCH%20TECHNOLOGIES%2C%20INC%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00400424/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16918,16 +16903,16 @@ export const businessIdentities = [
     "aliases": [
       "WAWA, INC. POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "WAWA, INC. POLITICAL ACTION COMMITTEE",
+    "parent": "Wawa Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00148510. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=WAWA%2C%20INC.%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00148510/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16935,16 +16920,16 @@ export const businessIdentities = [
     "aliases": [
       "GAP INC. POLITICAL ACTION COMMITTEE; THE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "GAP INC. POLITICAL ACTION COMMITTEE; THE",
+    "parent": "Gap Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00257246. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=GAP%20INC.%20POLITICAL%20ACTION%20COMMITTEE%3B%20THE"
+      "https://www.fec.gov/data/committee/C00257246/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16952,16 +16937,16 @@ export const businessIdentities = [
     "aliases": [
       "INFORMATION TECHNOLOGY INDUSTRY COUNCIL POLITICAL ACTION COMMITTEE (ITI PAC)"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "INFORMATION TECHNOLOGY INDUSTRY COUNCIL POLITICAL ACTION COMMITTEE (ITI PAC)",
+    "parent": "Information Technology Industry Council",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00419036. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=INFORMATION%20TECHNOLOGY%20INDUSTRY%20COUNCIL%20POLITICAL%20ACTION%20COMMITTEE%20(ITI%20PAC)"
+      "https://www.fec.gov/data/committee/C00419036/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16969,16 +16954,16 @@ export const businessIdentities = [
     "aliases": [
       "VOYA FINANCIAL, INC., POLITICAL ACTION COMMITTEE (VOYA FINANCIAL PAC)"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "VOYA FINANCIAL, INC., POLITICAL ACTION COMMITTEE (VOYA FINANCIAL PAC)",
+    "parent": "Voya Financial, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00184028. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=VOYA%20FINANCIAL%2C%20INC.%2C%20POLITICAL%20ACTION%20COMMITTEE%20(VOYA%20FINANCIAL%20PAC)"
+      "https://www.fec.gov/data/committee/C00184028/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -16986,16 +16971,16 @@ export const businessIdentities = [
     "aliases": [
       "AMERICAN ASSN. FOR MARRIAGE & FAMILY THERAPY COMM. ADVNCMNT OF MARITAL & FAMILY THERAPY"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "AMERICAN ASSN. FOR MARRIAGE & FAMILY THERAPY COMM. ADVNCMNT OF MARITAL & FAMILY THERAPY",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00198259. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=AMERICAN%20ASSN.%20FOR%20MARRIAGE%20%26%20FAMILY%20THERAPY%20COMM.%20ADVNCMNT%20OF%20MARITAL%20%26%20FAMILY%20THERAPY"
+      "https://www.fec.gov/data/committee/C00198259/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17003,16 +16988,16 @@ export const businessIdentities = [
     "aliases": [
       "CALIFORNIA ASSOCIATION OF MARRIAGE & FAMILY THERAPISTS PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "CALIFORNIA ASSOCIATION OF MARRIAGE & FAMILY THERAPISTS PAC",
+    "parent": "California Association of Marriage & Family Therapists",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00346619. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=CALIFORNIA%20ASSOCIATION%20OF%20MARRIAGE%20%26%20FAMILY%20THERAPISTS%20PAC"
+      "https://www.fec.gov/data/committee/C00346619/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17020,16 +17005,16 @@ export const businessIdentities = [
     "aliases": [
       "AMERICAN FINANCIAL SERVICES ASSOCIATION PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "AMERICAN FINANCIAL SERVICES ASSOCIATION PAC",
+    "parent": "American Financial Services Association",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00038604. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=AMERICAN%20FINANCIAL%20SERVICES%20ASSOCIATION%20PAC"
+      "https://www.fec.gov/data/committee/C00038604/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17037,16 +17022,16 @@ export const businessIdentities = [
     "aliases": [
       "AMERICAN INTELLECTUAL PROPERTY LAW ASSOCIATION INTELLECTUAL PROPERTY PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "AMERICAN INTELLECTUAL PROPERTY LAW ASSOCIATION (AIPLA) PAC",
+    "parent": "American Intellectual Property Law Association",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00156935. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=AMERICAN%20INTELLECTUAL%20PROPERTY%20LAW%20ASSOCIATION%20INTELLECTUAL%20PROPERTY%20PAC"
+      "https://www.fec.gov/data/committee/C00156935/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17054,16 +17039,16 @@ export const businessIdentities = [
     "aliases": [
       "AMERICANS FOR THE ARTS ACTION FUND PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "AMERICANS FOR THE ARTS ACTION FUND PAC",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00410126. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=AMERICANS%20FOR%20THE%20ARTS%20ACTION%20FUND%20PAC"
+      "https://www.fec.gov/data/committee/C00410126/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17071,16 +17056,16 @@ export const businessIdentities = [
     "aliases": [
       "AVANTUS LLC PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "AVANTUS LLC PAC",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00632588. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=AVANTUS%20LLC%20PAC"
+      "https://www.fec.gov/data/committee/C00632588/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17088,16 +17073,16 @@ export const businessIdentities = [
     "aliases": [
       "CROWE PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "CROWE PAC",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00451518. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=CROWE%20PAC"
+      "https://www.fec.gov/data/committee/C00451518/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17105,16 +17090,16 @@ export const businessIdentities = [
     "aliases": [
       "EMPLOYEES OF QUANTA SERVICES, INC."
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "EMPLOYEES OF QUANTA SERVICES, INC.",
+    "parent": "Quanta Services, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00720920. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=EMPLOYEES%20OF%20QUANTA%20SERVICES%2C%20INC."
+      "https://www.fec.gov/data/committee/C00720920/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17122,16 +17107,16 @@ export const businessIdentities = [
     "aliases": [
       "FOLEY & LARDNER POLITICAL FUND, INC."
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "FOLEY & LARDNER POLITICAL FUND, INC.",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00105338. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=FOLEY%20%26%20LARDNER%20POLITICAL%20FUND%2C%20INC."
+      "https://www.fec.gov/data/committee/C00105338/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17139,16 +17124,16 @@ export const businessIdentities = [
     "aliases": [
       "ICE MILLER PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "ICE MILLER PAC",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00520973. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=ICE%20MILLER%20PAC"
+      "https://www.fec.gov/data/committee/C00520973/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17156,16 +17141,16 @@ export const businessIdentities = [
     "aliases": [
       "LYFT, INC. FEDERAL EMPLOYEE POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "LYFT, INC. FEDERAL EMPLOYEE POLITICAL ACTION COMMITTEE",
+    "parent": "Lyft, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00743823. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=LYFT%2C%20INC.%20FEDERAL%20EMPLOYEE%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00743823/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17173,16 +17158,16 @@ export const businessIdentities = [
     "aliases": [
       "PLASTICS INDUSTRY ASSOCIATION POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "PLASTICS INDUSTRY ASSOCIATION POLITICAL ACTION COMMITTEE",
+    "parent": "Plastics Industry Associations, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00309716. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=PLASTICS%20INDUSTRY%20ASSOCIATION%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00309716/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17207,16 +17192,16 @@ export const businessIdentities = [
     "aliases": [
       "STEPTOE AND JOHNSON LLP POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "STEPTOE LLP POLITICAL ACTION COMMITTEE",
     "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00431858. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=STEPTOE%20AND%20JOHNSON%20LLP%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00431858/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17224,16 +17209,16 @@ export const businessIdentities = [
     "aliases": [
       "THE JOCKEY CLUB PAC"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "THE JOCKEY CLUB PAC",
+    "parent": "The Jockey Club",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00592485. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=THE%20JOCKEY%20CLUB%20PAC"
+      "https://www.fec.gov/data/committee/C00592485/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17241,16 +17226,16 @@ export const businessIdentities = [
     "aliases": [
       "THE PRIVATE INVESTOR COALITION, INC. POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "THE PRIVATE INVESTOR COALITION, INC. POLITICAL ACTION COMMITTEE",
+    "parent": "The Private Investor Coalition, Inc.",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00578096. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=THE%20PRIVATE%20INVESTOR%20COALITION%2C%20INC.%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00578096/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
@@ -17258,16 +17243,16 @@ export const businessIdentities = [
     "aliases": [
       "ACTORS' EQUITY ASSOCIATION POLITICAL ACTION COMMITTEE"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported federal political committee / organization name",
+    "status": "Source-backed",
+    "name": "ACTORS' EQUITY ASSOCIATION POLITICAL ACTION COMMITTEE",
+    "parent": "Actors' Equity Association",
+    "scope": "Federal political committee / PAC",
     "recordTypes": [
       "organization"
     ],
-    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "evidence": "Federal Election Commission committee records identify this reported committee as FEC ID C00835868. The reported POPC form is retained as an alias when it differs from the FEC committee name.",
     "sources": [
-      "https://www.fec.gov/data/committees/?q=ACTORS'%20EQUITY%20ASSOCIATION%20POLITICAL%20ACTION%20COMMITTEE"
+      "https://www.fec.gov/data/committee/C00835868/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   },
