@@ -81,3 +81,10 @@ The first executive-linked priority batch reviewed the highest-dollar single-don
 Source-backed additions include Bed Bath & Beyond, Capitol City Group, Cibus at group/brand scope, Cityview Management Services, Everest Clinical Research Corporation, Firefly3 LLC, Forest Management Company LLC, Gjelaj Law PLLC, JSI at group/brand scope, Lightyear Capital LLC, Mapleton Investments LLC, Green Thumb Industries Inc., State of Colorado, Verano Holdings Corp., Centric Brands LLC, Eminence Capital LP, Empire Office Inc. and Mack Real Estate Group at group/brand scope.
 
 STORY remains explicitly unresolved because available evidence connects Joe Sai to Story Cannabis Company LLC but does not establish which Story legal entity corresponds to the bare employer string in the donor record. No Story entities were merged.
+
+
+## Executive-priority identity research — batch 2 completion — November 25, 2026
+
+A concurrent research commit completed most of the next executive-linked tier while this batch was being prepared. The remaining priority identities added here are Edward Jones, Satoshi Action Fund, Abundant Venture Partners, American Jewish Committee, Associated Agencies, Austin Sports Academy and Benenson Capital.
+
+Austin Sports Academy remains explicitly unresolved because the operating business and founder/owner are supported but multiple same/similar Texas entities prevent a verified legal-entity match. Abundant Venture Partners and Benenson Capital are source-backed only at firm/group scope. Edward Jones is retained as a brokerage brand identity separate from Edward D. Jones & Co., L.P., parent The Jones Financial Companies, L.L.L.P., and any political committee.

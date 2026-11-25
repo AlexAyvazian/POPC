@@ -309,3 +309,17 @@ test('remaining executive batch preserves PAC, brand and unresolved boundaries',
   assert.equal(g.find(x=>x.name==='BRIDGE 360 ADVISORY').research.status,'Unresolved');
   assert(g.some(x=>x.name==='POLITICAL ACTION COMMITTEE OF THE INTERNATIONAL ALLIANCE OF THEATRICAL STAGE EMPLOYEES'));
 });
+
+
+test('executive-priority follow-up preserves brand scope and unresolved Austin employer', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Clunie',employer:'EDWARD JONES',occupation:'PRINCIPAL',sector:'Finance',committee:'a',amount:100},
+    {type:'individual',name:'Miller',employer:'ABUNDANT VENTURE PARTNERS',occupation:'OPERATING PARTNER/BOARD MEMBER',sector:'Finance',committee:'a',amount:200},
+    {type:'individual',name:'OKelley',employer:'AUSTIN SPORTS ACADEMY',occupation:'OWNER',sector:'Sports',committee:'a',amount:300},
+    {type:'individual',name:'Benenson',employer:'BENENSON CAPITAL',occupation:'PARTNER',sector:'Real Estate',committee:'a',amount:400}
+  ]);
+  assert.equal(groups.find(g=>g.name==='EDWARD JONES').research.parent,'The Jones Financial Companies, L.L.L.P.');
+  assert.equal(groups.find(g=>g.name==='ABUNDANT VENTURE PARTNERS').research.scope,'Venture-capital firm / brand; exact employing legal entity not established');
+  assert.equal(groups.find(g=>g.name==='AUSTIN SPORTS ACADEMY').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='BENENSON CAPITAL').research.scope,'Real-estate business group / brand');
+});

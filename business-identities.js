@@ -7454,5 +7454,108 @@ export const businessIdentities = [
       "https://www.sec.gov/Archives/edgar/data/39911/000110465926105518/xslSCHEDULE_13D_X02/primary_doc.xml"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EDWARD JONES"
+    ],
+    "name": "EDWARD JONES",
+    "status": "Source-backed",
+    "scope": "Brokerage brand / business name",
+    "parent": "The Jones Financial Companies, L.L.L.P.",
+    "evidence": "FINRA identifies Edward D. Jones & Co., L.P. as the broker-dealer doing business as Edward Jones. The brand identity is kept separate from parent The Jones Financial Companies, L.L.L.P. and from any political committee.",
+    "sources": [
+      "https://files.brokercheck.finra.org/firm/firm_250.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SATOSHI ACTION FUND"
+    ],
+    "name": "SATOSHI ACTION FUND",
+    "status": "Source-backed",
+    "scope": "501(c)(4) nonprofit advocacy organization",
+    "parent": "",
+    "evidence": "IRS-derived nonprofit data identifies Satoshi Action Fund under EIN 83-3502943, and the organization's official site identifies Dennis Porter as its leader. The nonprofit remains separate from any affiliated political committee.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/833502943",
+      "https://www.satoshiaction.io/home"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ABUNDANT VENTURE PARTNERS"
+    ],
+    "name": "ABUNDANT VENTURE PARTNERS",
+    "status": "Source-backed",
+    "scope": "Venture-capital firm / brand; exact employing legal entity not established",
+    "parent": "",
+    "evidence": "Abundant Venture Partners' official site identifies Lee Miller as an Operating Partner and board member. SEC filings separately identify Abundant Venture Partners Holding, LLC, but the reviewed evidence does not establish that holding company as the donor's exact employer, so the bare employer stays at firm/brand scope.",
+    "sources": [
+      "https://www.abundantventurepartners.com/about",
+      "https://www.sec.gov/Archives/edgar/data/2024614/000202461424000001/xslFormDX08/primary_doc.xml"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN JEWISH COMMITTEE"
+    ],
+    "name": "AMERICAN JEWISH COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Nonprofit organization",
+    "parent": "",
+    "evidence": "American Jewish Committee's Form 990 and audited materials identify the nonprofit organization; E. Robert Goodkind is documented as a former president. The historical leadership title is context and does not imply a separate entity.",
+    "sources": [
+      "https://www.ajc.org/sites/default/files/pdf/2025-10/AJC-2024-Form-990-Public-Disclosure-Version.pdf",
+      "https://www.pryorcashman.com/e-robert-goodkind"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ASSOCIATED AGENCIES"
+    ],
+    "name": "ASSOCIATED AGENCIES, INC.",
+    "status": "Source-backed",
+    "scope": "Insurance agency / legal entity",
+    "parent": "",
+    "evidence": "Associated Agencies' leadership page identifies Max 'Skip' Schrayer as CEO of the insurance organization, and corporate records use Associated Agencies, Inc. The public brand Associated Insurance & Risk Management Advisors is not treated as a separate donor entity.",
+    "sources": [
+      "https://assocagencies.com/about-us/leadership",
+      "https://www.bizprofile.net/ny/new-york/associated-agencies-inc"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AUSTIN SPORTS ACADEMY"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / sports-training business",
+    "parent": "",
+    "evidence": "The business's official site identifies Brad O'Kelley as a founder/owner, but multiple Texas entities use Austin Sports Academy or closely related names and the exact employing legal entity is not established. No entity merge is made.",
+    "sources": [
+      "https://www.austinsportsacademy.com/about-3"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BENENSON CAPITAL"
+    ],
+    "name": "BENENSON CAPITAL",
+    "status": "Source-backed",
+    "scope": "Real-estate business group / brand",
+    "parent": "",
+    "evidence": "Benenson Capital's official site identifies Bruce (Bill) W. Benenson as a principal in the family real-estate organization. Multiple distinct Benenson Capital legal entities exist, so the bare employer remains at group/brand scope rather than being forced into one LLC.",
+    "sources": [
+      "https://benensoncapital.com/team",
+      "https://benensoncapital.com/about-us"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
