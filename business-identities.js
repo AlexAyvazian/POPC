@@ -13101,5 +13101,348 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00147066/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN CRYSTAL SUGAR COMPANY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "AMERICAN CRYSTAL SUGAR COMPANY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal cooperative political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00110338 identifies American Crystal Sugar Company Political Action Committee as an active qualified cooperative PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00110338/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN SOCIETY OF RADIOLOGIC TECHNOLOGISTS PAC"
+    ],
+    "name": "AMERICAN SOCIETY OF RADIOLOGIC TECHNOLOGISTS PAC",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00362327 identifies American Society of Radiologic Technologists PAC as an active qualified membership-organization PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00362327/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ANNALY CAPITAL MANAGEMENT, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "ANNALY CAPITAL MANAGEMENT, INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00666719 identifies Annaly Capital Management, Inc. Political Action Committee and lists Annaly Capital Management, Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00666719/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARCHIPAC  -THE AMERICAN INSTITUTE OF ARCHITECTS",
+      "ARCHIPAC -THE AMERICAN INSTITUTE OF ARCHITECTS",
+      "ARCHIPAC - THE AMERICAN INSTITUTE OF ARCHITECTS"
+    ],
+    "name": "ARCHIPAC - THE AMERICAN INSTITUTE OF ARCHITECTS",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC; donor-file spacing variant",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00139071 identifies ARCHIPAC - THE AMERICAN INSTITUTE OF ARCHITECTS. The local donor-file forms differ only in spacing around the hyphen and are retained as exact aliases.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00139071/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARDENT LEGACY HOLDINGS LLC GOOD GOVERNMENT FUND"
+    ],
+    "name": "ARDENT LEGACY HOLDINGS LLC GOOD GOVERNMENT FUND",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00390963 identifies Ardent Legacy Holdings LLC Good Government Fund and Ardent Legacy Holdings LLC as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00390963/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BANK POLICY INSTITUTE PAC"
+    ],
+    "name": "BANK POLICY INSTITUTE PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00193177 identifies Bank Policy Institute PAC as an active qualified trade-association PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00193177/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROWN-FORMAN CORPORATION NON-PARTISAN COMMITTEE FOR RESPONSIBLE GOVERNMENT"
+    ],
+    "name": "BROWN-FORMAN CORPORATION NON-PARTISAN COMMITTEE FOR RESPONSIBLE GOVERNMENT",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00059733 identifies Brown-Forman Corporation Non-Partisan Committee for Responsible Government as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00059733/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CATERPILLAR INC. POLITICAL ACTION COMMITTEE (CATPAC)"
+    ],
+    "name": "CATERPILLAR INC. POLITICAL ACTION COMMITTEE (CATPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00148031 identifies Caterpillar Inc. Political Action Committee (CATPAC) and Caterpillar Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00148031/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CHARTER SCHOOLS ACTION PAC"
+    ],
+    "name": "CHARTER SCHOOLS ACTION PAC",
+    "status": "Source-backed",
+    "scope": "Federal hybrid political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00576215 identifies Charter Schools Action PAC as an active hybrid PAC with a non-contribution account.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00576215/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COGNIZANT TECHNOLOGY SOLUTIONS CORPORATION POLITICAL ACTION COMMITTEE (COGNIZANT PAC)"
+    ],
+    "name": "COGNIZANT TECHNOLOGY SOLUTIONS CORPORATION POLITICAL ACTION COMMITTEE (COGNIZANT PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00485979 identifies Cognizant Technology Solutions Corporation Political Action Committee (Cognizant PAC) and Cognizant Technology Solutions Corporation as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00485979/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CONSUMER BRANDS POLITICAL ACTION COMMITTEE ('CONSUMER BRANDS ASSOCIATION PAC')"
+    ],
+    "name": "CONSUMER BRANDS POLITICAL ACTION COMMITTEE ('CONSUMER BRANDS ASSOCIATION PAC')",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00250068 identifies Consumer Brands Political Action Committee ('Consumer Brands Association PAC') and Consumer Brands Association as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00250068/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CONSUMER TECHNOLOGY ASSOCIATION PAC"
+    ],
+    "name": "CONSUMER TECHNOLOGY ASSOCIATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00375048 identifies Consumer Technology Association PAC as an active qualified PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00375048/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COUPANG, INC. COMPANY PAC (COUPAC)"
+    ],
+    "name": "COUPANG, INC. COMPANY PAC (COUPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00889568 identifies Coupang, Inc. Company PAC (COUPAC) as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00889568/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COVINGTON & BURLING LLP PAC",
+      "COVINGTON AND BURLING LLP PAC"
+    ],
+    "name": "COVINGTON AND BURLING LLP PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC; donor-file ampersand variant",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00462630 uses the registered name Covington and Burling LLP PAC. The local donor-file ampersand form is retained as an alias of that same committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00462630/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS"
+    ],
+    "name": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The Tribe's official government site identifies the Cow Creek Band of Umpqua Tribe of Indians as a federally recognized sovereign tribal government. The donor receipt remains the tribal-government identity rather than being converted to a PAC.",
+    "sources": [
+      "https://www.cowcreek-nsn.gov/government/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DEMOCRATS FOR EDUCATION REFORM"
+    ],
+    "name": "DEMOCRATS FOR EDUCATION REFORM",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00417733 identifies Democrats for Education Reform as an active qualified PAC. The local reported form adds a generic PAC suffix; the extracted committee name resolves to the registered FEC identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00417733/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DEXTER APACHE HOLDINGS INC PAC ('DEXTER APACHE PAC')"
+    ],
+    "name": "DEXTER APACHE HOLDINGS INC PAC ('DEXTER APACHE PAC')",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00523613 identifies Dexter Apache Holdings Inc PAC ('Dexter Apache PAC') as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00523613/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DGA-PAC THE POLITICAL ACTION COMMITTEE OF THE DIRECTORS GUILD OF AMERICA INC."
+    ],
+    "name": "DGA-PAC THE POLITICAL ACTION COMMITTEE OF THE DIRECTORS GUILD OF AMERICA INC.",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00311944 identifies DGA-PAC, the Political Action Committee of the Directors Guild of America Inc., and lists Directors Guild of America, Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00311944/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DOORDASH, INC. POLITICAL ACTION COMMITTEE (DASHPAC)"
+    ],
+    "name": "DOORDASH, INC. POLITICAL ACTION COMMITTEE (DASHPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00820167 identifies DoorDash, Inc. Political Action Committee (DashPAC) and DoorDash, Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00820167/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DOW INC. PAC (DOWPAC)"
+    ],
+    "name": "DOW INC. PAC (DOWPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00074096 identifies Dow Inc. PAC (DOWPAC) and Dow Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00074096/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
