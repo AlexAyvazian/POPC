@@ -8,6 +8,7 @@ on:
       - 'business-directory-data.js'
       - 'business-directory.js'
       - 'business-directory.test.mjs'
+      - 'business-directory-unreviewed.mjs'
       - 'research-data.js'
       - 'transactions.html'
       - '.github/workflows/business-directory-tests.yml'
@@ -17,6 +18,7 @@ on:
       - 'business-directory-data.js'
       - 'business-directory.js'
       - 'business-directory.test.mjs'
+      - 'business-directory-unreviewed.mjs'
       - 'research-data.js'
       - 'transactions.html'
 
