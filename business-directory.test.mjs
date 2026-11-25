@@ -475,3 +475,21 @@ test('tenth executive-priority batch resolves supported identities and consolida
   assert.equal(groups.find(g=>g.name==='CLEAR CAPITAL, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL BANKERS ASSOCIATION, INC.').research.status,'Source-backed');
 });
+
+
+test('eleventh executive-priority batch preserves unresolved farm and entertainment names while resolving public and nonprofit entities', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'DAmbrosio',employer:'EMERALD PEAK ENTERTAINMENT',occupation:'EXECUTIVE PRODUCER',sector:'Media',committee:'a',amount:100},
+    {type:'individual',name:'Smith',employer:'JD DOVE FARMS',occupation:'PRESIDENT/COO',sector:'Agriculture',committee:'a',amount:200},
+    {type:'individual',name:'White',employer:'JERSEYCAN',occupation:'NONPROFIT EXECUTIVE',sector:'Education',committee:'a',amount:300},
+    {type:'individual',name:'Marquez',employer:'LBUCC',occupation:'HEALTH CARE CEO',sector:'Healthcare',committee:'a',amount:400},
+    {type:'individual',name:'Cotton',employer:'PORT AUTHORITY OF NY AND NJ',occupation:'EXECUTIVE',sector:'Government',committee:'a',amount:500},
+    {type:'individual',name:'Shitama',employer:'AKIRA',occupation:'CEO',sector:'Manufacturing',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='EMERALD PEAK ENTERTAINMENT').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='JD DOVE FARMS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='JERSEYCAN').research.parent,'50CAN, Inc.');
+  assert.equal(groups.find(g=>g.name==='LOS BARRIOS UNIDOS COMMUNITY CLINIC, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='THE PORT AUTHORITY OF NEW YORK AND NEW JERSEY').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='AKIRA WOOD, INC.').research.status,'Source-backed');
+});

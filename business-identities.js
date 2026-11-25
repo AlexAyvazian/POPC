@@ -9959,5 +9959,299 @@ export const businessIdentities = [
       "https://www.nationalbankers.org/leadership-team"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "XSB"
+    ],
+    "name": "XSB, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / supply-chain and product-data technology company",
+    "parent": "Exiger LLC",
+    "evidence": "XSB identifies Rupert Hopkins as founder and CEO and states that Exiger acquired XSB; federal contractor data identifies XSB Inc. as the entity. XSB remains distinct from its parent.",
+    "sources": [
+      "https://xsb.com/rupert-hopkins",
+      "https://xsb.com/exiger-the-market-leading-supply-chain-and-third-party-risk-ai-company-acquires-logistics-intelligence-platform-xsb"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DYNIFTIC CORPORATION"
+    ],
+    "name": "DYNIFTIC CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / Washington-registered corporation",
+    "parent": "",
+    "evidence": "Washington business records identify Dyniftic Corporation and federal campaign records associate Gregory Shaw with the company and a president/owner role. No parent is established.",
+    "sources": [
+      "https://opengovwa.com/corporation/602245266",
+      "https://docquery.fec.gov/pdf/999/201512169004241999/201512169004241999_001039.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EMERALD PEAK ENTERTAINMENT"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / entertainment business name",
+    "parent": "",
+    "evidence": "Public profiles connect Sylvia D'Ambrosio with Emerald Peak Entertainment, but reviewed sources do not verify an exact legal entity or independently corroborate the reported Executive Producer role. No LLC form is asserted.",
+    "sources": [
+      "https://www.imdb.com/name/nm4653821"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FS MEDICAL TECHNOLOGY"
+    ],
+    "name": "BLUE SKY ENTERPRISES, INC. D/B/A FS MEDICAL TECHNOLOGY",
+    "status": "Source-backed",
+    "scope": "Legal entity and DBA / medical-gas systems business",
+    "parent": "",
+    "evidence": "Federal contractor records identify Blue Sky Enterprises, Inc. as the legal name and FS Medical Technology as its DBA. Atlas Copco later acquired operating assets; that asset purchase is not treated as acquisition of the legal entity.",
+    "sources": [
+      "https://opengovus.com/sam-entity/SG3EJKFEMVT8",
+      "https://www.atlascopcogroup.com/en/media/press-releases/2023/20230307-acquisition-fs-medical"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ACUTONIX INC."
+    ],
+    "name": "ACUTONIX, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / California corporation",
+    "parent": "",
+    "evidence": "California business records identify Acutonix, Inc. and list Sabrina Pick as CFO. The matching practice address supports the employer identity while preserving the distinction between company and brand.",
+    "sources": [
+      "https://opensosdata.com/entity/california/acutonix-inc-ca-072027",
+      "https://www.acutonix.com/online-herbal-consultations"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SCR MEDICAL TRANSPORTATION"
+    ],
+    "name": "SCR MEDICAL TRANSPORTATION, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / non-emergency medical transportation company",
+    "parent": "Beacon Mobility",
+    "evidence": "SCR identifies itself as SCR Medical Transportation, Inc. and as part of Beacon Mobility; Kroll documents the acquisition by Beacon Mobility. The company remains distinct from its parent.",
+    "sources": [
+      "https://scrtransport.com/about",
+      "https://www.kroll.com/en/transactions/sell-side-advisor-scr-medical-transportation"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ABLE BUSINESS SERVICES INC."
+    ],
+    "name": "ABLE BUSINESS SERVICES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / facilities and business-services company",
+    "parent": "",
+    "evidence": "Able Business Services' official site identifies the company and Jackson Health materials identify William Berry as owner/president. The reported CEO title is retained only as donor-reported context.",
+    "sources": [
+      "https://www.ablebusinessservices.com/",
+      "https://jacksonhealth.org/blog/small-business-enterprise-sbe-highlight-able-business"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FREMONT STREET EXPERIENCE"
+    ],
+    "name": "THE FREMONT STREET EXPERIENCE, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / downtown Las Vegas entertainment and marketing organization",
+    "parent": "",
+    "evidence": "Public business records identify The Fremont Street Experience, LLC and the official site identifies the operating organization. The reviewed company pages do not independently verify the donor's chairman title, so that title is not used to expand the identity.",
+    "sources": [
+      "https://fremontstreetexperience.com/",
+      "https://www.bbb.org/us/nv/las-vegas/profile/family-entertainment/the-fremont-street-experience-llc-1086-57814"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JD DOVE FARMS"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / farm business",
+    "parent": "",
+    "evidence": "Reviewed sources did not establish a reliable legal or operating identity for JD Dove Farms tied to Deb Smith and the reported President/COO role. The employer remains unresolved.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GARDNER PIE COMPANY"
+    ],
+    "name": "GARDNER PIE COMPANY",
+    "status": "Source-backed",
+    "scope": "Family-owned bakery / business brand; exact legal entity not established",
+    "parent": "",
+    "evidence": "Gardner Pie's official site identifies the family-owned pie business. The reviewed team materials do not substantiate Thomas Gardner as CFO, so the company is source-backed only at business/brand scope.",
+    "sources": [
+      "https://www.gardnerpie.com/about",
+      "http://gardnerpie.com/team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AKIRA"
+    ],
+    "name": "AKIRA WOOD, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / architectural woodwork company",
+    "parent": "",
+    "evidence": "Akira Wood's official materials identify Hoch Shitama and the company, while Florida corporate records identify Akira Wood, Inc. The generic AKIRA employer is resolved using the matching executive context.",
+    "sources": [
+      "https://www.akirawood.com/akiras-story/about-akira",
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=domp-658263-63793167-d565-45eb-a2ee-3d4a63de5651&directionType=Initial&inquirytype=EntityName&listNameOrder=AKIRAWOOD%206582631&searchNameOrder=AKIRAWOOD%206582631&searchTerm=Akira%20Wood%2C%20Inc."
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COUNTY OF SONOMA"
+    ],
+    "name": "COUNTY OF SONOMA",
+    "status": "Source-backed",
+    "scope": "California county government",
+    "parent": "",
+    "evidence": "Sonoma County's official government site establishes the County of Sonoma as the public employer. The donor-reported Executive Secretary role is retained as record context.",
+    "sources": [
+      "https://sonomacounty.ca.gov/Board-of-Supervisors/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "D'ADDARIO & CO. INC."
+    ],
+    "name": "D'ADDARIO & CO., INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / musical-instrument accessories manufacturer",
+    "parent": "",
+    "evidence": "D'Addario's official materials identify the family company and Jim D'Addario as chairman. The reported employer maps to the company without merging other D'Addario entities or brands.",
+    "sources": [
+      "https://www.daddario.com/blogs/news/the-torch-is-passed-at-d-addario",
+      "https://www.daddario.com/our-company/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HACKENSACK MERIDIAN HEALTH"
+    ],
+    "name": "HACKENSACK MERIDIAN HEALTH, INC.",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit parent / integrated health-care network",
+    "parent": "",
+    "evidence": "Audited financial statements identify Hackensack Meridian Health, Inc. as the network parent, and system materials identify Helen Cunning in regional president/chief development leadership. Individual hospitals remain separate.",
+    "sources": [
+      "https://www.hackensackmeridianhealth.org/-/media/project/hmh/hmh/public/about-us/files/annual-audited-financial-statements/2025/2025-hmh-audited-financial-statements-njdoh-with-hospitals.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTUIT ART MUSEUM"
+    ],
+    "name": "INTUIT ART MUSEUM",
+    "status": "Source-backed",
+    "scope": "Nonprofit museum / public-facing name of Intuit: The Center for Intuitive and Outsider Art",
+    "parent": "",
+    "evidence": "Intuit's official materials identify the museum and its mission; nonprofit records identify the legal nonprofit under its longer name. The reported museum name is retained at public-facing organization scope.",
+    "sources": [
+      "https://art.org/mission-and-history",
+      "https://www.guidestar.org/Profile/36-3772452"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JERSEYCAN"
+    ],
+    "name": "JERSEYCAN",
+    "status": "Source-backed",
+    "scope": "New Jersey education-advocacy campaign / brand of 50CAN, Inc.",
+    "parent": "50CAN, Inc.",
+    "evidence": "JerseyCAN identifies Paula White as Executive Director and states through its financial materials that the campaign is part of 50CAN. The JerseyCAN brand is not treated as a separate legal nonprofit.",
+    "sources": [
+      "https://jerseycan.org/press-releases/paula-white-to-serve-as-the-first-african-american-executive-director-of-jerseycan/",
+      "https://jerseycan.org/financials/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LBUCC"
+    ],
+    "name": "LOS BARRIOS UNIDOS COMMUNITY CLINIC, INC.",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit entity / community health center",
+    "parent": "",
+    "evidence": "Nonprofit records identify Los Barrios Unidos Community Clinic, Inc., and the clinic identifies Leonor Marquez as CEO. The LBUCC acronym maps to the same organization.",
+    "sources": [
+      "https://lbucommunityclinic.org/leadership",
+      "https://projects.propublica.org/nonprofits/organizations/751378664"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LEON N. WEINER & ASSOC. INC"
+    ],
+    "name": "LEON N. WEINER & ASSOCIATES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / real-estate development and homebuilding company",
+    "parent": "",
+    "evidence": "Company and industry materials identify Leon N. Weiner & Associates, Inc. and Kevin P. Kelly in senior ownership/leadership. Affiliated management and development entities remain separate.",
+    "sources": [
+      "https://lnwa.com/our-story",
+      "https://www.nahb.org/why-nahb/nahb-past-presidents/2010s/kevin-kelly"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PHOENIX TAILINGS"
+    ],
+    "name": "PHOENIX TAILINGS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / critical-minerals and rare-earth technology company",
+    "parent": "",
+    "evidence": "SEC filings identify Phoenix Tailings, Inc. and the company identifies Patrick Kumashiro in senior strategy leadership. A prior issuer name is not treated as a current alias or parent.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1875606/000187560626000004/xslFormDX01/primary_doc.xml",
+      "https://phoenixtailings.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PORT AUTHORITY OF NY AND NJ"
+    ],
+    "name": "THE PORT AUTHORITY OF NEW YORK AND NEW JERSEY",
+    "status": "Source-backed",
+    "scope": "Bi-state public authority / public agency",
+    "parent": "",
+    "evidence": "The Port Authority's official materials identify the bi-state agency and Richard Cotton as its former Executive Director. Airports and facilities operated by the agency are not separate aliases of the employer.",
+    "sources": [
+      "https://www.panynj.gov/port-authority/en/annual-report/corporate-information.html",
+      "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2025-press-releases/port-authority-announces-executive-director-rick-cotton-will-ret.html"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

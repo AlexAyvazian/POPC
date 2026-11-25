@@ -144,3 +144,10 @@ Exelon Corporation, Fontheim International, Fried Frank, G&C Equipment Corporati
 The next 20 priority identities from Strategic Marketing Innovations through National Bankers Association were reviewed. The Future Forum, SimplyEz HDM LLC and Unified Resources remain unresolved because the exact legal/employer identity could not be established without relying on generic names or inconsistent role context.
 
 Strategic Marketing Innovations, Strategic Resources, Suburban Street News, Sullivan-Palatek, The A.M. Fund, The Moriah Fund, Clear Capital, Legacy Medical Consultants, Vesta Corporation, Bay Aire and National Bankers Association were resolved to source-backed entities. StudentsFirstNY, The Gart Companies, Theodore's Books and AdeptAg are source-backed at organization/brand/group scope. Idol Minds is retained as the historical studio identity that became Deck Nine Games. The reported K & M OFFICE string was added as a verified alias of the already researched K & M Office LLC identity; underlying receipts remain unchanged.
+
+
+## Executive-priority identity research — batch 11 — November 25, 2026
+
+The next 20 priority identities from XSB through the Port Authority of New York and New Jersey were reviewed. Emerald Peak Entertainment and JD Dove Farms remain unresolved because the reviewed sources do not establish one exact employer entity tied to the donor context.
+
+XSB, Dyniftic Corporation, Blue Sky Enterprises d/b/a FS Medical Technology, Acutonix, SCR Medical Transportation, Able Business Services, The Fremont Street Experience, Akira Wood, D'Addario & Co., Hackensack Meridian Health, Los Barrios Unidos Community Clinic, Leon N. Weiner & Associates, Phoenix Tailings and the Port Authority were source-backed. Gardner Pie and Intuit Art Museum are source-backed at business/organization scope. JerseyCAN is retained as a 50CAN campaign/brand with 50CAN shown only as parent/umbrella context.
