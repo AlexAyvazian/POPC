@@ -229,3 +229,26 @@ test('next research batch preserves PAC boundaries and unresolved same-name empl
   assert.equal(groups.find(g=>g.name==='HBJ INVESTMENTS, LLC').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='KAUFMAN, HALL & ASSOCIATES, LLC').research.parent,'Vizient, Inc.');
 });
+
+
+test('raw PAC receipts stay separate from connected companies in researched identities', () => {
+  const rows=[
+    {type:'organization',name:'VERIZON COMMUNICATIONS, INC. POLITICAL ACTION COMMITTEE (VERIZON PAC)',sector:'Technology',committee:'a',amount:1000},
+    {type:'individual',name:'Person',employer:'VERIZON COMMUNICATIONS, INC.',occupation:'EXECUTIVE',sector:'Technology',committee:'a',amount:200},
+    {type:'organization',name:'POET PAC',sector:'Energy',committee:'a',amount:300},
+    {type:'individual',name:'Broin',employer:'POET',occupation:'CEO',sector:'Energy',committee:'a',amount:400},
+    {type:'organization',name:'AMERICAN EXPRESS COMPANY POLITICAL ACTION COMMITTEE',sector:'Finance',committee:'a',amount:500},
+    {type:'individual',name:'Person 2',employer:'AMERICAN EXPRESS COMPANY',occupation:'EXECUTIVE',sector:'Finance',committee:'a',amount:600}
+  ];
+  const groups=buildDirectory(rows);
+  const vpac=groups.find(g=>g.name==='VERIZON COMMUNICATIONS, INC. POLITICAL ACTION COMMITTEE (VERIZON PAC)');
+  const vcorp=groups.find(g=>g.name==='VERIZON COMMUNICATIONS INC.');
+  assert(vpac);assert(vcorp);assert.notEqual(vpac.key,vcorp.key);
+  assert.equal(vpac.organization,1000);assert.equal(vcorp.individual,200);
+  const poetPac=groups.find(g=>g.name==='POET PAC'), poet=groups.find(g=>g.name==='POET, LLC');
+  assert(poetPac);assert(poet);assert.notEqual(poetPac.key,poet.key);
+  assert.equal(poetPac.organization,300);assert.equal(poet.individual,400);
+  const axpPac=groups.find(g=>g.name==='AMERICAN EXPRESS COMPANY POLITICAL ACTION COMMITTEE (AXPPAC)');
+  const axp=groups.find(g=>g.name==='AMERICAN EXPRESS COMPANY');
+  assert(axpPac);assert(axp);assert.notEqual(axpPac.key,axp.key);
+});

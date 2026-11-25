@@ -2086,15 +2086,18 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "AT&T INC. EMPLOYEE FEDERAL"
+      "AT&T INC. EMPLOYEE FEDERAL",
+      "AT&T FEDERAL",
+      "AT&T FEDERAL PAC"
     ],
     "name": "AT&T Inc. Employee Federal Political Action Committee (AT&T Employee Federal PAC)",
     "status": "Source-backed",
     "scope": "Federal political committee",
     "parent": "",
-    "evidence": "FEC committee C00109017 identifies this as a qualified corporate PAC and records AT&T Inc. as the separate connected corporation. Historical AT&T Federal PAC wording is retained as committee history rather than a corporate alias.",
+    "evidence": "FEC committee C00109017 identifies this as a qualified corporate PAC and records AT&T Inc. as the separate connected corporation. Historical AT&T Federal PAC wording is retained as committee history rather than a corporate alias. AT&T Federal PAC is a verified historical FEC-filed committee name under C00109017; it remains separate from AT&T Inc.",
     "sources": [
-      "https://www.fec.gov/data/committee/C00109017?cycle=2026&tab=about-committee"
+      "https://www.fec.gov/data/committee/C00109017?cycle=2026&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00109017"
     ],
     "reviewed": "2026-11-25"
   },
@@ -4519,13 +4522,14 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "TIBER CREEK GROUP"
+      "TIBER CREEK GROUP",
+      "PECK MADIGAN JONES"
     ],
     "name": "Tiber Creek Group",
     "status": "Source-backed",
     "scope": "Government-relations firm / brand",
     "parent": "",
-    "evidence": "Tiber Creek Group's official site identifies Timothy Molino and Nikole Burroughs as partners and states that the firm was formerly Peck Madigan Jones. No parent or legal suffix is established.",
+    "evidence": "Tiber Creek Group's official site identifies Timothy Molino and Nikole Burroughs as partners and states that the firm was formerly Peck Madigan Jones. No parent or legal suffix is established. Tiber Creek Group's official history identifies Peck Madigan Jones as the firm's former name before the 2021 rebrand.",
     "sources": [
       "https://www.tibercreekgroup.com/about",
       "https://www.tibercreekgroup.com/team"
@@ -4663,6 +4667,855 @@ export const businessIdentities = [
     "sources": [
       "https://www.fec.gov/data/committee/C00365122",
       "https://www.visa.com/en-us/company/political-engagement"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN LAND TITLE ASSOCIATION TITLE INDUSTRY PAC (TIPAC)"
+    ],
+    "name": "American Land Title Association Title Industry PAC (TIPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00012914 identifies TIPAC and documents its former Title Industry Political Action Committee name. The American Land Title Association is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00012914"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF LETTER CARRIERS OF U.S.A. POLITICAL FUND (LETTER CARRIER POLITICAL"
+    ],
+    "name": "National Association of Letter Carriers of U.S.A. Political Fund (Letter Carrier Political Fund)",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00023580 supplies the full committee identity behind this truncated reported name and documents prior committee names. The labor organization remains separate from the PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00023580"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE COUNCIL OF INSURANCE AGENTS & BROKERS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "The Council of Insurance Agents & Brokers Political Action Committee (CouncilPAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00039578 identifies CouncilPAC as the separate political committee of The Council of Insurance Agents & Brokers.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00039578",
+      "https://www.ciab.com/government-political-affairs/councilpac"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE COUNCIL OF INSURANCE AGENTS & BROKERS"
+    ],
+    "name": "The Council of Insurance Agents & Brokers",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "The Council is the separate connected association of CouncilPAC. It is not an alias of the PAC.",
+    "sources": [
+      "https://www.ciab.com/",
+      "https://www.fec.gov/data/committee/C00039578"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRUCKING POLITICAL ACTION COMMITTEE OF THE AMERICAN TRUCKING ASSOCIATIONS INC."
+    ],
+    "name": "Trucking Political Action Committee of the American Trucking Associations Inc.",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00002881 identifies the current committee and its earlier names. American Trucking Associations Inc. is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00002881"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNITEDHEALTH GROUP INCORPORATED PAC (UNITEDHEALTH GROUP PAC)"
+    ],
+    "name": "UnitedHealth Group Incorporated PAC (UnitedHealth Group PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00274431 identifies UnitedHealth Group PAC. UnitedHealth Group Incorporated is the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00274431"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNITEDHEALTH GROUP INCORPORATED"
+    ],
+    "name": "UnitedHealth Group Incorporated",
+    "status": "Source-backed",
+    "scope": "Legal entity / healthcare parent company",
+    "parent": "",
+    "evidence": "UnitedHealth Group Incorporated is the public healthcare parent company. Its federal PAC is a separate political committee and is not an alias of the corporation.",
+    "sources": [
+      "https://www.unitedhealthgroup.com/",
+      "https://www.fec.gov/data/committee/C00274431"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VERIZON COMMUNICATIONS, INC. POLITICAL ACTION COMMITTEE (VERIZON PAC)"
+    ],
+    "name": "Verizon Communications, Inc. Political Action Committee (Verizon PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00186288 identifies Verizon PAC and its historical committee names. Verizon Communications Inc. is the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00186288"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VERIZON COMMUNICATIONS, INC."
+    ],
+    "name": "Verizon Communications Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / telecommunications parent company",
+    "parent": "",
+    "evidence": "SEC filings identify Verizon Communications Inc. as the public parent. Its federal PAC is a separate committee.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm",
+      "https://www.fec.gov/data/committee/C00186288"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WHOLESALE AND SPECIALTY INSURANCE ASSOCIATION PAC"
+    ],
+    "name": "Wholesale & Specialty Insurance Association PAC (WSIA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00417634 identifies WSIA PAC and documents the former NAPSLO PAC name. Wholesale & Specialty Insurance Association is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00417634"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WHOLESALE AND SPECIALTY INSURANCE ASSOCIATION"
+    ],
+    "name": "Wholesale & Specialty Insurance Association",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "WSIA is the separate association connected to WSIA PAC. The association and political committee remain distinct identities.",
+    "sources": [
+      "https://www.wsia.org/",
+      "https://www.fec.gov/data/committee/C00417634"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GILA RIVER INDIAN COMMUNITY"
+    ],
+    "name": "Gila River Indian Community",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal government",
+    "parent": "",
+    "evidence": "Official tribal and federal sources identify Gila River Indian Community as a sovereign federally recognized tribal government in Arizona.",
+    "sources": [
+      "https://gilariver.org/",
+      "https://www.epa.gov/system/files/documents/2024-04/gila-river-indian-community-pcap.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CTC"
+    ],
+    "name": "Chicago Trading Company",
+    "status": "Source-backed",
+    "scope": "Trading-firm brand / group",
+    "parent": "",
+    "evidence": "Chicago Trading Company's official site identifies the CTC brand. FINRA records tie Eric Chern to CTC, LLC and CTC Holdings, LLC, so the short reported employer is retained at group/brand scope rather than assigned to one legal entity.",
+    "sources": [
+      "https://www.chicagotrading.com/our-company",
+      "https://brokercheck.finra.org/individual/summary/2981240"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EQUITY INQUIRY PROJECT INC."
+    ],
+    "name": "Equity Inquiry Project, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / education organization",
+    "parent": "",
+    "evidence": "The organization's official site identifies Equity Inquiry Project, Inc. (EquIP) and Dr. Arlene J. Ford as founder and CEO/principal facilitator, matching the donor context.",
+    "sources": [
+      "https://www.equityinquiry.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GTS"
+    ],
+    "name": "GTS",
+    "status": "Source-backed",
+    "scope": "Financial-markets business group / brand",
+    "parent": "",
+    "evidence": "Regulatory records tie David Lieberman to GTS Management Partners LLC and affiliated GTS businesses. The bare GTS employer is therefore retained at brand/group scope rather than assigned to one legal entity.",
+    "sources": [
+      "https://files.brokercheck.finra.org/firm/firm_149224.pdf",
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1048426"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OBERLAND CAPITAL"
+    ],
+    "name": "Oberland Capital Management LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Oberland Capital Management LLC and the firm's official team page identifies Andrew Rubinstein as managing partner.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/169109",
+      "https://oberlandcapital.com/team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STERLINGRISK INSURANCE"
+    ],
+    "name": "SterlingRisk",
+    "status": "Source-backed",
+    "scope": "Insurance brokerage brand",
+    "parent": "",
+    "evidence": "SterlingRisk's official privacy and leadership pages identify Sterling & Sterling LLC doing business as SterlingRisk and identify David Sterling as CEO. The reported employer remains at brand scope.",
+    "sources": [
+      "https://www.sterlingrisk.com/privacy-policy",
+      "https://www.sterlingrisk.com/leadership/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VIBRANT CAPITAL PARTNERS"
+    ],
+    "name": "Vibrant Capital Partners, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "Regulatory materials identify Vibrant Capital Partners, Inc. and document DFG Investment Advisers, Inc. as its former name. The firm's official site identifies Philip Darivoff as chairman.",
+    "sources": [
+      "https://www.vibrantcapitalpartners.com/team.html",
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1035055"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF REAL ESTATE INVESTMENT TRUSTS, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "National Association of Real Estate Investment Trusts, Inc. Political Action Committee (Nareit PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00303339 identifies the PAC. National Association of Real Estate Investment Trusts, Inc. (Nareit) is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00303339"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF REAL ESTATE INVESTMENT TRUSTS, INC."
+    ],
+    "name": "National Association of Real Estate Investment Trusts, Inc. (Nareit)",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "Nareit is the separate association connected to its federal PAC; the PAC and association are not aliases.",
+    "sources": [
+      "https://www.reit.com/about-nareit",
+      "https://www.fec.gov/data/committee/C00303339"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COX ENTERPRISES PAC COXPAC, INC."
+    ],
+    "name": "Cox Enterprises PAC (COXPAC) Inc.",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00477653 identifies COXPAC as a qualified corporate PAC. Cox Enterprises Inc. is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00477653"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DAVITA HEALTHCARE PARTNERS, INC. POLITICAL ACTION COMMITTEE (DAPAC)"
+    ],
+    "name": "DaVita Inc. Political Action Committee (DAPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00340943 identifies the current DaVita Inc. Political Action Committee and preserves the reported DaVita HealthCare Partners committee wording as a former name under the same committee ID.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00340943"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MINDSET"
+    ],
+    "name": "Mindset Advocacy, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / public-affairs and lobbying firm",
+    "parent": "",
+    "evidence": "Mindset's official site identifies Heather Slavkin Corzo and Langston Emerson in senior roles, and federal lobbying records identify Mindset Advocacy, LLC as the registrant.",
+    "sources": [
+      "https://mindsetdc.com/news-press/press-release-heather-slavkin-corzo-joins-mindsets-financial-services-practice-as-principal",
+      "https://mindsetdc.com/who-we-are/langston-emerson",
+      "https://lda.gov/filings/public/contribution/c58c3a9f-7f8a-40d3-a213-d749ddb8332b/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL EMERGENCY MEDICINE POLITICAL ACTION COMMITTEE / AMERICAN COLLEGE OF EMERGENCY PHYSICIANS"
+    ],
+    "name": "National Emergency Medicine Political Action Committee / American College of Emergency Physicians (NEMPAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00140061 identifies NEMPAC. The American College of Emergency Physicians is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00140061?cycle=2026&tab=about-committee",
+      "https://www.acep.org/yps/newsroom/yps-newsroom-articles/nempac-what-young-physicians-need-to-know"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SCHUSTERMAN INTERESTS LLC"
+    ],
+    "name": "Schusterman Interests, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment manager",
+    "parent": "",
+    "evidence": "SEC filings identify Schusterman Interests, LLC as an institutional investment manager. It remains separate from Schusterman Family Philanthropies.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1857024/000089914025000696/xslForm13F_X02/primary_doc.xml",
+      "https://www.schusterman.org/who-we-are/our-team/stacy-schusterman"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LONGBRIDGE FINANCIAL"
+    ],
+    "name": "Longbridge Financial, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / mortgage company",
+    "parent": "Ellington Financial Inc.",
+    "evidence": "Ellington's SEC filing identifies Longbridge Financial, LLC as a wholly owned subsidiary of Ellington Financial Inc.; Longbridge's official team page identifies Christopher Mayer as CEO.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1411342/000162828026055148/efc-20260630.htm",
+      "https://longbridge-financial.com/our-team/team-members/christopher-mayer-phd"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MASHANTUCKET PEQUOT TRIBAL NATION"
+    ],
+    "name": "Mashantucket (Western) Pequot Tribe",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal government; official alias",
+    "parent": "",
+    "evidence": "The tribe's own law states that Mashantucket (Western) Pequot Tribe is also known as Mashantucket Pequot Tribal Nation.",
+    "sources": [
+      "https://law.mptn-nsn.gov/globalassets/laws/53-m.p.t.l.-sovereign-immunity-as-of-tcr081524-01.pdf",
+      "https://www.mptn-nsn.gov/government/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "POET PAC"
+    ],
+    "name": "POET PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00450692 identifies POET PAC. POET, LLC is the separate connected operating company.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00450692?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "POET"
+    ],
+    "name": "POET, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / biofuels company",
+    "parent": "",
+    "evidence": "Federal and company records identify POET, LLC and Jeff Broin as founder/CEO. Broin Companies, LLC is documented as a former name. POET PAC is a separate committee.",
+    "sources": [
+      "https://www.fec.gov/files/legal/aos/2011-10/1174826.pdf",
+      "https://poet.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "YOCHA DEHE WINTUN NATION"
+    ],
+    "name": "Yocha Dehe Wintun Nation",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal government",
+    "parent": "",
+    "evidence": "The Nation's official site documents its current sovereign name and the former Rumsey Band of Wintun Indians name.",
+    "sources": [
+      "https://yochadehe.gov/2009/09/14/tribal-name-change/",
+      "https://yochadehe.gov/tribal-government"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SEAN N PARKER FOUNDATION"
+    ],
+    "name": "Sean N Parker Foundation",
+    "status": "Source-backed",
+    "scope": "Nonprofit private foundation",
+    "parent": "",
+    "evidence": "Public nonprofit filings identify Sean N Parker Foundation as a California private foundation. It remains separate from The Parker Foundation.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/274389819",
+      "https://www.prnewswire.com/news-releases/sean-parker-commits-600-million-to-launch-the-parker-foundation-300104105.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SUSMAN GODFREY"
+    ],
+    "name": "Susman Godfrey L.L.P.",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "Susman Godfrey's official biographies identify Bill Carmody and Shawn J. Rabin as partners/trial lawyers, matching the donor context.",
+    "sources": [
+      "https://www.susmangodfrey.com/attorneys/Bill-Carmody/",
+      "https://www.susmangodfrey.com/attorneys/Shawn-J-Rabin/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "7WIRE VENTURES"
+    ],
+    "name": "7WIRE VENTURES, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / venture-capital firm",
+    "parent": "",
+    "evidence": "SEC adviser records identify 7WIRE VENTURES, LLC and separate related management/fund entities. The official site identifies Glen Tullman as co-founder and partner.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/287776/PDF/287776.pdf",
+      "https://www.7wireventures.com/team/glen-tullman/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARP LLC"
+    ],
+    "name": "Atlanta Restaurant Partners, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / restaurant business",
+    "parent": "",
+    "evidence": "GLEIF identifies Atlanta Restaurant Partners, LLC and the affiliated company biography identifies Daniel Halpern as CEO/co-founder. Jackmont Hospitality is a separate management company.",
+    "sources": [
+      "https://www.gleif.org/lei/549300518DPZVDYUID13",
+      "http://www.jackmont.com/about/ownership"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MINDY GRAY"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "Mindy Gray is publicly identified as owner/proprietor of the Sagaponack General Store, but the reported employer is her own name and the reviewed evidence does not establish the store's exact legal entity. Do not replace the reported employer with an assumed LLC or corporation.",
+    "sources": [
+      "https://www.grayfoundation.org/who-we-are"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MURMURATION INC."
+    ],
+    "name": "Murmuration Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / social-welfare nonprofit",
+    "parent": "",
+    "evidence": "Public nonprofit filings identify Murmuration Inc. as a New York 501(c)(4), and the organization's official leadership page identifies Emma Bloomberg as founder and CEO.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/472415772",
+      "https://murmuration.org/leadership/emma-bloomberg"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RADCO"
+    ],
+    "name": "RADCO",
+    "status": "Source-backed",
+    "scope": "Real-estate investment and management group / brand",
+    "parent": "",
+    "evidence": "RADCO's official site identifies Norman Radow as founder and CEO. The umbrella brand spans multiple legal entities, so no unsupported LLC suffix or parent is assigned.",
+    "sources": [
+      "https://radco.us/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RLJ DEVELOPMENT, LLC"
+    ],
+    "name": "RLJ Development, LLC",
+    "status": "Source-backed",
+    "scope": "Historical legal entity / hospitality investment platform",
+    "parent": "",
+    "evidence": "SEC materials identify RLJ Development, LLC and Thomas J. Baltimore Jr. as co-founder/president. RLJ Lodging Trust later succeeded to interests and operations but is not an alias of the historical employer.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1511337/000104746911009974/R6.htm",
+      "https://investor.rljlodgingtrust.com/ir-resources/investor-faqs"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VERIZON"
+    ],
+    "name": "Verizon",
+    "status": "Source-backed",
+    "scope": "Telecommunications group / brand",
+    "parent": "Verizon Communications Inc.",
+    "evidence": "Verizon's SEC filing uses Verizon for Verizon Communications Inc. and consolidated subsidiaries. The bare employer is retained at group/brand scope rather than assigned to a subsidiary.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/vz-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BAE SYSTEMS INC. POLITICAL ACTION COMMITTEE (BAE SYSTEMS USA PAC)"
+    ],
+    "name": "BAE Systems Inc. Political Action Committee (BAE Systems USA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00281212 identifies BAE Systems USA PAC. BAE Systems, Inc. is the separate connected U.S. corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00281212"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BAE SYSTEMS INC."
+    ],
+    "name": "BAE Systems, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / U.S. defense subsidiary",
+    "parent": "BAE Systems plc",
+    "evidence": "BAE Systems identifies BAE Systems, Inc. as its U.S. entity within the BAE Systems plc group.",
+    "sources": [
+      "https://www.baesystems.com/en-us/who-we-are"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FINSECA PAC"
+    ],
+    "name": "Finseca PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00447565 identifies Finseca PAC. Finseca is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00447565"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FINSECA"
+    ],
+    "name": "Finseca",
+    "status": "Source-backed",
+    "scope": "Trade / professional association",
+    "parent": "",
+    "evidence": "Finseca's official history describes the 2020 unification of AALU and GAMA International. Its federal PAC is a separate political committee.",
+    "sources": [
+      "https://www.finseca.org/about/history",
+      "https://www.fec.gov/data/committee/C00447565"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE VANGUARD GROUP COMMITTEE FOR RESPONSIBLE GOVERNMENT"
+    ],
+    "name": "The Vanguard Group Committee for Responsible Government",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00410266 identifies Vanguard's qualified corporate PAC. The Vanguard Group, Inc. is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00410266",
+      "https://corporate.vanguard.com/content/corporatesite/us/en/corp/why-vanguard/sets-us-apart/ownership.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COLLEGE OF CARDIOLOGY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American College of Cardiology Political Action Committee (HeartPAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00375360 identifies HeartPAC. The American College of Cardiology is the separate connected organization.",
+    "sources": [
+      "https://docquery.fec.gov/cgi-bin/forms/C00375360/1689093"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COLLEGE OF CARDIOLOGY"
+    ],
+    "name": "American College of Cardiology",
+    "status": "Source-backed",
+    "scope": "Professional membership organization",
+    "parent": "",
+    "evidence": "The American College of Cardiology is the separate connected organization of HeartPAC; the association and PAC remain distinct.",
+    "sources": [
+      "https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/About-ACC/Governance/ACC-Bylaws.pdf",
+      "https://docquery.fec.gov/cgi-bin/forms/C00375360/1689093"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COLLEGE OF PHYSICIAN SERVICES INC PAC; AKA ACP SERVICES PAC"
+    ],
+    "name": "American College of Physician Services Inc PAC (ACP Services PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00403881 identifies the committee and ACP Services PAC alias. American College of Physician Services, Inc. is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00403881",
+      "https://acpservicespac.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN EXPRESS COMPANY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Express Company Political Action Committee (AXPPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00040535 identifies AXPPAC. American Express Company is the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00040535"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN EXPRESS COMPANY"
+    ],
+    "name": "American Express Company",
+    "status": "Source-backed",
+    "scope": "Legal entity / financial-services company",
+    "parent": "",
+    "evidence": "SEC filings identify American Express Company. Its federal PAC is a separate political committee.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/4962/000000496225000016/axp-20241231.htm",
+      "https://www.fec.gov/data/committee/C00040535"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN PODIATRIC MEDICAL ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Podiatric Medical Association Political Action Committee (APMAPAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00008839 identifies APMAPAC and its former PPAC shorthand. The American Podiatric Medical Association is the separate connected association.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00008839?cycle=2026&tab=about-committee",
+      "https://www.apma.org/advocacy/take-action/apmapac/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN PODIATRIC MEDICAL ASSOCIATION"
+    ],
+    "name": "American Podiatric Medical Association",
+    "status": "Source-backed",
+    "scope": "Professional membership organization",
+    "parent": "",
+    "evidence": "APMA is the separate connected association of APMAPAC; the association and PAC remain distinct.",
+    "sources": [
+      "https://www.apma.org/",
+      "https://www.fec.gov/data/committee/C00008839?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CISCO"
+    ],
+    "name": "Cisco",
+    "status": "Source-backed",
+    "scope": "Technology group / brand",
+    "parent": "Cisco Systems, Inc.",
+    "evidence": "Cisco's official legal-entity information identifies Cisco Systems, Inc. as the public company. The bare employer is retained at brand/group scope.",
+    "sources": [
+      "https://www.cisco.com/c/en/us/about/legal/terms-sale-software-license-agreement/company-registration-information.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL CABLE & TELECOMMUNICATIONS ASSOCIATION PAC"
+    ],
+    "name": "NCTA – The Internet & Television Association Political Action Committee (NCTAPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00010082 identifies NCTAPAC and preserves the National Cable & Telecommunications Association PAC wording as a historical committee name.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00010082"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL CABLE & TELECOMMUNICATIONS ASSOCIATION"
+    ],
+    "name": "NCTA – The Internet & Television Association",
+    "status": "Source-backed",
+    "scope": "Trade association; former name",
+    "parent": "",
+    "evidence": "NCTA's official announcement documents National Cable & Telecommunications Association as the former organization name and NCTA – The Internet & Television Association as the current name. Its federal PAC remains separate.",
+    "sources": [
+      "https://www.ncta.com/news/why-ncta-is-now-the-internet-television-association",
+      "https://www.fec.gov/data/committee/C00010082"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TEACHERS INSURANCE ANNUITY ASSOCIATION OF AMERICA PAC (TIAA PAC)"
+    ],
+    "name": "Teachers Insurance and Annuity Association of America PAC (TIAA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00431361 identifies TIAA PAC. Teachers Insurance and Annuity Association of America is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00431361"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TEACHERS INSURANCE ANNUITY ASSOCIATION OF AMERICA"
+    ],
+    "name": "Teachers Insurance and Annuity Association of America",
+    "status": "Source-backed",
+    "scope": "Legal entity / financial-services organization",
+    "parent": "",
+    "evidence": "TIAA's audited statements identify Teachers Insurance and Annuity Association of America. Its federal PAC is separate.",
+    "sources": [
+      "https://www.tiaa.org/public/pdf/t/tiaa-audited-statutory-basis-financial-statements-2025.pdf",
+      "https://www.fec.gov/data/committee/C00431361"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE PROCTER & GAMBLE COMPANY GOOD GOVERNMENT FUND"
+    ],
+    "name": "The Procter & Gamble Company Good Government Fund",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00257329 identifies P&G's qualified corporate PAC. The Procter & Gamble Company is the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00257329",
+      "https://us.pg.com/structure-and-governance/articles-of-incorporation/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ZURICH HOLDING COMPANY OF AMERICA, INC. COMMITTEE FOR GOOD GOVERNMENT (Z-PAC)"
+    ],
+    "name": "Zurich Holding Company of America, Inc. Committee for Good Government (Z-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00235036 identifies Z-PAC/Zurich PAC. Zurich Holding Company of America, Inc. is the separate connected company; GLEIF identifies Zürich Versicherungs-Gesellschaft AG as its direct parent.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00235036",
+      "https://www.gleif.org/lei/549300UWJXVWVO6BRM06"
     ],
     "reviewed": "2026-11-25"
   }
