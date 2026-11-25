@@ -10534,5 +10534,282 @@ export const businessIdentities = [
       "https://docquery.fec.gov/pdf/042/202505019758906042/202505019758906042.pdf"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROADSPIRE"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / claims-services brand",
+    "parent": "",
+    "evidence": "Broadspire is a widely used claims-services name, but the reviewed sources did not establish which exact legal entity employed James McElroy or independently corroborate the reported Account Executive context. No Crawford/Broadspire entity is forced into the record.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALSCO INC."
+    ],
+    "name": "ALSCO INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / uniform, linen and facility-services company",
+    "parent": "",
+    "evidence": "Business records identify Alsco Inc. as a corporation and Robert C. Steiner as President; the company is also publicly branded as Alsco Uniforms. The reported employer is kept separate from regional operating locations.",
+    "sources": [
+      "https://www.bbb.org/us/nc/charlotte/profile/cleaning-services/alsco-inc-0473-92001625",
+      "https://api.opensosdata.com/entity/oregon/alsco-inc-a-corporation-of-nevada-or-655522/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GW RETIL CONSULTING"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / consulting business name",
+    "parent": "",
+    "evidence": "The reported GW RETIL CONSULTING string appears misspelled or abbreviated, and reviewed sources did not establish an exact employer identity for Gary White. No similarly named retail-consulting company is merged.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WPG INTERNATIONAL LIMITED INC"
+    ],
+    "name": "WPG INTERNATIONAL LIMITED INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / Florida-registered foreign corporation",
+    "parent": "",
+    "evidence": "Florida corporate filings identify WPG INTERNATIONAL LIMITED INC. and William Pigman as President. Federal campaign records independently use the same employer and President/Owner occupation.",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/GetDocument?aggregateId=forp-f10000000458-da98b7c5-2826-4a33-ad11-dd9637877826&formatType=PDF&transactionId=f10000000458-d3f60de7-30b7-449c-8ad9-d7725d806273",
+      "https://docquery.fec.gov/pdf/096/202604089857025096/202604089857025096.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BITTER ROOT RC&D"
+    ],
+    "name": "BITTER ROOT RESOURCE CONSERVATION AND DEVELOPMENT AREA, INC.",
+    "status": "Source-backed",
+    "scope": "Nonprofit resource-conservation and rural-development organization",
+    "parent": "",
+    "evidence": "Bitter Root RC&D materials identify the full nonprofit name and Pam Gouse in leadership; partner materials specifically identify her as Executive Director. The abbreviated donor employer maps to the organization.",
+    "sources": [
+      "https://www.bitterrootrcd.org/working-with-mna",
+      "https://www.blueforest.org/our-impact/insights-news-resources/partner-profile-bitter-root-rcd/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALTERNATIVE LIVING CONCEPTS"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / human-services business name",
+    "parent": "",
+    "evidence": "The generic Alternative Living Concepts name produced multiple unrelated human-services businesses, and the reviewed sources did not establish which one corresponds to Venetta Greenhowe. No same-name organization is merged.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BEATRICE ADVISORS"
+    ],
+    "name": "BEATRICE ADVISORS",
+    "status": "Source-backed",
+    "scope": "Independent multi-family office / advisory firm brand",
+    "parent": "",
+    "evidence": "Beatrice Advisors' official site identifies the New York multi-family office and Christina Lewis as its founder. The donor's fuller name and Chairwoman title are not independently used to expand the identity beyond the reported firm.",
+    "sources": [
+      "https://beatriceadvisors.com/about-us/",
+      "https://beatriceadvisors.com/founder/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROWN BROWN INS"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / insurance business shorthand",
+    "parent": "",
+    "evidence": "The BROWN BROWN INS string is ambiguous and could refer to multiple Brown/Brown & Brown insurance businesses. Reviewed sources did not establish the exact employer for Sandi Brown, so no normalization is forced.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CAREOREGON"
+    ],
+    "name": "CAREOREGON, INC.",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit health-plan entity",
+    "parent": "",
+    "evidence": "Oregon public records identify CareOregon, Inc. and Eric Hunter as President and CEO. The company is kept separate from CareOregon Foundation, Health Share of Oregon and other affiliated entities.",
+    "sources": [
+      "https://www.oregon.gov/oha/FOD/Filings/SCAN-Communication-dated-3-27-2023-PUBLIC-RECORDS-VERSION.pdf",
+      "https://opengovus.com/sam-entity/LM6ZPVK2JTM5"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EASTERN YACHT SALES"
+    ],
+    "name": "EASTERN YACHT SALES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / yacht brokerage",
+    "parent": "",
+    "evidence": "The Yacht Brokers Association of America identifies Eastern Yacht Sales, Inc. and Jon Rotenberg as President. The shortened reported employer maps to the brokerage.",
+    "sources": [
+      "https://members.ybaa.org/member-directory/Details/eastern-yacht-sales-inc-4551778"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GARNEY"
+    ],
+    "name": "GARNEY",
+    "status": "Source-backed",
+    "scope": "Employee-owned water and wastewater infrastructure construction firm / brand",
+    "parent": "",
+    "evidence": "Garney's official leadership materials identify Mark Garrett as Chief People Officer and describe the employee-owned construction company. The bare employer is retained at firm/brand scope without inventing a fuller legal entity.",
+    "sources": [
+      "https://www.garney.com/about/leadership/",
+      "https://www.garney.com/about/leadership/mark-garrett/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HANLEY FOUNDATION"
+    ],
+    "name": "THE HANLEY FOUNDATION",
+    "status": "Source-backed",
+    "scope": "Private philanthropic foundation",
+    "parent": "",
+    "evidence": "Nonprofit filings identify The Hanley Foundation and Kathryn J. Hanley as Vice President. The donor-reported Executive Director title is not corroborated by the current filing and is retained only as record context.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/522204367"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HIGHLANDER PARTNERS"
+    ],
+    "name": "HIGHLANDER PARTNERS",
+    "status": "Source-backed",
+    "scope": "Private-equity investment firm / brand",
+    "parent": "",
+    "evidence": "Highlander Partners' official team page identifies James J. Laureys as Vice President. The reported employer is retained at firm/brand scope rather than assigned to a particular fund or management entity.",
+    "sources": [
+      "https://highlander-partners.com/team/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HUMAN SOLUTIONS"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / human-services organization name",
+    "parent": "",
+    "evidence": "Human Solutions is a generic organization name used by multiple entities, and reviewed sources did not establish the exact employer associated with Mary Pritchard's executive record. No entity is assigned by name similarity.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JUMBURRITO INC"
+    ],
+    "name": "JUMBURRITO, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / Texas restaurant company",
+    "parent": "",
+    "evidence": "Texas corporate-record data identifies Jumburrito, Inc. as an active corporation and Jose Cuevas as President/Director; state biographical material identifies him as president and founder. The restaurant company remains distinct from individual locations.",
+    "sources": [
+      "https://www.corporationwiki.com/Texas/Midland/jumburrito-inc/29662908.aspx",
+      "https://www.txdirectory.com/online/person/?id=24908"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LALIEWORKS CREATIVE CONTENT SERVICES"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / creative-services business",
+    "parent": "",
+    "evidence": "Reviewed sources did not establish an authoritative legal or operating identity for LalieWorks Creative Content Services tied to Lalie Tongour. The reported business name remains unresolved.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LEVEL ONE PARTNERS LLC"
+    ],
+    "name": "LEVEL ONE PARTNERS, LLC",
+    "status": "Source-backed",
+    "scope": "Legal/private family investment firm",
+    "parent": "",
+    "evidence": "Virginia gubernatorial appointment materials identify Robert Hardie as Co-Chairman and CEO of Level One Partners, LLC, a private family investment firm. H7 Holdings, LLC is separately named and is not merged.",
+    "sources": [
+      "https://www.governor.virginia.gov/newsroom/news-releases/2026/march-releases/name-1114391-en.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NAADAC THE ASSN FOR ADDICTION PROFESSI"
+    ],
+    "name": "NAADAC, THE ASSOCIATION FOR ADDICTION PROFESSIONALS",
+    "status": "Source-backed",
+    "scope": "National professional membership association",
+    "parent": "",
+    "evidence": "NAADAC's official staff directory identifies Terrence D. Walton as Executive Director and CEO. The truncated reported employer maps to the association and is not merged with state affiliates.",
+    "sources": [
+      "https://www.naadac.org/staff-directory?staff=7582",
+      "https://www.naadac.org/executive-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NEW MEXICO CANCER CENTER"
+    ],
+    "name": "NEW MEXICO CANCER CENTER",
+    "status": "Source-backed",
+    "scope": "Cancer-care practice brand operated by New Mexico Oncology Hematology Consultants, Ltd.",
+    "parent": "",
+    "evidence": "New Mexico Cancer Center's official site states that NMCC is operated by New Mexico Oncology Hematology Consultants Ltd. and identifies Barbara McAneny as CEO. The brand remains separate from the operating legal practice and foundation.",
+    "sources": [
+      "https://nmcancercenter.org/",
+      "https://nmcancercenter.org/barbara-l-mcaneny-md/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOODLE PARTNERS PBC"
+    ],
+    "name": "NOODLE",
+    "status": "Source-backed",
+    "scope": "Education technology and services business / operating brand",
+    "parent": "",
+    "evidence": "Noodle's official site identifies John Katzman as Chief Executive Officer. The reported NOODLE PARTNERS PBC form is preserved as an alias while the directory uses the current operating brand; no unrelated Noodle entity is merged.",
+    "sources": [
+      "https://www.noodle.com/about-us/"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

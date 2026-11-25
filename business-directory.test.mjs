@@ -511,3 +511,21 @@ test('twelfth executive-priority batch resolves exact employers while keeping ge
   assert.equal(groups.find(g=>g.name==='PC DEVELOPMENT GROUP, INC.').research.scope,'Historical Florida legal entity / development company');
   assert.equal(groups.find(g=>g.name==='THE NOEL POINTER FOUNDATION, INC.').research.status,'Source-backed');
 });
+
+
+test('thirteenth executive-priority batch separates exact organizations from ambiguous shorthand', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'McElroy',employer:'BROADSPIRE',occupation:'ACCOUNT EXECUTIVE',sector:'Insurance',committee:'a',amount:100},
+    {type:'individual',name:'White',employer:'GW RETIL CONSULTING',occupation:'CEO',sector:'Consulting',committee:'a',amount:200},
+    {type:'individual',name:'Brown',employer:'BROWN BROWN INS',occupation:'INSURANCE AGENT/PRINCIPAL',sector:'Insurance',committee:'a',amount:300},
+    {type:'individual',name:'Hunter',employer:'CAREOREGON',occupation:'EXECUTIVE',sector:'Healthcare',committee:'a',amount:400},
+    {type:'individual',name:'Walton',employer:'NAADAC THE ASSN FOR ADDICTION PROFESSI',occupation:'CEO',sector:'Nonprofit',committee:'a',amount:500},
+    {type:'individual',name:'McAneny',employer:'NEW MEXICO CANCER CENTER',occupation:'PHYSICIAN CEO',sector:'Healthcare',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='BROADSPIRE').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='GW RETIL CONSULTING').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='BROWN BROWN INS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='CAREOREGON, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='NAADAC, THE ASSOCIATION FOR ADDICTION PROFESSIONALS').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='NEW MEXICO CANCER CENTER').research.scope,'Cancer-care practice brand operated by New Mexico Oncology Hematology Consultants, Ltd.');
+});

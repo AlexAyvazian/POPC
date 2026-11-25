@@ -158,3 +158,10 @@ XSB, Dyniftic Corporation, Blue Sky Enterprises d/b/a FS Medical Technology, Acu
 The next 20 priority identities from S2Insight through PC Development Group were reviewed. United General Bakeries, Showtime Exhibits, Skylight, FIN and Redberri Innovation remain unresolved because the reviewed public evidence does not establish one exact employer identity tied to the donor context.
 
 S2Insight, Oliver & Company, Oregon Lions Sight & Hearing Foundation, San Luis Valley Health, Tricorp Group, White Management, National Council on Compensation Insurance, Nearly Bros d/b/a Bodo's Bagels, The Noel Pointer Foundation, H. P. Kopplemann, Applied Behavior Consultants, Franklin Young International, Kennington, MindPlace and historical PC Development Group, Inc. were source-backed. PC Development Group, Inc. remains distinct from the later/current LLC; no successor entity is merged into the historical donor employer.
+
+
+## Executive-priority identity research — batch 13 — November 25, 2026
+
+The next 20 priority identities from Broadspire through Noodle Partners were reviewed. Broadspire, GW Retil Consulting, Alternative Living Concepts, Brown Brown Ins, Human Solutions and LalieWorks Creative Content Services remain unresolved because the reported shorthand or generic name does not identify one exact employer.
+
+Alsco, WPG International, Bitter Root RC&D, Beatrice Advisors, CareOregon, Eastern Yacht Sales, Garney, The Hanley Foundation, Highlander Partners, Jumburrito, Level One Partners, NAADAC and New Mexico Cancer Center were source-backed at the legal or organization scope supported by evidence. New Mexico Cancer Center remains a practice brand operated by New Mexico Oncology Hematology Consultants Ltd. Noodle Partners PBC is retained as an alias under the source-backed Noodle operating brand.
