@@ -14089,5 +14089,356 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00488262/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NUCLEAR ENERGY INSTITUTE FEDERAL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "NUCLEAR ENERGY INSTITUTE FEDERAL POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00239848 identifies Nuclear Energy Institute Federal Political Action Committee as an active qualified trade-association PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00239848/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OFFICE AND PROFESSIONAL EMPLOYEES INTERNATIONAL UNION (OPEIU VOTES)",
+      "OFFICE AND PROFESSIONAL EMPLOYEES INTERNATIONAL UNION (OPEIU) JB MOSS VOICE OF THE ELECTORATE (VOTE)"
+    ],
+    "name": "OFFICE AND PROFESSIONAL EMPLOYEES INTERNATIONAL UNION (OPEIU) JB MOSS VOICE OF THE ELECTORATE (VOTE)",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee; recipient-file shorthand",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00007898 is the durable committee identity. Current FEC records use Office and Professional Employees International Union (OPEIU) JB Moss Voice of the Electorate (VOTE), while 2026 recipient filings report the shorthand Office and Professional Employees International Union (OPEIU VOTES) with the same committee ID.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00007898/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/153/202601289794269153/202601289794269153.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ONEMAIN HOLDINGS, INC. PAC"
+    ],
+    "name": "ONEMAIN HOLDINGS, INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00682492 identifies OneMain Holdings, Inc. PAC and lists OneMain Holdings, Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00682492/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PITNEY BOWES INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "PITNEY BOWES INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00339499 identifies Pitney Bowes Inc. Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00339499/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PLANNED PARENTHOOD ACTION FUND INC. PAC, DBA PLANNED PARENTHOOD FEDERAL PAC",
+      "PLANNED PARENTHOOD ACTION FUND INC PAC, DBA PLANNED PARENTHOOD FEDERAL PAC"
+    ],
+    "name": "PLANNED PARENTHOOD ACTION FUND INC PAC, DBA PLANNED PARENTHOOD FEDERAL PAC",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee; donor-file punctuation variant",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00314617 identifies Planned Parenthood Action Fund Inc PAC, DBA Planned Parenthood Federal PAC. The donor-file form differs only by punctuation after INC and is retained as an exact alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00314617/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PLASTERERS' AND CEMENT MASONS' ACTION COMMITTEE",
+      "OPERATIVE PLASTERERS' AND CEMENT MASONS' INTL ASSOCIATION ACTION COMMITTEE"
+    ],
+    "name": "OPERATIVE PLASTERERS' AND CEMENT MASONS' INTL ASSOCIATION ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee; historical committee name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00134742 is the durable committee identity. FEC enforcement records identify the historical name Plasterers' and Cement Masons' Action Committee under C00134742; current FEC records use Operative Plasterers' and Cement Masons' Intl Association Action Committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00134742/?cycle=2026&tab=about-committee",
+      "https://www.fec.gov/data/legal/administrative-fine/3607/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PNL COMPANIES"
+    ],
+    "name": "PNL COMPANIES",
+    "status": "Source-backed",
+    "scope": "Real-estate investment and development company / reported employer",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "PNL Companies' official leadership page identifies David Porter as Founding Partner, matching the employer and executive role reported in the donor data. This identity is restricted to individual employer records.",
+    "sources": [
+      "https://pnlcompanies.com/leadership/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PRECISION NEUROMED INC."
+    ],
+    "name": "PRECISION NEUROMED INC.",
+    "status": "Source-backed",
+    "scope": "Clinical-stage biotechnology company / reported employer",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "Precision NeuroMed's official team page identifies John Geschke as a member of its team, matching the exact employer reported in the donor data. This identity is restricted to individual employer records.",
+    "sources": [
+      "https://precisionneuromed.com/team/john-geschke/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PROPERTY GROUP PARTNERS"
+    ],
+    "name": "PROPERTY GROUP PARTNERS",
+    "status": "Source-backed",
+    "scope": "Real-estate development, ownership and management company / reported employer",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "Property Group Partners' official site identifies the company as a fully integrated real-estate company focused on development, ownership and management of office buildings. This identity is restricted to individual employer records.",
+    "sources": [
+      "https://pgp.us.com/about/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "QUALITY PUBLIC SCHOOLS PAC"
+    ],
+    "name": "QUALITY PUBLIC SCHOOLS PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00569806 identifies Quality Public Schools PAC as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00569806/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "REAL ESTATE ROUNDTABLE POLITICAL ACTION COMMITTEE (REALPAC)",
+      "THE REAL ESTATE ROUNDTABLE POLITICAL ACTION COMMITTEE (REALPAC)"
+    ],
+    "name": "THE REAL ESTATE ROUNDTABLE POLITICAL ACTION COMMITTEE (REALPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; historical committee name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00033779 is the durable committee identity. Earlier FEC records used Real Estate Roundtable Political Action Committee (REALPAC) without the leading THE; current records use The Real Estate Roundtable Political Action Committee (REALPAC).",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00033779/?cycle=2012&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00033779/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ROYAL CARIBBEAN GROUP USA INC. PAC"
+    ],
+    "name": "ROYAL CARIBBEAN GROUP USA INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00869230 identifies Royal Caribbean Group USA Inc. PAC as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00869230/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SAMMONS ENTERPRISES INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "SAMMONS ENTERPRISES INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00388777 identifies Sammons Enterprises Inc. Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00388777/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SEAFARERS POLITICAL ACTIVITY DONATION - SEAFARERS INTERNATIONAL UNION OF NA-AGLIWD/NMU",
+      "SEAFARERS POLITICAL ACTIVITY DONATION - SEAFARERS INTERNATIONAL UNION OF NA-AGLIW"
+    ],
+    "name": "SEAFARERS POLITICAL ACTIVITY DONATION - SEAFARERS INTERNATIONAL UNION OF NA-AGLIW",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee; historical/recipient-file name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00004325 is the durable committee identity. FEC filings show the donor-file NA-AGLIWD/NMU form under the same ID; current FEC records use the NA-AGLIW committee name.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00004325/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/917/201605109015397917/201605109015397917.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SEIU COPE",
+      "SEIU COPE (SERVICE EMPLOYEES INTERNATIONAL UNION COMMITTEE ON POLITICAL EDUCATION)"
+    ],
+    "name": "SEIU COPE (SERVICE EMPLOYEES INTERNATIONAL UNION COMMITTEE ON POLITICAL EDUCATION)",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee; recipient-file shorthand",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00004036 identifies SEIU COPE (Service Employees International Union Committee on Political Education). FEC recipient records use the shorthand SEIU COPE with the same committee ID.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00004036/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/474/202105119446453474/202105119446453474.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SHEET METAL WORKERS' INTERNATIONAL ASSOCIATION POLITICAL ACTION LEAGUE"
+    ],
+    "name": "SHEET METAL WORKERS' INTERNATIONAL ASSOCIATION POLITICAL ACTION LEAGUE",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00007542 identifies Sheet Metal Workers' International Association Political Action League as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00007542/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOCIETY OF INTERVENTIONAL RADIOLOGY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "SOCIETY OF INTERVENTIONAL RADIOLOGY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00408435 identifies Society of Interventional Radiology Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00408435/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOLSTICE ADVANCED MATERIALS INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "SOLSTICE ADVANCED MATERIALS INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00895235 identifies Solstice Advanced Materials Inc. Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00895235/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SYNGENTA CORPORATION EMPLOYEE POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "SYNGENTA CORPORATION EMPLOYEE POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00363945 identifies Syngenta Corporation Employee Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00363945/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TACONIC PARTNERS"
+    ],
+    "name": "TACONIC PARTNERS",
+    "status": "Source-backed",
+    "scope": "New York real-estate investment and development company / reported employer",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "Taconic Partners' official site identifies the firm as a New York real-estate owner, operator and developer. This identity is restricted to individual employer records.",
+    "sources": [
+      "https://taconicpartners.com/about/"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

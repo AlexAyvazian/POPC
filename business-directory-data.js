@@ -1,4 +1,4 @@
-import {businessIdentities} from './business-identities.js?v=39';
+import {businessIdentities} from './business-identities.js?v=40';
 import {normalize, config, occupationGroup, loadResearchRecords} from './research-data.js?v=1';
 
 export async function loadDirectoryRecords() {
