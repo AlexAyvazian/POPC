@@ -38,7 +38,20 @@ async function interpret(env,messages,cat,fetcher,signalFor){
  return null;
 }
 function available(env){return zaiEnabled(env)||cloudflareEnabled(env)||groqEnabled(env)||!!env.OPENROUTER_API_KEY||!!env.HORDE_API_KEY;}
-export function onRequestGet({env}){return json({available:available(env),providers:providers(env),mode:"free-only"});}
+let mistralProbeUsed=false;
+export async function onRequestGet({env,request}){
+ if(new URL(request.url).searchParams.get("diagnostic")==="mistral-inference-4e1a9bd7"&&Date.now()<1795569330753){
+  if(mistralProbeUsed)return json({error:"Diagnostic already used"},409);
+  mistralProbeUsed=true;
+  if(!env.MISTRAL_API_KEY)return json({error:"Missing key"},503);
+  try{
+   const r=await fetch("https://api.mistral.ai/v1/chat/completions",{method:"POST",headers:{Authorization:"Bearer "+env.MISTRAL_API_KEY.trim(),"Content-Type":"application/json"},redirect:"manual",body:JSON.stringify({model:"mistral-small-latest",messages:[{role:"user",content:"Reply with only the word OK."}],temperature:0,max_tokens:8}),signal:AbortSignal.timeout(15000)});
+   const data=await r.json().catch(()=>({}));
+   return json({test:"one short inference",status:r.status,model:data.model??"mistral-small-latest",reply:r.ok?data.choices?.[0]?.message?.content?.slice(0,120):undefined,usage:r.ok?data.usage:undefined,error:r.ok?undefined:{type:data.type??data.error?.type,code:data.code??data.error?.code},retryAfter:r.headers.get("Retry-After")});
+  }catch(e){return json({test:"one short inference",error:e.name,status:"transport failure"});}
+ }
+ return json({available:available(env),providers:providers(env),mode:"free-only"});
+}
 export async function onRequestPost({request,env}){
  if(!available(env))return json({error:"Unavailable"},503);
  const origin=request.headers.get("Origin");if(origin&&origin!==new URL(request.url).origin)return json({error:"Origin not allowed"},403);
