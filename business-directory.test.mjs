@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {buildDirectory, identifyName, isResearchEligibleGroup, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js';
+import {buildDirectory, identifyName, isResearchEligibleGroup, researchPriorityReasons, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js';
 import {loadResearchRecords, config} from './research-data.js';
 
 test('all eight datasets reconcile; every receipt remains in one directory group', async () => {
@@ -41,25 +41,29 @@ test('explicit PAC titles retain originals, legal suffixes and separate amounts'
   assert.equal(identifyName({type:'individual',employer:'SELF EMPLOYED - A BUSINESS'}).personal,false);
 });
 
-test('research queue excludes one-person employer noise but keeps meaningful identities', () => {
+test('priority queue includes executive single-donor employers but excludes ordinary one-person employer noise', () => {
   const groups=buildDirectory([
     {type:'individual',name:'Small Donor',employer:'CLOVIS HOSPITAL',occupation:'NURSE',sector:'Healthcare',committee:'a',amount:3000},
     {type:'individual',name:'Small Donor',employer:'CLOVIS HOSPITAL',occupation:'NURSE',sector:'Healthcare',committee:'b',amount:2500},
     {type:'individual',name:'Employee One',employer:'MULTI EMPLOYER',occupation:'STAFF',sector:'Services',committee:'a',amount:1000},
     {type:'individual',name:'Employee Two',employer:'MULTI EMPLOYER',occupation:'STAFF',sector:'Services',committee:'a',amount:1200},
-    {type:'individual',name:'Research Donor',employer:'NETFLIX',occupation:'CEO',sector:'Media',committee:'a',amount:5000},
+    {type:'individual',name:'Executive Donor',employer:'ONE PERSON EXEC CO',occupation:'CHIEF FINANCIAL OFFICER',sector:'Finance',committee:'a',amount:5000},
     {type:'organization',name:'TINY COMMUNITY PAC',sector:'Advocacy',committee:'a',amount:1000}
   ]);
   const clovis=groups.find(g=>g.name==='CLOVIS HOSPITAL');
   const multi=groups.find(g=>g.name==='MULTI EMPLOYER');
+  const exec=groups.find(g=>g.name==='ONE PERSON EXEC CO');
   assert.equal(clovis.individualDonors.size,1);
   assert.equal(isResearchEligibleGroup(clovis),false);
   assert.equal(multi.individualDonors.size,2);
   assert.equal(isResearchEligibleGroup(multi),true);
+  assert.equal(exec.individualDonors.size,1);
+  assert.equal(isResearchEligibleGroup(exec),true);
+  assert(researchPriorityReasons(exec).includes('Executive donor: Other C-suite officers'));
   const promoted=selectDirectory(groups,{view:'promoted'});
   assert(!promoted.some(g=>g.name==='CLOVIS HOSPITAL'));
   assert(promoted.some(g=>g.name==='MULTI EMPLOYER'));
-  assert(promoted.some(g=>g.name==='NETFLIX, INC.'));
+  assert(promoted.some(g=>g.name==='ONE PERSON EXEC CO'));
   assert(promoted.some(g=>g.organizationCount===1));
   assert(selectDirectory(groups,{view:'promoted',query:'CLOVIS HOSPITAL'}).some(g=>g.name==='CLOVIS HOSPITAL'));
   assert(selectDirectory(groups,{view:'employers'}).some(g=>g.name==='CLOVIS HOSPITAL'));

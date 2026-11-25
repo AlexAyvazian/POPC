@@ -65,3 +65,10 @@ All unreviewed non-personal business, employer, association, organization and PA
 
 For display and batch ordering only, the interface may prioritize PAC / organization receipt identities, already researched identities, and employers reported by at least two distinct individual donors. The checkpoint “unreviewed” count always means **every** preserved non-personal identity without research status.
 
+
+
+## Executive-donor priority expansion — November 25, 2026
+
+The master unreviewed backlog continues to preserve every non-personal unreviewed identity. The priority queue now also includes single-donor employers when at least one associated individual receipt reports a high-influence role in one of these existing occupation groups: chief executive officer; chair/board member/trustee; other C-suite officer; vice president; president; founder/business owner; partner/principal; or other executive/managing director.
+
+This uses the same `occupationGroup()` classifier already used by Combined Total Contributions and Analysis. Ordinary one-person employer strings such as a staff-level hospital employer remain outside the priority view, while executive-linked employer identities move into the research queue without changing any underlying record or amount.

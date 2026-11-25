@@ -1,5 +1,5 @@
 import {businessIdentities} from './business-identities.js?v=13';
-import {normalize, config, loadResearchRecords} from './research-data.js?v=1';
+import {normalize, config, occupationGroup, loadResearchRecords} from './research-data.js?v=1';
 
 export async function loadDirectoryRecords() {
   const direct = await loadResearchRecords();
@@ -90,11 +90,33 @@ export function buildDirectory(records) {
   return [...groups.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 
+const executivePriorityGroups = new Set([
+  'Chief executive officers',
+  'Chairs / board members / trustees',
+  'Other C-suite officers',
+  'Vice presidents',
+  'Presidents',
+  'Founders / business owners',
+  'Partners / principals',
+  'Other executives / managing directors'
+]);
+
+export function researchPriorityReasons(group) {
+  const reasons = [];
+  if (group.personal) return reasons;
+  if (group.research) reasons.push('Already researched');
+  if (group.organizationCount > 0 || group.organizationMemoCount > 0) reasons.push('PAC / organization receipt');
+  if (group.individualDonors.size >= 2) reasons.push('2+ distinct individual donors');
+  const executiveRoles = [...new Set(group.records
+    .filter(r => r.type === 'individual')
+    .map(r => occupationGroup(r.occupation))
+    .filter(role => executivePriorityGroups.has(role)))].sort();
+  for (const role of executiveRoles) reasons.push('Executive donor: '+role);
+  return reasons;
+}
+
 export function isResearchEligibleGroup(group) {
-  if (group.personal) return false;
-  if (group.research) return true;
-  if (group.organizationCount > 0 || group.organizationMemoCount > 0) return true;
-  return group.individualDonors.size >= 2;
+  return researchPriorityReasons(group).length > 0;
 }
 
 export function selectDirectory(groups, {query = '', sector = '', view = 'promoted', research = ''} = {}) {

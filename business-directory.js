@@ -81,7 +81,7 @@ try {
   records = await loadDirectoryRecords();
   for (const c of config) $('bd-committee').add(new Option(c.name,c.key));
   updateGroups();
-  $('bd-status').textContent = `All eight committees loaded · ${number(records.filter(r=>!r.memo).length)} direct records and ${number(records.filter(r=>r.memo).length)} memo records accounted for. Single-donor employer-only names remain preserved but are excluded from the research queue; employers shared by two or more distinct donors remain research-eligible. All preserved employer names are still available by search or from the Show menu.`;
+  $('bd-status').textContent = `All eight committees loaded · ${number(records.filter(r=>!r.memo).length)} direct records and ${number(records.filter(r=>r.memo).length)} memo records accounted for. Single-donor employer-only names remain preserved. The priority queue also includes single-donor employers when the donor reports a high-influence executive role; all preserved employer names remain available by search or from the Show menu.`;
   for (const el of document.querySelectorAll('.ca-controls input,.ca-controls select,#bd-reset,#bd-download')) el.disabled=false;
 } catch (error) {
   $('bd-status').textContent = 'Unable to load all committee records. Reload to retry.';
