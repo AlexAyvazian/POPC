@@ -75,18 +75,26 @@ export function buildDirectory(records) {
     const key = JSON.stringify([identity.personal, identity.name]);
     let group = groups.get(key);
     if (!group) {
-      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), committees: new Set(), individual: 0, organization: 0, individualCount: 0, organizationCount: 0, individualMemoCount: 0, organizationMemoCount: 0, count: 0, memoCount: 0, records: [], research: identity.research};
+      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), committees: new Set(), individualDonors: new Set(), individual: 0, organization: 0, individualCount: 0, organizationCount: 0, individualMemoCount: 0, organizationMemoCount: 0, count: 0, memoCount: 0, records: [], research: identity.research};
       groups.set(key, group);
     }
     group.names.add(identity.reported);
     group.methods.add(identity.method);
     group.sectors.add(record.sector);
     group.committees.add(record.committee);
+    if (record.type === 'individual') group.individualDonors.add(normalize(record.name || 'NOT REPORTED'));
     if (record.memo) {group.memoCount++;group[record.type+'MemoCount']++;}
     else {group[record.type] += record.amount;group[record.type+'Count']++;group.count++;}
     group.records.push(record);
   }
   return [...groups.values()].sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export function isResearchEligibleGroup(group) {
+  if (group.personal) return false;
+  if (group.research) return true;
+  if (group.organizationCount > 0 || group.organizationMemoCount > 0) return true;
+  return group.individualDonors.size >= 2;
 }
 
 export function selectDirectory(groups, {query = '', sector = '', view = 'promoted', research = ''} = {}) {
@@ -101,7 +109,7 @@ export function selectDirectory(groups, {query = '', sector = '', view = 'promot
     // Default combined research view: actual PAC/organization receipt identities
     // plus names that have been researched. A typed search can still surface any
     // preserved employer-only name without promoting all one-off employers.
-    return Boolean(g.research) || g.organizationCount > 0 || g.organizationMemoCount > 0 || Boolean(q);
+    return isResearchEligibleGroup(g) || Boolean(q);
   };
   return groups.filter(g => matchesView(g)
     && (!research || (g.research?.status || 'Not reviewed') === research)

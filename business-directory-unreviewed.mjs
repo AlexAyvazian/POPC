@@ -1,12 +1,14 @@
 import fs from 'node:fs/promises';
-import {buildDirectory, loadDirectoryRecords} from './business-directory-data.js';
+import {buildDirectory, isResearchEligibleGroup, loadDirectoryRecords} from './business-directory-data.js';
 
 globalThis.fetch = async path => new Response(await fs.readFile(new URL(path, import.meta.url)));
 
 const rows = await loadDirectoryRecords();
 const groups = buildDirectory(rows);
-const unreviewed = groups
-  .filter(g => !g.personal && !g.research)
+const researchEligible = groups.filter(isResearchEligibleGroup);
+const excludedEmployerOnly = groups.filter(g => !g.personal && !g.research && !isResearchEligibleGroup(g));
+const unreviewed = researchEligible
+  .filter(g => !g.research)
   .sort((a,b) => ((b.individual+b.organization)-(a.individual+a.organization)) || (b.count-a.count) || a.name.localeCompare(b.name))
   .map(g => ({
     name: g.name,
@@ -32,6 +34,8 @@ const unreviewed = groups
 await fs.writeFile('unreviewed-business-identities.json', JSON.stringify({
   generatedAt: new Date().toISOString(),
   count: unreviewed.length,
+  researchEligibleCount: researchEligible.length,
+  preservedExcludedEmployerOnlyCount: excludedEmployerOnly.length,
   unreviewed
 }, null, 2));
-console.log(JSON.stringify({unreviewedExported:unreviewed.length}));
+console.log(JSON.stringify({unreviewedExported:unreviewed.length,researchEligible:researchEligible.length,preservedExcludedEmployerOnly:excludedEmployerOnly.length}));

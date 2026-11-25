@@ -57,3 +57,16 @@ The business/organization identity research interface remains inside `transactio
 
 The directory preserves source links, research-status filtering, parent-name search, CSV export, original-record details, PAC / organization receipts separately from individual receipts, and memo records with memo amounts excluded from direct totals.
 
+
+
+## Research-backlog qualification — November 25, 2026
+
+The unreviewed backlog now counts only names that qualify as research identities:
+
+- any identity with a direct or memo PAC / organization receipt;
+- any identity already researched (source-backed or unresolved); or
+- an employer reported by at least **two distinct individual donors**.
+
+An unreviewed employer reported by only one distinct individual donor no longer inflates the research backlog, even when that donor has multiple receipt records. Those employer strings and every underlying contribution/memo record remain preserved and searchable; they are excluded from prioritization, not deleted or merged.
+
+The queue exporter and the default research view use the same qualification rule so the visible backlog and exported unreviewed count stay consistent.
