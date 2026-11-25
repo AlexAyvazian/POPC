@@ -2337,5 +2337,504 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00104299"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MORGAN STANLEY"
+    ],
+    "name": "Morgan Stanley",
+    "status": "Source-backed",
+    "scope": "Legal entity / financial holding company",
+    "parent": "",
+    "evidence": "SEC records identify Morgan Stanley as the Delaware public-company parent and document Morgan Stanley Dean Witter & Co. as its former legal name. Morgan Stanley Political Action Committee is a separate federal committee.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/895421/000095013003001275/d10k.htm",
+      "https://www.fec.gov/data/committee/C00337626"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF REALTORS"
+    ],
+    "name": "National Association of REALTORS",
+    "status": "Source-backed",
+    "scope": "Trade / membership association",
+    "parent": "",
+    "evidence": "NAR is the national real-estate trade and membership association; its former name was National Association of Real Estate Boards. The National Association of Realtors Political Action Committee is a separate federal committee.",
+    "sources": [
+      "https://www.nar.realtor/about-nar/governing-documents/nar-constitution-bylaws",
+      "https://www.fec.gov/data/committee/C00030718"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL AUTOMOBILE DEALERS ASSOCIATION"
+    ],
+    "name": "National Automobile Dealers Association",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "NADA is the national trade association for franchised new-car and new-truck dealers. NADA PAC is a separate federal committee; historical DEAC wording is PAC history, not a former association name.",
+    "sources": [
+      "https://www.nada.org/nada/about-nada/about-nada",
+      "https://www.fec.gov/data/committee/C00040998"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL BEER WHOLESALERS ASSOCIATION"
+    ],
+    "name": "National Beer Wholesalers Association",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "NBWA is the national trade association for independent beer and beverage distributors. Its federal political action committee is a separate committee connected to the association.",
+    "sources": [
+      "https://www.nbwa.org/about/",
+      "https://www.fec.gov/data/committee/C00144766"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL HEALTH CORPORATION"
+    ],
+    "name": "National Health Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity",
+    "parent": "",
+    "evidence": "SEC-filed transaction documents identify National Health Corporation as a distinct seller entity and separately identify National HealthCare Corporation and its subsidiary NHC/OP, L.P. The similarly named companies are not merged.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1047335/000143774926017374/nhc20260515_8k.htm",
+      "https://www.sec.gov/Archives/edgar/data/1047335/000143774926017374/ex_963623.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL MULTIFAMILY HOUSING COUNCIL"
+    ],
+    "name": "National Multifamily Housing Council",
+    "status": "Source-backed",
+    "scope": "Housing-industry membership organization",
+    "parent": "",
+    "evidence": "NMHC is the national membership organization for rental-housing owners, managers, developers, and suppliers. NMHC PAC is a separate federal political committee connected to the council.",
+    "sources": [
+      "https://www.nmhc.org/About",
+      "https://www.fec.gov/data/committee/C00130773"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NEW YORK LIFE INSURANCE COMPANY"
+    ],
+    "name": "New York Life Insurance Company",
+    "status": "Source-backed",
+    "scope": "Legal entity / mutual insurer",
+    "parent": "",
+    "evidence": "New York Life identifies New York Life Insurance Company as the mutual insurer and documents Nautilus Insurance Company as its historical founding name. Its federal PAC is a separate committee.",
+    "sources": [
+      "https://www.newyorklife.com/newsroom/key-milestones-in-new-york-lifes-history",
+      "https://www.gleif.org/lei/TAE73CY392TBWJ3O3305",
+      "https://www.fec.gov/data/committee/C00158881"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ONEIDA INDIAN NATION"
+    ],
+    "name": "Oneida Indian Nation",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal nation / government",
+    "parent": "",
+    "evidence": "Federal records identify Oneida Indian Nation as a federally recognized sovereign tribe in New York. It remains distinct from other Oneida governments, including the Oneida Nation in Wisconsin.",
+    "sources": [
+      "https://www.federalregister.gov/documents/2024/12/11/2024-29005/indian-entities-recognized-by-and-eligible-to-receive-services-from-the-united-states-bureau-of",
+      "https://www.bia.gov/as-ia/oig/gaming-compacts/2023-02-17/oneida-indian-nation-decision"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PECHANGA BAND OF INDIANS"
+    ],
+    "name": "Pechanga Band of Indians",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal nation / government",
+    "parent": "",
+    "evidence": "Federal records identify Pechanga Band of Indians as the current federally recognized tribal name and document the longer historical federal-list name. Tribal enterprises are separate entities and are not merged into the tribal government.",
+    "sources": [
+      "https://www.federalregister.gov/documents/2023/01/12/2023-00504/indian-entities-recognized-by-and-eligible-to-receive-services-from-the-united-states-bureau-of",
+      "https://www.pechanga-nsn.gov/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "POARCH BAND OF CREEK INDIANS"
+    ],
+    "name": "Poarch Band of Creek Indians",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal nation / government",
+    "parent": "",
+    "evidence": "Federal and tribal sources identify Poarch Band of Creek Indians as a federally recognized sovereign tribe. PCI Gaming Authority, Wind Creek Hospitality, and other tribal enterprises remain separate.",
+    "sources": [
+      "https://www.govinfo.gov/content/pkg/FR-2024-12-11/html/2024-29005.htm",
+      "https://pci-nsn.gov/our-story/history"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE GOLDMAN SACHS GROUP, INC."
+    ],
+    "name": "The Goldman Sachs Group, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / financial holding company",
+    "parent": "",
+    "evidence": "GLEIF and company materials identify The Goldman Sachs Group, Inc. as the top-level corporate parent. Goldman Sachs is its common shorthand; the firm's federal PAC is a separate political committee.",
+    "sources": [
+      "https://www.gleif.org/lei/784F5XWPLTWKTBV3E584",
+      "https://www.goldmansachs.com/investor-relations/corporate-governance/corporate-governance-documents/political-statement.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COZEN O'CONNOR"
+    ],
+    "name": "Cozen O'Connor",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "Cozen O'Connor's official materials identify the U.S. firm and document Orlofsky, Cozen & Begier as a former firm name. Cozen O'Connor Political Action Committee is a separate federal PAC.",
+    "sources": [
+      "https://www.cozen.com/about/firm-history",
+      "https://www.cozen.com/privacy-policy",
+      "https://www.fec.gov/data/committee/C00312777"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AAJ"
+    ],
+    "name": "American Association for Justice",
+    "status": "Source-backed",
+    "scope": "Professional membership association",
+    "parent": "",
+    "evidence": "AAJ documents American Association for Justice as its current name and National Association of Claimants' Compensation Attorneys and Association of Trial Lawyers of America as prior names. AAJ PAC is a separate federal committee.",
+    "sources": [
+      "https://www.justice.org/about-us/aaj-history",
+      "https://www.fec.gov/data/committee/C00024521"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AIR LINE PILOTS ASSOCIATION"
+    ],
+    "name": "Air Line Pilots Association, International",
+    "status": "Source-backed",
+    "scope": "Labor union",
+    "parent": "",
+    "evidence": "ALPA's constitution identifies Air Line Pilots Association, International as the labor union's formal name. ALPA-PAC is a separate federal labor political committee.",
+    "sources": [
+      "https://www.alpa.org/-/media/Project/ALPA/Alpa/Files/ALPA-Documents/Administrative/constitution-and-by-laws.pdf",
+      "https://www.fec.gov/data/committee/C00035451"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALLIED PILOTS ASSOCIATION"
+    ],
+    "name": "Allied Pilots Association",
+    "status": "Source-backed",
+    "scope": "Labor union",
+    "parent": "",
+    "evidence": "APA identifies Allied Pilots Association as the independent bargaining representative for American Airlines pilots. The Allied Pilots Association Political Action Committee is a separate federal PAC.",
+    "sources": [
+      "https://www.alliedpilots.org/Public-Pages/Public/About",
+      "https://www.fec.gov/data/committee/C00267849"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN AIRLINES"
+    ],
+    "name": "American Airlines, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / airline subsidiary",
+    "parent": "American Airlines Group Inc.",
+    "evidence": "SEC records identify American Airlines, Inc. as the operating airline and American Airlines Group Inc. as its parent holding company. The airline's PAC is a separate political committee.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/6201/000000620126000014/aal-20251231.htm",
+      "https://news.aa.com/centennial/our-stories/history-of-american-airlines",
+      "https://www.fec.gov/data/committee/C00107300"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN FEDERATION OF TEACHERS, AFL-CIO COPE"
+    ],
+    "name": "American Federation of Teachers, AFL-CIO Committee on Political Education (AFT COPE)",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00028860 identifies AFT COPE as the federal political committee connected to the American Federation of Teachers, AFL-CIO. The union remains a separate organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00028860",
+      "https://www.aft.org/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN HOTEL AND LODGING ASSOCIATION POLITICAL ACTION COMMITTEE ('HOTELPAC')"
+    ],
+    "name": "American Hotel and Lodging Association Political Action Committee (HotelPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00001198 identifies HotelPAC as the association's federal political committee. The American Hotel & Lodging Association is a separate trade association with historical American Hotel & Motel Association naming.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00001198",
+      "https://www.ahla.com/sites/default/files/2026-AHLA-Policy-Guide.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN MEDICAL ASSOCIATION"
+    ],
+    "name": "American Medical Association",
+    "status": "Source-backed",
+    "scope": "Professional membership association",
+    "parent": "",
+    "evidence": "AMA is the national medical membership association. AMPAC is a separate federal political committee connected to the American Medical Association.",
+    "sources": [
+      "https://www.ama-assn.org/about",
+      "https://www.fec.gov/data/committee/C00000422"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ANHEUSER-BUSCH COMPANIES INC."
+    ],
+    "name": "Anheuser-Busch Companies, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / former corporate form",
+    "parent": "",
+    "evidence": "SEC and FEC materials identify Anheuser-Busch Companies, LLC as the current company form and Anheuser-Busch Companies Inc. as the former corporate form used in older records. The company is part of the Anheuser-Busch InBev group, but the precise current direct intermediary parent was not established.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1668717/000119312526088105/d65314d20f.htm",
+      "https://www.fec.gov/data/committee/C00034488"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BANK OF AMERICA CORPORATION FEDERAL"
+    ],
+    "name": "Bank of America Corporation Federal PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00364778 identifies Bank of America Corporation Federal PAC as a separate political committee connected to Bank of America Corporation. The PAC is not an alias of the parent corporation or its bank subsidiaries.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00364778",
+      "https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BEYOND FINANCE"
+    ],
+    "name": "Beyond Finance, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / financial-services company",
+    "parent": "",
+    "evidence": "Beyond Finance's legal notice identifies Beyond Finance, LLC. Its federal employee PAC is a separate committee; the current direct parent is not established by the reviewed sources.",
+    "sources": [
+      "https://beyondfinance.com/legal/privacy-notice",
+      "https://www.fec.gov/data/committee/C00781963"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLACKROCK CAPITAL MANAGEMENT"
+    ],
+    "name": "BlackRock Capital Management, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser subsidiary",
+    "parent": "BlackRock, Inc.",
+    "evidence": "SEC adviser and LEI records identify BlackRock Capital Management, Inc. as a distinct investment adviser and BlackRock, Inc. as its parent. BlackRock PAC is a separate federal political committee.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1038339",
+      "https://www.gleif.org/lei/549300K1YWSA5XFNI631"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CAPITAL ONE FINANCIAL CORP. ASSOC. POLITICAL FUND"
+    ],
+    "name": "Capital One Financial Corp. Assoc. Political Fund",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00326595 identifies this as a qualified corporate political committee connected to Capital One Financial Corporation. The PAC remains separate from the corporation and its bank subsidiary.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00326595",
+      "https://investor.capitalone.com/static-files/0f92d64a-245b-4497-bc95-5433235d84cc"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CHS/COMMUNITY HEALTH SYSTEMS, INC. POLITICAL ACTION CMTE (CHS PAC)"
+    ],
+    "name": "CHS/Community Health Systems, Inc. Political Action Cmte (CHS PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00485896 identifies CHS PAC and its connected organization CHS/Community Health Systems, Inc., a subsidiary distinct from the publicly listed parent Community Health Systems, Inc. The PAC and both corporate levels remain separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00485896",
+      "https://www.sec.gov/Archives/edgar/data/1108109/000119312526059509/cyh-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CITIGROUP INC. POLITICAL ACTION COMMITTEE - FEDERAL (CITIGROUP PAC-FEDERAL)"
+    ],
+    "name": "Citigroup Inc. Political Action Committee - Federal (Citigroup PAC-Federal)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC records identify Citi PAC-Federal as a separate federal political committee connected to Citigroup Inc. Citigroup Inc. is the top-level company; Citicorp and Citibank remain separate related entities.",
+    "sources": [
+      "https://docquery.fec.gov/cgi-bin/forms/C00008474/1976261",
+      "https://www.sec.gov/Archives/edgar/data/831001/000083100126000011/c-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CORNING INCORPORATED EMPLOYEES POLITICAL ACTION COMMITTEE (COREPAC)"
+    ],
+    "name": "Corning Incorporated Employees Political Action Committee (COREPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC records identify COREPAC as a political committee associated with Corning Incorporated. Corning Incorporated is a separate company and was formerly Corning Glass Works.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=Corning%20Incorporated%20Employees%20Political%20Action%20Committee",
+      "https://www.sec.gov/Archives/edgar/data/24741/000002474126000124/glw-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CULAC THE PAC OF CREDIT UNION NATIONAL ASSOCIATION"
+    ],
+    "name": "America's Credit Unions PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; former name",
+    "parent": "",
+    "evidence": "CUNA and NAFCU merged in 2024 to form America's Credit Unions. FEC committee C00007880 is the current America's Credit Unions PAC; the reported CULAC/Credit Union National Association wording is a historical committee identity tied to the predecessor association.",
+    "sources": [
+      "https://www.americascreditunions.org/about-us/our-story",
+      "https://docquery.fec.gov/cgi-bin/forms/C00007880/2010443"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INVESTMENT COMPANY INSTITUTE"
+    ],
+    "name": "Investment Company Institute",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "ICI is the asset-management industry trade association and was formerly the National Association of Investment Companies before its 1961 renaming. ICI PAC is a separate federal political committee.",
+    "sources": [
+      "https://www.ici.org/about-the-investment-company-institute",
+      "https://www.ici.org/system/files/attachments/97_ici_annual.pdf",
+      "https://www.fec.gov/data/committee/C00105981"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KPMG PARTNERS/PRINCIPALS AND"
+    ],
+    "name": "KPMG Partners/Principals and Employees PAC",
+    "status": "Source-backed",
+    "scope": "Federal professional-services political committee",
+    "parent": "",
+    "evidence": "FEC committee C00280222 identifies KPMG Partners/Principals and Employees PAC as an active qualified federal PAC. KPMG LLP and the wider KPMG network remain separate legal/brand identities.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00280222/?cycle=2026",
+      "https://kpmg.com/us/en/home/misc/legal.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LOCKHEED MARTIN CORPORATION EMPLOYEES'"
+    ],
+    "name": "Lockheed Martin Corporation Employees' Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00303024 identifies the employee PAC connected to Lockheed Martin Corporation. Lockheed Martin Corporation remains a separate public company formed from the Lockheed and Martin Marietta combination.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00303024",
+      "https://investors.lockheedmartin.com/static-files/e539e975-ec19-4f0a-9b02-f4a21eafb215"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PRICEWATERHOUSECOOPERS"
+    ],
+    "name": "PricewaterhouseCoopers (PwC)",
+    "status": "Source-backed",
+    "scope": "Professional-services network / brand",
+    "parent": "",
+    "evidence": "PwC's official structure statement explains that PricewaterhouseCoopers and PwC are network brands used by separate legal entities. A bare PricewaterhouseCoopers identity is therefore kept at network/brand scope rather than assigned to one legal firm.",
+    "sources": [
+      "https://www.pwc.com/structure",
+      "https://www.pwc.com/us/en/about-us/pwc-llp-transparency-report.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION"
+    ],
+    "name": "National Air Traffic Controllers Association",
+    "status": "Source-backed",
+    "scope": "Labor union",
+    "parent": "",
+    "evidence": "NATCA is a federal-sector labor union affiliated with the AFL-CIO. Its federal PAC (FEC C00238725) is a separate political committee connected to the union; federation affiliation is not a corporate parent relationship.",
+    "sources": [
+      "https://www.natca.org/wp-content/uploads/2025/08/2025-NATCA-Constitution.pdf",
+      "https://www.fec.gov/data/committee/C00238725"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
