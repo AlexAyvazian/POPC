@@ -195,3 +195,12 @@ The STATE FARM record is intentionally not treated as an individual contribution
 The remaining single-donor executive-priority names from Druck Enterprises through RADCO Management were reviewed. This batch intentionally preserves historical and legal boundaries rather than merging on a shared founder or brand.
 
 Noodle Education Inc. is source-backed as its own historical Delaware corporation and remains separate from the already researched Noodle Partners PBC / NOODLE identity. World Trade Center Performing Arts Center, Inc. is the source-backed historical PACWTC nonprofit. Guac-Lock, Pajarito Powder, Bhinder Hospitality, Transition Express, Pennsylvania Housing Finance Agency and RADCO Management were resolved to source-backed entities. R/GA, Galindo Group and Mariposa Labs remain source-backed at agency/group/business scope. The UW HEALTH donor record is specifically mapped to SwedishAmerican Hospital d/b/a UW Health because that filing directly identifies Patricia DeWane as CFO and Treasurer.
+
+
+## PAC / organization priority research — batch 18 — November 25, 2026
+
+The first post-executive priority batch reviewed the 20 highest-dollar remaining PAC / organization identities, each with $7,500 in direct receipts in the donor dataset.
+
+Every federal PAC remains a distinct identity from its connected company, association or labor organization. Historical recipient-file names for Cardinal Health, Fresenius Medical Care and the marine-industry BOAT PAC were mapped through their durable FEC committee IDs to the current FEC committee names rather than merged into the connected organizations.
+
+The raw donor string “INTERNATIONAL ASSOCIATION OF FIRE FIGHTERS” is organization-record shorthand for FIREPAC (FEC C00029447) in these Jeffries committee receipts. Its research alias is explicitly restricted to organization records; an individual who reports International Association of Fire Fighters as an employer remains an employer record and does not get reclassified as the PAC.

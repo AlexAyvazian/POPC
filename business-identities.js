@@ -11839,5 +11839,291 @@ export const businessIdentities = [
       "https://radco.us/"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CARDINAL HEALTH INC. PAC A/K/A CARDINAL HEALTH COMPANIES PAC"
+    ],
+    "name": "CARDINAL HEALTH INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00332833 is the active Cardinal Health Inc. PAC. Recipient filings historically used the longer 'A/K/A Cardinal Health Companies PAC' name; the durable FEC ID establishes the same committee without merging Cardinal Health Inc. itself into the PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00332833/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COLLEGE OF AMERICAN PATHOLOGISTS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "COLLEGE OF AMERICAN PATHOLOGISTS POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00274944 identifies the active qualified College of American Pathologists Political Action Committee. The College of American Pathologists remains a separate connected membership organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00274944/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COMMERCIAL REAL ESTATE FINANCE COUNCIL PAC"
+    ],
+    "name": "COMMERCIAL REAL ESTATE FINANCE COUNCIL PAC",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00411173 identifies CREFC PAC as an active qualified membership-organization PAC and identifies Commercial Real Estate Finance Council as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00411173/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FRESENIUS MEDICAL CARE NORTH AMERICA PAC"
+    ],
+    "name": "FRESENIUS MEDICAL CARE HOLDINGS, INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee; historical reported name",
+    "parent": "",
+    "evidence": "FEC committee C00401299 is currently named Fresenius Medical Care Holdings, Inc. Political Action Committee. Recipient filings previously reported the same durable committee ID as Fresenius Medical Care North America PAC, so the old donor string is linked to the current PAC rather than to the operating company.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00401299/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LPL FINANCIAL LLC POLITICAL ACTION COMMITTEE (LPL PAC)"
+    ],
+    "name": "LPL FINANCIAL LLC POLITICAL ACTION COMMITTEE (LPL PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00486217 identifies LPL PAC as an active qualified corporation PAC and LPL Financial LLC as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00486217/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF MUTUAL INSURANCE COMPANIES PAC"
+    ],
+    "name": "NATIONAL ASSOCIATION OF MUTUAL INSURANCE COMPANIES PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00170258 identifies NAMIC PAC as an active qualified trade-association PAC and the National Association of Mutual Insurance Companies as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00170258/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL MARINE MANUFACTURERS ASSOCIATION'S BOAT POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "NATIONAL MARINE MANUFACTURERS ASSOCIATION AND MARINE RETAILERS ASSOCIATION BOAT PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; historical reported name",
+    "parent": "",
+    "evidence": "FEC committee C00245548 currently identifies the National Marine Manufacturers Association and Marine Retailers Association Boat PAC. Historical recipient filings used 'National Marine Manufacturers Association's Boat Political Action Committee' for the same durable FEC ID.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00245548/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SAMSUNG ELECTRONICS AMERICA INC POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "SAMSUNG ELECTRONICS AMERICA INC POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00590315 identifies the active Samsung Electronics America Inc Political Action Committee and Samsung Electronics America Inc as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00590315/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRACTOR SUPPLY COMPANY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "TRACTOR SUPPLY COMPANY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00763664 identifies the active qualified Tractor Supply Company Political Action Committee. The committee remains distinct from Tractor Supply Company itself.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00763664/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALLSTATE INSURANCE COMPANY PAC"
+    ],
+    "name": "ALLSTATE INSURANCE COMPANY PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00040253 identifies the active qualified Allstate Insurance Company PAC and Allstate Insurance Company as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00040253/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF OPHTHALMOLOGY INC POLITICAL COMMITTEE (OPHTHPAC)"
+    ],
+    "name": "AMERICAN ACADEMY OF OPHTHALMOLOGY INC POLITICAL COMMITTEE (OPHTHPAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00196246 identifies OPHTHPAC as an active qualified membership-organization PAC and the American Academy of Ophthalmology as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00196246/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COLLEGE OF SURGEONS PROFESSIONAL ASSOCIATION PAC"
+    ],
+    "name": "AMERICAN COLLEGE OF SURGEONS PROFESSIONAL ASSOCIATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00382424 identifies the active qualified American College of Surgeons Professional Association PAC and the Professional Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00382424/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION POLITICAL ACTION COMMITTEE (INSURING AMERICA PAC)"
+    ],
+    "name": "AMERICAN PROPERTY CASUALTY INSURANCE ASSOCIATION POLITICAL ACTION COMMITTEE (INSURING AMERICA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00066472 identifies Insuring America PAC as an active qualified trade-association PAC and the American Property Casualty Insurance Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00066472/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BARCLAYS GROUP US INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "BARCLAYS GROUP US INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00448852 identifies the active qualified Barclays Group US Inc. Political Action Committee and Barclays Group US, Inc. as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00448852/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BIPARTISAN POLITICAL ACTION COMMITTEE/THE BANK OF NEW YORK MELLON CORPORATION BIPAC/BNYMC"
+    ],
+    "name": "BIPARTISAN POLITICAL ACTION COMMITTEE/THE BANK OF NEW YORK MELLON CORPORATION BIPAC/BNYMC",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00017558 identifies this exact active qualified BNY Mellon corporation PAC. It remains a separate federal committee from The Bank of New York Mellon Corporation and from other BNY Mellon PAC registrations.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00017558/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FMR LLC POLITICAL ACTION COMMITTEE - FEDERAL (FIDELITY PAC)"
+    ],
+    "name": "FMR LLC POLITICAL ACTION COMMITTEE - FEDERAL (FIDELITY PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00380550 identifies Fidelity PAC as an active qualified corporation PAC. FEC registration records identify FMR LLC as its connected organization; the PAC remains distinct from FMR LLC and from the terminated state/federal PAC C00215046.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00380550/",
+      "https://docquery.fec.gov/pdf/902/202401309600648902/202401309600648902.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FORD MOTOR COMPANY CIVIC ACTION FUND"
+    ],
+    "name": "FORD MOTOR COMPANY CIVIC ACTION FUND",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee",
+    "parent": "",
+    "evidence": "FEC committee C00046474 identifies Ford Motor Company Civic Action Fund as an active qualified corporation PAC and Ford Motor Company as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00046474/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GUARDIAN LIFE INSURANCE COMPANY OF AMERICA POLITICAL ACTION COMMITTEE (GUARDIAN LIFE FEDERAL PAC)"
+    ],
+    "name": "GUARDIAN LIFE INSURANCE COMPANY OF AMERICA POLITICAL ACTION COMMITTEE (GUARDIAN LIFE FEDERAL PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporation political committee / reported contribution name",
+    "parent": "",
+    "evidence": "FEC recipient filings identify this contribution name with durable committee ID C00173393. The FEC committee profile identifies the Guardian Life federal political committee and The Guardian Life Insurance Company of America as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00173393/",
+      "https://docquery.fec.gov/pdf/567/201904159146156567/201904159146156567.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL ASSOCIATION OF FIRE FIGHTERS"
+    ],
+    "name": "INTERNATIONAL ASSOCIATION OF FIREFIGHTERS INTERESTED IN REGISTRATION AND EDUCATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee; recipient-file shorthand",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00029447 identifies FIREPAC as the active qualified labor PAC and International Association of Fire Fighters as its separate connected organization. Jeffries-related FEC records show C00029447 contributing to Jeffries committees even where the local donor dataset reports the shorter connected-organization name. This alias is restricted to organization records so an individual reporting IAFF as an employer cannot be reclassified as the PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00029447/",
+      "https://docquery.fec.gov/pdf/715/202507159763421715/202507159763421715.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL COUNCIL OF SHOPPING CENTERS INC POLITICAL ACTION COMMITTEE (ICSC PAC)"
+    ],
+    "name": "INTERNATIONAL COUNCIL OF SHOPPING CENTERS INC POLITICAL ACTION COMMITTEE (ICSC PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00217638 identifies ICSC PAC as an active qualified trade-association PAC and International Council of Shopping Centers Inc. as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00217638/"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

@@ -1,4 +1,4 @@
-import {businessIdentities} from './business-identities.js?v=32';
+import {businessIdentities} from './business-identities.js?v=33';
 import {normalize, config, occupationGroup, loadResearchRecords} from './research-data.js?v=1';
 
 export async function loadDirectoryRecords() {
@@ -53,16 +53,24 @@ function reportedIdentity(record) {
 
 const identityIndex = new Map();
 for (const entry of businessIdentities) {
+  const recordTypes = entry.recordTypes?.length ? entry.recordTypes : ['*'];
   for (const alias of [...entry.aliases, ...(entry.name ? [entry.name] : [])]) {
-    const key = normalize(alias);
-    if (identityIndex.has(key) && identityIndex.get(key) !== entry) throw Error('Duplicate researched alias: '+key);
-    identityIndex.set(key, entry);
+    const aliasKey = normalize(alias);
+    for (const recordType of recordTypes) {
+      const key = recordType+'|'+aliasKey;
+      if (identityIndex.has(key) && identityIndex.get(key) !== entry) throw Error('Duplicate researched alias: '+key);
+      identityIndex.set(key, entry);
+    }
   }
+}
+
+function researchedIdentity(recordType, key) {
+  return identityIndex.get(recordType+'|'+key) || identityIndex.get('*|'+key);
 }
 
 export function identifyName(record) {
   const identity = reportedIdentity(record);
-  const research = !identity.personal && (identityIndex.get(identity.reported) || identityIndex.get(identity.name));
+  const research = !identity.personal && (researchedIdentity(record.type, identity.reported) || researchedIdentity(record.type, identity.name));
   if (!research) return {...identity, research: null};
   return {...identity, name: research.name ? normalize(research.name) : identity.name,
     method: research.name ? 'Source-backed: '+research.scope : identity.method, research};

@@ -602,3 +602,34 @@ test('seventeenth executive-priority batch keeps Noodle legal identities separat
   assert.equal(groups.find(g=>g.name==='STATE FARM').research.scope,'Insurance brand / independent-agent relationship; not the donor\'s legal employing entity');
   assert.equal(groups.find(g=>g.name==='RADCO MANAGEMENT, INC.').research.status,'Source-backed');
 });
+
+
+test('PAC research keeps federal committees separate from connected organizations and employer strings', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'LPL FINANCIAL LLC POLITICAL ACTION COMMITTEE (LPL PAC)',sector:'Finance',committee:'a',amount:750000},
+    {type:'individual',name:'Employee',employer:'LPL FINANCIAL LLC',occupation:'STAFF',sector:'Finance',committee:'a',amount:100},
+    {type:'organization',name:'INTERNATIONAL ASSOCIATION OF FIRE FIGHTERS',sector:'Labor',committee:'a',amount:500000},
+    {type:'individual',name:'Fire Fighter',employer:'INTERNATIONAL ASSOCIATION OF FIRE FIGHTERS',occupation:'STAFF',sector:'Labor',committee:'a',amount:100}
+  ]);
+  const lplPac=groups.find(g=>g.name==='LPL FINANCIAL LLC POLITICAL ACTION COMMITTEE (LPL PAC)');
+  const lplEmployer=groups.find(g=>g.name==='LPL FINANCIAL LLC');
+  const iaffPac=groups.find(g=>g.name==='INTERNATIONAL ASSOCIATION OF FIREFIGHTERS INTERESTED IN REGISTRATION AND EDUCATION PAC');
+  const iaffEmployer=groups.find(g=>g.name==='INTERNATIONAL ASSOCIATION OF FIRE FIGHTERS');
+  assert.equal(lplPac.organizationCount,1);
+  assert.equal(lplEmployer.individualCount,1);
+  assert.equal(iaffPac.organizationCount,1);
+  assert.equal(iaffPac.research.status,'Source-backed');
+  assert.equal(iaffEmployer.individualCount,1);
+  assert.equal(iaffEmployer.research,null);
+});
+
+test('historical PAC report names resolve by durable FEC committee identity', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'CARDINAL HEALTH INC. PAC A/K/A CARDINAL HEALTH COMPANIES PAC',sector:'Healthcare',committee:'a',amount:100},
+    {type:'organization',name:'FRESENIUS MEDICAL CARE NORTH AMERICA PAC',sector:'Healthcare',committee:'a',amount:200},
+    {type:'organization',name:"NATIONAL MARINE MANUFACTURERS ASSOCIATION'S BOAT POLITICAL ACTION COMMITTEE",sector:'Trade',committee:'a',amount:300}
+  ]);
+  assert.equal(groups.find(g=>g.name==='CARDINAL HEALTH INC. PAC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='FRESENIUS MEDICAL CARE HOLDINGS, INC. POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='NATIONAL MARINE MANUFACTURERS ASSOCIATION AND MARINE RETAILERS ASSOCIATION BOAT PAC').research.status,'Source-backed');
+});
