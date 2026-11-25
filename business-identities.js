@@ -7557,5 +7557,302 @@ export const businessIdentities = [
       "https://benensoncapital.com/about-us"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CITYBRIDGE FOUNDATION"
+    ],
+    "name": "CITYBRIDGE FOUNDATION",
+    "status": "Source-backed",
+    "scope": "Private family foundation / nonprofit organization",
+    "parent": "",
+    "evidence": "Public nonprofit filings identify Citybridge Foundation under EIN 52-1870074, and the foundation's own site identifies the organization. Katherine Bradley's reported leadership context is consistent with the foundation. CityBridge Education is a separate organization and is not merged.",
+    "sources": [
+      "https://philanthropy.org/990/report/521870074/citybridge-foundation/2021",
+      "http://www.citybridgefoundation.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CORNERSTONE AUTOMATION SYSTEMS"
+    ],
+    "name": "CORNERSTONE AUTOMATION SYSTEMS, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / automation systems company",
+    "parent": "",
+    "evidence": "The company's official site identifies Cornerstone Automation Systems, LLC (CASI), and federal court records use the same LLC name. Tom Karol is identified as CASI's CEO in investor materials. A separately named Cornerstone Automation Systems, Inc. is not treated as the same entity.",
+    "sources": [
+      "https://casiusa.com/",
+      "https://law.justia.com/cases/federal/district-courts/texas/txndce/3:2015cv03006/264401/152",
+      "https://cicpartners.com/casi.php"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DADA"
+    ],
+    "name": "DADA HOLDINGS",
+    "status": "Source-backed",
+    "scope": "Investment and management group / brand",
+    "parent": "",
+    "evidence": "DADA Holdings describes itself as the investment and management arm of the D'Addario Family Office, and Florida records identify DADA Holdings, LLC. Ryan Boland is identified as Chief Investment Officer of DADA Holdings. The bare DADA employer is kept at group/brand scope rather than assigned to every related entity.",
+    "sources": [
+      "https://dadaholdings.com/",
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forl-m15000007330-b9375cf5-d4e6-4ee9-8a1d-21688541453a&directionType=Initial&inquirytype=EntityName&searchNameOrder=DADAHOLDINGS%20M150000073300"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DRAFT KINGS"
+    ],
+    "name": "DRAFTKINGS INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public online gaming company",
+    "parent": "",
+    "evidence": "SEC filings identify DraftKings Inc. as the registrant. The reported DRAFT KINGS form is treated as a spelling/styling variant of the company name rather than a separate entity.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1883685/000110465924069627/tm2416586d1_s3asr.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DRINK WILLIE'S"
+    ],
+    "name": "WILLIE'S REMEDY+",
+    "status": "Source-backed",
+    "scope": "Consumer beverage brand; exact employing legal entity not established",
+    "parent": "",
+    "evidence": "Court and regulatory records identify Willie's Remedy+ as a beverage brand associated with entities including JS-WR JV, Inc. and Long Play, Inc. The reported DRINK WILLIE'S employer is therefore retained at brand scope; no exact legal employing entity is asserted for Greg Serrao.",
+    "sources": [
+      "https://www.govinfo.gov/content/pkg/USCOURTS-ord-3_26-cv-00970/pdf/USCOURTS-ord-3_26-cv-00970-0.pdf",
+      "https://oag.ca.gov/system/files/prop65/notices/2026-02163.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EISNER ADVISORY LLC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / professional-services firm",
+    "parent": "",
+    "evidence": "EisnerAmper's official directory identifies Beth Kieffer Leonard with Eisner Advisory Group LLC, while EisnerAmper is a brand spanning that LLC and EisnerAmper LLP. The reported EISNER ADVISORY LLC string is not established as an exact legal alias, so it remains unresolved.",
+    "sources": [
+      "https://www.eisneramper.com/about-us/professional-directory/beth-kieffer-leonard",
+      "https://eisneramper.com/about-us"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EMBRACE INC"
+    ],
+    "name": "EMBRACE INCORPORATED",
+    "status": "Source-backed",
+    "scope": "Legal entity / home-care organization",
+    "parent": "",
+    "evidence": "Massachusetts public materials identify Hector Montesino as president and CEO of Embrace Home Care and Health Services, and corporate records reviewed in that context identify EMBRACE INCORPORATED. The reported EMBRACE INC form is treated as the shortened corporate name.",
+    "sources": [
+      "https://malegislature.gov/Bills/192/SD3131.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ESTEE LAUDER CO."
+    ],
+    "name": "THE ESTÉE LAUDER COMPANIES INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public cosmetics company",
+    "parent": "",
+    "evidence": "SEC filings identify The Estée Lauder Companies Inc. as the registrant and identify William P. Lauder in senior leadership. The donor record's Executive Chairman title is historical/stale role context and does not alter the company identity.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1001250/000110465924101265/tm2421001d2_ars.pdf",
+      "https://www.elcompanies.com/en/who-we-are/leadership/board-of-directors"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FOX SEARCHLIGHT PICTURES"
+    ],
+    "name": "FOX SEARCHLIGHT PICTURES",
+    "status": "Source-backed",
+    "scope": "Historical film-studio label / brand",
+    "parent": "The Walt Disney Studios",
+    "evidence": "Disney identifies Searchlight Pictures as the specialty film company founded as Fox Searchlight Pictures and now part of The Walt Disney Studios. The historical reported employer is kept at label/brand scope rather than treated as a standalone current legal entity.",
+    "sources": [
+      "https://www.disneystudios.com/business/searchlight-pictures"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FRIED COMPANIES, INC."
+    ],
+    "name": "FRIED COMPANIES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / real-estate development company",
+    "parent": "",
+    "evidence": "The company's official site identifies Fried Companies, Inc. as its residential and commercial real-estate development and management business, matching the reported employer used with Leah Fried Sedwick's business-owner context.",
+    "sources": [
+      "http://friedcompanies.com/home.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FUTURE STANDARD"
+    ],
+    "name": "FUTURE STANDARD",
+    "status": "Source-backed",
+    "scope": "Alternative-asset-management brand / business group",
+    "parent": "",
+    "evidence": "Future Standard's official materials describe Future Standard as the new name adopted after the combination involving FS Investments and state that the combined firm operates under one brand. The reported employer is therefore kept at brand/group scope rather than assigned to a single legal entity.",
+    "sources": [
+      "https://www.futurestandard.com/welcome-to-future-standard",
+      "https://www.futurestandard.com/who-we-are"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HUNT COMPANIES INC."
+    ],
+    "name": "HUNT COMPANIES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / diversified investment and operating company",
+    "parent": "",
+    "evidence": "Hunt's official leadership materials identify Hunt Companies, Inc. Woody Hunt is now Senior Chairman; the donor record's CEO occupation is stale role context and is not used to alter the entity match.",
+    "sources": [
+      "https://www.huntcompanies.com/about-us/leadership/executive-team",
+      "https://www.huntcompanies.com/about-us/leadership/board-of-directors"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "IGNITE MEDICAL RESORTS"
+    ],
+    "name": "IGNITE MEDICAL RESORTS",
+    "status": "Source-backed",
+    "scope": "Healthcare service mark / business group; facilities separately owned",
+    "parent": "",
+    "evidence": "Ignite Medical Resorts' official site states that the name is a service mark used by a group of LLCs and corporations and that individual facilities are independently owned and operated. The employer is therefore retained at brand/group scope.",
+    "sources": [
+      "https://ignitemedicalresorts.com/our-resorts.htm",
+      "https://www.ignitemedicalresorts.com/contact.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JACKSON OFFSHORE OPERATORS LLC"
+    ],
+    "name": "JACKSON OFFSHORE OPERATORS LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / offshore marine operator",
+    "parent": "",
+    "evidence": "Jackson Offshore Operators uses the exact LLC name in company materials and identifies Lee Jackson in senior leadership. Jackson Offshore Holdings LLC is separately named and is not treated as an alias.",
+    "sources": [
+      "https://www.joollc.com/operators_announces_acquisition_new_psv_and-long-term-contract",
+      "http://joollc.com/wp-content/uploads/2020/11/Jackson-KP-Lee-Jackson-R2.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JAIN GLOBAL LLC"
+    ],
+    "name": "JAIN GLOBAL LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / registered investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Jain Global LLC, and the firm's official leadership page identifies Bobby Jain as CEO. The exact LLC is retained as the employer identity.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/330309",
+      "https://www.jainglobal.com/team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JUSHI"
+    ],
+    "name": "JUSHI HOLDINGS INC.",
+    "status": "Source-backed",
+    "scope": "Public-company issuer / cannabis business group",
+    "parent": "",
+    "evidence": "SEC filings identify Jushi Holdings Inc. and use Jushi for the issuer and consolidated group. Company materials identify Trent Woloveck in executive leadership. The bare JUSHI employer does not identify a particular operating subsidiary.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1909747/000162828023014306/jushiholdingsinc42823xprox.pdf",
+      "https://ir.jushico.com/news-events/press-releases/detail/93/jushi-holdings-inc-expands-depth-of-senior-leadership-team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LEADERSHIP NOW PROJECT"
+    ],
+    "name": "LEADERSHIP NOW PROJECT",
+    "status": "Source-backed",
+    "scope": "501(c)(4) nonprofit organization",
+    "parent": "",
+    "evidence": "Nonprofit records identify Leadership Now Project under EIN 82-1780610 and the organization identifies Daniella Ballou-Aares as founder and CEO. Leadership Now Education Fund and Leadership Now PAC are separate affiliated organizations and are not merged.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/821780610",
+      "https://leadershipnowproject.org/team/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LIPA"
+    ],
+    "name": "LONG ISLAND POWER AUTHORITY",
+    "status": "Source-backed",
+    "scope": "New York public authority",
+    "parent": "",
+    "evidence": "LIPA's official materials identify the Long Island Power Authority and appointed John Rhodes as Acting CEO in 2024. PSEG Long Island is a separate service provider and is not an alias of LIPA.",
+    "sources": [
+      "https://www.lipower.org/wp-content/uploads/2024/04/March-27-2024-Mr.-John-Rhodes-Appointed-as-Acting-Chief-Executive-Officer.pdf",
+      "https://www.lipower.org/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARQUIS HEALTH"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / healthcare consulting brand",
+    "parent": "",
+    "evidence": "Marquis Health Consulting Services identifies Barry Munk as CEO, and a Florida record identifies Marquis Health Consulting Services LLC at a matching New Jersey address. The reviewed evidence does not establish that the reported MARQUIS HEALTH employer corresponds to that exact LLC, so it remains unresolved and separate from Marquis Limited LLC.",
+    "sources": [
+      "https://mqshealth.com/our-leadership",
+      "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=forl-m20000010218-a3c0efc1-0942-478e-9bdf-d9d6652493a1&directionType=PreviousList&inquirytype=EntityName&listNameOrder=MARQUISHART%20L130000944640&searchNameOrder=MARQUISHEALTHCONSULTINGSERVICE%20M200000102180&searchTerm=MARQUIS%20INVESTMENTS%2C%20LLC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARQUIS LIMITED LLC"
+    ],
+    "name": "MARQUIS LIMITED LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / healthcare-services company",
+    "parent": "",
+    "evidence": "A Pennsylvania disclosure identifies Marquis Limited LLC, Norman Rokeach as its sole member and President/Manager, and the LLC as manager of Mayfair Operator LLC. That management relationship is not treated as a parent relationship.",
+    "sources": [
+      "https://www.pa.gov/content/dam/copapwp-pagov/en/insurance/documents/posted-filings-reports-orders/ccrc-disclosure-statements/mayfair-operator-ccrc-disclosure.pdf",
+      "https://www.ahcancal.org/News-and-Communications/Press-Releases/Pages/More-Than-500-Long-Term-Care-Professionals-Assemble-on-Capitol-Hill-to-Advocate-for-Residents,-Staff.aspx"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

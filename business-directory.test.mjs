@@ -323,3 +323,21 @@ test('executive-priority follow-up preserves brand scope and unresolved Austin e
   assert.equal(groups.find(g=>g.name==='AUSTIN SPORTS ACADEMY').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='BENENSON CAPITAL').research.scope,'Real-estate business group / brand');
 });
+
+
+test('third executive-priority batch preserves labels, legal entities and unresolved boundaries', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Boland',employer:'DADA',occupation:'CIO',sector:'Finance',committee:'a',amount:100},
+    {type:'individual',name:'Serrao',employer:"DRINK WILLIE'S",occupation:'CEO',sector:'Consumer',committee:'a',amount:200},
+    {type:'individual',name:'Leonard',employer:'EISNER ADVISORY LLC',occupation:'CPA, PARTNER',sector:'Professional',committee:'a',amount:300},
+    {type:'individual',name:'Forman',employer:'FUTURE STANDARD',occupation:'EXECUTIVE CHAIRMAN',sector:'Finance',committee:'a',amount:400},
+    {type:'individual',name:'Munk',employer:'MARQUIS HEALTH',occupation:'CEO',sector:'Healthcare',committee:'a',amount:500},
+    {type:'individual',name:'Rokeach',employer:'MARQUIS LIMITED LLC',occupation:'PRESIDENT AND FOUNDER',sector:'Healthcare',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='DADA HOLDINGS').research.scope,'Investment and management group / brand');
+  assert.equal(groups.find(g=>g.name==="WILLIE'S REMEDY+").research.scope,'Consumer beverage brand; exact employing legal entity not established');
+  assert.equal(groups.find(g=>g.name==='EISNER ADVISORY LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='FUTURE STANDARD').research.scope,'Alternative-asset-management brand / business group');
+  assert.equal(groups.find(g=>g.name==='MARQUIS HEALTH').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='MARQUIS LIMITED LLC').research.status,'Source-backed');
+});

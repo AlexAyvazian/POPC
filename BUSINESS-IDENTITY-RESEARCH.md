@@ -88,3 +88,10 @@ STORY remains explicitly unresolved because available evidence connects Joe Sai 
 A concurrent research commit completed most of the next executive-linked tier while this batch was being prepared. The remaining priority identities added here are Edward Jones, Satoshi Action Fund, Abundant Venture Partners, American Jewish Committee, Associated Agencies, Austin Sports Academy and Benenson Capital.
 
 Austin Sports Academy remains explicitly unresolved because the operating business and founder/owner are supported but multiple same/similar Texas entities prevent a verified legal-entity match. Abundant Venture Partners and Benenson Capital are source-backed only at firm/group scope. Edward Jones is retained as a brokerage brand identity separate from Edward D. Jones & Co., L.P., parent The Jones Financial Companies, L.L.L.P., and any political committee.
+
+
+## Executive-priority identity research — batch 3 — November 25, 2026
+
+The next 20 highest-dollar executive-linked priority identities were reviewed: CityBridge Foundation, Cornerstone Automation Systems, DADA, DraftKings, Drink Willie's, Eisner Advisory LLC, Embrace Inc, Estée Lauder, Fox Searchlight Pictures, Fried Companies, Future Standard, Hunt Companies, Ignite Medical Resorts, Jackson Offshore Operators, Jain Global, Jushi, Leadership Now Project, LIPA, Marquis Health and Marquis Limited LLC.
+
+Eisner Advisory LLC and Marquis Health remain explicitly unresolved because the donor strings cannot be safely equated to one exact legal entity. Drink Willie's, DADA, Future Standard, Fox Searchlight Pictures and Ignite Medical Resorts are source-backed only at brand/group/label scope. Marquis Limited LLC remains separate from Marquis Health. All parent, subsidiary and affiliate boundaries remain non-aggregating context.
