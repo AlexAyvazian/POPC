@@ -800,3 +800,43 @@ test('twenty-seventh priority batch separates PACs, tribes, employers, and direc
   assert.equal(groups.find(g=>g.name==='MAYO CLINIC').individual,800);
   assert.equal(groups.find(g=>g.name==='FTP').individual,900);
 });
+
+test('remaining priority batches preserve PAC/employer boundaries and explicitly review ambiguous labels', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'ABBVIE POLITICAL ACTION COMMITTEE',sector:'Healthcare',committee:'a',amount:100},
+    {type:'individual',name:'TEST, EMPLOYEE',employer:'ABBVIE',occupation:'EMPLOYEE',sector:'Healthcare',committee:'a',amount:200},
+    {type:'organization',name:"NORTH AMERICA'S BUILDING TRADES UNION",sector:'Labor',committee:'a',amount:300},
+    {type:'organization',name:'AIRBUS GROUP, INC. PAC',sector:'Aerospace',committee:'a',amount:400},
+    {type:'organization',name:'ALCOA INC. EMPLOYEES\' VOLUNTARY FEDERAL POLITICAL ACTION COMMITTEE',sector:'Manufacturing',committee:'a',amount:500},
+    {type:'organization',name:"PROTECTIVE LIFE CORPORATION FEDERAL POLITICAL ACTION COMMITTEE ('PROTECTPAC')",sector:'Insurance',committee:'a',amount:600},
+    {type:'organization',name:'TRI-STATE MAXED OUT WOMEN',sector:'Advocacy',committee:'a',amount:700},
+    {type:'individual',name:'GENERIC, ONE',employer:'STATE',occupation:'EMPLOYEE',sector:'Public',committee:'a',amount:800},
+    {type:'individual',name:'GENERIC, TWO',employer:'FREELANCE',occupation:'EDITOR',sector:'Other',committee:'a',amount:900},
+    {type:'individual',name:'GENERIC, THREE',employer:'INDEPENDENT',occupation:'CONSULTANT',sector:'Other',committee:'a',amount:1000},
+    {type:'individual',name:'TEACHER, ONE',employer:'LAUSD',occupation:'TEACHER',sector:'Education',committee:'a',amount:1100},
+    {type:'individual',name:'TEACHER, TWO',employer:'NYC DOE',occupation:'TEACHER',sector:'Education',committee:'a',amount:1200},
+    {type:'individual',name:'POSTAL, ONE',employer:'USPS',occupation:'MAILHANDLER',sector:'Public',committee:'a',amount:1300},
+    {type:'individual',name:'POSTAL, TWO',employer:'US POSTAL SERVICE',occupation:'MAILHANDLER',sector:'Public',committee:'a',amount:1400}
+  ]);
+  const abbviePac=groups.find(g=>g.name==='ABBVIE POLITICAL ACTION COMMITTEE');
+  const abbvieEmployer=groups.find(g=>g.name==='ABBVIE');
+  assert.equal(abbviePac.organization,100);
+  assert.equal(abbviePac.individual,0);
+  assert.equal(abbvieEmployer.organization,0);
+  assert.equal(abbvieEmployer.individual,200);
+  assert.equal(abbviePac.research.status,'Source-backed');
+  assert.equal(abbvieEmployer.research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==="NORTH AMERICA'S BUILDING TRADES UNIONS POLITICAL EDUCATIONAL FUND").research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='AIRBUS AMERICAS, INC. POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==="ALCOA CORPORATION EMPLOYEES' POLITICAL ACTION COMMITTEE").research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==="PROTECTIVE LIFE CORPORATION FEDERAL POLITICAL ACTION COMMITTEE ('PROTECTIVEPAC')").research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='TRI-STATE MAXED-OUT WOMEN').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='STATE').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='FREELANCE').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='INDEPENDENT').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='LOS ANGELES UNIFIED SCHOOL DISTRICT').individual,1100);
+  assert.equal(groups.find(g=>g.name==='NEW YORK CITY DEPARTMENT OF EDUCATION').individual,1200);
+  const usps=groups.find(g=>g.name==='UNITED STATES POSTAL SERVICE');
+  assert.equal(usps.individual,2700);
+  assert.equal(usps.count,2);
+});
