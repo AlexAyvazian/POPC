@@ -14440,5 +14440,358 @@ export const businessIdentities = [
       "https://taconicpartners.com/about/"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TARGETCITIZENS POLITICAL FORUM",
+      "TARGET CORPORATION CITIZENS POLITICAL FORUM (TARGETCITIZENS POLITICAL FORUM)"
+    ],
+    "name": "TARGET CORPORATION CITIZENS POLITICAL FORUM (TARGETCITIZENS POLITICAL FORUM)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; donor-file shorthand",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00098061 identifies Target Corporation Citizens Political Forum (TargetCitizens Political Forum). The donor-file TargetCitizens Political Forum form is retained as a shorthand alias of the same committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00098061/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TENET HEALTHCARE CORPORATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "TENET HEALTHCARE CORPORATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00119354 identifies Tenet Healthcare Corporation Political Action Committee and Tenet Healthcare Corporation as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00119354/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TEXTRON INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "TEXTRON INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00123612 identifies Textron Inc. Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00123612/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE ASCAP LEGISLATIVE FUND FOR THE ARTS"
+    ],
+    "name": "THE ASCAP LEGISLATIVE FUND FOR THE ARTS",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00228296 identifies The ASCAP Legislative Fund for the Arts as an active qualified PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00228296/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE GRANT THORNTON LLP POLITICAL ACTION COMMITTEE LLC",
+      "THE GRANT THORNTON LLP POLITICAL ACTION COMMITTEE",
+      "THE GRANT THORNTON LLC POLITICAL ACTION COMMITTEE",
+      "THE GRANT THORNTON ADVISORS LLC POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "THE GRANT THORNTON ADVISORS LLC POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; historical committee names",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00408260 is the durable committee identity. Earlier filings used The Grant Thornton LLP Political Action Committee LLC; 2026 recipient filings use The Grant Thornton LLC Political Action Committee; the current FEC committee name is The Grant Thornton Advisors LLC Political Action Committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00408260/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/101/201603189009781101/201603189009781101.pdf",
+      "https://docquery.fec.gov/pdf/347/202610229944850347/202610229944850347.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE TRAVELERS COMPANIES, INC. POLITICAL ACTION COMMITTEE (T-PAC)"
+    ],
+    "name": "THE TRAVELERS COMPANIES, INC. POLITICAL ACTION COMMITTEE (T-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00376376 identifies The Travelers Companies, Inc. Political Action Committee (T-PAC) as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00376376/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THREE RIVERS HOLDINGS INC DOBBS UNISON HEALTH PLANS FEDERAL PAC"
+    ],
+    "name": "THREE RIVERS HOLDINGS INC DOBBS UNISON HEALTH PLANS FEDERAL PAC",
+    "status": "Source-backed",
+    "scope": "Terminated federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00418491 identifies Three Rivers Holdings Inc Dobbs Unison Health Plans Federal PAC as a terminated corporate PAC and lists Three Rivers Holdings Inc as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00418491/?cycle=2008&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THRIVENT FINANCIAL FOR LUTHERANS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "THRIVENT FINANCIAL FOR LUTHERANS POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporation-without-capital-stock political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00121319 identifies Thrivent Financial for Lutherans Political Action Committee and Thrivent Financial for Lutherans as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00121319/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRANSPORTATION INTERMEDIARIES ASSOCIATION'S TIAPAC"
+    ],
+    "name": "TRANSPORTATION INTERMEDIARIES ASSOCIATION'S TIAPAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00335091 identifies Transportation Intermediaries Association's TIAPAC as an active qualified trade-association PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00335091/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TTX PAC"
+    ],
+    "name": "TTX PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00138974 identifies TTX PAC as an active qualified corporate PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00138974/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "U.S. BANCORP POLITICAL PARTICIPATION PROGRAM"
+    ],
+    "name": "U.S. BANCORP POLITICAL PARTICIPATION PROGRAM",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00018036 identifies U.S. Bancorp Political Participation Program as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00018036/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UA UNION PLUMBERS & PIPEFITTERS VOTE! PAC (UNITED ASSOCIATION OF JOURNEYMEN AND APPRENTICES OF THE PLUMBING & PIPEFITTING INDUSTRY OF THE UNITED STATES AND CANADA)"
+    ],
+    "name": "UA UNION PLUMBERS & PIPEFITTERS VOTE! PAC (UNITED ASSOCIATION OF JOURNEYMEN AND APPRENTICES OF THE PLUMBING & PIPEFITTING INDUSTRY OF THE UNITED STATES AND CANADA)",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00012476 uses this exact committee name. It is kept distinct from separate FEC committee C00331918, whose registered name adds an additional trailing PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00012476/?cycle=2026&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00331918/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSAL MUSIC GROUP POLITICAL ACTION COMMITTEE",
+      "UNIVERSAL MUSIC GROUP EMPLOYEE ACTION FUND"
+    ],
+    "name": "UNIVERSAL MUSIC GROUP EMPLOYEE ACTION FUND",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; historical committee name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00392464 is the durable committee identity. The 2018 FEC record used Universal Music Group Political Action Committee; current records use Universal Music Group Employee Action Fund. Universal Music Group is the connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00392464/?cycle=2018&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00392464/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "US TRAVEL ASSOCIATION PAC",
+      "U.S. TRAVEL ASSOCIATION PAC"
+    ],
+    "name": "U.S. TRAVEL ASSOCIATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; donor-file punctuation variant",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00457754 identifies U.S. Travel Association PAC and U.S. Travel Association as its connected organization. The donor-file form omits periods in U.S. and is retained as an exact alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00457754/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VEN-PAC",
+      "VENABLE PAC (VEN-PAC)"
+    ],
+    "name": "VENABLE PAC (VEN-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC; donor-file shorthand",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00369660 identifies Venable PAC (VEN-PAC). The donor-file VEN-PAC form is retained as a shorthand alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00369660/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WALGREEN CO PAC",
+      "WALGREEN CO PAC (WALGREENSPAC)"
+    ],
+    "name": "WALGREEN CO PAC (WALGREENSPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; donor-file shortened name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00160770 identifies Walgreen Co PAC (WalgreensPAC). The donor-file Walgreen Co PAC form is retained as a shortened alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00160770/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WALMART INC. PAC FOR RESPONSIBLE GOVERNMENT"
+    ],
+    "name": "WALMART INC. PAC FOR RESPONSIBLE GOVERNMENT",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00093054 identifies Walmart Inc. PAC for Responsible Government as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00093054/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ZOETIS INC. PAC AKA ZOETIS PAC"
+    ],
+    "name": "ZOETIS INC. PAC AKA ZOETIS PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC recipient filings identify Zoetis Inc. PAC aka Zoetis PAC as federal committee C00541177.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00541177/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/352/202610229941033352/202610229941033352.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOCIETY OF THORACIC SURGEONS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "SOCIETY OF THORACIC SURGEONS POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00325936 identifies Society of Thoracic Surgeons Political Action Committee and The Society of Thoracic Surgeons as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00325936/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE AMERICAN OCCUPATIONAL THERAPY ASSOCIATION, INC. POLITICAL ACTION COMMITTEE (AOTPAC)"
+    ],
+    "name": "THE AMERICAN OCCUPATIONAL THERAPY ASSOCIATION, INC. POLITICAL ACTION COMMITTEE (AOTPAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00089086 identifies The American Occupational Therapy Association, Inc. Political Action Committee (AOTPAC) and The American Occupational Therapy Association, Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00089086/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
