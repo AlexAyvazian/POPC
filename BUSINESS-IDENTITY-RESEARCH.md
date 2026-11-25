@@ -213,3 +213,11 @@ The next 20 highest-dollar priority identities were reviewed after batch 18. Fed
 The HII raw SHIPPAC spelling is treated as a historical-name alias of durable FEC committee C00325092, whose current name is HII Employees Political Action Committee (HIIPAC). Independence Blue Cross LLC PAC is recorded as the separate segregated fund of AmeriHealth, Inc. under the relationship described in FEC Advisory Opinion 2024-04; the PAC title is not used to infer Independence Blue Cross LLC as its SSF sponsor.
 
 BlackRock and TD Bank are source-backed only at reported employer business/brand scope so they remain distinct from BlackRock Capital Management, Inc., TD Bank N.A., and the separate TD Bank PAC. The Catawba Nation, Pokagon Band of Potawatomi Indians and Saginaw Chippewa Indian Tribe are preserved as sovereign tribal-government identities. Arnold & Porter is resolved to Arnold & Porter Kaye Scholer LLP; Avoq is retained as the operating firm with Coral Tree Partners recorded as directly documented parent context.
+
+## PAC / multi-donor priority research — batch 20 — November 25, 2026
+
+The next 20 highest-dollar priority groups after batch 19 were reviewed from AECOM through Mutual of Omaha. This batch adds 21 source-backed identity definitions because the pre-research AECOM group contained two different identities: organization receipts from AECOM PAC and an individual donor whose reported employer is AECOM.
+
+AECOM PAC is now restricted to organization records and kept separate from the AECOM employer identity; all original receipts remain unchanged. The remaining federal PACs are likewise kept distinct from connected companies, trade associations and membership organizations.
+
+The donor-file name American Osteopathic Association PAC is mapped through durable FEC committee ID C00113803 to the current American Osteopathic Information Association - Osteopathic Political Action Committee. The Mastercard donor-file name is similarly mapped through C00410274 to the current committee name while preserving the reported recipient-file form as an alias. American Soybean Association PAC currently lists no connected organization on its FEC committee page, and the Holland & Knight and K&L Gates committee pages do not list connected organizations; no relationship is inferred where the FEC record does not state one.

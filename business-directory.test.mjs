@@ -651,3 +651,25 @@ test('nineteenth priority batch preserves PAC, subsidiary, tribal and employer-b
   assert.equal(groups.find(g=>g.name==='TD BANK').research.parent,'The Toronto-Dominion Bank');
   assert.equal(groups.find(g=>g.name==='ARNOLD & PORTER KAYE SCHOLER LLP').research.status,'Source-backed');
 });
+
+
+test('twentieth priority batch keeps PAC receipts separate from connected employer identities', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'AECOM PAC',sector:'Engineering',committee:'a',amount:100},
+    {type:'individual',name:'Feldsher, Ted',employer:'AECOM',occupation:'EXECUTIVE',sector:'Engineering',committee:'a',amount:200},
+    {type:'organization',name:'AMERICAN OSTEOPATHIC ASSOCIATION PAC',sector:'Healthcare',committee:'a',amount:300},
+    {type:'organization',name:"MASTERCARD INTERNATIONAL INC. EMPLOYEES' PAC",sector:'Finance',committee:'a',amount:400},
+    {type:'organization',name:'AMERICAN CHIROPRACTIC ASSOCIATION POLITICAL ACTION COMMITTEE',sector:'Healthcare',committee:'a',amount:500}
+  ]);
+  const aecomPac=groups.find(g=>g.name==='AECOM PAC');
+  const aecomEmployer=groups.find(g=>g.name==='AECOM');
+  assert.equal(aecomPac.organization,100);
+  assert.equal(aecomPac.individual,0);
+  assert.equal(aecomPac.research.status,'Source-backed');
+  assert.equal(aecomEmployer.individual,200);
+  assert.equal(aecomEmployer.organization,0);
+  assert.equal(aecomEmployer.research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='AMERICAN OSTEOPATHIC INFORMATION ASSOCIATION - OSTEOPATHIC POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MASTERCARD INTERNATIONAL INC. EMPLOYEE PAC (MASTERCARD PAC) OR (MASTERCARD EMPLOYEE PAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='AMERICAN CHIROPRACTIC ASSOCIATION POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
+});
