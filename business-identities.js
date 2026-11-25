@@ -10289,12 +10289,14 @@ export const businessIdentities = [
     "aliases": [
       "SHOWTIME EXHIBITS INC."
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / exhibit-services business",
+    "name": "Showtime Exhibits",
+    "status": "Source-backed",
+    "scope": "Trade-show / exhibit-services business; legal suffix not asserted",
     "parent": "",
-    "evidence": "Public event and nonprofit records reference Showtime Exhibits and Bruce Willett, but the reviewed evidence does not establish the exact SHOWTIME EXHIBITS INC. legal entity or independently verify the reported ownership role. No name variant is forced.",
-    "sources": [],
+    "evidence": "Industry event records independently list Bruce Willett with Showtime Exhibits, matching the donor/employer context. The business identity is source-backed at operating-name scope; the donor-file INC. suffix is retained as an alias rather than asserted as the verified legal form.",
+    "sources": [
+      "https://rsmgc.org/las-vegas/golfers/"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -10644,14 +10646,20 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "BROWN BROWN INS"
+      "BROWN BROWN INS",
+      "BROWN BROWN INSURANCE"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / insurance business shorthand",
+    "name": "Brown Brown Insurance Services, Inc.",
+    "status": "Source-backed",
+    "scope": "Independent insurance agency / legal business identity",
     "parent": "",
-    "evidence": "The BROWN BROWN INS string is ambiguous and could refer to multiple Brown/Brown & Brown insurance businesses. Reviewed sources did not establish the exact employer for Sandi Brown, so no normalization is forced.",
-    "sources": [],
+    "evidence": "Official FEC filings identify Sandi Brown at 3691 Lee Rd., Suite 210, Cleveland/Shaker Heights with employer BROWN BROWN INSURANCE. Brown Brown Insurance Services' own site lists the same 3691 Lee Rd., Suite 210 address and specifically references Sandi Brown and her team. Independent agency records identify the business as Brown Brown Insurance Services, Inc. This is a local independent agency and is not merged with the unrelated national Brown & Brown brokerage.",
+    "sources": [
+      "https://docquery.fec.gov/pdf/274/202510159791118274/202510159791118274.pdf",
+      "https://brownbrowninsuranceservices.com/contact/",
+      "https://brownbrowninsuranceservices.com/insurance/business/",
+      "https://www.hagerty.com/Apps/Resources/AgentLocator/Agency/23059/Brown_Brown_Insurance_Services_Inc"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -11456,12 +11464,14 @@ export const businessIdentities = [
     "aliases": [
       "CALVERT SYSTEMS"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / systems-engineering business name",
+    "name": "Calvert Systems Engineering, Incorporated",
+    "status": "Source-backed",
+    "scope": "Federal engineering contractor / verified DBA shorthand",
     "parent": "",
-    "evidence": "Public employee-directory material connects a Bruce Nelson to Calvert Systems Engineering, Incorporated as a vice president, but the reviewed evidence is not strong enough to establish that this is the exact donor/employer identity behind the generic CALVERT SYSTEMS string. No legal-entity normalization is forced.",
+    "evidence": "Federal procurement records identify Calvert Systems Engineering, Incorporated as a U.S. defense contractor, while federal-contractor data lists CALVERT SYSTEMS as its DBA. Independent employee-directory data identifies Bruce Nelson as Vice President of Program Development at the company, matching the donor executive context.",
     "sources": [
+      "https://www.fpds.gov/ezsearch/fpdsportal?indexName=awardfull&length=283&q=0001+9700++TREASURY_ACCOUNT_SYMBOL%3A%22974930%22+PRINCIPAL_NAICS_CODE%3A%22541330%22+PIID%3A%220001%22+GLOBAL_VENDOR_NAME%3A%22CONSTELLATION+SOFTWARE+ENGINEERING++CORP.%22+GLOBAL_VENDOR_NAME%3A%22VERAXX+ENGINEERING+CORPORATION%22+GLOBAL_VENDOR_NAME%3A%22CHILDS+ENGINEERING+CORPORATION%22&renderer=jsp&s=FPDS&templateName=PDF",
+      "https://www.govconinabox.com/explore/contractors/profile/calvert-systems-engineering-inc-ky61am",
       "https://www.signalhire.com/companies/calvert-systems-engineering-incorporated/email-format"
     ],
     "reviewed": "2026-11-25"
@@ -18477,33 +18487,18 @@ export const businessIdentities = [
     "aliases": [
       "MOBILEGIS LTD"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "MobileGIS Ltd",
     "parent": "",
-    "scope": "Reported employer; exact legal entity not independently verified",
+    "scope": "GIS software/services company / reported employer",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "Federal and Washington campaign-finance records repeatedly identify Sigrid E. Elenga as a technical editor at MobileGIS Ltd. A City of Kirkland public record shows Elenga using the @mobilegis.com domain, and an independent industry partner directory identifies MobileGIS Ltd as a GIS company. These records support the exact reported employer identity.",
     "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
-    "reviewed": "2026-11-25"
-  },
-  {
-    "aliases": [
-      "BROWN BROWN INSURANCE"
-    ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported insurance-employer form; not safely established as an alias of Brown & Brown",
-    "recordTypes": [
-      "individual"
-    ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
+      "https://docquery.fec.gov/pdf/481/202407159653428481/202407159653428481.pdf",
+      "https://www.kirklandwa.gov/files/sharedassets/public/city-council/agenda-documents/2018/july-17-2018/7.a.pdf",
+      "https://ies.solutions/azienda/partner/"
     ],
     "reviewed": "2026-11-25"
   },

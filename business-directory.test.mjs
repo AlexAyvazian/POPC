@@ -526,7 +526,7 @@ test('thirteenth executive-priority batch separates exact organizations from amb
   ]);
   assert.equal(groups.find(g=>g.name==='BROADSPIRE').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='GW RETAIL CONSULTING').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='BROWN BROWN INS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='BROWN BROWN INSURANCE SERVICES, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CAREOREGON, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NAADAC, THE ASSOCIATION FOR ADDICTION PROFESSIONALS').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NEW MEXICO CANCER CENTER').research.scope,'Cancer-care practice brand operated by New Mexico Oncology Hematology Consultants, Ltd.');
@@ -581,7 +581,7 @@ test('sixteenth executive-priority batch consolidates Raben shorthand and preser
   assert.equal(groups.find(g=>g.name==='THE RABEN GROUP, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='STATE FARM').research.scope,'Insurance brand / independent-agent relationship; not the donor\'s legal employing entity');
   assert.equal(groups.find(g=>g.name==='ADVANCED SCIENTIFIC CONCEPTS, LLC').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='CALVERT SYSTEMS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='CALVERT SYSTEMS ENGINEERING, INCORPORATED').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='ORBIT MOVERS & ERECTORS, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MCCREERY INC.').research.status,'Unresolved');
 });
