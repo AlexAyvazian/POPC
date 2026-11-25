@@ -259,3 +259,13 @@ JSTREET PAC is mapped to durable FEC committee C00441949, whose current register
 National Association of Professional Employer Organizations PAC (NAPEO PAC) is a recipient-file form of C00447284, currently registered as National Association of Professional Employer Organizations (NAPEO PAC). National Ready Mixed Concrete Assn. PAC is likewise a recipient-file shortened form of C00114025, currently registered with the additional (CONCRETEPAC) designation. National Thoroughbred Racing Association PAC is retained as a donor-file shorthand for C00360008, whose registered name is National Thoroughbred Racing Association Political Action Committee/HORSE PAC.
 
 No raw donor transaction is rewritten by these mappings; the original reported names remain searchable and visible in the detail records.
+
+## PAC / multi-donor employer priority research — batch 25 — November 25, 2026
+
+Twenty additional $5,000 priority groups were reviewed: sixteen PAC/organization receipts and four multi-donor reported employers. The four employers — PNL Companies, Precision NeuroMed Inc., Property Group Partners and Taconic Partners — are restricted to individual records so future organization receipts with similar names cannot be collapsed into the employer identities.
+
+Several PAC donor-file names resolve through durable FEC committee IDs rather than string similarity. Office and Professional Employees International Union (OPEIU VOTES) is a recipient-file shorthand for C00007898, currently registered as Office and Professional Employees International Union (OPEIU) JB Moss Voice of the Electorate (VOTE). Planned Parenthood's donor-file form differs from the C00314617 registered name only by punctuation after INC.
+
+Plasterers' and Cement Masons' Action Committee is a historical name of C00134742; current FEC records use Operative Plasterers' and Cement Masons' Intl Association Action Committee. Real Estate Roundtable Political Action Committee (REALPAC) without the leading THE appears in earlier C00033779 records; current records use The Real Estate Roundtable Political Action Committee (REALPAC).
+
+The donor-file Seafarers NA-AGLIWD/NMU form and the current NA-AGLIW form are both tied to C00004325. SEIU COPE is the recipient-file shorthand for C00004036, currently registered as SEIU COPE (Service Employees International Union Committee on Political Education). Raw transaction names remain preserved and searchable.
