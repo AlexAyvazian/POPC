@@ -4469,13 +4469,13 @@ export const businessIdentities = [
     "aliases": [
       "HBJ INVESTMENTS, LLC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "HBJ Investments, LLC",
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "Attorney records identify Beryl L. Snyder with employer HBJ Investments LLC in New York, but multiple unrelated HBJ Investments LLC entities exist and the reviewed evidence does not tie this donor to one authoritative state registration. Keep the exact legal entity unresolved.",
+    "scope": "Investment company / reported employer",
+    "evidence": "The Dormitory Authority of the State of New York identifies Beryl L. Snyder as a principal in HBJ Investments, LLC and describes it as an investment company. This independently matches the donor/employer context and verifies the exact reported entity name.",
     "sources": [
-      "https://iapps.courts.state.ny.us/attorneyservices/search"
+      "https://www.dasny.org/about/dasny-board-members"
     ],
     "reviewed": "2026-11-25"
   },
@@ -7405,14 +7405,13 @@ export const businessIdentities = [
     "aliases": [
       "FELDMAN DEVELOPMENT"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Feldman Development",
     "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "Lawrence Feldman's biography points to Feldman Equities, LLC, but FELDMAN DEVELOPMENT is not established as a verified legal alias or former name. Keep unresolved.",
+    "scope": "Real-estate / development business affiliation; legal form not asserted",
+    "evidence": "Boca Raton Regional Hospital's official 2024–2025 directors roster identifies Lawrence Feldman with the affiliation Feldman Development. This independently verifies the reported employer/business name; it is not merged with Feldman Equities, LLC.",
     "sources": [
-      "https://www.feldmanequities.com/about-feldman-equities/",
-      "https://www.feldmanequities.com/team/"
+      "https://baptisthealth.net/about-baptist-health/-/media/BB24AF9A8EB240D886B248EBEE98BC76.ashx"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8175,15 +8174,14 @@ export const businessIdentities = [
     "aliases": [
       "AMROCK HOLDINGS"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / holding-company name",
+    "name": "Amrock Holdings",
+    "status": "Source-backed",
+    "scope": "Amrock holding-company / reported employer scope",
     "parent": "",
-    "evidence": "Amrock's official materials identify Amrock LLC and Jeff Eisenshtadt in executive leadership, while Rocket filings describe the Amrock operating business. The reviewed evidence does not establish AMROCK HOLDINGS as an exact legal alias of Amrock LLC, so the reported employer remains unresolved rather than being collapsed into the operating entity.",
+    "evidence": "A Texas Ethics Commission filing reports Jeff Eisenshtadt as CEO of Amrock Holdings. SEC transaction documents also identify Amrock Holdings Inc. and Jeffrey K. Eisenshtadt in the Amrock corporate structure. The donor form is therefore source-backed at holding-company/employer scope without collapsing it into Amrock LLC or Amrock Holdco, LLC.",
     "sources": [
-      "https://www.amrock.com/company/leadership",
-      "https://www.amrock.com/team-members/jeff-eisenshtadt",
-      "https://s205.q4cdn.com/636124780/files/doc_financials/2024/q4/RKT-2024-10-K.pdf"
+      "https://prd.tecprd.ethicsefile.com/public/cf/2026/pdfs/ScrubbedReport_101028205.PDF",
+      "https://www.sec.gov/Archives/edgar/data/1805284/000104746920004269/a2242102zex-10_12.htm"
     ],
     "reviewed": "2026-11-25"
   },
@@ -9173,12 +9171,13 @@ export const businessIdentities = [
     "aliases": [
       "MARYSIA LLC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / fashion business",
+    "name": "Marysia, LLC",
+    "status": "Source-backed",
+    "scope": "Fashion company / legal entity",
     "parent": "",
-    "evidence": "Marysia's official site supports the swim and resort-wear brand, but reviewed sources did not establish Nathaniel Reeves as CFO or verify that the reported MARYSIA LLC string is the exact employing legal entity. No brand-to-LLC merge is made.",
+    "evidence": "California-registry-derived public records identify MARYSIA, LLC as an active foreign LLC and list Nathaniel Reeves as CEO/manager; Marysia's official site independently establishes the operating fashion brand. This matches the donor employer and executive context.",
     "sources": [
+      "https://newbizbot.ai/ppp-loans/company/marysia-santa-monica-ca-1000117400",
       "https://marysia.com/about"
     ],
     "reviewed": "2026-11-25"
@@ -9318,13 +9317,13 @@ export const businessIdentities = [
     "aliases": [
       "BRUNSWICK GROUP"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / global advisory group",
+    "name": "Brunswick Group",
+    "status": "Source-backed",
+    "scope": "Global advisory firm / reported employer",
     "parent": "",
-    "evidence": "Brunswick's official directory identifies Patti Solis Doyle as a partner, but the donor record names Patricia Doyle and the reviewed evidence did not independently establish they are the same person. Brunswick also operates through multiple legal entities, so no exact employer entity is assigned.",
+    "evidence": "A District of Columbia Office of Campaign Finance report lists Patricia Doyle's employer as Brunswick Group and occupation as Partner. Brunswick's official directory identifies Patti Solis Doyle as a partner. The identity is source-backed at firm scope without assigning a particular global legal subsidiary.",
     "sources": [
-      "https://www.brunswickgroup.com/people/directory",
+      "https://ocf.dc.gov/sites/default/files/dc/sites/ocf/release_content/attachments/Post%20Election%20Report%20Part%20IV-section1.pdf",
       "https://www.brunswickgroup.com/our-experts/patti-solis-doyle"
     ],
     "reviewed": "2026-11-25"
@@ -9485,14 +9484,13 @@ export const businessIdentities = [
     "aliases": [
       "HOLT HOSPITALITY LLC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / hospitality company",
+    "name": "Holt Hospitality, LLC",
+    "status": "Source-backed",
+    "scope": "Hospitality company / legal entity",
     "parent": "",
-    "evidence": "Holt Hospitality, LLC exists as an Atlanta hospitality business, but public materials also identify Kevin Holt with the distinct H&H Hospitality organization. The reviewed evidence does not establish which employer corresponds to the donor record, so the names are not merged.",
+    "evidence": "Georgia's Unified Certification Program directory identifies Holt Hospitality, LLC in Atlanta and names Kevin Holt as its principal contact. This directly matches the donor/employer context and verifies the exact legal entity.",
     "sources": [
-      "https://www.holt-hosp.com/",
-      "https://www.hh-hospitality.com/"
+      "https://www.savannahga.gov/DocumentCenter/View/36725/UCP-GDOT-Directory-Listing-03132026?bidId="
     ],
     "reviewed": "2026-11-25"
   },
@@ -9847,14 +9845,14 @@ export const businessIdentities = [
     "aliases": [
       "SIMPLYEZ HDM LLC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / home-delivered-meals business",
+    "name": "SimplyEz Home Delivered Meals",
+    "status": "Source-backed",
+    "scope": "Home-delivered-meals business / brand; reported LLC form retained as alias",
     "parent": "",
-    "evidence": "SimplyEz identifies Donald and Sharon Granter as founders of the home-delivered-meals business, but reviewed sources show multiple regional Simply EZ entities and do not verify the exact SIMPLYEZ HDM LLC legal name. No regional entity is merged into the donor record.",
+    "evidence": "SimplyEz's official site states that Donald and Sharon Granter founded SimplyEz Home Delivered Meals in 1997. Campaign-finance records report Sharon Granter's employer as SIMPLYEZ HDM LLC. This supports the employer identity at operating-business/brand scope without inventing a legal equivalence among regional SimplyEz entities.",
     "sources": [
       "https://simplyez.com/about",
-      "http://simplyez.com/contact"
+      "https://www.city-data.com/elec2/20/elec-VERO-BEACH-FL-20-part30.html"
     ],
     "reviewed": "2026-11-25"
   },
@@ -10571,12 +10569,14 @@ export const businessIdentities = [
     "aliases": [
       "GW RETIL CONSULTING"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / consulting business name",
+    "name": "GW Retail Consulting",
+    "status": "Source-backed",
+    "scope": "Retail consulting business / donor-file misspelling",
     "parent": "",
-    "evidence": "The reported GW RETIL CONSULTING string appears misspelled or abbreviated, and reviewed sources did not establish an exact employer identity for Gary White. No similarly named retail-consulting company is merged.",
-    "sources": [],
+    "evidence": "A U.S. District Court opinion states that Gary White's curriculum vitae lists him as Chief Executive Officer of GW Retail Consulting since 2010. The donor-file form GW RETIL CONSULTING is therefore treated as a misspelled reported alias of GW Retail Consulting.",
+    "sources": [
+      "https://www.govinfo.gov/content/pkg/USCOURTS-cod-1_22-cv-00098/pdf/USCOURTS-cod-1_22-cv-00098-3.pdf"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -10613,12 +10613,14 @@ export const businessIdentities = [
     "aliases": [
       "ALTERNATIVE LIVING CONCEPTS"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / human-services business name",
+    "name": "Alternative Living Concepts",
+    "status": "Source-backed",
+    "scope": "Pennsylvania human-services provider / reported employer",
     "parent": "",
-    "evidence": "The generic Alternative Living Concepts name produced multiple unrelated human-services businesses, and the reviewed sources did not establish which one corresponds to Venetta Greenhowe. No same-name organization is merged.",
-    "sources": [],
+    "evidence": "Pennsylvania Department of Human Services inspection records identify Alternative Living Concepts and directly address Venetta Greenhowe in connection with the provider. This independently verifies the donor/employer identity.",
+    "sources": [
+      "https://www.hcsis.dhs.pa.gov/hcsis-ssd/ssd/odp/pages/Inspections.aspx?ServiceLocationID=0002&p_varProvrId=390503"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -10724,12 +10726,14 @@ export const businessIdentities = [
     "aliases": [
       "HUMAN SOLUTIONS"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / human-services organization name",
+    "name": "Human Solutions, Inc.",
+    "status": "Source-backed",
+    "scope": "Historical aviation engineering business / reported employer",
     "parent": "",
-    "evidence": "Human Solutions is a generic organization name used by multiple entities, and reviewed sources did not establish the exact employer associated with Mary Pritchard's executive record. No entity is assigned by name similarity.",
-    "sources": [],
+    "evidence": "Cavan Solutions' official leadership biography states that Mary Pritchard built and sold two aviation engineering small businesses, including Human Solutions, Inc. This directly resolves the reported HUMAN SOLUTIONS employer in the donor context.",
+    "sources": [
+      "https://www.cavansolutions.com/our-company"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -10835,12 +10839,15 @@ export const businessIdentities = [
     "aliases": [
       "SETTLEMENT SYSTEMS ARBITRATION AND MED"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / arbitration and mediation business",
+    "name": "Settlement Services Arbitration & Mediation, Inc.",
+    "status": "Source-backed",
+    "scope": "Alternative-dispute-resolution company / donor-file typo and truncation",
     "parent": "",
-    "evidence": "The truncated SETTLEMENT SYSTEMS ARBITRATION AND MED employer string did not resolve to one authoritative legal entity tied to William Groner. No similarly named ADR firm is assigned by inference.",
-    "sources": [],
+    "evidence": "New York court records identify Settlement Services Arbitration & Mediation Inc. and describe William H. Groner's purchase of the company's stock. Independent legal profiles identify Groner with Settlement Services Arbitration & Mediation. The donor-file SETTLEMENT SYSTEMS ARBITRATION AND MED form is therefore treated as a typo/truncation tied to this company.",
+    "sources": [
+      "https://law.justia.com/cases/new-york/other-courts/2018/2018-ny-slip-op-33639-u.html",
+      "https://profiles.superlawyers.com/new-york/westbury/lawyer/william-h-groner/3d10984b-d8aa-4a9f-b861-ec87c38a10a0.html"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -11286,12 +11293,15 @@ export const businessIdentities = [
     "aliases": [
       "EUSCLID SYSTEMS CORP"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / possibly misspelled corporate name",
+    "name": "Euclid Systems Corporation",
+    "status": "Source-backed",
+    "scope": "Medical-device company / donor-file misspelling",
     "parent": "",
-    "evidence": "The EUSCLID SYSTEMS CORP spelling did not resolve to one authoritative entity tied to Joann Glady. It is not silently corrected to Euclid or another similarly named systems company.",
-    "sources": [],
+    "evidence": "SEC Form D records for Euclid Systems identify Joann Simonsen as an executive officer/director, while industry reporting identifies George Glady as a founder of Euclid Systems Corp. and describes Joann Simonsen's work with him. This resolves the donor-file EUSCLID spelling as Euclid Systems Corporation.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1035864/000103586409000004/xslFormDX01/primary_doc.xml",
+      "https://www.ophthalmologytimes.com/view/euclid-founder-george-glady-passes-away-at-73"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -11468,12 +11478,15 @@ export const businessIdentities = [
     "aliases": [
       "ORBIT MOVERS AND ERECTORS"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / moving and rigging business",
+    "name": "Orbit Movers & Erectors, Inc.",
+    "status": "Source-backed",
+    "scope": "Industrial moving and rigging company / legal entity",
     "parent": "",
-    "evidence": "Reviewed public sources did not establish one authoritative Orbit Movers and Erectors entity tied to James Arnett and the reported business-owner role. No same-name moving or rigging firm is merged.",
-    "sources": [],
+    "evidence": "An official FEC filing identifies James Arnett of Dayton with employer Orbit Movers And Erectors Inc. and occupation CEO. Current FMCSA-derived carrier records identify the legal carrier Orbit Movers & Erectors Inc., USDOT 356107, in Dayton. This verifies the reported employer identity.",
+    "sources": [
+      "https://docquery.fec.gov/pdf/356/202507159763369356/202507159763369356.pdf",
+      "https://newbizbot.ai/fmcsa-carriers/carrier/356107"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -18508,16 +18521,16 @@ export const businessIdentities = [
     "aliases": [
       "TLC BEATRICE LLC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "TLC Beatrice, LLC",
     "parent": "",
-    "scope": "Reported employer; current legal status/identity not independently verified",
+    "scope": "Family investment firm / legal entity",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "The USC Center on Public Diplomacy identifies Loida Lewis as Chair and CEO of TLC Beatrice, LLC and describes it as a family investment firm. This directly matches the donor/employer context and verifies the reported entity.",
     "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
+      "https://uscpublicdiplomacy.org/users/loida_lewis"
     ],
     "reviewed": "2026-11-25"
   },
