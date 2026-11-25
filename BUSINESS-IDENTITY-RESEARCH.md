@@ -204,3 +204,12 @@ The first post-executive priority batch reviewed the 20 highest-dollar remaining
 Every federal PAC remains a distinct identity from its connected company, association or labor organization. Historical recipient-file names for Cardinal Health, Fresenius Medical Care and the marine-industry BOAT PAC were mapped through their durable FEC committee IDs to the current FEC committee names rather than merged into the connected organizations.
 
 The raw donor string “INTERNATIONAL ASSOCIATION OF FIRE FIGHTERS” is organization-record shorthand for FIREPAC (FEC C00029447) in these Jeffries committee receipts. Its research alias is explicitly restricted to organization records; an individual who reports International Association of Fire Fighters as an employer remains an employer record and does not get reclassified as the PAC.
+
+
+## PAC / multi-donor priority research — batch 19 — November 25, 2026
+
+The next 20 highest-dollar priority identities were reviewed after batch 18. Federal PACs remain separate from connected companies and associations. The Toyota/Lexus PAC, Invesco PAC, Leidos PAC, Liberty Mutual PAC, Lifepoint PAC, Northwestern Mutual PAC, Tyson TYPAC, U.S. Bancorp PAC, Alterman Management Group PAC and HII committee were mapped through FEC committee identities rather than collapsed into their connected organizations.
+
+The HII raw SHIPPAC spelling is treated as a historical-name alias of durable FEC committee C00325092, whose current name is HII Employees Political Action Committee (HIIPAC). Independence Blue Cross LLC PAC is recorded as the separate segregated fund of AmeriHealth, Inc. under the relationship described in FEC Advisory Opinion 2024-04; the PAC title is not used to infer Independence Blue Cross LLC as its SSF sponsor.
+
+BlackRock and TD Bank are source-backed only at reported employer business/brand scope so they remain distinct from BlackRock Capital Management, Inc., TD Bank N.A., and the separate TD Bank PAC. The Catawba Nation, Pokagon Band of Potawatomi Indians and Saginaw Chippewa Indian Tribe are preserved as sovereign tribal-government identities. Arnold & Porter is resolved to Arnold & Porter Kaye Scholer LLP; Avoq is retained as the operating firm with Coral Tree Partners recorded as directly documented parent context.

@@ -633,3 +633,21 @@ test('historical PAC report names resolve by durable FEC committee identity', ()
   assert.equal(groups.find(g=>g.name==='FRESENIUS MEDICAL CARE HOLDINGS, INC. POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL MARINE MANUFACTURERS ASSOCIATION AND MARINE RETAILERS ASSOCIATION BOAT PAC').research.status,'Source-backed');
 });
+
+
+test('nineteenth priority batch preserves PAC, subsidiary, tribal and employer-brand boundaries', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'TOYOTA MOTOR NORTH AMERICA INC PAC AKA TOYOTA/LEXUS PAC',sector:'Automotive',committee:'a',amount:100},
+    {type:'organization',name:'INDEPENDENCE BLUE CROSS LLC PAC',sector:'Healthcare',committee:'a',amount:200},
+    {type:'organization',name:'HUNTINGTON INGALLS INDUSTRIES POLITICAL ACTION COMMITTE (SHIPPAC)',sector:'Defense',committee:'a',amount:300},
+    {type:'individual',name:'Fink',employer:'BLACKROCK',occupation:'CEO',sector:'Finance',committee:'a',amount:400},
+    {type:'individual',name:'Banker',employer:'TD BANK',occupation:'EXECUTIVE',sector:'Finance',committee:'a',amount:500},
+    {type:'individual',name:'Lawyer',employer:'ARNOLD & PORTER',occupation:'PARTNER',sector:'Legal',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='TOYOTA MOTOR NORTH AMERICA, INC POLITICAL ACTION COMMITTEE (TOYOTA/LEXUS PAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='INDEPENDENCE BLUE CROSS LLC PAC').research.scope,'Federal corporate political committee / separate segregated fund of AmeriHealth, Inc.');
+  assert.equal(groups.find(g=>g.name==='HUNTINGTON INGALLS INDUSTRIES, INC. EMPLOYEES POLITICAL ACTION COMMITTEE (HIIPAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='BLACKROCK').research.scope,'Global investment-management business / reported employer brand');
+  assert.equal(groups.find(g=>g.name==='TD BANK').research.parent,'The Toronto-Dominion Bank');
+  assert.equal(groups.find(g=>g.name==='ARNOLD & PORTER KAYE SCHOLER LLP').research.status,'Source-backed');
+});

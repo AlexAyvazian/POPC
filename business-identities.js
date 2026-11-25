@@ -12125,5 +12125,294 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00217638/"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INVESCO HOLDING COMPANY (US), INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "INVESCO HOLDING COMPANY (US), INC. EMPLOYEE POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00253369 identifies the current committee as Invesco Holding Company (US), Inc. Employee Political Action Committee and names Invesco Holding Company (US), Inc. as the separate connected organization. The PAC is not merged into Invesco.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00253369/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LEIDOS INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "LEIDOS INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00546234 identifies Leidos Inc. Political Action Committee and Leidos, Inc. as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00546234/?cycle=2024&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LIBERTY MUTUAL INSURANCE COMPANY - PAC"
+    ],
+    "name": "LIBERTY MUTUAL INSURANCE COMPANY - PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00171843 identifies Liberty Mutual Insurance Company - PAC and Liberty Mutual Insurance Company as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00171843/?cycle=2024&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LIFEPOINT HEALTH PAC - THE PAC OF LIFEPOINT CORPORATE SERVICES, GENERAL PARTNERSHIP (LCSGP) AND FACILITIES WHICH ARE SUBSIDIARIES OF LIFEPOINT HEALTH (COLLECTIVELY LIFEPOINT)"
+    ],
+    "name": "LIFEPOINT HEALTH PAC - THE PAC OF LIFEPOINT CORPORATE SERVICES, GENERAL PARTNERSHIP (LCSGP) AND FACILITIES WHICH ARE SUBSIDIARIES OF LIFEPOINT HEALTH (COLLECTIVELY LIFEPOINT)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00347955 identifies the PAC and its current connected organization as Lifepoint Corporate Services, General Partnership and facilities that are subsidiaries of Lifepoint Health. Earlier filings listed Lifepoint Health, Inc.; those historical registration changes do not collapse the PAC into the company.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00347955/?cycle=2026&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00347955/?cycle=2022&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE NORTHWESTERN MUTUAL LIFE INSURANCE COMPANY FEDERAL PAC"
+    ],
+    "name": "THE NORTHWESTERN MUTUAL LIFE INSURANCE CO. FEDERAL PAC (NORTHWESTERN MUTUAL FEDERAL PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00197095 identifies the Northwestern Mutual Federal PAC and The Northwestern Mutual Life Insurance Company as its separate connected organization. The donor-file spelling is retained as an alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00197095/?cycle=2022&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TYSON FOODS INC POLITICAL ACTION COMMITTEE (TYPAC)"
+    ],
+    "name": "TYSON FOODS INC POLITICAL ACTION COMMITTEE (TYPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00169821 identifies TYPAC and Tyson Foods Inc. as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00169821/?cycle=2024&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "U.S. BANCORP FEDERAL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "U.S. BANCORP FEDERAL POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00488882 identifies U.S. Bancorp Federal Political Action Committee and U.S. Bancorp as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00488882/?cycle=2024&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TOYOTA MOTOR NORTH AMERICA INC PAC AKA TOYOTA/LEXUS PAC"
+    ],
+    "name": "TOYOTA MOTOR NORTH AMERICA, INC POLITICAL ACTION COMMITTEE (TOYOTA/LEXUS PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00542365 identifies Toyota Motor North America, Inc Political Action Committee (Toyota/Lexus PAC) and Toyota Motor North America, Inc. as the separate connected organization. The donor-file PAC-AKA wording is an alias of the same committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00542365/?cycle=2024&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALTERMAN MANAGEMENT GROUP, INC. PAC"
+    ],
+    "name": "ALTERMAN MANAGEMENT GROUP, INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00652883 identifies Alterman Management Group, Inc. PAC and Alterman Management Group, Inc. as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00652883/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLACKROCK"
+    ],
+    "name": "BLACKROCK",
+    "status": "Source-backed",
+    "scope": "Global investment-management business / reported employer brand",
+    "parent": "",
+    "evidence": "BlackRock's official corporate materials identify BlackRock as the investment-management firm and BlackRock, Inc. as the public company, with Laurence Fink as Chairman and CEO. The generic employer is kept at firm/brand scope and remains distinct from the separately researched BlackRock Capital Management, Inc. subsidiary.",
+    "sources": [
+      "https://www.blackrock.com/corporate/about-us/who-we-are/leadership/larry-fink",
+      "https://ir.blackrock.com/governance/board-of-directors/person-details/default.aspx"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CATAWBA INDIAN NATION"
+    ],
+    "name": "CATAWBA NATION",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe",
+    "parent": "",
+    "evidence": "The Catawba Nation's official government site identifies the Nation, its government, courts, boards, tribal services and enterprises. The reported Catawba Indian Nation wording is retained as an alias of the Nation.",
+    "sources": [
+      "https://www.catawba.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "POKAGON BAND OF POTAWATOMI INDIANS"
+    ],
+    "name": "POKAGON BAND OF POTAWATOMI INDIANS",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government / federally recognized tribe",
+    "parent": "",
+    "evidence": "The Pokagon Band's official constitution states that federal tribal status was reaffirmed by Public Law 103-323 in 1994 and establishes the Band's self-government.",
+    "sources": [
+      "https://www.pokagonband-nsn.gov/government/constitution/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ONEUNITED BANK"
+    ],
+    "name": "ONEUNITED BANK",
+    "status": "Source-backed",
+    "scope": "Bank / Community Development Financial Institution",
+    "parent": "",
+    "evidence": "OneUnited Bank's official site identifies the bank and its leadership, including Kevin Cohee as Chairman and CEO and Teri Williams as President and COO. The reported employer is retained as the bank itself.",
+    "sources": [
+      "https://www.oneunited.com/about-us/",
+      "https://www.oneunited.com/about-us/our-leadership/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SAGINAW CHIPPEWA INDIAN TRIBE (TRIBAL OPERATIONS)"
+    ],
+    "name": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN",
+    "status": "Source-backed",
+    "scope": "Sovereign tribal government",
+    "parent": "",
+    "evidence": "The Tribe's official site identifies the Saginaw Chippewa Indian Tribe of Michigan and its government, council, courts and tribal departments. 'Tribal Operations' is treated as a reporting descriptor, not a separate legal entity.",
+    "sources": [
+      "https://www.sagchip.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HUNTINGTON INGALLS INDUSTRIES POLITICAL ACTION COMMITTE (SHIPPAC)"
+    ],
+    "name": "HUNTINGTON INGALLS INDUSTRIES, INC. EMPLOYEES POLITICAL ACTION COMMITTEE (HIIPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; historical SHIPPAC name",
+    "parent": "",
+    "evidence": "FEC committee C00325092 is the durable committee identity. Historical FEC records used Huntington Ingalls Industries, Inc. PAC (SHIP PAC/SHIPPAC); current records identify Huntington Ingalls Industries, Inc. Employees Political Action Committee (HIIPAC). Huntington Ingalls Industries, Inc. remains the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00325092/",
+      "https://www.fec.gov/data/committee/C00325092/?cycle=2016&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INDEPENDENCE BLUE CROSS LLC PAC"
+    ],
+    "name": "INDEPENDENCE BLUE CROSS LLC PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee / separate segregated fund of AmeriHealth, Inc.",
+    "parent": "",
+    "evidence": "FEC committee C00450056 identifies the PAC. FEC Advisory Opinion 2024-04 states that IBC PAC is the separate segregated fund of AmeriHealth, Inc., a subsidiary of Independence Health Group, Inc.; AmeriHealth also owns Independence Blue Cross, LLC. The PAC title therefore does not make Independence Blue Cross, LLC the SSF sponsor.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00450056/",
+      "https://www.fec.gov/updates/ao-2024-04/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ROCKET COMPANIES"
+    ],
+    "name": "ROCKET COMPANIES, INC.",
+    "status": "Source-backed",
+    "scope": "Public fintech and homeownership company",
+    "parent": "",
+    "evidence": "Rocket Companies' official materials identify Rocket Companies as the public company and Dan Gilbert as founder and chairman, with current company leadership separately listed. The employer is kept distinct from Rocket Mortgage, Redfin and other operating brands.",
+    "sources": [
+      "https://www.rocketcompanies.com/our-team/board-of-directors/",
+      "https://www.rocketcompanies.com/press-room/leadership/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TD BANK"
+    ],
+    "name": "TD BANK",
+    "status": "Source-backed",
+    "scope": "U.S. banking business / brand spanning TD Bank US Holding Company and subsidiaries",
+    "parent": "The Toronto-Dominion Bank",
+    "evidence": "TD's official investor-relations materials state that TD Bank US Holding Company and its subsidiaries, including TD Bank, N.A., are collectively known as TD Bank U.S., the U.S. banking business of The Toronto-Dominion Bank. The generic reported employer is therefore retained at business/brand scope and not collapsed into TD Bank, N.A. or the separately researched TD Bank PAC.",
+    "sources": [
+      "https://www.td.com/us/en/about-us/investor-relations",
+      "https://www.td.com/content/dam/tdb/document/pdf/about-us/td-bank-corporate-profile-en.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARNOLD & PORTER"
+    ],
+    "name": "ARNOLD & PORTER KAYE SCHOLER LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / global law firm",
+    "parent": "",
+    "evidence": "Arnold & Porter's official LLP status identifies Arnold & Porter Kaye Scholer LLP as the registered limited liability partnership operating under the Arnold & Porter name.",
+    "sources": [
+      "https://www.arnoldporter.com/en/footer/llp-status",
+      "https://www.arnoldporter.com/en/about/firm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AVOQ"
+    ],
+    "name": "AVOQ",
+    "status": "Source-backed",
+    "scope": "Strategic communications, government-relations and advertising firm / operating brand",
+    "parent": "Coral Tree Partners",
+    "evidence": "Avoq's official site identifies the national strategic communications and government-relations firm. Its 2024 rebrand announcement states that Subject Matter and Kivvit combined into Avoq and identifies Avoq as a portfolio company of Coral Tree Partners.",
+    "sources": [
+      "https://teamavoq.com/",
+      "https://teamavoq.com/news/avoq-press-release/"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
