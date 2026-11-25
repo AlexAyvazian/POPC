@@ -239,3 +239,13 @@ Twenty additional $5,000 priority groups were reviewed from American Crystal Sug
 Three donor-file normalization cases were resolved without fuzzy merging. ARCHIPAC's donor-file spacing variants resolve to FEC committee C00139071 and the registered name ARCHIPAC - THE AMERICAN INSTITUTE OF ARCHITECTS. Covington & Burling LLP PAC resolves to FEC committee C00462630, whose registered name spells out AND. Democrats for Education Reform PAC resolves to FEC committee C00417733, whose registered committee name is DEMOCRATS FOR EDUCATION REFORM; the generic PAC suffix in the reported donor string does not create a second identity.
 
 The Cow Creek Band of Umpqua Tribe of Indians remains classified as a sovereign federally recognized tribal government based on the Tribe's official government materials, rather than being reclassified as a PAC.
+
+## PAC / organization priority research — batch 23 — November 25, 2026
+
+Twenty additional $5,000 priority queue groups were reviewed from EchoStar/DISH through the International Brotherhood of Boilermakers Campaign Assistance Fund. They resolve to eighteen source-backed identities because two pairs are verified historical/current committee-name changes under durable FEC IDs.
+
+General Electric Company Political Action Committee and General Electric Company Aerospace Employee Political Action Committee (GE Aerospace PAC) are the same FEC committee, C00024869. Historical FEC cycles show the General Electric Company Political Action Committee/GEPAC names; the 2026 record uses the GE Aerospace PAC name. Both donor-file names are retained as aliases of the current committee identity.
+
+Humane Society Legislative Fund Political Action Committee and Humane World Action Fund Political Action Committee are likewise the same durable FEC committee, C00466813. The 2024 FEC record uses the former name and the 2026 record uses the latter, so the two donor-file rows are consolidated without deleting either reported name.
+
+HNTB HOLDINGS PAC is retained as the exact donor-file shorthand for FEC committee C00386029, whose registered name is HNTB HOLDINGS LTD. PAC. Federation of Exchange Accomodators 1031 PAC retains the FEC's own ACCOMODATORS spelling rather than silently correcting it.

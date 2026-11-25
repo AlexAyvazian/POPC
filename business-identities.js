@@ -13444,5 +13444,318 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00074096/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ECHOSTAR CORPORATION AND DISH NETWORK CORPORATION PAC (ECHOSTAR DISH NETWORK PAC)"
+    ],
+    "name": "ECHOSTAR CORPORATION AND DISH NETWORK CORPORATION PAC (ECHOSTAR DISH NETWORK PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00330647 identifies EchoStar Corporation and DISH Network Corporation PAC (EchoStar DISH Network PAC) as an active qualified corporate PAC and lists DISH Network Corporation as the connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00330647/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EXPERIAN NORTH AMERICA, INC POLITICAL ACTION COMMITTEE (EXPERIAN PAC)"
+    ],
+    "name": "EXPERIAN NORTH AMERICA, INC POLITICAL ACTION COMMITTEE (EXPERIAN PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00379768 identifies Experian North America, Inc Political Action Committee (Experian PAC) and Experian North America Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00379768/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EYEPAC POLITICAL ACTION COMMITTEE FOR AMERICAN SOCIETY OF CATARACT AND REFRACTIVE SURGERY"
+    ],
+    "name": "EYEPAC POLITICAL ACTION COMMITTEE FOR AMERICAN SOCIETY OF CATARACT AND REFRACTIVE SURGERY",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00171504 identifies EYEPAC Political Action Committee for American Society of Cataract and Refractive Surgery as an active qualified PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00171504/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FEDERATION OF AMERICAN HOSPITALS PAC"
+    ],
+    "name": "FEDERATION OF AMERICAN HOSPITALS PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00002261 identifies Federation of American Hospitals PAC and Federation of American Hospitals as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00002261/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FEDERATION OF EXCHANGE ACCOMODATORS 1031 PAC"
+    ],
+    "name": "FEDERATION OF EXCHANGE ACCOMODATORS 1031 PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00426874 identifies Federation of Exchange Accomodators 1031 PAC and Federation of Exchange Accomodators as its connected organization; the FEC registration itself uses the 'ACCOMODATORS' spelling.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00426874/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FIRST AMERICAN FINANCIAL CORPORATION PAC"
+    ],
+    "name": "FIRST AMERICAN FINANCIAL CORPORATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00346726 identifies First American Financial Corporation PAC and First American Financial Corporation as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00346726/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FRIENDS OF USCR"
+    ],
+    "name": "FRIENDS OF USCR",
+    "status": "Source-backed",
+    "scope": "Federal hybrid political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00870980 identifies Friends of USCR as an active unauthorized hybrid PAC with a non-contribution account.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00870980/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GENERAL ELECTRIC COMPANY POLITICAL ACTION COMMITTEE",
+      "GENERAL ELECTRIC COMPANY POLITICAL ACTION COMMITTEE (GEPAC)",
+      "GENERAL ELECTRIC COMPANY AEROSPACE EMPLOYEE POLITICAL ACTION COMMITTEE (GE AEROSPACE PAC)"
+    ],
+    "name": "GENERAL ELECTRIC COMPANY AEROSPACE EMPLOYEE POLITICAL ACTION COMMITTEE (GE AEROSPACE PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; historical committee names",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00024869 is the durable committee identity. Historical cycles used General Electric Company Political Action Committee and later GEPAC; current cycles use General Electric Company Aerospace Employee Political Action Committee (GE Aerospace PAC). These are committee-name changes under the same FEC ID, not separate donor organizations.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00024869/?cycle=2002&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00024869/?cycle=2022&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00024869/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GIFFORDS PAC"
+    ],
+    "name": "GIFFORDS PAC",
+    "status": "Source-backed",
+    "scope": "Federal hybrid political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00540443 identifies GIFFORDS PAC as an active qualified hybrid PAC with a non-contribution account.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00540443/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GRIDIRON-PAC"
+    ],
+    "name": "GRIDIRON-PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00451153 identifies GRIDIRON-PAC as an active qualified PAC. Its current statement of organization reports no connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00451153/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GROWTH ENERGY PAC"
+    ],
+    "name": "GROWTH ENERGY PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00475665 identifies Growth Energy PAC and Growth Energy as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00475665/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "H&R BLOCK INC. POLITICAL ACTION COMMITTEE (BLOCKPAC)"
+    ],
+    "name": "H&R BLOCK INC. POLITICAL ACTION COMMITTEE (BLOCKPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00188177 identifies H&R Block Inc. Political Action Committee (BLOCKPAC) and H&R Block Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00188177/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HERZOG PAC"
+    ],
+    "name": "HERZOG PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00391979 identifies Herzog PAC and HERZOG as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00391979/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HILTON WORLDWIDE POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "HILTON WORLDWIDE POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00213074 identifies Hilton Worldwide Political Action Committee and Hilton Worldwide as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00213074/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HNTB HOLDINGS PAC",
+      "HNTB HOLDINGS LTD. PAC"
+    ],
+    "name": "HNTB HOLDINGS LTD. PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; donor-file shortened name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00386029 identifies HNTB Holdings Ltd. PAC and HNTB Holdings Ltd as its connected organization. The donor-file form 'HNTB HOLDINGS PAC' is retained as an exact shortened alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00386029/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HOUCHENS INDUSTRIES, INC. POLITICAL ACTION COMMITTEE - HOUCHENS PAC"
+    ],
+    "name": "HOUCHENS INDUSTRIES, INC. POLITICAL ACTION COMMITTEE - HOUCHENS PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00792549 identifies Houchens Industries, Inc. Political Action Committee - Houchens PAC and Houchens Industries, Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00792549/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HUMANE SOCIETY LEGISLATIVE FUND POLITICAL ACTION COMMITTEE",
+      "HUMANE WORLD ACTION FUND POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "HUMANE WORLD ACTION FUND POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee; historical committee name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00466813 is the durable committee identity. The committee was registered as Humane Society Legislative Fund Political Action Committee in the 2024 cycle and is registered as Humane World Action Fund Political Action Committee in the 2026 cycle. The current connected organization is Humane World Action Fund.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00466813/?cycle=2024&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00466813/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL BROTHERHOOD OF BOILERMAKERS CAMPAIGN ASSISTANCE FUND"
+    ],
+    "name": "INTERNATIONAL BROTHERHOOD OF BOILERMAKERS CAMPAIGN ASSISTANCE FUND",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00005157 identifies International Brotherhood of Boilermakers Campaign Assistance Fund as an active qualified labor-organization PAC and lists the International Brotherhood of Boilermakers, Iron Ship Builders, Blacksmith, Forgers & Helpers as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00005157/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
