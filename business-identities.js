@@ -5518,5 +5518,1031 @@ export const businessIdentities = [
       "https://www.gleif.org/lei/549300UWJXVWVO6BRM06"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AKIN GUMP STRAUSS HAUER & FELD LLP CIVIC ACTION COMMITTEE (AKA AGSH&F CIVIC ACTION COMMITT"
+    ],
+    "name": "Akin Gump Strauss Hauer & Feld LLP Civic Action Committee (Aka Akin Gump PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00104901 identifies the current committee as Akin Gump Strauss Hauer & Feld LLP Civic Action Committee (Aka Akin Gump PAC). The supplied value is a truncated reported form of that committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00104901"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALZHEIMERS IMPACT MOVEMENT POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Alzheimers Impact Movement Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00486928 identifies this qualified PAC and lists Alzheimer's Impact Movement as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00486928"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALZHEIMERS IMPACT MOVEMENT"
+    ],
+    "name": "Alzheimer's Impact Movement",
+    "status": "Source-backed",
+    "scope": "Advocacy organization",
+    "parent": "",
+    "evidence": "FEC records identify Alzheimer's Impact Movement as the separate connected organization of its political action committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00486928"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF DERMATOLOGY ASSOCIATION POLITICAL ACTION COMMITTEE (SKINPAC)"
+    ],
+    "name": "American Academy of Dermatology Association Political Action Committee (SkinPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00359539 identifies SkinPAC and American Academy of Dermatology Association as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00359539"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF FAMILY PHYSICIANS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Academy of Family Physicians Political Action Committee (FamMedPAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee",
+    "parent": "",
+    "evidence": "FEC committee C00411553 identifies the current PAC and FamMedPAC shorthand; the American Academy of Family Physicians is separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00411553"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF FAMILY PHYSICIANS"
+    ],
+    "name": "American Academy of Family Physicians",
+    "status": "Source-backed",
+    "scope": "Professional membership organization",
+    "parent": "",
+    "evidence": "FEC records identify the American Academy of Family Physicians as the separate connected organization of FamMedPAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00411553"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF NEUROLOGY BRAINPAC"
+    ],
+    "name": "American Academy of Neurology BrainPAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00435933 identifies BrainPAC and American Academy of Neurology as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00435933"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF PHYSICIAN ASSOCIATES POLITICAL ACTION COMMITTEE (PA PAC)"
+    ],
+    "name": "American Academy of Physician Associates Political Action Committee (PA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00122499 identifies PA PAC and American Academy of Physician Associates as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00122499"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF PHYSICIAN ASSOCIATES"
+    ],
+    "name": "American Academy of Physician Associates",
+    "status": "Source-backed",
+    "scope": "Professional membership organization",
+    "parent": "",
+    "evidence": "FEC records identify the American Academy of Physician Associates as the separate connected organization of PA PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00122499"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ASSOCIATION OF NURSE PRACTITIONERS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Association of Nurse Practitioners Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00358903 identifies the PAC and the American Association of Nurse Practitioners as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00358903"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ASSOCIATION OF NURSE PRACTITIONERS"
+    ],
+    "name": "American Association of Nurse Practitioners",
+    "status": "Source-backed",
+    "scope": "Professional membership organization",
+    "parent": "",
+    "evidence": "FEC records identify AANP as the separate connected organization of its PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00358903"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COLLEGE OF NURSE-MIDWIVES MIDWIVES-PAC"
+    ],
+    "name": "American College of Nurse-Midwives Midwives-PAC",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00358812 identifies Midwives-PAC and the American College of Nurse-Midwives as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00358812"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN FEDERATION OF GOVT. EMPL. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Federation of Govt. Empl. Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00009936 identifies the PAC and American Federation of Gov't Employees as the separate connected labor organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00009936"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN FEDERATION OF GOVT. EMPL."
+    ],
+    "name": "American Federation of Government Employees",
+    "status": "Source-backed",
+    "scope": "Labor union",
+    "parent": "",
+    "evidence": "FEC records identify the American Federation of Government Employees as the separate connected labor organization of C00009936.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00009936"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN NURSES ASSOCIATION PAC"
+    ],
+    "name": "American Nurses Association PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00017525 identifies ANA PAC and documents historical ANA-PAC / N-CAP naming. American Nurses Association is separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00017525"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN NURSES ASSOCIATION"
+    ],
+    "name": "American Nurses Association",
+    "status": "Source-backed",
+    "scope": "Professional membership organization",
+    "parent": "",
+    "evidence": "FEC records identify American Nurses Association as the separate connected organization of ANA PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00017525"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN PHYSICAL THERAPY ASSOCIATION PHYSICAL THERAPY POLITICAL ACTION COMMITTEE (PT-PAC)"
+    ],
+    "name": "American Physical Therapy Association Physical Therapy Political Action Committee (PT-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00012880 identifies PT-PAC and American Physical Therapy Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00012880"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN SOCIETY OF ANESTHESIOLOGISTS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Society of Anesthesiologists Political Action Committee (ASA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00255752 identifies ASA PAC and American Society of Anesthesiologists as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00255752"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN SOCIETY OF ANESTHESIOLOGISTS"
+    ],
+    "name": "American Society of Anesthesiologists",
+    "status": "Source-backed",
+    "scope": "Professional association",
+    "parent": "",
+    "evidence": "FEC records identify the American Society of Anesthesiologists as the separate connected organization of ASA PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00255752"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN SPEECH-LANGUAGE-HEARING ASSOCIATION PAC (ASHA PAC)"
+    ],
+    "name": "American Speech-Language-Hearing Association PAC (ASHA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00210666 identifies ASHA PAC. Current filings have a self-referential connected-organization field, while historical FEC data names the American Speech-Language-Hearing Association; no silent merge is made.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00210666",
+      "https://docquery.fec.gov/cgi-bin/forms/C00210666/1553932"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN SPEECH-LANGUAGE-HEARING ASSOCIATION"
+    ],
+    "name": "American Speech-Language-Hearing Association",
+    "status": "Source-backed",
+    "scope": "Professional membership association",
+    "parent": "",
+    "evidence": "The American Speech-Language-Hearing Association is the organization historically identified by FEC data in relation to ASHA PAC; it remains separate from the PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00210666"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ASSOCIATED EQUIPMENT DISTRIBUTORS PAC"
+    ],
+    "name": "Associated Equipment Distributors Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00010124 identifies the exact current committee as Associated Equipment Distributors Political Action Committee; the reported value is a shortened form.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00010124"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ASSOCIATED EQUIPMENT DISTRIBUTORS"
+    ],
+    "name": "Associated Equipment Distributors",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "FEC records identify Associated Equipment Distributors as the separate connected organization of C00010124.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00010124"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BEACON GLOBAL STRATEGIES LLC"
+    ],
+    "name": "Beacon Global Strategies LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / strategic advisory firm",
+    "parent": "",
+    "evidence": "District of Columbia corporate registration data identifies Beacon Global Strategies LLC as a domestic LLC formed in 2013; BGS is the public-facing short form. No legal parent is established.",
+    "sources": [
+      "https://opendata.dc.gov/datasets/DCGIS::corporate-registration/about",
+      "https://bgsdc.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BHANDAL SECURITY"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported organization / employer",
+    "evidence": "FEC records identify Gurnam Bhandal as owner of BHANDAL SECURITY, but reviewed business/licensing sources do not establish an exact corporation, LLC, DBA, or licensed security-company entity. Keep the reported business name unresolved.",
+    "sources": [
+      "https://www.fec.gov/data/receipts?committee_id=C00540500&max_date=08%2F22%2F2025&min_date=08%2F22%2F2025&two_year_transaction_period=2026"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BMI LEGISLATIVE FUND"
+    ],
+    "name": "BMI Political Action Committee (BMI PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00653188 identifies the current BMI Political Action Committee (BMI PAC) and BMI Legislative Fund as a former committee name.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00653188"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROTHERHOOD OF RAILROAD SIGNALMEN POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Brotherhood of Railroad Signalmen Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00011262 identifies the PAC and Brotherhood of Railroad Signalmen as the separate connected labor organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00011262"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROTHERHOOD OF RAILROAD SIGNALMEN"
+    ],
+    "name": "Brotherhood of Railroad Signalmen",
+    "status": "Source-backed",
+    "scope": "Labor union",
+    "parent": "",
+    "evidence": "FEC records identify Brotherhood of Railroad Signalmen as the separate connected organization of its PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00011262"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CISCO SYSTEMS, INC. FEDERAL PAC, AKA CISCO SYSTEMS EPAC"
+    ],
+    "name": "Cisco Systems, Inc. Federal PAC (aka Cisco Systems E-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00362707 identifies Cisco Systems, Inc. Federal PAC and the E-PAC variant; Cisco Systems, Inc. is the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00362707"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DEERE & COMPANY PAC (AKA JOHN DEERE PAC)"
+    ],
+    "name": "Deere & Company PAC (aka John Deere PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00204099 identifies Deere & Company PAC (aka John Deere PAC). Deere & Company is the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00204099"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DEERE & COMPANY"
+    ],
+    "name": "Deere & Company",
+    "status": "Source-backed",
+    "scope": "Legal entity / industrial company",
+    "parent": "",
+    "evidence": "FEC records identify Deere & Company as the separate connected corporation of John Deere PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00204099"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DEMINGS PAC"
+    ],
+    "name": "Demings PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee; terminated",
+    "parent": "",
+    "evidence": "FEC committee C00857680 identifies Demings PAC as a terminated qualified unauthorized PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00857680"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ERNST & YOUNG POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Ernst & Young Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00227744 identifies the PAC and Ernst & Young LLP as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00227744"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ERNST & YOUNG"
+    ],
+    "name": "Ernst & Young LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / professional-services firm",
+    "parent": "",
+    "evidence": "FEC records identify Ernst & Young LLP as the separate connected organization of its political action committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00227744"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GRAIL, INC. PAC"
+    ],
+    "name": "GRAIL, Inc. PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00754648 identifies GRAIL, Inc. PAC and documents former GRAIL, LLC PAC naming. GRAIL, Inc. is separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00754648"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GRAIL, INC."
+    ],
+    "name": "GRAIL, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / biotechnology company",
+    "parent": "",
+    "evidence": "FEC records identify GRAIL, Inc. as the separate connected organization of GRAIL, Inc. PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00754648"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HDR INC PAC"
+    ],
+    "name": "HDR, Inc. Employee Owners PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00103903 identifies the exact current name HDR, Inc. Employee Owners PAC; the reported HDR INC PAC value is a shortened form.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00103903"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HDR INC"
+    ],
+    "name": "HDR, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / engineering company",
+    "parent": "",
+    "evidence": "FEC records identify HDR, Inc. as the separate connected corporation of its employee-owner PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00103903"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INDEPENDENT INSURANCE AGENTS & BROKERS OF AMERICA, INC. POLITICAL ACTION COMMITTEE (INSURP"
+    ],
+    "name": "Independent Insurance Agents & Brokers of America, Inc. Political Action Committee (InsurPac)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00022343 supplies the complete InsurPac identity behind the truncated reported value.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00022343"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL FRANCHISE ASSOCIATION FRANCHISING POLITICAL ACTION COMMITTEE INC"
+    ],
+    "name": "International Franchise Association Franchising Political Action Committee Inc",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00084491 identifies the PAC and International Franchise Association as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00084491"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LOWE'S COMPANIES, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Lowe's Companies, Inc. Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00251751 identifies the current PAC and historical LOWPAC wording. Lowe's Companies, Inc. is the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00251751"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LOWE'S COMPANIES, INC."
+    ],
+    "name": "Lowe's Companies, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / retailer",
+    "parent": "",
+    "evidence": "FEC records identify Lowe's Companies, Inc. as the separate connected corporation of its PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00251751"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MACHINISTS NON-PARTISAN POLITICAL LEAGUE MULTI CANDIDATE COMMITTEE"
+    ],
+    "name": "Machinists Non Partisan Political League of the International Association of Machinists & Aerospace Workers",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00002469 identifies the current committee and documents earlier Machinists Non-Partisan Political League names. The union is separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00002469"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARSH & MCLENNAN COMPANIES, INC. POLITICAL ACTION COMMITTEE (MMCPAC)"
+    ],
+    "name": "Marsh & McLennan Companies, Inc. Political Action Committee (Marsh PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00457234 identifies the current Marsh PAC and documents MMCPAC as an earlier filed name.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00457234"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MCKINSEY & COMPANY, INC. UNITED STATES POLITICAL ACTION COMMITTEE (MCKINSEY PAC)"
+    ],
+    "name": "McKinsey & Company, Inc. United States Political Action Committee (McKinsey PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00908228 identifies McKinsey PAC and McKinsey & Company, Inc. as the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00908228"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "METLIFE INC. EMPLOYEES' POLITICAL PARTICIPATION FUND A - FEDERAL ONLY"
+    ],
+    "name": "MetLife Inc. Employees' Political Participation Fund A - Federal Only",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00493551 identifies this distinct federal-only MetLife PAC. It must not be merged with MetLife's separately registered C00040923 committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00493551"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NAIOP-PAC"
+    ],
+    "name": "NAIOP-PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00233304 identifies NAIOP-PAC and NAIOP, Inc. as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00233304"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NAIOP, INC."
+    ],
+    "name": "NAIOP, Inc.",
+    "status": "Source-backed",
+    "scope": "Trade association",
+    "parent": "",
+    "evidence": "FEC records identify NAIOP, Inc. as the separate connected organization of NAIOP-PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00233304"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF INSURANCE AND FINANCIAL ADVISORS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "National Association of Insurance and Financial Advisors Political Action Comm",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00005249 identifies the PAC; the FEC displayed committee-name field ends in COMM. NAIFA is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00005249"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF INSURANCE AND FINANCIAL ADVISORS"
+    ],
+    "name": "National Association of Insurance and Financial Advisors",
+    "status": "Source-backed",
+    "scope": "Trade / professional association",
+    "parent": "",
+    "evidence": "FEC records identify NAIFA as the separate connected organization of C00005249.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00005249"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ELECTRICAL CONTRACTORS ASSOCIATION POLITICAL ACTION COMMITTEE (NECAPAC)"
+    ],
+    "name": "National Electrical Contractors Association Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00113811 identifies the PAC; NECAPAC is a commonly used shorthand. NECA is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00113811"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL TREASURY EMPLOYEES UNION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "National Treasury Employees Union Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00107128 identifies the PAC and National Treasury Employees Union as the separate connected labor organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00107128"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL TREASURY EMPLOYEES UNION"
+    ],
+    "name": "National Treasury Employees Union",
+    "status": "Source-backed",
+    "scope": "Labor union",
+    "parent": "",
+    "evidence": "FEC records identify National Treasury Employees Union as the separate connected organization of its PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00107128"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL WEATHER SERVICE EMPLOYEES ORGANIZATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "National Weather Service Employees Organization Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00318311 identifies the PAC. Current FEC data repeats the PAC name in the connected-organization field, so no separate sponsor identity is asserted.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00318311"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NW INTERNATIONAL WOMEN'S CONFERENCE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported organization / employer",
+    "evidence": "No reliable exact FEC committee or organization identity was established from the reviewed sources. Do not merge this label with similarly named women's organizations without another identifier.",
+    "sources": [
+      "https://www.fec.gov/data/committees/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OFFICE OF THE COMMISSIONER OF MAJOR LEAGUE BASEBALL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Office of the Commissioner of Major League Baseball Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00368142 identifies the PAC and Office of the Commissioner of Major League Baseball as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00368142"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "POLITICAL ACTION COMMITTEE OF THE AMERICAN ASSOCIATION OF ORTHOPAEDIC SURGEONS--PAC OF AAOS"
+    ],
+    "name": "Political Action Committee of the American Association of Orthopaedic Surgeons--PAC of AAOS",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00343137 identifies PAC of AAOS and the American Association of Orthopaedic Surgeons as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00343137"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PSYCHOLOGY PAC OF AMERICAN PSYCHOLOGICAL ASSOCIATION SERVICES INC."
+    ],
+    "name": "Psychology PAC of American Psychological Association Services Inc.",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00522094 identifies Psychology PAC and American Psychological Association Services Inc. (APASI) as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00522094"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ROCK HOLDINGS INC. PAC"
+    ],
+    "name": "Rocket Limited Partnership PAC (Rocket PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00388827 identifies the current Rocket PAC and documents Rock Holdings Inc. PAC as a former name. The current connected organization is Rocket Limited Partnership.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00388827"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "S.D.J. ASSOCIATES"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported organization / employer",
+    "evidence": "FEC and biographical sources identify Suzanne/Suzi Jaffe as a consultant and president of S.D.J. Associates, a pension-fund consulting business, but the exact legal entity, jurisdiction, and suffix remain unverified.",
+    "sources": [
+      "https://www.wealf.org/suzanne-jaffe",
+      "https://www.fec.gov/data/receipts?committee_id=C00650150&max_date=03%2F31%2F2022&min_date=03%2F01%2F2022&two_year_transaction_period=2022"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SAZERAC COMPANY, INC. PAC (SAZERACPAC)"
+    ],
+    "name": "Sazerac Company, Inc. PAC (SazeracPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00639138 identifies SazeracPAC and Sazerac Company, Inc. as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00639138"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOCIETY FOR VASCULAR SURGERY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Society for Vascular Surgery Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00381459 identifies the PAC and Society for Vascular Surgery as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00381459?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOCIETY FOR VASCULAR SURGERY"
+    ],
+    "name": "Society for Vascular Surgery",
+    "status": "Source-backed",
+    "scope": "Professional membership organization",
+    "parent": "",
+    "evidence": "FEC records identify Society for Vascular Surgery as the separate connected organization of its PAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00381459?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SQUIRE PATTON BOGGS POLITICAL ACTION COMMITTEE (SQUIRE PATTON BOGGS PAC)"
+    ],
+    "name": "Squire Patton Boggs Political Action Committee (Squire Patton Boggs PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00401083 identifies the current committee and documents the former Squire Sanders (US) LLP Political Action Committee name.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00401083?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/cgi-bin/forms/C00401083/930268"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TD BANK N.A. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "TD Bank US Holding Company Political Action Committee (TD Bank PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00501429 identifies the current TD Bank PAC and documents TD Bank N.A. Political Action Committee as a former name.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00501429?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE ESOP ASSOCIATION PAC"
+    ],
+    "name": "The ESOP Association PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00196089 identifies The ESOP Association PAC and The ESOP Association as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00196089?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRUIST FINANCIAL CORPORATION FEDERAL PAC"
+    ],
+    "name": "Truist Financial Corporation Federal PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00386524 identifies the current PAC and documents SunTrust Banks, Inc. Political Action Committee as a former name. C00009639 is a different Truist committee and is not merged.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00386524?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNITED PARCEL SERVICE INC. PAC"
+    ],
+    "name": "United Parcel Service, Inc. PAC (UPSPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00064766 identifies UPSPAC and United Parcel Service, Inc. as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00064766?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNITED SERVICES AUTOMOBILE ASSOCIATION EMPLOYEE PAC - USAA EMPLOYEE PAC"
+    ],
+    "name": "United Services Automobile Association Employee PAC - USAA Employee PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00164145 identifies USAA Employee PAC and United Services Automobile Association as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00164145?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNUM GROUP POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Unum Group Political Action Committee (UNUMPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00177436 identifies UNUMPAC and Unum Group as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00177436?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "US ONCOLOGY INC. NETWORK POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "US Oncology Inc. Network Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; former name",
+    "parent": "",
+    "evidence": "FEC committee C00339655 identifies the current PAC and documents earlier US Oncology Inc. Good Government Committee naming and The US Oncology Network PAC variant.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00339655?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WELLS FARGO AND COMPANY EMPLOYEE PAC (AKA WELLS FARGO EMPLOYEE PAC)"
+    ],
+    "name": "Wells Fargo and Company Employee PAC (aka Wells Fargo Employee PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; former names",
+    "parent": "",
+    "evidence": "FEC committee C00034595 identifies the current PAC and documents historical Norwest Corporation PAC naming. Wells Fargo and Company is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00034595?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WINE & SPIRITS WHOLESALERS OF AMERICA PAC"
+    ],
+    "name": "Wine and Spirits Wholesalers of America, Inc. Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00147173 identifies the current PAC; older FEC records omit ', Inc.' and the common shorthand is WSWA PAC. The association is separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00147173?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

@@ -254,3 +254,23 @@ test('raw PAC receipts stay separate from connected companies in researched iden
   const axp=groups.find(g=>g.name==='AMERICAN EXPRESS COMPANY');
   assert(axpPac);assert(axp);assert.notEqual(axpPac.key,axp.key);
 });
+
+
+test('PAC former-name batch preserves current FEC identity and union/company boundaries', () => {
+  const rows=[
+    {type:'organization',name:'ROCK HOLDINGS INC. PAC',sector:'Finance',committee:'a',amount:100},
+    {type:'organization',name:'TD BANK N.A. POLITICAL ACTION COMMITTEE',sector:'Finance',committee:'a',amount:200},
+    {type:'organization',name:'NATIONAL TREASURY EMPLOYEES UNION POLITICAL ACTION COMMITTEE',sector:'Labor',committee:'a',amount:300},
+    {type:'individual',name:'Member',employer:'NATIONAL TREASURY EMPLOYEES UNION',occupation:'STAFF',sector:'Labor',committee:'a',amount:400},
+    {type:'organization',name:'CISCO SYSTEMS, INC. FEDERAL PAC, AKA CISCO SYSTEMS EPAC',sector:'Technology',committee:'a',amount:500},
+    {type:'individual',name:'Exec',employer:'CISCO',occupation:'OPERATIONS EXECUTIVE',sector:'Technology',committee:'a',amount:600}
+  ];
+  const g=buildDirectory(rows);
+  assert(g.some(x=>x.name==='ROCKET LIMITED PARTNERSHIP PAC (ROCKET PAC)'));
+  assert(g.some(x=>x.name==='TD BANK US HOLDING COMPANY POLITICAL ACTION COMMITTEE (TD BANK PAC)'));
+  const nteuPac=g.find(x=>x.name==='NATIONAL TREASURY EMPLOYEES UNION POLITICAL ACTION COMMITTEE');
+  const nteu=g.find(x=>x.name==='NATIONAL TREASURY EMPLOYEES UNION');
+  assert(nteuPac&&nteu&&nteuPac.key!==nteu.key);
+  assert(g.some(x=>x.name==='CISCO SYSTEMS, INC. FEDERAL PAC (AKA CISCO SYSTEMS E-PAC)'));
+  assert(g.some(x=>x.name==='CISCO'));
+});
