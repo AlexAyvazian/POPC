@@ -12414,5 +12414,364 @@ export const businessIdentities = [
       "https://teamavoq.com/news/avoq-press-release/"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AECOM PAC"
+    ],
+    "name": "AECOM PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00374447 identifies AECOM PAC as an active corporate PAC and AECOM as its separate connected organization. The PAC is kept separate from individuals who report AECOM as their employer.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00374447/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AECOM"
+    ],
+    "name": "AECOM",
+    "status": "Source-backed",
+    "scope": "Global infrastructure consulting and professional-services company / reported employer",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "AECOM's official company materials identify AECOM as a global infrastructure consulting and professional-services firm. This employer identity is restricted to individual records so it remains separate from AECOM PAC.",
+    "sources": [
+      "https://aecom.com/about-us/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN CHIROPRACTIC ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "AMERICAN CHIROPRACTIC ASSOCIATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00102764 identifies the American Chiropractic Association Political Action Committee and American Chiropractic Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00102764/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN OSTEOPATHIC ASSOCIATION PAC"
+    ],
+    "name": "AMERICAN OSTEOPATHIC INFORMATION ASSOCIATION - OSTEOPATHIC POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee; historical recipient-file name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00113803 is the durable committee identity. Historical FEC recipient filings identify C00113803 as American Osteopathic Association PAC, while the current FEC committee name is American Osteopathic Information Association - Osteopathic Political Action Committee. The PAC remains distinct from its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00113803/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/940/14960708940/14960708940.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN PSYCHIATRIC ASSOCIATION PAC"
+    ],
+    "name": "AMERICAN PSYCHIATRIC ASSOCIATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00373696 identifies the American Psychiatric Association Political Action Committee and American Psychiatric Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00373696/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN SENIORS HOUSING ASSOCIATION (SENIORS HOUSING PAC)"
+    ],
+    "name": "AMERICAN SENIORS HOUSING ASSOCIATION (SENIORS HOUSING PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00325332 identifies American Seniors Housing Association (Seniors Housing PAC) and American Seniors Housing Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00325332/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN SOYBEAN ASSOCIATION PAC (SOYPAC)"
+    ],
+    "name": "AMERICAN SOYBEAN ASSOCIATION PAC (SOYPAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00408468 identifies American Soybean Association PAC (SOYPAC). The current FEC committee page lists no connected organization, so none is inferred from the committee title.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00408468/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERIPRISE FINANCIAL INC. POLITICAL ACTION COMMITTEE (AMERIPRISEPAC)"
+    ],
+    "name": "AMERIPRISE FINANCIAL INC. POLITICAL ACTION COMMITTEE (AMERIPRISEPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00414474 identifies Ameriprise Financial Inc. Political Action Committee (AmeriprisePAC) and Ameriprise Financial Inc. as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00414474/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ASSOCIATED GENERAL CONTRACTORS OF AMERICA POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "ASSOCIATED GENERAL CONTRACTORS OF AMERICA POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00082917 identifies the Associated General Contractors of America Political Action Committee and Associated General Contractors of America as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00082917/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CAMBIA HEALTH SOLUTIONS INC. PAC"
+    ],
+    "name": "CAMBIA HEALTH SOLUTIONS INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00252684 identifies Cambia Health Solutions Inc. PAC and Cambia Health Solutions Inc. as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00252684/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FINANCIAL SERVICES FORUM POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "FINANCIAL SERVICES FORUM POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00717686 identifies Financial Services Forum Political Action Committee and Financial Services Forum as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00717686/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GUIDEWELL MUTUAL HOLDING CORPORATION POLITICAL ACTION COMMITTEE (GUIDEWELL PAC)"
+    ],
+    "name": "GUIDEWELL MUTUAL HOLDING CORPORATION POLITICAL ACTION COMMITTEE (GUIDEWELL PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00161141 identifies GuideWell Mutual Holding Corporation Political Action Committee (GuideWell PAC) and GuideWell Mutual Holding Corporation as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00161141/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HEWLETT PACKARD ENTERPRISE COMPANY PAC"
+    ],
+    "name": "HEWLETT PACKARD ENTERPRISE COMPANY PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00196725 identifies Hewlett Packard Enterprise Company PAC and Hewlett Packard Enterprise Company as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00196725/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HOLLAND & KNIGHT COMMITTEE FOR EFFECTIVE GOVERNMENT"
+    ],
+    "name": "HOLLAND & KNIGHT COMMITTEE FOR EFFECTIVE GOVERNMENT",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00171330 identifies Holland & Knight Committee for Effective Government as an active qualified PAC. The current FEC committee page does not list a connected organization, so none is inferred.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00171330/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INDEPENDENT COMMUNITY BANKERS OF AMERICA POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "INDEPENDENT COMMUNITY BANKERS OF AMERICA POLITICAL ACTION COMMITTEE (ICBA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00032698 identifies Independent Community Bankers of America Political Action Committee (ICBA PAC) and Independent Community Bankers of America as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00032698/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "K&L GATES LLP POLITICAL ACTION COMMITTEE (DC)"
+    ],
+    "name": "K&L GATES LLP POLITICAL ACTION COMMITTEE (DC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00213173 identifies K&L Gates LLP Political Action Committee (DC) as an active qualified PAC. The current FEC committee page does not list a connected organization, so none is inferred.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00213173/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MANAGED FUNDS ASSOCIATION PAC"
+    ],
+    "name": "MANAGED FUNDS ASSOCIATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00306894 identifies Managed Funds Association Political Action Committee and Managed Funds Association as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00306894/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARRIOTT INTERNATIONAL, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "MARRIOTT INTERNATIONAL, INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00284810 identifies Marriott International, Inc. Political Action Committee and Marriott International, Inc. as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00284810/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MASTERCARD INTERNATIONAL INC. EMPLOYEES' PAC"
+    ],
+    "name": "MASTERCARD INTERNATIONAL INC. EMPLOYEE PAC (MASTERCARD PAC) OR (MASTERCARD EMPLOYEE PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; historical recipient-file name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00410274 is the durable committee identity. Current FEC records use Mastercard International Inc. Employee PAC (Mastercard PAC) or (Mastercard Employee PAC), while current-cycle recipient filings still report the contributing committee as Mastercard International Inc. Employees' PAC under the same FEC ID. Mastercard International Inc. remains the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00410274/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/299/202601319808499299/202601319808499299.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MCDONALDS CORPORATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "MCDONALDS CORPORATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00063164 identifies McDonalds Corporation Political Action Committee and McDonalds Corporation as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00063164/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MUTUAL OF OMAHA COMPANIES PAC (IMPAC)"
+    ],
+    "name": "MUTUAL OF OMAHA COMPANIES PAC (IMPAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00094581 identifies Mutual of Omaha Companies PAC (IMPAC) and Mutual of Omaha as its separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00094581/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
