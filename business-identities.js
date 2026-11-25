@@ -9060,5 +9060,299 @@ export const businessIdentities = [
       "https://mma.prnewswire.com/media/2790837/Press_Release_Sherman_Residential_Acquires_Axis_at_the_Park_Apartments_in_Charlotte__NC.pdf?p=original"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "K&M OFFICE LLC"
+    ],
+    "name": "K & M OFFICE LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / California LLC",
+    "parent": "",
+    "evidence": "California business filings identify K & M Office LLC as an active San Rafael LLC and list Kathleen Williams in management, consistent with the donor's CEO/CPA context. Similar K&M businesses are not merged.",
+    "sources": [
+      "https://bizfileonline.sos.ca.gov/api/report/GetImageByNum/157122113119037180061127065051038017034076215086"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PARKWAY CORPORATION"
+    ],
+    "name": "PARKWAY CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / parking and real-estate company",
+    "parent": "",
+    "evidence": "GLEIF and Parkway's official leadership materials identify Parkway Corporation and Joseph Zuritsky as Chairman. Same-name Parkway entities are kept separate.",
+    "sources": [
+      "https://www.gleif.org/lei/5493003UWOYOW435OT41",
+      "https://www.parkwaycorp.com/leadership",
+      "https://www.parkwaycorp.com/people/joseph-zuritsky"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KILLER MEXICAN MANAGEMENT LLC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / restaurant-management entity",
+    "parent": "",
+    "evidence": "Red Iguana materials connect William Coker with management of the Cardenas family's restaurant business, but the reviewed sources did not independently verify the exact Killer Mexican Management LLC legal entity. The reported LLC remains separate from the Red Iguana restaurant brand.",
+    "sources": [
+      "https://www.rediguana.com/about-us",
+      "https://business.utah.gov/articles/red-iguana-serving-up-authentic-mexican-food-since-1985"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JEWISH FEDERATION OF CLEVELAND"
+    ],
+    "name": "JEWISH FEDERATION OF CLEVELAND",
+    "status": "Source-backed",
+    "scope": "Nonprofit federation / Jewish community organization",
+    "parent": "",
+    "evidence": "Jewish Federation of Cleveland materials identify the federation and Amy Kaplan's long-running public-affairs and government-relations leadership. The federation is kept separate from related foundations and affiliated organizations.",
+    "sources": [
+      "http://www.jewishcleveland.org/who-we-are/board-staff",
+      "https://www.clevelandjewishnews.com/differencemakers/2021_difference_makers/amy-r-kaplan/article_d87aa28c-5869-11ec-992d-dfddae618bb1.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOVARTIS PHARM CORP"
+    ],
+    "name": "NOVARTIS PHARMACEUTICALS CORPORATION",
+    "status": "Source-backed",
+    "scope": "U.S. pharmaceutical legal entity / Novartis affiliate",
+    "parent": "",
+    "evidence": "Public registration records and Novartis U.S. materials identify Novartis Pharmaceuticals Corporation in East Hanover, New Jersey. The abbreviated reported employer maps to that entity and remains separate from Novartis AG, Novartis Corporation, Sandoz and other affiliates.",
+    "sources": [
+      "https://www.pharma.us.novartis.com/",
+      "https://opengovus.com/north-carolina-corporation/0128923"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AUTHORS GUILD"
+    ],
+    "name": "AUTHORS GUILD",
+    "status": "Source-backed",
+    "scope": "Authors' professional organization / nonprofit membership organization",
+    "parent": "",
+    "evidence": "The Authors Guild's official staff directory identifies Mary Rasenberger as CEO. The reported employer is retained at the organization's public-facing name and is not merged with the separate Authors Guild Foundation.",
+    "sources": [
+      "https://authorsguild.org/about/team/staff-directory/mary-rasenberger"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "QXO"
+    ],
+    "name": "QXO, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public building-products distribution company",
+    "parent": "",
+    "evidence": "QXO's official leadership and investor materials identify QXO, Inc. and Matt Fassler as Chief Strategy Officer. The reported shorthand QXO maps to the issuer.",
+    "sources": [
+      "https://www.qxo.com/qxo-leadership/matt-fassler",
+      "https://investors.qxo.com/governance/board-of-directors/person-details/default.aspx?ItemId=aac8d4ad-56da-4bac-8ce8-90bcdf8e5a2d"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARYSIA LLC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / fashion business",
+    "parent": "",
+    "evidence": "Marysia's official site supports the swim and resort-wear brand, but reviewed sources did not establish Nathaniel Reeves as CFO or verify that the reported MARYSIA LLC string is the exact employing legal entity. No brand-to-LLC merge is made.",
+    "sources": [
+      "https://marysia.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TXP SERVICES"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / services business",
+    "parent": "",
+    "evidence": "Research did not locate authoritative evidence tying the generic TXP SERVICES employer string and Anthony Roncalli's executive role to one exact legal entity. The name remains unresolved rather than being matched by similarity.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "50CAN"
+    ],
+    "name": "50CAN, INC.",
+    "status": "Source-backed",
+    "scope": "Education-advocacy nonprofit organization",
+    "parent": "",
+    "evidence": "50CAN's official staff materials identify Derrell Bradford as President and identify the organization as the 50-State Campaign for Achievement Now. The reported acronym maps to the nonprofit identity.",
+    "sources": [
+      "https://50can.org/staff/derrell-bradford",
+      "https://50can.org/staff"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ACCESS LEASING CORP"
+    ],
+    "name": "ACCESS LEASING CORPORATION",
+    "status": "Source-backed",
+    "scope": "Equipment-leasing company / business entity",
+    "parent": "",
+    "evidence": "Access Leasing identifies Charles Kremer as its president/founder and describes its leased transportation, energy and industrial-equipment business. The abbreviated reported employer maps to the company.",
+    "sources": [
+      "http://accesslc.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ADVENT INTERNATIONAL"
+    ],
+    "name": "ADVENT INTERNATIONAL",
+    "status": "Source-backed",
+    "scope": "Private-equity firm / business group and brand",
+    "parent": "",
+    "evidence": "Advent International's official materials identify the global private-equity firm, while external professional materials identify Janet Gurwitch as an operating partner. The reported employer remains at firm/brand scope rather than being assigned to one fund or management entity.",
+    "sources": [
+      "https://adventinternational.com/about/",
+      "https://cew.org/people/janet-gurwitch/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ANISA INTL"
+    ],
+    "name": "ANISA INTERNATIONAL, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / beauty tools and cosmetics-products company",
+    "parent": "",
+    "evidence": "Anisa International's official materials identify Anisa Telwar Kaicker as founder and CEO, and federal campaign records use ANISA INTERNATIONAL INC. as her employer. The abbreviated ANISA INTL maps to the company.",
+    "sources": [
+      "https://anisainternational.com/who-we-are",
+      "https://www.fec.gov/data/receipts?committee_id=C00041269&max_date=09%2F30%2F2021&min_date=09%2F01%2F2021&two_year_transaction_period=2022"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "APPLE HOSPITALITY"
+    ],
+    "name": "APPLE HOSPITALITY REIT, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public lodging real-estate investment trust",
+    "parent": "",
+    "evidence": "SEC filings identify Apple Hospitality REIT, Inc. and company leadership materials identify Justin Knight as CEO. The reported shorthand is kept separate from Apple Inc. and unrelated hospitality companies.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1418121/000119312526140145/aple-20260331.htm",
+      "https://ir.applehospitalityreit.com/corporate-governance/board-of-directors/person-details/default.aspx?itemid=17dafe49-a651-4523-a3c3-394ef424535c"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ASCEND LEARNING"
+    ],
+    "name": "ASCEND LEARNING, INC.",
+    "status": "Source-backed",
+    "scope": "Brooklyn charter-school nonprofit organization",
+    "parent": "",
+    "evidence": "Ascend Public Charter Schools identifies Maryann Li as CEO and U.S. Department of Education materials identify Ascend Learning, Inc. in the Brooklyn charter-school context. This identity is kept distinct from the unrelated commercial education company also named Ascend Learning.",
+    "sources": [
+      "http://www.ascendlearning.org/2025/05/19/ceo-announcement",
+      "https://www.ed.gov/sites/ed/files/2023/03/Ascend_S282M230014_Abstract.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BELLWETHER ENTERPRISE"
+    ],
+    "name": "BELLWETHER ENTERPRISE REAL ESTATE CAPITAL, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / commercial and multifamily mortgage-banking company",
+    "parent": "Enterprise Community Investment, Inc.",
+    "evidence": "Bellwether Enterprise materials identify Tony Love as a Senior Vice President in the Affordable Housing Group, and Enterprise materials identify Bellwether Enterprise Real Estate Capital, LLC within its legal structure. The Bellwether employer is kept separate from other Bellwether-named organizations.",
+    "sources": [
+      "https://www.bwe.com/people/tony-love",
+      "https://enterprisecommunity.org/legal-structure"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLUE STAR STRATEGIES LLC"
+    ],
+    "name": "BLUE STAR STRATEGIES, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / government-relations and strategic-consulting firm",
+    "parent": "",
+    "evidence": "Blue Star Strategies identifies Karen A. Tramontano as co-founder and CEO, and federal lobbying reports identify Blue Star Strategies LLC as her registrant. Affiliated overseas entities remain separate.",
+    "sources": [
+      "https://bluestarstrategies.com/team/karen-a-tramontano",
+      "https://lda.gov/filings/public/contribution/b8cbea09-01ff-463c-9187-f98244c288cc/print"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BRUNSWICK GROUP"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / global advisory group",
+    "parent": "",
+    "evidence": "Brunswick's official directory identifies Patti Solis Doyle as a partner, but the donor record names Patricia Doyle and the reviewed evidence did not independently establish they are the same person. Brunswick also operates through multiple legal entities, so no exact employer entity is assigned.",
+    "sources": [
+      "https://www.brunswickgroup.com/people/directory",
+      "https://www.brunswickgroup.com/our-experts/patti-solis-doyle"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COASTAL CONSTRUCTION"
+    ],
+    "name": "COASTAL CONSTRUCTION",
+    "status": "Source-backed",
+    "scope": "Florida construction business group / brand",
+    "parent": "",
+    "evidence": "Coastal Construction's official materials identify Patrick Erin Murphy as Executive Vice President and describe a group comprising multiple related construction entities. The reported employer is therefore retained at group/brand scope rather than forced into Coastal Construction of Miami, Coastal Construction Holdings or another affiliate.",
+    "sources": [
+      "https://coastalconstruction.com/patrick-erin-murphy-of-coastal-construction-group-recognized-as-the-most-innovative-contractor-of-the-year-at-red-awards",
+      "https://coastalconstruction.com/terms-conditions"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DREAM"
+    ],
+    "name": "HARLEM RBI, INC. D/B/A DREAM",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit entity operating as DREAM",
+    "parent": "",
+    "evidence": "IRS and audited financial materials identify Harlem RBI, Inc. d/b/a DREAM, and DREAM identifies Richard Berlin in executive leadership. The operating name is kept separate from individual DREAM charter-school entities and unrelated organizations using the name.",
+    "sources": [
+      "https://apps.irs.gov/pub/epostcard/cor/134025290_202206_990_2023061221442061.pdf",
+      "https://wearedream.org/our-leadership"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

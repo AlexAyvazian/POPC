@@ -416,3 +416,23 @@ test('seventh executive-priority batch resolves contextual acronyms without forc
   assert.equal(groups.find(g=>g.name==='DIGITAL CITIZENS ALLIANCE').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MOTOR & EQUIPMENT MANUFACTURERS ASSOCIATION').research.status,'Source-backed');
 });
+
+
+test('eighth executive-priority batch keeps ambiguous names separate from supported legal and brand identities', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Coker',employer:'KILLER MEXICAN MANAGEMENT LLC',occupation:'RESTAURANT EXECUTIVE',sector:'Hospitality',committee:'a',amount:100},
+    {type:'individual',name:'Reeves',employer:'MARYSIA LLC',occupation:'CFO',sector:'Retail',committee:'a',amount:200},
+    {type:'individual',name:'Roncalli',employer:'TXP SERVICES',occupation:'EXECUTIVE',sector:'Services',committee:'a',amount:300},
+    {type:'individual',name:'Doyle',employer:'BRUNSWICK GROUP',occupation:'PARTNER',sector:'Consulting',committee:'a',amount:400},
+    {type:'individual',name:'Li',employer:'ASCEND LEARNING',occupation:'CEO',sector:'Education',committee:'a',amount:500},
+    {type:'individual',name:'Murphy',employer:'COASTAL CONSTRUCTION',occupation:'EXECUTIVE VICE PRESIDENT',sector:'Construction',committee:'a',amount:600},
+    {type:'individual',name:'Berlin',employer:'DREAM',occupation:'CEO',sector:'Education',committee:'a',amount:700}
+  ]);
+  assert.equal(groups.find(g=>g.name==='KILLER MEXICAN MANAGEMENT LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='MARYSIA LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='TXP SERVICES').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='BRUNSWICK GROUP').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='ASCEND LEARNING, INC.').research.scope,'Brooklyn charter-school nonprofit organization');
+  assert.equal(groups.find(g=>g.name==='COASTAL CONSTRUCTION').research.scope,'Florida construction business group / brand');
+  assert.equal(groups.find(g=>g.name==='HARLEM RBI, INC. D/B/A DREAM').research.status,'Source-backed');
+});

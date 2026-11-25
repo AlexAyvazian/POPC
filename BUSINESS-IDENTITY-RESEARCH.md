@@ -123,3 +123,10 @@ Capitol Hill Consulting Group, GoValidate and GSIHealth remain unresolved becaus
 The next 20 executive-linked priority identities were reviewed from Family Gateway through Sherman Residential. ICIC, Rocket LLC and IHS remain explicitly unresolved because their acronyms or legal-entity forms cannot be tied to one exact employer without inference.
 
 Family Gateway, Chartwell Strategy Group, Entertainment Software Association, Excel Security, Resolution Public Affairs, Wachtell Lipton, OHBALTO Media, American Defense International, Cabinetry & Construction, 3D Molecular Designs, The Berger Company, Goddard Riverside and MEMA were resolved to source-backed identities. T:PZ was resolved to The Possible Zone using Mark Levin's matching board-chair context, and DCA was resolved to Digital Citizens Alliance using Tom Galvin's matching executive-director context. Hillel International remains a public-facing nonprofit identity of Hillel The Foundation for Jewish Campus Life. Sherman Residential remains a division/brand with Benj. E. Sherman & Sons, Inc. shown only as parent context.
+
+
+## Executive-priority identity research — batch 8 — November 25, 2026
+
+The next 20 priority identities from K & M Office through DREAM were reviewed. Killer Mexican Management LLC, Marysia LLC, TXP Services and Brunswick Group remain unresolved rather than being matched through brand similarity or a donor-name assumption.
+
+K & M Office, Parkway Corporation, Jewish Federation of Cleveland, Novartis Pharmaceuticals Corporation, Authors Guild, QXO, 50CAN, Access Leasing, Anisa International, Apple Hospitality REIT, Ascend Learning, Bellwether Enterprise, Blue Star Strategies and Harlem RBI d/b/a DREAM were source-backed. Advent International and Coastal Construction remain source-backed only at firm/group scope. Ascend Learning is specifically the Brooklyn charter-school organization associated with Maryann Li and is not merged with the unrelated commercial Ascend Learning company.
