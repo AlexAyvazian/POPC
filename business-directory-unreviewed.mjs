@@ -5,15 +5,16 @@ globalThis.fetch = async path => new Response(await fs.readFile(new URL(path, im
 
 const rows = await loadDirectoryRecords();
 const groups = buildDirectory(rows);
-const researchEligible = groups.filter(isResearchEligibleGroup);
-const excludedEmployerOnly = groups.filter(g => !g.personal && !g.research && !isResearchEligibleGroup(g));
-const unreviewed = researchEligible
+const nonPersonal = groups.filter(g => !g.personal);
+const unreviewed = nonPersonal
   .filter(g => !g.research)
   .sort((a,b) => ((b.individual+b.organization)-(a.individual+a.organization)) || (b.count-a.count) || a.name.localeCompare(b.name))
   .map(g => ({
     name: g.name,
     reportedNames: [...g.names].sort(),
     sector: [...g.sectors].sort(),
+    priorityResearchCandidate: isResearchEligibleGroup(g),
+    distinctIndividualDonors: g.individualDonors.size,
     directAmountCents: g.individual + g.organization,
     directCount: g.count,
     memoCount: g.memoCount,
@@ -34,8 +35,10 @@ const unreviewed = researchEligible
 await fs.writeFile('unreviewed-business-identities.json', JSON.stringify({
   generatedAt: new Date().toISOString(),
   count: unreviewed.length,
-  researchEligibleCount: researchEligible.length,
-  preservedExcludedEmployerOnlyCount: excludedEmployerOnly.length,
+  priorityCount: unreviewed.filter(g => g.priorityResearchCandidate).length,
   unreviewed
 }, null, 2));
-console.log(JSON.stringify({unreviewedExported:unreviewed.length,researchEligible:researchEligible.length,preservedExcludedEmployerOnly:excludedEmployerOnly.length}));
+console.log(JSON.stringify({
+  unreviewedExported: unreviewed.length,
+  priorityUnreviewed: unreviewed.filter(g => g.priorityResearchCandidate).length
+}));

@@ -59,14 +59,9 @@ The directory preserves source links, research-status filtering, parent-name sea
 
 
 
-## Research-backlog qualification — November 25, 2026
+## Research prioritization — November 25, 2026
 
-The unreviewed backlog now counts only names that qualify as research identities:
+All unreviewed non-personal business, employer, association, organization and PAC identities remain in the research backlog and in the exported queue. No one-donor employer is counted as researched merely because it is lower priority.
 
-- any identity with a direct or memo PAC / organization receipt;
-- any identity already researched (source-backed or unresolved); or
-- an employer reported by at least **two distinct individual donors**.
+For display and batch ordering only, the interface may prioritize PAC / organization receipt identities, already researched identities, and employers reported by at least two distinct individual donors. The checkpoint “unreviewed” count always means **every** preserved non-personal identity without research status.
 
-An unreviewed employer reported by only one distinct individual donor no longer inflates the research backlog, even when that donor has multiple receipt records. Those employer strings and every underlying contribution/memo record remain preserved and searchable; they are excluded from prioritization, not deleted or merged.
-
-The queue exporter and the default research view use the same qualification rule so the visible backlog and exported unreviewed count stay consistent.

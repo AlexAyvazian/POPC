@@ -90,16 +90,14 @@ test('memo-only names survive and memo amounts never increase direct totals', as
   for(const type of ['individual','organization']) assert.equal(groups.reduce((n,g)=>n+g[type],0),config.reduce((n,c)=>n+c[type],0));
   assert(groups.some(g=>g.memoCount>0&&g.count===0));
   const directNames = new Set(buildDirectory(rows.filter(r=>!r.memo)).map(g=>g.key));
-  const preservedNonPersonal=groups.filter(g=>!g.personal);
-  const listed=groups.filter(isResearchEligibleGroup);
+  const listed=groups.filter(g=>!g.personal);
   console.log(JSON.stringify({
     allRecords:rows.length,
     listedNames:listed.length,
-    preservedNonPersonalNames:preservedNonPersonal.length,
     sourceBacked:listed.filter(g=>g.research?.status==='Source-backed').length,
     unresolved:listed.filter(g=>g.research?.status==='Unresolved').length,
     unreviewed:listed.filter(g=>!g.research).length,
-    excludedSingleDonorEmployers:preservedNonPersonal.filter(g=>!g.research&&!isResearchEligibleGroup(g)).length,
+    priorityUnreviewed:listed.filter(g=>!g.research&&isResearchEligibleGroup(g)).length,
     memoOnlyNames:groups.filter(g=>!directNames.has(g.key)).length
   }));
 });
