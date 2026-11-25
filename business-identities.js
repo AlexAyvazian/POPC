@@ -2836,5 +2836,234 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00238725"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC",
+      "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Israel Public Affairs Committee Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00797670 identifies the American Israel Public Affairs Committee Political Action Committee as a qualified PAC connected to the separate American Israel Public Affairs Committee (AIPAC). The PAC remains a separate identity rather than being merged into AIPAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00797670",
+      "https://aipac.org/politics"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN HEALTH CARE ASSOCIATION PAC",
+      "AMERICAN HEALTH CARE ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Health Care Association Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00006080 identifies the American Health Care Association Political Action Committee and separately identifies the American Health Care Association as its connected trade association.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00006080/",
+      "https://docquery.fec.gov/cgi-bin/forms/C00006080/1927839"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NJASAP PAC"
+    ],
+    "name": "NetJets Association of Shared Aircraft Pilots PAC",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00488262 identifies the NetJets Association of Shared Aircraft Pilots PAC and its separate connected labor organization, NJASAP.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00488262/",
+      "https://www.njasap.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AFLAC POLITICAL ACTION COMMITTEE (AFLAC PAC)"
+    ],
+    "name": "Aflac Political Action Committee (Aflac PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00034157 identifies Aflac Political Action Committee as a qualified corporate PAC connected to the separate company AFLAC.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00034157/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AK-CHIN INDIAN COMMUNITY"
+    ],
+    "name": "Ak-Chin Indian Community",
+    "status": "Source-backed",
+    "scope": "Federally recognized tribal government",
+    "parent": "",
+    "evidence": "The Ak-Chin Indian Community is a federally recognized tribal government. It is retained as the governmental entity reported in the donor record, not as a PAC or corporate alias.",
+    "sources": [
+      "http://www.ak-chin.nsn.us/community-council",
+      "https://www.federalregister.gov/documents/2026/01/30/2026-01899/indian-entities-recognized-by-and-eligible-to-receive-services-from-the-united-states-bureau-of"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICA'S ELECTRIC COOPERATIVES PAC"
+    ],
+    "name": "National Rural Electric Cooperative Association America's Electric Cooperatives PAC",
+    "status": "Source-backed",
+    "scope": "Federal membership-association political committee",
+    "parent": "",
+    "evidence": "FEC filings identify this PAC as connected to the National Rural Electric Cooperative Association (NRECA). NRECA's official materials state that America's Electric Cooperatives PAC was formerly called ACRE.",
+    "sources": [
+      "https://docquery.fec.gov/cgi-bin/forms/C00002972/1880881",
+      "https://www.electric.coop/pac",
+      "https://www.electric.coop/nrecas-political-action-committee-gets-a-new-name-americas-electric-cooperatives-pac"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ASSOCIATION OF NURSE ANESTHETISTS SEPARATE SEGREGATED FUND (CRNA-PAC)"
+    ],
+    "name": "American Association of Nurse Anesthetists Separate Segregated Fund (CRNA-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00173153 identifies CRNA-PAC as the separate segregated fund of the American Association of Nurse Anesthetists. The PAC and association remain distinct identities.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00173153?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/cgi-bin/forms/C00173153/1690061",
+      "https://service.aana.com/help/what-is-the-crna-pac"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN DENTAL ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Dental Association Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "evidence": "FEC committee C00000729 identifies the American Dental Association Political Action Committee. The ADA's official page uses ADPAC for its federal PAC; the association itself remains separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00000729/",
+      "https://www.ada.org/ADPAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN INSTITUTE OF CERTIFIED PUBLIC ACCOUNTANTS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "American Institute of Certified Public Accountants Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal professional-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00077321 identifies the AICPA political action committee. AICPA's official advocacy materials describe it as the accounting profession's bipartisan PAC; the AICPA association remains a separate organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00077321",
+      "https://www.aicpa-cima.com/advocacy/article/cpas-count-make-your-voice-heard-on-capitol-hill"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DELOITTE POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Deloitte Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00211318 identifies Deloitte Political Action Committee and its organizational filing identifies Deloitte LLP as the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00211318",
+      "https://docquery.fec.gov/cgi-bin/forms/C00211318/1863908"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DELTA AIR LINES POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Delta Air Lines PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00104802 identifies Delta Air Lines PAC. Delta's political-contributions report describes DeltaPAC as a voluntary employee-funded PAC associated with Delta Air Lines, Inc.; the company and PAC remain separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00104802?cycle=2026&tab=about-committee",
+      "https://s2.q4cdn.com/181345880/files/doc_downloads/2025/Delta-Air-Lines-Political-Contributions-Report-2024-FINAL.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HONEYWELL INTERNATIONAL PAC"
+    ],
+    "name": "Honeywell International Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00096156 uses Honeywell International Political Action Committee in current organizational filings. Honeywell's official governance page refers to the employee PAC as HIPAC. Honeywell International Inc. remains the separate connected corporation.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00096156?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/cgi-bin/forms/C00096156/1973204",
+      "https://investor.honeywell.com/corporate-governance/political-contributions"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "International Brotherhood of Electrical Workers Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00027342 identifies the IBEW Political Action Committee as the union's federal PAC. IBEW remains the separate connected labor organization.",
+    "sources": [
+      "https://docquery.fec.gov/cgi-bin/forms/C00027342/1151170",
+      "https://ibewgov.org/ibew-pac/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JPMORGAN CHASE & CO. PAC"
+    ],
+    "name": "JPMorgan Chase & Co. PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00128512 identifies JPMorgan Chase & Co. PAC. JPMorgan Chase describes its employee PACs as funded by voluntary eligible-employee contributions; JPMorgan Chase & Co. remains the separate connected company.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00128512",
+      "https://www.jpmorganchase.com/about/governance/political-engagement-and-public-policy"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MORGAN STANLEY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Morgan Stanley Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00337626 identifies Morgan Stanley Political Action Committee. Morgan Stanley's governance materials call the federal employee PAC MSPAC and state that it is funded solely by voluntary employee contributions; Morgan Stanley remains separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00337626?cycle=2026&tab=about-committee",
+      "https://www.morganstanley.com/about-us-governance/policy-polcontr"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

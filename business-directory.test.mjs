@@ -65,6 +65,21 @@ test('memo-only names survive and memo amounts never increase direct totals', as
   }));
 });
 
+test('researched PAC titles remain separate from their connected organizations', () => {
+  const rows=[
+    {type:'organization',name:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE',sector:'Advocacy',committee:'one',amount:50000},
+    {type:'individual',name:'Donor',employer:'AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE',occupation:'Employee',sector:'Advocacy',committee:'one',amount:10000},
+    {type:'organization',name:'AMERICAN HEALTH CARE ASSOCIATION PAC',sector:'Healthcare',committee:'one',amount:50000},
+    {type:'individual',name:'Donor 2',employer:'AMERICAN HEALTH CARE ASSOCIATION',occupation:'Employee',sector:'Healthcare',committee:'one',amount:10000}
+  ];
+  const groups=buildDirectory(rows);
+  assert.equal(groups.length,4);
+  assert(groups.some(g=>g.name==='AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE'));
+  assert(groups.some(g=>g.name==='AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE'));
+  assert(groups.some(g=>g.name==='AMERICAN HEALTH CARE ASSOCIATION POLITICAL ACTION COMMITTEE'));
+  assert(groups.some(g=>g.name==='AMERICAN HEALTH CARE ASSOCIATION'));
+});
+
 test('researched aliases merge while subsidiaries, brands and unresolved names stay separate', () => {
   const employers=[
     'ARISTEIA CAPITAL','ARISTEIA CAPITAL LLC',
