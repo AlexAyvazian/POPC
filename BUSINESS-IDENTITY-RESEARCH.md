@@ -109,3 +109,10 @@ Molecule Ventures, Niagara Bottling, NOLA Education, PAFCO, Saba Capital Managem
 The next 20 priority identities in the roughly $330k–$363k executive-linked tier were reviewed. Womble Bond Dickinson (US), Ascend Wellness Holdings, Beach Walk Media, Buckeye Relief, C3 Industries, Freedom Mortgage Corporation, Lone Pine Capital, MBS Associates, Omega Overseas Investments, Principal Building Services and SL Green Realty were resolved to source-backed entities.
 
 Chelsea Piers, ExxonMobil, Fisher Brothers and Hilton are retained at business-group or brand scope because the reported employer does not identify one exact operating entity. Amrock Holdings, Kieloch Consulting, Silver Rabbit and Super Niche Inc. remain unresolved. Glazer's Inc. is retained as a historical legal-employer identity and not merged into later distributor structures.
+
+
+## Executive-priority identity research — batch 6 — November 25, 2026
+
+This batch reviewed the next executive-linked tier from Air Ventures through GSIHealth. The two reported strings “NFP AN AON COMPANY” and “NFP AND AON COMPANY” were verified as variants of the same NFP employer identity and consolidated at the directory-identity layer only; all underlying receipts remain unchanged.
+
+Capitol Hill Consulting Group, GoValidate and GSIHealth remain unresolved because the reviewed evidence does not support one exact employing legal entity. Lilette Advisors and PWR are source-backed at firm/brand scope. Air Ventures, Ark Restaurants, Empire State Realty Trust, Host Hotels & Resorts, Maximus, RLJ Lodging Trust, Thomas Safran & Associates, QP Health Care Services d/b/a Vivage, Veterans Services Corporation and ZMC Advisors were resolved to source-backed entities. The National Association of Broadcasters remains separate from NABPAC.

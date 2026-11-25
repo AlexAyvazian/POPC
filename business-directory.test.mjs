@@ -379,3 +379,22 @@ test('fifth executive-priority batch separates exact entities from brands and un
   assert.equal(groups.find(g=>g.name==='SUPER NICHE INC.').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='LONE PINE CAPITAL LLC').research.status,'Source-backed');
 });
+
+
+test('sixth executive-priority batch consolidates verified variants without collapsing ambiguous employers', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Meltzer',employer:'NFP AN AON COMPANY',occupation:'CEO',sector:'Insurance',committee:'a',amount:100},
+    {type:'individual',name:'Meltzer',employer:'NFP AND AON COMPANY',occupation:'CEO',sector:'Insurance',committee:'b',amount:200},
+    {type:'individual',name:'Ashy',employer:'GOVALIDATE',occupation:'OWNER',sector:'Technology',committee:'a',amount:300},
+    {type:'individual',name:'Davis',employer:'CAPITOL HILL CONSULTING GROUP',occupation:'SENIOR VICE PRESIDENT',sector:'Lobbying',committee:'a',amount:400},
+    {type:'individual',name:'Bernstein',employer:'GSIHEALTH',occupation:'EXECUTIVE',sector:'Healthcare',committee:'a',amount:500},
+    {type:'individual',name:'Moskowitz',employer:'VIVAGE',occupation:'CEO',sector:'Healthcare',committee:'a',amount:600}
+  ]);
+  const nfp=groups.find(g=>g.name==='NFP');
+  assert.equal(nfp.count,2);
+  assert.equal(nfp.names.size,2);
+  assert.equal(groups.find(g=>g.name==='GOVALIDATE').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='CAPITOL HILL CONSULTING GROUP').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='GSIHEALTH').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='QP HEALTH CARE SERVICES, LLC').research.status,'Source-backed');
+});

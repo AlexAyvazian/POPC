@@ -8448,5 +8448,309 @@ export const businessIdentities = [
       "https://www.dos.ny.gov/corporation-and-business-entity-database"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AIR VENTURES"
+    ],
+    "name": "AIR VENTURES LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / airport food-and-beverage concessionaire",
+    "parent": "",
+    "evidence": "The U.S. Department of Transportation identifies Air Ventures LLC as an airport concession business, and public company materials identify George Walker as co-founder/CEO. The entity is distinct from unrelated AIR Ventures investment firms.",
+    "sources": [
+      "https://www.transportation.gov/disadvantaged-business-enterprise/air-ventures-llc-0",
+      "http://airventures.shaycreations.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ANTI-DEFAMATION LEAGUE"
+    ],
+    "name": "ANTI-DEFAMATION LEAGUE",
+    "status": "Source-backed",
+    "scope": "Nonprofit civil-rights organization",
+    "parent": "",
+    "evidence": "ADL's Form 990 identifies Anti-Defamation League as the nonprofit organization, and ADL materials document Sharon Nazarian's leadership roles. Historical role changes do not create a separate employer identity.",
+    "sources": [
+      "https://www.adl.org/sites/default/files/pdfs/2025-07/FY24%20ADL%20990%20Public%20Disclosure.pdf",
+      "https://www.adl.org/staff/dr-sharon-s-nazarian"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARK RESTAURANTS CORP"
+    ],
+    "name": "ARK RESTAURANTS CORP.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public restaurant company",
+    "parent": "",
+    "evidence": "SEC filings identify Ark Restaurants Corp. as the registrant and Michael Weinstein as longtime CEO/chairman. Individual restaurant brands and subsidiaries remain separate.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/779544/000077954425000005/annualreport-2x3.pdf",
+      "https://www.sec.gov/Archives/edgar/data/779544/000077954426000004/arkr-20260126.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CAPITOL HILL CONSULTING GROUP"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / lobbying-firm name",
+    "parent": "",
+    "evidence": "Federal lobbying disclosures and the firm's official site establish Capitol Hill Consulting Group as the registrant/business name and identify Chris Davis as Senior Vice President, but the reviewed evidence does not establish its exact underlying legal entity. The name remains unresolved rather than being assigned to an inferred LLC.",
+    "sources": [
+      "https://capitolhillcg.com/team/chris-davis",
+      "https://lda.gov/filings/public/filing/8efaa30e-65cd-4dcc-a592-db11c341247a/print",
+      "https://capitolhillcg.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EMPIRE STATE REALTY TRUST"
+    ],
+    "name": "EMPIRE STATE REALTY TRUST, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public real-estate investment trust",
+    "parent": "",
+    "evidence": "SEC filings identify Empire State Realty Trust, Inc. and separately identify its operating partnership, while company materials identify Anthony E. Malkin as Chairman and CEO. The operating partnership remains distinct.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1541401/000110465926061390/tm2614446d1_s8.htm",
+      "https://investors.empirestaterealtytrust.com/governance/board-of-directors/person-details/default.aspx?ItemId=29475cb3-dc76-402c-a906-c169f48f7775"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GOVALIDATE"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / digital-identity brand",
+    "parent": "",
+    "evidence": "GoValidate's terms identify Mobile DMV, LLC d/b/a GoValidate, but reviewed sources associate Alton Ashy with Advanced Strategies Inc. rather than independently establishing him as an owner of GoValidate. The donor-employer string therefore remains unresolved.",
+    "sources": [
+      "https://go-validate.com/terms-of-service",
+      "https://www.advancedstrategiesusa.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HOST HOTELS & RESORTS"
+    ],
+    "name": "HOST HOTELS & RESORTS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public lodging real-estate investment trust",
+    "parent": "",
+    "evidence": "Host Hotels & Resorts' official leadership materials identify James F. Risoleo as President and CEO, and company filings use Host Hotels & Resorts, Inc. as the public REIT identity. Its operating partnership remains separate.",
+    "sources": [
+      "http://www.hosthotels.com/Our-Company/Leadership",
+      "https://ir.hosthotels.com/news-releases/news-release-details/host-hotels-resorts-inc-reports-results-2025"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LILETTE ADVISORS"
+    ],
+    "name": "LILETTE ADVISORS",
+    "status": "Source-backed",
+    "scope": "Strategic-advisory firm / business brand; exact legal entity not established",
+    "parent": "",
+    "evidence": "Lilette Advisors' official site identifies the advisory firm and Ryan Berni as a partner/managing partner. The reviewed sources do not establish a fuller legal entity name, so the employer remains at firm/brand scope.",
+    "sources": [
+      "https://liletteadvisors.com/our-team/ryan-berni",
+      "https://liletteadvisors.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MAXIMUS"
+    ],
+    "name": "MAXIMUS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public government-services company",
+    "parent": "",
+    "evidence": "Maximus investor materials identify Maximus, Inc., and the company identifies Allen Thompson as Senior Vice President, Government Relations. The bare employer is treated as the public company's common name.",
+    "sources": [
+      "https://maximus.com/leadership/allen-thompson",
+      "http://investor.maximus.com/company-info"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF BROADCASTERS"
+    ],
+    "name": "NATIONAL ASSOCIATION OF BROADCASTERS",
+    "status": "Source-backed",
+    "scope": "Broadcast-industry trade association",
+    "parent": "",
+    "evidence": "NAB's official materials identify Curtis LeGeyt as President and CEO of the National Association of Broadcasters. NABPAC is a separate political committee and is not merged with the association.",
+    "sources": [
+      "https://www.nab.org/about/curtisLeGeyt.asp",
+      "https://www.nab.org/documents/newsroom/pressRelease.asp?id=6368"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NFP AN AON COMPANY",
+      "NFP AND AON COMPANY"
+    ],
+    "name": "NFP",
+    "status": "Source-backed",
+    "scope": "Insurance-broker and consulting business / Aon company",
+    "parent": "",
+    "evidence": "NFP's official site identifies NFP as an Aon company. The two reported strings differ only in the wording of that Aon relationship and are supported as variants of the same NFP employer identity; they are not treated as separate companies.",
+    "sources": [
+      "https://www.nfp.com/",
+      "https://www.nfp.com/about-nfp/find-an-office/6903-rockledge-drive-suite-1400-north-bethesda-md"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OCHSNER HEALTH"
+    ],
+    "name": "OCHSNER HEALTH",
+    "status": "Source-backed",
+    "scope": "Healthcare system / operating name of Ochsner Clinic Foundation",
+    "parent": "",
+    "evidence": "Public disclosures identify Ochsner Clinic Foundation d/b/a Ochsner Health, and institutional materials identify Matthew Block as Executive Vice President and Chief Administrative Officer. The health-system name is retained separately from individual facilities.",
+    "sources": [
+      "https://www.xula.edu/directory//people/matthew-block.html",
+      "https://emma.msrb.org/P11752451-P11347025-P11782996.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PWR"
+    ],
+    "name": "PWR",
+    "status": "Source-backed",
+    "scope": "Water-treatment and engineering business / brand; exact legal entity not established",
+    "parent": "",
+    "evidence": "PWR's official site and team page identify the water-treatment business and Tyler Huggins as COO. Because PWR is highly generic and the site does not establish a fuller legal entity name, the reported employer remains at business/brand scope.",
+    "sources": [
+      "https://pwrwater.com/",
+      "https://pwrwater.com/team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RLJ LODGING TRUST"
+    ],
+    "name": "RLJ LODGING TRUST",
+    "status": "Source-backed",
+    "scope": "Legal entity / public lodging real-estate investment trust",
+    "parent": "",
+    "evidence": "SEC filings identify RLJ Lodging Trust, and the trust's official leadership page identifies Leslie D. Hale as President and CEO. Operating subsidiaries remain separate.",
+    "sources": [
+      "https://rljlodgingtrust.com/about-us/leadership/",
+      "https://www.sec.gov/Archives/edgar/data/1511337/000110465926054917/tm2613128d2_s8.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SILVER MARKETING INC."
+    ],
+    "name": "SILVER MARKETING INC.",
+    "status": "Source-backed",
+    "scope": "Marketing business / reported corporate identity",
+    "parent": "",
+    "evidence": "Silver Marketing's official site identifies the company and its leadership, including founder and president Pat Silver. The donor's fuller first name is not used as proof of identity; the company employer itself is source-backed.",
+    "sources": [
+      "https://www.silvermarketing.com/leadership",
+      "https://www.silvermarketing.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THOMAS SAFRAN AND ASSOCIATES"
+    ],
+    "name": "THOMAS SAFRAN & ASSOCIATES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / affordable-housing development and management company",
+    "parent": "",
+    "evidence": "Thomas Safran & Associates' official disclaimer identifies Thomas Safran & Associates, Inc., while FEC materials report Thomas Safran with the shortened employer and chairman role. Thomas Safran & Associates Development, Inc. is a separately named entity and is not merged.",
+    "sources": [
+      "https://tsahousing.com/disclaimer",
+      "https://docquery.fec.gov/pdf/810/202608309904049810/202608309904049810.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VIVAGE"
+    ],
+    "name": "QP HEALTH CARE SERVICES, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity doing business as Vivage",
+    "parent": "",
+    "evidence": "Legal and benefits records identify QP Health Care Services, LLC d/b/a Vivage, and Vivage's official team page identifies Jay Moskowitz as President and CEO. Other Vivage facilities and post-merger entities remain separate.",
+    "sources": [
+      "https://efast2-filings-public.s3.amazonaws.com/prd/2025/09/24/20250924111202NAL0009133955001.pdf",
+      "https://cases.justia.com/colorado/court-of-appeals/2016-15ca1252.pdf?ts=1473347170",
+      "https://www.vivage.com/our-team/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VSC"
+    ],
+    "name": "VETERANS SERVICES CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / government-services company doing business as Vital Services Contractors",
+    "parent": "",
+    "evidence": "Maryland government records identify Veterans Services Corporation and Emmanuel Bailey as founder, sole owner, President and CEO, with Vital Services Contractors used as its business name. The legal corporation remains the canonical identity.",
+    "sources": [
+      "https://www.mdgaming.com/wp-content/uploads/2023/03/3-8-23-Commission-Report-Veterans-Services-Corp-Commission-Presentation.pdf",
+      "https://vitalcorp.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ZMC"
+    ],
+    "name": "ZMC ADVISORS, L.P.",
+    "status": "Source-backed",
+    "scope": "Legal entity / registered investment adviser",
+    "parent": "",
+    "evidence": "SEC Form ADV identifies ZMC Advisors, L.P., while ZMC's official team page identifies Andrew Vogel as Managing Partner and Co-Chief Investment Officer. ZMC funds and general-partner entities remain separate.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1034768",
+      "https://zmclp.com/team-info/andrew-vogel"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GSIHEALTH"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / health-IT business name",
+    "parent": "",
+    "evidence": "GSI Health materials identify the health-IT business and Lori Evans Bernstein's leadership, but reviewed records distinguish GSI Health, LLC and GSI Health Holdings, LLC and do not establish which legal identity corresponds to the donor's GSIHEALTH employer string. The entities are not collapsed.",
+    "sources": [
+      "http://gsihealth.com/press-release/medecision-acquires-health-delivery-system-transformation-pioneer-gsi-health",
+      "https://medecision.com/medecision-and-gsi-health-are-better-together",
+      "https://www.fiercehealthcare.com/healthcare/gsi-health-appoints-lori-evans-bernstein-as-president"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
