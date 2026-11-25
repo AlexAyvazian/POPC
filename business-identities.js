@@ -1636,5 +1636,350 @@ export const businessIdentities = [
       "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1034394"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE DURST ORGANIZATION LP"
+    ],
+    "name": "The Durst Organization L.P.",
+    "status": "Source-backed",
+    "scope": "Legal entity / real-estate organization",
+    "parent": "",
+    "evidence": "GLEIF identifies The Durst Organization L.P. as an active Delaware limited partnership. The Durst Organization is the public-facing family-owned real-estate organization; no public direct parent is established.",
+    "sources": [
+      "https://www.gleif.org/lei/254900XNLAOJMIHHG526",
+      "https://www.durst.org/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CLINIC PHARMACY SOLUTIONS LLC"
+    ],
+    "name": "Clinic Pharmacy Solutions LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / pharmacy-services business",
+    "parent": "",
+    "evidence": "Louisiana business records identify Clinic Pharmacy Solutions LLC as a Louisiana domestic limited liability company formed in 2020. No parent or former name is established; similarly named Clinical Pharmacy Solutions entities are not merged.",
+    "sources": [
+      "https://coraweb.sos.la.gov/commercialsearch/commercialsearch.aspx",
+      "https://www.la.gov/business"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TWO TREES FARM DEVELOPMENT LLC"
+    ],
+    "name": "Two Trees Farm Development LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / real-estate development",
+    "parent": "",
+    "evidence": "New York records identify Two Trees Farm Development LLC as a domestic LLC. Its address aligns with the Two Trees real-estate organization, but the reviewed evidence does not establish a direct legal parent, so the LLC remains separate.",
+    "sources": [
+      "https://apps.dos.ny.gov/publicInquiry/",
+      "https://www.twotreesny.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ZINC COLLECTIVE LLC"
+    ],
+    "name": "Zinc Collective, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / political-technology organization",
+    "parent": "",
+    "evidence": "Zinc Collective's operating agreement identifies Zinc Collective, LLC as a California limited liability company organized as a member-governed cooperative. The political brand is linked by name, but no parent is established.",
+    "sources": [
+      "https://www.zinc.coop/operating-agreement/",
+      "https://zinccollective.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BIRCH LEAF MANAGEMENT LLC"
+    ],
+    "name": "Birch Leaf Management LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity",
+    "parent": "",
+    "evidence": "Delaware and Georgia business-search records identify Birch Leaf Management LLC as an active LLC. No supported parent, alias, or former name was found.",
+    "sources": [
+      "https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx",
+      "https://ecorp.sos.ga.gov/BusinessSearch"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KRAMER, DILLOF, LIVINGSTON, & MOORE LLP"
+    ],
+    "name": "Kramer Dillof Livingston & Moore, LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "The firm's official materials identify Kramer, Dillof, Livingston & Moore and the KDLM abbreviation. The partnership is retained as its own legal/business identity with no parent company.",
+    "sources": [
+      "https://kdlm.com/about-us-kdlm",
+      "https://kdlm.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GEO-BROADCAST SOLUTIONS, LLC"
+    ],
+    "name": "Geo-Broadcast Solutions, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / broadcast technology",
+    "parent": "",
+    "evidence": "Geo-Broadcast Solutions, LLC is the established legal entity. The business relaunched publicly under the Aktira brand in 2026, but no reviewed state amendment establishes that the LLC itself legally changed name, so Aktira is treated as a brand relationship rather than a replacement legal entity.",
+    "sources": [
+      "https://aktira.com/",
+      "https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SMOKE BEND ASSOCIATES LLC"
+    ],
+    "name": "Smoke Bend Associates, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity",
+    "parent": "",
+    "evidence": "Louisiana business records identify Smoke Bend Associates, LLC as a domestic LLC. The FEC separately lists Smoke Bend Associates LLC Federal Political Action Committee as a connected political committee; the PAC is not merged into the LLC.",
+    "sources": [
+      "https://coraweb.sos.la.gov/commercialsearch/commercialsearch.aspx",
+      "https://www.fec.gov/data/committee/C00378950/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EAST WEST BANCORP INC."
+    ],
+    "name": "East West Bancorp, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / bank holding company",
+    "parent": "",
+    "evidence": "SEC filings identify East West Bancorp, Inc. as the Delaware bank-holding-company registrant and distinguish its wholly owned principal banking subsidiary, East West Bank.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1069157/000106915726000044/ewbc-20260630.htm",
+      "https://www.sec.gov/Archives/edgar/data/1069157/000106915726000009/ewbc-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARDELYX, INC."
+    ],
+    "name": "Ardelyx, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / biopharmaceutical company",
+    "parent": "",
+    "evidence": "SEC and company investor materials identify Ardelyx, Inc. as the current Delaware registrant and document Nteryx as its former corporate name before the 2008 name change.",
+    "sources": [
+      "https://ir.ardelyx.com/Investor-resources/faqs",
+      "https://www.sec.gov/Archives/edgar/data/1437402/000143740226000044/ardx-20260630.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLACK & VEATCH"
+    ],
+    "name": "Black & Veatch Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / engineering company",
+    "parent": "BVH, Inc.",
+    "evidence": "GLEIF identifies Black & Veatch Corporation as the legal entity and reports BVH, Inc. as its direct parent. The reported Black & Veatch form is the shortened business name for this entry.",
+    "sources": [
+      "https://www.gleif.org/lei/254900JDYPMBOS4RVL80",
+      "https://www.gleif.org/lei/549300HWKLLYWFJWNT91"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CERRIS INC."
+    ],
+    "name": "Cerris, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / construction group",
+    "parent": "",
+    "evidence": "Cerris states that MMC Corp. was rebranded as Cerris, Inc. and separately renamed operating companies as Cerris Builders and Cerris Systems. Those operating companies remain separate entities rather than aliases of the parent/group entry.",
+    "sources": [
+      "https://cerris.com/cerris-marks-first-anniversary-of-rebrand-and-expands-national-presence",
+      "https://cerris.com/company"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MESSER CONSTRUCTION CO"
+    ],
+    "name": "Messer Construction Co.",
+    "status": "Source-backed",
+    "scope": "Legal entity / construction company",
+    "parent": "",
+    "evidence": "Messer's official history and employee-ownership materials identify Messer Construction Co. as the operating company and document its lineage from Frank Messer & Sons, Inc. The historical predecessor is not used as an automatic alias.",
+    "sources": [
+      "https://www.messer.com/about-messer/history/",
+      "https://www.messer.com/about-messer/employee-ownership"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HNTB HOLDINGS LTD."
+    ],
+    "name": "HNTB Holdings Ltd.",
+    "status": "Source-backed",
+    "scope": "Legal entity / holding company",
+    "parent": "",
+    "evidence": "Public registration and federal-court corporate disclosure materials identify HNTB Holdings Ltd. as a distinct holding entity. It is not merged with HNTB Corporation or the broader HNTB brand, and the direct parent above the holding entity remains unconfirmed.",
+    "sources": [
+      "https://www.hntb.com/about",
+      "https://dockets.justia.com/docket/california/casdce/3:2022cv00408/729975",
+      "https://opengovwa.com/corporation/602955050"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRANSDIGM GROUP INC."
+    ],
+    "name": "TransDigm Group Incorporated",
+    "status": "Source-backed",
+    "scope": "Legal entity / aerospace holding company",
+    "parent": "",
+    "evidence": "SEC filings identify TransDigm Group Incorporated as the top-level registrant and separately identify TransDigm Inc. as a wholly owned subsidiary. The reported Inc. abbreviation is mapped to the registrant without merging the subsidiary.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1260221/000126022126000062/tdg-20260921.htm",
+      "https://www.sec.gov/Archives/edgar/data/1260221/000126022126000077/exhibit211tdg202610-k.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GARNEY HOLDING CO."
+    ],
+    "name": "Garney Holding Company",
+    "status": "Source-backed",
+    "scope": "Legal entity / holding company",
+    "parent": "",
+    "evidence": "Federal registration records distinguish Garney Holding Company from Garney Companies Inc., which operates as Garney Construction. The holding company is retained separately; no higher parent is established.",
+    "sources": [
+      "https://sam.gov/entity/RS7AVLPUBQ78/coreData",
+      "https://sam.gov/entity/LSRHKYNHM7Z5/coreData",
+      "https://www.garney.com/careers/employee-ownership"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CME GROUP INC."
+    ],
+    "name": "CME Group Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / exchange holding company",
+    "parent": "",
+    "evidence": "SEC filings identify CME Group Inc. as the current Delaware registrant and document Chicago Mercantile Exchange Holdings Inc. as its former name following the CBOT Holdings merger.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1156375/000115637526000009/cme-20251231.htm",
+      "https://www.sec.gov/Archives/edgar/data/1156375/000129993307004214/htm_21468.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GENERAL DYNAMICS CORPORATION"
+    ],
+    "name": "General Dynamics Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / aerospace and defense company",
+    "parent": "",
+    "evidence": "General Dynamics' SEC filing identifies General Dynamics Corporation as the exact Delaware registrant. No higher corporate parent is established.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/40533/000004053326000006/gd-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MOLINA HEALTHCARE, INC."
+    ],
+    "name": "Molina Healthcare, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / managed-care company",
+    "parent": "",
+    "evidence": "SEC filings identify Molina Healthcare, Inc. as the current Delaware parent registrant and document American Family Care, Inc. as the former corporate name before the 2000 renaming. Health-plan subsidiaries remain separate.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1179929/000117992926000005/moh-20251231.htm",
+      "https://investors.molinahealthcare.com/node/11766/html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "L3HARRIS TECHNOLOGIES, INC."
+    ],
+    "name": "L3Harris Technologies, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / aerospace and defense company",
+    "parent": "",
+    "evidence": "SEC and company charter materials identify L3Harris Technologies, Inc. as the current corporation and Harris Corporation as its immediate former legal name. The former L3 Technologies merger party is not treated as an alias.",
+    "sources": [
+      "https://www.sec.gov/edgar/browse/?CIK=0000202058",
+      "https://www.l3harris.com/sites/default/files/2026-03/L3Harris%20Restated%20Certificate%20of%20Incorporation.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DELL INC."
+    ],
+    "name": "Dell Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / subsidiary",
+    "parent": "Denali Intermediate Inc.",
+    "evidence": "SEC materials distinguish Dell Inc. from Dell Technologies Inc. and identify Denali Intermediate Inc. as the direct parent of Dell Inc.; Dell Technologies Inc. is the ultimate parent. The former Dell Computer Corp. name is documented but not used to absorb unrelated records.",
+    "sources": [
+      "https://www.sec.gov/cgi-bin/own-disp?CIK=0000826083&action=getissuer",
+      "https://www.sec.gov/Archives/edgar/data/1571996/000119312526266776/d123610dex37.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CENTENE CORPORATION"
+    ],
+    "name": "Centene Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / managed-care parent",
+    "parent": "",
+    "evidence": "Centene's SEC filing identifies Centene Corporation as the Delaware registrant. Its named health plans remain subsidiaries or operating brands and are not merged into this parent entry.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1071739/000107173926000049/cnc-20251231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HONEYWELL INTERNATIONAL"
+    ],
+    "name": "Honeywell International Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / industrial technology company",
+    "parent": "",
+    "evidence": "SEC filings identify Honeywell International Inc. as the current top-level registrant and document AlliedSignal Inc. as its former corporate name. Historical Honeywell Inc. remains a distinct merger entity rather than an alias of the current parent.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm",
+      "https://investor.honeywell.com/node/7876/html"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
