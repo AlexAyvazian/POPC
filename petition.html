@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="styles.css?v=base-f7f7f8">
 <link rel="stylesheet" href="roosevelt-header.css?v=1">
 <link rel="stylesheet" href="open-letter.css?v=1">
-<link rel="stylesheet" href="petition.css?v=3">
+<link rel="stylesheet" href="petition.css?v=4">
 </head>
 <body class="jvf-page ca-roosevelt-page">
 <a class="ca-roosevelt-back" href="index.html" aria-label="Back to home" title="Back to home">←</a>
@@ -17,7 +17,17 @@
 <header class="jvf-header"><h1>Sign the Petition</h1></header>
 <section class="letter-panel petition-panel" aria-labelledby="petition-title">
   <div class="petition-preview">
+    <div class="petition-live-hero">
     <a class="petition-image-link" href="https://www.change.org/putvotersovercorporatedonors" target="_blank" rel="noopener noreferrer" aria-label="View Put VOTERS Over Corporate Donors on Change.org"><img class="petition-image" src="https://assets.change.org/photos/9/lx/et/KJlXETbfSyROtQC-1600x900-noPad.jpg?1795592949" alt="Put VOTERS Over Corporate Donors petition cover" width="1600" height="900" decoding="async"></a>
+    <aside class="petition-counter" aria-label="Petition signature count">
+      <strong id="petition-count">—</strong>
+      <span>Verified signatures on Change.org</span>
+      <p id="petition-goal">Loading signature goal…</p>
+      <progress id="petition-progress" max="1" value="0" aria-label="Progress toward signature goal" hidden></progress>
+      <p id="petition-live-status" role="status" aria-live="polite">Loading live count…</p>
+      <a class="petition-action" href="https://www.change.org/putvotersovercorporatedonors" target="_blank" rel="noopener noreferrer">Sign this petition ↗</a>
+    </aside>
+    </div>
     <p class="petition-platform">People Over Power Coalition · Change.org</p>
     <h2 id="petition-title">Put VOTERS Over Corporate Donors</h2>
     <p class="petition-excerpt">We, the undersigned, join the following open letter to the financial supporters of Representative Hakeem Jeffries and call on its recipients to take the actions outlined below.</p>
@@ -26,6 +36,7 @@
   </div>
 </section>
 </main>
+<script type="module" src="petition-live.js?v=1"></script>
 <script src="roosevelt-fireflies.js?v=2" defer></script>
 <script type="module" src="/research-assistant.js?v=4"></script>
 </body>
