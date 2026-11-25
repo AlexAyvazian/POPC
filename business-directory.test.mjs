@@ -493,3 +493,21 @@ test('eleventh executive-priority batch preserves unresolved farm and entertainm
   assert.equal(groups.find(g=>g.name==='THE PORT AUTHORITY OF NEW YORK AND NEW JERSEY').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='AKIRA WOOD, INC.').research.status,'Source-backed');
 });
+
+
+test('twelfth executive-priority batch resolves exact employers while keeping generic acronyms unresolved', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Navidi',employer:'UNITED GENERAL BAKERIES',occupation:'VP// PRODUCTION',sector:'Food',committee:'a',amount:100},
+    {type:'individual',name:'De Onis',employer:'SKYLIGHT',occupation:'EXECUTIVE DIRECTOR',sector:'Media',committee:'a',amount:200},
+    {type:'individual',name:'Sears',employer:'FIN',occupation:'PRESIDENT',sector:'Finance',committee:'a',amount:300},
+    {type:'individual',name:'Carter',employer:'NCCIINC',occupation:'EXECUTIVE',sector:'Insurance',committee:'a',amount:400},
+    {type:'individual',name:'Darrah',employer:'PC DEVELOPMENT GROUP INC.',occupation:'BIZ OWNER',sector:'Real Estate',committee:'a',amount:500},
+    {type:'individual',name:'Pointer',employer:'NOEL POINTER FOUNDATION INC',occupation:'FOUNDER/DIRECTOR',sector:'Nonprofit',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='UNITED GENERAL BAKERIES').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='SKYLIGHT').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='FIN').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='NATIONAL COUNCIL ON COMPENSATION INSURANCE, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='PC DEVELOPMENT GROUP, INC.').research.scope,'Historical Florida legal entity / development company');
+  assert.equal(groups.find(g=>g.name==='THE NOEL POINTER FOUNDATION, INC.').research.status,'Source-backed');
+});

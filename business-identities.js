@@ -10253,5 +10253,286 @@ export const businessIdentities = [
       "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2025-press-releases/port-authority-announces-executive-director-rick-cotton-will-ret.html"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "S2INSIGHT INC."
+    ],
+    "name": "S2INSIGHT INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / business-strategy consulting corporation",
+    "parent": "",
+    "evidence": "Florida and California business records identify S2insight Inc. and list Samuel N. Stevens III as CEO, matching the executive context. Similar S2-named companies are not merged.",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=forp-f12000004122-359e0f4e-3a78-4d17-8be9-4fb8701abf2d&directionType=Initial&inquirytype=EntityName&listNameOrder=S2HRSOLUTIONS2D+L120000881560&searchNameOrder=S2INSIGHT+F120000041220&searchTerm=S2+HR+SOLUTIONS+2D%2C+LLC",
+      "https://www.bizprofile.net/ca/san-ramon/s2insight-inc"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNITED GENERAL BAKERIES"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / bakery business name",
+    "parent": "",
+    "evidence": "Reviewed public sources did not establish one authoritative business entity matching UNITED GENERAL BAKERIES and donor Zohreh Navidi's reported production vice-president role. No similarly named bakery is merged.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SHOWTIME EXHIBITS INC."
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / exhibit-services business",
+    "parent": "",
+    "evidence": "Public event and nonprofit records reference Showtime Exhibits and Bruce Willett, but the reviewed evidence does not establish the exact SHOWTIME EXHIBITS INC. legal entity or independently verify the reported ownership role. No name variant is forced.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SKYLIGHT"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / organization name",
+    "parent": "",
+    "evidence": "The generic SKYLIGHT employer and Juan De Onis name produced conflicting or unrelated public matches, including Skylight Pictures associated with a different De Onís. No exact employer identity is established.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OLIVER & COMPANY"
+    ],
+    "name": "OLIVER & COMPANY",
+    "status": "Source-backed",
+    "scope": "Construction and development business / firm name",
+    "parent": "",
+    "evidence": "Smithsonian oral-history materials identify Steven H. Oliver as president of Oliver & Company, a construction and development company in Richmond, California. No fuller legal entity is asserted.",
+    "sources": [
+      "https://www.aaa.si.edu/collections/interviews/oral-history-interview-steven-h-oliver-16204"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OREGON LIONS SIGHT & HEARING FOUNDATIO"
+    ],
+    "name": "OREGON LIONS SIGHT & HEARING FOUNDATION",
+    "status": "Source-backed",
+    "scope": "501(c)(3) nonprofit foundation",
+    "parent": "",
+    "evidence": "The foundation's official site identifies Oregon Lions Sight & Hearing Foundation as the nonprofit arm of the Lions Clubs of Oregon and identifies Doug Thompson as CEO. The truncated donor employer maps to the organization.",
+    "sources": [
+      "https://olshf.org/about",
+      "https://olshf.org/trustees"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SAN LUIS VALLEY HEALTH"
+    ],
+    "name": "SAN LUIS VALLEY HEALTH",
+    "status": "Source-backed",
+    "scope": "Integrated regional health-system / public-facing organization",
+    "parent": "",
+    "evidence": "San Luis Valley Health's official leadership directory identifies Christine Hettinger-Hunt as Chief Operating Officer. The reported employer remains at health-system scope rather than being assigned to one hospital or clinic entity.",
+    "sources": [
+      "https://www.sanluisvalleyhealth.org/about-us/management/administration-directory/",
+      "https://www.sanluisvalleyhealth.org/about-us/management/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRICORP GROUP"
+    ],
+    "name": "TRICORP GROUP, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / California general contractor",
+    "parent": "",
+    "evidence": "Tricorp's official history identifies Tricorp Group Inc. and Tony Moayed as its founder; it also documents the 2020 acquisition by new principals and Moayed's later advisory role. The donor-reported owner role is retained as historical context.",
+    "sources": [
+      "https://tricorp-group.com/about/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WHITE MANAGEMENT INC."
+    ],
+    "name": "WHITE MANAGEMENT INC.",
+    "status": "Source-backed",
+    "scope": "Business entity / management company",
+    "parent": "",
+    "evidence": "The Geauga Growth Partnership member directory identifies White Management Inc. in Middlefield, Ohio with Nancy White as the company contact and the whitemgmt.com business site. The exact reported employer is retained.",
+    "sources": [
+      "https://geaugagrowthpartnership.com/wp-content/uploads/2025/09/2025-GGP-Member-Directory-8.21.2025-FINAL.pdf",
+      "https://www.whitemgmt.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NCCIINC"
+    ],
+    "name": "NATIONAL COUNCIL ON COMPENSATION INSURANCE, INC.",
+    "status": "Source-backed",
+    "scope": "Workers-compensation insurance data and rating organization",
+    "parent": "",
+    "evidence": "NCCI publications identify the organization as National Council on Compensation Insurance, Inc. and identify Mona Carter as Senior Division Executive. The compact NCCIINC donor string is resolved to NCCI, not other NCCI acronyms.",
+    "sources": [
+      "https://www.icrb.net/wp-content/uploads/2020/06/NCCI-Update-on-PEO-Performance-8-20-2013.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NEARLY BROS INC."
+    ],
+    "name": "NEARLY BROS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity doing business as Bodo's Bagels",
+    "parent": "",
+    "evidence": "The National Labor Relations Board identifies Nearly Bros, Inc. d/b/a Bodo's Bagels in Charlottesville. Campaign-finance records separately report Scott Smith with employer Nearly Bros, Inc. and restaurant-owner occupation.",
+    "sources": [
+      "https://www.nlrb.gov/case/05-RC-295853"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOEL POINTER FOUNDATION INC"
+    ],
+    "name": "THE NOEL POINTER FOUNDATION, INC.",
+    "status": "Source-backed",
+    "scope": "501(c)(3) music-education nonprofit",
+    "parent": "",
+    "evidence": "New York legislative records and nonprofit filings identify The Noel Pointer Foundation, Inc.; the foundation identifies Chinita Pointer in executive leadership. The reported founder/director title is treated as donor-reported context rather than current title.",
+    "sources": [
+      "https://noelpointer.org/staff/",
+      "https://projects.propublica.org/nonprofits/organizations/113271472",
+      "https://nyassembly.gov/leginitiatives/20160930/leginit_20160930.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "H. P. KOPPLEMANN INC."
+    ],
+    "name": "H. P. KOPPLEMANN INC.",
+    "status": "Source-backed",
+    "scope": "Business entity / newspaper-distribution company",
+    "parent": "",
+    "evidence": "Public business and federal-supplier records identify H. P. Kopplemann Inc. in Hartford, Connecticut. The exact reported employer name is retained; the donor's executive role is not independently used to infer any affiliate.",
+    "sources": [
+      "https://cage.report/CAGE/0FKY1"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "APPLIED BEHAVIOR CONSULTANTS INC."
+    ],
+    "name": "APPLIED BEHAVIOR CONSULTANTS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / applied-behavior-analysis services organization",
+    "parent": "",
+    "evidence": "Applied Behavior Consultants identifies the incorporated organization and Brenda Terzich-Garland as co-founder, President and CEO. The reported employer maps directly to the company.",
+    "sources": [
+      "https://www.abcreal.com/about",
+      "https://www.abcreal.com/founders"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FRANKLIN YOUNG INT'L INC"
+    ],
+    "name": "FRANKLIN YOUNG INTERNATIONAL, INCORPORATED",
+    "status": "Source-backed",
+    "scope": "Legal entity / medical and scientific equipment supplier",
+    "parent": "",
+    "evidence": "SBA records identify Franklin Young International, Incorporated and Ronald L. Franklin as Chief Executive; company materials identify him as President and Chief Executive. The shortened donor employer maps to the company.",
+    "sources": [
+      "https://search.certifications.sba.gov/profile/EDQMKDZR8L13/59UA0",
+      "https://franklinyoung.com/about-franklin-young/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KENNINGTON LTD"
+    ],
+    "name": "KENNINGTON, LTD., INC.",
+    "status": "Source-backed",
+    "scope": "Legal/business entity / California corporation",
+    "parent": "",
+    "evidence": "California business-record data identifies Kennington, Ltd., Inc. and Lance A. Tendler as CEO/CFO/director. The reported KENNINGTON LTD form is treated as shorthand for that corporation.",
+    "sources": [
+      "https://bizfileonline.sos.ca.gov/search/business"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FIN"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / acronym or short business name",
+    "parent": "",
+    "evidence": "The generic FIN employer string and Jerry Sears president context did not resolve to one authoritative business entity. No company is assigned by name similarity alone.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MINDPLACE"
+    ],
+    "name": "MINDPLACE",
+    "status": "Source-backed",
+    "scope": "Electronics and wellness-technology business / brand",
+    "parent": "",
+    "evidence": "Public business sources identify MindPlace as the employer/business and campaign-finance records identify Anji Ringzin with employer Mindplace and vice-president occupation. The exact corporate legal form is not asserted.",
+    "sources": [
+      "https://www.mindplace.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "REDBERRI INNOVATION"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / innovation-program name",
+    "parent": "",
+    "evidence": "Redberri materials identify multiple distinct Redberri entities and an Innovation Center, while David Shimberg is publicly associated with Redberri Corporation in a different role. The donor employer cannot be assigned to one entity without over-merging.",
+    "sources": [
+      "https://www.redberri.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PC DEVELOPMENT GROUP INC."
+    ],
+    "name": "PC DEVELOPMENT GROUP, INC.",
+    "status": "Source-backed",
+    "scope": "Historical Florida legal entity / development company",
+    "parent": "",
+    "evidence": "Florida corporate records identify PC Development Group, Inc. with John W. Darrah as president/secretary; the corporation voluntarily dissolved in 2020. Later PC Development Group, LLC is a separate successor/current entity and is not merged.",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord&InquiryDirectionType=ForwardRecord&InquiryType=EntityName&ListNameOrder=PCDEVELOPMENT+3340670&SearchNameOrder=PCDEVELOPMENTGROUP+L120001576541&SearchTerm=PC+DEVELOPMENT+LLC",
+      "https://docquery.fec.gov/pdf/042/202505019758906042/202505019758906042.pdf"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

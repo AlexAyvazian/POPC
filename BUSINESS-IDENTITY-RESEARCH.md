@@ -151,3 +151,10 @@ Strategic Marketing Innovations, Strategic Resources, Suburban Street News, Sull
 The next 20 priority identities from XSB through the Port Authority of New York and New Jersey were reviewed. Emerald Peak Entertainment and JD Dove Farms remain unresolved because the reviewed sources do not establish one exact employer entity tied to the donor context.
 
 XSB, Dyniftic Corporation, Blue Sky Enterprises d/b/a FS Medical Technology, Acutonix, SCR Medical Transportation, Able Business Services, The Fremont Street Experience, Akira Wood, D'Addario & Co., Hackensack Meridian Health, Los Barrios Unidos Community Clinic, Leon N. Weiner & Associates, Phoenix Tailings and the Port Authority were source-backed. Gardner Pie and Intuit Art Museum are source-backed at business/organization scope. JerseyCAN is retained as a 50CAN campaign/brand with 50CAN shown only as parent/umbrella context.
+
+
+## Executive-priority identity research — batch 12 — November 25, 2026
+
+The next 20 priority identities from S2Insight through PC Development Group were reviewed. United General Bakeries, Showtime Exhibits, Skylight, FIN and Redberri Innovation remain unresolved because the reviewed public evidence does not establish one exact employer identity tied to the donor context.
+
+S2Insight, Oliver & Company, Oregon Lions Sight & Hearing Foundation, San Luis Valley Health, Tricorp Group, White Management, National Council on Compensation Insurance, Nearly Bros d/b/a Bodo's Bagels, The Noel Pointer Foundation, H. P. Kopplemann, Applied Behavior Consultants, Franklin Young International, Kennington, MindPlace and historical PC Development Group, Inc. were source-backed. PC Development Group, Inc. remains distinct from the later/current LLC; no successor entity is merged into the historical donor employer.
