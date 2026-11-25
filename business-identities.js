@@ -3594,5 +3594,306 @@ export const businessIdentities = [
       "https://sec.gov/Archives/edgar/data/0001468174/000149315226000215/xslSCHEDULE_13D_X01/primary_doc.xml"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ABELSONTAYLOR"
+    ],
+    "name": "Abelson-Taylor, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / advertising agency",
+    "parent": "",
+    "evidence": "AbelsonTaylor's official materials identify Dale Taylor as CEO and founder. The agency is publicly styled AbelsonTaylor; the legal corporation is Abelson-Taylor, Inc. AbelsonTaylor Group is a broader parent brand and is not substituted for the employer entity here.",
+    "sources": [
+      "https://www.abelsontaylor.com/meet-the-teams/",
+      "https://www.aaaa.org/blog/abelsontaylor-group-established-as-parent-company-of-abelsontaylor-at-nutrient-dose-and-at-activate/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SV ANGEL"
+    ],
+    "name": "SV Angel",
+    "status": "Source-backed",
+    "scope": "Venture-capital brand / group",
+    "parent": "",
+    "evidence": "SV Angel's official team page identifies Ron Conway as founder and managing partner. SEC records identify SV Angel Management, LLC as an advisory entity, but the bare employer string does not establish which legal entity, so the directory remains at brand/group scope.",
+    "sources": [
+      "https://svangel.com/about/team",
+      "https://reports.adviserinfo.sec.gov/reports/ADV/162285/PDF/162285.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NEWSWEB CORPORATION"
+    ],
+    "name": "Newsweb Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / media company",
+    "parent": "",
+    "evidence": "Northwestern's Medill profile identifies Fred Eychaner as chairman of Newsweb Corporation, matching the donor record. Public registration data supports Newsweb Corporation as the employer identity; similarly named entities are not merged.",
+    "sources": [
+      "https://www.medill.northwestern.edu/about-us/awards/hall-of-achievement/fred-eychaner.html",
+      "https://opengovus.com/chicago-business/5495-5"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CHIEFTAIN CAPITAL MANAGEMENT"
+    ],
+    "name": "Chieftain Capital Management, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Chieftain Capital Management, Inc., while current public biographies identify John Shapiro as managing director and co-founder. The firm's adviser registration terminated in 2018, which does not itself establish corporate dissolution.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/152274",
+      "https://israelpolicyforum.org/about/leadership/john-m-shapiro/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LIBRA GROUP"
+    ],
+    "name": "Libra Group",
+    "status": "Source-backed",
+    "scope": "Business group / brand",
+    "parent": "",
+    "evidence": "Libra Group's official site identifies Nicholas Logothetis as executive vice chairman and describes Libra as a privately owned global business group. Its legal policy identifies Libra Holdings Ltd among central group entities, but the reported employer does not establish one exact legal entity.",
+    "sources": [
+      "https://www.libra.com/people/teams/board-of-directors/nicholas-m-logothetis",
+      "https://www.libra.com/faqs",
+      "https://www.libra.com/privacy-policy"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SABAN ENTERTAINMENT"
+    ],
+    "name": "Saban Entertainment",
+    "status": "Source-backed",
+    "scope": "Historical media company",
+    "parent": "",
+    "evidence": "Haim Saban's official biography and company history document Saban Entertainment as the production, distribution and merchandising company he formed in 1988 and its later inclusion in Fox Family Worldwide, which was sold to Disney in 2001. Saban Capital Group is a later organization, not an alias.",
+    "sources": [
+      "https://www.saban.com/our_team/haim-saban/",
+      "https://www.saban.com/history/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LAW OFFICE OF JASPREET SINGH"
+    ],
+    "name": "Law Office of Jaspreet Singh P.A.",
+    "status": "Source-backed",
+    "scope": "Legal entity / law office",
+    "parent": "",
+    "evidence": "The firm's site and California State Bar record identify attorney Jaspreet Singh; corporate records support Law Office of Jaspreet Singh P.A. as the legal entity. No parent or former legal name is established.",
+    "sources": [
+      "https://lawofficeofjaspreetsingh.com/",
+      "https://apps.calbar.ca.gov/attorney/Licensee/Detail/224383"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GIVE FORWARD FOUNDATION"
+    ],
+    "name": "Give Forward Foundation",
+    "status": "Source-backed",
+    "scope": "Nonprofit foundation",
+    "parent": "",
+    "evidence": "Give Forward Foundation's official site identifies Michelle Boyers as chief executive officer and describes its Bay Area education mission, matching the donor record. No parent or former name is established.",
+    "sources": [
+      "https://giveforwardfoundation.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MARQUIS COMPANIES"
+    ],
+    "name": "Marquis Companies I, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / senior-care organization",
+    "parent": "",
+    "evidence": "Marquis' official site identifies Phil Fogg Jr. as president and CEO, and an Oregon regulatory examination identifies him as president and CEO of Marquis Companies I, Inc. The Marquis Companies public brand covers affiliated operations that remain separate.",
+    "sources": [
+      "https://www.marquiscompanies.com/about-marquis",
+      "https://dfr.oregon.gov/business/reg/insurer/Documents/Exams-financial/marquisadvantage23f.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NHS MANAGEMENT LLC"
+    ],
+    "name": "NHS Management, L.L.C.",
+    "status": "Source-backed",
+    "scope": "Legal entity / healthcare management company",
+    "parent": "",
+    "evidence": "NHS Management's official leadership page identifies Norman Estes as president and CEO. Alabama registration records support NHS Management, L.L.C.; punctuation variants do not create a separate entity.",
+    "sources": [
+      "http://nhsmanagement.com/who-we-are/norman-estes",
+      "https://arc-sos.state.al.us/cgi/corpdetail.mbr/detail?corp=000604559&page=name&file=&type=ALL&status=ALL&place=ALL&city="
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VENTURE CAPITAL"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "The POPC records using the generic employer label VENTURE CAPITAL are for Robert Stavis, and the accompanying occupation field says BESSEMER VENTURE PARTNERS. Bessemer's official profile identifies Rob Stavis as a partner. This strongly identifies the donor's organization, but VENTURE CAPITAL is too generic to register as a reusable alias of Bessemer Venture Partners because future records could refer to unrelated firms.",
+    "sources": [
+      "https://www.bvp.com/team/rob-stavis",
+      "https://www.fec.gov/data/receipts?committee_id=C00503052&max_date=01%2F31%2F2023&min_date=01%2F01%2F2023&two_year_transaction_period=2024"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ADELANTO HEALTHCARE VENTURES"
+    ],
+    "name": "Adelanto Healthcare Ventures, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / healthcare company",
+    "parent": "",
+    "evidence": "Florida corporate records identify Adelanto Healthcare Ventures, LLC and list Carlos M. Zaffirini Jr. as manager; public firm materials identify him with the healthcare venture. The reported employer omits only the legal suffix.",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forl-m21000015792-7a5d2e51-2ec6-4252-a7e9-d69b3365995d&directionType=PreviousList&inquirytype=EntityName&listNameOrder=ADELANTERESTORATION%20P980000655771&searchNameOrder=ADELANTOHEALTHCAREVENTURES%20M210000157920&searchTerm=ADELANTE%20LIVE%20INC.",
+      "https://zafflaw.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AWAY"
+    ],
+    "name": "Away",
+    "status": "Source-backed",
+    "scope": "Consumer brand / travel company",
+    "parent": "",
+    "evidence": "Away is the travel brand co-founded by Jennifer Rubio. Government trademark records identify JRSK, Inc. as an operating legal entity behind the Away brand, but the reported employer does not establish that exact entity as the donor's payroll employer, so the directory remains at brand scope.",
+    "sources": [
+      "https://www.awaytravel.com/",
+      "https://ised-isde.canada.ca/cipo/trademark-search/1850894?lang=eng"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ETON PARK CAPITAL"
+    ],
+    "name": "Eton Park Capital Management, L.P.",
+    "status": "Source-backed",
+    "scope": "Historical legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Eton Park Capital Management, L.P. and show its registration as terminated in 2019. Eric Mindich founded and led Eton Park; the employer is source-backed as a historical investment-management identity rather than represented as a current registered adviser.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/156930",
+      "https://www.reuters.com/article/business/hedge-fund-manager-eric-mindich-shuts-down-eton-park-idUSL2N1H018P"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BFC DEVELOPMENT PARTNERS"
+    ],
+    "name": "BFC Partners",
+    "status": "Source-backed",
+    "scope": "Real-estate development brand / group",
+    "parent": "",
+    "evidence": "BFC's official site and federal biography identify Donald Capoccia as a managing principal/partner of BFC Partners. No authoritative record reviewed establishes BFC Development Partners as a formal legal alias, so the mapping is donor-context-specific and remains at brand/group scope.",
+    "sources": [
+      "https://bfcnyc.com/",
+      "https://bfcnyc.com/our-team/",
+      "https://www.cfa.gov/about-cfa/who-we-are/donald-capoccia"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DIGITAL GADGETS"
+    ],
+    "name": "Digital Gadgets, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / consumer electronics company",
+    "parent": "",
+    "evidence": "Digital Gadgets' official site identifies Charles Tebele as founder and executive of the business. The supported operating entity is Digital Gadgets, LLC; Digital Gadgets Medical LLC is separate and is not merged.",
+    "sources": [
+      "https://www.digitalgadgets.com/",
+      "https://www.digitalgadgets.com/charlie-tebele"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HACH AND ROSE LLP"
+    ],
+    "name": "Hach Rose Schirripa & Rehns LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm; former name",
+    "parent": "",
+    "evidence": "The firm's official history identifies Hach & Rose, LLP as the predecessor firm and documents subsequent names, including Hach Rose Schirripa & Cheverie LLP and the 2026 change to Hach Rose Schirripa & Rehns LLP. Michael A. Rose remains a partner.",
+    "sources": [
+      "https://www.unionlawfirm.com/about/",
+      "https://www.hrsrlaw.com/michael-a-rose",
+      "https://www.hrsrlaw.com/hach-rose-schirripa-cheverie-llp-announces-firm-name-change"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLOCK O'TOOLE & MURPHY LLP"
+    ],
+    "name": "Block O'Toole & Murphy, LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "The firm's official site identifies Block O'Toole & Murphy, LLP and Stephen J. Murphy as a managing partner and attorney, matching the donor record. No parent or former name is established.",
+    "sources": [
+      "https://www.blockotoole.com/",
+      "https://www.blockotoole.com/attorneys/stephen-j-murphy/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EAGLE KNOLLS CAPITAL"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer / organization",
+    "evidence": "The FEC donor record identifies John Cecil as chairman and chief executive officer of Eagle Knolls Capital, but the reviewed research did not locate an authoritative company site, SEC adviser record, or government registration establishing a legal suffix, former name, parent, or current operating status. Retain the reported organization name without inventing an entity form.",
+    "sources": [
+      "https://www.fec.gov/data/receipts?committee_id=C00503052&max_date=05%2F31%2F2025&min_date=05%2F01%2F2025&two_year_transaction_period=2026"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GINARTE GONZALEZ WINOGRAD LLP"
+    ],
+    "name": "Ginarte Gallardo Gonzalez & Winograd, LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm; DBA",
+    "parent": "",
+    "evidence": "A New Jersey appellate opinion identifies the legal entity as Ginarte Gallardo Gonzalez & Winograd, LLP doing business as Ginarte Gonzalez Winograd, LLP. The firm's site identifies Joseph A. Ginarte and the current Ginarte Law Firm branding.",
+    "sources": [
+      "https://www.ginarte.com/",
+      "https://www.njcourts.gov/system/files/court-opinions/2025/a2068-23.pdf"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

@@ -145,3 +145,18 @@ test('researched aliases merge while subsidiaries, brands and unresolved names s
 
   assert(directoryCSV(groups).includes('https://adviserinfo.sec.gov/firm/summary/135986'));
 });
+
+
+test('generic employer labels remain unresolved after donor-context review', () => {
+  const rows=[
+    {type:'individual',name:'Stavis',employer:'VENTURE CAPITAL',occupation:'BESSEMER VENTURE PARTNERS',sector:'Finance',committee:'a',amount:300},
+    {type:'individual',name:'Cecil',employer:'EAGLE KNOLLS CAPITAL',occupation:'CHAIRMAN AND CHIEF EXECUTIVE OFFICER',sector:'Finance',committee:'a',amount:400},
+    {type:'individual',name:'Rubio',employer:'AWAY',occupation:'EXECUTIVE',sector:'Retail',committee:'a',amount:500},
+    {type:'individual',name:'Murphy',employer:"BLOCK O'TOOLE & MURPHY LLP",occupation:'ATTORNEY',sector:'Legal',committee:'a',amount:600}
+  ];
+  const groups=buildDirectory(rows);
+  assert.equal(groups.find(g=>g.name==='VENTURE CAPITAL').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='EAGLE KNOLLS CAPITAL').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='AWAY').research.scope,'Consumer brand / travel company');
+  assert.equal(groups.find(g=>g.name==="BLOCK O'TOOLE & MURPHY, LLP").research.status,'Source-backed');
+});
