@@ -102,3 +102,10 @@ Eisner Advisory LLC and Marquis Health remain explicitly unresolved because the 
 The next 20 executive-linked priority identities were reviewed from MG Capital Holdings through Mortgage Bankers Association. MG Capital Holdings remains unresolved because the exact reported company name could not be tied to the donor without relying on a same-name inference.
 
 Molecule Ventures, Niagara Bottling, NOLA Education, PAFCO, Saba Capital Management, Standard Wellness Holdings, SunMed Growers, The Raben Group, Vistria PRG, Trulieve Cannabis, Wolfe Research, Spellman High Voltage Electronics and The Millstone Evans Group were resolved to source-backed entities. Monumental Sports & Entertainment, Rosen Harbottle and The Premier Companies remain source-backed at firm/group/brand scope. Union Plaza Care Center is linked to the government-listed operator Union Plaza Nursing Home Inc. Mortgage Bankers Association remains separate from its PAC.
+
+
+## Executive-priority identity research — batch 5 — November 25, 2026
+
+The next 20 priority identities in the roughly $330k–$363k executive-linked tier were reviewed. Womble Bond Dickinson (US), Ascend Wellness Holdings, Beach Walk Media, Buckeye Relief, C3 Industries, Freedom Mortgage Corporation, Lone Pine Capital, MBS Associates, Omega Overseas Investments, Principal Building Services and SL Green Realty were resolved to source-backed entities.
+
+Chelsea Piers, ExxonMobil, Fisher Brothers and Hilton are retained at business-group or brand scope because the reported employer does not identify one exact operating entity. Amrock Holdings, Kieloch Consulting, Silver Rabbit and Super Niche Inc. remain unresolved. Glazer's Inc. is retained as a historical legal-employer identity and not merged into later distributor structures.

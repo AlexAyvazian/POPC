@@ -359,3 +359,23 @@ test('fourth executive-priority batch keeps legal, brand and unresolved identity
   assert.equal(groups.find(g=>g.name==='UNION PLAZA NURSING HOME INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MORTGAGE BANKERS ASSOCIATION').research.scope,'National real-estate-finance trade association');
 });
+
+
+test('fifth executive-priority batch separates exact entities from brands and unresolved employers', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Eisenshtadt',employer:'AMROCK HOLDINGS',occupation:'EXECUTIVE',sector:'Finance',committee:'a',amount:100},
+    {type:'individual',name:'Bernstein',employer:'CHELSEA PIERS',occupation:'BUSINESS OWNER',sector:'Sports',committee:'a',amount:200},
+    {type:'individual',name:'Furman',employer:'EXXONMOBIL',occupation:'VICE PRESIDENT',sector:'Energy',committee:'a',amount:300},
+    {type:'individual',name:'Kieloch',employer:'KIELOCH CONSULTING',occupation:'FOUNDER',sector:'Professional',committee:'a',amount:400},
+    {type:'individual',name:'Jacobs',employer:'SILVER RABBIT',occupation:'PRESIDENT',sector:'Other',committee:'a',amount:500},
+    {type:'individual',name:'Dash',employer:'SUPER NICHE INC.',occupation:'FOUNDER',sector:'Media',committee:'a',amount:600},
+    {type:'individual',name:'Mandel',employer:'LONE PINE CAPITAL',occupation:'FOUNDER',sector:'Finance',committee:'a',amount:700}
+  ]);
+  assert.equal(groups.find(g=>g.name==='AMROCK HOLDINGS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='CHELSEA PIERS').research.scope,'Sports and recreation business group / brand');
+  assert.equal(groups.find(g=>g.name==='EXXONMOBIL').research.scope,'Energy business group / brand; exact employing legal entity not established');
+  assert.equal(groups.find(g=>g.name==='KIELOCH CONSULTING').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='SILVER RABBIT').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='SUPER NICHE INC.').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='LONE PINE CAPITAL LLC').research.status,'Source-backed');
+});

@@ -8150,5 +8150,303 @@ export const businessIdentities = [
       "https://www.mba.org/about-mba/leadership/peter-grace"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WOMBLE BOND DICKINSON (US) LLP"
+    ],
+    "name": "WOMBLE BOND DICKINSON (US) LLP",
+    "status": "Source-backed",
+    "scope": "Legal entity / U.S. law firm",
+    "parent": "",
+    "evidence": "The firm's official materials identify Womble Bond Dickinson (US) LLP as the U.S. law firm and identify Jim Milano as a partner. The U.S. LLP remains distinct from Womble Bond Dickinson (International) Limited and other member entities.",
+    "sources": [
+      "https://www.womblebonddickinson.com/us/about-womble-bond-dickinson-us-llp",
+      "https://www.womblebonddickinson.com/us/people/jim-milano"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMROCK HOLDINGS"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / holding-company name",
+    "parent": "",
+    "evidence": "Amrock's official materials identify Amrock LLC and Jeff Eisenshtadt in executive leadership, while Rocket filings describe the Amrock operating business. The reviewed evidence does not establish AMROCK HOLDINGS as an exact legal alias of Amrock LLC, so the reported employer remains unresolved rather than being collapsed into the operating entity.",
+    "sources": [
+      "https://www.amrock.com/company/leadership",
+      "https://www.amrock.com/team-members/jeff-eisenshtadt",
+      "https://s205.q4cdn.com/636124780/files/doc_financials/2024/q4/RKT-2024-10-K.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AWH"
+    ],
+    "name": "ASCEND WELLNESS HOLDINGS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public cannabis company",
+    "parent": "",
+    "evidence": "SEC filings identify Ascend Wellness Holdings, Inc. as the registrant, and company leadership materials identify Francis Perullo in senior leadership. The AWH acronym is treated as the issuer's shorthand, not as a separate entity.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1756390/000162828024010940/aawh-20231231.htm",
+      "https://investors.awholdings.com/awh-corporate/management"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BEACH WALK MEDIA LLC"
+    ],
+    "name": "BEACH WALK MEDIA LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / media company",
+    "parent": "",
+    "evidence": "New York business records identify Beach Walk Media LLC and the company's public materials associate Andrea Bernstein with the business. Same-name Beach Walk businesses are not merged.",
+    "sources": [
+      "https://www.beachwalkmedia.com/about",
+      "https://www.bizprofile.net/ny/new-york/beach-walk-media-llc"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BUCKEYE RELIEF"
+    ],
+    "name": "BUCKEYE RELIEF, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / cannabis cultivator and processor",
+    "parent": "",
+    "evidence": "Buckeye Relief's official materials identify the Ohio cannabis business and Andy Rayburn as co-founder/CEO; Ohio campaign-finance records also identify the company. The reported shortened employer maps to the LLC without merging dispensary brands or other licensees.",
+    "sources": [
+      "https://buckeyerelief.com/",
+      "https://www6.ohiosos.gov/ords/f?p=CFDISCLOSURE:45:::NO::P45_ENTITY_ID:16227"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "C3 INDUSTRIES INC."
+    ],
+    "name": "C3 INDUSTRIES, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / cannabis company",
+    "parent": "",
+    "evidence": "C3 Industries' official terms and SEC materials identify C3 Industries, Inc., while the company identifies Ankur Rungta in executive leadership. The exact corporate entity is retained.",
+    "sources": [
+      "https://c3industries.com/terms-of-use",
+      "https://c3industries.com/about/ankur-rungta",
+      "https://www.sec.gov/Archives/edgar/data/1819864/000181986421000004/0001819864-21-000004-index.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CHELSEA PIERS"
+    ],
+    "name": "CHELSEA PIERS",
+    "status": "Source-backed",
+    "scope": "Sports and recreation business group / brand",
+    "parent": "",
+    "evidence": "Chelsea Piers' official terms identify multiple distinct entities, including Chelsea Piers L.P., CPFC OpCo LLC and Chelsea Piers Connecticut LLC, using the Chelsea Piers name. The bare reported employer is therefore retained at brand/group scope rather than forced into one entity.",
+    "sources": [
+      "https://fitness.chelseapiers.com/terms-and-conditions",
+      "https://www.chelseapiers.com/privacy-policy"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EXXONMOBIL"
+    ],
+    "name": "EXXONMOBIL",
+    "status": "Source-backed",
+    "scope": "Energy business group / brand; exact employing legal entity not established",
+    "parent": "",
+    "evidence": "ExxonMobil SEC materials use ExxonMobil as shorthand for the consolidated business and affiliates, and the group's legal structure changed in 2026. The bare reported employer does not identify Matt Furman's exact employing legal entity, so it remains at group/brand scope.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/34088/000003408826000093/xom-20260630.htm?output=1",
+      "https://corporate.exxonmobil.com/who-we-are/our-global-organization/corporate-governance/corporate-officers-and-affiliated-companies"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FISHER BROTHERS"
+    ],
+    "name": "FISHER BROTHERS",
+    "status": "Source-backed",
+    "scope": "Real-estate business group / brand",
+    "parent": "",
+    "evidence": "Fisher Brothers' official site identifies the family real-estate organization and Winston Fisher's leadership. The site is operated by Fisher Brothers Management Co. LLC and affiliates, so the reported firm name is retained at group/brand scope rather than mapped to one legal entity.",
+    "sources": [
+      "https://www.fisherbrothers.com/legal"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FREEDOM MORTGAGE"
+    ],
+    "name": "FREEDOM MORTGAGE CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / mortgage lender",
+    "parent": "",
+    "evidence": "Government licensing records identify Freedom Mortgage Corporation doing business as Freedom Mortgage, and company materials identify Stanley Middleman as CEO. The corporate lender remains separate from affiliated PACs or other entities.",
+    "sources": [
+      "https://portal.ct.gov/dob/enforcement/consumer-credit-2015-orders/freedom-mortgage-corporation---co",
+      "https://www.freedommortgage.com/disclosures/state-licensing"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GLAZER'S INC."
+    ],
+    "name": "GLAZER'S, INC.",
+    "status": "Source-backed",
+    "scope": "Historical legal entity / beverage distributor",
+    "parent": "",
+    "evidence": "Business records identify Glazer's, Inc. as a prior legal name in the Glazer's distribution business and list Barkley Stuart among officers in historical filings. The historical employer is not merged with later Southern Glazer's or other distribution entities.",
+    "sources": [
+      "https://www.gleif.org/lei/549300FHQ2CVJGJ39492"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HILTON"
+    ],
+    "name": "HILTON",
+    "status": "Source-backed",
+    "scope": "Hospitality business group / brand",
+    "parent": "Hilton Worldwide Holdings Inc.",
+    "evidence": "Hilton identifies Christopher J. Nassetta as President and CEO, while SEC filings identify Hilton Worldwide Holdings Inc. as the public company and use Hilton for the company and consolidated subsidiaries. The bare employer remains at brand/group scope rather than being assigned to a hotel-level subsidiary.",
+    "sources": [
+      "https://stories.hilton.com/bio/christopher-j-nassetta",
+      "https://ir.hilton.com/sec-filings/all-sec-filings/content/0001585689-26-000007/0001585689-26-000007.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KIELOCH CONSULTING"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / consulting business name",
+    "parent": "",
+    "evidence": "Federal contractor data identifies KEILOCH, BRUCE CONSULTING using KIELOCH CONSULTING as a DBA, but the reviewed evidence does not establish the precise legal entity behind the donor's reported employer. The name remains unresolved.",
+    "sources": [
+      "https://cage.report/CAGE/4VTS0"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LONE PINE CAPITAL"
+    ],
+    "name": "LONE PINE CAPITAL LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / registered investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser materials identify Lone Pine Capital LLC as the legal adviser name. The reported employer omits the LLC suffix but maps to the same adviser.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1033162"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MBS ASSOCIATES"
+    ],
+    "name": "MBS ASSOCIATES, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment and business entity",
+    "parent": "",
+    "evidence": "Bren Simon's foundation biography identifies her as CEO of MBS Associates, LLC, and FEC records use the MBS Associates employer name. The LLC is retained as the employer identity.",
+    "sources": [
+      "https://www.brensimonfoundation.com/about-bren"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OMEGA OVERSEAS INVESTMENTS INC."
+    ],
+    "name": "OMEGA OVERSEAS INVESTMENTS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment company",
+    "parent": "Omega Enterprises Corporation",
+    "evidence": "Omega Overseas' official materials identify Omega Overseas Investments, Inc., José E. Fernández Bjerg as President and Chairman, and Omega Enterprises Corporation as parent context. The subsidiary remains separate from its parent.",
+    "sources": [
+      "https://omegaoi.com/aboutus.html",
+      "https://docquery.fec.gov/pdf/745/201610259034546745/201610259034546745.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PRINCIPAL BUILDING SERV"
+    ],
+    "name": "PRINCIPAL BUILDING SERVICES, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / building-services company",
+    "parent": "",
+    "evidence": "Principal Building Services' company materials and government-contract records identify Principal Building Services, LLC. The truncated reported employer is treated as an abbreviation of that entity; related service-company names remain separate.",
+    "sources": [
+      "http://www.principalbuildingservices.com/about/company-profile/2",
+      "https://govtribe.com/vendors/principal-building-services-llc-203a8"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SILVER RABBIT"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / business name",
+    "parent": "",
+    "evidence": "Multiple unrelated businesses use Silver Rabbit, and reviewed sources do not establish which entity employed donor Joan Jacobs. No Silver Rabbit LLC, Silver Rabbit Ltd or other same-name firm is merged into the donor record.",
+    "sources": [
+      "https://silverrabbitllc-hr.com/",
+      "https://find-and-update.company-information.service.gov.uk/company/06180357/filing-history"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SL GREEN REALTY CORP."
+    ],
+    "name": "SL GREEN REALTY CORP.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public real-estate investment trust",
+    "parent": "",
+    "evidence": "SEC filings and SL Green's official leadership materials identify SL Green Realty Corp. and Marc Holliday as Chairman and CEO. SL Green Operating Partnership, L.P. and other affiliates remain separate entities.",
+    "sources": [
+      "https://slgreen.com/about/executive-management/marc-holliday",
+      "https://www.sec.gov/Archives/edgar/data/1040971/000110465924132903/tm2432242d1_8k.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SUPER NICHE INC."
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / media brand",
+    "parent": "",
+    "evidence": "Super Niche materials identify Perri Dash as founder/co-founder of the Super Niche media platform, but reviewed public records do not establish SUPER NICHE INC. as the exact legal entity. The reported Inc. form remains unresolved and separate from Super Niche Studios or other ventures.",
+    "sources": [
+      "https://www.superniche.com/about",
+      "https://www.superniche.com/author/perri",
+      "https://www.dos.ny.gov/corporation-and-business-entity-database"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
