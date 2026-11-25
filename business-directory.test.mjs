@@ -760,3 +760,20 @@ test('twenty-fifth priority batch resolves PAC name variants and multi-donor emp
   assert.equal(groups.find(g=>g.name==='SEIU COPE (SERVICE EMPLOYEES INTERNATIONAL UNION COMMITTEE ON POLITICAL EDUCATION)').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='PNL COMPANIES').research.status,'Source-backed');
 });
+
+test('twenty-sixth priority batch resolves PAC historical and shorthand names through durable committee identities', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'TARGETCITIZENS POLITICAL FORUM',sector:'Retail',committee:'a',amount:100},
+    {type:'organization',name:'THE GRANT THORNTON LLP POLITICAL ACTION COMMITTEE LLC',sector:'Professional Services',committee:'a',amount:200},
+    {type:'organization',name:'UNIVERSAL MUSIC GROUP POLITICAL ACTION COMMITTEE',sector:'Entertainment',committee:'a',amount:300},
+    {type:'organization',name:'US TRAVEL ASSOCIATION PAC',sector:'Travel',committee:'a',amount:400},
+    {type:'organization',name:'VEN-PAC',sector:'Legal',committee:'a',amount:500},
+    {type:'organization',name:'WALGREEN CO PAC',sector:'Healthcare',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='TARGET CORPORATION CITIZENS POLITICAL FORUM (TARGETCITIZENS POLITICAL FORUM)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='THE GRANT THORNTON ADVISORS LLC POLITICAL ACTION COMMITTEE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='UNIVERSAL MUSIC GROUP EMPLOYEE ACTION FUND').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='U.S. TRAVEL ASSOCIATION PAC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='VENABLE PAC (VEN-PAC)').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='WALGREEN CO PAC (WALGREENSPAC)').research.status,'Source-backed');
+});
