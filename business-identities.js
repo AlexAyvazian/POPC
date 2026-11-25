@@ -2028,15 +2028,17 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "JSTREETPAC"
+      "JSTREETPAC",
+      "JSTREET PAC"
     ],
     "name": "JStreetPAC",
     "status": "Source-backed",
     "scope": "Federal political committee",
     "parent": "",
-    "evidence": "FEC committee C00441949 identifies JSTREETPAC as a qualified membership-organization PAC and lists J Street as a separate connected organization. The PAC is retained as its own political-committee identity.",
+    "evidence": "FEC committee C00441949 identifies JSTREETPAC as a qualified membership-organization PAC and lists J Street as a separate connected organization. A 2026 FEC filing for the same committee ID uses the report form JStreet PAC, which is retained as an exact alias rather than a separate identity.",
     "sources": [
       "https://www.fec.gov/data/committee/C00441949/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/505/202606029870359505/202606029870359505.pdf",
       "https://jstreet.org/wp-content/uploads/2021/01/JStreet-LeadershipManual2021.pdf"
     ],
     "reviewed": "2026-11-25"
@@ -13755,6 +13757,336 @@ export const businessIdentities = [
     "evidence": "FEC committee C00005157 identifies International Brotherhood of Boilermakers Campaign Assistance Fund as an active qualified labor-organization PAC and lists the International Brotherhood of Boilermakers, Iron Ship Builders, Blacksmith, Forgers & Helpers as its connected organization.",
     "sources": [
       "https://www.fec.gov/data/committee/C00005157/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL TRADEMARK ASSOCIATION POLITICAL ACTION COMMITTEE (INTA PAC)"
+    ],
+    "name": "INTERNATIONAL TRADEMARK ASSOCIATION POLITICAL ACTION COMMITTEE (INTA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00348243 identifies International Trademark Association Political Action Committee (INTA PAC) as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00348243/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INVESTMENT ADVISER ASSOCIATION POLITICAL ACTION COMMITTEE (IAA-PAC)"
+    ],
+    "name": "INVESTMENT ADVISER ASSOCIATION POLITICAL ACTION COMMITTEE (IAA-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00440826 identifies Investment Adviser Association Political Action Committee (IAA-PAC) as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00440826/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LOCKTON INC POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "LOCKTON INC POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00652529 identifies Lockton Inc Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00652529/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "M&T BANK AND WILMINGTON TRUST POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "M&T BANK AND WILMINGTON TRUST POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00137273 identifies M&T Bank and Wilmington Trust Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00137273/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00118943 identifies Massachusetts Mutual Life Insurance Company Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00118943/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MCGUIREWOODS FEDERAL PAC"
+    ],
+    "name": "MCGUIREWOODS FEDERAL PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00225342 identifies McGuireWoods Federal PAC. The current FEC committee record does not list a connected organization, so none is inferred.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00225342/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MGM RESORTS INTERNATIONAL PAC"
+    ],
+    "name": "MGM RESORTS INTERNATIONAL PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00299321 identifies MGM Resorts International PAC as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00299321/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MICRON TECHNOLOGY, INC. PAC",
+      "MICRON TECHNOLOGY, INC. EMPLOYEE PAC"
+    ],
+    "name": "MICRON TECHNOLOGY, INC. EMPLOYEE PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee; historical committee name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00443671 is the durable committee identity. Historical FEC records use Micron Technology, Inc. PAC; the 2026 record uses Micron Technology, Inc. Employee PAC. Both names are preserved as aliases of the same committee.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00443671/?cycle=2020&tab=about-committee",
+      "https://www.fec.gov/data/committee/C00443671/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MIZUHO AMERICAS GOOD GOVERNMENT FUND (MIZUHO AMERICAS PAC)"
+    ],
+    "name": "MIZUHO AMERICAS GOOD GOVERNMENT FUND (MIZUHO AMERICAS PAC)",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00878199 identifies Mizuho Americas Good Government Fund (Mizuho Americas PAC) as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00878199/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MUSIC SPEAKS: THE SOUNDEXCHANGE, INC. LEGISLATIVE FUND"
+    ],
+    "name": "MUSIC SPEAKS: THE SOUNDEXCHANGE, INC. LEGISLATIVE FUND",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00540153 identifies Music Speaks: The SoundExchange, Inc. Legislative Fund and lists SoundExchange Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00540153/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSN OF SOCIAL WORKERS INC. POLITICAL ACTION FOR CANDIDATE ELECTION (PACE)"
+    ],
+    "name": "NATIONAL ASSN OF SOCIAL WORKERS INC. POLITICAL ACTION FOR CANDIDATE ELECTION (PACE)",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00060707 identifies National Assn of Social Workers Inc. Political Action for Candidate Election (PACE) and lists National Association of Social Workers Inc. as its connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00060707/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF CONVENIENCE STORES POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "NATIONAL ASSOCIATION OF CONVENIENCE STORES POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00126763 identifies National Association of Convenience Stores Political Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00126763/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF POSTAL SUPERVISORS PAC"
+    ],
+    "name": "NATIONAL ASSOCIATION OF POSTAL SUPERVISORS PAC",
+    "status": "Source-backed",
+    "scope": "Federal membership-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00092957 identifies National Association of Postal Supervisors PAC as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00092957/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS PAC (NAPEO PAC)",
+      "NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS (NAPEO PAC)"
+    ],
+    "name": "NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS (NAPEO PAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; recipient-file name variant",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00447284 is currently registered as National Association of Professional Employer Organizations (NAPEO PAC). A 2026 recipient filing reports the contributing committee as National Association of Professional Employer Organizations PAC (NAPEO PAC) with the same FEC ID, so the longer donor-file form is retained as an alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00447284/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/192/202510149790784192/202510149790784192.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ELEVATOR CONSTRUCTORS PAC/ INTN'L UNION OF ELEVATOR CONSTRUCTORS (NEC PAC)"
+    ],
+    "name": "NATIONAL ELEVATOR CONSTRUCTORS PAC/ INTN'L UNION OF ELEVATOR CONSTRUCTORS (NEC PAC)",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00383950 identifies National Elevator Constructors PAC/ Intn'l Union of Elevator Constructors (NEC PAC) as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00383950/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL READY MIXED CONCRETE ASSN. PAC",
+      "NATIONAL READY MIXED CONCRETE ASSN. PAC (CONCRETEPAC)"
+    ],
+    "name": "NATIONAL READY MIXED CONCRETE ASSN. PAC (CONCRETEPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; recipient-file shortened name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00114025 is registered as National Ready Mixed Concrete Assn. PAC (CONCRETEPAC). A 2026 recipient filing reports National Ready Mixed Concrete Assn. PAC with the same FEC ID, so the shortened donor-file form is retained as an alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00114025/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/371/202504159755359371/202504159755359371.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL THOROUGHBRED RACING ASSOCIATION PAC",
+      "NATIONAL THOROUGHBRED RACING ASSOCIATION POLITICAL ACTION COMMITTEE/HORSE PAC"
+    ],
+    "name": "NATIONAL THOROUGHBRED RACING ASSOCIATION POLITICAL ACTION COMMITTEE/HORSE PAC",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee; donor-file shortened name",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00360008 is registered as National Thoroughbred Racing Association Political Action Committee/HORSE PAC and lists National Thoroughbred Racing Association as its connected organization. The donor-file shortened PAC name is retained as an alias.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00360008/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL UTILITY CONTRACTORS ASSOCIATION LEGISLATIVE INFORMATION AND ACTION COMMITTEE"
+    ],
+    "name": "NATIONAL UTILITY CONTRACTORS ASSOCIATION LEGISLATIVE INFORMATION AND ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00004101 identifies National Utility Contractors Association Legislative Information and Action Committee as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00004101/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NETJETS ASSOCIATION OF SHARED AIRCRAFT PILOTS PAC; NJASAP PAC"
+    ],
+    "name": "NETJETS ASSOCIATION OF SHARED AIRCRAFT PILOTS PAC; NJASAP PAC",
+    "status": "Source-backed",
+    "scope": "Federal labor-organization political committee",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00488262 identifies NetJets Association of Shared Aircraft Pilots PAC; NJASAP PAC as the federal committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00488262/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
   }
