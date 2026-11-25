@@ -529,3 +529,21 @@ test('thirteenth executive-priority batch separates exact organizations from amb
   assert.equal(groups.find(g=>g.name==='NAADAC, THE ASSOCIATION FOR ADDICTION PROFESSIONALS').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NEW MEXICO CANCER CENTER').research.scope,'Cancer-care practice brand operated by New Mexico Oncology Hematology Consultants, Ltd.');
 });
+
+
+test('fourteenth executive-priority batch keeps generic shorthand unresolved and scopes operating brands correctly', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Beebe',employer:'PDX GALLERY INC',occupation:'GALLERY OWNER',sector:'Arts',committee:'a',amount:100},
+    {type:'individual',name:'Greer',employer:'FOX HOLLOW VENTURES LLC',occupation:'PRESIDENT',sector:'Finance',committee:'a',amount:200},
+    {type:'individual',name:'Schoedler',employer:'RSS-TGP',occupation:'CO-OWNER',sector:'Business',committee:'a',amount:300},
+    {type:'individual',name:'Leach',employer:'WESTCOAST BLACK THEATRE TROUPE',occupation:'EXECUTIVE DIRECTOR',sector:'Arts',committee:'a',amount:400},
+    {type:'individual',name:'Kenney',employer:'XCEL ENERGY COLORADO',occupation:'PRESIDENT',sector:'Energy',committee:'a',amount:500},
+    {type:'individual',name:'Mingo',employer:'SIP N CHAT',occupation:'BUSINESS EXECUTIVE',sector:'Hospitality',committee:'a',amount:600}
+  ]);
+  assert.equal(groups.find(g=>g.name==='PDX GALLERY INC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='FOX HOLLOW VENTURES LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='RSS-TGP').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='WESTCOAST BLACK THEATRE TROUPE OF FLORIDA, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='XCEL ENERGY – COLORADO').research.scope,'Colorado operating-company / public-facing utility identity');
+  assert.equal(groups.find(g=>g.name==='SIP N CHAT COCKTAIL LOUNGE INC.').research.status,'Source-backed');
+});

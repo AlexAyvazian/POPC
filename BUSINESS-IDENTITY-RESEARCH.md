@@ -165,3 +165,10 @@ S2Insight, Oliver & Company, Oregon Lions Sight & Hearing Foundation, San Luis V
 The next 20 priority identities from Broadspire through Noodle Partners were reviewed. Broadspire, GW Retil Consulting, Alternative Living Concepts, Brown Brown Ins, Human Solutions and LalieWorks Creative Content Services remain unresolved because the reported shorthand or generic name does not identify one exact employer.
 
 Alsco, WPG International, Bitter Root RC&D, Beatrice Advisors, CareOregon, Eastern Yacht Sales, Garney, The Hanley Foundation, Highlander Partners, Jumburrito, Level One Partners, NAADAC and New Mexico Cancer Center were source-backed at the legal or organization scope supported by evidence. New Mexico Cancer Center remains a practice brand operated by New Mexico Oncology Hematology Consultants Ltd. Noodle Partners PBC is retained as an alias under the source-backed Noodle operating brand.
+
+
+## Executive-priority identity research — batch 14 — November 25, 2026
+
+The next 20 priority identities from PDX Gallery through Greater New York Hospital Association were reviewed. PDX Gallery Inc, Settlement Systems Arbitration and Mediation, KermitsPad, Fox Hollow Ventures LLC, IAG Ltd. and RSS-TGP remain unresolved because the reported strings do not identify one exact employer without inference.
+
+SRAM Corporation, The ALS Association, Westcoast Black Theatre Troupe of Florida, Corpus Christi Housing Authority, ASCAP, Citizens Union, Sip N Chat Cocktail Lounge, T K Group and Greater New York Hospital Association were source-backed. Xcel Energy–Colorado, Teachers Pay Teachers, The Doctors Company and uSherpa are retained at operating-company, brand or business-group scope rather than being over-normalized into a parent or affiliate. Williams-Sonoma, Inc. is retained as the public-company employer.

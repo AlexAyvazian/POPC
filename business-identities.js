@@ -10811,5 +10811,287 @@ export const businessIdentities = [
       "https://www.noodle.com/about-us/"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PDX GALLERY INC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / art-gallery business",
+    "parent": "",
+    "evidence": "Federal campaign records identify Jane Beebe with employer PDX GALLERY INC and gallery-owner occupation, but reviewed sources did not establish the exact legal entity behind that reported name. It is not automatically merged with similarly named Portland galleries.",
+    "sources": [
+      "https://docquery.fec.gov/pdf/977/202602209834829977/202602209834829977.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SETTLEMENT SYSTEMS ARBITRATION AND MED"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / arbitration and mediation business",
+    "parent": "",
+    "evidence": "The truncated SETTLEMENT SYSTEMS ARBITRATION AND MED employer string did not resolve to one authoritative legal entity tied to William Groner. No similarly named ADR firm is assigned by inference.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SRAM CORPORATION"
+    ],
+    "name": "SRAM CORPORATION",
+    "status": "Source-backed",
+    "scope": "Cycling-components company / business entity",
+    "parent": "",
+    "evidence": "SRAM is the established cycling-components company identified by the reported employer, and industry records identify Michael Mercuri in SRAM executive/board-related industry leadership. The company remains separate from affiliated brands and industry coalitions.",
+    "sources": [
+      "https://www.sram.com/en/company/about",
+      "https://www.bicycleretailer.com/north-america/2008/11/19/bikes-belong-elects-new-officers"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE ALS ASSOCIATION"
+    ],
+    "name": "THE ALS ASSOCIATION",
+    "status": "Source-backed",
+    "scope": "National nonprofit organization",
+    "parent": "",
+    "evidence": "The ALS Association is the national nonprofit employer, and professional nonprofit records identify Pam Knott as Vice President, Data and Technology. Chapters and separately incorporated affiliates are not merged.",
+    "sources": [
+      "https://www.als.org/",
+      "https://tnpa.org/jobs/pam-knott/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WESTCOAST BLACK THEATRE TROUPE"
+    ],
+    "name": "WESTCOAST BLACK THEATRE TROUPE OF FLORIDA, INC.",
+    "status": "Source-backed",
+    "scope": "Legal nonprofit performing-arts organization",
+    "parent": "",
+    "evidence": "Nonprofit filings identify Westcoast Black Theatre Troupe of Florida Inc., and the troupe's official site identifies Julie Leach as Executive Director. The public-facing shortened name maps to the nonprofit.",
+    "sources": [
+      "https://www.westcoastblacktheatre.org/directory/julie-leach/",
+      "https://projects.propublica.org/nonprofits/organizations/651040662"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "XCEL ENERGY COLORADO"
+    ],
+    "name": "XCEL ENERGY – COLORADO",
+    "status": "Source-backed",
+    "scope": "Colorado operating-company / public-facing utility identity",
+    "parent": "Xcel Energy Inc.",
+    "evidence": "Xcel Energy identifies Robert Kenney as President of Xcel Energy – Colorado and describes it as one of the company's operating companies. The reported employer remains at operating-company scope and is not collapsed into Public Service Company of Colorado or the parent issuer.",
+    "sources": [
+      "https://corporate.my.xcelenergy.com/s/about/leadership-governance/company/kenney",
+      "https://newsroom.xcelenergy.com/news/robert-kenney-to-lead-xcel-energy-colorado-MCOQ4YX7VGDJFDFJ7EF73PA64QDA"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WILLIAMS SONOMA INC"
+    ],
+    "name": "WILLIAMS-SONOMA, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / public home-furnishings retailer",
+    "parent": "",
+    "evidence": "Williams-Sonoma, Inc. is the public company corresponding to the reported employer. The entry remains distinct from its individual retail brands and subsidiaries; the donor's vice-president title is retained as record context.",
+    "sources": [
+      "https://www.williams-sonomainc.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KERMITSPAD"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / internet-sales business name",
+    "parent": "",
+    "evidence": "The KERMITSPAD string and Jamise C. Osserman's internet-sales/small-business-owner context did not resolve to one authoritative legal or operating business identity. No similarly named online seller is merged.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FOX HOLLOW VENTURES LLC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / investment or venture entity",
+    "parent": "",
+    "evidence": "Reviewed sources did not establish one authoritative Fox Hollow Ventures LLC tied to James Greer and the reported President role. Same-name venture and real-estate entities are not merged.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "USHERPA"
+    ],
+    "name": "USHERPA",
+    "status": "Source-backed",
+    "scope": "Mortgage and real-estate CRM / marketing-technology brand",
+    "parent": "",
+    "evidence": "Usherpa's official site identifies Dan Harrington as co-founder and documents the company's history. The donor-reported CEO title appears historical or stale because the company currently identifies Chris Harrington as CEO; the employer identity itself is source-backed.",
+    "sources": [
+      "https://usherpa.com/about-us/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "IAG LTD."
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / corporate name",
+    "parent": "",
+    "evidence": "Public restructuring records reference IAG LTD with Michele Pierro, but reviewed sources do not establish the company's exact operating identity or independently corroborate the Executive Vice President role. No IAG-branded company is inferred.",
+    "sources": [
+      "https://document.epiq11.com/document/getdocumentbycode?docId=4178149&projectCode=MSJ&source=DM"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CORPUS CHRISTI HOUSING AUTHORITY"
+    ],
+    "name": "CORPUS CHRISTI HOUSING AUTHORITY",
+    "status": "Source-backed",
+    "scope": "Public housing authority / local government entity",
+    "parent": "",
+    "evidence": "Corpus Christi Housing Authority's official site and Texas public records identify Rhen C. Bass, Sr. as President and CEO. The authority remains distinct from Coastal Housing Partners and affiliated properties.",
+    "sources": [
+      "https://hacc.org/executive-team/",
+      "https://hacc.org/rhen-bass/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ASCAP"
+    ],
+    "name": "AMERICAN SOCIETY OF COMPOSERS, AUTHORS AND PUBLISHERS (ASCAP)",
+    "status": "Source-backed",
+    "scope": "Performing-rights membership organization",
+    "parent": "",
+    "evidence": "ASCAP is the established performing-rights organization corresponding to the reported acronym, and Paul Williams has served in chairman/president leadership. The organization remains separate from ASCAP Foundation and related entities.",
+    "sources": [
+      "https://www.ascap.com/about-us"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CITIZENS UNION"
+    ],
+    "name": "CITIZENS UNION",
+    "status": "Source-backed",
+    "scope": "New York civic-reform nonprofit organization / public-facing identity",
+    "parent": "",
+    "evidence": "Citizens Union's official materials identify Betsy Gotbaum as its former Executive Director and document her retirement in 2025. Citizens Union Foundation is separately named and is not merged.",
+    "sources": [
+      "https://citizensunion.org/document/2025-02-07/citizens-union-announces-retirement-of-executive-director-betsy-gotbaum/",
+      "https://citizensunion.org/leadership-and-staff-2/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TEACHERS PAY TEACHERS"
+    ],
+    "name": "TEACHERS PAY TEACHERS",
+    "status": "Source-backed",
+    "scope": "Education-resource marketplace / operating brand",
+    "parent": "",
+    "evidence": "Teachers Pay Teachers is the education-resource marketplace associated with Michelle Cummings, who is publicly identified as Vice President of Content. The reported employer remains at operating-brand scope rather than being assigned to a parent entity without need.",
+    "sources": [
+      "https://blog.teacherspayteachers.com/qa-with-lynette-stant-arizonas-2020-teacher-of-the-year/",
+      "https://powertofly.com/events/details/268538-tech-meets-education-featuring-women-tech-leaders-of-teachers-pay-teachers/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE DOCTORS COMPANY"
+    ],
+    "name": "THE DOCTORS COMPANY",
+    "status": "Source-backed",
+    "scope": "Physician-owned medical-malpractice insurer / business group",
+    "parent": "",
+    "evidence": "The Doctors Company is the established insurer corresponding to the specific reported employer. The donor's Vice President title is retained as record context and no affiliate is substituted for the reported company.",
+    "sources": [
+      "https://www.thedoctors.com/about-the-doctors-company/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SIP N CHAT"
+    ],
+    "name": "SIP N CHAT COCKTAIL LOUNGE INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / Brooklyn hospitality business",
+    "parent": "",
+    "evidence": "New York corporate-record data identifies Sip N Chat Cocktail Lounge Inc. and Herbie Mingo as CEO. The abbreviated reported employer maps to that corporation.",
+    "sources": [
+      "https://www.bizprofile.net/ny/brooklyn/sip-n-chat-cocktail",
+      "https://www.nybizdb.com/company/sip-n-chat-cocktail-lounge-inc-2752982/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "T K GROUP INC"
+    ],
+    "name": "T K GROUP, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / occupational hearing and professional-services company",
+    "parent": "",
+    "evidence": "West Virginia corporate records identify T K Group, Inc., and the company's 2026 contract identifies William Schnauffer IV as Chief Executive Officer. The reported president/CEO context is therefore tied to the exact company, while current corporate titles may differ across filings.",
+    "sources": [
+      "https://apps.sos.wv.gov/business/corporations/organization.aspx?org=258551",
+      "https://tkontheweb.com/static/forms/tk_contract_for_eqs.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RSS-TGP"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / acronym or joint business name",
+    "parent": "",
+    "evidence": "The RSS-TGP employer string and Randolph Schoedler co-owner context did not resolve to one authoritative entity. The acronym is not expanded or merged into a similarly named company without direct evidence.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GREATER NEW YORK HOSPITAL ASSOCIATION"
+    ],
+    "name": "GREATER NEW YORK HOSPITAL ASSOCIATION",
+    "status": "Source-backed",
+    "scope": "Hospital and health-system trade association",
+    "parent": "",
+    "evidence": "GNYHA's official site identifies the Greater New York Hospital Association as a trade association, and public professional materials identify Barbara A. Green in senior executive roles at GNYHA. GNYHA Ventures and the Greater New York Hospital Foundation remain separate.",
+    "sources": [
+      "https://www.gnyha.org/about-us/",
+      "https://media.nyam.org/filer_public/c5/05/c5055683-b75b-42f2-9b94-c7375e04118e/nyam_annual_meeting_2023_program_111623.pdf"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
