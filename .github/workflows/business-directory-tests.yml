@@ -1,0 +1,31 @@
+name: Business directory tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'business-identities.js'
+      - 'business-directory-data.js'
+      - 'business-directory.js'
+      - 'business-directory.test.mjs'
+      - 'research-data.js'
+      - 'transactions.html'
+      - '.github/workflows/business-directory-tests.yml'
+  pull_request:
+    paths:
+      - 'business-identities.js'
+      - 'business-directory-data.js'
+      - 'business-directory.js'
+      - 'business-directory.test.mjs'
+      - 'research-data.js'
+      - 'transactions.html'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test business-directory.test.mjs

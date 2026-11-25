@@ -54,21 +54,56 @@ test('memo-only names survive and memo amounts never increase direct totals', as
   for(const type of ['individual','organization']) assert.equal(groups.reduce((n,g)=>n+g[type],0),config.reduce((n,c)=>n+c[type],0));
   assert(groups.some(g=>g.memoCount>0&&g.count===0));
   const directNames = new Set(buildDirectory(rows.filter(r=>!r.memo)).map(g=>g.key));
-  console.log(JSON.stringify({allRecords:rows.length,listedNames:groups.filter(g=>!g.personal).length,memoOnlyNames:groups.filter(g=>!directNames.has(g.key)).length}));
+  const listed=groups.filter(g=>!g.personal);
+  console.log(JSON.stringify({
+    allRecords:rows.length,
+    listedNames:listed.length,
+    sourceBacked:listed.filter(g=>g.research?.status==='Source-backed').length,
+    unresolved:listed.filter(g=>g.research?.status==='Unresolved').length,
+    unreviewed:listed.filter(g=>!g.research).length,
+    memoOnlyNames:groups.filter(g=>!directNames.has(g.key)).length
+  }));
 });
 
-test('researched aliases merge while subsidiaries and unresolved names stay separate', () => {
-  const employers=['ARISTEIA CAPITAL','ARISTEIA CAPITAL LLC','MICROSOFT','LINKEDIN CORP','CREI','AMAZON.COM SERVICES, INC.','AMAZON','WARNER RECORDS','WARNER MUSIC INC.'];
+test('researched aliases merge while subsidiaries, brands and unresolved names stay separate', () => {
+  const employers=[
+    'ARISTEIA CAPITAL','ARISTEIA CAPITAL LLC',
+    'MICROSOFT','LINKEDIN CORP',
+    'CREI',
+    'AMAZON.COM SERVICES, INC.','AMAZON',
+    'WARNER RECORDS','WARNER MUSIC INC.',
+    'ACCENTURE','ACCENTURE INC.',
+    'COINBASE','COINBASE INC.',
+    'SIEMENS','SIEMENS CORPORATION',
+    'DELAWARE NORTH COMPANIES','DELAWARE NORTH COMPANIES, INC.'
+  ];
   const groups=buildDirectory(employers.map(employer=>({type:'individual',name:'Donor',employer,sector:'Test',committee:'one',amount:100})));
-  assert.equal(groups.length,8);
   const aristeia=groups.find(g=>g.name==='ARISTEIA CAPITAL, LLC');
   assert.equal(aristeia.count,2);assert.equal(aristeia.names.size,2);
-  const microsoft=selectDirectory(groups,{query:'Microsoft'});
-  assert.equal(microsoft.length,2);
-  assert.equal(microsoft.find(g=>g.name==='LINKEDIN CORPORATION').research.parent,'Microsoft Corporation');
-  assert.equal(selectDirectory(groups,{research:'Unresolved'}).length,2);
+
   assert.equal(groups.find(g=>g.name==='CREI').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='AMAZON.COM SERVICES, INC.').count,1);
+
+  const amazonServices=groups.find(g=>g.name==='AMAZON.COM SERVICES LLC');
+  assert.equal(amazonServices.research.status,'Source-backed');
+  assert.equal(amazonServices.research.parent,'Amazon.com, Inc.');
+  assert(groups.some(g=>g.name==='AMAZON.COM, INC.'));
+
+  assert.equal(groups.find(g=>g.name==='LINKEDIN CORPORATION').research.parent,'Microsoft Corporation');
   assert.equal(groups.filter(g=>g.research?.parent==='Warner Music Group Corp.').length,2);
+
+  assert.equal(groups.find(g=>g.name==='ACCENTURE').research.scope,'Business group / brand');
+  assert.equal(groups.find(g=>g.name==='ACCENTURE INC.').research.status,'Unresolved');
+
+  assert.equal(groups.find(g=>g.name==='COINBASE').research.parent,'Coinbase Global, Inc.');
+  assert.equal(groups.find(g=>g.name==='COINBASE, INC.').research.parent,'Coinbase Global, Inc.');
+  assert.notEqual(groups.find(g=>g.name==='COINBASE').key,groups.find(g=>g.name==='COINBASE, INC.').key);
+
+  assert.equal(groups.find(g=>g.name==='SIEMENS').research.parent,'Siemens AG');
+  assert.equal(groups.find(g=>g.name==='SIEMENS CORPORATION').research.parent,'Siemens USA Holdings, Inc.');
+  assert.notEqual(groups.find(g=>g.name==='SIEMENS').key,groups.find(g=>g.name==='SIEMENS CORPORATION').key);
+
+  assert.equal(groups.find(g=>g.name==='DELAWARE NORTH').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='DELAWARE NORTH COMPANIES, INC.').research.status,'Unresolved');
+
   assert(directoryCSV(groups).includes('https://adviserinfo.sec.gov/firm/summary/135986'));
 });

@@ -1123,15 +1123,16 @@ export const businessIdentities = [
       "LEIFER CAPITAL ADVISERS",
       "LEIFER CAPITAL ADVISERS LLC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "name": "Leifer Capital Advisers, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment firm",
     "parent": "",
-    "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "Alan Leifer is reported as president of Leifer Capital Advisers in the donor records, and Massachusetts registry-derived records identify Leifer Capital Advisers, LLC (entity 043435757). No parent company is established.",
     "sources": [
-      "https://opencorporates.com/companies/us_ma/043435757"
+      "https://opencorporates.com/companies/us_ma/043435757",
+      "https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=ALAN%20LEIFER"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
@@ -1142,75 +1143,125 @@ export const businessIdentities = [
     "name": null,
     "parent": "",
     "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "An official FEC filing identifies Timothy F. Wuliger of Moreland Hills, Ohio as president of Mallard Investments, Inc. That supports a likely identity for matching Wuliger records, but it does not prove that every suffixless Mallard Investments entry is the same entity or establish a registered alias. Keep the reported forms separate until the POPC donor row can be tied to Wuliger or matching location context.",
     "sources": [
-      "https://www.bloomberg.com/profile/company/0705027D:US"
+      "https://docquery.fec.gov/pdf/977/202210279541739977/202210279541739977.pdf",
+      "https://businesssearch.ohiosos.gov/"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
-      "ACCENTURE",
+      "ACCENTURE"
+    ],
+    "name": "Accenture",
+    "status": "Source-backed",
+    "scope": "Business group / brand",
+    "parent": "Accenture plc",
+    "evidence": "Accenture's SEC filing describes Accenture plc and its controlled subsidiaries as the consolidated business. A bare Accenture employer entry therefore identifies the group/brand, not a particular employing subsidiary.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1467373/000146737326000049/acn-20260831.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
       "ACCENTURE INC."
     ],
     "status": "Unresolved",
     "name": null,
     "parent": "",
     "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "Accenture plc's subsidiary exhibit lists distinct entities named Accenture Inc. in more than one jurisdiction. Without jurisdiction, address, or donor context, the reported Accenture Inc. form cannot be assigned to one exact subsidiary.",
     "sources": [
-      "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-4/Accenture-Modern-Slavery-Transparency-Statement-2026.pdf",
-      "https://www.accenture.com/content/dam/accenture/final/corporate/company-information/document/Accenture-Modern-Slavery-Transparency-Statement-2025.pdf"
+      "https://www.sec.gov/Archives/edgar/data/1467373/000146737325000217/a831202510-kexhibit211.htm"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
-      "COINBASE",
+      "COINBASE"
+    ],
+    "name": "Coinbase",
+    "status": "Source-backed",
+    "scope": "Business brand / group",
+    "parent": "Coinbase Global, Inc.",
+    "evidence": "Coinbase is used as the business brand. SEC filings distinguish the parent registrant Coinbase Global, Inc. from its operating subsidiary Coinbase, Inc.; a bare Coinbase employer entry is therefore retained at brand/group scope.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000054/coin-20260331.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
       "COINBASE INC."
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "name": "Coinbase, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / subsidiary",
+    "parent": "Coinbase Global, Inc.",
+    "evidence": "SEC filings identify Coinbase, Inc. as a wholly owned subsidiary of Coinbase Global, Inc. It remains a separate directory identity from the broader Coinbase brand.",
     "sources": [
-      "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001679788/5289651d-49ea-44bb-b6cb-d142aef095e4.pdf",
-      "https://www.sec.gov/Archives/edgar/data/1679788/000162828021005373/coinbaseglobalincs-1a2.htm"
+      "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000054/coin-20260331.htm"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
-      "DELAWARE NORTH COMPANIES",
+      "DELAWARE NORTH COMPANIES"
+    ],
+    "name": "Delaware North",
+    "status": "Source-backed",
+    "scope": "Business group / umbrella name",
+    "parent": "Delaware North Companies, Incorporated",
+    "evidence": "Delaware North's official corporate-structure page defines Delaware North as an umbrella reference to Delaware North Companies, Incorporated and its affiliates and subsidiaries. This mapping identifies the group, not a particular operating subsidiary.",
+    "sources": [
+      "https://www.delawarenorth.com/corporate-structure"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
       "DELAWARE NORTH COMPANIES, INC."
     ],
     "status": "Unresolved",
     "name": null,
     "parent": "",
     "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "Delaware North's corporate-structure page separately lists Delaware North Companies, Inc. – Boston. The reported form omits that qualifier, so the exact legal entity cannot be confirmed from the name alone.",
     "sources": [
-      "https://www.delawarenorth.com/corporate-structure",
-      "https://www.delawarenorth.com/"
+      "https://www.delawarenorth.com/corporate-structure"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
-      "SIEMENS",
-      "SIEMENS CORPORATION"
+      "SIEMENS"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "name": "Siemens",
+    "status": "Source-backed",
+    "scope": "Business group / brand",
+    "parent": "Siemens AG",
+    "evidence": "Siemens is retained as group/brand scope. Siemens AG is the ultimate group parent; the entry is not merged with the distinct U.S. legal entity Siemens Corporation.",
     "sources": [
       "https://www.siemens.com/en-us/corporate-information",
-      "https://www.gleif.org/lei/549300WJKXHIBH0IQT63"
+      "https://assets.new.siemens.com/siemens/assets/api/uuid:93846b13-c912-4e7f-bb7d-a537e0b7bb44/FY-2024-SCC-Audited-Financial-Statement-Final.pdf"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SIEMENS CORPORATION"
+    ],
+    "name": "Siemens Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / subsidiary",
+    "parent": "Siemens USA Holdings, Inc.",
+    "evidence": "Siemens' audited U.S. financial statement identifies Siemens Corporation as held by Siemens USA Holdings, Inc., which is wholly owned by Siemens AG. Siemens Corporation remains separate from the Siemens group/brand entry.",
+    "sources": [
+      "https://assets.new.siemens.com/siemens/assets/api/uuid:93846b13-c912-4e7f-bb7d-a537e0b7bb44/FY-2024-SCC-Audited-Financial-Statement-Final.pdf"
+    ],
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
@@ -1220,113 +1271,370 @@ export const businessIdentities = [
     "name": null,
     "parent": "",
     "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "David B. Harris's donor context points to the Children's Research and Education Institute, where Stanford identifies him as president. The reviewed sources do not expressly establish CREI as that organization's official acronym, DBA, or registered alias, so the reported acronym remains unresolved.",
     "sources": [
-      "https://www.crei.com/",
-      "https://www.crossrealestateinvestors.com/"
+      "https://inequality.stanford.edu/about/people/david-b-harris",
+      "https://projects.propublica.org/nonprofits/organizations/521317889"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
-      "NEP",
-      "NEP INC.",
-      "NEP Group, Inc."
+      "NEP"
     ],
     "status": "Unresolved",
     "name": null,
     "parent": "",
     "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "NEP is non-unique and can refer to multiple organizations. The available donor context does not conclusively tie this bare acronym to NEP Group, Inc.; keep it separate.",
     "sources": [
       "https://www.nepgroup.com/",
-      "https://www.tvtechnology.com/equipment/bexel-expands-audio-inventory",
-      "https://linkedin.com/in/darren-larson-2026aa17"
+      "https://www.sec.gov/Archives/edgar/data/1612301/000119312515239481/d743919ds1.htm"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NEP INC."
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported name",
+    "evidence": "The reviewed NEP Group sources do not establish NEP Inc. as an alias of NEP Group, Inc., and similarly named legal entities exist. Keep this reported form separate pending donor or address context.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1612301/000119312515239481/d743919dex211.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NEP GROUP, INC."
+    ],
+    "name": "NEP Group, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / media-services group",
+    "parent": "",
+    "evidence": "SEC filings identify NEP Group, Inc. as the Pittsburgh-based parent of a broadcast and live-production services group. This exact reported corporate name is source-backed; it is not used to absorb the separate NEP or NEP Inc. entries.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1612301/000119312515239481/d743919ds1.htm",
+      "https://www.nepgroup.com/about/about-us"
+    ],
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
       "PATRICK PARTNERS",
-      "Patrick Partners, Inc.",
-      "Sharon Patrick & Associates, Inc.",
-      "Sharon Patrick Associates, Inc."
+      "PATRICK PARTNERS, INC."
+    ],
+    "name": "Patrick Partners, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / business name",
+    "parent": "",
+    "evidence": "Sharon Patrick is reported as president of Patrick Partners in the donor records. New York entity records identify Patrick Partners, Inc.; the suffixless form is retained as the business-name form for that corporation.",
+    "sources": [
+      "https://apps.dos.ny.gov/publicInquiry?vm=r",
+      "https://www.bizprofile.net/ny/new-york/patrick-partners-inc"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SHARON PATRICK & ASSOCIATES, INC.",
+      "SHARON PATRICK ASSOCIATES, INC."
     ],
     "status": "Unresolved",
     "name": null,
     "parent": "",
     "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "The prior research grouped these names as leads, but the reviewed evidence does not establish that Sharon Patrick & Associates, Inc. was a former name or alias of Patrick Partners, Inc. Keep the reported names unresolved rather than merging them.",
     "sources": [
-      "https://www.fec.gov/data/receipts?committee_id=C00744920",
-      "https://www.bizprofile.net/ny/new-york/patrick-partners-inc"
+      "https://apps.dos.ny.gov/publicInquiry?vm=r"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
       "STREAM LINE CIRCLE LLC",
-      "STREAM LINE CIRCLE, LLC",
-      "Stream Line Circle, LLC"
+      "STREAM LINE CIRCLE, LLC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "name": "Stream Line Circle LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity",
     "parent": "",
-    "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "An official FEC filing reports Jon Stryker with employer Stream Line Circle LLC and occupation architect. New York registration records identify Stream Line Circle LLC as a Delaware LLC registered in New York. No parent or operating purpose is established.",
     "sources": [
-      "https://www.fec.gov/data/receipts?committee_id=C00793760&max_date=04%2F30%2F2025&min_date=04%2F01%2F2025&two_year_transaction_period=2026",
+      "https://docquery.fec.gov/pdf/237/201608319023763237/201608319023763237_000009.pdf",
       "https://opengovny.com/corporation/6427138"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
       "PATTERSON PLANNING & SERVICES",
       "PATTERSON PLANNING AND SERVICES",
-      "Patterson Planning & Services, Inc."
+      "PATTERSON PLANNING & SERVICES, INC."
     ],
-    "status": "Unresolved",
-    "name": null,
+    "name": "Patterson Planning & Services, Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / business name",
     "parent": "",
-    "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "A New York Department of Health document identifies Robert R. Dyson as Chairman/CEO of Patterson Planning & Services, matching the donor's reported employer and title. Corporate records identify Patterson Planning & Services, Inc.; no parent is established.",
     "sources": [
-      "https://www.fec.gov/data/receipts?committee_id=C00010603&max_date=06%2F18%2F2020&min_date=06%2F18%2F2020&two_year_transaction_period=2020",
-      "https://www.campaignmoney.com/political/contributions/robert-dyson.asp?cycle=18"
+      "https://www.health.ny.gov/facilities/public_health_and_health_planning_council/meetings/2013-01-24/docs/122165_e.pdf",
+      "https://apps.dos.ny.gov/publicInquiry?vm=r"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
-      "JRJ CONSTRUCTION LLC",
       "JRJ CONSTRUCTION"
     ],
     "status": "Unresolved",
     "name": null,
     "parent": "",
     "scope": "Reported name",
-    "evidence": "Exact entity or alias equivalence remains unconfirmed; retain each reported name separately.",
+    "evidence": "JRJ Construction is used by multiple unrelated businesses. A Weatherford, Texas contractor uses JRJ Construction as the brand for Joe R. Jones Construction, Inc., but no donor-level context in the reviewed Jeffries records proves that match.",
     "sources": [
-      "http://jrjconstructionky.com/",
-      "https://www.bbb.org/us/ga/covington/profile/general-contractor/jrj-construction-llc-0443-27272682",
-      "https://www.crunchbase.com/organization/jrj-construction"
+      "https://jrjinc.com/",
+      "https://www.usaspending.gov/award/CONT_AWD_697DCK19C00088_6920_-NONE-_-NONE-"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
-      "AMAZON.COM SERVICES, INC."
+      "JRJ CONSTRUCTION LLC"
     ],
     "status": "Unresolved",
     "name": null,
     "parent": "",
     "scope": "Reported name",
-    "evidence": "Amazon’s subsidiary exhibit lists Amazon.com Services LLC, not the reported Inc. form. The legal-name transition is not resolved here.",
+    "evidence": "JRJ Construction LLC is also non-unique. FMCSA identifies a Zapata, Texas carrier with that exact legal name and DBA Lone Star Lease Service, while other unrelated LLCs use the same name. The POPC donor row has not been tied to one entity.",
     "sources": [
+      "https://safer.fmcsa.dot.gov/query.asp?original_query_param=NAME&original_query_string=LONE%20STAR%20LEASE%20SERVICE&query_param=USDOT&query_string=2293120&query_type=queryCarrierSnapshot&searchtype=ANY"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMAZON.COM SERVICES, INC."
+    ],
+    "name": "Amazon.com Services LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / subsidiary; former corporate form",
+    "parent": "Amazon.com, Inc.",
+    "evidence": "Rhode Island's official registry states that Amazon.com Services LLC was converted from Amazon.com Services, Inc. on January 16, 2020. Amazon's SEC subsidiary exhibit lists Amazon.com Services LLC as 100% owned by Amazon.com, Inc. The subsidiary remains separate from the Amazon parent/group entry.",
+    "sources": [
+      "https://business.sos.ri.gov/CorpWeb/CorpSearch/CorpSummary.aspx?FEIN=001703679",
       "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231xex211.htm"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PIVOTAL VENTURES"
+    ],
+    "name": "Pivotal Ventures LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / Pivotal group component",
+    "parent": "",
+    "evidence": "Pivotal's official site identifies Pivotal Ventures LLC as a component of the broader Pivotal group. This maps the reported employer to that entity without treating the broader group as a parent company.",
+    "sources": [
+      "https://www.pivotal.com/",
+      "https://www.pivotal.com/about"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SPARK CAPITAL"
+    ],
+    "name": "Spark Capital Partners, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / advisory business name",
+    "parent": "",
+    "evidence": "The SEC Form ADV lists Spark Capital Partners, LLC as the full legal name and SPARK CAPITAL as the primary advisory business name.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/161231/PDF/161231.pdf",
+      "https://adviserinfo.sec.gov/firm/summary/161231"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROADFIN CAPITAL LLC"
+    ],
+    "name": "Broadfin Capital, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Broadfin Capital, LLC as the legal entity. The reported form differs only in punctuation.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/156900",
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=623671"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LINDEN CAPITAL PARTNERS"
+    ],
+    "name": "Linden Manager LLC",
+    "status": "Source-backed",
+    "scope": "Advisory business name",
+    "parent": "Linden Holdings Parent LP",
+    "evidence": "The SEC Form ADV lists Linden Manager LLC as the legal adviser and LINDEN CAPITAL PARTNERS as its primary business name. The ownership section identifies Linden Holdings Parent LP as sole member.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/161059/PDF/161059.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DAVIDSON KEMPNER"
+    ],
+    "name": "Davidson Kempner Capital Management LP",
+    "status": "Source-backed",
+    "scope": "Investment adviser / business name",
+    "parent": "",
+    "evidence": "SEC adviser records identify Davidson Kempner Capital Management LP. The firm's official site uses Davidson Kempner as the shortened business name; separately named relying advisers are not treated as aliases.",
+    "sources": [
+      "https://reports.adviserinfo.sec.gov/reports/ADV/155680/PDF/155680.pdf",
+      "https://www.davidsonkempner.com/contact"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PALANTIR TECHNOLOGIES"
+    ],
+    "name": "Palantir Technologies Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / technology company",
+    "parent": "",
+    "evidence": "Palantir's SEC filing identifies Palantir Technologies Inc. as the Delaware registrant. The reported employer omits only the corporate suffix.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000048/pltr-20260930.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MACANDREWS & FORBES"
+    ],
+    "name": "MacAndrews & Forbes Incorporated",
+    "status": "Source-backed",
+    "scope": "Legal entity / business name",
+    "parent": "",
+    "evidence": "The company's official site identifies MacAndrews & Forbes Incorporated and uses MacAndrews & Forbes as the shortened name. No corporate parent is established; individual ownership is not recorded as a parent company.",
+    "sources": [
+      "https://macandrewsandforbes.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLACK ECONOMIC ALLIANCE"
+    ],
+    "name": "Black Economic Alliance",
+    "status": "Source-backed",
+    "scope": "Advocacy organization / umbrella name",
+    "parent": "",
+    "evidence": "Black Economic Alliance uses this organization name publicly. Related foundation, PAC, entrepreneurs-fund, and venture entities remain distinct and are not treated as aliases of this entry.",
+    "sources": [
+      "https://blackeconomicalliance.org/",
+      "https://projects.propublica.org/nonprofits/organizations/824578595"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BC PARTNERS"
+    ],
+    "name": "BC Partners",
+    "status": "Source-backed",
+    "scope": "Business group / brand",
+    "parent": "",
+    "evidence": "BC Partners is the group/brand name used across separately incorporated management and advisory entities. The official legal page identifies BC Partners LLP among the group's entities, so this mapping deliberately stays at brand/group scope rather than assigning every donor to that LLP.",
+    "sources": [
+      "https://www.bcpartners.com/legal",
+      "https://find-and-update.company-information.service.gov.uk/company/OC404426"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ZAREMBA BROWN PLLC"
+    ],
+    "name": "Zaremba Brown, PLLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / law firm",
+    "parent": "",
+    "evidence": "The firm's official site identifies the practice as Zaremba Brown and its professional-LLC form as Zaremba Brown, PLLC. No parent or former name is established.",
+    "sources": [
+      "https://zarembabrown.com/",
+      "https://dos.ny.gov/corporation-and-business-entity-database"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DIGITAL SOVEREIGNTY ALLIANCE"
+    ],
+    "name": "Digital Sovereignty Alliance",
+    "status": "Source-backed",
+    "scope": "Advocacy organization",
+    "parent": "",
+    "evidence": "A federal Lobbying Disclosure Act registration identifies DIGITAL SOVEREIGNTY ALLIANCE as both registrant and client and describes it as a nonprofit promoting Web3 and artificial-intelligence technology. No corporate suffix or parent is established.",
+    "sources": [
+      "https://lda.gov/filings/public/filing/e066f134-14d1-4066-af9b-0dd9899710b0/print",
+      "https://www.dsaf.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VALCOR ENGINEERING"
+    ],
+    "name": "Valcor Engineering Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / engineering manufacturer",
+    "parent": "",
+    "evidence": "Valcor's official site identifies Valcor Engineering and its corporate history; public corporate records identify Valcor Engineering Corporation. The reported employer is the shortened business-name form.",
+    "sources": [
+      "https://www.valcor.com/about-us/",
+      "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchByEntityName"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE VISTRIA GROUP"
+    ],
+    "name": "The Vistria Group, LP",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "The SEC adviser brochure identifies The Vistria Group, LP and separately identifies Vistria Real Estate Management Company, LP; the latter is not merged as an alias or parent.",
+    "sources": [
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1046096",
+      "https://vistria.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARIEL INVESTMENTS"
+    ],
+    "name": "Ariel Investments, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / investment adviser",
+    "parent": "",
+    "evidence": "SEC adviser records identify Ariel Investments, LLC as the registered investment adviser. The reported employer is its shortened business-name form.",
+    "sources": [
+      "https://adviserinfo.sec.gov/firm/summary/108211",
+      "https://files.adviserinfo.sec.gov/IAPD/Content/Common/crd_iapd_Brochure.aspx?BRCHR_VRSN_ID=1034394"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
-
