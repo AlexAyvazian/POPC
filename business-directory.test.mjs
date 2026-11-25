@@ -707,3 +707,22 @@ test('twenty-second priority batch resolves PAC spelling variants without collap
   assert.equal(cowCreek.organization,400);
   assert.equal(cowCreek.research.scope,'Sovereign tribal government / federally recognized tribe');
 });
+
+test('twenty-third priority batch consolidates durable GE and Humane PAC renames', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'GENERAL ELECTRIC COMPANY POLITICAL ACTION COMMITTEE',sector:'Manufacturing',committee:'a',amount:100},
+    {type:'organization',name:'GENERAL ELECTRIC COMPANY AEROSPACE EMPLOYEE POLITICAL ACTION COMMITTEE (GE AEROSPACE PAC)',sector:'Manufacturing',committee:'a',amount:200},
+    {type:'organization',name:'HUMANE SOCIETY LEGISLATIVE FUND POLITICAL ACTION COMMITTEE',sector:'Advocacy',committee:'a',amount:300},
+    {type:'organization',name:'HUMANE WORLD ACTION FUND POLITICAL ACTION COMMITTEE',sector:'Advocacy',committee:'a',amount:400},
+    {type:'organization',name:'HNTB HOLDINGS PAC',sector:'Engineering',committee:'a',amount:500}
+  ]);
+  const ge=groups.find(g=>g.name==='GENERAL ELECTRIC COMPANY AEROSPACE EMPLOYEE POLITICAL ACTION COMMITTEE (GE AEROSPACE PAC)');
+  assert.equal(ge.organization,300);
+  assert.equal(ge.organizationCount,2);
+  assert.equal(ge.research.status,'Source-backed');
+  const humane=groups.find(g=>g.name==='HUMANE WORLD ACTION FUND POLITICAL ACTION COMMITTEE');
+  assert.equal(humane.organization,700);
+  assert.equal(humane.organizationCount,2);
+  assert.equal(humane.research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='HNTB HOLDINGS LTD. PAC').research.status,'Source-backed');
+});
