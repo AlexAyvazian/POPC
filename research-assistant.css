@@ -35,3 +35,5 @@
 .popc-ai-panel button:focus-visible,.popc-ai-launcher:focus-visible,.popc-ai-form:focus-within{outline:2px solid #a17b3d;outline-offset:2px}
 @media(max-width:560px){.popc-ai-panel{inset:12px 9px;width:auto;padding:14px 15px 10px;border-radius:23px}.popc-ai-launcher{top:auto;bottom:22px;right:0;writing-mode:horizontal-tb;transform:none;border:1px solid #b79254;border-right:0;border-radius:18px 0 0 18px;padding:10px 12px}.popc-ai-orb{width:84px;height:84px}.popc-ai-hero{padding:8px 0 5px}}
 @media(prefers-reduced-motion:reduce){.popc-ai-panel,.popc-ai-orb,.popc-ai-orb::before,.popc-ai-orb::after{animation:none!important}}
+
+.popc-ai-modes{display:flex;gap:5px;margin:3px 0 4px;flex-shrink:0}.popc-ai-modes button{flex:1;border:1px solid #d7c4a0;border-radius:11px;padding:7px 4px;background:#fff;color:#624c2e;font:inherit;font-size:11px;cursor:pointer}.popc-ai-modes button[aria-pressed="true"]{background:#f5ecdc;border-color:#b79254;font-weight:600}.popc-ai-donor-result{border-top:1px solid #e6d9c4;padding:9px 0;margin:6px 0}.popc-ai-donor-result a{color:#79552b;font-weight:600;overflow-wrap:anywhere}

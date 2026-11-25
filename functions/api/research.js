@@ -23,11 +23,12 @@ async function interpret(env,messages,cat,fetcher,signalFor){
   try{const r=await fetcher(base+"/chat/completions",{method:"POST",headers:{"Authorization":"Bearer "+key,"Content-Type":"application/json"},body:JSON.stringify({model,messages,max_tokens:180,temperature:0,...extra}),signal:signalFor(ms)});if(!r.ok)return undefined;const data=await r.json();return parseQuery(data.choices?.[0]?.message?.content,cat);}catch{return undefined;}
  }
  if(cloudflareEnabled(env)){try{const r=await env.AI.run("@cf/meta/llama-3.1-8b-instruct-fast",{messages,max_tokens:180,temperature:0});const q=parseQuery(r?.response??r?.choices?.[0]?.message?.content,cat);if(q!==undefined)return {query:q,provider:"cloudflare"};}catch{}}
- if(groqEnabled(env)){for(const model of groqModels){const q=await chat("https://api.groq.com/openai/v1",env.GROQ_API_KEY,model,{reasoning_effort:model.startsWith("qwen/")?"none":"low",max_tokens:320});if(q!==undefined)return {query:q,provider:"groq",model};}}
- if(env.OPENROUTER_API_KEY){const q=await chat("https://openrouter.ai/api/v1",env.OPENROUTER_API_KEY,"openrouter/free");if(q!==undefined)return {query:q,provider:"openrouter"};}
  if(env.HORDE_API_KEY){try{
   const r=await fetcher("https://oai.aihorde.net/v1/models",{headers:{"Authorization":"Bearer "+env.HORDE_API_KEY},signal:signalFor(5000)});if(r.ok){const data=await r.json();const list=Array.isArray(data.data)?data.data:[];const models=list.filter(m=>typeof m.id==="string"&&m.id.length<200&&/instruct|hermes|qwen|gemma|gpt-oss/i.test(m.id)&&!/embed|vision|uncensor|roleplay|nsfw/i.test(m.id));const model=models.find(m=>/qwen|gpt-oss/i.test(m.id))||models[0];if(model){const q=await chat("https://oai.aihorde.net/v1",env.HORDE_API_KEY,model.id,{},18000);if(q!==undefined)return {query:q,provider:"horde",model:model.id};}}
  }catch{}}
+ if(groqEnabled(env)){for(const model of groqModels){const q=await chat("https://api.groq.com/openai/v1",env.GROQ_API_KEY,model,{reasoning_effort:model.startsWith("qwen/")?"none":"low",max_tokens:320});if(q!==undefined)return {query:q,provider:"groq",model};}}
+ if(env.OPENROUTER_API_KEY){const q=await chat("https://openrouter.ai/api/v1",env.OPENROUTER_API_KEY,"openrouter/free");if(q!==undefined)return {query:q,provider:"openrouter"};}
+
  return null;
 }
 function available(env){return cloudflareEnabled(env)||groqEnabled(env)||!!env.OPENROUTER_API_KEY||!!env.HORDE_API_KEY;}

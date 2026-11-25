@@ -40,3 +40,11 @@ export function evaluate(rows,query,options=catalog(rows)){
  return out;
 }
 export {loadResearchRecords};
+
+export function donorLookup(rows,name,committees){
+ const clean=v=>String(v||"").normalize("NFKC").toUpperCase().replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
+ const key=clean(name);if(!key||key.length>150)return [];
+ const reverse=String(name).includes(",")?clean(String(name).split(",").reverse().join(" ")):null,groups=new Map();
+ for(const r of rows){const n=clean(r.name),rev=String(r.name).includes(",")?clean(String(r.name).split(",").reverse().join(" ")):null;if(n!==key&&rev!==key&&(!reverse||n!==reverse))continue;const employer=r.type==="individual"?(r.employer||"NOT REPORTED"):"",occupation=r.type==="individual"?(r.occupation||"NOT REPORTED"):"",id=JSON.stringify([n,r.type,clean(employer),clean(occupation)]);if(!groups.has(id))groups.set(id,{name:r.name,type:r.type,employer,occupation,amount:0,count:0,committees:{}});const g=groups.get(id);g.amount+=r.amount;g.count++;const label=committees.find(x=>x.key===r.committee)?.name||r.committee;g.committees[label]=(g.committees[label]||0)+r.amount;}
+ return [...groups.values()].sort((a,b)=>b.amount-a.amount);
+}

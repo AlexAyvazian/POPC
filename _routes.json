@@ -1,7 +1,8 @@
 {
   "version": 1,
   "include": [
-    "/api/research"
+    "/api/research",
+    "/api/web-search"
   ],
   "exclude": []
 }
