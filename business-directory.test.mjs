@@ -454,3 +454,24 @@ test('ninth executive-priority batch resolves organizations while retaining ambi
   assert.equal(groups.find(g=>g.name==='PENN AVENUE PARTNERS LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='SOLO FUNDS, INC.').research.status,'Source-backed');
 });
+
+
+test('tenth executive-priority batch resolves supported identities and consolidates K & M Office alias', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'K Williams',employer:'K & M OFFICE',occupation:'CEO',sector:'Services',committee:'a',amount:100},
+    {type:'individual',name:'K Williams',employer:'K&M OFFICE LLC',occupation:'CEO/CPA',sector:'Services',committee:'b',amount:200},
+    {type:'individual',name:'Kinnari',employer:'THE FUTURE FORUM',occupation:'EXECUTIVE DIRECTOR',sector:'Advocacy',committee:'a',amount:300},
+    {type:'individual',name:'Granter',employer:'SIMPLYEZ HDM LLC',occupation:'OWNER',sector:'Healthcare',committee:'a',amount:400},
+    {type:'individual',name:'Edelman',employer:'UNIFIED RESOURCES',occupation:'C LEVEL EXECUTIVE',sector:'Retail',committee:'a',amount:500},
+    {type:'individual',name:'Pellizzon',employer:'CLEAR CAPITAL',occupation:'PARTNER',sector:'Real Estate',committee:'a',amount:600},
+    {type:'individual',name:'Elam',employer:'NATIONAL BANKERS ASSOCIATION',occupation:'EXECUTIVE',sector:'Finance',committee:'a',amount:700}
+  ]);
+  const km=groups.find(g=>g.name==='K & M OFFICE LLC');
+  assert.equal(km.count,2);
+  assert.equal(km.names.size,2);
+  assert.equal(groups.find(g=>g.name==='THE FUTURE FORUM').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='SIMPLYEZ HDM LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='UNIFIED RESOURCES').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='CLEAR CAPITAL, LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='NATIONAL BANKERS ASSOCIATION, INC.').research.status,'Source-backed');
+});

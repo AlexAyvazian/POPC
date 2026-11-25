@@ -137,3 +137,10 @@ K & M Office, Parkway Corporation, Jewish Federation of Cleveland, Novartis Phar
 The next 20 priority identities from Exelon through SoLo Funds were reviewed. GNE and Holt Hospitality LLC remain unresolved because the donor-name/employer context points to multiple plausible identities and does not support a safe merge.
 
 Exelon Corporation, Fontheim International, Fried Frank, G&C Equipment Corporation, Genentech, H&M Strategies, Holistic Solutions, Integrated Logistical Support, Kennedy Democrats, LDR Equities, LeveragED Foundation, Millennium Management, Northeast Charter Schools Network, Northern Compass Group, Penn Avenue Partners, B&G Regal Domestics and SoLo Funds were source-backed. The Moinian Group remains at real-estate group/brand scope. Genentech remains separate from its Roche-group parent context and all political committees remain separate from connected organizations.
+
+
+## Executive-priority identity research — batch 10 — November 25, 2026
+
+The next 20 priority identities from Strategic Marketing Innovations through National Bankers Association were reviewed. The Future Forum, SimplyEz HDM LLC and Unified Resources remain unresolved because the exact legal/employer identity could not be established without relying on generic names or inconsistent role context.
+
+Strategic Marketing Innovations, Strategic Resources, Suburban Street News, Sullivan-Palatek, The A.M. Fund, The Moriah Fund, Clear Capital, Legacy Medical Consultants, Vesta Corporation, Bay Aire and National Bankers Association were resolved to source-backed entities. StudentsFirstNY, The Gart Companies, Theodore's Books and AdeptAg are source-backed at organization/brand/group scope. Idol Minds is retained as the historical studio identity that became Deck Nine Games. The reported K & M OFFICE string was added as a verified alias of the already researched K & M Office LLC identity; underlying receipts remain unchanged.

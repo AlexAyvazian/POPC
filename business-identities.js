@@ -9063,7 +9063,8 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "K&M OFFICE LLC"
+      "K&M OFFICE LLC",
+      "K & M OFFICE"
     ],
     "name": "K & M OFFICE LLC",
     "status": "Source-backed",
@@ -9656,6 +9657,306 @@ export const businessIdentities = [
       "https://www.gleif.org/lei/984500065F37B3LEE735",
       "https://labor.maryland.gov/finance/consumers/frfy2024-solofunds.pdf",
       "https://dfpi.ca.gov/wp-content/uploads/sites/337/2023/05/Consent-Order-SoLo-Funds-Inc.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STRATEGIC MARKETING INNOVATIONS"
+    ],
+    "name": "STRATEGIC MARKETING INNOVATIONS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / federal-relations and government-affairs firm",
+    "parent": "",
+    "evidence": "Federal lobbying records identify Strategic Marketing Innovations and William McCann as a lobbyist for the firm; the firm's official site identifies Bill McCann in leadership. The reported employer maps to the incorporated business.",
+    "sources": [
+      "https://lda.gov/filings/public/contribution/0df6d6eb-f413-480c-9e5e-05eb9f466a5f/print",
+      "https://strategicmi.com/team/bill-mccann"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STRATEGIC RESOURCES INC."
+    ],
+    "name": "STRATEGIC RESOURCES, INC.",
+    "status": "Source-backed",
+    "scope": "Business entity / management and professional-services company",
+    "parent": "",
+    "evidence": "Strategic Resources' official materials identify the company and Rose McElrath-Slade as founder, President and CEO. The employer remains separate from unrelated Strategic Resources businesses.",
+    "sources": [
+      "https://sri-hq.com/about-us/",
+      "https://sri-hq.com/key-executives/rose-mcelrath-slade"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STUDENTSFIRSTNY"
+    ],
+    "name": "STUDENTSFIRSTNY",
+    "status": "Source-backed",
+    "scope": "Education-advocacy organization / public-facing brand spanning related nonprofits",
+    "parent": "",
+    "evidence": "StudentsFirstNY's official staff page identifies Crystal McQueen-Taylor as Executive Director. Public nonprofit records show multiple related StudentsFirst New York entities, so the bare reported employer is retained at organization/brand scope rather than collapsed into one legal nonprofit.",
+    "sources": [
+      "https://www.studentsfirstny.org/staff",
+      "https://projects.propublica.org/nonprofits/organizations/454296699"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SUBURBAN STREET NEWS INC."
+    ],
+    "name": "SUBURBAN STREET NEWS, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / community-news publisher",
+    "parent": "",
+    "evidence": "New York business records identify Suburban Street News, Inc., and FEC receipts for Jeffries for Congress identify James Benerofe with employer SUBURBAN STREET NEWS INC. and publisher/real-estate-executive occupation.",
+    "sources": [
+      "https://opensosdata.com/entity/new-york/suburban-street-news-inc-ny-208621",
+      "https://www.fec.gov/data/receipts?committee_id=C00503052&max_date=09%2F15%2F2024&min_date=09%2F15%2F2024&two_year_transaction_period=2024"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SULLIVAN-PALATEK INC."
+    ],
+    "name": "SULLIVAN-PALATEK, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / compressed-air equipment manufacturer",
+    "parent": "",
+    "evidence": "Sullivan-Palatek's official materials identify Sullivan-Palatek, Inc. and Bruce McFee as President/CEO. Related compressor businesses are not treated as aliases or parents.",
+    "sources": [
+      "https://www.sullivan-palatek.com/about-us",
+      "https://www.sullivan-palatek.com/contact-page-bruce-mcfee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE A.M. FUND"
+    ],
+    "name": "THE A.M. FUND",
+    "status": "Source-backed",
+    "scope": "Private philanthropic foundation",
+    "parent": "",
+    "evidence": "The A.M. Fund's official site and nonprofit records identify the foundation. FEC records report Arnold Hiatt with employer THE A.M. FUND and Chairman occupation; current nonprofit records describe him as trustee, so the title is retained only as donor-reported context.",
+    "sources": [
+      "https://theamfund.org/",
+      "https://projects.propublica.org/nonprofits/organizations/46956130"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE FUTURE FORUM"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / civic and policy organization",
+    "parent": "",
+    "evidence": "The Future Forum identifies Aaron Kinnari as founder, but the reviewed sources do not corroborate the donor record's Executive Director title or establish one exact legal entity behind the reported employer. Same-name Future Forum organizations are not merged.",
+    "sources": [
+      "https://www.thefutureforum.org/",
+      "https://www.thefutureforum.org/profile/aaron-kinnari/profile"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE GART COMPANIES"
+    ],
+    "name": "THE GART COMPANIES",
+    "status": "Source-backed",
+    "scope": "Investment and real-estate business group / umbrella brand",
+    "parent": "",
+    "evidence": "The Gart Companies' official materials identify Ken Gart as a partner and describe the umbrella organization spanning Gart Properties and Gart Capital Partners. Those operating businesses remain distinct.",
+    "sources": [
+      "https://www.gartcompanies.com/who-we-are",
+      "https://gartcompanies.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE MORIAH FUND"
+    ],
+    "name": "THE MORIAH FUND",
+    "status": "Source-backed",
+    "scope": "Private philanthropic foundation",
+    "parent": "",
+    "evidence": "The Moriah Fund's official site identifies the foundation and Gideon Stein as President. No parent organization is established.",
+    "sources": [
+      "https://moriahfund.org/our-team",
+      "https://moriahfund.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THEODORE'S BOOK STORE"
+    ],
+    "name": "THEODORE'S BOOKS",
+    "status": "Source-backed",
+    "scope": "Independent bookstore / public-facing business name",
+    "parent": "",
+    "evidence": "Theodore's Books identifies Steve Israel as owner of the Oyster Bay bookstore. The reported THEODORE'S BOOK STORE form is treated as a name variant; no separate legal-entity name is asserted.",
+    "sources": [
+      "https://theodoresbooks.com/about-us",
+      "https://www.theodoresbooks.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ADEPTAG"
+    ],
+    "name": "ADEPTAG",
+    "status": "Source-backed",
+    "scope": "Controlled-environment agriculture business / brand",
+    "parent": "",
+    "evidence": "AdeptAg's official materials identify the controlled-environment horticulture business and Rick Parod as its former CEO. LLR Partners is identified as an investor, not asserted as a legal parent.",
+    "sources": [
+      "https://adeptag.com/about",
+      "https://adeptag.com/news/dave-stienes-to-succeed-rick-parod-as-ceo-of-adeptag"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BUFFERS USA INC"
+    ],
+    "name": "BUFFERS USA, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / intermodal and cargo-control products company",
+    "parent": "",
+    "evidence": "Florida corporate records and the company's official site identify Buffers USA, Inc. The donor record reports Johan Hove as owner while company and registry records use John Hove; that name discrepancy is preserved rather than used to infer a different company.",
+    "sources": [
+      "https://www.buffersusa.com/about",
+      "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=domp-k50305-a0a03044-431b-45c8-8591-156305689cdb&directionType=Initial&inquirytype=EntityName&listNameOrder=BUFFER%20L030000003760&searchNameOrder=BUFFERSUSA%20K503050&searchTerm=BUFFER%2C%20INC."
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SIMPLYEZ HDM LLC"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / home-delivered-meals business",
+    "parent": "",
+    "evidence": "SimplyEz identifies Donald and Sharon Granter as founders of the home-delivered-meals business, but reviewed sources show multiple regional Simply EZ entities and do not verify the exact SIMPLYEZ HDM LLC legal name. No regional entity is merged into the donor record.",
+    "sources": [
+      "https://simplyez.com/about",
+      "http://simplyez.com/contact"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CLEAR CAPITAL"
+    ],
+    "name": "CLEAR CAPITAL, LLC",
+    "status": "Source-backed",
+    "scope": "Legal entity / multifamily real-estate investment firm",
+    "parent": "",
+    "evidence": "Clear Capital's official site identifies Clear Capital, LLC and Paul Pellizzon as a founding partner. It is kept distinct from unrelated companies using the Clear Capital name.",
+    "sources": [
+      "https://clearcapllc.com/about",
+      "https://clearcapllc.com/team/paul-pellizzon"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LEGACY MEDICAL CONSULTANTS LP"
+    ],
+    "name": "LEGACY MEDICAL CONSULTANTS, LP",
+    "status": "Source-backed",
+    "scope": "Legal entity / medical-products company",
+    "parent": "",
+    "evidence": "Legacy Medical Consultants' official materials and court records identify Legacy Medical Consultants, LP. Court records describe the LP as successor in interest to Legacy Medical Consultants, LLC; the predecessor is not treated as a parent.",
+    "sources": [
+      "https://legacymedicalconsultants.com/we-are-legacy-medical/",
+      "https://www.courtlistener.com/docket/69781813/49/3/legacy-medical-consultants-lp-v-cristi-leeburg"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VESTA CORPORATION"
+    ],
+    "name": "VESTA CORPORATION",
+    "status": "Source-backed",
+    "scope": "Legal entity / affordable-housing developer, owner and manager",
+    "parent": "",
+    "evidence": "Vesta's official site and Connecticut business records identify Vesta Corporation, and company materials identify Arthur Greenblatt as co-founder and longtime President/CEO. Similar Vesta entities are not merged.",
+    "sources": [
+      "https://www.vestacorp.com/about-us",
+      "https://opencorpdata.com/us-ct/0588914"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIFIED RESOURCES"
+    ],
+    "name": null,
+    "status": "Unresolved",
+    "scope": "Reported employer / retail-merchandising business name",
+    "parent": "",
+    "evidence": "Unified Resources in Display identifies Mitchell Edelman as President and co-founder, but the generic reported employer UNIFIED RESOURCES does not establish the exact legal entity and unrelated entities use the same name. No legal-entity merge is made.",
+    "sources": [
+      "https://unifiedrid.com/about",
+      "https://www.belunified.com/about-us"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BAY AIRE INC"
+    ],
+    "name": "BAY AIRE, INC.",
+    "status": "Source-backed",
+    "scope": "Legal entity / HVAC contractor",
+    "parent": "",
+    "evidence": "Bay Aire's official site identifies Bay Aire, Inc. and a Dakota as COO/co-owner. Public business profiles use a different surname for that executive, so the donor-name discrepancy is preserved while the employer entity itself is source-backed.",
+    "sources": [
+      "https://www.bayaire.com/about-us",
+      "https://www.bbb.org/us/al/fairhope/profile/air-conditioning-contractor/bay-aire-air-conditioning-heating-0463-3000574"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "IDOL MINDS LLC"
+    ],
+    "name": "IDOL MINDS",
+    "status": "Source-backed",
+    "scope": "Historical video-game studio identity / predecessor brand of Deck Nine Games",
+    "parent": "",
+    "evidence": "Deck Nine's official history identifies Idol Minds as the studio's former name before the 2017 rebrand and its team page identifies Lucie Lyons as a long-serving company officer. The legal LLC form is not independently promoted beyond the reported donor string.",
+    "sources": [
+      "https://deckninegames.com/idol-minds",
+      "https://deckninegames.com/our-team"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL BANKERS ASSOCIATION"
+    ],
+    "name": "NATIONAL BANKERS ASSOCIATION, INC.",
+    "status": "Source-backed",
+    "scope": "501(c)(6) banking trade association",
+    "parent": "",
+    "evidence": "Nonprofit records identify National Bankers Association, Inc., EIN 52-0884907, and the association identifies Nicole Elam as President and CEO. The separately organized National Bankers Association Foundation is not merged.",
+    "sources": [
+      "https://projects.propublica.org/nonprofits/organizations/520884907",
+      "https://www.nationalbankers.org/leadership-team"
     ],
     "reviewed": "2026-11-25"
   }
