@@ -14122,7 +14122,7 @@ export const businessIdentities = [
     "evidence": "FEC committee C00007898 is the durable committee identity. Current FEC records use Office and Professional Employees International Union (OPEIU) JB Moss Voice of the Electorate (VOTE), while 2026 recipient filings report the shorthand Office and Professional Employees International Union (OPEIU VOTES) with the same committee ID.",
     "sources": [
       "https://www.fec.gov/data/committee/C00007898/?cycle=2026&tab=about-committee",
-      "https://docquery.fec.gov/pdf/"
+      "https://docquery.fec.gov/pdf/153/202601289794269153/202601289794269153.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -14332,7 +14332,8 @@ export const businessIdentities = [
     ],
     "evidence": "FEC committee C00004325 is the durable committee identity. FEC filings show the donor-file NA-AGLIWD/NMU form under the same ID; current FEC records use the NA-AGLIW committee name.",
     "sources": [
-      "https://www.fec.gov/data/committee/C00004325/?cycle=2026&tab=about-committee"
+      "https://www.fec.gov/data/committee/C00004325/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/917/201605109015397917/201605109015397917.pdf"
     ],
     "reviewed": "2026-11-25"
   },
@@ -14350,7 +14351,8 @@ export const businessIdentities = [
     ],
     "evidence": "FEC committee C00004036 identifies SEIU COPE (Service Employees International Union Committee on Political Education). FEC recipient records use the shorthand SEIU COPE with the same committee ID.",
     "sources": [
-      "https://www.fec.gov/data/committee/C00004036/?cycle=2026&tab=about-committee"
+      "https://www.fec.gov/data/committee/C00004036/?cycle=2026&tab=about-committee",
+      "https://docquery.fec.gov/pdf/474/202105119446453474/202105119446453474.pdf"
     ],
     "reviewed": "2026-11-25"
   },
