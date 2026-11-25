@@ -15128,5 +15128,3644 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00092247/?cycle=2026&tab=about-committee"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ABBVIE POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "ABBVIE POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00536573 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00536573/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NORTH AMERICA'S BUILDING TRADES UNION"
+    ],
+    "name": "NORTH AMERICA'S BUILDING TRADES UNIONS POLITICAL EDUCATIONAL FUND",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00003160 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00003160/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ASSOCIATION OF INDEPENDENT MUSIC, INC. POLITICAL ACTION COMMITTEE (INDEPENDENT MUSIC PAC)"
+    ],
+    "name": "AMERICAN ASSOCIATION OF INDEPENDENT MUSIC, INC. POLITICAL ACTION COMMITTEE (INDEPENDENT MUSIC PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00808931 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00808931/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AFFORDABLE HOUSING TAX CREDIT COALITION POLITICAL ACTION COMMITTEE (AFFORDABLE HOUSING PAC)"
+    ],
+    "name": "AFFORDABLE HOUSING TAX CREDIT COALITION POLITICAL ACTION COMMITTEE (AFFORDABLE HOUSING PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00842583 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00842583/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AIRBUS GROUP, INC. PAC"
+    ],
+    "name": "AIRBUS AMERICAS, INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00421230 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00421230/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALCOA INC. EMPLOYEES' VOLUNTARY FEDERAL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "ALCOA CORPORATION EMPLOYEES' POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00501106 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00501106/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALLY FINANCIAL INC ADVOCACY PAC"
+    ],
+    "name": "ALLY FINANCIAL INC. ADVOCACY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00579540 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00579540/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF AUDIOLOGY, INC. PAC"
+    ],
+    "name": "AMERICAN ACADEMY OF AUDIOLOGY, INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00342972 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00342972/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ACADEMY OF PEDIATRIC DENTISTRY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "AMERICAN ACADEMY OF PEDIATRIC DENTISTRY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00365965 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00365965/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN BEVERAGE ASSOCIATION POLITICAL ACTION COMMITTEE (AKA AMERICAN BEVERAGE PAC)"
+    ],
+    "name": "AMERICAN BEVERAGE ASSOCIATION POLITICAL ACTION COMMITTEE (AKA AMERICAN BEVERAGE PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00100107 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00100107/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN CEMENT ASSOCIATION (CEMENT PAC)"
+    ],
+    "name": "AMERICAN CEMENT ASSOCIATION (CEMENT PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00237065 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00237065/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COLLEGE OF RADIOLOGY ASSOCIATION PAC"
+    ],
+    "name": "AMERICAN COLLEGE OF RADIOLOGY ASSOCIATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00343459 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00343459/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN COLLEGE OF RHEUMATOLOGY (RHEUMPAC)"
+    ],
+    "name": "AMERICAN COLLEGE OF RHEUMATOLOGY (RHEUMPAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00432823 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00432823/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN FAMILY MUTUAL INSURANCE COMPANY, S.I. FEDERAL PAC (AMFAM PAC)"
+    ],
+    "name": "AMERICAN FAMILY MUTUAL INSURANCE COMPANY, S.I. FEDERAL PAC (AMFAM PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00354290 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00354290/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN FEDERATION OF MUSICIANS OF THE UNITED STATES AND CANADA - LEGISLATIVE ACTION FUND"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=AMERICAN%20FEDERATION%20OF%20MUSICIANS%20OF%20THE%20UNITED%20STATES%20AND%20CANADA%20-%20LEGISLATIVE%20ACTION%20FUND"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN FIDELITY CORPORATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "AMERICAN FIDELITY CORPORATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00210526 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00210526/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN HOMES 4 RENT TRS, LLC POLITICAL ACTION COMMITTEE (AMH PAC)"
+    ],
+    "name": "AMERICAN HOMES 4 RENT TRS, LLC POLITICAL ACTION COMMITTEE (AMH PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00830083 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00830083/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN INVESTMENT COUNCIL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "AMERICAN INVESTMENT COUNCIL POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00495002 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00495002/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ROAD & TRANSPORTATION BUILDERS ASSOCIATION PAC"
+    ],
+    "name": "AMERICAN ROAD & TRANSPORTATION BUILDERS ASSOCIATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00118208 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00118208/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN SOCIETY FOR RADIATION ONCOLOGY PAC (''ASTRO-PAC'')"
+    ],
+    "name": "AMERICAN SOCIETY FOR RADIATION ONCOLOGY PAC (''ASTRO-PAC'')",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00384602 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00384602/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN WATERWAYS OPERATORS-PAC"
+    ],
+    "name": "AMERICAN WATERWAYS OPERATORS-PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00034678 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00034678/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARCH CAPITAL GROUP (US) INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "ARCH CAPITAL GROUP (US) INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00433912 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00433912/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ATLAS AIR WORLDWIDE HOLDINGS, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "ATLAS AIR WORLDWIDE HOLDINGS, INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00478099 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00478099/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BLUEPAC - BLUE CROSS BLUE SHIELD ASSOCIATION PAC"
+    ],
+    "name": "BLUEPAC - BLUE CROSS BLUE SHIELD ASSOCIATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00194746 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00194746/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CARESOURCE MISSION POLITICAL ACTION COMMITTEE (CARESOURCE MISSION PAC)"
+    ],
+    "name": "CARESOURCE MISSION POLITICAL ACTION COMMITTEE (CARESOURCE MISSION PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00829713 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00829713/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CARRIER GLOBAL CORPORATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "CARRIER GLOBAL CORPORATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00740704 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00740704/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CASE NEW HOLLAND INDUSTRIAL INC. EXCELLENCE IN GOVERNMENT FUND (CNH INDUSTRIAL EXCELLENCE IN GOVERNMENT FUND)"
+    ],
+    "name": "CASE NEW HOLLAND INDUSTRIAL INC. EXCELLENCE IN GOVERNMENT FUND (CNH INDUSTRIAL EXCELLENCE IN GOVERNMENT FUND)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00303883 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00303883/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CHUBB GROUP HOLDINGS INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "CHUBB GROUP HOLDINGS INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00348938 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00348938/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COINBASE, INC. INNOVATION PAC (COINBASE INNOVATION PAC)"
+    ],
+    "name": "COINBASE, INC. INNOVATION PAC (COINBASE INNOVATION PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00804179 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00804179/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COMMERCIAL METALS COMPANY PAC (CMC PAC)"
+    ],
+    "name": "COMMERCIAL METALS COMPANY PAC (CMC PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00525071 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00525071/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CONSUMER HEALTHCARE PRODUCTS ASSOCIATION PAC (CHPA/PAC)"
+    ],
+    "name": "CONSUMER HEALTHCARE PRODUCTS ASSOCIATION PAC (CHPA/PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00040584 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00040584/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CROSSPARTISAN PAC I"
+    ],
+    "name": "CROSSPARTISAN PAC I",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00786186 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00786186/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "D.R.I.V.E. - DEMOCRAT, REPUBLICAN, INDEPENDENT VOTER EDUCATION"
+    ],
+    "name": "D.R.I.V.E. - DEM, REP, IND VOTER ED (THE PAC OF THE INT'L BRHD OF TEAMSTERS)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00032979 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00032979/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DRAFTKINGS INC. POLITICAL ACTION COMMITTEE DBA DRAFTKINGS PAC"
+    ],
+    "name": "DRAFTKINGS INC. POLITICAL ACTION COMMITTEE DBA DRAFTKINGS PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00908699 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00908699/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DROPBOX INC PAC"
+    ],
+    "name": "DROPBOX INC PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00695304 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00695304/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EBAY INC-COMMITTEE FOR RESPONSIBLE INTERNET COMMERCE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=EBAY%20INC-COMMITTEE%20FOR%20RESPONSIBLE%20INTERNET%20COMMERCE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ENDEAVOR ACTION"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=ENDEAVOR%20ACTION"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FGS GLOBAL (US) LLC POLITICAL ACTION COMMITTEE (FORMALLY GLOVER PARK GROUP PAC)"
+    ],
+    "name": "FGS GLOBAL (US) LLC POLITICAL ACTION COMMITTEE (FORMALLY GLOVER PARK GROUP PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00466094 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00466094/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FOX CORPORATION POLITICAL ACTION COMMITTEE (FOX PAC)"
+    ],
+    "name": "FOX CORPORATION POLITICAL ACTION COMMITTEE (FOX PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00693002 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00693002/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HB STRATEGIES PAC"
+    ],
+    "name": "HB STRATEGIES PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00904508 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00904508/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HIGHMARK PAC OF HIGHMARK INC."
+    ],
+    "name": "HIGHMARK PAC OF HIGHMARK INC.",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00302844 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00302844/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HSBC NORTH AMERICA FEDERAL, STATE AND LOCAL POLITICAL ACTION COMMITTEE (HSBC COMBINED PAC)"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=HSBC%20NORTH%20AMERICA%20FEDERAL%2C%20STATE%20AND%20LOCAL%20POLITICAL%20ACTION%20COMMITTEE%20(HSBC%20COMBINED%20PAC)"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INGRAM BARGE COMPANY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "INGRAM BARGE COMPANY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00364471 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00364471/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTEL CORPORATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "INTEL CORPORATION POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00125641 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00125641/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERCONTINENTAL EXCHANGE INC PAC"
+    ],
+    "name": "INTERCONTINENTAL EXCHANGE INC PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00443168 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00443168/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL LIQUID TERMINALS ASSOCIATION PAC (ILTA-PAC)"
+    ],
+    "name": "INTERNATIONAL LIQUID TERMINALS ASSOCIATION PAC (ILTA-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00489070 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00489070/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INTERNATIONAL PAPER POLITICAL ACTION COMMITTEE (IP-PAC)"
+    ],
+    "name": "INTERNATIONAL PAPER POLITICAL ACTION COMMITTEE (IP-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00034405 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00034405/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JOHN HANCOCK LIFE INSURANCE COMPANY (USA) FEDERAL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "JOHN HANCOCK LIFE INSURANCE COMPANY (USA) FEDERAL POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00137265 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00137265/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KEY TO THE KEYSTONE PAC"
+    ],
+    "name": "KEY TO THE KEYSTONE PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00888669 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00888669/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LAND O'LAKES, INC., PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=LAND%20O'LAKES%2C%20INC.%2C%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LEAGUE OF CONSERVATION VOTERS ACTION FUND"
+    ],
+    "name": "LEAGUE OF CONSERVATION VOTERS ACTION FUND",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00252940 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00252940/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LKQ CORPORATION EMPLOYEE GOOD GOVERNMENT FUND"
+    ],
+    "name": "LKQ CORPORATION EMPLOYEE GOOD GOVERNMENT FUND",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00458158 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00458158/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LSEG US HOLDCO INC. PAC"
+    ],
+    "name": "LSEG US HOLDCO INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00640243 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00640243/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LUMEN TECHNOLOGIES, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "LUMEN TECHNOLOGIES, INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00419911 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00419911/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MASTERS, MATES AND PILOTS POLITICAL CONTRIBUTION FUND"
+    ],
+    "name": "MASTERS, MATES AND PILOTS POLITICAL CONTRIBUTION FUND",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00073056 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00073056/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASPHALT PAVEMENT ASSOCIATION POLITICAL ACTION COMMITTEE (NAPA-PAC)"
+    ],
+    "name": "NATIONAL ASPHALT PAVEMENT ASSOCIATION POLITICAL ACTION COMMITTEE (NAPA-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00444539 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00444539/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF DISABILITY REPRESENTATIVES PAC (NADR PAC)"
+    ],
+    "name": "NATIONAL ASSOCIATION OF DISABILITY REPRESENTATIVES PAC (NADR PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00432757 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00432757/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF SPECIALTY PHARMACY PAC"
+    ],
+    "name": "NATIONAL ASSOCIATION OF SPECIALTY PHARMACY PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00682641 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00682641/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL FARMERS UNION PAC"
+    ],
+    "name": "NATIONAL FARMERS UNION PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00151019 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00151019/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL GROCERS ASSOCIATION GROCERS PAC"
+    ],
+    "name": "NATIONAL GROCERS ASSOCIATION GROCERS POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00508770 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00508770/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL VENTURE CAPITAL ASSOCIATION VENTUREPAC"
+    ],
+    "name": "NATIONAL VENTURE CAPITAL ASSOCIATION VENTUREPAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00150367 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00150367/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NELNET INC PAC (NELNET PAC)"
+    ],
+    "name": "NELNET INC PAC (NELNET PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00370015 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00370015/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NORTH AMERICAN EQUIPMENT DEALERS ASSOCIATION PAC"
+    ],
+    "name": "NORTH AMERICAN EQUIPMENT DEALERS ASSOCIATION PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00858050 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00858050/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NORTHERN TRUST CORPORATION POLITICAL ACTION COMMITTEE (NORTHERN TRUST PAC)"
+    ],
+    "name": "NORTHERN TRUST CORPORATION POLITICAL ACTION COMMITTEE (NORTHERN TRUST PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00024935 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00024935/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PACIFIC LIFE INSURANCE COMPANY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "PACIFIC LIFE INSURANCE COMPANY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00068528 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00068528/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PRIMERICA INC POLITICAL ACTION COMMITTEE (PRIMERICA PAC)"
+    ],
+    "name": "PRIMERICA INC POLITICAL ACTION COMMITTEE (PRIMERICA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00521914 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00521914/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PRINCIPAL LIFE INSURANCE COMPANY POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "PRINCIPAL LIFE INSURANCE COMPANY POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00128918 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00128918/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PROFESSIONAL AVIATION SAFETY SPECIALISTS (PASS PAC)"
+    ],
+    "name": "PROFESSIONAL AVIATION SAFETY SPECIALISTS PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00286807 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00286807/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PROTECTIVE LIFE CORPORATION FEDERAL POLITICAL ACTION COMMITTEE ('PROTECTPAC')"
+    ],
+    "name": "PROTECTIVE LIFE CORPORATION FEDERAL POLITICAL ACTION COMMITTEE ('PROTECTIVEPAC')",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00161414 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00161414/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PRUDENTIAL FINANCIAL INC. FEDERAL POLITICAL ACTION COMMITTEE (AKA - PRUDENTIAL FEDERAL PAC"
+    ],
+    "name": "PRUDENTIAL FINANCIAL INC. FEDERAL POLITICAL ACTION COMMITTEE (AKA - PRUDENTIAL FEDERAL PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00127779 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00127779/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RBC USA HOLDCO CORPORATION FEDERAL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "RBC USA HOLDCO CORPORATION FEDERAL POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00517052 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00517052/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RELX INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "RELX INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00345793 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00345793/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RETAIL INDUSTRY LEADERS ASSOCIATION POLITICAL ACTION COMMITTEE AKA RETAIL LEADERS PAC"
+    ],
+    "name": "RETAIL INDUSTRY LEADERS ASSOCIATION POLITICAL ACTION COMMITTEE AKA RETAIL LEADERS PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00112763 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00112763/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RIO TINTO AMERICA INC. PAC"
+    ],
+    "name": "RIO TINTO AMERICA INC. PAC",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00243675 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00243675/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ROLLS-ROYCE NORTH AMERICA HOLDINGS INC. PAC (ROLLS-ROYCE NORTH AMERICA PAC)"
+    ],
+    "name": "ROLLS-ROYCE NORTH AMERICA HOLDINGS INC. PAC (ROLLS-ROYCE NORTH AMERICA PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00296822 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00296822/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SANTANDER PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=SANTANDER%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION VOLUNTARY POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=SCIENCE%20APPLICATIONS%20INTERNATIONAL%20CORPORATION%20VOLUNTARY%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SIERRA CLUB POLITICAL COMMITTEE"
+    ],
+    "name": "SIERRA CLUB POLITICAL COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00135368 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00135368/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOUTHWEST AIRLINES CO. FREEDOM FUND"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=SOUTHWEST%20AIRLINES%20CO.%20FREEDOM%20FUND"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOUTHWEST AIRLINES CO. POLITICAL ACTION COMMITTEE (SWAPAC)"
+    ],
+    "name": "SOUTHWEST AIRLINES CO. POLITICAL ACTION COMMITTEE (SWAPAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00341602 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00341602/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY FEDERAL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY FEDERAL POLITICAL ACTION COMMITTEE (STATE FARM FEDERAL PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00544817 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00544817/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TAFT STETTINIUS & HOLLISTER LLP POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "TAFT STETTINIUS & HOLLISTER LLP POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00824425 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00824425/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TELADOC HEALTH, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "TELADOC HEALTH, INC. POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00579359 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00579359/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE ALBERTSONS COMPANIES, INC. POLITICAL ACTION COMMITTEE (ACI PAC)"
+    ],
+    "name": "THE ALBERTSONS COMPANIES, INC. POLITICAL ACTION COMMITTEE (ACI PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00194084 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00194084/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE AMERICAN SOCIETY OF PENSION PROFESSIONALS AND ACTUARIES POLITICAL ACTION COMMITTEE (ASPPA-NAPA PAC)"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=THE%20AMERICAN%20SOCIETY%20OF%20PENSION%20PROFESSIONALS%20AND%20ACTUARIES%20POLITICAL%20ACTION%20COMMITTEE%20(ASPPA-NAPA%20PAC)"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE FARM CREDIT COUNCIL POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "THE FARM CREDIT COUNCIL POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00193631 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00193631/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE NIELSEN COMPANY (US), LLC FEDERAL POLITICAL ACTION COMMITTEE (NIELSEN PAC)"
+    ],
+    "name": "THE NIELSEN COMPANY (US), LLC FEDERAL POLITICAL ACTION COMMITTEE (NIELSEN PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00521328 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00521328/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRANSPORTATION TRADES DEPARTMENT AFL-CIO POLITICAL ACTION COMMITTEE (TTD/PAC)"
+    ],
+    "name": "TRANSPORTATION TRADES DEPARTMENT AFL-CIO POLITICAL ACTION COMMITTEE (TTD/PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00280909 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00280909/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRI-STATE MAXED OUT WOMEN"
+    ],
+    "name": "TRI-STATE MAXED-OUT WOMEN",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00488387 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00488387/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNITED FOOD & COMMERCIAL WORKERS INTERNATIONAL UNION ACTIVE BALLOT CLUB"
+    ],
+    "name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION ACTIVE BALLOT CLUB",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00002766 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00002766/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSAL HEALTH SERVICES, INC. GOOD GOVERNMENT FUND (UHS GOOD GOVERNMENT FUND)"
+    ],
+    "name": "UNIVERSAL HEALTH SERVICES, INC. GOOD GOVERNMENT FUND (UHS GOOD GOVERNMENT FUND)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00185520 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00185520/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "US RENAL CARE PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=US%20RENAL%20CARE%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VILLAGEMD PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=VILLAGEMD%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VSP HOLDING COMPANY INC POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "VSP HOLDING COMPANY INC POLITICAL ACTION COMMITTEE",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00493502 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00493502/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "Y COMBINATOR MANAGEMENT, LLC POLITICAL COMMITTEE (LITTLE TECH PAC)"
+    ],
+    "name": "Y COMBINATOR MANAGEMENT, LLC POLITICAL COMMITTEE (LITTLE TECH PAC)",
+    "status": "Source-backed",
+    "scope": "Federal political committee / PAC",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "FEC committee C00930727 identifies this federal political committee. The exact donor-file form is preserved as an alias; no connected organization is merged into the committee identity.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00930727/?cycle=2026&tab=about-committee"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ZILLOW GROUP, INC. POLITICAL ACTION COMMITTEE (ZG PAC)"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=ZILLOW%20GROUP%2C%20INC.%20POLITICAL%20ACTION%20COMMITTEE%20(ZG%20PAC)"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "APPRAISAL INSTITUTE PAC (AI PAC)"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=APPRAISAL%20INSTITUTE%20PAC%20(AI%20PAC)"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AUSTIN INDUSTRIES COMPANIES POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=AUSTIN%20INDUSTRIES%20COMPANIES%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BEST BUY CO., INC EMPLOYEE POLITICAL FORUM"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=BEST%20BUY%20CO.%2C%20INC%20EMPLOYEE%20POLITICAL%20FORUM"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BGR GOVERNMENT AFFAIRS, LLC"
+    ],
+    "name": "BGR GOVERNMENT AFFAIRS, LLC",
+    "status": "Source-backed",
+    "scope": "Government-relations and public-affairs firm / direct organization donor",
+    "parent": "",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The reported organization name is retained as BGR Government Affairs, LLC. The firm's official site identifies BGR Group's government-affairs practice; no PAC or parent-company merger is inferred.",
+    "sources": [
+      "https://bgrdc.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ERICSSON INC. U.S. EMPLOYEES POLITICAL ACTION COMMITTEE ('ERICSSON PAC')"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=ERICSSON%20INC.%20U.S.%20EMPLOYEES%20POLITICAL%20ACTION%20COMMITTEE%20('ERICSSON%20PAC')"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HIGHLAND ELECTRIC FLEETS, INC. PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=HIGHLAND%20ELECTRIC%20FLEETS%2C%20INC.%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SONY MUSIC ENTERTAINMENT EMPLOYEE ACTION FUND"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=SONY%20MUSIC%20ENTERTAINMENT%20EMPLOYEE%20ACTION%20FUND"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE RECORDING INDUSTRY ASSOCIATION OF AMERICA POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=THE%20RECORDING%20INDUSTRY%20ASSOCIATION%20OF%20AMERICA%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TORCH TECHNOLOGIES, INC POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=TORCH%20TECHNOLOGIES%2C%20INC%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WAWA, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=WAWA%2C%20INC.%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GAP INC. POLITICAL ACTION COMMITTEE; THE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=GAP%20INC.%20POLITICAL%20ACTION%20COMMITTEE%3B%20THE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INFORMATION TECHNOLOGY INDUSTRY COUNCIL POLITICAL ACTION COMMITTEE (ITI PAC)"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=INFORMATION%20TECHNOLOGY%20INDUSTRY%20COUNCIL%20POLITICAL%20ACTION%20COMMITTEE%20(ITI%20PAC)"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VOYA FINANCIAL, INC., POLITICAL ACTION COMMITTEE (VOYA FINANCIAL PAC)"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=VOYA%20FINANCIAL%2C%20INC.%2C%20POLITICAL%20ACTION%20COMMITTEE%20(VOYA%20FINANCIAL%20PAC)"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN ASSN. FOR MARRIAGE & FAMILY THERAPY COMM. ADVNCMNT OF MARITAL & FAMILY THERAPY"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=AMERICAN%20ASSN.%20FOR%20MARRIAGE%20%26%20FAMILY%20THERAPY%20COMM.%20ADVNCMNT%20OF%20MARITAL%20%26%20FAMILY%20THERAPY"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CALIFORNIA ASSOCIATION OF MARRIAGE & FAMILY THERAPISTS PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=CALIFORNIA%20ASSOCIATION%20OF%20MARRIAGE%20%26%20FAMILY%20THERAPISTS%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN FINANCIAL SERVICES ASSOCIATION PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=AMERICAN%20FINANCIAL%20SERVICES%20ASSOCIATION%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICAN INTELLECTUAL PROPERTY LAW ASSOCIATION INTELLECTUAL PROPERTY PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=AMERICAN%20INTELLECTUAL%20PROPERTY%20LAW%20ASSOCIATION%20INTELLECTUAL%20PROPERTY%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AMERICANS FOR THE ARTS ACTION FUND PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=AMERICANS%20FOR%20THE%20ARTS%20ACTION%20FUND%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AVANTUS LLC PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=AVANTUS%20LLC%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CROWE PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=CROWE%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EMPLOYEES OF QUANTA SERVICES, INC."
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=EMPLOYEES%20OF%20QUANTA%20SERVICES%2C%20INC."
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FOLEY & LARDNER POLITICAL FUND, INC."
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=FOLEY%20%26%20LARDNER%20POLITICAL%20FUND%2C%20INC."
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ICE MILLER PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=ICE%20MILLER%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LYFT, INC. FEDERAL EMPLOYEE POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=LYFT%2C%20INC.%20FEDERAL%20EMPLOYEE%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PLASTICS INDUSTRY ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=PLASTICS%20INDUSTRY%20ASSOCIATION%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PRICE FOR CONGRESS"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=PRICE%20FOR%20CONGRESS"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STEPTOE AND JOHNSON LLP POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=STEPTOE%20AND%20JOHNSON%20LLP%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE JOCKEY CLUB PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=THE%20JOCKEY%20CLUB%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE PRIVATE INVESTOR COALITION, INC. POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=THE%20PRIVATE%20INVESTOR%20COALITION%2C%20INC.%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ACTORS' EQUITY ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=ACTORS'%20EQUITY%20ASSOCIATION%20POLITICAL%20ACTION%20COMMITTEE"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CHARTER SCHOOLS NOW PAC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported federal political committee / organization name",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "The donor data reports this organization or political-committee form, but the reviewed sources in this finish pass did not establish one durable FEC committee identity with enough confidence to normalize it. Preserve the exact reported name rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/committees/?q=CHARTER%20SCHOOLS%20NOW%20PAC"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ABBVIE"
+    ],
+    "name": "AbbVie",
+    "scope": "Pharmaceutical company / reported employer",
+    "parent": "AbbVie Inc.",
+    "sources": [
+      "https://www.abbvie.com/"
+    ],
+    "evidence": "AbbVie's official site identifies the pharmaceutical company. This employer identity is restricted to individual records and kept separate from AbbVie Political Action Committee.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE OF MARYLAND"
+    ],
+    "name": "State of Maryland",
+    "scope": "State government / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.maryland.gov/"
+    ],
+    "evidence": "Maryland's official state website identifies the State of Maryland government. The donor context includes a Maryland state senator and state administrator.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COMPASS"
+    ],
+    "name": "Compass",
+    "scope": "Real-estate brokerage brand / reported employer",
+    "parent": "Compass, Inc.",
+    "sources": [
+      "https://www.compass.com/agents/pamela-culp/"
+    ],
+    "evidence": "Compass's official agent page identifies donor Pamela Rummage Culp as a Compass real-estate professional, directly tying the reported employer to the Compass brokerage.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "22BEACON"
+    ],
+    "name": "22Beacon",
+    "scope": "Nonprofit school-facilities and finance organization / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.22beacon.org/"
+    ],
+    "evidence": "22Beacon's official site identifies it as a 501(c)(3) nonprofit providing school real-estate, finance and advisory resources.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ELEVATE GOVERNMENT AFFAIRS"
+    ],
+    "name": "Elevate Government Affairs",
+    "scope": "Government-affairs firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.elevatega.com/"
+    ],
+    "evidence": "Elevate Government Affairs' official site identifies the Washington government-affairs firm.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MASON CONSULTING LLC"
+    ],
+    "name": "Mason Consulting, LLC",
+    "scope": "Federal lobbying firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://lda.gov/filings/public/filing/351cec0d-b090-485a-85a2-80145230904d/print/"
+    ],
+    "evidence": "An official Lobbying Disclosure Act filing identifies Mason Consulting, LLC and G. David Mason, matching the donor employer context.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PROSPECT SCHOOLS"
+    ],
+    "name": "Prospect Schools",
+    "scope": "Brooklyn public-charter-school network / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.brooklynprospect.org/"
+    ],
+    "evidence": "Prospect Schools' official site identifies its Brooklyn K-12 public charter-school network.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "THE COCHRAN FIRM"
+    ],
+    "name": "The Cochran Firm",
+    "scope": "Law firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.cochranfirm.com/"
+    ],
+    "evidence": "The Cochran Firm's official site identifies the law firm matching the attorney donor records.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF MICHIGAN"
+    ],
+    "name": "University of Michigan",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://umich.edu/"
+    ],
+    "evidence": "The University of Michigan's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF OREGON"
+    ],
+    "name": "University of Oregon",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.uoregon.edu/"
+    ],
+    "evidence": "The University of Oregon's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WILLIG WILLIAMS & DAVIDSON"
+    ],
+    "name": "Willig, Williams & Davidson",
+    "scope": "Law firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.wwdlaw.com/"
+    ],
+    "evidence": "The firm's official site identifies Willig, Williams & Davidson as a union-side labor law firm.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RAYTHEON"
+    ],
+    "name": "Raytheon",
+    "scope": "Defense and aerospace business / reported employer",
+    "parent": "RTX Corporation",
+    "sources": [
+      "https://www.rtx.com/raytheon"
+    ],
+    "evidence": "RTX's official site identifies Raytheon as its defense and aerospace business. The bare employer label is retained at business-brand scope, not forced into a specific subsidiary.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "AON"
+    ],
+    "name": "Aon",
+    "scope": "Professional-services business / reported employer",
+    "parent": "Aon plc",
+    "sources": [
+      "https://www.aon.com/about-us"
+    ],
+    "evidence": "Aon's official site identifies the global professional-services firm; the employer label is retained at business-group scope.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UCSF"
+    ],
+    "name": "University of California, San Francisco",
+    "scope": "Public university / reported employer; abbreviation",
+    "parent": "University of California",
+    "sources": [
+      "https://www.ucsf.edu/about"
+    ],
+    "evidence": "UCSF's official site identifies the University of California, San Francisco. The reported UCSF abbreviation maps to the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UCLA"
+    ],
+    "name": "University of California, Los Angeles",
+    "scope": "Public university / reported employer; abbreviation",
+    "parent": "University of California",
+    "sources": [
+      "https://www.ucla.edu/"
+    ],
+    "evidence": "UCLA's official site identifies the University of California, Los Angeles.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "USC"
+    ],
+    "name": "University of Southern California",
+    "scope": "Private university / reported employer; abbreviation resolved by donor context",
+    "parent": "",
+    "sources": [
+      "https://www.usc.edu/"
+    ],
+    "evidence": "The donor record identifies a USC professor, and USC's official site identifies the University of Southern California.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COAXUM ENTERPRISES INC."
+    ],
+    "name": "Coaxum Enterprises, Inc.",
+    "scope": "Restaurant-franchise management company / reported employer",
+    "parent": "",
+    "sources": [
+      "https://coaxumenterprises.com/"
+    ],
+    "evidence": "Coaxum Enterprises' official site identifies Coaxum Enterprises, Inc. and founder Henry L. Coaxum Jr., matching the donor context.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MONDELEZ"
+    ],
+    "name": "Mondelēz International",
+    "scope": "Food and beverage business / reported employer; brand shorthand",
+    "parent": "Mondelēz International, Inc.",
+    "sources": [
+      "https://www.mondelezinternational.com/"
+    ],
+    "evidence": "Mondelēz International's official site identifies the global snacking company. The reported MONDELEZ form is retained at company/brand scope.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JONATHAN ROSE COMPANIES"
+    ],
+    "name": "Jonathan Rose Companies",
+    "scope": "Real-estate development and investment firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.rosecompanies.com/about/"
+    ],
+    "evidence": "Jonathan Rose Companies' official site identifies the firm and its real-estate development, investment and planning work.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KLEIN/JOHNSON GROUP"
+    ],
+    "name": "Klein/Johnson Group",
+    "scope": "Federal lobbying firm / reported employer",
+    "parent": "",
+    "sources": [
+      "https://lda.gov/filings/public/"
+    ],
+    "evidence": "Federal Lobbying Disclosure Act records identify Klein/Johnson Group as a registrant/lobbying firm. The exact reported employer name is retained.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE OF TEXAS"
+    ],
+    "name": "State of Texas",
+    "scope": "State government / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.texas.gov/"
+    ],
+    "evidence": "Texas's official state website identifies the State of Texas government.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CITY OF MINNEAPOLIS"
+    ],
+    "name": "City of Minneapolis",
+    "scope": "Municipal government / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.minneapolismn.gov/"
+    ],
+    "evidence": "The City of Minneapolis official website confirms the municipal government.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE OF CA",
+      "STATE OF CALIFORNIA"
+    ],
+    "name": "State of California",
+    "scope": "State government / reported employer; abbreviation alias",
+    "parent": "",
+    "sources": [
+      "https://www.ca.gov/"
+    ],
+    "evidence": "California's official state website identifies the State of California. STATE OF CA is retained as the donor-file abbreviation.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ALBERT EINSTEIN COLLEGE OF MEDICINE"
+    ],
+    "name": "Albert Einstein College of Medicine",
+    "scope": "Medical school / reported employer",
+    "parent": "",
+    "sources": [
+      "https://einsteinmed.edu/"
+    ],
+    "evidence": "Albert Einstein College of Medicine's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "USPS",
+      "US POSTAL SERVICE"
+    ],
+    "name": "United States Postal Service",
+    "scope": "Independent federal postal agency / reported employer; abbreviations",
+    "parent": "",
+    "sources": [
+      "https://about.usps.com/"
+    ],
+    "evidence": "USPS official materials identify the United States Postal Service. USPS and US POSTAL SERVICE are donor-file forms of the same employer.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MD ANDERSON CANCER CENTER",
+      "UT MD ANDERSON CANCER CENTER"
+    ],
+    "name": "The University of Texas MD Anderson Cancer Center",
+    "scope": "Cancer center / reported employer; shortened forms",
+    "parent": "The University of Texas System",
+    "sources": [
+      "https://www.mdanderson.org/"
+    ],
+    "evidence": "MD Anderson's official site identifies The University of Texas MD Anderson Cancer Center. Both donor-file forms map to the same institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RANDOM HOUSE"
+    ],
+    "name": "Random House",
+    "scope": "Publishing imprint/business / reported employer",
+    "parent": "Penguin Random House",
+    "sources": [
+      "https://www.penguinrandomhouse.com/"
+    ],
+    "evidence": "Penguin Random House's official site identifies Random House within its publishing business. The donor employer is retained at the Random House business/imprint level.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DULY"
+    ],
+    "name": "Duly Health and Care",
+    "scope": "Medical group / reported employer; brand shorthand",
+    "parent": "",
+    "sources": [
+      "https://www.dulyhealthandcare.com/providers/jean-m-houlihan-md"
+    ],
+    "evidence": "Duly Health and Care's official provider page identifies donor Jean M. Houlihan, MD, directly tying the DULY employer label to Duly Health and Care.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TEXAS TECH UNIVERSITY"
+    ],
+    "name": "Texas Tech University",
+    "scope": "Public university / reported employer",
+    "parent": "Texas Tech University System",
+    "sources": [
+      "https://www.ttu.edu/"
+    ],
+    "evidence": "Texas Tech University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "OREGON STATE UNIVERSITY"
+    ],
+    "name": "Oregon State University",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://oregonstate.edu/"
+    ],
+    "evidence": "Oregon State University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NYU"
+    ],
+    "name": "New York University",
+    "scope": "Private university / reported employer; abbreviation",
+    "parent": "",
+    "sources": [
+      "https://www.nyu.edu/"
+    ],
+    "evidence": "NYU's official site identifies New York University.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF CALIFORNIA"
+    ],
+    "name": "University of California",
+    "scope": "Public university system / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.universityofcalifornia.edu/"
+    ],
+    "evidence": "The University of California's official site identifies the statewide university system.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "LOS ANGELES UNIFIED SCHOOL DISTRICT",
+      "LAUSD"
+    ],
+    "name": "Los Angeles Unified School District",
+    "scope": "Public school district / reported employer; abbreviation",
+    "parent": "",
+    "sources": [
+      "https://www.lausd.org/"
+    ],
+    "evidence": "LAUSD's official site identifies the Los Angeles Unified School District. Both donor-file forms map to the district.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SAINT PETER'S UNIVERSITY"
+    ],
+    "name": "Saint Peter's University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.saintpeters.edu/"
+    ],
+    "evidence": "Saint Peter's University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TRINITY HEALTH"
+    ],
+    "name": "Trinity Health",
+    "scope": "Health system / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.trinity-health.org/"
+    ],
+    "evidence": "Trinity Health's official site identifies the health system.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COLUMBIA UNIVERSITY"
+    ],
+    "name": "Columbia University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.columbia.edu/"
+    ],
+    "evidence": "Columbia University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UCSD"
+    ],
+    "name": "University of California San Diego",
+    "scope": "Public university / reported employer; abbreviation",
+    "parent": "University of California",
+    "sources": [
+      "https://ucsd.edu/"
+    ],
+    "evidence": "UC San Diego's official site identifies the University of California San Diego.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOBLIS"
+    ],
+    "name": "Noblis",
+    "scope": "Science, technology and research organization / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.noblis.org/"
+    ],
+    "evidence": "Noblis's official site identifies the organization.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "RUTGERS UNIVERSITY"
+    ],
+    "name": "Rutgers University",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.rutgers.edu/"
+    ],
+    "evidence": "Rutgers University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STANFORD UNIVERSITY"
+    ],
+    "name": "Stanford University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.stanford.edu/"
+    ],
+    "evidence": "Stanford University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF IOWA"
+    ],
+    "name": "University of Iowa",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://uiowa.edu/"
+    ],
+    "evidence": "The University of Iowa's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FDA"
+    ],
+    "name": "U.S. Food and Drug Administration",
+    "scope": "Federal agency / reported employer; abbreviation",
+    "parent": "U.S. Department of Health and Human Services",
+    "sources": [
+      "https://www.fda.gov/"
+    ],
+    "evidence": "FDA's official site identifies the U.S. Food and Drug Administration.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ORCHID BAY REALTY LLC"
+    ],
+    "name": "Orchid Bay Realty LLC",
+    "scope": "Florida limited liability company / reported employer",
+    "parent": "",
+    "sources": [
+      "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=flal-l22000095741-197e692b-a79a-4f2d-806f-fdcce852ec59&directionType=ForwardList&inquirytype=EntityName&listNameOrder=ORCHIDAVIATION+L220004870080&searchNameOrder=ORCHIDBAYREALTY+L220000957410&searchTerm=THE+ORCHID+AGENCY+LLC"
+    ],
+    "evidence": "Florida's official business registry identifies ORCHID BAY REALTY LLC as an active LLC and Annie Ryan as manager, matching the donor context.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DEPARTMENT OF STATE"
+    ],
+    "name": "U.S. Department of State",
+    "scope": "Federal department / reported employer",
+    "parent": "United States Government",
+    "sources": [
+      "https://www.state.gov/"
+    ],
+    "evidence": "The Department of State's official site identifies the U.S. Department of State.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FORDHAM UNIVERSITY"
+    ],
+    "name": "Fordham University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.fordham.edu/"
+    ],
+    "evidence": "Fordham University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF KENTUCKY"
+    ],
+    "name": "University of Kentucky",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.uky.edu/"
+    ],
+    "evidence": "The University of Kentucky's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CUNY"
+    ],
+    "name": "City University of New York",
+    "scope": "Public university system / reported employer; abbreviation",
+    "parent": "",
+    "sources": [
+      "https://www.cuny.edu/"
+    ],
+    "evidence": "CUNY's official site identifies the City University of New York.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DOD",
+      "DEPT OF DEFENSE"
+    ],
+    "name": "U.S. Department of Defense",
+    "scope": "Federal department / reported employer; abbreviations",
+    "parent": "United States Government",
+    "sources": [
+      "https://www.defense.gov/"
+    ],
+    "evidence": "The Department of Defense's official site identifies the U.S. Department of Defense. DOD and DEPT OF DEFENSE are donor-file abbreviations.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WATSON CLINIC"
+    ],
+    "name": "Watson Clinic LLP",
+    "scope": "Medical group / reported employer; business-name shorthand",
+    "parent": "",
+    "sources": [
+      "https://www.watsonclinic.com/"
+    ],
+    "evidence": "Watson Clinic's official site identifies Watson Clinic LLP.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "US ARMY"
+    ],
+    "name": "United States Army",
+    "scope": "Military service / reported employer; abbreviation",
+    "parent": "U.S. Department of Defense",
+    "sources": [
+      "https://www.army.mil/"
+    ],
+    "evidence": "The Army's official site identifies the United States Army; the donor-file US ARMY form is retained as an alias.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "EMORY UNIVERSITY"
+    ],
+    "name": "Emory University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.emory.edu/"
+    ],
+    "evidence": "Emory University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KAISER PERMANENTE"
+    ],
+    "name": "Kaiser Permanente",
+    "scope": "Integrated health-care organization / reported employer",
+    "parent": "",
+    "sources": [
+      "https://about.kaiserpermanente.org/"
+    ],
+    "evidence": "Kaiser Permanente's official site identifies the health-care organization. The entry is retained at organization/brand scope rather than forced into one regional legal entity.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "GEORGE NAKASHIMA WOODWORKERS"
+    ],
+    "name": "George Nakashima Woodworkers",
+    "scope": "Furniture and woodworking studio / reported employer",
+    "parent": "",
+    "sources": [
+      "https://nakashimawoodworkers.com/"
+    ],
+    "evidence": "George Nakashima Woodworkers' official site identifies the studio and its team.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "WALMART"
+    ],
+    "name": "Walmart",
+    "scope": "Retail business / reported employer; brand scope",
+    "parent": "Walmart Inc.",
+    "sources": [
+      "https://corporate.walmart.com/"
+    ],
+    "evidence": "Walmart's corporate site identifies the retail company. The bare donor employer is retained at brand/business scope.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CORCORAN"
+    ],
+    "name": "Corcoran",
+    "scope": "Real-estate brokerage brand / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.corcoran.com/"
+    ],
+    "evidence": "Corcoran's official site identifies the real-estate brokerage brand, consistent with the donor records' real-estate occupations.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CORNELL UNIVERSITY"
+    ],
+    "name": "Cornell University",
+    "scope": "Private university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.cornell.edu/"
+    ],
+    "evidence": "Cornell University's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF WASHINGTON"
+    ],
+    "name": "University of Washington",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.washington.edu/"
+    ],
+    "evidence": "The University of Washington's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UNIVERSITY OF VIRGINIA"
+    ],
+    "name": "University of Virginia",
+    "scope": "Public university / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.virginia.edu/"
+    ],
+    "evidence": "The University of Virginia's official site confirms the institution.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NYC DOE"
+    ],
+    "name": "New York City Department of Education",
+    "scope": "Public school system / reported employer; abbreviation",
+    "parent": "City of New York",
+    "sources": [
+      "https://www.schools.nyc.gov/"
+    ],
+    "evidence": "NYC Public Schools' official site identifies New York City's public-school system. NYC DOE is retained as the donor-file abbreviation.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NYCTA"
+    ],
+    "name": "New York City Transit Authority",
+    "scope": "Public transit authority / reported employer; abbreviation",
+    "parent": "Metropolitan Transportation Authority",
+    "sources": [
+      "https://new.mta.info/agency/new-york-city-transit"
+    ],
+    "evidence": "MTA's official site identifies New York City Transit. NYCTA is retained as the donor-file abbreviation.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DELTA"
+    ],
+    "name": "Delta Air Lines",
+    "scope": "Airline / reported employer; brand shorthand",
+    "parent": "Delta Air Lines, Inc.",
+    "sources": [
+      "https://www.delta.com/us/en/about-delta/overview"
+    ],
+    "evidence": "Delta's official site identifies Delta Air Lines; donor occupations include pilot and flight attendant, tying the shorthand to the airline.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UPS"
+    ],
+    "name": "UPS",
+    "scope": "Package delivery and logistics business / reported employer; brand scope",
+    "parent": "United Parcel Service, Inc.",
+    "sources": [
+      "https://about.ups.com/"
+    ],
+    "evidence": "UPS's official site identifies the logistics company. The donor employer is retained at brand/business scope.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NOVANT HEALTH"
+    ],
+    "name": "Novant Health",
+    "scope": "Health system / reported employer",
+    "parent": "",
+    "sources": [
+      "https://www.novanthealth.org/"
+    ],
+    "evidence": "Novant Health's official site identifies the health system.",
+    "status": "Source-backed",
+    "recordTypes": [
+      "individual"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JAN LISA HUTTNER"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported self-employer / person-name label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ISAAC RAY CENTER - RUSH HC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Composite reported employer label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BST"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BHFS"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer acronym not independently tied to one reusable legal identity",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "STATE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Generic government-employer label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ARMY"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Generic military-employer label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "MOBILEGIS LTD"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer; exact legal entity not independently verified",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "BROWN BROWN INSURANCE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported insurance-employer form; not safely established as an alias of Brown & Brown",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "COLUMBIA"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique shorthand employer label",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "TLC BEATRICE LLC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer; current legal status/identity not independently verified",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PPI"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "VA"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CSU"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique university acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FREELANCE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Generic work-status label, not an organization",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "C3 LEADERSHIP"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer; exact legal entity not independently verified",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "USG"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "INDEPENDENT"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Generic work-status label, not an organization",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "ST. GABRIEL CHURCH"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique religious-organization name without location context",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "IU"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Non-unique university acronym / reported employer",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PIET RETIEF INC"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Reported employer; exact legal entity not independently verified",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DIOCESE OF NY AND HOULIHAN LAWRENCE"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Composite employer string naming more than one organization",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "sources": [
+      "https://www.fec.gov/data/receipts/individual-contributions/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JEFFRIES MAJORITY FUND - UNITEMIZED"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Internal unitemized rollup label / not a donor legal entity",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "This is an internal unitemized rollup label in the POPC transaction data, not a donor legal entity. It is explicitly reviewed so it cannot be mistaken for a business identity.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JEFFRIES VICTORY FUND - UNITEMIZED"
+    ],
+    "status": "Unresolved",
+    "name": null,
+    "parent": "",
+    "scope": "Internal unitemized rollup label / not a donor legal entity",
+    "recordTypes": [
+      "organization"
+    ],
+    "evidence": "This is an internal unitemized rollup label in the POPC transaction data, not a donor legal entity. It is explicitly reviewed so it cannot be mistaken for a business identity.",
+    "sources": [],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "KRAMER DILLOF LIVINGSTON & MOORE ESQS."
+    ],
+    "name": "Kramer, Dillof, Livingston & Moore",
+    "status": "Source-backed",
+    "scope": "Law firm / reported employer; donor-file suffix variant",
+    "parent": "",
+    "recordTypes": [
+      "individual"
+    ],
+    "evidence": "KDLM's official site identifies Kramer, Dillof, Livingston & Moore. The donor-file ESQS. suffix is retained as an alias of the law firm.",
+    "sources": [
+      "https://kdlm.com/about-us-kdlm/"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];
