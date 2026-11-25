@@ -1,14 +1,14 @@
 function createRouter(now=()=>Date.now()){
  const state=new Map();
- const keys=(env,name)=>[...new Set([env[name+"_API_KEY"],env[name+"_API_KEY_2"]].filter(v=>typeof v==="string"&&v.trim()).map(v=>v.trim()))];
+ const keys=(env,name)=>[...new Set([env[name+"_API_KEY"],env[name+"_API_KEY_2"],env[name+"_API_KEY_3"]].filter(v=>typeof v==="string"&&v.trim()).map(v=>v.trim()))];
  const permitted=(env,name)=>env[name+"_POOL_AUTHORIZED"]==="true";
  function status(env,name){return {configured:keys(env,name).length,eligible:permitted(env,name)?keys(env,name).length:Math.min(1,keys(env,name).length),poolAuthorized:permitted(env,name)};}
- async function request(env,name,send,{anonymous=false}={}){
+ async function request(env,name,send,{anonymous=false,fallbackOnly=false}={}){
   const id=name;let s=state.get(id);if(!s){s={cursor:0,until:0,active:false};state.set(id,s);}
   if(s.until>now()||s.active)return undefined;
-  const all=keys(env,name),pool=anonymous?[null]:permitted(env,name)?all:all.slice(0,1);
+  const all=keys(env,name),pool=anonymous?[null]:(fallbackOnly||permitted(env,name))?all:all.slice(0,1);
   if(!pool.length)return undefined;
-  const start=s.cursor++%pool.length;
+  const start=fallbackOnly?0:s.cursor++%pool.length;
   s.active=true;
   try{
    for(let i=0;i<pool.length;i++){

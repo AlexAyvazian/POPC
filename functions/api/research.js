@@ -16,10 +16,10 @@ function parseQuery(result,cat){
  return parsed;
 }
 function cloudflareEnabled(env){return env.WORKERS_AI_FREE_CONFIRMED==="true"&&typeof env.AI?.run==="function";}
-function groqEnabled(env){return !!env.GROQ_API_KEY&&env.GROQ_FREE_CONFIRMED==="true";}
+function groqEnabled(env){return keyRouter.status(env,"GROQ").configured>0&&env.GROQ_FREE_CONFIRMED==="true";}
 const groqModels=["openai/gpt-oss-20b","qwen/qwen3.8-27b","openai/gpt-oss-120b"];
 function zaiEnabled(env){return env.ZAI_PUBLIC_USE_AUTHORIZED==="true"&&env.ZAI_FREE_CONFIRMED==="true"&&keyRouter.status(env,"ZAI").eligible>0;}
-function providers(env){return {cloudflare:{bound:typeof env.AI?.run==="function",enabled:cloudflareEnabled(env)},groq:{configured:!!env.GROQ_API_KEY,enabled:groqEnabled(env)},openrouter:{configured:!!env.OPENROUTER_API_KEY},horde:{configured:!!env.HORDE_API_KEY},novita:{configured:!!env.NOVITA_API_KEY,enabled:false},zai:{...keyRouter.status(env,"ZAI"),enabled:zaiEnabled(env)},keenable:keyRouter.status(env,"KEENABLE"),tinyfish:keyRouter.status(env,"TINYFISH")};}
+function providers(env){return {cloudflare:{bound:typeof env.AI?.run==="function",enabled:cloudflareEnabled(env)},groq:{...keyRouter.status(env,"GROQ"),fallbackCredentials:keyRouter.status(env,"GROQ").configured,enabled:groqEnabled(env)},openrouter:{configured:!!env.OPENROUTER_API_KEY},horde:{configured:!!env.HORDE_API_KEY},novita:{configured:!!env.NOVITA_API_KEY,enabled:false},zai:{...keyRouter.status(env,"ZAI"),enabled:zaiEnabled(env)},keenable:keyRouter.status(env,"KEENABLE"),tinyfish:keyRouter.status(env,"TINYFISH")};}
 async function interpret(env,messages,cat,fetcher,signalFor){
  async function chat(base,key,model,extra={},ms=7000){
   try{const r=await fetcher(base+"/chat/completions",{method:"POST",headers:{"Authorization":"Bearer "+key,"Content-Type":"application/json"},body:JSON.stringify({model,messages,max_tokens:180,temperature:0,...extra}),signal:signalFor(ms)});if(!r.ok)return undefined;const data=await r.json();return parseQuery(data.choices?.[0]?.message?.content,cat);}catch{return undefined;}
@@ -32,7 +32,7 @@ async function interpret(env,messages,cat,fetcher,signalFor){
  if(env.HORDE_API_KEY){try{
   const r=await fetcher("https://oai.aihorde.net/v1/models",{headers:{"Authorization":"Bearer "+env.HORDE_API_KEY},signal:signalFor(5000)});if(r.ok){const data=await r.json();const list=Array.isArray(data.data)?data.data:[];const models=list.filter(m=>typeof m.id==="string"&&m.id.length<200&&/instruct|hermes|qwen|gemma|gpt-oss/i.test(m.id)&&!/embed|vision|uncensor|roleplay|nsfw/i.test(m.id));const model=models.find(m=>/qwen|gpt-oss/i.test(m.id))||models[0];if(model){const q=await chat("https://oai.aihorde.net/v1",env.HORDE_API_KEY,model.id,{},18000);if(q!==undefined)return {query:q,provider:"horde",model:model.id};}}
  }catch{}}
- if(groqEnabled(env)){for(const model of groqModels){const q=await chat("https://api.groq.com/openai/v1",env.GROQ_API_KEY,model,{reasoning_effort:model.startsWith("qwen/")?"none":"low",max_tokens:320});if(q!==undefined)return {query:q,provider:"groq",model};}}
+ if(groqEnabled(env)){for(const model of groqModels){try{const r=await keyRouter.request(env,"GROQ",key=>fetcher("https://api.groq.com/openai/v1/chat/completions",{method:"POST",headers:{"Authorization":"Bearer "+key,"Content-Type":"application/json"},body:JSON.stringify({model,messages,max_tokens:320,temperature:0,reasoning_effort:model.startsWith("qwen/")?"none":"low"}),signal:signalFor(7000)}),{fallbackOnly:true});if(!r)break;const data=await r.json();const q=parseQuery(data.choices?.[0]?.message?.content,cat);if(q!==undefined)return {query:q,provider:"groq",model};}catch{break;}}}
  if(env.OPENROUTER_API_KEY){const q=await chat("https://openrouter.ai/api/v1",env.OPENROUTER_API_KEY,"openrouter/free");if(q!==undefined)return {query:q,provider:"openrouter"};}
 
  return null;
