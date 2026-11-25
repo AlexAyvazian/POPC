@@ -3065,5 +3065,222 @@ export const businessIdentities = [
       "https://www.morganstanley.com/about-us-governance/policy-polcontr"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FEDERAL EXPRESS"
+    ],
+    "name": "Federal Express Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / operating subsidiary",
+    "parent": "FedEx Corporation",
+    "evidence": "FedEx's corporate-structure and SEC materials identify Federal Express Corporation as the principal operating company under FedEx Corporation. FedEx Express is a continuing brand name; the operating subsidiary remains separate from the parent holding company.",
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1048911/000130817924000698/fdx4341171-ars.pdf",
+      "https://www.fedex.com/en-us/about/company-structure.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FEDEX CORPORATION"
+    ],
+    "name": "FedEx Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / public holding company",
+    "parent": "",
+    "evidence": "SEC records identify FedEx Corporation as the top-level public holding company and document FDX Corporation as its former corporate name. Federal Express Corporation is a separate operating subsidiary.",
+    "sources": [
+      "https://www.sec.gov/edgar/browse?CIK=0001048911",
+      "https://www.sec.gov/Archives/edgar/data/1048911/000130817924000698/fdx4341171-ars.pdf"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "REGIONS FINANCIAL CORPORATION"
+    ],
+    "name": "Regions Financial Corporation",
+    "status": "Source-backed",
+    "scope": "Legal entity / financial holding company",
+    "parent": "",
+    "evidence": "SEC records identify Regions Financial Corporation as the Delaware public-company registrant and document New Regions Financial Corp. as a former name. Its bank subsidiaries remain separate entities.",
+    "sources": [
+      "https://www.sec.gov/edgar/browse/?CIK=1281761",
+      "https://www.sec.gov/Archives/edgar/data/1281761/000128176125000010/rf-20241231.htm"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "UBS AMERICAS INC."
+    ],
+    "name": "UBS Americas Inc.",
+    "status": "Source-backed",
+    "scope": "Legal entity / U.S. intermediate holding company",
+    "parent": "UBS AG / UBS Group AG",
+    "evidence": "UBS's legal-entity disclosures identify UBS Americas Inc. as a U.S. intermediate holding company. The 2025 annual report records the merger of Credit Suisse Holdings (USA), Inc. into UBS Americas Inc.; the predecessor is not treated as an alias.",
+    "sources": [
+      "https://www.ubs.com/content/dam/assets/cc/investor-relations/annual-report/2025/annual-report-ubs-group-2025.pdf",
+      "https://www.ubs.com/global/en/investor-relations/complementary-financial-information/disclosure-legal-entities.html"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "PCG (PERFORMANCE CONTRACTING GROUP) EMPLOYEE OWNERS PAC"
+    ],
+    "name": "PCG (Performance Contacting Group) Employee Owners PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00659060 currently displays PCG (Performance Contacting Group) Employee Owners PAC. The donor data uses the corrected-spelling Performance Contracting Group form. Performance Contracting Group, Inc. is the separate connected organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00659060"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "CWA-COMMITTEE ON POLITICAL EDUCATION POLITICAL CONTRIBUTIONS COMMITTEE"
+    ],
+    "name": "Communications Workers of America - COPE Political Contributions Committee",
+    "status": "Source-backed",
+    "scope": "Federal labor political committee",
+    "parent": "",
+    "evidence": "FEC committee C00002089 identifies the CWA-COPE Political Contributions Committee and the Communications Workers of America as its separate connected labor organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00002089"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "DEPOSITORY TRUST AND CLEARING CORPORATION PAC - DTCC PAC; THE"
+    ],
+    "name": "The Depository Trust and Clearing Corporation PAC - DTCC PAC",
+    "status": "Source-backed",
+    "scope": "Federal corporate political committee",
+    "parent": "",
+    "evidence": "FEC committee C00497917 identifies DTCC PAC as a qualified corporate PAC connected to The Depository Trust and Clearing Corporation. The corporation and PAC remain separate identities.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00497917"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "END CITIZENS UNITED"
+    ],
+    "name": "End Citizens United",
+    "status": "Source-backed",
+    "scope": "Federal nonconnected political committee",
+    "parent": "",
+    "evidence": "FEC committee C00573261 identifies End Citizens United as a qualified, unauthorized nonconnected PAC. No connected organization is listed.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00573261"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "FS PAC"
+    ],
+    "name": "FS PAC",
+    "status": "Source-backed",
+    "scope": "Federal nonconnected political committee",
+    "parent": "",
+    "evidence": "FEC committee C00559302 identifies FS PAC as a qualified nonconnected lobbyist/registrant PAC and lists no connected organization. Third-party associations are not used as ownership evidence.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00559302"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "HEALTHCARE FOR ACTION PAC"
+    ],
+    "name": "Healthcare for Action PAC",
+    "status": "Source-backed",
+    "scope": "Federal hybrid political committee",
+    "parent": "",
+    "evidence": "FEC committee C00822536 identifies Healthcare for Action PAC as a qualified hybrid PAC with no connected organization. The organization's public site uses Healthcare For Action as the public-facing name.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00822536",
+      "https://healthcareforaction.com/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "JOINT ACTION COMMITTEE FOR POLITICAL AFFAIRS"
+    ],
+    "name": "Joint Action Committee for Political Affairs",
+    "status": "Source-backed",
+    "scope": "Federal nonconnected political committee",
+    "parent": "",
+    "evidence": "FEC committee C00139659 identifies Joint Action Committee for Political Affairs as a qualified nonconnected PAC. The organization also uses JAC and JACPAC as public-facing abbreviations.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00139659",
+      "https://www.jacpac.org/"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ACTIVE AND RETIRED FEDERAL EMPLOYEES ASSOCIATION POLITICAL ACTION COM (NARFE-PAC)"
+    ],
+    "name": "National Active and Retired Federal Employees Association Political Action Committee (NARFE-PAC)",
+    "status": "Source-backed",
+    "scope": "Federal membership-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00091561 identifies NARFE-PAC and the National Active and Retired Federal Employees Association as its separate connected organization. The reported terminal COM is a truncated committee-name form.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00091561"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL APARTMENT ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "National Apartment Association Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00113241 identifies the National Apartment Association Political Action Committee and the National Apartment Association as its separate connected trade association.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00113241"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "NATIONAL ASSOCIATION OF BROADCASTERS PAC"
+    ],
+    "name": "National Association of Broadcasters Political Action Committee (NABPAC)",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00009985 identifies NABPAC as the National Association of Broadcasters' federal PAC. The association remains a separate organization.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00009985"
+    ],
+    "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION POLITICAL ACTION COMMITTEE"
+    ],
+    "name": "Securities Industry and Financial Markets Association Political Action Committee",
+    "status": "Source-backed",
+    "scope": "Federal trade-association political committee",
+    "parent": "",
+    "evidence": "FEC committee C00431312 identifies the SIFMA political action committee. SIFMA's official PAC page uses SIFMA PAC; the trade association remains separate.",
+    "sources": [
+      "https://www.fec.gov/data/committee/C00431312/",
+      "https://www.sifma.org/pac"
+    ],
+    "reviewed": "2026-11-25"
   }
 ];

@@ -80,6 +80,18 @@ test('researched PAC titles remain separate from their connected organizations',
   assert(groups.some(g=>g.name==='AMERICAN HEALTH CARE ASSOCIATION'));
 });
 
+test('FedEx parent and operating subsidiary remain separate', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'One',employer:'FEDERAL EXPRESS',sector:'Transport',committee:'x',amount:100},
+    {type:'individual',name:'Two',employer:'FEDEX CORPORATION',sector:'Transport',committee:'x',amount:100}
+  ]);
+  const operating=groups.find(g=>g.name==='FEDERAL EXPRESS CORPORATION');
+  const parent=groups.find(g=>g.name==='FEDEX CORPORATION');
+  assert(operating);assert(parent);
+  assert.equal(operating.research.parent,'FedEx Corporation');
+  assert.notEqual(operating.key,parent.key);
+});
+
 test('researched aliases merge while subsidiaries, brands and unresolved names stay separate', () => {
   const employers=[
     'ARISTEIA CAPITAL','ARISTEIA CAPITAL LLC',
