@@ -34,7 +34,7 @@ function sector(name){const n=String(name||"").toUpperCase().trim();if(!n||statu
 
 const normalize=s=>String(s||"").trim().replace(/\s+/g," ").toUpperCase();
 function harmonize(name,label){
-const l=String(label||"");if(/unconfirmed|unverified|unclear/i.test(l))return "Sector unconfirmed";
+const l=String(label||"");if(/unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(l))return "Sector unresolved / ambiguous";
 if(/personal|self.employ|not employed|non.employer|unreported|non.individual/i.test(l))return "Personal status / unreported employer";
 if(/tribal/i.test(l))return "Tribal nations & governments";
 if(/health insurance|managed care/i.test(l))return "Health insurance";
@@ -65,7 +65,7 @@ if(/government|public sector/i.test(l))return "Government & public sector";
 if(/professional|accounting/i.test(l))return "Professional services";
 if(/civil rights|advocacy/i.test(l))return "Other advocacy";
 return l||"Sector unconfirmed";}
-const unknownSectorLabel=label=>!label||/unconfirmed|unverified|unclear/i.test(String(label));
+const unknownSectorLabel=label=>!label||/unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(String(label));
 const exactSectorOverrides=new Map(Object.entries({
 "STREAM LINE CIRCLE LLC":"Transportation",
 "LIBRA GROUP":"Diversified business group",
@@ -119,6 +119,9 @@ const exactSectorOverrides=new Map(Object.entries({
 "ERNESTA HOME INC.":"Retail & consumer",
 "HEART TO HEART HOSPICE":"Healthcare",
 "GJELAJ LAW":"Legal services",
+"PATTERSON PLANNING & SERVICES":"Professional services",
+"PATTERSON PLANNING & SERVICES, INC.":"Professional services",
+"TJ FARMS LLC":"Agriculture, food & beverage",
 "EMPIRE OFFICE INC.":"Professional services",
 "FOSTER GARVEY PC":"Legal services",
 "WATERS KRAUS PAUL AND SIEGEL":"Legal services",
