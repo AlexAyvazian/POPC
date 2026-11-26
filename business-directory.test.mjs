@@ -17,6 +17,36 @@ test('sector classification reuses verified cross-committee and researched ident
   assert.equal(classifySectorLabel('UNITED','',new Map()),'Sector unresolved / ambiguous');
 });
 
+
+test('sector taxonomy canonicalizes legacy labels instead of creating duplicate buckets', () => {
+  assert.equal(classifySectorLabel('EXAMPLE','Security Services',new Map()),'Security services');
+  assert.equal(classifySectorLabel('EXAMPLE','Foreign Policy & Advocacy',new Map()),'Foreign policy & advocacy');
+  assert.equal(classifySectorLabel('EXAMPLE','Tribal Governments & Organizations',new Map()),'Tribal nations & governments');
+  assert.equal(classifySectorLabel('EXAMPLE','Political Fundraising Intermediaries',new Map()),'Political committees & advocacy');
+  assert.equal(classifySectorLabel('EXAMPLE','Political Advocacy & Fundraising',new Map()),'Political committees & advocacy');
+  assert.equal(classifySectorLabel('EXAMPLE','Earmarking Intermediaries',new Map()),'Political committees & advocacy');
+  assert.equal(classifySectorLabel('EXAMPLE','Consulting',new Map()),'Professional services');
+  assert.equal(classifySectorLabel('EXAMPLE','Nonprofit & Philanthropy',new Map()),'Nonprofit & philanthropy');
+  assert.equal(classifySectorLabel('EXAMPLE','Trade Associations',new Map()),'Trade associations');
+  assert.equal(classifySectorLabel('EXAMPLE','Unknown Legacy Bucket',new Map()),'Sector unresolved / ambiguous');
+});
+
+test('memo sectors cannot contaminate direct-dollar sector filtering', () => {
+  const groups=buildDirectory([
+    {type:'organization',name:'APPLE INC.',sector:'Technology',committee:'a',amount:10000},
+    {type:'organization',name:'APPLE INC.',sector:'Sector unresolved / ambiguous',committee:'a',amount:10000,memo:true},
+    {type:'organization',name:'MEMO ONLY ORG',sector:'Security services',committee:'a',amount:5000,memo:true}
+  ]);
+  const apple=groups.find(g=>g.name==='APPLE INC.');
+  assert.deepEqual([...apple.sectors],['Technology']);
+  assert(apple.directSectors.has('Technology'));
+  assert(apple.memoSectors.has('Sector unresolved / ambiguous'));
+  assert(!selectDirectory(groups,{view:'all',sector:'Sector unresolved / ambiguous'}).some(g=>g.name==='APPLE INC.'));
+  assert(selectDirectory(groups,{view:'all',sector:'Technology'}).some(g=>g.name==='APPLE INC.'));
+  const memoOnly=groups.find(g=>g.name==='MEMO ONLY ORG');
+  assert.deepEqual([...memoOnly.sectors],['Security services']);
+});
+
 test('all eight datasets reconcile; every receipt remains in one directory group', async () => {
   globalThis.fetch = async path => new Response(await fs.readFile(new URL(path, import.meta.url)));
   const rows = await loadResearchRecords();
