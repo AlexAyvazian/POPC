@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fffdf9"><title>Combined Total Contributions and Analysis | People Over Power Coalition</title><link rel="stylesheet" href="styles.css?v=base-f7f7f8"><link rel="stylesheet" href="combined-contributions.css?v=13"><link rel="stylesheet" href="business-directory.css?v=4"><link rel="stylesheet" href="roosevelt-header.css?v=1"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fffdf9"><title>Combined Total Contributions and Analysis | People Over Power Coalition</title><link rel="stylesheet" href="styles.css?v=base-f7f7f8"><link rel="stylesheet" href="combined-contributions.css?v=14"><link rel="stylesheet" href="business-directory.css?v=4"><link rel="stylesheet" href="roosevelt-header.css?v=1"></head>
 <body class="jvf-page ca-roosevelt-page">
 <a class="ca-roosevelt-back" href="transactions.html" aria-label="Back to PACs" title="Back to PACs">←</a>
 <header class="site-hero ca-roosevelt-hero" aria-label="Roosevelt quotation"><img class="coalition-header" src="Franklin_D_Roosevelt_named.png" alt="Franklin D. Roosevelt illustration with his quote about organized money and government." fetchpriority="high" decoding="async"><div class="ca-header-fireflies" aria-hidden="true"></div></header>
@@ -59,26 +59,41 @@
 </section>
 <section class="ca-panel ca-wide"><h2>Consolidated donors across committees</h2><p class="ca-muted">Each normalized reported name has a combined amount and expandable per-committee breakdown. Individual names are reported-name matches, not verified identities. Employer-associated individual receipts are shown separately from direct corporate and PAC donations.</p><div class="ca-controls"><label for="ca-mode">View</label><select id="ca-mode"><option value="organization">Organizations &amp; PACs</option><option value="individual">Individual donors</option><option value="employer">Reported employers (individual money)</option></select><label for="ca-sector">Sector</label><select id="ca-sector"><option value="">All sectors</option></select><label for="ca-role">Reported role</label><select id="ca-role" disabled><option value="">All reported roles</option></select><label for="ca-search">Search</label><input id="ca-search" type="search" placeholder="Search donor, employer or occupation"><span id="ca-result-count" aria-live="polite"></span><span id="ca-exact-occupation" hidden>Title: <strong id="ca-exact-occupation-label"></strong> <button type="button" id="ca-clear-occupation">Clear title</button></span></div><div class="jvf-table-wrap"><table class="jvf-table ca-table"><thead><tr><th scope="col" id="ca-name-heading">Organization / PAC</th><th scope="col">Sector / employer</th><th scope="col" id="ca-role-heading" hidden>Reported occupation / title</th><th scope="col">Committee-by-committee amounts</th><th scope="col">Records</th><th scope="col">Total</th></tr></thead><tbody id="ca-org-rows"></tbody></table></div><div class="ca-controls ca-page"><button id="ca-prev" type="button">Previous</button><span id="ca-page"></span><button id="ca-next" type="button">Next</button></div></section>
 </div>
-<aside id="bd-money-viz" class="ca-panel ca-money-viz" aria-labelledby="bd-money-viz-title">
-  <p class="ca-eyebrow">BUSINESS MONEY VISUALIZER</p>
-  <h2 id="bd-money-viz-title">See the money</h2>
-  <p id="bd-money-viz-summary" class="ca-muted">Loading business and organization money…</p>
-  <div class="bd-viz-money-control">
-    <label for="bd-viz-money">Money shown</label>
-    <select id="bd-viz-money">
-      <option value="organization">Direct PAC / organization receipts</option>
-      <option value="individual">Individual receipts tied to reported employer</option>
-      <option value="combined">Both together</option>
-    </select>
-  </div>
-  <div class="bd-viz-tabs" role="tablist" aria-label="Business money visualization">
-    <button type="button" role="tab" aria-selected="true" data-bd-viz="circles">Circles</button>
-    <button type="button" role="tab" aria-selected="false" data-bd-viz="bubbles">Bubbles</button>
-    <button type="button" role="tab" aria-selected="false" data-bd-viz="dots">Dot matrix</button>
-    <button type="button" role="tab" aria-selected="false" data-bd-viz="treemap">Treemap</button>
-  </div>
-  <div id="bd-viz-canvas" class="bd-viz-canvas" aria-live="polite"></div>
-  <p class="ca-muted bd-viz-note">Every shape represents a business or organization name from the research directory. Memo amounts are excluded.</p>
+<aside id="bd-money-viz" class="ca-viz-column" aria-labelledby="bd-money-viz-title">
+  <section class="ca-panel ca-viz-intro">
+    <p class="ca-eyebrow">BUSINESS MONEY VISUALIZATIONS</p>
+    <h2 id="bd-money-viz-title">See the money</h2>
+    <p id="bd-money-viz-summary" class="ca-muted">Loading business and organization money…</p>
+    <div class="bd-viz-money-control">
+      <label for="bd-viz-money">Money shown</label>
+      <select id="bd-viz-money">
+        <option value="organization">Direct PAC / organization receipts</option>
+        <option value="individual">Individual receipts tied to reported employer</option>
+        <option value="combined">Both together</option>
+      </select>
+    </div>
+    <p class="ca-muted bd-viz-note">Every shape represents a business or organization name from the research directory. Memo amounts are excluded.</p>
+  </section>
+  <section class="ca-panel ca-viz-card" aria-labelledby="bd-viz-circles-title">
+    <h2 id="bd-viz-circles-title">Circle packing</h2>
+    <p class="ca-muted">Bigger circles represent more money.</p>
+    <div id="bd-viz-circles" class="bd-viz-canvas" aria-live="polite"></div>
+  </section>
+  <section class="ca-panel ca-viz-card" aria-labelledby="bd-viz-bubbles-title">
+    <h2 id="bd-viz-bubbles-title">Bubble chart</h2>
+    <p class="ca-muted">Money compared with the number of receipt records.</p>
+    <div id="bd-viz-bubbles" class="bd-viz-canvas" aria-live="polite"></div>
+  </section>
+  <section class="ca-panel ca-viz-card" aria-labelledby="bd-viz-dots-title">
+    <h2 id="bd-viz-dots-title">Dot matrix</h2>
+    <p class="ca-muted">Each dot represents a fixed dollar amount.</p>
+    <div id="bd-viz-dots" class="bd-viz-canvas" aria-live="polite"></div>
+  </section>
+  <section class="ca-panel ca-viz-card" aria-labelledby="bd-viz-treemap-title">
+    <h2 id="bd-viz-treemap-title">Treemap</h2>
+    <p class="ca-muted">More screen area means more money.</p>
+    <div id="bd-viz-treemap" class="bd-viz-canvas" aria-live="polite"></div>
+  </section>
 </aside>
 </div>
-<footer class="jvf-footer">Source: the eight existing POPC committee datasets, derived from supplied Federal Election Commission exports. Jeffries Clark Aguilar Victory Fund is represented by the one supplied receipt. The underlying committee pages retain filing links and memo records. Normalized reported names consolidate exact matches only; name variants and parent-company affiliations require separate verification.</footer></main><script type="module" src="combined-contributions.js?v=15"></script><script type="module" src="business-directory.js?v=54"></script><script type="module" src="/research-assistant.js?v=4"></script><script src="roosevelt-fireflies.js?v=2" defer></script></body></html>
+<footer class="jvf-footer">Source: the eight existing POPC committee datasets, derived from supplied Federal Election Commission exports. Jeffries Clark Aguilar Victory Fund is represented by the one supplied receipt. The underlying committee pages retain filing links and memo records. Normalized reported names consolidate exact matches only; name variants and parent-company affiliations require separate verification.</footer></main><script type="module" src="combined-contributions.js?v=15"></script><script type="module" src="business-directory.js?v=55"></script><script type="module" src="/research-assistant.js?v=4"></script><script src="roosevelt-fireflies.js?v=2" defer></script></body></html>
