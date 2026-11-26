@@ -42,10 +42,10 @@ function table(host,key,title,description,groups,config){
 }
 async function start(host){
  try{
-  const schumer=host.dataset.network==='schumer',data=await import(schumer?'./schumer-research-data.js?v=tables1':'./research-data.js?v=tables1');
+  const schumer=host.dataset.network==='schumer',data=await import(schumer?'./schumer-research-data.js?v=master-sectors1':'./research-data.js?v=master-sectors1');
   const config=data.config,committee=host.dataset.committee;
   const records=committee?await data.loadCommittee(config.find(c=>c.key===committee)):await data.loadResearchRecords();
-  const identities=await import(schumer?'./schumer-business-directory-data.js?v=research1':'./business-directory-data.js?v=research1');
+  const identities=await import(schumer?'./schumer-business-directory-data.js?v=master-sectors1':'./business-directory-data.js?v=master-sectors1');
   const groups=groupDonors(records,identities.identifyName);host.replaceChildren();
   const note=document.createElement('p');note.className='donor-table-note';note.textContent='2025–2026 · Verified organization aliases are consolidated using the business research; individual gifts are combined by exact reported donor name within this page’s committees. The $500 cutoff uses each donor’s full total before search. Memo amounts are excluded.';host.append(note);
   table(host,'organizations','PACs, Political Committees & Organizations','All organizational contributions in one table.',groups.organizations,config);
