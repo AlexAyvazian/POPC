@@ -4,16 +4,16 @@ on:
   push:
     branches: [main]
     paths:
-      - 'petition-live.js'
-      - 'petition-live.test.mjs'
+      - 'assets/js/petition-live.js'
+      - 'tests/petition-live.test.mjs'
       - 'functions/api/petition.js'
       - 'functions/lib/petition-count.js'
       - '_routes.json'
       - '.github/workflows/petition-live-tests.yml'
   pull_request:
     paths:
-      - 'petition-live.js'
-      - 'petition-live.test.mjs'
+      - 'assets/js/petition-live.js'
+      - 'tests/petition-live.test.mjs'
       - 'functions/api/petition.js'
       - 'functions/lib/petition-count.js'
       - '_routes.json'
@@ -27,4 +27,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --test petition-live.test.mjs
+      - run: node --test tests/petition-live.test.mjs
