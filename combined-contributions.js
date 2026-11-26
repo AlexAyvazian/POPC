@@ -35,51 +35,6 @@ function aggregateDonors(rows,mode){
  }
  return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
 }
-const nonBusinessSourceSectors=new Set([
-  "Labor unions","Political committees & advocacy","Other advocacy","Foreign policy & advocacy",
-  "Government & public sector","Tribal nations & governments","Nonprofit & philanthropy",
-  "Trade associations","Personal status / unreported employer"
-]);
-function isBusinessSourceGroup(group){
-  return [...group.sectors].some(sector=>!nonBusinessSourceSectors.has(sector));
-}
-function sourceDetail(group,type){
-  if(type==="organization"){
-    const reported=[...group.reportedNames].filter(name=>name!==group.name);
-    return reported[0]?"Reported PAC / organization: "+reported[0]:[...group.sectors].sort().join(" · ");
-  }
-  const employer=[...group.employers].sort()[0]||"Employer not reported";
-  const occupation=[...group.occupations].sort()[0]||"Occupation not reported";
-  return employer+" · "+occupation;
-}
-function renderRankedSources(hostId,groups,type){
-  const host=$(hostId);host.replaceChildren();
-  if(!groups.length){host.innerHTML='<p class="ca-muted">No matching sources in this selection.</p>';return;}
-  const max=Math.max(1,groups[0].value);
-  for(const [index,group] of groups.entries()){
-    const button=document.createElement("button");button.type="button";button.className="ca-ranked-source";
-    button.innerHTML='<span class="ca-ranked-number">'+(index+1)+'</span><span class="ca-ranked-copy"><strong>'+esc(group.name)+'</strong><small>'+esc(sourceDetail(group,type))+'</small><span class="ca-ranked-bar" aria-hidden="true"><i style="width:'+Math.max(2,100*group.value/max).toFixed(1)+'%"></i></span></span><span class="ca-ranked-amount">'+money(group.value)+'</span>';
-    button.addEventListener("click",()=>{
-      mode=type;roleSelected=exactOccupation=sectorSelected="";query=normalize(group.name);page=0;
-      $("ca-mode").value=mode;$("ca-search").value=group.name;
-      const disclosure=$("ca-all-money-sources");if(disclosure)disclosure.open=true;
-      renderOrganizations();
-      disclosure?.scrollIntoView({behavior:"smooth",block:"start"});
-    });
-    host.append(button);
-  }
-}
-function renderFollowMoney(records){
-  const organizations=records.filter(r=>r.type==="organization"),individuals=records.filter(r=>r.type==="individual");
-  const organizationTotal=organizations.reduce((n,r)=>n+r.amount,0),individualTotal=individuals.reduce((n,r)=>n+r.amount,0);
-  $("ca-business-source-total").textContent=money(organizationTotal);
-  $("ca-individual-source-total").textContent=money(individualTotal);
-  $("ca-flow-total").textContent=money(organizationTotal+individualTotal);
-  const businessGroups=aggregateDonors(records,"organization").filter(isBusinessSourceGroup).slice(0,10);
-  const individualGroups=aggregateDonors(records,"individual").slice(0,10);
-  renderRankedSources("ca-top-businesses",businessGroups,"organization");
-  renderRankedSources("ca-top-individuals",individualGroups,"individual");
-}
 function aggregateSectors(rows){
  const m=new Map();
  for(const r of rows){let v=m.get(r.sector);if(!v){v={name:r.sector,key:r.sector,value:0,individual:0,organization:0,count:0};m.set(r.sector,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
@@ -103,7 +58,6 @@ renderOrganizations();}
 function renderOrganizations(){
 if(!allRecords){$("ca-org-rows").innerHTML='<tr><td colspan="5">Loading all eight committee datasets…</td></tr>';$("ca-prev").disabled=$("ca-next").disabled=true;return;}
 const records=selected?allRecords.filter(x=>x.committee===selected):allRecords;
-renderFollowMoney(records);
 const groups=aggregateSectors(records),opt=$("ca-sector");opt.replaceChildren(new Option("All sectors",""));for(const x of [...groups].sort((a,b)=>a.name.localeCompare(b.name)))opt.add(new Option(x.name,x.name));if(!groups.some(x=>x.name===sectorSelected))sectorSelected="";opt.value=sectorSelected;
 const combinedColored=sequentialItems(groups);
 const combinedColors=new Map(combinedColored.filter(x=>x.value>0).map(x=>[x.name,x.color]));
