@@ -12,6 +12,18 @@ on:
       - 'research-data.js'
       - 'transactions.html'
       - 'combined-contributions.html'
+      - 'schumer-identities.js'
+      - 'schumer-business-directory-data.js'
+      - 'schumer-business-directory.js'
+      - 'schumer-business-directory.test.mjs'
+      - 'schumer-research-data.js'
+      - 'schumer-combined-contributions.js'
+      - 'schumer-combined-contributions.html'
+      - 'schumer-committee.js'
+      - 'friends-of-schumer-pac.html'
+      - 'impact-pac.html'
+      - 'smp-pac.html'
+      - 'schumer_remaining_entity_research_COMPLETED.csv'
       - '.github/workflows/business-directory-tests.yml'
   pull_request:
     paths:
@@ -23,6 +35,18 @@ on:
       - 'research-data.js'
       - 'transactions.html'
       - 'combined-contributions.html'
+      - 'schumer_remaining_entity_research_COMPLETED.csv'
+      - 'smp-pac.html'
+      - 'impact-pac.html'
+      - 'friends-of-schumer-pac.html'
+      - 'schumer-committee.js'
+      - 'schumer-combined-contributions.html'
+      - 'schumer-combined-contributions.js'
+      - 'schumer-research-data.js'
+      - 'schumer-business-directory.test.mjs'
+      - 'schumer-business-directory.js'
+      - 'schumer-business-directory-data.js'
+      - 'schumer-identities.js'
 
 jobs:
   test:
@@ -32,7 +56,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --test business-directory.test.mjs
+      - run: node --test business-directory.test.mjs schumer-business-directory.test.mjs
       - run: node business-directory-unreviewed.mjs
       - uses: actions/upload-artifact@v4
         with:
