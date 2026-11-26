@@ -7181,12 +7181,16 @@ export const businessIdentities = [
     "aliases": [
       "PROPER"
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported employer / organization",
-    "evidence": "The generic employer PROPER plus a real-estate occupation matches multiple unrelated businesses. The donor record lacks enough context to select an exact organization safely.",
-    "sources": [],
+    "status": "Source-backed",
+    "name": "Proper Brands",
+    "parent": "New Growth Horizon, LLC",
+    "scope": "Missouri cannabis brand / DBA of New Growth Horizon, LLC",
+    "evidence": "Jeffries Majority Fund records identify John Pennington of St. Louis with employer PROPER. Contemporary reporting identifies that same John Pennington as CEO and co-founder of Proper Brands, and an SEC-filed asset purchase agreement identifies New Growth Horizon, LLC d/b/a Proper Brands with John Pennington as CEO. This resolves the reported employer at brand/DBA scope without collapsing separate licensed entities.",
+    "sources": [
+      "https://www.marijuanamoment.net/top-congressional-democrat-raises-campaign-funds-from-marijuana-industry-ahead-of-election-day/",
+      "https://www.sec.gov/Archives/edgar/data/1771706/000155837025011401/vreof-20250630xex10d8.htm",
+      "https://www.newgrowthhorizon.org/about"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -10492,12 +10496,15 @@ export const businessIdentities = [
     "aliases": [
       "FIN"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / acronym or short business name",
+    "name": "Financial Information Network, Inc.",
+    "status": "Source-backed",
+    "scope": "California software / financial-information company; verified donor shorthand",
     "parent": "",
-    "evidence": "The generic FIN employer string and Jerry Sears president context did not resolve to one authoritative business entity. No company is assigned by name similarity alone.",
-    "sources": [],
+    "evidence": "The donor context is Jerry Sears, President. California-registry-derived company records identify Financial Information Network, Inc. in Los Angeles with Jerry L. Sears as CEO/CFO/director, and an independent company profile identifies Jerry Sears as President of Financial Information Network. The donor-file employer FIN is therefore resolved as shorthand for this company.",
+    "sources": [
+      "https://www.bizprofile.net/ca/los-angeles/financial-information-network-inc",
+      "https://bizstanding.com/p/financial%2Binformation%2Bnetwork-171050003"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -18695,16 +18702,18 @@ export const businessIdentities = [
     "aliases": [
       "PIET RETIEF INC"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Piet Retief, Inc.",
     "parent": "",
-    "scope": "Reported employer; exact legal entity not independently verified",
+    "scope": "Los Angeles design/apparel business / reported employer",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "FEC records identify Lee Stuart Cox with employer Piet Retief Inc and occupation Owner Manager. LinkedIn's public directory independently identifies Lee Stuart Cox in Los Angeles with Piet Retief, Inc., and business-directory data identifies Piet Retief Inc. as a Los Angeles corporation in specialized design services. These sources jointly resolve the exact reported employer.",
     "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
+      "https://docquery.fec.gov/pdf/496/202507159762985496/202507159762985496.pdf",
+      "https://www.linkedin.com/pub/dir/Stuart-lee/%2B",
+      "https://naicslist.com/company-profile/piet-retief-inc-los-angeles-ca-90018"
     ],
     "reviewed": "2026-11-25"
   },

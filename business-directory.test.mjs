@@ -291,7 +291,7 @@ test('executive-priority research batch resolves exact identities without forcin
   assert.equal(groups.find(g=>g.name==='CITYVIEW MANAGEMENT SERVICES, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='FIREFLY3 LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MAPLETON INVESTMENTS, LLC').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='STORY').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='STORY').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='JSI').research.scope,'Business group / brand covering related entities');
 });
 
@@ -322,7 +322,7 @@ test('executive-priority follow-up preserves brand scope and unresolved Austin e
   ]);
   assert.equal(groups.find(g=>g.name==='EDWARD JONES').research.parent,'The Jones Financial Companies, L.L.L.P.');
   assert.equal(groups.find(g=>g.name==='ABUNDANT VENTURE PARTNERS').research.scope,'Venture-capital firm / brand; exact employing legal entity not established');
-  assert.equal(groups.find(g=>g.name==='AUSTIN SPORTS ACADEMY').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='AUSTIN SPORTS ACADEMY').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='BENENSON CAPITAL').research.scope,'Real-estate business group / brand');
 });
 
@@ -338,9 +338,9 @@ test('third executive-priority batch preserves labels, legal entities and unreso
   ]);
   assert.equal(groups.find(g=>g.name==='DADA HOLDINGS').research.scope,'Investment and management group / brand');
   assert.equal(groups.find(g=>g.name==="WILLIE'S REMEDY+").research.scope,'Consumer beverage brand; exact employing legal entity not established');
-  assert.equal(groups.find(g=>g.name==='EISNER ADVISORY LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='EISNER ADVISORY GROUP LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='FUTURE STANDARD').research.scope,'Alternative-asset-management brand / business group');
-  assert.equal(groups.find(g=>g.name==='MARQUIS HEALTH').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='MARQUIS HEALTH CONSULTING SERVICES').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MARQUIS LIMITED LLC').research.status,'Source-backed');
 });
 
@@ -376,9 +376,9 @@ test('fifth executive-priority batch separates exact entities from brands and un
   assert.equal(groups.find(g=>g.name==='AMROCK HOLDINGS').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CHELSEA PIERS').research.scope,'Sports and recreation business group / brand');
   assert.equal(groups.find(g=>g.name==='EXXONMOBIL').research.scope,'Energy business group / brand; exact employing legal entity not established');
-  assert.equal(groups.find(g=>g.name==='KIELOCH CONSULTING').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='KIELOCH CONSULTING').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='SILVER RABBIT').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='SUPER NICHE INC.').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='SUPER NICHE').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='LONE PINE CAPITAL LLC').research.status,'Source-backed');
 });
 
@@ -395,9 +395,9 @@ test('sixth executive-priority batch consolidates verified variants without coll
   const nfp=groups.find(g=>g.name==='NFP');
   assert.equal(nfp.count,2);
   assert.equal(nfp.names.size,2);
-  assert.equal(groups.find(g=>g.name==='GOVALIDATE').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='CAPITOL HILL CONSULTING GROUP').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='GSIHEALTH').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='GOVALIDATE').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='CAPITOL HILL CONSULTING GROUP').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='GSI HEALTH').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='QP HEALTH CARE SERVICES, LLC').research.status,'Source-backed');
 });
 
@@ -411,9 +411,9 @@ test('seventh executive-priority batch resolves contextual acronyms without forc
     {type:'individual',name:'Galvin',employer:'DCA',occupation:'EXEC DIR',sector:'Advocacy',committee:'a',amount:500},
     {type:'individual',name:'Frymoyer',employer:'MEMA',occupation:'VICE PRESIDENT PUBLIC POLICY',sector:'Manufacturing',committee:'a',amount:600}
   ]);
-  assert.equal(groups.find(g=>g.name==='ICIC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='INITIATIVE FOR A COMPETITIVE INNER CITY, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='ROCKET LLC').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='IHS').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='INNOVATIONS HEALTH SYSTEMS, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='THE POSSIBLE ZONE').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='DIGITAL CITIZENS ALLIANCE').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MOTOR & EQUIPMENT MANUFACTURERS ASSOCIATION').research.status,'Source-backed');
@@ -471,9 +471,9 @@ test('tenth executive-priority batch resolves supported identities and consolida
   const km=groups.find(g=>g.name==='K & M OFFICE LLC');
   assert.equal(km.count,2);
   assert.equal(km.names.size,2);
-  assert.equal(groups.find(g=>g.name==='THE FUTURE FORUM').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='THE FUTURE FORUM').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='SIMPLYEZ HOME DELIVERED MEALS').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='UNIFIED RESOURCES').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='UNIFIED RESOURCES IN DISPLAY').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CLEAR CAPITAL, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL BANKERS ASSOCIATION, INC.').research.status,'Source-backed');
 });
@@ -508,7 +508,7 @@ test('twelfth executive-priority batch resolves exact employers while keeping ge
   ]);
   assert.equal(groups.find(g=>g.name==='UNITED GENERAL BAKERIES').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='SKYLIGHT').research.status,'Unresolved');
-  assert.equal(groups.find(g=>g.name==='FIN').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='FINANCIAL INFORMATION NETWORK, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL COUNCIL ON COMPENSATION INSURANCE, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='PC DEVELOPMENT GROUP, INC.').research.scope,'Historical Florida legal entity / development company');
   assert.equal(groups.find(g=>g.name==='THE NOEL POINTER FOUNDATION, INC.').research.status,'Source-backed');
@@ -524,7 +524,7 @@ test('thirteenth executive-priority batch separates exact organizations from amb
     {type:'individual',name:'Walton',employer:'NAADAC THE ASSN FOR ADDICTION PROFESSI',occupation:'CEO',sector:'Nonprofit',committee:'a',amount:500},
     {type:'individual',name:'McAneny',employer:'NEW MEXICO CANCER CENTER',occupation:'PHYSICIAN CEO',sector:'Healthcare',committee:'a',amount:600}
   ]);
-  assert.equal(groups.find(g=>g.name==='BROADSPIRE').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='BROADSPIRE').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='GW RETAIL CONSULTING').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='BROWN BROWN INSURANCE SERVICES, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CAREOREGON, INC.').research.status,'Source-backed');
@@ -841,4 +841,15 @@ test('remaining priority batches preserve PAC/employer boundaries and explicitly
   const usps=groups.find(g=>g.name==='UNITED STATES POSTAL SERVICE');
   assert.equal(usps.individual,2700);
   assert.equal(usps.count,2);
+});
+
+test('post-finish identity audit resolves independently corroborated employer shorthand', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Pennington',employer:'PROPER',occupation:'REAL ESTATE',sector:'Cannabis',committee:'a',amount:100},
+    {type:'individual',name:'Sears',employer:'FIN',occupation:'PRESIDENT',sector:'Technology',committee:'a',amount:200},
+    {type:'individual',name:'Cox',employer:'PIET RETIEF INC',occupation:'OWNER MANAGER',sector:'Services',committee:'a',amount:300}
+  ]);
+  assert.equal(groups.find(g=>g.name==='PROPER BRANDS').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='FINANCIAL INFORMATION NETWORK, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='PIET RETIEF, INC.').research.status,'Source-backed');
 });

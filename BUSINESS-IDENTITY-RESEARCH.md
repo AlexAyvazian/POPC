@@ -343,3 +343,25 @@ CORNELL UNIVERSITY; ST. GABRIEL CHURCH; DEPT OF DEFENSE; IU; UNIVERSITY OF WASHI
 
 The regenerated business-directory queue after these mappings reports **0 priority-unreviewed groups** and **0 single-donor executive priorities**, while preserving all **221,839 underlying transaction records**. Ambiguous researched names remain explicitly visible as **Unresolved** instead of being dropped or guessed.
 
+
+
+## Post-batch unresolved-identity audit — November 25, 2026
+
+This audit supersedes the earlier finish-state unresolved count. The repository actually contained **140 identity definitions marked Unresolved**, not 139.
+
+Every one of those 140 definitions was re-audited. The corrected identity-definition state is now:
+
+- **1160 Source-backed**
+- **37 Unresolved**
+- **11 Reviewed label**
+- **1208 total researched identity definitions**
+
+The reduction from 140 unresolved definitions to 37 came from correcting source-backed PACs and employers that had been held to an unnecessarily strict legal-suffix standard, separating generic/self/composite/internal labels into the non-identity **Reviewed label** status, and consolidating the two Brown Brown Insurance reported variants after donor/address evidence established the same local agency. No transaction rows were deleted by these identity-status corrections.
+
+The remaining 37 definitions are the cases for which the audit still did not establish one sufficiently supported reusable identity. They remain visible and intentionally unmerged:
+
+ACCENTURE INC.; DELAWARE NORTH COMPANIES, INC.; NEP; NEP INC.; SHARON PATRICK & ASSOCIATES, INC. / SHARON PATRICK ASSOCIATES, INC.; JRJ CONSTRUCTION; JRJ CONSTRUCTION LLC; ARBELLA CONSULTING; NW INTERNATIONAL WOMEN'S CONFERENCE; TJ FARMS LLC; BRIDGE 360 ADVISORY; SILVER RABBIT; ROCKET LLC; TXP SERVICES; GNE; JD DOVE FARMS; UNITED GENERAL BAKERIES; SKYLIGHT; REDBERRI INNOVATION; LALIEWORKS CREATIVE CONTENT SERVICES; KERMITSPAD; FOX HOLLOW VENTURES LLC; RSS-TGP; XXV HOLDINGS INC; CAMBIA; ELM PARK GROUP; MCCREERY INC.; BST; BHFS; COLUMBIA; PPI; VA; CSU; C3 LEADERSHIP; USG; ST. GABRIEL CHURCH; IU
+
+Examples of why these remain unresolved include non-unique acronyms (for example NEP, GNE, BST, PPI, VA, CSU, USG and IU), same-name legal entities in multiple jurisdictions, generic or truncated employer strings, and donor records that lack enough location/entity context to choose safely among plausible organizations.
+
+This audit also corrected stale regression assertions that still expected already-resolved identities to remain Unresolved. The browser cache chain for the business-directory identity data was bumped so the transaction-page directory loads the corrected research state.
