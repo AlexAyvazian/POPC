@@ -1,3 +1,4 @@
+import {renderFundingStory} from "./funding-story.js?v=1";
 import {config,normalize,occupationGroup,personalCategories,loadCommittee} from "./research-data.js?v=5";
 import {connectedBusinessName} from "./business-directory-data.js?v=55";
 (()=>{"use strict";
@@ -37,7 +38,7 @@ function aggregateDonors(rows,mode){
 }
 function aggregateSectors(rows){
  const m=new Map();
- for(const r of rows){let v=m.get(r.sector);if(!v){v={name:r.sector,key:r.sector,value:0,individual:0,organization:0,count:0};m.set(r.sector,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
+ for(const r of rows){let v=m.get(r.sector);if(!v){v={name:r.sector==="Personal status / unreported employer"?"Donors without an identified business sector":r.sector,key:r.sector,value:0,individual:0,organization:0,count:0};m.set(r.sector,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
  return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
 }
 function donut(host,items,onSelect,active,label){host.replaceChildren();const positive=items.filter(x=>x.value>0),den=sum(positive,"value");if(!den){host.textContent="No positive receipts in this selection.";return;}const wrap=document.createElement("div");wrap.className="ca-chart";const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 220 220");svg.setAttribute("class","ca-donut");svg.setAttribute("role","group");svg.setAttribute("aria-label",label);const radius=84,circ=2*Math.PI*radius;let off=0;const legend=document.createElement("div");legend.className="ca-legend";
@@ -46,26 +47,26 @@ const b=document.createElement(onSelect?"button":"div");if(onSelect){b.type="but
 const text=document.createElementNS(svg.namespaceURI,"text");text.setAttribute("x",110);text.setAttribute("y",105);text.setAttribute("text-anchor","middle");text.setAttribute("font-size","11");text.textContent="TOTAL";svg.append(text);const val=document.createElementNS(svg.namespaceURI,"text");val.setAttribute("x",110);val.setAttribute("y",124);val.setAttribute("text-anchor","middle");val.setAttribute("font-size","12");val.setAttribute("font-weight","700");val.textContent=new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",notation:"compact",maximumFractionDigits:2}).format(den/100);svg.append(val);wrap.append(svg,legend);host.append(wrap);
 const nonPositive=items.filter(x=>x.value<=0);if(nonPositive.length){const p=document.createElement("p");p.className="ca-muted";p.textContent="Zero or negative groups are excluded from pie slices; amounts remain in the tables.";host.append(p);}}
 function chooseCommittee(key){selected=selected===key?"":key;$("ca-committee").value=selected;sectorSelected="";page=0;render();}
-function chooseSector(key){sectorSelected=sectorSelected===key?"":key;$("ca-sector").value=sectorSelected;page=0;renderOrganizations();}
+function chooseSector(key){$("ca-donor-details").open=true;sectorSelected=sectorSelected===key?"":key;$("ca-sector").value=sectorSelected;page=0;renderOrganizations();}
 function activeCommittees(){return selected?config.filter(x=>x.key===selected):config;}
 function render(){const active=activeCommittees(),ic=sum(active,"individual"),oc=sum(active,"organization"),total=ic+oc,all=sum(config,"individual")+sum(config,"organization");
 $("ca-total").textContent=money(total);$("ca-scope").textContent=selected?active[0].name:"All eight committees";$("ca-ind").textContent=money(ic);$("ca-org").textContent=money(oc);$("ca-count").textContent=num(sum(active,"individualCount")+sum(active,"organizationCount"));
 const ordered=[...config].sort((a,b)=>gross(b)-gross(a));donut($("ca-committee-pie"),ordered.map((x,i)=>({name:x.name,key:x.key,value:gross(x),color:committeeColors[x.key]})),x=>chooseCommittee(x.key),selected,"Combined receipts by committee");
-donut($("ca-source-pie"),[{name:"Individual receipts",key:"ind",value:ic,color:indColor},{name:"PAC / organization receipts",key:"org",value:oc,color:orgColor}],null,"","Receipt sources");
+donut($("ca-source-pie"),[{name:"Contributions from people",key:"ind",value:ic,color:indColor},{name:"Contributions from PACs / organizations",key:"org",value:oc,color:orgColor}],null,"","Receipt sources");
 const bars=$("ca-bars");bars.replaceChildren();const key=document.createElement("div");key.className="ca-bar-key";key.innerHTML='<span><i class="ca-swatch" style="background:'+indColor+'"></i>Individual</span><span><i class="ca-swatch" style="background:'+orgColor+'"></i>PAC / organization</span>';bars.append(key);const max=gross(ordered[0]);for(const x of ordered){const b=document.createElement("button");b.type="button";b.className="ca-bar"+(x.key===selected?" ca-selected":"");b.setAttribute("aria-pressed",String(x.key===selected));b.title=x.name+": "+money(gross(x));b.innerHTML='<span>'+esc(x.name)+'</span><span class="ca-track"><span style="background:'+indColor+';width:'+100*x.individual/max+'%"></span><span style="background:'+orgColor+';width:'+100*x.organization/max+'%"></span></span><span class="ca-bar-amount">'+money(gross(x))+'</span>';b.addEventListener("click",()=>chooseCommittee(x.key));bars.append(b);}
 $("ca-committee-rows").innerHTML=ordered.map(x=>'<tr><td><a href="'+x.slug+'.html">'+esc(x.name)+'</a></td><td class="jvf-money">'+money(x.individual)+'</td><td class="jvf-money">'+money(x.organization)+'</td><td class="jvf-money"><strong>'+money(gross(x))+'</strong></td><td>'+pct(gross(x),all)+'</td></tr>').join("")+'<tr><th scope="row">Combined total</th><td>'+money(sum(config,"individual"))+'</td><td>'+money(sum(config,"organization"))+'</td><td><strong>'+money(all)+'</strong></td><td>100.00%</td></tr>';
-renderOrganizations();}
+renderOrganizations();if(allRecords&&!loadFailures.length)renderFundingStory(allRecords,selected);}
 function renderOrganizations(){
 if(!allRecords){$("ca-org-rows").innerHTML='<tr><td colspan="5">Loading all eight committee datasets…</td></tr>';$("ca-prev").disabled=$("ca-next").disabled=true;return;}
 const records=selected?allRecords.filter(x=>x.committee===selected):allRecords;
-const groups=aggregateSectors(records),opt=$("ca-sector");opt.replaceChildren(new Option("All sectors",""));for(const x of [...groups].sort((a,b)=>a.name.localeCompare(b.name)))opt.add(new Option(x.name,x.name));if(!groups.some(x=>x.name===sectorSelected))sectorSelected="";opt.value=sectorSelected;
+const groups=aggregateSectors(records),opt=$("ca-sector");opt.replaceChildren(new Option("All sectors",""));for(const x of [...groups].sort((a,b)=>a.name.localeCompare(b.name)))opt.add(new Option(x.name,x.key));if(!groups.some(x=>x.key===sectorSelected))sectorSelected="";opt.value=sectorSelected;
 const combinedColored=sequentialItems(groups);
 const combinedColors=new Map(combinedColored.filter(x=>x.value>0).map(x=>[x.name,x.color]));
 donut($("ca-all-sector-pie"),combinedColored,x=>chooseSector(x.key),sectorSelected,"All direct receipts by sector");
 donut($("ca-sector-pie"),sequentialItems(groups.filter(x=>x.organization!==0).map(x=>({...x,value:x.organization}))),x=>{mode="organization";$("ca-mode").value=mode;chooseSector(x.key);},sectorSelected,"Direct organizations by sector");
 donut($("ca-ind-sector-pie"),sequentialItems(groups.filter(x=>x.individual!==0).map(x=>({...x,value:x.individual}))),x=>{mode="individual";$("ca-mode").value=mode;chooseSector(x.key);},sectorSelected,"Individual receipts by employer sector");
 const denominator=sum(groups,"value");
-$("ca-sector-rows").innerHTML=groups.map(x=>'<tr><td><button type="button" class="ca-sector-link" data-sector="'+esc(x.name)+'"><span class="ca-swatch ca-sector-swatch" style="background:'+(combinedColors.get(x.name)||'transparent')+'" aria-hidden="true"></span>'+esc(x.name)+'</button></td><td class="jvf-money">'+money(x.organization)+'</td><td class="jvf-money">'+money(x.individual)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td><td>'+pct(x.value,denominator)+'</td></tr>').join("")+'<tr><th scope="row">'+(loadFailures.length?"Loaded subtotal":"Total")+'</th><td>'+money(sum(groups,"organization"))+'</td><td>'+money(sum(groups,"individual"))+'</td><td><strong>'+money(denominator)+'</strong></td><td>'+(denominator?"100.00%":"—")+'</td></tr>';
+$("ca-sector-rows").innerHTML=groups.map(x=>'<tr><td><button type="button" class="ca-sector-link" data-sector="'+esc(x.key)+'"><span class="ca-swatch ca-sector-swatch" style="background:'+(combinedColors.get(x.name)||'transparent')+'" aria-hidden="true"></span>'+esc(x.name)+'</button></td><td class="jvf-money">'+money(x.organization)+'</td><td class="jvf-money">'+money(x.individual)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td><td>'+pct(x.value,denominator)+'</td></tr>').join("")+'<tr><th scope="row">'+(loadFailures.length?"Loaded subtotal":"Total")+'</th><td>'+money(sum(groups,"organization"))+'</td><td>'+money(sum(groups,"individual"))+'</td><td><strong>'+money(denominator)+'</strong></td><td>'+(denominator?"100.00%":"—")+'</td></tr>';
 for(const b of $("ca-sector-rows").querySelectorAll("button"))b.addEventListener("click",()=>chooseSector(b.dataset.sector));
 $("ca-name-heading").textContent=mode==="organization"?"Company / business":mode==="individual"?"Individual donor":"Reported employer";
 const roleGroups=roleTotals(records);const roleSum=sum(roleGroups,"value"),individualCount=roleGroups.reduce((n,r)=>n+r.count,0);const individualNames=new Set(records.filter(r=>r.type==="individual").map(r=>normalize(r.name||"NOT REPORTED")));
@@ -126,8 +127,9 @@ const results=await Promise.allSettled(config.map(loadCommittee));allRecords=[];
 results.forEach((r,i)=>{if(r.status==="fulfilled"){allRecords.push(...r.value);loadedCommittees++;}else{loadFailures.push(config[i].name+": "+String(r.reason?.message||r.reason));console.error(r.reason);}});
 const expected=sum(config,"individual")+sum(config,"organization"),actual=sum(allRecords,"amount");
 if(!loadFailures.length&&(actual!==expected||allRecords.length!==sum(config,"individualCount")+sum(config,"organizationCount")))loadFailures.push("Combined source reconciliation failed");
-$("ca-status").textContent=loadFailures.length?"PARTIAL DATA: "+loadedCommittees+" of 8 committees loaded. "+loadFailures.join("; "):"All 8 committees reconciled · "+num(allRecords.length)+" direct records";
-if(loadFailures.length){for(const id of ["ca-all-sector-pie","ca-sector-pie","ca-ind-sector-pie","ca-sector-rows","ca-org-rows","ca-role-pie","ca-role-rows","ca-occupation-rows"]){$(id).closest("section")?.classList.add("ca-partial");}}
+$("ca-status").textContent=loadFailures.length?"PARTIAL DATA: "+loadedCommittees+" of 8 committees loaded. "+loadFailures.join("; "):"All eight committees loaded";
+if(loadFailures.length){$("funding-summary").textContent="Funding visuals unavailable: committee data could not be verified.";$("funding-concentration").textContent="Unavailable until all committee data loads.";for(const id of ["ca-all-sector-pie","ca-sector-pie","ca-ind-sector-pie","ca-sector-rows","ca-org-rows","ca-role-pie","ca-role-rows","ca-occupation-rows"]){$(id).closest("section")?.classList.add("ca-partial");}}
 renderOrganizations();
+if(allRecords && !loadFailures.length)renderFundingStory(allRecords,selected);
 }
 start().catch(e=>{$("ca-status").textContent="Dashboard error: "+e.message;console.error(e);});})();

@@ -132,7 +132,9 @@ test('combined page uses one occupation/status table with a dropdown instead of 
   assert.match(html,/Occupation unreported/);
   for (let i=0;i<6;i++) assert.doesNotMatch(html,new RegExp('id="ca-personal-body-'+i+'"'));
   assert.doesNotMatch(html,/id="ca-nonexec-rows"/);
-  assert(html.indexOf('id="ca-money-sources"') < html.indexOf('class="ca-grid"'));
+  assert(html.indexOf('id="funding-title"') < html.indexOf('class="ca-grid"'));
+  assert(html.indexOf('id="ca-money-sources"') > html.indexOf('class="ca-grid"'));
+  assert.match(html,/id="ca-donor-details"/);
   const css=await fs.readFile(new URL('./combined-contributions.css', import.meta.url),'utf8');
   assert.match(css,/\.ca-money-sources\{/);
 });
@@ -141,7 +143,7 @@ test('combined donor table foregrounds company names instead of only PAC titles'
   const html=await fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8');
   const js=await fs.readFile(new URL('./combined-contributions.js', import.meta.url),'utf8');
   assert.match(html,/Companies \/ businesses &amp; PACs/);
-  assert.match(html,/id="ca-name-heading">Company \/ business/);
+  assert.match(html,/id="ca-name-heading"[^>]*>Company \/ business/);
   assert.match(js,/connectedBusinessName\(r\)/);
   assert.match(js,/reportedNames/);
 });
