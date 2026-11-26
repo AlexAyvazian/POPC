@@ -4,10 +4,10 @@
 
   try {
     const paths = [
-      "header-data-0.txt",
-      "header-data-1.txt",
-      "header-data-2.txt",
-      "header-data-3.txt"
+      "images/header-data-0.txt",
+      "images/header-data-1.txt",
+      "images/header-data-2.txt",
+      "images/header-data-3.txt"
     ];
     const parts = await Promise.all(
       paths.map((path) =>

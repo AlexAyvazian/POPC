@@ -23,7 +23,7 @@ on:
       - 'friends-of-schumer-pac.html'
       - 'impact-pac.html'
       - 'smp-pac.html'
-      - 'schumer_remaining_entity_research_COMPLETED.csv'
+      - 'spreadsheets/schumer_remaining_entity_research_COMPLETED.csv'
       - '.github/workflows/business-directory-tests.yml'
   pull_request:
     paths:
@@ -35,7 +35,7 @@ on:
       - 'research-data.js'
       - 'transactions.html'
       - 'combined-contributions.html'
-      - 'schumer_remaining_entity_research_COMPLETED.csv'
+      - 'spreadsheets/schumer_remaining_entity_research_COMPLETED.csv'
       - 'smp-pac.html'
       - 'impact-pac.html'
       - 'friends-of-schumer-pac.html'

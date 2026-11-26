@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 
 test('petition page uses the generated live Change.org screenshot preview', async () => {
   const html = await fs.readFile(new URL('./petition.html', import.meta.url), 'utf8');
-  assert(html.includes('src="petition-change-org-live.png"'));
+  assert(html.includes('src="images/petition-change-org-live.png"'));
   assert(html.includes('class="petition-live-screenshot-link"'));
   assert(html.includes('href="https://www.change.org/putvotersovercorporatedonors"'));
   assert(!html.includes('id="petition-count"'));
@@ -16,8 +16,8 @@ test('scheduled capture workflow refreshes the preview without retriggering itse
   const script = await fs.readFile(new URL('./scripts/capture-petition-preview.py', import.meta.url), 'utf8');
   assert(workflow.includes('cron:'));
   assert(workflow.includes('capture-petition-preview.py'));
-  assert(workflow.includes('petition-change-org-live.png'));
-  assert(!workflow.includes("      - 'petition-change-org-live.png'"));
+  assert(workflow.includes('images/petition-change-org-live.png'));
+  assert(!workflow.includes("      - 'images/petition-change-org-live.png'"));
   assert(script.includes('Verified signatures'));
   assert(script.includes('putvotersovercorporatedonors'));
 });

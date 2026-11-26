@@ -1,6 +1,6 @@
 const byId=id=>document.getElementById(id);
 const form=byId("letter-form"),button=byId("letter-submit"),status=byId("letter-status"),docStatus=byId("letter-document-status");
-const originalUrl="POPC%20-%20OPEN%20LETTER.pdf";
+const originalUrl="letters/POPC%20-%20OPEN%20LETTER.pdf";
 let token="",widget=null,ready=false,busy=false,objectUrl=null,generation=0,sitekey="";
 const tell=(node,msg,error=false)=>{node.textContent=msg;node.dataset.error=String(error)};
 function sync(){button.disabled=!(ready&&token&&!busy);}

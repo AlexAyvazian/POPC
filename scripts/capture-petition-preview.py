@@ -6,7 +6,7 @@ import re
 from playwright.sync_api import sync_playwright
 
 URL = "https://www.change.org/putvotersovercorporatedonors"
-OUT = Path("petition-change-org-live.png")
+OUT = Path("images/petition-change-org-live.png")
 META = Path("petition-change-org-live.json")
 
 TITLE_RE = re.compile(r"Put\s+VOTERS\s+Over\s+Corporate\s+Donors", re.I)

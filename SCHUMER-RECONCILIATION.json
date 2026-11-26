@@ -21,17 +21,17 @@
       "bytes": 6082659,
       "exports": [
         {
-          "file": "FRIENDS OF SCHUMER 11a.csv",
+          "file": "spreadsheets/FRIENDS OF SCHUMER 11a.csv",
           "rows": 25352,
           "overlapWithEarlierFiles": 0
         },
         {
-          "file": "FRIENDS OF SCHUMER 11c.csv",
+          "file": "spreadsheets/FRIENDS OF SCHUMER 11c.csv",
           "rows": 56,
           "overlapWithEarlierFiles": 0
         },
         {
-          "file": "FRIENDS OF SCHUMER-2026-11-25T17_00_13.csv",
+          "file": "spreadsheets/FRIENDS OF SCHUMER-2026-11-25T17_00_13.csv",
           "rows": 12684,
           "overlapWithEarlierFiles": 12684
         }
@@ -58,17 +58,17 @@
       "bytes": 66855,
       "exports": [
         {
-          "file": "IMPACT 11a.csv",
+          "file": "spreadsheets/IMPACT 11a.csv",
           "rows": 27,
           "overlapWithEarlierFiles": 0
         },
         {
-          "file": "IMPACT 11c.csv",
+          "file": "spreadsheets/IMPACT 11c.csv",
           "rows": 258,
           "overlapWithEarlierFiles": 0
         },
         {
-          "file": "IMPACT-2026-11-25T17_02_26.csv",
+          "file": "spreadsheets/IMPACT-2026-11-25T17_02_26.csv",
           "rows": 22,
           "overlapWithEarlierFiles": 22
         }
@@ -100,12 +100,12 @@
           "overlapWithEarlierFiles": 0
         },
         {
-          "file": "SMP 11c.csv",
+          "file": "spreadsheets/SMP 11c.csv",
           "rows": 66,
           "overlapWithEarlierFiles": 0
         },
         {
-          "file": "SMP.csv",
+          "file": "spreadsheets/SMP.csv",
           "rows": 36355,
           "overlapWithEarlierFiles": 36291
         }
