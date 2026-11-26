@@ -76,9 +76,8 @@
 .landing-page .landing-actions{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:12px 0 72px}
 .landing-actions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%}
 .landing-actions-grid .donor-transactions-cta{min-height:72px;width:100%;text-align:center;position:relative;line-height:1.3}
-.landing-actions-grid .donor-transactions-cta:last-child{grid-column:1/-1;width:calc(50% - 8px);justify-self:center}
 .landing-actions-grid button.donor-transactions-cta{font-family:inherit;cursor:default}
-@media(max-width:680px){.landing-actions-grid{grid-template-columns:minmax(0,1fr);gap:12px}.landing-actions-grid .donor-transactions-cta:last-child{grid-column:auto;width:100%}.landing-page .landing-actions{width:calc(100% - 28px)}}
+@media(max-width:680px){.landing-actions-grid{grid-template-columns:minmax(0,1fr);gap:12px}.landing-page .landing-actions{width:calc(100% - 28px)}}
 
 
 /* JEFFRIES VICTORY FUND: bold gold gridded ivory tables. */
