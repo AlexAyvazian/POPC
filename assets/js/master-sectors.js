@@ -234,7 +234,10 @@ export function classifySectorLabel(name,mappedLabel='',globalSectors=new Map(),
   const explicit=canonicalSector('',entry.sector);
   if(!unknownSectorLabel(explicit))return explicit;
  }
- const exact=exactSectorOverrides.get(n)||exactSectorOverrides.get(normalize(entry?.name));
+ const canonical=entry?.status==='Source-backed'?normalize(entry.name):n;
+ const aliasOverrides=entry?.status==='Source-backed'?[entry.name,...(entry.aliases||[])].map(a=>exactSectorOverrides.get(normalize(a))).filter(Boolean):[];
+ const overrideLabels=new Set(aliasOverrides);
+ const exact=overrideLabels.size===1?[...overrideLabels][0]:overrideLabels.size>1?null:exactSectorOverrides.get(n);
  if(exact)return canonicalSector('',exact);
  // Shared direct-receipt hints are loaded once; memo rows never contribute hints.
  const key=hintKey(n,type),shared=masterHints.get(key);
@@ -246,9 +249,9 @@ export function classifySectorLabel(name,mappedLabel='',globalSectors=new Map(),
  const supplied=globalSectors.get(n);
  if(supplied&&!unknownSectorLabel(supplied))return canonicalSector(n,supplied);
  if(mappedLabel&&!unknownSectorLabel(mappedLabel)&&!conflictingHints.has(key))return canonicalSector(n,mappedLabel);
- const researched=sectorFromIdentityScope(n,type);
+ const researched=sectorFromIdentityScope(canonical,type);
  if(researched)return researched;
- return canonicalSector(n,sector(n));
+ return canonicalSector(canonical,sector(canonical));
 }
 export function masterSectorForRecord(record){
  return classifySectorLabel(record.type==='individual'?record.employer:record.name,'',new Map(),record.type);

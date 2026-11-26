@@ -58,3 +58,15 @@ test('Schumer business directory keeps memo-only sectors out of direct-dollar fi
  assert.deepEqual([...groups[0].sectors],['Technology']);
  assert.equal(selectDirectory(groups,{view:'all',sector:'Healthcare'}).length,0);
 });
+
+test('verified aliases receive the same sector as their canonical identity',async()=>{
+ globalThis.fetch=read;await loadMasterSectors();
+ const {businessIdentities}=await import('../data/jeffries/business-identities.js');
+ const {schumerIdentities}=await import('../data/schumer/schumer-identities.js');
+ for(const entry of [...businessIdentities,...schumerIdentities].filter(e=>e.status==='Source-backed'&&e.name)){
+  for(const type of entry.recordTypes?.length?entry.recordTypes:['individual','organization']){
+   const expected=classifySectorLabel(entry.name,'',new Map(),type);
+   for(const alias of entry.aliases)assert.equal(classifySectorLabel(alias,'',new Map(),type),expected,alias+' / '+entry.name+' / '+type);
+  }
+ }
+});
