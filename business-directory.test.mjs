@@ -8,7 +8,8 @@ import {loadResearchRecords, config, classifySectorLabel} from './research-data.
 test('sector classification reuses verified cross-committee and researched identity data before falling back to unconfirmed', () => {
   const global=new Map([['AWAY','Retail & consumer']]);
   assert.equal(classifySectorLabel('AWAY','Sector unconfirmed / further research',global),'Retail & consumer');
-  assert.equal(classifySectorLabel('TRISOLARIS LLC','Sector unconfirmed / further research',new Map()),'Technology');
+  assert.equal(classifySectorLabel('TRISOLARIS LLC','Sector unconfirmed / further research',new Map()),'Energy & utilities');
+  assert.equal(classifySectorLabel('RENAISSANCE TECH CORP','',new Map([['RENAISSANCE TECH CORP','Finance & investment']])),'Finance & investment');
   assert.equal(classifySectorLabel('D.E. SHAW','',new Map()),'Finance & investment');
   assert.equal(classifySectorLabel('GJELAJ LAW','',new Map()),'Legal services');
   assert.equal(classifySectorLabel('STREAM LINE CIRCLE LLC','',new Map()),'Transportation');
