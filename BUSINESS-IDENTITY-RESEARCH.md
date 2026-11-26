@@ -365,3 +365,35 @@ ACCENTURE INC.; DELAWARE NORTH COMPANIES, INC.; NEP; NEP INC.; SHARON PATRICK & 
 Examples of why these remain unresolved include non-unique acronyms (for example NEP, GNE, BST, PPI, VA, CSU, USG and IU), same-name legal entities in multiple jurisdictions, generic or truncated employer strings, and donor records that lack enough location/entity context to choose safely among plausible organizations.
 
 This audit also corrected stale regression assertions that still expected already-resolved identities to remain Unresolved. The browser cache chain for the business-directory identity data was bumped so the transaction-page directory loads the corrected research state.
+
+
+## Deep lookup of the remaining 37 unresolved identities — November 25, 2026
+
+The 37-definition unresolved queue was re-researched using broad live-web searches, official company pages, FEC/SEC records, state-registration-derived records, professional biographies, historical business records and campaign-finance donor context. Parallel's high-effort Research endpoint and Liner's deep-research endpoint were both unavailable because the connected accounts had insufficient research/search credits, so the successful lookup used Parallel Search plus direct source verification.
+
+This pass resolved or reclassified **26 of the 37 definitions**. The researched identity-definition state is now:
+
+- **1176 Source-backed**
+- **11 Unresolved**
+- **19 Reviewed label**
+- **1206 total researched identity definitions**
+
+New source-backed resolutions include Accenture Inc.; Delaware North Companies, Inc.; Patrick Partners, Inc. historical names Sharon Patrick Associates / Sharon Patrick & Associates; Arbella Consulting; Northwest International Women's Conference; Silver Rabbit; Rocket; TXP Services; GNE → Genentech; United General Bakery Inc.; Redberri; LalieWorks Creative Services; Kermit's Pad; XXV Dynasty Holdings Inc.; Cambia Health Solutions, Inc.; McCreery Inc.; BHFS → Brownstein Hyatt Farber Schreck, LLP; and C3 Leadership, LLC.
+
+The following non-unique shorthand labels were moved out of the unresolved-identity count and into **Reviewed label** because the reported string itself does not identify one reusable entity without donor-specific context: BST; COLUMBIA; PPI; VA; CSU; USG; ST. GABRIEL CHURCH; IU.
+
+The remaining **11** specific identity definitions still lack enough evidence to select one employer/entity without guessing:
+
+1. NEP
+2. NEP INC.
+3. JRJ CONSTRUCTION
+4. JRJ CONSTRUCTION LLC
+5. TJ FARMS LLC
+6. BRIDGE 360 ADVISORY
+7. JD DOVE FARMS
+8. SKYLIGHT
+9. FOX HOLLOW VENTURES LLC
+10. RSS-TGP
+11. ELM PARK GROUP
+
+Those remaining records stay visible in the directory and are intentionally unmerged.

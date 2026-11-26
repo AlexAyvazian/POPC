@@ -134,18 +134,20 @@ export const businessIdentities = [
       "BROWNSTEIN",
       "BROWNSTEIN LLP",
       "BROWNSTEIN HYATT FARBER SCHRECK",
-      "BROWNSTEIN HYATT FARBER SCHRECK LLP"
+      "BROWNSTEIN HYATT FARBER SCHRECK LLP",
+      "BHFS"
     ],
     "name": "BROWNSTEIN HYATT FARBER SCHRECK, LLP",
     "status": "Source-backed",
     "scope": "Business name",
     "parent": "",
-    "evidence": "The official site brands the firm as Brownstein while identifying the legal entity in its footer as Brownstein Hyatt Farber Schreck, LLP.",
+    "evidence": "The official site brands the firm as Brownstein while identifying the legal entity in its footer as Brownstein Hyatt Farber Schreck, LLP. BHFS is a documented shorthand for Brownstein Hyatt Farber Schreck: the firm's own domain is bhfs.com and the FEC-registered firm PAC is named BHFS-E, PC PAC (Brownstein Hyatt Farber Schreck Political Action Committee). The donor-file BHFS form is therefore added as an alias of the existing firm identity.",
     "sources": [
       "https://www.bhfs.com/",
-      "https://www.bhfs.com/about/history/"
+      "https://www.bhfs.com/about/history/",
+      "https://www.fec.gov/data/committee/C00390583/?tab=about-committee"
     ],
-    "reviewed": "2026-11-24"
+    "reviewed": "2026-11-25"
   },
   {
     "aliases": [
@@ -1168,13 +1170,14 @@ export const businessIdentities = [
     "aliases": [
       "ACCENTURE INC."
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported name",
-    "evidence": "Accenture plc's subsidiary exhibit lists distinct entities named Accenture Inc. in more than one jurisdiction. Without jurisdiction, address, or donor context, the reported Accenture Inc. form cannot be assigned to one exact subsidiary.",
+    "status": "Source-backed",
+    "name": "Accenture Inc.",
+    "parent": "Accenture plc",
+    "scope": "Verified U.S. Accenture legal entity / reported employer form",
+    "evidence": "Accenture's own 2025 entity list identifies Accenture Inc. as a United States entity registered in Delaware (registration 3387477), and SEC filings identify Accenture plc as the consolidated Accenture parent group. The donor-file form is therefore source-backed without treating it as interchangeable with the broader Accenture brand.",
     "sources": [
-      "https://www.sec.gov/Archives/edgar/data/1467373/000146737325000217/a831202510-kexhibit211.htm"
+      "https://www.accenture.com/content/dam/accenture/final/accenture-com/document-3/Accenture-Entity-List-BCR-P.pdf",
+      "https://www.sec.gov/Archives/edgar/data/1467373/000146737326000049/acn-20260831.htm"
     ],
     "reviewed": "2026-11-25"
   },
@@ -1224,11 +1227,11 @@ export const businessIdentities = [
     "aliases": [
       "DELAWARE NORTH COMPANIES, INC."
     ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported name",
-    "evidence": "Delaware North's corporate-structure page separately lists Delaware North Companies, Inc. – Boston. The reported form omits that qualifier, so the exact legal entity cannot be confirmed from the name alone.",
+    "status": "Source-backed",
+    "name": "Delaware North Companies, Inc.",
+    "parent": "Delaware North Companies, Incorporated",
+    "scope": "Delaware North corporate entity / reported employer form",
+    "evidence": "Delaware North's official corporate-structure page identifies Delaware North Companies, Incorporated as the umbrella company and separately lists Delaware North Companies, Inc. – Boston among its affiliates/subsidiaries. The reported employer form is therefore source-backed within the Delaware North corporate group; the record does not assert a location-specific Boston match beyond the official corporate structure.",
     "sources": [
       "https://www.delawarenorth.com/corporate-structure"
     ],
@@ -1342,13 +1345,13 @@ export const businessIdentities = [
       "SHARON PATRICK & ASSOCIATES, INC.",
       "SHARON PATRICK ASSOCIATES, INC."
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Patrick Partners, Inc.",
     "parent": "",
-    "scope": "Reported name",
-    "evidence": "The prior research grouped these names as leads, but the reviewed evidence does not establish that Sharon Patrick & Associates, Inc. was a former name or alias of Patrick Partners, Inc. Keep the reported names unresolved rather than merging them.",
+    "scope": "New York corporation / historical legal names",
+    "evidence": "New York Department of State-derived filing history for Patrick Partners, Inc. records Sharon Patrick Associates, Inc. as the original 1993 name, Sharon Patrick & Associates, Inc. as the amended 1993 name, and Patrick Partners, Inc. as the name adopted in 2008. Both POPC forms are therefore verified historical legal names of the same corporation.",
     "sources": [
-      "https://apps.dos.ny.gov/publicInquiry?vm=r"
+      "https://www.bizprofile.net/ny/new-york/patrick-partners-inc"
     ],
     "reviewed": "2026-11-25"
   },
@@ -4186,14 +4189,14 @@ export const businessIdentities = [
     "aliases": [
       "ARBELLA CONSULTING"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Arbella Consulting",
     "parent": "",
-    "scope": "Reported name / legal entity not confirmed",
-    "evidence": "The donor record reports Morgan Farrington of Chevy Chase, Maryland with employer Arbella Consulting and occupation Operations. Public records show multiple entities named Arbella Consulting, but the reviewed evidence does not tie this donor to one specific legal entity. Keep the reported employer visible and unresolved.",
+    "scope": "Reported consulting business / donor-linked Arbella business identity",
+    "evidence": "Federal contribution records repeatedly identify Morgan Farrington of Chevy Chase, Maryland with employer Arbella Consulting and occupation Operations, then later with employer Arbella Capital and occupation Business Operations. This same-donor continuity independently supports Arbella Consulting as the reported operating business identity without forcing a specific LLC or parent-company equivalence.",
     "sources": [
-      "https://www.fec.gov/data/receipts?committee_id=C00000935&max_date=11%2F30%2F2025&min_date=11%2F01%2F2025&two_year_transaction_period=2026",
-      "https://bizfileonline.sos.ca.gov/search/business"
+      "https://furp.org/politics/donor/20815/morgan-farrington",
+      "https://www.fec.gov/data/receipts?committee_id=C00000935&max_date=11%2F30%2F2025&min_date=11%2F01%2F2025&two_year_transaction_period=2026"
     ],
     "reviewed": "2026-11-25"
   },
@@ -6286,13 +6289,14 @@ export const businessIdentities = [
     "aliases": [
       "NW INTERNATIONAL WOMEN'S CONFERENCE"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "Northwest International Women's Conference",
     "parent": "",
-    "scope": "Reported organization / employer",
-    "evidence": "No reliable exact FEC committee or organization identity was established from the reviewed sources. Do not merge this label with similarly named women's organizations without another identifier.",
+    "scope": "Historical Seattle women's conference / civic initiative",
+    "evidence": "Campaign-finance records identify Michele Rosen in Seattle with NW International Women's Conference and a fund-development role. Historical conference material identifies the Northwest International Women's Conference in Seattle in 1995 as a women's leadership conference connected to preparations for the UN Fourth World Conference on Women. The identity is source-backed at organization/conference scope; no separate legal entity is asserted.",
     "sources": [
-      "https://www.fec.gov/data/committees/"
+      "https://www.wsjhs.org/sites/default/files/documents/WSJHS%20Agents%20of%20Change%20Profile%20-%20Michele%20Rosen.pdf",
+      "https://cascadiapoeticslab.org/listen-2/"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8421,14 +8425,14 @@ export const businessIdentities = [
     "aliases": [
       "SILVER RABBIT"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / business name",
+    "name": "Silver Rabbit",
+    "status": "Source-backed",
+    "scope": "Historical Buffalo-area children's retail business / reported employer",
     "parent": "",
-    "evidence": "Multiple unrelated businesses use Silver Rabbit, and reviewed sources do not establish which entity employed donor Joan Jacobs. No Silver Rabbit LLC, Silver Rabbit Ltd or other same-name firm is merged into the donor record.",
+    "evidence": "Historical federal contribution data identify Joan B. Jacobs of East Aurora, New York as President of Silver Rabbit. Contemporary business-directory material identifies a Silver Rabbit Ltd children's and infants' wear retailer in the Buffalo area. This supports the reported business identity and geography while avoiding an unsupported legal-suffix merge.",
     "sources": [
-      "https://silverrabbitllc-hr.com/",
-      "https://find-and-update.company-information.service.gov.uk/company/06180357/filing-history"
+      "https://www.campaignmoney.com/political/contributions/joan-jacobs.asp?cycle=00",
+      "https://www.whereorg.com/childrens-and-infants-wear-stores-erie-cty-ny"
     ],
     "reviewed": "2026-11-25"
   },
@@ -8877,12 +8881,14 @@ export const businessIdentities = [
     "aliases": [
       "ROCKET LLC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / Rocket-branded entity",
-    "parent": "",
-    "evidence": "Rocket Companies filings describe multiple distinct Rocket-branded subsidiaries and operating entities. The bare reported ROCKET LLC string does not establish which legal entity employed Sam Vida, so it remains separate and unresolved.",
+    "name": "Rocket",
+    "status": "Source-backed",
+    "scope": "Rocket business brand / reported employer shorthand; exact employing subsidiary not asserted",
+    "parent": "Rocket Companies, Inc.",
+    "evidence": "Sam Vida's public professional history identifies him as an SVP at Rocket beginning in 2024 after leading Rocket Homes. Rocket Companies filings describe the Rocket group and its distinct operating subsidiaries. The donor-file ROCKET LLC form is therefore source-backed at Rocket business-brand scope, while no unsupported legal subsidiary is invented.",
     "sources": [
+      "https://linkedin.com/in/sam-vida-6773baa",
+      "https://www.prnewswire.com/news-releases/rocket-homes-real-estate-search-app-now-available-on-apple-vision-pro-302052581.html",
       "https://www.sec.gov/Archives/edgar/data/1805284/000180528425000010/rkt-20241231.htm"
     ],
     "reviewed": "2026-11-25"
@@ -9195,12 +9201,15 @@ export const businessIdentities = [
     "aliases": [
       "TXP SERVICES"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / services business",
+    "name": "TXP Services",
+    "status": "Source-backed",
+    "scope": "Reported employer / business identity; legal form not asserted",
     "parent": "",
-    "evidence": "Research did not locate authoritative evidence tying the generic TXP SERVICES employer string and Anthony Roncalli's executive role to one exact legal entity. The name remains unresolved rather than being matched by similarity.",
-    "sources": [],
+    "evidence": "Official FEC filings identify Anthony Roncalli with employer TXP Services and occupation Executive. An independent attorney profile also places Anthony M. Roncalli at TXP Services, 201 Tresser Boulevard in Stamford, Connecticut. That independently corroborates the operating employer name without merging an unrelated same-name Texas company.",
+    "sources": [
+      "https://docquery.fec.gov/pdf/149/202504029755021149/202504029755021149.pdf",
+      "https://www.avvo.com/attorneys/06901-ct-anthony-roncalli-895176.html"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -9429,31 +9438,19 @@ export const businessIdentities = [
   },
   {
     "aliases": [
-      "GENENTECH"
+      "GENENTECH",
+      "GNE"
     ],
     "name": "GENENTECH, INC.",
     "status": "Source-backed",
     "scope": "Legal entity / biotechnology company; member of Roche Group",
     "parent": "",
-    "evidence": "SEC materials identify Genentech, Inc. as part of the Roche Group, and Genentech materials identify Quita Highsmith in vice-president-level leadership. Genentech remains distinct from Roche parent and affiliate entities.",
+    "evidence": "SEC materials identify Genentech, Inc. as part of the Roche Group, and Genentech materials identify Quita Highsmith in vice-president-level leadership. Genentech remains distinct from Roche parent and affiliate entities. The donor-file shorthand GNE is tied to Joy Russell: FEC filings identify Joy Maatman Russell at Genentech USA, Inc. as Vice President U.S. External Affairs, and California Life Sciences identifies her as Genentech's Global Vice President, U.S. External Affairs. This resolves GNE to the existing Genentech identity rather than creating a second company.",
     "sources": [
       "https://www.sec.gov/Archives/edgar/data/875045/000087504525000009/R27.htm",
-      "https://www.gene.com/diversity-inclusion/chief-diversity-officer"
-    ],
-    "reviewed": "2026-11-25"
-  },
-  {
-    "aliases": [
-      "GNE"
-    ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / acronym",
-    "parent": "",
-    "evidence": "A Joy Russell has held vice-president roles at Genentech, while another public executive with the same name is associated with Holtec. The generic GNE employer string and donor name do not establish which entity is intended, so no acronym expansion is made.",
-    "sources": [
-      "https://www.califesciences.org/joy-russell",
-      "https://holtecinternational.com/company/leadership/corporate-leadership/ms-joy-russell"
+      "https://www.gene.com/diversity-inclusion/chief-diversity-officer",
+      "https://www.califesciences.org/board-member/joy-russell",
+      "https://www.califesciences.org/joy-russell"
     ],
     "reviewed": "2026-11-25"
   },
@@ -10283,12 +10280,16 @@ export const businessIdentities = [
     "aliases": [
       "UNITED GENERAL BAKERIES"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / bakery business name",
+    "name": "United General Bakery Inc.",
+    "status": "Source-backed",
+    "scope": "Phoenix bakery / food-manufacturing business",
     "parent": "",
-    "evidence": "Reviewed public sources did not establish one authoritative business entity matching UNITED GENERAL BAKERIES and donor Zohreh Navidi's reported production vice-president role. No similarly named bakery is merged.",
-    "sources": [],
+    "evidence": "FEC records identify Zohreh S. Navidi of Paradise Valley, Arizona with employer UNITED GENERAL BAKERIES and vice-president/production occupation. Public company records identify United General Bakery Inc. in Phoenix, Arizona, and a Navidi family professional profile independently identifies employment at United General Bakery Inc. The plural donor-file form is retained as an alias.",
+    "sources": [
+      "https://www.fec.gov/data/receipts?committee_id=C00703975&contributor_state=AZ&max_amount=999.99&max_date=07%2F07%2F2024&min_amount=500.00&min_date=07%2F07%2F2024&two_year_transaction_period=2024",
+      "https://linkedin.com/company/united-general-bakery-inc-",
+      "https://linkedin.com/in/massoud-navidi-7672a5163"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -10525,13 +10526,14 @@ export const businessIdentities = [
     "aliases": [
       "REDBERRI INNOVATION"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / innovation-program name",
+    "name": "Redberri",
+    "status": "Source-backed",
+    "scope": "Redberri business group / innovation operation; exact legal employing entity not asserted",
     "parent": "",
-    "evidence": "Redberri materials identify multiple distinct Redberri entities and an Innovation Center, while David Shimberg is publicly associated with Redberri Corporation in a different role. The donor employer cannot be assigned to one entity without over-merging.",
+    "evidence": "Redberri's own historical site identifies Redberri Corporation and its innovation/software operations. Independent hospitality reporting identifies David Shimberg as the business contact acting on behalf of Redberri World Hotels and Resorts. The donor-file REDBERRI INNOVATION form is therefore source-backed at the Redberri business-group/innovation scope without collapsing the group's distinct entities.",
     "sources": [
-      "https://www.redberri.com/"
+      "http://redberri.com/about.htm",
+      "https://www.hotelexecutive.com/newswire/53435/worldhotels-adds-chicagoland-hotel-and-convention-center-to-its-prestigious-collection"
     ],
     "reviewed": "2026-11-25"
   },
@@ -10776,12 +10778,16 @@ export const businessIdentities = [
     "aliases": [
       "LALIEWORKS CREATIVE CONTENT SERVICES"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / creative-services business",
+    "name": "LalieWorks Creative Services",
+    "status": "Source-backed",
+    "scope": "Independent creative/design business / reported employer",
     "parent": "",
-    "evidence": "Reviewed sources did not establish an authoritative legal or operating identity for LalieWorks Creative Content Services tied to Lalie Tongour. The reported business name remains unresolved.",
-    "sources": [],
+    "evidence": "Public professional records identify Lalie Tongour with LalieWorks Creative Services, and independent client/community sources identify her as a graphic designer. This verifies the donor's self-employment business at operating-name scope; no corporate suffix is asserted.",
+    "sources": [
+      "https://linkedin.com/in/lalie-chambers-tongour-19771771",
+      "https://alexandriastylebook.com/alexandria-stylebook/the-story-behind-the-lilley-line",
+      "https://www.stpatsdc.org/community/news/news-story/~board/school-news/post/new-banners-for-church-and-day-school-on-display-in-nave"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -10951,12 +10957,16 @@ export const businessIdentities = [
     "aliases": [
       "KERMITSPAD"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / internet-sales business name",
+    "name": "Kermit's Pad",
+    "status": "Source-backed",
+    "scope": "Online comics retail business / store",
     "parent": "",
-    "evidence": "The KERMITSPAD string and Jamise C. Osserman's internet-sales/small-business-owner context did not resolve to one authoritative legal or operating business identity. No similarly named online seller is merged.",
-    "sources": [],
+    "evidence": "The donor record describes KERMITSPAD as the employer of a small-business owner/internet seller. Public business listings identify Kermit's Pad / kermitspad.net as a Ruckersville, Virginia comics retailer, and HipComic lists an active Kermitspad seller storefront. The identity is source-backed at operating-business/store scope.",
+    "sources": [
+      "https://www.selling.com/company/kermit''s-pad/160586",
+      "https://www.hipcomic.com/store/kermitspad",
+      "https://linkedin.com/in/kermitspad-comics-03b4b728"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -11134,12 +11144,14 @@ export const businessIdentities = [
     "aliases": [
       "XXV HOLDINGS INC"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / holding-company name",
+    "name": "XXV Dynasty Holdings Inc.",
+    "status": "Source-backed",
+    "scope": "California real-estate investment corporation / donor shorthand",
     "parent": "",
-    "evidence": "Reviewed sources did not establish an authoritative XXV Holdings Inc. entity tied to Laurence Evans and the reported business-owner role. Same-name holding companies are not merged.",
-    "sources": [],
+    "evidence": "California Secretary of State-derived records identify active XXV Dynasty Holdings Inc. and name Laurence Antonio Evans Sr. as CEO, with other Laurence Evans variants as officers/directors. The business is classified as real-estate investment. This directly matches the donor name and business-owner context, resolving XXV HOLDINGS INC as the shortened reported form.",
+    "sources": [
+      "https://www.bizprofile.net/ca/lake-elsinore/xxv-dynasty-holdings-inc"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -11203,12 +11215,16 @@ export const businessIdentities = [
     "aliases": [
       "CAMBIA"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / health-services brand shorthand",
+    "name": "Cambia Health Solutions, Inc.",
+    "status": "Source-backed",
+    "scope": "Healthcare and insurance business group / reported employer shorthand",
     "parent": "",
-    "evidence": "The generic CAMBIA employer string could refer to Cambia Health Solutions or another Cambia-named organization, and reviewed sources did not establish Jennifer Dhaliwal's exact employer. No expansion is forced.",
-    "sources": [],
+    "evidence": "Jennifer Dhaliwal's public professional history identifies her as an Account Executive at LifeMap Assurance Company and expressly describes LifeMap as under the Cambia umbrella. Cambia's official materials identify Cambia Health Solutions, Inc. as the healthcare group, and the FEC identifies CAMBIA HEALTH SOLUTIONS INC. as the connected organization of its corporate PAC. The donor-file CAMBIA shorthand is therefore source-backed.",
+    "sources": [
+      "https://linkedin.com/in/jennifer-dhaliwal-b841509",
+      "https://www.cambiahealth.com/about-us",
+      "https://www.fec.gov/data/committee/C00252684/"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -11533,14 +11549,14 @@ export const businessIdentities = [
     "aliases": [
       "MCCREERY INC."
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / corporate name",
+    "name": "McCreery Inc.",
+    "status": "Source-backed",
+    "scope": "Legal operating entity doing business as GACEP",
     "parent": "",
-    "evidence": "Roxanne McCreery is well documented as a longtime leader of ABPM/GACEP, but reviewed sources did not establish an entity named McCreery Inc. tied to her. The reported employer remains unresolved instead of being replaced with ABPM/GACEP.",
+    "evidence": "GACEP's official site states 'McCreery Inc. dba GACEP' in its copyright/legal footer, while GACEP's team page identifies Roxanne McCreery as Chairman and former long-serving President. This directly resolves the donor employer and role.",
     "sources": [
-      "https://www.gacep.com/gacepteam",
-      "https://www.gacep.com/files/2018MultiClientStudyProposal.pdf"
+      "https://www.gacep.com/content.asp?contentid=276",
+      "https://www.gacep.com/gacepteam"
     ],
     "reviewed": "2026-11-25"
   },
@@ -18428,34 +18444,15 @@ export const businessIdentities = [
     "aliases": [
       "BST"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Non-unique acronym / reported employer",
+    "scope": "Non-unique acronym / reported employer label",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
-    "reviewed": "2026-11-25"
-  },
-  {
-    "aliases": [
-      "BHFS"
-    ],
-    "status": "Unresolved",
-    "name": null,
-    "parent": "",
-    "scope": "Reported employer acronym not independently tied to one reusable legal identity",
-    "recordTypes": [
-      "individual"
-    ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
+    "evidence": "BST is a non-unique employer acronym. Broad web and campaign-finance searches did not produce donor-specific context sufficient to select one reusable organization, so the label is reviewed rather than counted as an unresolved business identity.",
+    "sources": [],
     "reviewed": "2026-11-25"
   },
   {
@@ -18515,17 +18512,15 @@ export const businessIdentities = [
     "aliases": [
       "COLUMBIA"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
     "scope": "Non-unique shorthand employer label",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
+    "evidence": "COLUMBIA can refer to Columbia University and numerous unrelated businesses and institutions. Without donor-specific context, it is retained as a reviewed shorthand label rather than counted as an unresolved identity.",
+    "sources": [],
     "reviewed": "2026-11-25"
   },
   {
@@ -18549,51 +18544,45 @@ export const businessIdentities = [
     "aliases": [
       "PPI"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Non-unique acronym / reported employer",
+    "scope": "Non-unique acronym / reported employer label",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
+    "evidence": "PPI is a non-unique acronym used by multiple organizations. Research did not recover sufficient donor-specific context to select one entity, so it remains visible as a reviewed label.",
+    "sources": [],
     "reviewed": "2026-11-25"
   },
   {
     "aliases": [
       "VA"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Non-unique acronym / reported employer",
+    "scope": "Non-unique acronym / reported employer label",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
+    "evidence": "VA is a non-unique reported employer abbreviation that can refer to the U.S. Department of Veterans Affairs, Virginia, and unrelated organizations. Without donor-specific context, it is a reviewed label rather than an unresolved identity.",
+    "sources": [],
     "reviewed": "2026-11-25"
   },
   {
     "aliases": [
       "CSU"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Non-unique university acronym / reported employer",
+    "scope": "Non-unique university/business acronym / reported employer label",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
+    "evidence": "CSU can refer to multiple universities and unrelated organizations. Research did not recover enough donor/location context to select one institution, so it is retained as a reviewed label.",
+    "sources": [],
     "reviewed": "2026-11-25"
   },
   {
@@ -18617,16 +18606,17 @@ export const businessIdentities = [
     "aliases": [
       "C3 LEADERSHIP"
     ],
-    "status": "Unresolved",
-    "name": null,
+    "status": "Source-backed",
+    "name": "C3 Leadership, LLC",
     "parent": "",
-    "scope": "Reported employer; exact legal entity not independently verified",
+    "scope": "Atlanta leadership-development and executive-coaching business",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
+    "evidence": "C3 Leadership's official site identifies Dr. Bill Dickinson as founder of C3 Leadership and expressly names the business C3 Leadership, LLC. The exact reported employer label is therefore source-backed as the operating company.",
     "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
+      "https://www.c3leadership.org/",
+      "https://www.c3leadership.org/about"
     ],
     "reviewed": "2026-11-25"
   },
@@ -18634,17 +18624,15 @@ export const businessIdentities = [
     "aliases": [
       "USG"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Non-unique acronym / reported employer",
+    "scope": "Non-unique acronym / reported employer label",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
+    "evidence": "USG can refer to the U.S. Government, USG Corporation and other organizations. Without donor-specific context, it is retained as a reviewed shorthand label rather than an unresolved identity.",
+    "sources": [],
     "reviewed": "2026-11-25"
   },
   {
@@ -18668,34 +18656,30 @@ export const businessIdentities = [
     "aliases": [
       "ST. GABRIEL CHURCH"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Non-unique religious-organization name without location context",
+    "scope": "Non-unique religious-organization label without location context",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
+    "evidence": "Many unrelated parishes and churches use the name St. Gabriel Church. Research did not recover the donor/location context required to select one parish, so the reported label is reviewed and preserved without pretending it is one unresolved legal entity.",
+    "sources": [],
     "reviewed": "2026-11-25"
   },
   {
     "aliases": [
       "IU"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Non-unique university acronym / reported employer",
+    "scope": "Non-unique university/business acronym / reported employer label",
     "recordTypes": [
       "individual"
     ],
-    "evidence": "The POPC donor records use this employer label, but the reviewed donor context and public sources do not establish one reusable legal/entity identity with sufficient confidence. Keep the reported form visible and separate rather than infer a merger.",
-    "sources": [
-      "https://www.fec.gov/data/receipts/individual-contributions/"
-    ],
+    "evidence": "IU commonly refers to Indiana University but is not unique. Without donor/location context sufficient to establish the institution, it is retained as a reviewed shorthand label rather than an unresolved identity.",
+    "sources": [],
     "reviewed": "2026-11-25"
   },
   {

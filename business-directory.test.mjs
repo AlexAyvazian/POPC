@@ -156,7 +156,7 @@ test('Bloomberg parent remains context, not an aggregation key', () => {
   assert(lp);
   assert.equal(lp.research.parent,'Bloomberg Inc.');
   assert(groups.some(g=>g.name==='BLOOMBERG INC.'));
-  assert.equal(groups.find(g=>g.name==='ARBELLA CONSULTING').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='ARBELLA CONSULTING').research.status,'Source-backed');
 });
 
 test('researched aliases merge while subsidiaries, brands and unresolved names stay separate', () => {
@@ -186,7 +186,7 @@ test('researched aliases merge while subsidiaries, brands and unresolved names s
   assert.equal(groups.filter(g=>g.research?.parent==='Warner Music Group Corp.').length,2);
 
   assert.equal(groups.find(g=>g.name==='ACCENTURE').research.scope,'Business group / brand');
-  assert.equal(groups.find(g=>g.name==='ACCENTURE INC.').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='ACCENTURE INC.').research.status,'Source-backed');
 
   assert.equal(groups.find(g=>g.name==='COINBASE').research.parent,'Coinbase Global, Inc.');
   assert.equal(groups.find(g=>g.name==='COINBASE, INC.').research.parent,'Coinbase Global, Inc.');
@@ -197,7 +197,7 @@ test('researched aliases merge while subsidiaries, brands and unresolved names s
   assert.notEqual(groups.find(g=>g.name==='SIEMENS').key,groups.find(g=>g.name==='SIEMENS CORPORATION').key);
 
   assert.equal(groups.find(g=>g.name==='DELAWARE NORTH').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='DELAWARE NORTH COMPANIES, INC.').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='DELAWARE NORTH COMPANIES, INC.').research.status,'Source-backed');
 
   assert(directoryCSV(groups).includes('https://adviserinfo.sec.gov/firm/summary/135986'));
 });
@@ -377,7 +377,7 @@ test('fifth executive-priority batch separates exact entities from brands and un
   assert.equal(groups.find(g=>g.name==='CHELSEA PIERS').research.scope,'Sports and recreation business group / brand');
   assert.equal(groups.find(g=>g.name==='EXXONMOBIL').research.scope,'Energy business group / brand; exact employing legal entity not established');
   assert.equal(groups.find(g=>g.name==='KIELOCH CONSULTING').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='SILVER RABBIT').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='SILVER RABBIT').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='SUPER NICHE').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='LONE PINE CAPITAL LLC').research.status,'Source-backed');
 });
@@ -412,7 +412,7 @@ test('seventh executive-priority batch resolves contextual acronyms without forc
     {type:'individual',name:'Frymoyer',employer:'MEMA',occupation:'VICE PRESIDENT PUBLIC POLICY',sector:'Manufacturing',committee:'a',amount:600}
   ]);
   assert.equal(groups.find(g=>g.name==='INITIATIVE FOR A COMPETITIVE INNER CITY, INC.').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='ROCKET LLC').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='ROCKET').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='INNOVATIONS HEALTH SYSTEMS, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='THE POSSIBLE ZONE').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='DIGITAL CITIZENS ALLIANCE').research.status,'Source-backed');
@@ -432,7 +432,7 @@ test('eighth executive-priority batch keeps ambiguous names separate from suppor
   ]);
   assert.equal(groups.find(g=>g.name==='KILLER MEXICAN MANAGEMENT, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MARYSIA, LLC').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='TXP SERVICES').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='TXP SERVICES').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='BRUNSWICK GROUP').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='ASCEND LEARNING, INC.').research.scope,'Brooklyn charter-school nonprofit organization');
   assert.equal(groups.find(g=>g.name==='COASTAL CONSTRUCTION').research.scope,'Florida construction business group / brand');
@@ -449,7 +449,7 @@ test('ninth executive-priority batch resolves organizations while retaining ambi
     {type:'individual',name:'Landau',employer:'PENN AVENUE',occupation:'PARTNER',sector:'Lobbying',committee:'a',amount:500},
     {type:'individual',name:'Holoway',employer:'SOLO FUNDS',occupation:'CEO',sector:'Finance',committee:'a',amount:600}
   ]);
-  assert.equal(groups.find(g=>g.name==='GNE').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='GENENTECH, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='HOLT HOSPITALITY, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='LEVERAGED FOUNDATION').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='MILLENNIUM MANAGEMENT LLC').research.status,'Source-backed');
@@ -506,7 +506,7 @@ test('twelfth executive-priority batch resolves exact employers while keeping ge
     {type:'individual',name:'Darrah',employer:'PC DEVELOPMENT GROUP INC.',occupation:'BIZ OWNER',sector:'Real Estate',committee:'a',amount:500},
     {type:'individual',name:'Pointer',employer:'NOEL POINTER FOUNDATION INC',occupation:'FOUNDER/DIRECTOR',sector:'Nonprofit',committee:'a',amount:600}
   ]);
-  assert.equal(groups.find(g=>g.name==='UNITED GENERAL BAKERIES').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='UNITED GENERAL BAKERY INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='SKYLIGHT').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='FINANCIAL INFORMATION NETWORK, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL COUNCIL ON COMPENSATION INSURANCE, INC.').research.status,'Source-backed');
@@ -560,7 +560,7 @@ test('fifteenth executive-priority batch records role conflicts and supported sp
     {type:'individual',name:'Carpenter',employer:'CANTEBURY CAPITAL INC.',occupation:'OWNER',sector:'Finance',committee:'a',amount:500},
     {type:'individual',name:'Silver',employer:'CLAYMONT SOC.',occupation:'EXEC. DIRECTOR',sector:'Nonprofit',committee:'a',amount:600}
   ]);
-  assert.equal(groups.find(g=>g.name==='CAMBIA').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='CAMBIA HEALTH SOLUTIONS, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='EUCLID SYSTEMS CORPORATION').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='ELM PARK GROUP').research.status,'Unresolved');
   assert.equal(groups.find(g=>g.name==='PRECISION AUTO GLASS').research.status,'Source-backed');
@@ -583,7 +583,7 @@ test('sixteenth executive-priority batch consolidates Raben shorthand and preser
   assert.equal(groups.find(g=>g.name==='ADVANCED SCIENTIFIC CONCEPTS, LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CALVERT SYSTEMS ENGINEERING, INCORPORATED').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='ORBIT MOVERS & ERECTORS, INC.').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='MCCREERY INC.').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='MCCREERY INC.').research.status,'Source-backed');
 });
 
 
@@ -852,4 +852,20 @@ test('post-finish identity audit resolves independently corroborated employer sh
   assert.equal(groups.find(g=>g.name==='PROPER BRANDS').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='FINANCIAL INFORMATION NETWORK, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='PIET RETIEF, INC.').research.status,'Source-backed');
+});
+
+
+test('deep unresolved-identity lookup resolves documented companies and separates non-unique labels', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'Russell',employer:'GNE',occupation:'VICE PRESIDENT',sector:'Healthcare',committee:'a',amount:100},
+    {type:'individual',name:'Dhaliwal',employer:'CAMBIA',occupation:'ACCOUNT EXECUTIVE',sector:'Healthcare',committee:'a',amount:200},
+    {type:'individual',name:'McCreery',employer:'MCCREERY INC.',occupation:'CHAIRMAN',sector:'Services',committee:'a',amount:300},
+    {type:'individual',name:'Evans',employer:'XXV HOLDINGS INC',occupation:'BUSINESS OWNER',sector:'Real Estate',committee:'a',amount:400},
+    {type:'individual',name:'Generic',employer:'CSU',occupation:'STAFF',sector:'Education',committee:'a',amount:500}
+  ]);
+  assert.equal(groups.find(g=>g.name==='GENENTECH, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='CAMBIA HEALTH SOLUTIONS, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='MCCREERY INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='XXV DYNASTY HOLDINGS INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='CSU').research.status,'Reviewed label');
 });
