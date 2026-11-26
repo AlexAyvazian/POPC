@@ -1,5 +1,5 @@
 import {config,normalize,occupationGroup,personalCategories,loadCommittee} from "./research-data.js?v=5";
-import {identifyName} from "./business-directory-data.js?v=54";
+import {connectedBusinessName} from "./business-directory-data.js?v=55";
 (()=>{"use strict";
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
 // Chart colors sampled from the supplied palette, converted to sRGB.
@@ -25,8 +25,8 @@ function aggregateDonors(rows,mode){
  const m=new Map();
  for(const r of rows){
    if(mode==="organization"&&r.type!=="organization"||mode!=="organization"&&r.type!=="individual")continue;
-   const identity=mode==="organization"?identifyName(r):null;
-   const key=normalize(mode==="organization"?(identity?.name||r.name||"NOT REPORTED"):mode==="employer"?r.employer||"NOT REPORTED":r.name||"NOT REPORTED");
+   const businessName=mode==="organization"?connectedBusinessName(r):null;
+   const key=normalize(mode==="organization"?(businessName||r.name||"NOT REPORTED"):mode==="employer"?r.employer||"NOT REPORTED":r.name||"NOT REPORTED");
    let v=m.get(key);if(!v){v={name:key,value:0,count:0,committees:new Map(),sectors:new Set(),employers:new Set(),occupations:new Set(),reportedNames:new Set(),roleDetails:new Map()};m.set(key,v);}
    v.value+=r.amount;v.count++;v.committees.set(r.committee,(v.committees.get(r.committee)||0)+r.amount);
    v.sectors.add(r.sector);
