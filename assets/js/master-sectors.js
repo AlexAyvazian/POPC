@@ -228,7 +228,9 @@ export async function loadMasterSectors(){
 export function classifySectorLabel(name,mappedLabel='',globalSectors=new Map(),type='*'){
  const n=normalize(name);
  if(!n||status.test(n))return "Personal status / unreported employer";
- const entry=lookupIdentity(n,type);
+ const matched=lookupIdentity(n,type);
+ const canonicalEntry=matched?.status==='Source-backed'?lookupIdentity(matched.name,type):null;
+ const entry=canonicalEntry?.status==='Source-backed'&&normalize(canonicalEntry.name)===normalize(matched.name)?canonicalEntry:matched;
  if(entry?.status==='Unresolved')return "Sector unresolved / ambiguous";
  if(entry?.status==='Source-backed'&&entry.sector){
   const explicit=canonicalSector('',entry.sector);
