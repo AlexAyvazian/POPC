@@ -8,7 +8,7 @@ const root=process.cwd(), rules=new Map((await fs.readFile('_redirects','utf8'))
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.webp':'image/webp','.pdf':'application/pdf'};
 const server=http.createServer(async(req,res)=>{
  const u=new URL(req.url,'http://localhost');
- if(u.pathname==='/api/letter'){res.setHeader('Content-Type','application/json');res.end(JSON.stringify({count:0,signatures:[],archive:[],ready:false}));return;}
+ if(u.pathname==='/api/letter'){res.setHeader('Content-Type','application/json');res.end(JSON.stringify({count:0,signatures:[],archive:[],ready:false,next:null,snapshot:0,sitekey:''}));return;}
  const red=rules.get(u.pathname);if(red){res.writeHead(301,{Location:red+u.search});res.end();return;}
  let p=decodeURIComponent(u.pathname).replace(/^\//,'')||'index.html';
  if(!path.extname(p))p+='.html';
