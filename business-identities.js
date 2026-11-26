@@ -1328,30 +1328,17 @@ export const businessIdentities = [
   {
     "aliases": [
       "PATRICK PARTNERS",
-      "PATRICK PARTNERS, INC."
-    ],
-    "name": "Patrick Partners, Inc.",
-    "status": "Source-backed",
-    "scope": "Legal entity / business name",
-    "parent": "",
-    "evidence": "Sharon Patrick is reported as president of Patrick Partners in the donor records. New York entity records identify Patrick Partners, Inc.; the suffixless form is retained as the business-name form for that corporation.",
-    "sources": [
-      "https://apps.dos.ny.gov/publicInquiry?vm=r",
-      "https://www.bizprofile.net/ny/new-york/patrick-partners-inc"
-    ],
-    "reviewed": "2026-11-25"
-  },
-  {
-    "aliases": [
+      "PATRICK PARTNERS, INC.",
       "SHARON PATRICK & ASSOCIATES, INC.",
       "SHARON PATRICK ASSOCIATES, INC."
     ],
-    "status": "Source-backed",
     "name": "Patrick Partners, Inc.",
+    "status": "Source-backed",
+    "scope": "New York corporation / current and historical legal names",
     "parent": "",
-    "scope": "New York corporation / historical legal names",
-    "evidence": "New York Department of State-derived filing history for Patrick Partners, Inc. records Sharon Patrick Associates, Inc. as the original 1993 name, Sharon Patrick & Associates, Inc. as the amended 1993 name, and Patrick Partners, Inc. as the name adopted in 2008. Both POPC forms are therefore verified historical legal names of the same corporation.",
+    "evidence": "Sharon Patrick is reported as president of Patrick Partners in donor records. New York Department of State-derived filing history identifies Patrick Partners, Inc. and records Sharon Patrick Associates, Inc. as the original 1993 name, Sharon Patrick & Associates, Inc. as the amended 1993 name, and Patrick Partners, Inc. as the name adopted in 2008. The suffixless Patrick Partners form and both Sharon Patrick historical forms are retained as aliases of the same corporation.",
     "sources": [
+      "https://apps.dos.ny.gov/publicInquiry?vm=r",
       "https://www.bizprofile.net/ny/new-york/patrick-partners-inc"
     ],
     "reviewed": "2026-11-25"
