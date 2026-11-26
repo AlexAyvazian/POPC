@@ -131,8 +131,8 @@ test('combined page leads with a low-information follow-the-money summary instea
   assert.match(html,/<details id="ca-all-money-sources"/);
   assert.match(html,/<details id="ca-deep-dive"/);
   assert.match(js,/renderFollowMoney/);
-  assert.match(js,/Top companies \/ businesses/);
-  assert.match(js,/Largest individual donors/);
+  assert.match(html,/Top companies \/ businesses/);
+  assert.match(html,/Largest individual donors/);
 });
 
 test('combined page uses one occupation/status table with a dropdown instead of seven separate tables', async () => {
