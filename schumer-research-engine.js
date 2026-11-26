@@ -1,4 +1,4 @@
-import {config,normalize,occupationGroup,loadResearchRecords} from "./schumer-research-data.js?v=1";
+import {config,normalize,occupationGroup,loadResearchRecords} from "./schumer-research-data.js?v=2";
 const aliases={
  "ceos":"Chief executive officers","ceo":"Chief executive officers","chief executive officers":"Chief executive officers","presidents":"Presidents","president":"Presidents","chairs":"Chairs / board members / trustees","chairmen":"Chairs / board members / trustees","board members":"Chairs / board members / trustees","vice presidents":"Vice presidents","founders":"Founders / business owners","business owners":"Founders / business owners","partners":"Partners / principals","retired":"Retired","retirees":"Retired","unemployed":"Not employed / unemployed","not employed":"Not employed / unemployed","students":"Students","homemakers":"Homemakers","self employed":"Self-employed (role unspecified)","self-employed":"Self-employed (role unspecified)","unreported occupation":"Occupation unreported","occupation unreported":"Occupation unreported"
 };
