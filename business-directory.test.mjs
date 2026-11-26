@@ -69,17 +69,18 @@ test('priority queue includes executive single-donor employers but excludes ordi
   assert(selectDirectory(groups,{view:'employers'}).some(g=>g.name==='CLOVIS HOSPITAL'));
 });
 
-test('business research directory remains inside See All Donor Transactions', async () => {
+test('business research directory lives inside Combined Total Contributions and not the transactions menu', async () => {
   const [combined,transactions]=await Promise.all([
     fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8'),
     fs.readFile(new URL('./transactions.html', import.meta.url),'utf8')
   ]);
-  assert(transactions.includes('id="business-directory"'));
-  assert(transactions.includes('business-directory.js'));
-  assert(transactions.includes('BUSINESS &amp; ORGANIZATION NAMES'));
-  assert(!combined.includes('id="business-directory"'));
-  assert(!combined.includes('business-directory.js'));
-  assert(transactions.includes('<option>Reviewed label</option>'));
+  assert(!transactions.includes('id="business-directory"'));
+  assert(!transactions.includes('business-directory.js'));
+  assert(!transactions.includes('BUSINESS &amp; ORGANIZATION NAMES'));
+  assert(combined.includes('id="business-directory"'));
+  assert(combined.includes('business-directory.js'));
+  assert(combined.includes('business-directory.css'));
+  assert(combined.includes('<option>Reviewed label</option>'));
 });
 
 test('CSV preserves quotes and neutralizes spreadsheet formulas', () => {
