@@ -264,7 +264,7 @@ if(org.length!==c.organizationCount||org.reduce((n,r)=>n+r[3],0)!==c.organizatio
 if(ind.length!==c.individualCount||ind.reduce((n,r)=>n+r[4],0)!==c.individual)throw Error("Individual totals mismatch: "+c.name);
 const emap=new Map(emp.filter(r=>typeof r[1]==="string").map(r=>[normalize(r[0]),r[1]]));
 const employerSector=name=>classifySectorLabel(name,emap.get(normalize(name))||"",globalSectors);
-return [...org.map(r=>({name:r[0],type:"organization",sector:classifySectorLabel(r[0],c.key==="jfc"?"":r[1],globalSectors),amount:r[3],committee:c.key})),...ind.map(r=>({name:r[0],type:"individual",employer:r[1]||"NOT REPORTED",occupation:r[2]||"NOT REPORTED",sector:employerSector(r[1]),amount:r[4],committee:c.key}))];
+return [...org.map(r=>({name:r[0],type:"organization",sector:classifySectorLabel(r[0],c.key==="jfc"?"":r[1],globalSectors),amount:r[3],committee:c.key,date:r[2],image:r[6],entity:r[8]})),...ind.map(r=>({name:r[0],type:"individual",employer:r[1]||"NOT REPORTED",occupation:r[2]||"NOT REPORTED",sector:employerSector(r[1]),amount:r[4],committee:c.key,date:r[3],image:c.key==="jcavf"?"202510159790813436":r[7]}))];
 }
 
 let dataPromise;

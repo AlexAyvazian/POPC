@@ -15,7 +15,7 @@ const server=http.createServer(async(req,res)=>{
  try{const data=await fs.readFile(path.join(root,p));res.writeHead(200,{'Content-Type':mime[path.extname(p)]||'application/octet-stream'});res.end(data);}catch{res.writeHead(404);res.end('Not found');}
 });
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
-const base='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({headless:true});
+const base='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{} )});
 try{
  const pages=['index.html',...(await fs.readdir('pages')).filter(p=>p.endsWith('.html')).map(p=>'pages/'+p)];
  for(const file of pages){
@@ -25,6 +25,22 @@ try{
   await page.goto(base+'/'+file,{waitUntil:'networkidle'});
   await page.waitForTimeout(300);
   assert.deepEqual(errors,[],file);
+  if(await page.locator('[data-donor-tables]').count()){
+   await page.waitForSelector('[data-donor-tables][data-ready="true"]',{timeout:60000});
+   assert.equal(await page.locator('[data-donor-group]').count(),3,file+' requires three donor tables');
+   const host=page.locator('[data-donor-tables]');
+   assert.equal(await host.locator('table').count(),3);
+   for(const key of ['indirect','small']){
+    const section=host.locator('[data-donor-group='+key+']');
+    assert((await section.locator('thead').innerText()).includes('Reported employer'));
+   }
+   const small=host.locator('[data-donor-group=small]');
+   await small.locator('input').fill('ZZZ no matching donor ZZZ');
+   assert((await small.locator('tbody').innerText()).includes('No matching donors'));
+   await small.locator('input').fill('');
+   const receipt=host.locator('tbody details').first();
+   if(await receipt.count()){await receipt.locator('summary').click();assert(await receipt.locator('p').count()>0);}
+  }
   const text=await page.locator('body').innerText();
   assert(!text.includes('Unable to load the contribution tables'),file+' failed loading');
   if(['jbpf','jcvf'].some(k=>file.includes(k==='jbpf'?'battleground':'clark-victory'))){
