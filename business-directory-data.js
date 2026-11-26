@@ -148,32 +148,6 @@ export function selectDirectory(groups, {query = '', sector = '', view = 'promot
     && (!q || [g.name, ...g.names, g.research?.parent || ''].some(n => normalize(n).includes(q))));
 }
 
-const nonBusinessMoneySectors = new Set([
-  'Labor unions',
-  'Political committees & advocacy',
-  'Other advocacy',
-  'Foreign policy & advocacy',
-  'Government & public sector',
-  'Tribal nations & governments',
-  'Nonprofit & philanthropy',
-  'Trade associations',
-  'Personal status / unreported employer'
-]);
-
-export function businessMoneyGroups(groups, {mode = 'organization', limit = Infinity} = {}) {
-  const amountFor = group => mode === 'individual' ? group.individual : mode === 'combined' ? group.organization + group.individual : group.organization;
-  return groups
-    .filter(group => !group.personal)
-    .filter(group => {
-      const sectors = group.directSectors?.size ? group.directSectors : group.sectors;
-      return [...sectors].some(sector => !nonBusinessMoneySectors.has(sector));
-    })
-    .map(group => ({...group, visualAmount: amountFor(group)}))
-    .filter(group => group.visualAmount > 0)
-    .sort((a,b) => b.visualAmount - a.visualAmount || a.name.localeCompare(b.name))
-    .slice(0, Math.max(0, Number.isFinite(limit) ? limit : Infinity));
-}
-
 export function directoryCSV(groups) {
   const quote = value => {
     let s = String(value ?? '');
