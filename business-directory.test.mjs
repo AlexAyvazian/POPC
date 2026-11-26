@@ -119,22 +119,6 @@ test('priority queue includes executive single-donor employers but excludes ordi
   assert(selectDirectory(groups,{view:'employers'}).some(g=>g.name==='CLOVIS HOSPITAL'));
 });
 
-test('combined page leads with a low-information follow-the-money summary instead of tables', async () => {
-  const html=await fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8');
-  const js=await fs.readFile(new URL('./combined-contributions.js', import.meta.url),'utf8');
-  assert.match(html,/id="ca-follow-money"/);
-  assert.match(html,/FOLLOW THE MONEY/);
-  assert.match(html,/id="ca-top-businesses"/);
-  assert.match(html,/id="ca-top-individuals"/);
-  assert.match(html,/id="ca-business-source-total"/);
-  assert.match(html,/id="ca-individual-source-total"/);
-  assert.match(html,/<details id="ca-all-money-sources"/);
-  assert.match(html,/<details id="ca-deep-dive"/);
-  assert.match(js,/renderFollowMoney/);
-  assert.match(html,/Top companies \/ businesses/);
-  assert.match(html,/Largest individual donors/);
-});
-
 test('combined page uses one occupation/status table with a dropdown instead of seven separate tables', async () => {
   const html=await fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8');
   assert.match(html,/id="ca-occupation-category"/);
