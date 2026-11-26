@@ -3,3 +3,9 @@
 .ca-analysis-tables .bd-table td:first-child{min-width:175px}
 .ca-analysis-tables .bd-table td:nth-child(3){min-width:150px}
 .ca-analysis-tables .bd-detail{margin-top:10px}
+
+.ca-analysis-tables .bd-table{width:100%;min-width:0;table-layout:fixed}
+.ca-analysis-tables .bd-table td:first-child,
+.ca-analysis-tables .bd-table td:nth-child(3){min-width:0}
+.ca-analysis-tables .bd-table th,
+.ca-analysis-tables .bd-table td{white-space:normal}
