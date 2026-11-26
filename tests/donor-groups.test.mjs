@@ -19,8 +19,9 @@ test('all Jeffries and Schumer contributions reconcile in exactly one of three t
  globalThis.fetch=async path=>new Response(await fs.readFile(new URL('../'+String(path).replace(/^\//,''),import.meta.url)));
  for(const filename of ['research-data.js','schumer-research-data.js']){
   const data=await import('../assets/js/'+filename),all=await data.loadResearchRecords();
+  const {identifyName}=await import('../assets/js/'+(filename.startsWith('schumer')?'schumer-business-directory-data.js':'business-directory-data.js')); 
   for(const records of [all,...data.config.map(c=>all.filter(r=>r.committee===c.key))]){
-   const groups=groupDonors(records),flat=Object.values(groups).flat();
+   const groups=groupDonors(records,identifyName),flat=Object.values(groups).flat();
    assert.equal(flat.reduce((n,g)=>n+g.amount,0),records.reduce((n,r)=>n+r.amount,0));
    assert.equal(flat.reduce((n,g)=>n+g.records.length,0),records.length);
    assert(groups.small.every(g=>g.amount<50000));assert(groups.indirect.every(g=>g.amount>=50000));
@@ -40,3 +41,19 @@ test('all Jeffries and Schumer contributions reconcile in exactly one of three t
   assert(html.includes('data-donor-tables'));assert(html.includes('donor-tables.js'));
  }
  });
+
+test('verified employer aliases resolve for both networks without replacing individual donors',async()=>{
+ const jeff=await import('../assets/js/business-directory-data.js'),schumer=await import('../assets/js/schumer-business-directory-data.js');
+ const a=groupDonors([r('PERSON',30000,{employer:'ARISTEIA CAPITAL'}),r('PERSON',30000,{employer:'ARISTEIA CAPITAL LLC'})],jeff.identifyName).indirect[0];
+ assert.equal(a.name,'PERSON');assert.deepEqual([...a.employers],['ARISTEIA CAPITAL, LLC']);assert.equal(a.amount,60000);assert.equal(a.reportedEmployers.size,2);
+ const b=groupDonors([r('LAWYER',50000,{employer:'DLA PIPER'})],schumer.identifyName).indirect[0];
+ assert.deepEqual([...b.employers],['DLA PIPER LLP (US)']);assert(b.businessResearch.get('DLA PIPER').research.sources.length);
+});
+test('verified organization aliases consolidate while PACs, parents and unresolved labels stay separate',async()=>{
+ const {identifyName}=await import('../assets/js/business-directory-data.js');
+ const org=(name,amount)=>r(name,amount,{type:'organization',employer:undefined});
+ const g=groupDonors([org('ARISTEIA CAPITAL',100),org('ARISTEIA CAPITAL LLC',200),org('FEDERAL EXPRESS CORPORATION',300),org('FEDEX CORPORATION',400),org('NEP',500)],identifyName).organizations;
+ assert.equal(g.find(x=>x.name==='ARISTEIA CAPITAL, LLC').amount,300);
+ assert(g.some(x=>x.name==='FEDERAL EXPRESS CORPORATION'));assert(g.some(x=>x.name==='FEDEX CORPORATION'));assert(g.some(x=>x.name==='NEP'));
+ assert.equal(g.reduce((n,x)=>n+x.amount,0),1500);
+});

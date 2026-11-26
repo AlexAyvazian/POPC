@@ -30,6 +30,7 @@ try{
    assert.equal(await page.locator('[data-donor-group]').count(),3,file+' requires three donor tables');
    const host=page.locator('[data-donor-tables]');
    assert.equal(await host.locator('table').count(),3);
+   assert((await host.locator('thead').first().innerText()).includes('Business identity')); 
    for(const key of ['indirect','small']){
     const section=host.locator('[data-donor-group='+key+']');
     assert((await section.locator('thead').innerText()).includes('Reported employer'));
@@ -38,7 +39,7 @@ try{
    await small.locator('input').fill('ZZZ no matching donor ZZZ');
    assert((await small.locator('tbody').innerText()).includes('No matching donors'));
    await small.locator('input').fill('');
-   const receipt=host.locator('tbody details').first();
+   const receipt=host.locator('tbody tr td:last-child details').first();
    if(await receipt.count()){await receipt.locator('summary').click();await receipt.locator('p').first().waitFor({state:'visible'});}
   }
   const text=await page.locator('body').innerText();
