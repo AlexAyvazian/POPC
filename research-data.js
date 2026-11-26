@@ -38,6 +38,7 @@ const l=String(label||"").trim(), lower=l.toLowerCase();
 if(/unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(l))return "Sector unresolved / ambiguous";
 if(/personal|self.employ|not employed|non.employer|unreported|non.individual/i.test(l))return "Personal status / unreported employer";
 if(/security service/i.test(l))return "Security services";
+if(/earmark|political fundraising|political advocacy|candidate|fundraising intermediar|political committee/i.test(l))return "Political committees & advocacy";
 if(/diversified business group/i.test(l))return "Diversified business group";
 if(/tribal|indian nation|indian community/i.test(l))return "Tribal nations & governments";
 if(/health insurance|managed care/i.test(l))return "Health insurance";
