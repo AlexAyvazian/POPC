@@ -1,5 +1,4 @@
 export function renderCommittee({paths,counts,totals,memoLabel,errorLabel}) {
-  "use strict";
   const currency = new Intl.NumberFormat("en-US", {style:"currency",currency:"USD"});
   const escape = (v) => String(v ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
   const money = (cents) => currency.format(Number(cents) / 100);
