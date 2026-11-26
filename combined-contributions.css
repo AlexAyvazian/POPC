@@ -3,3 +3,60 @@
 /* Chart accents only: page shell retains existing ivory and gold. */
 .ca-swatch{border:1px solid rgba(19,28,121,.12);box-sizing:border-box}.ca-donut circle[role=button]:hover,.ca-donut circle[role=button]:focus{opacity:.82;stroke-width:39}.ca-legend button:hover,.ca-legend button:focus-visible,.ca-bar:hover,.ca-bar:focus-visible{background:#ecfeff;outline:1px solid #74cbf5}.ca-legend .ca-selected,.ca-bar.ca-selected{background:#e8f7fb;box-shadow:inset 0 0 0 1px #66a8e5}.ca-track{background:#edf2f6}.ca-sector-link{display:inline-flex;align-items:center;gap:8px}.ca-sector-swatch{display:inline-block;flex-shrink:0;width:13px;height:13px}.ca-donut{filter:drop-shadow(0 1px 1px rgba(19,28,121,.08))}
 .ca-occupation-cell{min-width:150px;max-width:320px}.ca-occupation-cell summary{overflow-wrap:anywhere;font-size:.86rem}.ca-role-details{display:grid;gap:7px;margin-top:8px}.ca-role-details>div{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;font-size:.8rem}.ca-role-details small{display:block;color:#6d6457}.ca-role-details strong{white-space:nowrap}.ca-table [hidden]{display:none!important}#ca-role-pie{margin-bottom:20px}
+
+/* Dense table / visualization split for the lower analysis. */
+.ca-analysis-split{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(350px,.85fr);gap:16px;align-items:start;margin-top:18px}
+.ca-analysis-tables{display:grid;gap:10px;min-width:0}
+.ca-analysis-tables>.ca-panel{padding:14px 16px;border-radius:14px}
+.ca-analysis-tables>.ca-panel h2{font-size:1.05rem;margin-bottom:3px}
+.ca-analysis-tables .ca-muted{margin:4px 0 8px;font-size:.82rem;line-height:1.35}
+.ca-analysis-tables .ca-controls{gap:6px;margin:7px 0 9px}
+.ca-analysis-tables .ca-controls select,.ca-analysis-tables .ca-controls input,.ca-analysis-tables .ca-controls button{padding:6px 8px;font-size:.82rem;border-radius:7px}
+.ca-analysis-tables .jvf-table th,.ca-analysis-tables .jvf-table td{padding:7px 9px;font-size:.8rem;line-height:1.2}
+.ca-analysis-tables .jvf-table-wrap{margin-top:6px}
+.ca-analysis-tables .ca-page{margin-top:7px}
+.ca-analysis-tables #ca-role-pie{margin-bottom:8px}
+.ca-analysis-tables .ca-chart{margin-top:8px}
+.ca-money-viz{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;padding:16px;border-radius:16px}
+.ca-money-viz h2{font-size:1.2rem;margin-bottom:2px}
+.ca-money-viz .ca-eyebrow{margin:0 0 3px}
+.bd-viz-money-control{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:center;margin:10px 0}
+.bd-viz-money-control label{font-size:.78rem;font-weight:700;color:#735934}
+.bd-viz-money-control select{width:100%;min-width:0;font:inherit;font-size:.8rem;color:#624c31;padding:7px 8px;border:1px solid #c6a573;border-radius:8px;background:#fffdf8}
+.bd-viz-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:10px 0}
+.bd-viz-tabs button{border:1px solid #c8a86e;border-radius:8px;background:#fffdf8;color:#6a5132;padding:7px 5px;font:inherit;font-size:.73rem;cursor:pointer}
+.bd-viz-tabs button[aria-selected="true"]{background:#efe2c9;box-shadow:inset 0 0 0 1px #9d763e;font-weight:700}
+.bd-viz-canvas{min-height:390px;border:1px solid #e0d1b7;border-radius:14px;background:linear-gradient(180deg,#fffefb,#fbf6eb);padding:10px;overflow:hidden}
+.bd-viz-canvas svg{display:block;width:100%;height:auto;overflow:visible}
+.bd-viz-note{margin:8px 0 0!important;font-size:.75rem!important}
+.bd-viz-empty{display:grid;place-items:center;min-height:340px;text-align:center;color:#766a5a;font-size:.85rem}
+.bd-viz-tooltip{pointer-events:none}
+.bd-viz-label{font-family:inherit;fill:#5e472b;font-size:10px;font-weight:700}
+.bd-viz-amount{font-family:inherit;fill:#765d3d;font-size:9px}
+.bd-dot-key{font-size:.76rem;font-weight:700;color:#745a38;margin-bottom:9px}
+.bd-dot-row{display:grid;grid-template-columns:minmax(92px,1fr) 1.5fr;gap:8px;padding:7px 0;border-bottom:1px solid #eee3d2}
+.bd-dot-row:last-child{border-bottom:0}
+.bd-dot-name{font-size:.72rem;font-weight:700;color:#674f32;overflow-wrap:anywhere}
+.bd-dot-name span{display:block;font-weight:500;color:#776b5c;margin-top:2px}
+.bd-dot-field{display:flex;flex-wrap:wrap;gap:3px;align-content:flex-start}
+.bd-dot{width:10px;height:10px;border-radius:50%;background:#5ca6f1;border:1px solid rgba(70,86,112,.12)}
+.bd-dot.partial{opacity:.42}
+.bd-treemap-label{font-family:inherit;font-weight:700;fill:#4e3a24;font-size:10px;pointer-events:none}
+.bd-treemap-amount{font-family:inherit;fill:#684f32;font-size:9px;pointer-events:none}
+.bd-viz-node{cursor:pointer}
+.bd-viz-node:focus-visible{outline:none}
+.bd-viz-node:focus-visible circle,.bd-viz-node:focus-visible rect{stroke:#6b4b20;stroke-width:3}
+.bd-bubble-axis{stroke:#cdbb9d;stroke-width:1}
+.bd-bubble-grid{stroke:#eee5d7;stroke-width:1}
+.bd-bubble-axis-label{font-family:inherit;fill:#786a56;font-size:9px}
+@media(max-width:1050px){
+  .ca-analysis-split{grid-template-columns:1fr}
+  .ca-money-viz{position:static;max-height:none;overflow:visible;order:-1}
+}
+@media(max-width:620px){
+  .ca-analysis-tables>.ca-panel{padding:11px 10px}
+  .ca-analysis-tables .jvf-table th,.ca-analysis-tables .jvf-table td{padding:6px 7px;font-size:.74rem}
+  .bd-viz-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bd-viz-money-control{grid-template-columns:1fr}
+  .bd-viz-canvas{min-height:330px;padding:6px}
+}
