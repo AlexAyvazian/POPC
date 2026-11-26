@@ -2,3 +2,11 @@
 .petition-image-link{display:block;width:100%;max-width:900px;border-radius:8px;overflow:hidden}.petition-image{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}.petition-image-link:focus-visible{outline:2px solid #987448;outline-offset:4px}.petition-excerpt{max-width:740px;margin:0;text-align:left;font-size:clamp(16px,2vw,19px);line-height:1.7;color:#514333}
 
 .petition-live-hero{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;width:100%;align-items:center}.petition-counter{display:flex;flex-direction:column;gap:14px;padding:24px;background:#fffdf9;border:1px solid #d0b58c;border-radius:12px;color:#514333}.petition-counter strong{font-size:52px;line-height:1.1}.petition-counter p{margin:0}.petition-counter progress{width:100%;height:14px;accent-color:#987448}.petition-counter .petition-action{padding:12px;font-size:16px}.petition-counter #petition-live-status{font-size:12px;line-height:1.5;color:#655e54}@media(max-width:800px){.petition-live-hero{grid-template-columns:1fr}.petition-counter{align-items:center}.petition-counter progress{max-width:400px}}
+
+
+.petition-live-screenshot-link{display:block;width:100%;max-width:1080px;border:1px solid #d0b58c;border-radius:12px;overflow:hidden;background:#f7f7f8;box-shadow:0 8px 24px rgba(79,57,30,.08)}
+.petition-live-screenshot{display:block;width:100%;height:auto;max-height:760px;object-fit:contain;background:#f7f7f8}
+.petition-live-screenshot-link:hover{box-shadow:0 12px 30px rgba(79,57,30,.14)}
+.petition-live-screenshot-link:focus-visible{outline:3px solid #987448;outline-offset:4px}
+.petition-live-caption{margin:-6px 0 0;color:#766958;font-size:12px;letter-spacing:.03em}
+@media(max-width:600px){.petition-live-screenshot-link{border-radius:9px}.petition-live-caption{font-size:11px}}
