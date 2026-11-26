@@ -26,7 +26,7 @@ function reportedIdentity(record) {
 const identityIndex = new Map();
 for (const entry of [...businessIdentities, ...schumerIdentities]) {
   const recordTypes = entry.recordTypes?.length ? entry.recordTypes : ['*'];
-  for (const alias of [...entry.aliases, ...(entry.name ? [entry.name] : [])]) {
+  for (const alias of [...entry.aliases, ...(entry.name && !entry.aliasOnly ? [entry.name] : [])]) {
     const aliasKey = normalize(alias);
     for (const recordType of recordTypes) {
       const key = recordType+'|'+aliasKey;
