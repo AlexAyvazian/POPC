@@ -1,4 +1,4 @@
-import {config} from './research-data.js?v=4';
+import {config} from './research-data.js?v=5';
 import {buildDirectory, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js?v=51';
 
 const $ = id => document.getElementById(id);
