@@ -1,5 +1,5 @@
-import {businessIdentities} from './business-identities.js?v=48';
-import {normalize, config, occupationGroup, loadResearchRecords} from './research-data.js?v=3';
+import {businessIdentities} from './business-identities.js?v=50';
+import {normalize, config, occupationGroup, classifySectorLabel, loadResearchRecords} from './research-data.js?v=4';
 
 export async function loadDirectoryRecords() {
   const direct = await loadResearchRecords();
@@ -27,7 +27,7 @@ export async function loadDirectoryRecords() {
       [org,ind]=await Promise.all([Promise.all(paths('organizations',c.no).map(json)).then(a=>a.flat().filter(r=>r[4])),Promise.all(paths('individuals',c.ni).map(json)).then(a=>a.flat().filter(r=>r[5]))]);
     }
     if(org.length+ind.length!==c.memos) throw Error('Memo counts mismatch: '+c.name);
-    return [...org.map(r=>({name:r[0],type:'organization',sector:c.key==='jfc'?(sectors.get(normalize(r[0]))||'Sector unconfirmed'):r[1],amount:r[3],committee:c.key,memo:true})),...ind.map(r=>({name:r[0],type:'individual',employer:r[1]||'NOT REPORTED',occupation:r[2]||'NOT REPORTED',sector:sectors.get(normalize(r[1]))||'Sector unconfirmed',amount:r[4],committee:c.key,memo:true}))];
+    return [...org.map(r=>({name:r[0],type:'organization',sector:classifySectorLabel(r[0],c.key==='jfc'?'':r[1],sectors),amount:r[3],committee:c.key,memo:true})),...ind.map(r=>({name:r[0],type:'individual',employer:r[1]||'NOT REPORTED',occupation:r[2]||'NOT REPORTED',sector:classifySectorLabel(r[1]||'NOT REPORTED','',sectors),amount:r[4],committee:c.key,memo:true}))];
   }))).flat();
   return [...direct,...memos];
 }
@@ -83,18 +83,19 @@ export function buildDirectory(records) {
     const key = JSON.stringify([identity.personal, identity.name]);
     let group = groups.get(key);
     if (!group) {
-      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), committees: new Set(), individualDonors: new Set(), individual: 0, organization: 0, individualCount: 0, organizationCount: 0, individualMemoCount: 0, organizationMemoCount: 0, count: 0, memoCount: 0, records: [], research: identity.research};
+      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), directSectors: new Set(), memoSectors: new Set(), committees: new Set(), individualDonors: new Set(), individual: 0, organization: 0, individualCount: 0, organizationCount: 0, individualMemoCount: 0, organizationMemoCount: 0, count: 0, memoCount: 0, records: [], research: identity.research};
       groups.set(key, group);
     }
     group.names.add(identity.reported);
     group.methods.add(identity.method);
-    group.sectors.add(record.sector);
+    if (record.memo) group.memoSectors.add(record.sector); else group.directSectors.add(record.sector);
     group.committees.add(record.committee);
     if (record.type === 'individual') group.individualDonors.add(normalize(record.name || 'NOT REPORTED'));
     if (record.memo) {group.memoCount++;group[record.type+'MemoCount']++;}
     else {group[record.type] += record.amount;group[record.type+'Count']++;group.count++;}
     group.records.push(record);
   }
+  for (const group of groups.values()) group.sectors = new Set(group.directSectors.size ? group.directSectors : group.memoSectors);
   return [...groups.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 
@@ -153,7 +154,7 @@ export function directoryCSV(groups) {
     if (/^[=+@\-\t\r]/.test(s)) s = "'" + s;
     return '"' + s.replaceAll('"', '""') + '"';
   };
-  const rows = [['Business / organization name', 'Reported names', 'Name basis', 'Research status', 'Identity scope', 'Parent company', 'Research note', 'Sources', 'Reviewed', 'Sectors', 'Committee keys', 'PAC / organization receipts USD', 'Individual receipts USD', 'Direct receipt records', 'Memo records (amounts excluded)']];
-  for (const g of groups) rows.push([g.name, [...g.names].join('; '), [...g.methods].join('; '), g.research?.status || 'Not reviewed', g.research?.scope || '', g.research?.parent || '', g.research?.evidence || '', g.research?.sources.join('; ') || '', g.research?.reviewed || '', [...g.sectors].join('; '), [...g.committees].join('; '), (g.organization / 100).toFixed(2), (g.individual / 100).toFixed(2), g.count, g.memoCount]);
+  const rows = [['Business / organization name', 'Reported names', 'Name basis', 'Research status', 'Identity scope', 'Parent company', 'Research note', 'Sources', 'Reviewed', 'Direct-dollar sectors', 'Memo-only sectors', 'Committee keys', 'PAC / organization receipts USD', 'Individual receipts USD', 'Direct receipt records', 'Memo records (amounts excluded)']];
+  for (const g of groups) rows.push([g.name, [...g.names].join('; '), [...g.methods].join('; '), g.research?.status || 'Not reviewed', g.research?.scope || '', g.research?.parent || '', g.research?.evidence || '', g.research?.sources.join('; ') || '', g.research?.reviewed || '', [...g.directSectors].join('; '), [...g.memoSectors].join('; '), [...g.committees].join('; '), (g.organization / 100).toFixed(2), (g.individual / 100).toFixed(2), g.count, g.memoCount]);
   return rows.map(r => r.map(quote).join(',')).join('\r\n');
 }
