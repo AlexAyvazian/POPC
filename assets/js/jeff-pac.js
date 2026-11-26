@@ -1,3 +1,4 @@
+import {loadMasterSectors,normalizeSectorRows} from './master-sectors.js';
 (() => {
   "use strict";
   const currency = new Intl.NumberFormat("en-US", {style:"currency",currency:"USD"});
@@ -38,13 +39,14 @@
     return `<tr${newGroup?' class="jvf-new-employer"':''}><td class="jvf-contributor">${escape(name)}${details}</td><td>${escape(e)}</td><td>${escape(occupation||"—")}</td><td class="jvf-nowrap">${displayDate(date)}</td><td class="jvf-money">${money(cents)}</td><td>${source(image)}</td></tr>`;
   }
   async function start(){
+    await loadMasterSectors();
     const status=document.getElementById("jvf-status");
     try {
       const paths=["/data/jeffries/jeff-pac-individuals-1.json","/data/jeffries/jeff-pac-individuals-2.json","/data/jeffries/jeff-pac-individuals-3.json","/data/jeffries/jeff-pac-individuals-4.json","/data/jeffries/jeff-pac-organizations-1.json","/data/jeffries/jeff-pac-organizations-2.json","/data/jeffries/jeff-pac-organizations-3.json","/data/jeffries/jeff-pac-employers.json"];
       const data=await Promise.all(paths.map(async path=>{
         const response=await fetch(path);
         if(!response.ok)throw new Error("Unable to load "+path);
-        return response.json();
+        return normalizeSectorRows(await response.json(),path);
       }));
       const individuals=data.slice(0,4).flat();
       const orgs=data.slice(4,7).flat();

@@ -1,4 +1,4 @@
-import {config,loadRows,category,rowSector,normalize} from "./schumer-research-data.js?v=2";
+import {config,loadRows,category,rowSector,normalize} from "./schumer-research-data.js?v=master-sectors1";
 const $=id=>document.getElementById(id), money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const c=config.find(x=>x.key===document.body.dataset.schumerCommittee);
 const source=r=>/^\d{15,20}$/.test(r[7])?'<a class="jvf-fec-link" href="https://docquery.fec.gov/cgi-bin/fecimg/?'+r[7]+'" target="_blank" rel="noopener noreferrer">FEC filing</a>':"—";

@@ -1,4 +1,4 @@
-import {groupDonors} from './donor-groups.js?v=research1';
+import {groupDonors} from './donor-groups.js?v=master-sectors1';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const list=set=>[...set].sort().join('; ')||'Not reported';

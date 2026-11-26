@@ -1,3 +1,4 @@
+import {loadMasterSectors,normalizeSectorRows} from './master-sectors.js';
 (() => {
   "use strict";
   const currency = new Intl.NumberFormat("en-US", {style:"currency",currency:"USD"});
@@ -38,13 +39,14 @@
     return `<tr${newGroup?' class="jvf-new-employer"':''}><td class="jvf-contributor">${escape(name)}${details}</td><td>${escape(e)}</td><td>${escape(occupation||"—")}</td><td class="jvf-nowrap">${displayDate(date)}</td><td class="jvf-money">${money(cents)}</td><td>${source(image)}</td></tr>`;
   }
   async function start(){
+    await loadMasterSectors();
     const status=document.getElementById("jvf-status");
     try {
       const paths=["/data/jeffries/dvtlf-individuals-1.json","/data/jeffries/dvtlf-individuals-2.json","/data/jeffries/dvtlf-individuals-3.json","/data/jeffries/dvtlf-individuals-4.json","/data/jeffries/dvtlf-individuals-5.json","/data/jeffries/dvtlf-individuals-6.json","/data/jeffries/dvtlf-individuals-7.json","/data/jeffries/dvtlf-individuals-8.json","/data/jeffries/dvtlf-individuals-9.json","/data/jeffries/dvtlf-individuals-10.json","/data/jeffries/dvtlf-individuals-11.json","/data/jeffries/dvtlf-individuals-12.json","/data/jeffries/dvtlf-individuals-13.json","/data/jeffries/dvtlf-organizations.json","/data/jeffries/dvtlf-employers.json"];
       const data=await Promise.all(paths.map(async path=>{
         const response=await fetch(path);
         if(!response.ok)throw new Error("Unable to load "+path);
-        return response.json();
+        return normalizeSectorRows(await response.json(),path);
       }));
       const individuals=data.slice(0,-2).flat();
       const orgs=data.at(-2);

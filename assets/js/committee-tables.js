@@ -1,3 +1,4 @@
+import {loadMasterSectors,normalizeSectorRows} from './master-sectors.js';
 export function renderCommittee({paths,counts,totals,memoLabel,errorLabel}) {
   const currency = new Intl.NumberFormat("en-US", {style:"currency",currency:"USD"});
   const escape = (v) => String(v ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
@@ -37,12 +38,13 @@ export function renderCommittee({paths,counts,totals,memoLabel,errorLabel}) {
     return `<tr${newGroup?' class="jvf-new-employer"':''}><td class="jvf-contributor">${escape(name)}${details}</td><td>${escape(e)}</td><td>${escape(occupation||"—")}</td><td class="jvf-nowrap">${displayDate(date)}</td><td class="jvf-money">${money(cents)}</td><td>${source(image)}</td></tr>`;
   }
   async function start(){
+    await loadMasterSectors();
     const status=document.getElementById("jvf-status");
     try {
       const data=await Promise.all(paths.map(async path=>{
         const response=await fetch(path);
         if(!response.ok)throw new Error("Unable to load "+path);
-        return response.json();
+        return normalizeSectorRows(await response.json(),path);
       }));
       const [individuals,orgs,employers]=data;
       if(individuals.length!==counts[0]||orgs.length!==counts[1]||employers.length!==counts[2])throw new Error("The FEC data files are incomplete.");

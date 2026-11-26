@@ -1,5 +1,5 @@
-import {businessIdentities} from '../../data/jeffries/business-identities.js?v=50';
-import {normalize, config, occupationGroup, classifySectorLabel, loadResearchRecords} from './research-data.js?v=5';
+import {businessIdentities} from '../../data/jeffries/business-identities.js?v=master-sectors1';
+import {normalize, config, occupationGroup, classifySectorLabel, loadResearchRecords} from './research-data.js?v=master-sectors1';
 
 export async function loadDirectoryRecords() {
   const direct = await loadResearchRecords();
@@ -27,7 +27,7 @@ export async function loadDirectoryRecords() {
       [org,ind]=await Promise.all([Promise.all(paths('organizations',c.no).map(json)).then(a=>a.flat().filter(r=>r[4])),Promise.all(paths('individuals',c.ni).map(json)).then(a=>a.flat().filter(r=>r[5]))]);
     }
     if(org.length+ind.length!==c.memos) throw Error('Memo counts mismatch: '+c.name);
-    return [...org.map(r=>({name:r[0],type:'organization',sector:classifySectorLabel(r[0],c.key==='jfc'?'':r[1],sectors),amount:r[3],committee:c.key,memo:true})),...ind.map(r=>({name:r[0],type:'individual',employer:r[1]||'NOT REPORTED',occupation:r[2]||'NOT REPORTED',sector:classifySectorLabel(r[1]||'NOT REPORTED','',sectors),amount:r[4],committee:c.key,memo:true}))];
+    return [...org.map(r=>({name:r[0],type:'organization',sector:classifySectorLabel(r[0],'',new Map(),'organization'),amount:r[3],committee:c.key,memo:true})),...ind.map(r=>({name:r[0],type:'individual',employer:r[1]||'NOT REPORTED',occupation:r[2]||'NOT REPORTED',sector:classifySectorLabel(r[1]||'NOT REPORTED','',new Map(),'individual'),amount:r[4],committee:c.key,memo:true}))];
   }))).flat();
   return [...direct,...memos];
 }

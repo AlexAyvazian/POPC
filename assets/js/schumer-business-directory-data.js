@@ -1,8 +1,8 @@
-import {businessIdentities} from '../../data/jeffries/business-identities.js?v=48';
-import {schumerIdentities} from '../../data/schumer/schumer-identities.js?v=2';
-import {normalize, config, occupationGroup, loadResearchRecords} from './schumer-research-data.js?v=2';
+import {businessIdentities} from '../../data/jeffries/business-identities.js?v=master-sectors1';
+import {schumerIdentities} from '../../data/schumer/schumer-identities.js?v=master-sectors1';
+import {normalize, config, occupationGroup, loadResearchRecords} from './schumer-research-data.js?v=master-sectors1';
 
-export {loadDirectoryRecords} from './schumer-research-data.js?v=2';
+export {loadDirectoryRecords} from './schumer-research-data.js?v=master-sectors1';
 
 const personal = /^(?:NOT EMPLOYED|RETIRED|SELF[ -]?EMPLOYED|SELF|N\/?A|NONE|NULL|NOT REPORTED|INFORMATION REQUESTED(?: PER BEST EFFORTS)?|UNEMPLOYED|HOMEMAKER|HOME MAKER|STUDENT|UNKNOWN|NOT AVAILABLE|REQUESTED|NOT PROVIDED|NOT DISCLOSED|DECLINED|REFUSED)$/;
 
@@ -55,18 +55,19 @@ export function buildDirectory(records) {
     const key = JSON.stringify([identity.personal, identity.name]);
     let group = groups.get(key);
     if (!group) {
-      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), committees: new Set(), individualDonors: new Set(), individual: 0, organization: 0, individualCount: 0, organizationCount: 0, individualMemoCount: 0, organizationMemoCount: 0, count: 0, memoCount: 0, records: [], research: identity.research};
+      group = {key, name: identity.name, personal: identity.personal, names: new Set(), methods: new Set(), sectors: new Set(), directSectors:new Set(), memoSectors:new Set(), committees: new Set(), individualDonors: new Set(), individual: 0, organization: 0, individualCount: 0, organizationCount: 0, individualMemoCount: 0, organizationMemoCount: 0, count: 0, memoCount: 0, records: [], research: identity.research};
       groups.set(key, group);
     }
     group.names.add(identity.reported);
     group.methods.add(identity.method);
-    group.sectors.add(record.sector);
+    if(record.memo)group.memoSectors.add(record.sector);else group.directSectors.add(record.sector);
     group.committees.add(record.committee);
     if (record.type === 'individual') group.individualDonors.add(normalize(record.name || 'NOT REPORTED'));
     if (record.memo) {group.memoCount++;group[record.type+'MemoCount']++;}
     else {group[record.type] += record.amount;group[record.type+'Count']++;group.count++;}
     group.records.push(record);
   }
+  for(const g of groups.values())g.sectors=new Set(g.directSectors.size?g.directSectors:g.memoSectors);
   return [...groups.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 

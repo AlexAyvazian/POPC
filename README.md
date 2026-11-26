@@ -24,3 +24,5 @@ Research engines and assistants share implementations while retaining separate J
 Run all checks with `node --test tests/*.test.mjs` on Node 22. Run the research queue export with `node scripts/business-directory-unreviewed.mjs`.
 
 The hourly petition workflow updates `assets/images/petition-change-org-live.png` and `data/petition/petition-change-org-live.json`.
+
+All sector labels come from one master system: `assets/js/master-sectors.js`. See [Master sectors](documents/notes/MASTER-SECTORS.md).

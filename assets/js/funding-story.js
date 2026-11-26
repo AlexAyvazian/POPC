@@ -1,5 +1,5 @@
-import {buildDirectory} from './business-directory-data.js?v=55';
-import {config, normalize} from './research-data.js?v=5';
+import {buildDirectory} from './business-directory-data.js?v=master-sectors1';
+import {config, normalize} from './research-data.js?v=master-sectors1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dollars=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n/100);
 const exact=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);

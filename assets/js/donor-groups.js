@@ -1,3 +1,4 @@
+import {masterSectorForRecord} from './master-sectors.js';
 // Amounts are integer cents. Consolidate the full page scope before filtering.
 const normalize = value => String(value ?? '').trim().replace(/\s+/g, ' ').toUpperCase();
 export function groupDonors(records, identifyName = null) {
@@ -20,7 +21,7 @@ export function groupDonors(records, identifyName = null) {
     }
     if(r.employer)g.employers.add(verified ? identity.name : normalize(r.employer));
     if(r.occupation)g.occupations.add(normalize(r.occupation));
-    if(r.sector)g.sectors.add(r.sector);
+    g.sectors.add(masterSectorForRecord(r));
     g.committees.set(r.committee,(g.committees.get(r.committee)||0)+r.amount);
     g.records.push(r);
   }
