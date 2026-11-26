@@ -1,3 +1,4 @@
+import {businessIdentities} from './business-identities.js?v=49';
 const config=[{"name":"JEFF PAC","slug":"jeff-pac","key":"jeff-pac","ni":4,"no":3,"individual":11430000,"organization":76000000,"individualCount":28,"organizationCount":171,"memos":200},{"name":"Jeffries Victory Fund","slug":"jeffries-victory-fund","key":"jvf","ni":6,"no":0,"individual":1383246082,"organization":66810000,"individualCount":530,"organizationCount":30,"memos":16},{"name":"Jeffries Majority Fund","slug":"jeffries-majority-fund","key":"jmf","ni":3,"no":3,"individual":74460000,"organization":6899900,"individualCount":178,"organizationCount":19,"memos":156},{"name":"Jeffries for Congress","slug":"jeffries-for-congress","key":"jfc","ni":0,"no":0,"individual":431228139,"organization":282420000,"individualCount":107722,"organizationCount":774,"memos":110585},{"name":"Jeffries Clark Victory Fund","slug":"jeffries-clark-victory-fund","key":"jcvf","ni":0,"no":0,"individual":11850000,"organization":500000,"individualCount":12,"organizationCount":1,"memos":11},{"name":"Defend the Vote Leadership Fund","slug":"defend-the-vote-leadership-fund","key":"dvtlf","ni":13,"no":0,"individual":4067000,"organization":0,"individualCount":1262,"organizationCount":0,"memos":5},{"name":"Jeffries Clark Aguilar Victory Fund","slug":"jeffries-clark-aguilar-victory-fund","key":"jcavf","ni":0,"no":0,"individual":500000,"organization":0,"individualCount":1,"organizationCount":0,"memos":0},{"name":"Jeffries Battleground Protection Fund","slug":"jeffries-battleground-protection-fund","key":"jbpf","ni":0,"no":0,"individual":437599149,"organization":26100000,"individualCount":78,"organizationCount":11,"memos":49}];
 const status=/^(NOT EMPLOYED|RETIRED|SELF[ -]?EMPLOYED|SELF|N\/A|NA|NONE|NULL|NOT REPORTED|INFORMATION REQUESTED|INFORMATION REQUESTED PER BEST EFFORTS|UNEMPLOYED|HOMEMAKER|STUDENT|UNKNOWN|NOT AVAILABLE|REQUESTED)$/i;
 const rules=[
@@ -64,6 +65,143 @@ if(/government|public sector/i.test(l))return "Government & public sector";
 if(/professional|accounting/i.test(l))return "Professional services";
 if(/civil rights|advocacy/i.test(l))return "Other advocacy";
 return l||"Sector unconfirmed";}
+const unknownSectorLabel=label=>!label||/unconfirmed|unverified|unclear/i.test(String(label));
+const exactSectorOverrides=new Map(Object.entries({
+"STREAM LINE CIRCLE LLC":"Transportation",
+"LIBRA GROUP":"Diversified business group",
+"BHANDAL SECURITY":"Security services",
+"NW INTERNATIONAL WOMEN'S CONFERENCE":"Other advocacy",
+"JSI":"Healthcare",
+"HSK CONSULTING LLC":"Professional services",
+"HSK CONSULTING":"Professional services",
+"PAUL HASTINGS LLP":"Legal services",
+"PAUL HASTINGS":"Legal services",
+"BAKER HOSTETLER":"Legal services",
+"CORKY HALE PRODUCTIONS":"Media & entertainment",
+"CAPITOL COUNSEL LLC":"Lobbying & public affairs",
+"CAPITOL COUNSEL":"Lobbying & public affairs",
+"RAINWATER CONSULTING LLC":"Professional services",
+"WOLFE RESEARCH, LLC":"Finance & investment",
+"FRIEDMAN KAPLAN LLP":"Legal services",
+"LIPA":"Government & public sector",
+"BERKOWITZ DEVELOPMENT GROUP":"Real estate & housing",
+"DACH STRATEGY GROUP LLC":"Professional services",
+"WME":"Media & entertainment",
+"VESTED":"Professional services",
+"THE CORCORAN GROUP":"Real estate & housing",
+"ORRICK":"Legal services",
+"LAGUNA PALMS ORTHODONTICS":"Healthcare",
+"VIVAGE":"Healthcare",
+"CASSENA CARE":"Healthcare",
+"GOVALIDATE":"Technology",
+"JACKSON OFFSHORE OPERATORS LLC":"Transportation",
+"WILLIAMS AND CONNOLLY LLP":"Legal services",
+"RED ART CAPITAL":"Finance & investment",
+"WEST AND FEINBERG, P.C.":"Legal services",
+"HOUSTON INTERNATIONAL DANCE COALITION":"Media & entertainment",
+"BERGER SINGERMAN LLP":"Legal services",
+"BROOKINGS":"Other advocacy",
+"WEINBERG & COMPANY P.C.":"Professional services",
+"MARYLAND GENERAL ASSEMBLY":"Government & public sector",
+"WASHINGTON INDEPENDENT PRODUCTIONS":"Media & entertainment",
+"QXO":"Construction & infrastructure",
+"VAN NESS FELDMAN LLP":"Legal services",
+"KING & SPALDING":"Legal services",
+"SILVER FREEDMAN TAFF & TIERNAN LLP":"Legal services",
+"GROVER STRATEGIES LLC":"Professional services",
+"REGAL DOMESTICS":"Professional services",
+"C4T THERAPEUTICS, NEXTRNA, AI PROTEINS":"Healthcare",
+"CUSHMAN AND WAKEFIELD":"Real estate & housing",
+"CUSHMAN & WAKEFIELD":"Real estate & housing",
+"FS PAC":"Political committees & advocacy",
+"EISNER ADVISORY LLC":"Professional services",
+"SILVER MARKETING INC.":"Professional services",
+"ERNESTA HOME INC.":"Retail & consumer",
+"HEART TO HEART HOSPICE":"Healthcare",
+"GJELAJ LAW":"Legal services",
+"EMPIRE OFFICE INC.":"Professional services",
+"FOSTER GARVEY PC":"Legal services",
+"WATERS KRAUS PAUL AND SIEGEL":"Legal services",
+"MONTGOMERY COUNTY MARYLAND":"Government & public sector",
+"LALIEWORKS CREATIVE CONTENT SERVICES":"Media & entertainment",
+"RANDOM HOUSE":"Media & entertainment"
+}).map(([name,label])=>[normalize(name),label]));
+
+const identityIndex=new Map();
+for(const entry of businessIdentities){
+  for(const alias of [...(entry.aliases||[]),...(entry.name?[entry.name]:[])]) identityIndex.set(normalize(alias),entry);
+}
+
+function sectorFromIdentityScope(name){
+  const entry=identityIndex.get(normalize(name));
+  if(!entry||entry.status==='Reviewed label')return "";
+  const s=String(entry.scope||"").toUpperCase();
+  const scopeRules=[
+    ["Political committees & advocacy",/\b(FEDERAL .*POLITICAL COMMITTEE|POLITICAL COMMITTEE|CAMPAIGN COMMITTEE|PAC\b)/],
+    ["Government & public sector",/\b(PUBLIC AUTHORITY|GOVERNMENT|PUBLIC SECTOR|SOVEREIGN TRIBAL)\b/],
+    ["Finance & investment",/\b(INVESTMENT|VENTURE[- ]CAPITAL|PRIVATE[- ]EQUITY|HEDGE FUND|ASSET|TRADING|BROKERAGE|FINANCIAL[- ]SERVICES|FAMILY OFFICE|PRIVATE[- ]CAPITAL)\b/],
+    ["Legal services",/\b(LAW FIRM|LEGAL SERVICES|LEGAL PRACTICE)\b/],
+    ["Real estate & housing",/\b(REAL[- ]ESTATE|REAL ESTATE|PROPERTY|HOUSING)\b/],
+    ["Healthcare",/\b(HEALTHCARE|HEALTH CARE|MEDICAL|HEALTH SYSTEM|SENIOR[- ]CARE|BIOTECHNOLOGY|ANIMAL[- ]HEALTH|CLINICAL|HOSPICE)\b/],
+    ["Lobbying & public affairs",/\b(LOBBYING|PUBLIC[- ]AFFAIRS|GOVERNMENT RELATIONS|PUBLIC AFFAIRS)\b/],
+    ["Technology",/\b(TECHNOLOGY|SOFTWARE|CYBERSECURITY|DIGITAL[- ]IDENTITY|DIGITAL PLATFORM|AUTOMATION SYSTEMS)\b/],
+    ["Education",/\b(EDUCATION|SCHOOL|UNIVERSITY|COLLEGE|RESEARCH AND EDUCATION)\b/],
+    ["Media & entertainment",/\b(MEDIA|ENTERTAINMENT|FILM|PRODUCTION|PUBLISH|MUSIC|THEATER|THEATRE)\b/],
+    ["Construction & infrastructure",/\b(CONSTRUCTION|CONTRACTOR|INFRASTRUCTURE|ENGINEERING|BUILDING[- ]PRODUCTS)\b/],
+    ["Energy & utilities",/\b(ENERGY|UTILITY|RENEWABLE|POWER)\b/],
+    ["Telecommunications",/\b(TELECOMMUNICATIONS|TELECOM|BROADBAND)\b/],
+    ["Transportation",/\b(TRANSPORTATION|AVIATION|LOGISTICS|MARITIME|SHIPPING|OFFSHORE MARINE)\b/],
+    ["Retail & consumer",/\b(RETAIL|CONSUMER|APPAREL|HOME FURNISHINGS)\b/],
+    ["Hospitality & gaming",/\b(HOSPITALITY|HOTEL|RESTAURANT|GAMING)\b/],
+    ["Cannabis",/\bCANNABIS\b/],
+    ["Aerospace & defense",/\b(AEROSPACE|DEFENSE)\b/],
+    ["Insurance",/\b(INSURANCE|RISK MANAGEMENT)\b/],
+    ["Professional services",/\b(CONSULTING|CONSULTANCY|ADVISORY|STRATEGY|COMMUNICATIONS FIRM|INTERIOR[- ]DESIGN|INTERIOR DESIGN|PROFESSIONAL[- ]SERVICES|STAFFING|PLACEMENT)\b/],
+    ["Manufacturing & automotive",/\b(MANUFACTURING|MANUFACTURER|INDUSTRIAL|AUTOMOTIVE)\b/],
+    ["Agriculture, food & beverage",/\b(AGRICULTURAL|AGRICULTURE|FOOD|BEVERAGE|SEAFOOD|FARM)\b/],
+    ["Other advocacy",/\b(NONPROFIT|PHILANTHROP|ADVOCACY|FOUNDATION|CIVIC INITIATIVE|WOMEN'S CONFERENCE)\b/]
+  ];
+  for(const [label,re] of scopeRules)if(re.test(s))return label;
+  return "";
+}
+
+const globalSectorPaths=[
+  "data/jeff-pac-employers.json",
+  "data/jmf-employers.json",
+  "data/jbpf-employers.json",
+  "data/dvtlf-employers.json",
+  "data/jcvf-employers.json"
+];
+let globalSectorPromise;
+function loadGlobalSectorMap(){
+  if(!globalSectorPromise)globalSectorPromise=Promise.all(globalSectorPaths.map(json)).then(files=>{
+    const map=new Map(),conflicts=new Set();
+    for(const rows of files)for(const row of rows){
+      const name=normalize(row[0]),raw=row[1];
+      if(!name||unknownSectorLabel(raw)||/personal|self.employ|not employed|non.employer|unreported|non.individual/i.test(String(raw)))continue;
+      const label=harmonize(name,raw);
+      if(conflicts.has(name))continue;
+      if(map.has(name)&&map.get(name)!==label){map.delete(name);conflicts.add(name);}
+      else map.set(name,label);
+    }
+    return map;
+  }).catch(e=>{globalSectorPromise=undefined;throw e;});
+  return globalSectorPromise;
+}
+
+function classifySectorLabel(name,mappedLabel="",globalSectors=new Map()){
+  const n=normalize(name);
+  if(!n||status.test(n))return "Personal status / unreported employer";
+  const exact=exactSectorOverrides.get(n);
+  if(exact)return exact;
+  if(mappedLabel&&!unknownSectorLabel(mappedLabel))return harmonize(n,mappedLabel);
+  const global=globalSectors.get(n);
+  if(global)return global;
+  const researched=sectorFromIdentityScope(n);
+  if(researched)return researched;
+  return harmonize(n,sector(n));
+}
+
 const personalCategories=["Retired","Not employed / unemployed","Students","Homemakers","Self-employed (role unspecified)","Occupation unreported"];
 function personalRole(t){
  if(!t||/^(N\/?A|NONE|UNKNOWN|NOT PROVIDED|NOT REPORTED|INFORMATION REQUESTED(?: PER BEST EFFORTS)?|REFUSED|REQUESTED|NULL|NOT AVAILABLE|NOT DISCLOSED|DECLINED)$/.test(t))return "Occupation unreported";
@@ -93,6 +231,7 @@ async function json(path){const r=await fetch(path);if(!r.ok)throw Error("Unable
 async function unpack([count,base64]){const bytes=Uint8Array.from(atob(base64),c=>c.charCodeAt(0));const rows=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text());if(rows.length!==count)throw Error("Invalid compressed chunk");return rows;}
 function paths(c,kind,n){return n?Array.from({length:n},(_,i)=>"data/"+c.key+"-"+kind+"-"+(i+1)+".json"):["data/"+c.key+"-"+kind+".json"];}
 async function loadCommittee(c){
+const globalSectors=await loadGlobalSectorMap();
 let org=[],ind=[],emp=[];
 if(c.key==="jcavf"){ind=[["VRADENBURG, GEORGE","NOT EMPLOYED","RETIRED","2025-09-16",500000]];}
 else if(c.key==="jfc"){
@@ -106,8 +245,8 @@ org=sources[0].flat().filter(r=>!r[4]);ind=sources[1].flat().filter(r=>!r[5]);em
 if(org.length!==c.organizationCount||org.reduce((n,r)=>n+r[3],0)!==c.organization)throw Error("Organization totals mismatch: "+c.name);
 if(ind.length!==c.individualCount||ind.reduce((n,r)=>n+r[4],0)!==c.individual)throw Error("Individual totals mismatch: "+c.name);
 const emap=new Map(emp.filter(r=>typeof r[1]==="string").map(r=>[normalize(r[0]),r[1]]));
-const employerSector=name=>{const n=normalize(name);if(!n||status.test(n))return "Personal status / unreported employer";return harmonize(n,emap.get(n)||sector(n));};
-return [...org.map(r=>({name:r[0],type:"organization",sector:harmonize(r[0],c.key==="jfc"?sector(r[0]):r[1]),amount:r[3],committee:c.key})),...ind.map(r=>({name:r[0],type:"individual",employer:r[1]||"NOT REPORTED",occupation:r[2]||"NOT REPORTED",sector:employerSector(r[1]),amount:r[4],committee:c.key}))];
+const employerSector=name=>classifySectorLabel(name,emap.get(normalize(name))||"",globalSectors);
+return [...org.map(r=>({name:r[0],type:"organization",sector:classifySectorLabel(r[0],c.key==="jfc"?"":r[1],globalSectors),amount:r[3],committee:c.key})),...ind.map(r=>({name:r[0],type:"individual",employer:r[1]||"NOT REPORTED",occupation:r[2]||"NOT REPORTED",sector:employerSector(r[1]),amount:r[4],committee:c.key}))];
 }
 
 let dataPromise;
@@ -115,4 +254,4 @@ function loadResearchRecords(){
  if(!dataPromise)dataPromise=Promise.all(config.map(loadCommittee)).then(parts=>parts.flat()).catch(e=>{dataPromise=undefined;throw e;});
  return dataPromise;
 }
-export {config,normalize,occupationGroup,personalCategories,loadCommittee,loadResearchRecords};
+export {config,normalize,occupationGroup,personalCategories,classifySectorLabel,loadCommittee,loadResearchRecords};
