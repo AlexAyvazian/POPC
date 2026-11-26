@@ -63,15 +63,15 @@ test('business money visualization ranks real non-personal dollar groups and exc
   assert.equal(businessMoneyGroups(groups,{mode:'combined'})[0].visualAmount,350000);
 });
 
-test('combined analysis reserves a left table column and sticky business-money visualization column', async () => {
+test('combined analysis uses a true left table column and right visualization column', async () => {
   const html=await fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8');
   assert.match(html,/class="ca-analysis-split"/);
   assert.match(html,/class="ca-analysis-tables"/);
-  assert.match(html,/id="bd-money-viz"/);
-  assert.match(html,/data-bd-viz="circles"/);
-  assert.match(html,/data-bd-viz="bubbles"/);
-  assert.match(html,/data-bd-viz="dots"/);
-  assert.match(html,/data-bd-viz="treemap"/);
+  assert.match(html,/class="ca-viz-column"/);
+  assert.match(html,/id="bd-viz-circles"/);
+  assert.match(html,/id="bd-viz-bubbles"/);
+  assert.match(html,/id="bd-viz-dots"/);
+  assert.match(html,/id="bd-viz-treemap"/);
 });
 
 test('all eight datasets reconcile; every receipt remains in one directory group', async () => {
