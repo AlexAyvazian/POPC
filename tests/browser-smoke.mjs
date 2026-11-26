@@ -39,7 +39,7 @@ try{
    assert((await small.locator('tbody').innerText()).includes('No matching donors'));
    await small.locator('input').fill('');
    const receipt=host.locator('tbody details').first();
-   if(await receipt.count()){await receipt.locator('summary').click();assert(await receipt.locator('p').count()>0);}
+   if(await receipt.count()){await receipt.locator('summary').click();await receipt.locator('p').first().waitFor({state:'visible'});}
   }
   const text=await page.locator('body').innerText();
   assert(!text.includes('Unable to load the contribution tables'),file+' failed loading');
