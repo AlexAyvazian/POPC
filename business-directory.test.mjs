@@ -132,6 +132,9 @@ test('combined page uses one occupation/status table with a dropdown instead of 
   assert.match(html,/Occupation unreported/);
   for (let i=0;i<6;i++) assert.doesNotMatch(html,new RegExp('id="ca-personal-body-'+i+'"'));
   assert.doesNotMatch(html,/id="ca-nonexec-rows"/);
+  assert(html.indexOf('id="ca-money-sources"') < html.indexOf('class="ca-grid"'));
+  const css=await fs.readFile(new URL('./combined-contributions.css', import.meta.url),'utf8');
+  assert.match(css,/\.ca-money-sources\{/);
 });
 
 test('combined donor table foregrounds company names instead of only PAC titles', async () => {
