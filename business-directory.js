@@ -6,7 +6,7 @@ const money = n => new Intl.NumberFormat('en-US', {style:'currency',currency:'US
 const number = n => n.toLocaleString('en-US');
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const size = 40;
-let records = [], groups = [], filtered = [], page = 0, detailRows = [], detailPage = 0, vizType = 'circles', vizMode = 'organization', vizSelected = '';
+let records = [], groups = [], filtered = [], page = 0, detailRows = [], detailPage = 0, vizMode = 'organization', vizSelected = '';
 
 function updateGroups() {
   groups = buildDirectory(records.filter(r => !$('bd-committee').value || r.committee === $('bd-committee').value));
@@ -70,70 +70,70 @@ function visualTop(all, count) {
   return {top,shown,total:all.reduce((n,g)=>n+g.visualAmount,0)};
 }
 
-function attachVizInteractions(data) {
-  for (const node of $('bd-viz-canvas').querySelectorAll('[data-viz-name]')) {
+function attachVizInteractions(host) {
+  for (const node of host.querySelectorAll('[data-viz-name]')) {
     const activate=()=> {
-      const group=groups.find(g=>g.name===node.dataset.vizName);
-      if (!group) return;
-      vizSelected=group.name;
+      vizSelected=node.dataset.vizName;
       renderMoneyViz();
-      showDetails(group);
-      $('bd-detail').scrollIntoView({behavior:'smooth',block:'start'});
     };
     node.addEventListener('click',activate);
     node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
   }
 }
 
-function packNodes(items,width=500,height=430) {
-  const total=Math.max(1,items.reduce((n,g)=>n+g.visualAmount,0));
+function packNodes(items,width=520,height=430) {
+  const maxValue=Math.max(1,...items.map(g=>g.visualAmount));
   const placed=[];
   for (let i=0;i<items.length;i++) {
     const item=items[i];
-    let r=Math.max(13,Math.min(68,Math.sqrt(item.visualAmount/total)*145));
+    let r=22+Math.sqrt(item.visualAmount/maxValue)*50;
     let found=null;
     if (!i) found={x:width/2,y:height/2};
-    for (let step=0;!found&&step<5200;step++) {
-      const angle=step*.39, distance=3.8*Math.sqrt(step);
+    for (let step=0;!found&&step<8000;step++) {
+      const angle=step*.43, distance=4.4*Math.sqrt(step);
       const x=width/2+Math.cos(angle)*distance, y=height/2+Math.sin(angle)*distance;
-      if(x-r<4||x+r>width-4||y-r<4||y+r>height-4) continue;
-      if(placed.every(p=>Math.hypot(p.x-x,p.y-y)>=p.r+r+2)) found={x,y};
+      if(x-r<5||x+r>width-5||y-r<5||y+r>height-5) continue;
+      if(placed.every(p=>Math.hypot(p.x-x,p.y-y)>=p.r+r+3)) found={x,y};
     }
-    if(!found){r=Math.max(10,r*.78);found={x:20+(i%8)*58,y:height-20-Math.floor(i/8)*38};}
+    if(!found){r=Math.max(18,r*.75);found={x:30+(i%7)*70,y:height-30-Math.floor(i/7)*58};}
     placed.push({...item,...found,r});
   }
   return placed;
 }
 
-function renderCircles(all) {
-  const {top}=visualTop(all,30), nodes=packNodes(top);
-  const fills=['#ecfeff','#acfaf1','#c0fb74','#fcef6e','#f1a38a','#f19dc7','#dc69d1'];
-  $('bd-viz-canvas').innerHTML='<svg viewBox="0 0 500 430" role="img" aria-label="Packed circles sized by business money">'+nodes.map((n,i)=>{
-    const selected=n.name===vizSelected, name=n.name.length>24?n.name.slice(0,22)+'…':n.name;
-    return '<g class="bd-viz-node" tabindex="0" role="button" data-viz-name="'+escape(n.name)+'"><title>'+escape(n.name)+' · '+money(n.visualAmount)+'</title><circle cx="'+n.x.toFixed(1)+'" cy="'+n.y.toFixed(1)+'" r="'+n.r.toFixed(1)+'" fill="'+fills[i%fills.length]+'" stroke="'+(selected?'#6b4b20':'#b99b6a')+'" stroke-width="'+(selected?3:1)+'"></circle>'+(n.r>25?'<text class="bd-viz-label" x="'+n.x.toFixed(1)+'" y="'+(n.y-2).toFixed(1)+'" text-anchor="middle">'+escape(name)+'</text>':'')+(n.r>33?'<text class="bd-viz-amount" x="'+n.x.toFixed(1)+'" y="'+(n.y+12).toFixed(1)+'" text-anchor="middle">'+money(n.visualAmount)+'</text>':'')+'</g>';
-  }).join('')+'</svg>';
-  attachVizInteractions(top);
+function shortVizName(name,max=18) {
+  return name.length>max ? name.slice(0,max-1)+'…' : name;
 }
 
-function renderBubbles(all) {
-  const {top}=visualTop(all,30), width=500,height=410,left=52,right=18,topPad=18,bottom=42;
+function renderCircles(all,host) {
+  const {top}=visualTop(all,16), nodes=packNodes(top);
+  const fills=['#ecfeff','#acfaf1','#c0fb74','#fcef6e','#f1a38a','#f19dc7','#dc69d1'];
+  host.innerHTML='<div class="bd-viz-caption">Top '+number(top.length)+' businesses / organizations by dollars</div><svg viewBox="0 0 520 430" role="img" aria-label="Packed circles sized by business money">'+nodes.map((n,i)=>{
+    const selected=n.name===vizSelected,name=shortVizName(n.name,n.r>56?22:15);
+    return '<g class="bd-viz-node" tabindex="0" role="button" data-viz-name="'+escape(n.name)+'"><title>'+escape(n.name)+' · '+money(n.visualAmount)+'</title><circle cx="'+n.x.toFixed(1)+'" cy="'+n.y.toFixed(1)+'" r="'+n.r.toFixed(1)+'" fill="'+fills[i%fills.length]+'" stroke="'+(selected?'#6b4b20':'#b99b6a')+'" stroke-width="'+(selected?3:1)+'"></circle>'+(n.r>39?'<text class="bd-viz-label" x="'+n.x.toFixed(1)+'" y="'+(n.y-3).toFixed(1)+'" text-anchor="middle">'+escape(name)+'</text><text class="bd-viz-amount" x="'+n.x.toFixed(1)+'" y="'+(n.y+11).toFixed(1)+'" text-anchor="middle">'+money(n.visualAmount)+'</text>':'')+'</g>';
+  }).join('')+'</svg>';
+  attachVizInteractions(host);
+}
+
+function renderBubbles(all,host) {
+  const {top}=visualTop(all,25), width=520,height=410,left=58,right=18,topPad=18,bottom=42;
   const maxAmount=Math.max(...top.map(g=>g.visualAmount),1),maxCount=Math.max(...top.map(vizRecordCount),1);
   const innerW=width-left-right,innerH=height-topPad-bottom;
   const fills=['#74cbf5','#7fdfd1','#86ec4f','#f4e14a','#ed7147','#ea8cae','#dc64d4'];
   const grid=[.25,.5,.75,1].map(t=>{const y=topPad+innerH*(1-t);return '<line class="bd-bubble-grid" x1="'+left+'" x2="'+(width-right)+'" y1="'+y+'" y2="'+y+'"></line><text class="bd-bubble-axis-label" x="'+(left-6)+'" y="'+(y+3)+'" text-anchor="end">'+money(maxAmount*t)+'</text>';}).join('');
-  const bubbles=top.map((g,i)=>{const count=Math.max(1,vizRecordCount(g)),x=left+(Math.log1p(count)/Math.log1p(maxCount))*innerW,y=topPad+(1-g.visualAmount/maxAmount)*innerH,r=7+Math.sqrt(g.visualAmount/maxAmount)*24,selected=g.name===vizSelected;return '<g class="bd-viz-node" tabindex="0" role="button" data-viz-name="'+escape(g.name)+'"><title>'+escape(g.name)+' · '+money(g.visualAmount)+' · '+number(count)+' receipt records</title><circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+r.toFixed(1)+'" fill="'+fills[i%fills.length]+'" fill-opacity=".72" stroke="'+(selected?'#6b4b20':'#836c4d')+'" stroke-width="'+(selected?3:1)+'"></circle></g>';}).join('');
-  $('bd-viz-canvas').innerHTML='<svg viewBox="0 0 '+width+' '+height+'" role="img" aria-label="Bubble chart of receipt records and business money">'+grid+'<line class="bd-bubble-axis" x1="'+left+'" x2="'+left+'" y1="'+topPad+'" y2="'+(height-bottom)+'"></line><line class="bd-bubble-axis" x1="'+left+'" x2="'+(width-right)+'" y1="'+(height-bottom)+'" y2="'+(height-bottom)+'"></line>'+bubbles+'<text class="bd-bubble-axis-label" x="'+(left+innerW/2)+'" y="'+(height-10)+'" text-anchor="middle">Receipt records →</text><text class="bd-bubble-axis-label" x="12" y="'+(topPad+innerH/2)+'" transform="rotate(-90 12 '+(topPad+innerH/2)+')" text-anchor="middle">Dollar amount →</text></svg>';
-  attachVizInteractions(top);
+  const bubbles=top.map((g,i)=>{const count=Math.max(1,vizRecordCount(g)),x=left+(Math.log1p(count)/Math.log1p(maxCount))*innerW,y=topPad+(1-g.visualAmount/maxAmount)*innerH,r=8+Math.sqrt(g.visualAmount/maxAmount)*26,selected=g.name===vizSelected;return '<g class="bd-viz-node" tabindex="0" role="button" data-viz-name="'+escape(g.name)+'"><title>'+escape(g.name)+' · '+money(g.visualAmount)+' · '+number(count)+' receipt records</title><circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+r.toFixed(1)+'" fill="'+fills[i%fills.length]+'" fill-opacity=".72" stroke="'+(selected?'#6b4b20':'#836c4d')+'" stroke-width="'+(selected?3:1)+'"></circle></g>';}).join('');
+  host.innerHTML='<div class="bd-viz-caption">Top '+number(top.length)+' businesses / organizations · hover for names and amounts</div><svg viewBox="0 0 '+width+' '+height+'" role="img" aria-label="Bubble chart of receipt records and business money">'+grid+'<line class="bd-bubble-axis" x1="'+left+'" x2="'+left+'" y1="'+topPad+'" y2="'+(height-bottom)+'"></line><line class="bd-bubble-axis" x1="'+left+'" x2="'+(width-right)+'" y1="'+(height-bottom)+'" y2="'+(height-bottom)+'"></line>'+bubbles+'<text class="bd-bubble-axis-label" x="'+(left+innerW/2)+'" y="'+(height-10)+'" text-anchor="middle">Receipt records →</text><text class="bd-bubble-axis-label" x="13" y="'+(topPad+innerH/2)+'" transform="rotate(-90 13 '+(topPad+innerH/2)+')" text-anchor="middle">Dollar amount →</text></svg>';
+  attachVizInteractions(host);
 }
 
-function renderDots(all) {
+function renderDots(all,host) {
   const {top}=visualTop(all,12), total=top.reduce((n,g)=>n+g.visualAmount,0),unit=niceDotUnit(total);
-  $('bd-viz-canvas').innerHTML='<div class="bd-dot-key">Each dot = '+money(unit)+'</div>'+top.map(g=>{
+  host.innerHTML='<div class="bd-dot-key">Top '+number(top.length)+' · each dot = '+money(unit)+'</div>'+top.map(g=>{
     const whole=Math.floor(g.visualAmount/unit),remainder=(g.visualAmount%unit)/unit,count=Math.min(40,whole+(remainder?1:0));
     const dots=Array.from({length:count},(_,i)=>'<span class="bd-dot'+(i===count-1&&remainder?' partial':'')+'"'+(i===count-1&&remainder?' style="opacity:'+Math.max(.2,remainder).toFixed(2)+'"':'')+'></span>').join('');
     return '<button type="button" class="bd-dot-row bd-viz-node" data-viz-name="'+escape(g.name)+'"><span class="bd-dot-name">'+escape(g.name)+'<span>'+money(g.visualAmount)+'</span></span><span class="bd-dot-field" aria-hidden="true">'+dots+'</span></button>';
   }).join('');
-  attachVizInteractions(top);
+  attachVizInteractions(host);
 }
 
 function treemapLayout(items,x,y,w,h,out=[]) {
@@ -148,32 +148,33 @@ function treemapLayout(items,x,y,w,h,out=[]) {
   return out;
 }
 
-function renderTreemap(all) {
+function renderTreemap(all,host) {
   let items=all.slice(0,23);
   if(all.length>23){const rest=all.slice(23),amount=rest.reduce((n,g)=>n+g.visualAmount,0);items=[...items,{name:'Other businesses',visualAmount:amount,other:true}];}
-  const rects=treemapLayout(items,0,0,500,420),fills=['#ecfeff','#acfaf1','#c0fb74','#fffed9','#f1a38a','#f9d9ef','#f9dafa'];
-  $('bd-viz-canvas').innerHTML='<svg viewBox="0 0 500 420" role="img" aria-label="Treemap sized by business money">'+rects.map((r,i)=>{
-    const pad=2,x=r.x+pad,y=r.y+pad,w=Math.max(0,r.w-pad*2),h=Math.max(0,r.h-pad*2),selected=r.name===vizSelected,canLabel=w>72&&h>34,name=r.name.length>24?r.name.slice(0,22)+'…':r.name;
+  const rects=treemapLayout(items,0,0,520,420),fills=['#ecfeff','#acfaf1','#c0fb74','#fffed9','#f1a38a','#f9d9ef','#f9dafa'];
+  host.innerHTML='<div class="bd-viz-caption">Largest businesses / organizations by dollar share</div><svg viewBox="0 0 520 420" role="img" aria-label="Treemap sized by business money">'+rects.map((r,i)=>{
+    const pad=2,x=r.x+pad,y=r.y+pad,w=Math.max(0,r.w-pad*2),h=Math.max(0,r.h-pad*2),selected=r.name===vizSelected,canLabel=w>76&&h>36,name=shortVizName(r.name,22);
     const attrs=r.other?'':' tabindex="0" role="button" data-viz-name="'+escape(r.name)+'"';
-    return '<g class="'+(r.other?'':'bd-viz-node')+'"'+attrs+'><title>'+escape(r.name)+' · '+money(r.visualAmount)+'</title><rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="8" fill="'+fills[i%fills.length]+'" stroke="'+(selected?'#6b4b20':'#b99b6a')+'" stroke-width="'+(selected?3:1)+'"></rect>'+(canLabel?'<text class="bd-treemap-label" x="'+(x+8).toFixed(1)+'" y="'+(y+16).toFixed(1)+'">'+escape(name)+'</text><text class="bd-treemap-amount" x="'+(x+8).toFixed(1)+'" y="'+(y+29).toFixed(1)+'">'+money(r.visualAmount)+'</text>':'')+'</g>';
+    return '<g class="'+(r.other?'':'bd-viz-node')+'"'+attrs+'><title>'+escape(r.name)+' · '+money(r.visualAmount)+'</title><rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="7" fill="'+fills[i%fills.length]+'" stroke="'+(selected?'#6b4b20':'#b99b6a')+'" stroke-width="'+(selected?3:1)+'"></rect>'+(canLabel?'<text class="bd-treemap-label" x="'+(x+7).toFixed(1)+'" y="'+(y+15).toFixed(1)+'">'+escape(name)+'</text><text class="bd-treemap-amount" x="'+(x+7).toFixed(1)+'" y="'+(y+28).toFixed(1)+'">'+money(r.visualAmount)+'</text>':'')+'</g>';
   }).join('')+'</svg>';
-  attachVizInteractions(items.filter(g=>!g.other));
+  attachVizInteractions(host);
 }
 
 function renderMoneyViz() {
-  if (!$('bd-viz-canvas') || !groups.length) return;
-  const all=businessMoneyGroups(vizBaseGroups(),{mode:vizMode});
-  const topCount=vizType==='dots'?12:vizType==='treemap'?Math.min(24,all.length):Math.min(30,all.length);
-  const shown=all.slice(0,topCount).reduce((n,g)=>n+g.visualAmount,0),total=all.reduce((n,g)=>n+g.visualAmount,0);
+  const circleHost=$('bd-viz-circles'),bubbleHost=$('bd-viz-bubbles'),dotHost=$('bd-viz-dots'),treemapHost=$('bd-viz-treemap');
+  if (!circleHost || !groups.length) return;
+  const all=businessMoneyGroups(vizBaseGroups(),{mode:vizMode}),total=all.reduce((n,g)=>n+g.visualAmount,0);
   $('bd-money-viz-summary').textContent=all.length
-    ? number(topCount)+' of '+number(all.length)+' businesses / organizations shown · '+money(shown)+' of '+money(total)+' in '+vizModeLabel()
+    ? number(all.length)+' businesses / organizations · '+money(total)+' in '+vizModeLabel()
     : 'No matching dollar records for this selection.';
-  for(const button of document.querySelectorAll('[data-bd-viz]')) button.setAttribute('aria-selected',String(button.dataset.bdViz===vizType));
-  if(!all.length){$('bd-viz-canvas').innerHTML='<div class="bd-viz-empty">No matching business money to visualize.</div>';return;}
-  if(vizType==='bubbles')renderBubbles(all);
-  else if(vizType==='dots')renderDots(all);
-  else if(vizType==='treemap')renderTreemap(all);
-  else renderCircles(all);
+  if(!all.length){
+    for(const host of [circleHost,bubbleHost,dotHost,treemapHost]) host.innerHTML='<div class="bd-viz-empty">No matching business money to visualize.</div>';
+    return;
+  }
+  renderCircles(all,circleHost);
+  renderBubbles(all,bubbleHost);
+  renderDots(all,dotHost);
+  renderTreemap(all,treemapHost);
 }
 
 function showDetails(group) {
@@ -208,7 +209,6 @@ function renderDetails() {
 }
 
 $('bd-viz-money').addEventListener('change', e => {vizMode=e.target.value;vizSelected='';renderMoneyViz();});
-for (const button of document.querySelectorAll('[data-bd-viz]')) button.addEventListener('click', () => {vizType=button.dataset.bdViz;renderMoneyViz();});
 $('bd-committee').addEventListener('change', updateGroups);
 for (const id of ['bd-search','bd-sector','bd-view','bd-research']) $(id).addEventListener(id === 'bd-search' ? 'input' : 'change', () => {page=0;closeDetails();render();});
 $('bd-prev').addEventListener('click', () => {page--;render();});
