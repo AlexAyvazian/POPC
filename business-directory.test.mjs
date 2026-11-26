@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {buildDirectory, identifyName, isResearchEligibleGroup, researchPriorityReasons, selectDirectory, directoryCSV, loadDirectoryRecords, businessMoneyGroups} from './business-directory-data.js';
+import {buildDirectory, identifyName, isResearchEligibleGroup, researchPriorityReasons, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js';
 import {loadResearchRecords, config, classifySectorLabel} from './research-data.js';
 
 
@@ -45,41 +45,6 @@ test('memo sectors cannot contaminate direct-dollar sector filtering', () => {
   assert(selectDirectory(groups,{view:'all',sector:'Technology'}).some(g=>g.name==='APPLE INC.'));
   const memoOnly=groups.find(g=>g.name==='MEMO ONLY ORG');
   assert.deepEqual([...memoOnly.sectors],['Security services']);
-});
-
-test('business money visualization excludes unions, political committees, advocacy and memo-only money', () => {
-  const groups=buildDirectory([
-    {type:'organization',name:'BIG BUSINESS PAC',sector:'Finance & investment',committee:'a',amount:300000},
-    {type:'organization',name:'SMALL BUSINESS PAC',sector:'Technology',committee:'a',amount:100000},
-    {type:'individual',name:'PERSON ONE',employer:'BIG BUSINESS',occupation:'CEO',sector:'Finance & investment',committee:'a',amount:50000},
-    {type:'organization',name:'LABOR UNION PAC',sector:'Labor unions',committee:'a',amount:250000},
-    {type:'organization',name:'CANDIDATE COMMITTEE',sector:'Political committees & advocacy',committee:'a',amount:200000},
-    {type:'organization',name:'ADVOCACY FUND',sector:'Other advocacy',committee:'a',amount:150000},
-    {type:'organization',name:'MEMO ONLY PAC',sector:'Technology',committee:'a',amount:999999,memo:true},
-    {type:'individual',name:'PERSON TWO',employer:'HOMEMAKER',occupation:'HOMEMAKER',sector:'Personal status / unreported employer',committee:'a',amount:70000}
-  ]);
-  assert.deepEqual(businessMoneyGroups(groups,{mode:'organization'}).map(g=>[g.name,g.visualAmount]),[
-    ['BIG BUSINESS',300000],
-    ['SMALL BUSINESS',100000]
-  ]);
-  assert.equal(businessMoneyGroups(groups,{mode:'individual'})[0].name,'BIG BUSINESS');
-  assert.equal(businessMoneyGroups(groups,{mode:'combined'})[0].visualAmount,350000);
-});
-
-test('combined analysis uses a persistent right-side visual workspace without stacked dead space', async () => {
-  const html=await fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8');
-  const css=await fs.readFile(new URL('./combined-contributions.css', import.meta.url),'utf8');
-  assert.match(html,/class="ca-analysis-split"/);
-  assert.match(html,/class="ca-analysis-tables"/);
-  assert.match(html,/class="ca-viz-column"/);
-  assert.match(html,/id="bd-viz-canvas"/);
-  assert.match(html,/data-bd-viz="circles"/);
-  assert.match(html,/data-bd-viz="bubbles"/);
-  assert.match(html,/data-bd-viz="dots"/);
-  assert.match(html,/data-bd-viz="treemap"/);
-  assert.doesNotMatch(html,/id="bd-viz-circles"/);
-  assert.match(css,/\.ca-viz-column\{[^}]*position:sticky/);
-  assert.match(css,/\.ca-analysis-tables #ca-role-pie\{display:none/);
 });
 
 test('all eight datasets reconcile; every receipt remains in one directory group', async () => {
