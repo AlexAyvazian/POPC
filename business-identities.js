@@ -1284,13 +1284,14 @@ export const businessIdentities = [
     "aliases": [
       "NEP"
     ],
-    "status": "Unresolved",
+    "status": "Reviewed label",
     "name": null,
     "parent": "",
-    "scope": "Reported name",
-    "evidence": "NEP is non-unique and can refer to multiple organizations. The available donor context does not conclusively tie this bare acronym to NEP Group, Inc.; keep it separate.",
+    "scope": "Non-unique acronym / reported employer label",
+    "evidence": "A second-pass donor-context search established that NEP is not a unique employer identity: federal records use NEP for Norwest Equity Partners in Minneapolis, while NEP Group/NEP, Inc. is a separate Pittsburgh broadcast business. Without the POPC row's donor/location context sufficient to choose between them, the bare acronym is a reviewed ambiguous label rather than an unresolved business identity.",
     "sources": [
-      "https://www.nepgroup.com/",
+      "https://docquery.fec.gov/pdf/398/202207189522151398/202207189522151398.pdf",
+      "https://nep.com/team/jack-dempsey/",
       "https://www.sec.gov/Archives/edgar/data/1612301/000119312515239481/d743919ds1.htm"
     ],
     "reviewed": "2026-11-25"
@@ -10310,12 +10311,16 @@ export const businessIdentities = [
     "aliases": [
       "SKYLIGHT"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / organization name",
+    "name": "Skylight Engagement, Inc.",
+    "status": "Source-backed",
+    "scope": "Nonprofit human-rights media organization / operating name Skylight",
     "parent": "",
-    "evidence": "The generic SKYLIGHT employer and Juan De Onis name produced conflicting or unrelated public matches, including Skylight Pictures associated with a different De Onís. No exact employer identity is established.",
-    "sources": [],
+    "evidence": "The prior research note incorrectly focused on a Juan de Onis match. Public campaign-finance records instead show Paco de Onis reporting Skylight Engagement as his employer, while Skylight's official site and IRS Form 990 data identify Paco de Onís as Executive Director of Skylight / Skylight Engagement, Inc. The POPC row's De Onis surname plus Executive Director occupation therefore resolves the employer to Skylight Engagement, Inc.",
+    "sources": [
+      "https://www.city-data.com/elec2/20/elec-BROOKLYN-NY-20-part292.html",
+      "https://skylight.is/team/paco-de-onis",
+      "https://projects.propublica.org/nonprofits/organizations/465530678"
+    ],
     "reviewed": "2026-11-25"
   },
   {
@@ -11376,12 +11381,16 @@ export const businessIdentities = [
     "aliases": [
       "ELM PARK GROUP"
     ],
-    "name": null,
-    "status": "Unresolved",
-    "scope": "Reported employer / business-group name",
+    "name": "Elm Park Group LLC",
+    "status": "Source-backed",
+    "scope": "New York private-investigation / business-intelligence company",
     "parent": "",
-    "evidence": "Reviewed sources did not establish one authoritative Elm Park Group entity tied to Paul T. Willingham and the reported business-owner role. No same-name real-estate or investment group is merged.",
-    "sources": [],
+    "evidence": "New York licensing records identify Elm Park Group LLC at 5 Renaissance Square in White Plains. Paul T. Willingham's public records place him at the same 5 Renaissance Square address, and historical campaign-finance records identify the same Paul T. Willingham of White Plains as CEO of Gryphon Strategies, the investigations firm he previously led. The exact address and person history tie the donor's ELM PARK GROUP employer to Elm Park Group LLC.",
+    "sources": [
+      "https://appext20.dos.ny.gov/lcns_public/bus_name_inq_frm?p_record_id=070002014",
+      "https://www.campaignmoney.com/political/contributions/paul-willingham.asp?cycle=20",
+      "https://www.dnb.com/business-directory/company-profiles/gryphon-investigations-llc.b5615be0432871cd85e77408d00aee1d"
+    ],
     "reviewed": "2026-11-25"
   },
   {

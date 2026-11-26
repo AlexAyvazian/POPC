@@ -507,7 +507,7 @@ test('twelfth executive-priority batch resolves exact employers while keeping ge
     {type:'individual',name:'Pointer',employer:'NOEL POINTER FOUNDATION INC',occupation:'FOUNDER/DIRECTOR',sector:'Nonprofit',committee:'a',amount:600}
   ]);
   assert.equal(groups.find(g=>g.name==='UNITED GENERAL BAKERY INC.').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='SKYLIGHT').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='SKYLIGHT ENGAGEMENT, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='FINANCIAL INFORMATION NETWORK, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='NATIONAL COUNCIL ON COMPENSATION INSURANCE, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='PC DEVELOPMENT GROUP, INC.').research.scope,'Historical Florida legal entity / development company');
@@ -562,7 +562,7 @@ test('fifteenth executive-priority batch records role conflicts and supported sp
   ]);
   assert.equal(groups.find(g=>g.name==='CAMBIA HEALTH SOLUTIONS, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='EUCLID SYSTEMS CORPORATION').research.status,'Source-backed');
-  assert.equal(groups.find(g=>g.name==='ELM PARK GROUP').research.status,'Unresolved');
+  assert.equal(groups.find(g=>g.name==='ELM PARK GROUP LLC').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='PRECISION AUTO GLASS').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CANTERBURY CAPITAL, INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CLAYMONT SOCIETY FOR CONTINUOUS EDUCATION').research.status,'Source-backed');
@@ -868,4 +868,16 @@ test('deep unresolved-identity lookup resolves documented companies and separate
   assert.equal(groups.find(g=>g.name==='MCCREERY INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='XXV DYNASTY HOLDINGS INC.').research.status,'Source-backed');
   assert.equal(groups.find(g=>g.name==='CSU').research.status,'Reviewed label');
+});
+
+
+test('final hard-name pass resolves Skylight and Elm Park while classifying bare NEP as ambiguous shorthand', () => {
+  const groups=buildDirectory([
+    {type:'individual',name:'De Onis',employer:'SKYLIGHT',occupation:'EXECUTIVE DIRECTOR',sector:'Media',committee:'a',amount:100},
+    {type:'individual',name:'Willingham',employer:'ELM PARK GROUP',occupation:'BUSINESS OWNER',sector:'Services',committee:'a',amount:200},
+    {type:'individual',name:'Unknown',employer:'NEP',occupation:'EXECUTIVE',sector:'Services',committee:'a',amount:300}
+  ]);
+  assert.equal(groups.find(g=>g.name==='SKYLIGHT ENGAGEMENT, INC.').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='ELM PARK GROUP LLC').research.status,'Source-backed');
+  assert.equal(groups.find(g=>g.name==='NEP').research.status,'Reviewed label');
 });

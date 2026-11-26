@@ -397,3 +397,25 @@ The remaining **11** specific identity definitions still lack enough evidence to
 11. ELM PARK GROUP
 
 Those remaining records stay visible in the directory and are intentionally unmerged.
+
+
+### Final hard-name follow-up — November 25, 2026
+
+A donor-context follow-up on the 11 remaining cases produced three further corrections:
+
+- **SKYLIGHT → Skylight Engagement, Inc.** The earlier Juan de Onis lead was incorrect; campaign-finance and nonprofit records identify Paco de Onís with Skylight and the Executive Director role.
+- **ELM PARK GROUP → Elm Park Group LLC.** New York licensing records place Elm Park Group LLC at 5 Renaissance Square, White Plains; Paul T. Willingham is independently tied to that same address and to the predecessor investigations business Gryphon Strategies.
+- **NEP → Reviewed label.** Live searches established at least two plausible U.S. employer meanings (Norwest Equity Partners in Minneapolis and the separate NEP broadcast group in Pittsburgh), so the bare acronym is not one reusable identity without the specific donor/location context.
+
+After the full 37-name lookup, the remaining **8 explicit unresolved identities** are:
+
+1. NEP INC.
+2. JRJ CONSTRUCTION
+3. JRJ CONSTRUCTION LLC
+4. TJ FARMS LLC
+5. BRIDGE 360 ADVISORY
+6. JD DOVE FARMS
+7. FOX HOLLOW VENTURES LLC
+8. RSS-TGP
+
+These are the names for which the search still found multiple plausible exact entities or no independent donor-to-entity link strong enough to select one without guessing.
