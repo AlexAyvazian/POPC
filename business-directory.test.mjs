@@ -14,6 +14,7 @@ test('sector classification reuses verified cross-committee and researched ident
   assert.equal(classifySectorLabel('GJELAJ LAW','',new Map()),'Legal services');
   assert.equal(classifySectorLabel('STREAM LINE CIRCLE LLC','',new Map()),'Transportation');
   assert.equal(classifySectorLabel('NOT EMPLOYED','Finance',new Map()),'Personal status / unreported employer');
+  assert.equal(classifySectorLabel('UNITED','',new Map()),'Sector unresolved / ambiguous');
 });
 
 test('all eight datasets reconcile; every receipt remains in one directory group', async () => {
