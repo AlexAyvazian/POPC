@@ -2,7 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {buildDirectory, identifyName, isResearchEligibleGroup, researchPriorityReasons, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js';
-import {loadResearchRecords, config} from './research-data.js';
+import {loadResearchRecords, config, classifySectorLabel} from './research-data.js';
+
+
+test('sector classification reuses verified cross-committee and researched identity data before falling back to unconfirmed', () => {
+  const global=new Map([['AWAY','Retail & consumer']]);
+  assert.equal(classifySectorLabel('AWAY','Sector unconfirmed / further research',global),'Retail & consumer');
+  assert.equal(classifySectorLabel('TRISOLARIS LLC','Sector unconfirmed / further research',new Map()),'Technology');
+  assert.equal(classifySectorLabel('D.E. SHAW','',new Map()),'Finance & investment');
+  assert.equal(classifySectorLabel('GJELAJ LAW','',new Map()),'Legal services');
+  assert.equal(classifySectorLabel('STREAM LINE CIRCLE LLC','',new Map()),'Transportation');
+  assert.equal(classifySectorLabel('NOT EMPLOYED','Finance',new Map()),'Personal status / unreported employer');
+});
 
 test('all eight datasets reconcile; every receipt remains in one directory group', async () => {
   globalThis.fetch = async path => new Response(await fs.readFile(new URL(path, import.meta.url)));
