@@ -94,8 +94,15 @@ with sync_playwright() as p:
     if not SIGNATURE_RE.search(body_text):
         raise RuntimeError("Change.org signature card was not found; refusing to publish a bad preview.")
 
-    marker = page.get_by_text(SIGNATURE_RE).first
-    marker.wait_for(state="visible", timeout=30000)
+    markers = page.get_by_text(SIGNATURE_RE)
+    marker = None
+    for index in range(min(markers.count(), 100)):
+        candidate = markers.nth(index)
+        if candidate.is_visible():
+            marker = candidate
+            break
+    if marker is None:
+        raise RuntimeError("No visible Change.org signature card was found.")
     clip = hero_clip(page, marker)
 
     page.screenshot(
