@@ -44,11 +44,16 @@ function reportedIdentity(record) {
   }
   if (record.type === 'individual') return {name: reported, reported, method: 'Reported employer', personal: false};
   const title = reported.replace(/\s+\([^()]*\bPAC\)$/, '');
-  const match = title.match(/^(.+?)\s+(?:(?:EMPLOYEE|EMPLOYEES)\s+)?(?:POLITICAL ACTION COMMITTEE|SEPARATE SEGREGATED FUND|PAC)$/);
+  const match = title.match(/^(.+?)\s+(?:(?:EMPLOYEE|EMPLOYEES)(?:['’])?\s+)?(?:POLITICAL ACTION COMMITTEE|SEPARATE SEGREGATED FUND|PAC)$/);
   if (match && match[1].length > 2) {
     return {name: match[1].replace(/^EMPLOYEES OF\s+/, ''), reported, method: 'Name extracted from PAC title', personal: false};
   }
   return {name: reported, reported, method: 'Reported organization / PAC', personal: false};
+}
+
+export function connectedBusinessName(record) {
+  const identity = reportedIdentity(record);
+  return identity.name;
 }
 
 const identityIndex = new Map();
