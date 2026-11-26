@@ -1,4 +1,5 @@
 import {businessIdentities} from './business-identities.js?v=48';
+import {schumerIdentities} from './schumer-identities.js?v=1';
 import {normalize, config, occupationGroup, loadResearchRecords} from './schumer-research-data.js?v=1';
 
 export {loadDirectoryRecords} from './schumer-research-data.js?v=1';
@@ -23,7 +24,7 @@ function reportedIdentity(record) {
 }
 
 const identityIndex = new Map();
-for (const entry of businessIdentities) {
+for (const entry of [...businessIdentities, ...schumerIdentities]) {
   const recordTypes = entry.recordTypes?.length ? entry.recordTypes : ['*'];
   for (const alias of [...entry.aliases, ...(entry.name ? [entry.name] : [])]) {
     const aliasKey = normalize(alias);
