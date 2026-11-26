@@ -30,6 +30,16 @@ try{
    assert.equal(await page.locator('[data-donor-group]').count(),3,file+' requires three donor tables');
    const host=page.locator('[data-donor-tables]');
    assert.equal(await host.locator('table').count(),3);
+   assert.equal(await host.locator('[data-chart]').count(),12,file+' needs four visuals before each of three tables');
+   for(const section of await host.locator('[data-donor-group]').all()){
+    assert.equal(await section.locator('[data-chart]').count(),4);
+    const before=await section.evaluate(el=>Boolean(el.querySelector('[data-donor-visuals]').compareDocumentPosition(el.querySelector('table')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(before);
+    const visual=section.locator('[data-donor-visuals]');
+    const dots=await visual.locator('[data-donor-count]').evaluateAll(nodes=>nodes.reduce((n,d)=>n+Number(d.dataset.donorCount),0));
+    assert.equal(dots,Number(await visual.getAttribute('data-groups')));
+    const bubbleAreas=await visual.locator('[data-bubble-donors]').evaluateAll(nodes=>nodes.map(n=>Number(n.getAttribute('r'))**2/Number(n.dataset.bubbleDonors)));
+    if(bubbleAreas.length)assert(bubbleAreas.every(v=>Math.abs(v-bubbleAreas[0])<1e-8),'bubble area scales with donor count');
+   }
    assert((await host.locator('thead').first().innerText()).includes('Business identity')); 
    for(const key of ['indirect','small']){
     const section=host.locator('[data-donor-group='+key+']');
@@ -38,6 +48,7 @@ try{
    const small=host.locator('[data-donor-group=small]');
    await small.locator('input').fill('ZZZ no matching donor ZZZ');
    assert((await small.locator('tbody').innerText()).includes('No matching donors'));
+   assert.equal(await small.locator('[data-donor-visuals]').getAttribute('data-groups'),'0');
    await small.locator('input').fill('');
    const receipt=host.locator('tbody tr td:last-child details').first();
    if(await receipt.count()){await receipt.locator('summary').click();await receipt.locator('p').first().waitFor({state:'visible'});}
@@ -54,6 +65,14 @@ try{
    await page.waitForFunction(()=>document.querySelector('.popc-ai-state')?.textContent==='Answer ready',{},{timeout:60000});
    assert((await page.locator('.popc-ai-messages').innerText()).includes(file==='index.html'?'All eight committees':'All three committees'));
   }
+  if(file==='pages/combined-contributions.html'){
+   await page.setViewportSize({width:390,height:844});
+   await page.waitForTimeout(150);
+   assert(await page.locator('[data-donor-visuals]').first().evaluate(el=>el.scrollWidth<=el.clientWidth+2),'charts fit mobile width');
+   await page.locator('[data-chart=bubble] [tabindex]').first().focus();
+   assert(!(await page.locator('[data-chart=bubble] .dv-readout').first().innerText()).startsWith('Tap, focus'));
+  }
+  assert.deepEqual(errors,[],file+' finished without chart errors');
   console.log('PASS browser '+file);
   await page.close();
  }
