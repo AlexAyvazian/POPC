@@ -1,0 +1,30 @@
+name: Petition live count tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'petition-live.js'
+      - 'petition-live.test.mjs'
+      - 'functions/api/petition.js'
+      - 'functions/lib/petition-count.js'
+      - '_routes.json'
+      - '.github/workflows/petition-live-tests.yml'
+  pull_request:
+    paths:
+      - 'petition-live.js'
+      - 'petition-live.test.mjs'
+      - 'functions/api/petition.js'
+      - 'functions/lib/petition-count.js'
+      - '_routes.json'
+      - '.github/workflows/petition-live-tests.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test petition-live.test.mjs
