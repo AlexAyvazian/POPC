@@ -1,6 +1,6 @@
-import {businessIdentities} from './business-identities.js?v=49';
+import {businessIdentities} from './business-identities.js?v=50';
 const config=[{"name":"JEFF PAC","slug":"jeff-pac","key":"jeff-pac","ni":4,"no":3,"individual":11430000,"organization":76000000,"individualCount":28,"organizationCount":171,"memos":200},{"name":"Jeffries Victory Fund","slug":"jeffries-victory-fund","key":"jvf","ni":6,"no":0,"individual":1383246082,"organization":66810000,"individualCount":530,"organizationCount":30,"memos":16},{"name":"Jeffries Majority Fund","slug":"jeffries-majority-fund","key":"jmf","ni":3,"no":3,"individual":74460000,"organization":6899900,"individualCount":178,"organizationCount":19,"memos":156},{"name":"Jeffries for Congress","slug":"jeffries-for-congress","key":"jfc","ni":0,"no":0,"individual":431228139,"organization":282420000,"individualCount":107722,"organizationCount":774,"memos":110585},{"name":"Jeffries Clark Victory Fund","slug":"jeffries-clark-victory-fund","key":"jcvf","ni":0,"no":0,"individual":11850000,"organization":500000,"individualCount":12,"organizationCount":1,"memos":11},{"name":"Defend the Vote Leadership Fund","slug":"defend-the-vote-leadership-fund","key":"dvtlf","ni":13,"no":0,"individual":4067000,"organization":0,"individualCount":1262,"organizationCount":0,"memos":5},{"name":"Jeffries Clark Aguilar Victory Fund","slug":"jeffries-clark-aguilar-victory-fund","key":"jcavf","ni":0,"no":0,"individual":500000,"organization":0,"individualCount":1,"organizationCount":0,"memos":0},{"name":"Jeffries Battleground Protection Fund","slug":"jeffries-battleground-protection-fund","key":"jbpf","ni":0,"no":0,"individual":437599149,"organization":26100000,"individualCount":78,"organizationCount":11,"memos":49}];
-const status=/^(NOT EMPLOYED|RETIRED|SELF[ -]?EMPLOYED|SELF|N\/A|NA|NONE|NULL|NOT REPORTED|INFORMATION REQUESTED|INFORMATION REQUESTED PER BEST EFFORTS|UNEMPLOYED|HOMEMAKER|STUDENT|UNKNOWN|NOT AVAILABLE|REQUESTED)$/i;
+const status=/^(NOT EMPLOYED|RETIRED|SELF[ -]?EMPLOYED|SELF|N\/A|NA|NONE|NULL|NOT REPORTED|INFORMATION REQUESTED|INFORMATION REQUESTED PER BEST EFFORTS|UNEMPLOYED|HOMEMAKER|HOME MAKER|STUDENT|UNKNOWN|NOT AVAILABLE|REQUESTED|NOT PROVIDED|NOT DISCLOSED|DECLINED|REFUSED)$/i;
 const rules=[
 ["Tribal Nations & Governments",/\b(TRIBE|TRIBAL|INDIAN NATION|INDIAN COMMUNITY|BAND OF (?:INDIANS|MIWOK)|POTAWATOMI|POTTAWATOMI|CHICKASAW NATION|ONEIDA NATION|CHEROKEE NATION|SEMINOLE TRIBE|POARCH BAND|YOCHA DEHE|PECHANGA)\b/],
 ["Labor Unions & Employee Associations",/\b(UNION|BROTHERHOOD|AFL-CIO|SEIU|AFSCME|TEAMSTERS|MACHINISTS|PILOTS ASSOCIATION|PILOTS' ASSOCIATION|FIREFIGHTERS|FIRE FIGHTERS|NATIONAL AIR TRAFFIC CONTROLLERS|COMMUNICATIONS WORKERS|CWA-COMMITTEE|AMERICAN FEDERATION OF|ACTORS' EQUITY|DIRECTORS GUILD|MASTERS, MATES AND PILOTS|PROFESSIONAL AVIATION SAFETY|PLASTERERS'|SHEET METAL WORKERS|OPERATING ENGINEERS|D\.R\.I\.V\.E\.|NEA FUND|NATIONAL ASSOCIATION OF LETTER CARRIERS|NATIONAL ASSOCIATION OF POSTAL SUPERVISORS|NATIONAL TREASURY EMPLOYEES)\b/],
@@ -34,9 +34,12 @@ function sector(name){const n=String(name||"").toUpperCase().trim();if(!n||statu
 
 const normalize=s=>String(s||"").trim().replace(/\s+/g," ").toUpperCase();
 function harmonize(name,label){
-const l=String(label||"");if(/unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(l))return "Sector unresolved / ambiguous";
+const l=String(label||"").trim(), lower=l.toLowerCase();
+if(/unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(l))return "Sector unresolved / ambiguous";
 if(/personal|self.employ|not employed|non.employer|unreported|non.individual/i.test(l))return "Personal status / unreported employer";
-if(/tribal/i.test(l))return "Tribal nations & governments";
+if(/security service/i.test(l))return "Security services";
+if(/diversified business group/i.test(l))return "Diversified business group";
+if(/tribal|indian nation|indian community/i.test(l))return "Tribal nations & governments";
 if(/health insurance|managed care/i.test(l))return "Health insurance";
 if(/pharma|biotech|medical products/i.test(l))return "Pharmaceuticals & biotechnology";
 if(/healthcare|health care|medical association/i.test(l))return "Healthcare";
@@ -52,19 +55,30 @@ if(/telecom|broadband/i.test(l))return "Telecommunications";
 if(/broadcast|media|arts|entertainment/i.test(l))return "Media & entertainment";
 if(/technology|software|electronics/i.test(l))return "Technology";
 if(/automotive|manufacturing/i.test(l))return "Manufacturing & automotive";
+if(/metals?\s*&|materials processing/i.test(l))return "Metals & materials processing";
 if(/airline|transport|logistic|aviation/i.test(l))return "Transportation";
 if(/agricultur|food & beverage/i.test(l))return "Agriculture, food & beverage";
 if(/hospitality|horse racing|gaming/i.test(l))return "Hospitality & gaming";
 if(/retail|consumer|foodservice/i.test(l))return "Retail & consumer";
+if(/furniture|woodworking/i.test(l))return "Furniture & woodworking";
 if(/cannabis/i.test(l))return "Cannabis";
 if(/school|education/i.test(l))return "Education";
-if(/political|candidate|fundraising/i.test(l))return "Political committees & advocacy";
 if(/foreign policy/i.test(l))return "Foreign policy & advocacy";
+if(/earmark|political fundraising|political advocacy|candidate|fundraising intermediar|political committee/i.test(l))return "Political committees & advocacy";
+if(/trade association/i.test(l))return "Trade associations";
 if(/lobby|public affairs|government relations/i.test(l))return "Lobbying & public affairs";
 if(/government|public sector/i.test(l))return "Government & public sector";
-if(/professional|accounting/i.test(l))return "Professional services";
-if(/civil rights|advocacy/i.test(l))return "Other advocacy";
-return l||"Sector unconfirmed";}
+if(/consulting|professional|accounting/i.test(l))return "Professional services";
+if(/nonprofit|philanthrop/i.test(l))return "Nonprofit & philanthropy";
+if(/civil rights|environment|advocacy/i.test(l))return "Other advocacy";
+if(!l){
+  const inferred=sector(name);
+  return /unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(inferred)?"Sector unresolved / ambiguous":harmonize(name,inferred);
+}
+const inferred=sector(name);
+if(!/unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(inferred))return harmonize(name,inferred);
+return "Sector unresolved / ambiguous";
+}
 const unknownSectorLabel=label=>!label||/unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(String(label));
 const exactSectorOverrides=new Map(Object.entries({
 "STREAM LINE CIRCLE LLC":"Transportation",
