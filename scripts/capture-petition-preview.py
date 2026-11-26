@@ -6,8 +6,8 @@ import re
 from playwright.sync_api import sync_playwright
 
 URL = "https://www.change.org/putvotersovercorporatedonors"
-OUT = Path("images/petition-change-org-live.png")
-META = Path("petition-change-org-live.json")
+OUT = Path("assets/images/petition-change-org-live.png")
+META = Path("data/petition/petition-change-org-live.json")
 
 TITLE_RE = re.compile(r"Put\s+VOTERS\s+Over\s+Corporate\s+Donors", re.I)
 SIGNATURE_RE = re.compile(r"Verified signatures", re.I)

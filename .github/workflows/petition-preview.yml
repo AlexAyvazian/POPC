@@ -8,9 +8,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'petition.html'
-      - 'petition.css'
-      - 'petition-preview.test.mjs'
+      - 'pages/petition.html'
+      - 'assets/css/petition.css'
+      - 'tests/petition-preview.test.mjs'
       - 'scripts/capture-petition-preview.py'
       - '.github/workflows/petition-preview.yml'
 
@@ -33,17 +33,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: node --test petition-preview.test.mjs
+      - run: node --test tests/petition-preview.test.mjs
       - run: pip install playwright==1.56.0
       - run: python -m playwright install --with-deps chromium
       - run: python scripts/capture-petition-preview.py
       - name: Verify screenshot
-        run: test -s images/petition-change-org-live.png
+        run: test -s assets/images/petition-change-org-live.png
       - name: Publish refreshed preview
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add images/petition-change-org-live.png petition-change-org-live.json
+          git add assets/images/petition-change-org-live.png data/petition/petition-change-org-live.json
           if git diff --cached --quiet; then
             echo "Preview unchanged."
           else

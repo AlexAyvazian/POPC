@@ -1,0 +1,27 @@
+name: Site validation
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check JavaScript syntax
+        run: find assets data functions scripts tests -type f \( -name '*.js' -o -name '*.mjs' \) -print0 | xargs -0 -n 1 node --check
+      - name: Run regression and link checks
+        run: node --test tests/*.test.mjs
+      - name: Check research queue export
+        run: node scripts/business-directory-unreviewed.mjs
+      - name: Install browser testing tools
+        run: npm install --no-save playwright@1.56.0
+      - run: npx playwright install --with-deps chromium
+      - name: Check all pages in Chromium
+        run: node tests/browser-smoke.mjs

@@ -4,49 +4,49 @@ on:
   push:
     branches: [main]
     paths:
-      - 'business-identities.js'
-      - 'business-directory-data.js'
-      - 'business-directory.js'
-      - 'business-directory.test.mjs'
-      - 'business-directory-unreviewed.mjs'
-      - 'research-data.js'
-      - 'transactions.html'
-      - 'combined-contributions.html'
-      - 'schumer-identities.js'
-      - 'schumer-business-directory-data.js'
-      - 'schumer-business-directory.js'
-      - 'schumer-business-directory.test.mjs'
-      - 'schumer-research-data.js'
-      - 'schumer-combined-contributions.js'
-      - 'schumer-combined-contributions.html'
-      - 'schumer-committee.js'
-      - 'friends-of-schumer-pac.html'
-      - 'impact-pac.html'
-      - 'smp-pac.html'
-      - 'spreadsheets/schumer_remaining_entity_research_COMPLETED.csv'
+      - 'data/jeffries/business-identities.js'
+      - 'assets/js/business-directory-data.js'
+      - 'assets/js/business-directory.js'
+      - 'tests/business-directory.test.mjs'
+      - 'scripts/business-directory-unreviewed.mjs'
+      - 'assets/js/research-data.js'
+      - 'pages/transactions.html'
+      - 'pages/combined-contributions.html'
+      - 'data/schumer/schumer-identities.js'
+      - 'assets/js/schumer-business-directory-data.js'
+      - 'assets/js/schumer-business-directory.js'
+      - 'tests/schumer-business-directory.test.mjs'
+      - 'assets/js/schumer-research-data.js'
+      - 'assets/js/schumer-combined-contributions.js'
+      - 'pages/schumer-combined-contributions.html'
+      - 'assets/js/schumer-committee.js'
+      - 'pages/friends-of-schumer-pac.html'
+      - 'pages/impact-pac.html'
+      - 'pages/smp-pac.html'
+      - 'documents/spreadsheets/schumer_remaining_entity_research_COMPLETED.csv'
       - '.github/workflows/business-directory-tests.yml'
   pull_request:
     paths:
-      - 'business-identities.js'
-      - 'business-directory-data.js'
-      - 'business-directory.js'
-      - 'business-directory.test.mjs'
-      - 'business-directory-unreviewed.mjs'
-      - 'research-data.js'
-      - 'transactions.html'
-      - 'combined-contributions.html'
-      - 'spreadsheets/schumer_remaining_entity_research_COMPLETED.csv'
-      - 'smp-pac.html'
-      - 'impact-pac.html'
-      - 'friends-of-schumer-pac.html'
-      - 'schumer-committee.js'
-      - 'schumer-combined-contributions.html'
-      - 'schumer-combined-contributions.js'
-      - 'schumer-research-data.js'
-      - 'schumer-business-directory.test.mjs'
-      - 'schumer-business-directory.js'
-      - 'schumer-business-directory-data.js'
-      - 'schumer-identities.js'
+      - 'data/jeffries/business-identities.js'
+      - 'assets/js/business-directory-data.js'
+      - 'assets/js/business-directory.js'
+      - 'tests/business-directory.test.mjs'
+      - 'scripts/business-directory-unreviewed.mjs'
+      - 'assets/js/research-data.js'
+      - 'pages/transactions.html'
+      - 'pages/combined-contributions.html'
+      - 'documents/spreadsheets/schumer_remaining_entity_research_COMPLETED.csv'
+      - 'pages/smp-pac.html'
+      - 'pages/impact-pac.html'
+      - 'pages/friends-of-schumer-pac.html'
+      - 'assets/js/schumer-committee.js'
+      - 'pages/schumer-combined-contributions.html'
+      - 'assets/js/schumer-combined-contributions.js'
+      - 'assets/js/schumer-research-data.js'
+      - 'tests/schumer-business-directory.test.mjs'
+      - 'assets/js/schumer-business-directory.js'
+      - 'assets/js/schumer-business-directory-data.js'
+      - 'data/schumer/schumer-identities.js'
 
 jobs:
   test:
@@ -56,8 +56,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --test business-directory.test.mjs schumer-business-directory.test.mjs
-      - run: node business-directory-unreviewed.mjs
+      - run: node --test tests/business-directory.test.mjs tests/schumer-business-directory.test.mjs
+      - run: node scripts/business-directory-unreviewed.mjs
       - uses: actions/upload-artifact@v4
         with:
           name: business-directory-unreviewed
