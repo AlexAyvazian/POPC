@@ -1,5 +1,5 @@
 import {businessIdentities} from './business-identities.js?v=48';
-import {normalize, config, occupationGroup, loadResearchRecords} from './research-data.js?v=2';
+import {normalize, config, occupationGroup, loadResearchRecords} from './research-data.js?v=3';
 
 export async function loadDirectoryRecords() {
   const direct = await loadResearchRecords();
