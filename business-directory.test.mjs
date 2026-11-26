@@ -112,6 +112,30 @@ test('priority queue includes executive single-donor employers but excludes ordi
   assert(selectDirectory(groups,{view:'employers'}).some(g=>g.name==='CLOVIS HOSPITAL'));
 });
 
+test('combined page uses one occupation/status table with a dropdown instead of seven separate tables', async () => {
+  const html=await fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8');
+  assert.match(html,/id="ca-occupation-category"/);
+  assert.match(html,/id="ca-occupation-rows"/);
+  assert.match(html,/Non-executive and other reported occupations/);
+  assert.match(html,/Retired/);
+  assert.match(html,/Not employed \/ unemployed/);
+  assert.match(html,/Students/);
+  assert.match(html,/Homemakers/);
+  assert.match(html,/Self-employed — occupation unspecified/);
+  assert.match(html,/Occupation unreported/);
+  for (let i=0;i<6;i++) assert.doesNotMatch(html,new RegExp('id="ca-personal-body-'+i+'"'));
+  assert.doesNotMatch(html,/id="ca-nonexec-rows"/);
+});
+
+test('combined donor table foregrounds company names instead of only PAC titles', async () => {
+  const html=await fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8');
+  const js=await fs.readFile(new URL('./combined-contributions.js', import.meta.url),'utf8');
+  assert.match(html,/Companies \/ businesses & PACs/);
+  assert.match(html,/id="ca-name-heading">Company \/ business/);
+  assert.match(js,/identifyName\(r\)/);
+  assert.match(js,/reportedNames/);
+});
+
 test('business research directory lives inside Combined Total Contributions and not the transactions menu', async () => {
   const [combined,transactions]=await Promise.all([
     fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8'),
