@@ -29,3 +29,14 @@ test('all Jeffries and Schumer contributions reconcile in exactly one of three t
   console.log(filename,Object.fromEntries(Object.entries(groupDonors(all)).map(([k,v])=>[k,{donors:v.length,cents:v.reduce((n,g)=>n+g.amount,0)}])));
  }
 });
+
+ test('donor tables belong in committee and totaling tabs, never PAC menus',async()=>{
+ for(const slug of ['transactions','schumer-transactions']){
+  const html=await fs.readFile(new URL('../pages/'+slug+'.html',import.meta.url),'utf8');
+  assert(!html.includes('data-donor-tables'));assert(!html.includes('donor-tables.js'));
+ }
+ for(const slug of ['combined-contributions','schumer-combined-contributions','jeff-pac','friends-of-schumer-pac']){
+  const html=await fs.readFile(new URL('../pages/'+slug+'.html',import.meta.url),'utf8');
+  assert(html.includes('data-donor-tables'));assert(html.includes('donor-tables.js'));
+ }
+ });
