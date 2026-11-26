@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {buildDirectory, identifyName, isResearchEligibleGroup, researchPriorityReasons, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js';
+import {buildDirectory, identifyName, connectedBusinessName, isResearchEligibleGroup, researchPriorityReasons, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js';
 import {loadResearchRecords, config, classifySectorLabel} from './research-data.js';
 
 
@@ -62,6 +62,13 @@ test('all eight datasets reconcile; every receipt remains in one directory group
   }
   assert.equal(selectDirectory(groups,{view:'names'}).length+selectDirectory(groups,{view:'personal'}).length,groups.length);
   assert.equal(directoryCSV(groups).split('\r\n').length,groups.length+1);
+});
+
+test('company display names are extracted from corporate PAC titles', () => {
+  assert.equal(connectedBusinessName({type:'organization',name:'EMPLOYEES OF RAYTHEON TECHNOLOGIES CORPORATION PAC'}),'RAYTHEON TECHNOLOGIES CORPORATION');
+  assert.equal(connectedBusinessName({type:'organization',name:'THE BOEING COMPANY POLITICAL ACTION COMMITTEE'}),'THE BOEING COMPANY');
+  assert.equal(connectedBusinessName({type:'organization',name:"LOCKHEED MARTIN CORPORATION EMPLOYEES' POLITICAL ACTION COMMITTEE"}),'LOCKHEED MARTIN CORPORATION');
+  assert.equal(connectedBusinessName({type:'organization',name:'EMPLOYEES OF NORTHROP GRUMMAN CORPORATION PAC'}),'NORTHROP GRUMMAN CORPORATION');
 });
 
 test('explicit PAC titles retain originals, legal suffixes and separate amounts', () => {
@@ -130,9 +137,9 @@ test('combined page uses one occupation/status table with a dropdown instead of 
 test('combined donor table foregrounds company names instead of only PAC titles', async () => {
   const html=await fs.readFile(new URL('./combined-contributions.html', import.meta.url),'utf8');
   const js=await fs.readFile(new URL('./combined-contributions.js', import.meta.url),'utf8');
-  assert.match(html,/Companies \/ businesses & PACs/);
+  assert.match(html,/Companies \/ businesses &amp; PACs/);
   assert.match(html,/id="ca-name-heading">Company \/ business/);
-  assert.match(js,/identifyName\(r\)/);
+  assert.match(js,/connectedBusinessName\(r\)/);
   assert.match(js,/reportedNames/);
 });
 
