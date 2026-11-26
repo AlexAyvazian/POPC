@@ -1,4 +1,5 @@
 name: Refresh Change.org petition preview
+# Captures the live petition hero and signature card.
 
 on:
   workflow_dispatch:
