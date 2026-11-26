@@ -9,7 +9,7 @@ import * as schumer from '../assets/js/schumer-research-engine.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
 async function walk(dir){const out=[];for(const e of await fs.readdir(path.join(root,dir),{withFileTypes:true})){const p=path.posix.join(dir,e.name);if(e.isDirectory())out.push(...await walk(p));else out.push(p);}return out;}
 const publicFiles=['index.html',...await walk('pages'),...await walk('assets'),...await walk('data'),...await walk('documents')];
-const known=new Set(publicFiles);
+const known=new Set([...publicFiles,...await walk('scripts'),...await walk('tests')]);
 function localTarget(file,url){if(/^(https?:|data:|mailto:|#)/.test(url))return null;const p=decodeURIComponent(url.split(/[?#]/)[0]);return path.posix.normalize(p.startsWith('/')?p.slice(1):path.posix.join(path.posix.dirname(file),p));}
 test('every local page link, image, script and stylesheet exists',async()=>{
  for(const file of publicFiles.filter(p=>p.endsWith('.html'))){const s=await fs.readFile(path.join(root,file),'utf8');for(const match of s.matchAll(/(?:href|src)=["']([^"']+)["']/g)){const target=localTarget(file,match[1]);if(target)assert(known.has(target),file+' references missing '+target);}}
