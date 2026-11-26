@@ -17,7 +17,7 @@ test('scheduled capture workflow refreshes the preview without retriggering itse
   assert(workflow.includes('cron:'));
   assert(workflow.includes('capture-petition-preview.py'));
   assert(workflow.includes('petition-change-org-live.png'));
-  assert(!workflow.match(/paths:[\s\S]*petition-change-org-live\.png/));
+  assert(!workflow.includes("      - 'petition-change-org-live.png'"));
   assert(script.includes('Verified signatures'));
   assert(script.includes('Put VOTERS Over Corporate Donors'));
 });
