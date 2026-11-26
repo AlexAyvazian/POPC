@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
 import {extractPetitionCount} from './functions/lib/petition-count.js';
 import {onRequestGet} from './functions/api/petition.js';
 const page=(count,goal,id='491635572')=>`<script type="application/json" id="change-page-state">${JSON.stringify({route:{params:{slug:'put-voters-over-corporate-donors'}},petition:{id,signatureCount:{displayed:count,total:count+3,goal}}})}</script>`;
@@ -19,4 +20,10 @@ test('endpoint returns source count and timestamp; upstream failure never return
   globalThis.fetch=async()=>new Response('Blocked',{status:403});
   const bad=await onRequestGet();assert.equal(bad.status,503);assert.equal((await bad.json()).count,undefined);
  }finally{globalThis.fetch=original;}
+});
+
+
+test('routes include the petition API so the Pages Function is actually reachable', async()=>{
+ const routes=JSON.parse(await fs.readFile(new URL('./_routes.json',import.meta.url),'utf8'));
+ assert(routes.include.includes('/api/petition'));
 });
