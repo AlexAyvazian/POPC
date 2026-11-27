@@ -1,44 +1,80 @@
 # Chart palette
 
-The shared palette uses only the numbered swatches selected from the supplied November 24 image. Pixel values were converted using the embedded ICC profile to sRGB before sampling the center of each swatch. No generated tints or data-mark opacity are applied. Each chart assigns the palette consecutively to its displayed data order, starting at Blue 1. The order is Blues 1–6, Teals 2–5, Greens 1–6, Yellows 1–4, Oranges 1–5, Reds 1–4 and 6, Pinks 1–4, Purples 1–4. Sector identities do not have fixed colors.
+The shared donor palette uses only swatches 2–9 from each of the eight supplied color families. Pixel values were converted to sRGB before use. No generated tints or data-mark opacity are applied.
+
+Balanced charts use one hardcoded rule in `balancedPalette()`:
+
+1. **Select** how many colors each family receives by round-robin quota, keeping family usage as even as possible.
+2. **Regroup** the selected colors before assignment into the fixed display order **Blue → Teal → Green → Yellow → Orange → Red → Pink → Purple**.
+3. Within each family, assign shades in ascending order **2 → 3 → 4 → 5 → 6 → 7 → 8 → 9**.
+
+Example for 11 categories: **Blue 2 → Blue 3 → Teal 2 → Teal 3 → Green 2 → Green 3 → Yellow 2 → Orange 2 → Red 2 → Pink 2 → Purple 2**.
+
+Sector identities do not have permanent semantic colors; each visual selects its balanced palette for the categories displayed, then uses the regrouped sequence above.
 
 | Swatch | sRGB |
 | --- | --- |
-| blue1 | `#ecfeff` |
-| blue2 | `#74cbf5` |
-| blue3 | `#66a8e5` |
-| blue4 | `#5ca6f1` |
-| blue5 | `#599aee` |
-| blue6 | `#3c57d3` |
-| teal2 | `#acfaf1` |
-| teal3 | `#a2f2ea` |
-| teal4 | `#7fdfd1` |
-| teal5 | `#65c9bd` |
-| green1 | `#f5fef2` |
-| green2 | `#c0fb74` |
-| green3 | `#b6f16e` |
-| green4 | `#86ec4f` |
-| green5 | `#7fe148` |
-| green6 | `#62b036` |
-| yellow1 | `#fffed9` |
-| yellow2 | `#fcef6e` |
-| yellow3 | `#f4e14a` |
-| yellow4 | `#f2ce45` |
-| orange1 | `#fbea61` |
-| orange2 | `#f2a43b` |
-| orange3 | `#ec722f` |
-| orange4 | `#f09638` |
-| orange5 | `#e94e2c` |
-| red1 | `#f1a38a` |
-| red2 | `#e74a41` |
-| red3 | `#ea3a2e` |
-| red4 | `#ed7147` |
-| red6 | `#e04033` |
-| pink1 | `#f9d9ef` |
-| pink2 | `#f19dc7` |
-| pink3 | `#e46cac` |
-| pink4 | `#ea8cae` |
-| purple1 | `#f9dafa` |
-| purple2 | `#dc64d4` |
-| purple3 | `#dc69d1` |
-| purple4 | `#ac41a6` |
+| blue2 | `#89c9f1` |
+| blue3 | `#75a6e0` |
+| blue4 | `#6ea4eb` |
+| blue5 | `#6898e8` |
+| blue6 | `#4256cc` |
+| blue7 | `#4862c0` |
+| blue8 | `#3144a8` |
+| blue9 | `#151c74` |
+| teal2 | `#bdf8f1` |
+| teal3 | `#b4f0ea` |
+| teal4 | `#96ddd1` |
+| teal5 | `#7fc7bd` |
+| teal6 | `#456e77` |
+| teal7 | `#416b75` |
+| teal8 | `#314f65` |
+| teal9 | `#26414f` |
+| green2 | `#ccf986` |
+| green3 | `#c2ef7f` |
+| green4 | `#9fea67` |
+| green5 | `#97df60` |
+| green6 | `#75ae49` |
+| green7 | `#6a9c42` |
+| green8 | `#4d7a30` |
+| green9 | `#3d6325` |
+| yellow2 | `#faef81` |
+| yellow3 | `#f1e266` |
+| yellow4 | `#eccf5f` |
+| yellow5 | `#be9c48` |
+| yellow6 | `#a99442` |
+| yellow7 | `#897233` |
+| yellow8 | `#775f2b` |
+| yellow9 | `#6a5826` |
+| orange2 | `#e7a751` |
+| orange3 | `#dd7941` |
+| orange4 | `#e39a4c` |
+| orange5 | `#d8593a` |
+| orange6 | `#b85a31` |
+| orange7 | `#9c4626` |
+| orange8 | `#7b311d` |
+| orange9 | `#80311d` |
+| red2 | `#d65649` |
+| red3 | `#d84a3a` |
+| red4 | `#dd7852` |
+| red5 | `#a33624` |
+| red6 | `#cf4d3d` |
+| red7 | `#9a3122` |
+| red8 | `#7d251e` |
+| red9 | `#55171f` |
+| pink2 | `#e5a1c5` |
+| pink3 | `#d573aa` |
+| pink4 | `#dd90ad` |
+| pink5 | `#a44471` |
+| pink6 | `#8f466a` |
+| pink7 | `#8b3d61` |
+| pink8 | `#732a48` |
+| pink9 | `#73225b` |
+| purple2 | `#cd6bcf` |
+| purple3 | `#cd6fcc` |
+| purple4 | `#9f48a1` |
+| purple5 | `#813993` |
+| purple6 | `#772f8a` |
+| purple7 | `#6a2886` |
+| purple8 | `#4f1463` |
+| purple9 | `#4d1365` |

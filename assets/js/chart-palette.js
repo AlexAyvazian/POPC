@@ -28,8 +28,10 @@ export const colorAt=index=>chartSequence[index%chartSequence.length];
 export function sequentialColors(names){return new Map([...new Set(names)].map((name,index)=>[name,colorAt(index)]));}
 export function balancedPalette(count){
  const n=Math.max(0,Math.min(Number(count)||0,chartSequence.length)),base=Math.floor(n/chartFamilies.length),extra=n%chartFamilies.length;
+ // Select balanced family quotas first, then regroup once into the fixed display order:
+ // Blue → Teal → Green → Yellow → Orange → Red → Pink → Purple.
  const quotas=chartFamilies.map((_,index)=>base+(index<extra?1:0)),palette=[];
- for(let shade=0;shade<8;shade++)for(let family=0;family<chartFamilies.length;family++)if(shade<quotas[family])palette.push(chartFamilies[family][shade]);
+ for(let family=0;family<chartFamilies.length;family++)for(let shade=0;shade<quotas[family];shade++)palette.push(chartFamilies[family][shade]);
  return palette;
 }
 export function balancedColors(names){

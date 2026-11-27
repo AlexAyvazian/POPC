@@ -1,4 +1,4 @@
-import {chartSwatches,chartSequence,balancedColors,balancedPalette} from './chart-palette.js?v=balanced2';
+import {chartSwatches,chartSequence,balancedColors,balancedPalette} from './chart-palette.js?v=regroup3';
 import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=researched2';
 const {config,loadCommittee}=networkData('jeffries');
 (()=>{"use strict";
