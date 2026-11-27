@@ -1,4 +1,4 @@
-import {masterSectorForRecord,sectorAssignmentForRecord,normalize} from './donor-data.js?v=claude1';
+import {masterSectorForRecord,sectorAssignmentForRecord,normalize} from './donor-data.js?v=researched2';
 import {identifyName} from './business-data.js?v=claude1';
 // Consolidate the complete page before the $500 threshold or search.
 export function groupDonors(records){
