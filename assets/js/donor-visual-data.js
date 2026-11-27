@@ -1,4 +1,4 @@
-import {masterSectorForRecord,sectorGroups,masterSectorGroups} from './donor-data.js?v=claude1';
+import {masterSectorForRecord,sectorGroups} from './donor-data.js?v=claude1';
 const sort=(a,b)=>b.amount-a.amount||a.name.localeCompare(b.name);
 export function buildVisualData(groups){
  const sectors=new Map(), donors=[];let total=0,receipts=0,positive=0,adjustments=0;
@@ -24,16 +24,8 @@ export function buildVisualData(groups){
  const result=[...sectors.values()].map(s=>({...s,donorCount:s.donors.size,leaves:s.leaves.sort(sort)})).sort(sort);
  return {donors,groups:groups.length,total,receipts,positive,adjustments,sectors:result,areaTotal:result.reduce((n,s)=>n+s.leaves.reduce((a,l)=>a+Math.max(0,l.amount),0),0)};
 }
-export function radarData(model){
- const totals=new Map();
- for(const sector of model.sectors){
-  const group=sectorGroups[sector.name]||sector.name;
-  totals.set(group,(totals.get(group)||0)+sector.amount);
- }
- return masterSectorGroups.map(name=>{
-  const amount=totals.get(name)||0;
-  return {name,amount,share:model.total?amount/model.total:0};
- });
+export function sectorShareData(model){
+ return model.sectors.map(sector=>({name:sector.name,amount:sector.amount,share:model.total?sector.amount/model.total:0}));
 }
 // A presentation level from Claude's taxonomy; donor assignments remain unchanged.
 export function groupedVisualData(model){
