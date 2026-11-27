@@ -1,0 +1,38 @@
+name: Consolidate donor sources
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/audit-donor-source.mjs', 'scripts/audit-donor-source.py', '.github/workflows/donor-consolidation.yml']
+permissions:
+  contents: write
+concurrency:
+  group: donor-consolidation
+  cancel-in-progress: false
+jobs:
+  consolidate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - run: node scripts/audit-donor-source.mjs
+      - run: python scripts/audit-donor-source.py
+      - name: Save comparison
+        run: |
+          git config user.name "POPC Data"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add documents/notes/DONOR-SOURCE-AUDIT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Document exact ClaudeFiles coverage and unique original information"
+          git pull --rebase origin main
+          git push origin HEAD:main
