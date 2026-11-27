@@ -1,6 +1,6 @@
 import {chartSwatches,chartSequence} from './chart-palette.js?v=claude1';
 import {renderFundingStory} from "./funding-story.js?v=concentration-only1";
-import {networkData,normalize,occupationGroup,personalCategories,sectorGroups} from './donor-data.js?v=claude1';
+import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=claude1';
 const {config,loadCommittee}=networkData('jeffries');
 (()=>{"use strict";
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
@@ -16,7 +16,7 @@ function roleTotals(rows){
 }
 function aggregateSectors(rows){
  const m=new Map();
- for(const r of rows){const key=sectorGroups[r.sector]||r.sector;let v=m.get(key);if(!v){v={name:key,key,value:0,individual:0,organization:0,count:0};m.set(key,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
+ for(const r of rows){const key=r.sector||'Unresolved / ambiguous';let v=m.get(key);if(!v){v={name:key,key,value:0,individual:0,organization:0,count:0};m.set(key,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
  return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
 }
 function donut(host,items,onSelect,active,label){host.replaceChildren();const positive=items.filter(x=>x.value>0),den=sum(positive,"value");if(!den){host.textContent="No positive receipts in this selection.";return;}const wrap=document.createElement("div");wrap.className="ca-chart";const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 220 220");svg.setAttribute("class","ca-donut");svg.setAttribute("role","group");svg.setAttribute("aria-label",label);const radius=84,circ=2*Math.PI*radius;let off=0;const legend=document.createElement("div");legend.className="ca-legend";
