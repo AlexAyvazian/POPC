@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {groupDonors} from '../assets/js/donor-groups.js';
-import {buildVisualData,groupedVisualData,sectorShareData,packingData,dotData} from '../assets/js/donor-visual-data.js';
+import {buildVisualData,groupedVisualData,sectorShareData,packingData,dotData,researchedSectorData} from '../assets/js/donor-visual-data.js';
 import {masterSectorGroups,masterSectors,networkData} from '../assets/js/donor-data.js?v=claude1';
 import {hierarchy,pack} from '../assets/js/vendor/d3-hierarchy.js';
 const sum=(items,field)=>items.reduce((n,d)=>n+d[field],0);
@@ -76,4 +76,21 @@ test('sector group display preserves every dollar, receipt, donor allocation and
  const detailed=buildVisualData(Object.values(groupDonors(records)).flat()),groups=groupedVisualData(detailed);
  assert.equal(groups.total,detailed.total);assert.equal(groups.receipts,detailed.receipts);assert.equal(groups.areaTotal,detailed.areaTotal);assert.equal(sum(groups.sectors,'amount'),detailed.total);assert.equal(sum(groups.sectors,'primaryDonors'),detailed.groups);
  assert.equal(groups.sectors.find(s=>s.name==='Finance').amount,100000);assert.deepEqual(groups.sectors.flatMap(s=>s.leaves).map(d=>d.sector).sort(),detailed.sectors.flatMap(s=>s.leaves).map(d=>d.sector).sort());
+});
+
+
+test('researched-sector presentation excludes status buckets without losing source totals',()=>{
+ const records=[
+  {type:'individual',name:'Classified',employer:'APPLE',sector:'Technology',amount:80000,committee:'a'},
+  {type:'individual',name:'Retired',employer:'RETIRED',sector:'No sector: Retired',amount:50000,committee:'a'},
+  {type:'individual',name:'Unknown',employer:'NOT REPORTED',sector:'Unresolved / ambiguous',amount:20000,committee:'a'}
+ ];
+ const model=buildVisualData(Object.values(groupDonors(records)).flat()),view=researchedSectorData(model);
+ assert.equal(model.total,150000);
+ assert.equal(view.total,80000);
+ assert.equal(view.donors,1);
+ assert.equal(view.unclassifiedTotal,70000);
+ assert.equal(view.unclassifiedDonors,2);
+ assert.deepEqual(view.sectors.map(s=>s.name),['Technology']);
+ assert(!view.sectors.some(s=>/^No sector:|^Unresolved \/ ambiguous$/.test(s.name)));
 });

@@ -1,5 +1,6 @@
 import {masterSectorForRecord,sectorGroups} from './donor-data.js?v=researched2';
 const sort=(a,b)=>b.amount-a.amount||a.name.localeCompare(b.name);
+export const isResearchedSectorName=name=>Boolean(name)&&!String(name).startsWith('No sector:')&&String(name)!=='Unresolved / ambiguous';
 export function buildVisualData(groups){
  const sectors=new Map(), donors=[];let total=0,receipts=0,positive=0,adjustments=0;
  for(const g of groups){
@@ -26,6 +27,12 @@ export function buildVisualData(groups){
 }
 export function sectorShareData(model){
  return model.sectors.map(sector=>({name:sector.name,amount:sector.amount,share:model.total?sector.amount/model.total:0}));
+}
+export function researchedSectorData(model){
+ const sectors=model.sectors.filter(s=>isResearchedSectorName(s.name));
+ const names=new Set(sectors.map(s=>s.name)),donors=model.donors.filter(d=>names.has(d.sector));
+ const total=sectors.reduce((n,s)=>n+s.amount,0);
+ return {sectors,donorRows:donors,total,donors:donors.length,unclassifiedTotal:model.total-total,unclassifiedDonors:model.donors.length-donors.length};
 }
 // A presentation level from Claude's taxonomy; donor assignments remain unchanged.
 export function groupedVisualData(model){
