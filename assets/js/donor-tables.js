@@ -1,9 +1,10 @@
 import {sectorGroups,networkData,masterSectorForRecord} from './donor-data.js?v=researched2';
-import {mountDonorVisuals} from './donor-visuals.js?v=regroup3';
+import {mountDonorVisuals} from './donor-visuals.js?v=layout4';
 import {groupDonors} from './donor-groups.js?v=researched2';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const list=set=>[...set].sort().join('; ')||'Not reported';
+const displaySector=name=>String(name||'').startsWith('No sector:')?'Sector research pending — '+String(name).slice('No sector:'.length).trim():String(name||'')==='Unresolved / ambiguous'?'Sector research pending — unresolved / ambiguous':String(name||'');
 const sum=rows=>rows.reduce((n,r)=>n+r.amount,0);
 const pageSize=100;
 const sameName=(a,b)=>String(a).normalize('NFKC').toUpperCase().replace(/[^\p{L}\p{N}]/gu,'')===String(b).normalize('NFKC').toUpperCase().replace(/[^\p{L}\p{N}]/gu,'');
@@ -21,7 +22,7 @@ function researchDetails(group){
  }).join('')+'</details>';
 }
 function sectorDetails(group){
- const c=group.classification,sector=list(group.sectors),parent=c?.group||sectorGroups[sector]||'',label=`<strong>${esc(sector)}</strong>${parent&&!sameName(parent,sector)&&!sector.startsWith('No sector:')?`<small>${esc(parent)}</small>`:''}`;
+ const c=group.classification,sector=list(group.sectors),parent=c?.group||sectorGroups[sector]||'',label=`<strong>${esc(displaySector(sector))}</strong>${parent&&!sameName(parent,sector)&&!sector.startsWith('No sector:')?`<small>${esc(parent)}</small>`:''}`;
  if(!c?.researchedSector)return label;
  const urls=[...new Set((c.evidence||'').match(/https?:\/\/[^\s;]+/g)||[])];
  return label+`<details class="donor-sector-context"><summary>Industry connections</summary><p>${esc(c.relationship||'')}</p>${c.profile?`<p>${esc(c.profile)}</p>`:''}<p>Donor career: ${esc(c.firstHand)}</p><p>Including household: ${esc(c.household)}</p><p>${urls.map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ${i+1}</a>`).join(' · ')}</p></details>`;
@@ -57,7 +58,7 @@ function table(host,key,title,description,groups,config){
   body.replaceChildren();let lastSector=null;
   for(const g of filtered.slice(page*pageSize,(page+1)*pageSize)){
    const sector=primarySector(g);
-   if(sector!==lastSector){const divider=document.createElement('tr');divider.className='donor-sector-divider';divider.dataset.sectorDivider=sector;divider.innerHTML=`<th colspan="${key==='organizations'?3:4}" scope="rowgroup">${esc(sector)}</th>`;body.append(divider);lastSector=sector;}
+   if(sector!==lastSector){const divider=document.createElement('tr');divider.className='donor-sector-divider';divider.dataset.sectorDivider=sector;divider.innerHTML=`<th colspan="${key==='organizations'?3:4}" scope="rowgroup">${esc(displaySector(sector))}</th>`;body.append(divider);lastSector=sector;}
    const aliases=[...g.reportedNames].filter(n=>!sameName(n,g.name));
    const names=aliases.length?`<details class="donor-reported-names"><summary>Reported names</summary><p>${esc(aliases.join('; '))}</p></details>`:'';
    const employerAliases=[...g.reportedEmployers].filter(n=>![...g.employers].some(e=>sameName(n,e)));
