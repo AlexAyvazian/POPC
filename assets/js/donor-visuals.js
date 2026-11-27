@@ -1,4 +1,4 @@
-import {chartSwatches,chartSequence,sequentialColors} from './chart-palette.js?v=claude1';
+import {chartSwatches,chartSequence,sequentialColors} from './chart-palette.js?v=palette64';
 import {buildVisualData,sectorShareData,dotData} from './donor-visual-data.js?v=researched-sectors1';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
@@ -82,7 +82,7 @@ function bubbles(target,model,w){
 function matrix(target,model,w){
  const dots=dotData(model);
  if(!dots.length){empty(target,'No donors in this selection.');return;}
- const dotPalette=chartSequence.filter(color=>color!==chartSwatches.blue1&&color!==chartSwatches.green1);
+ const dotPalette=chartSequence;
  const colors=new Map([...new Set(dots.map(d=>d.sector))].map((name,index)=>[name,dotPalette[index%dotPalette.length]]));
  const columns=Math.max(1,Math.ceil(Math.sqrt(dots.length*(w-24)/300)));
  const step=Math.min(16,(w-24)/columns),rows=Math.ceil(dots.length/columns);
