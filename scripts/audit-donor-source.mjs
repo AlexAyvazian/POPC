@@ -10,6 +10,7 @@ import {businessIdentities} from '../data/jeffries/business-identities.js?v=refi
 import {schumerIdentities} from '../data/schumer/schumer-identities.js?v=refined1';
 globalThis.fetch=async url=>new Response(await fs.readFile(path.resolve(String(url).split('?')[0].replace(/^\//,''))));
 const read=async p=>JSON.parse(await fs.readFile(p.replace(/^\//,''),'utf8'));
+function copyOriginalFields(r){r.originalFields=[...r];}
 const normalized=s=>String(s||'').trim().replace(/\s+/g,' ').toUpperCase();
 const result={networks:{},identities:[...businessIdentities.map(e=>({...e,networks:['jeffries','schumer']})),...schumerIdentities.map(e=>({...e,networks:['schumer']}))]};
 for(const [network,data,identity]of [['jeffries',jeffries,jidentity],['schumer',schumer,sidentity]]){
@@ -30,16 +31,18 @@ for(const [network,data,identity]of [['jeffries',jeffries,jidentity],['schumer',
      const blocks=(await Promise.all(group.paths.map(read))).flat();
      const unpacked=blocks.flatMap(([count,encoded])=>{const decoded=JSON.parse(gunzipSync(Buffer.from(encoded,'base64')));if(decoded.length!==count)throw Error('Chunk count');return decoded;});
      if(unpacked.length!==group.count)throw Error('Group count');
-     const memo=kind.endsWith('-memo'); for(const r of unpacked){const copy=[...r];copy[kind.startsWith('organization')?4:5]=memo;(kind.startsWith('organization')?org:ind).push(copy);}
+     console.log('RAW JFC '+kind,JSON.stringify(unpacked.slice(0,2)));
+     const memo=kind.endsWith('-memo'); for(const r of unpacked){copyOriginalFields(r);const copy=[...r];copy[kind.startsWith('organization')?4:5]=memo;(kind.startsWith('organization')?org:ind).push(copy);}
     }
    }else{
     const paths=(kind,n)=>n?Array.from({length:n},(_,i)=>'data/jeffries/'+c.key+'-'+kind+'-'+(i+1)+'.json'):['data/jeffries/'+c.key+'-'+kind+'.json'];
     org=(await Promise.all(paths('organizations',c.no).map(read))).flat();ind=(await Promise.all(paths('individuals',c.ni).map(read))).flat();
    }
-   records=[...org.map(r=>({name:r[0],date:r[2],amount:r[3],memo:r[4],note:r[5],image:r[6],form:r[7],entity:r[8],type:'organization',category:r[4]?'memo':'organization'})),...ind.map(r=>({name:r[0],employer:r[1],occupation:r[2],date:r[3],amount:r[4],memo:r[5],note:r[6],image:r[7],type:'individual',category:r[5]?'memo':'individual'}))];
+   records=[...org.map(r=>({name:r[0],date:r[2],amount:r[3],memo:r[4],note:r[5],image:r[6],form:r[7],entity:r[8],rawFields:(r.originalFields||r).map((v,i)=>i===1?null:v),type:'organization',category:r[4]?'memo':'organization'})),...ind.map(r=>({name:r[0],employer:r[1],occupation:r[2],date:r[3],amount:r[4],memo:r[5],note:r[6],image:r[7],rawFields:(r.originalFields||r),type:'individual',category:r[5]?'memo':'individual'}))];
   }
   for(const r of records){
    delete r.sector;
+   if(r.rawFields){const represented=new Set(Object.entries(r).filter(([k])=>k!=='rawFields').map(([,v])=>v));r.rawFields=Object.fromEntries(r.rawFields.map((v,i)=>[i,v]).filter(([,v])=>v!==null&&v!==undefined&&v!==''&&!represented.has(v)));if(!Object.keys(r.rawFields).length)delete r.rawFields;}
    const identityInfo=identity.identifyName({...r,committee:c.key});
    r.business=identityInfo.research?.status==='Source-backed'?identityInfo.name:null;
    const d=r.category==='individual'||r.category==='organization'?nameIndex.get(r.type+'|'+normalized(r.name)):null;

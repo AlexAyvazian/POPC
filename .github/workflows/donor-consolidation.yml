@@ -50,6 +50,7 @@ jobs:
         run: |
           git config user.name "POPC Data"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$GITHUB_SHA"
           git add -u
           git add ClaudeFiles/receipt-details.json data/donors.json assets/js/donor-config.js assets/js/donor-data.js assets/js/business-data.js assets/js/committee-receipts.js scripts/build-donors.py tests/donor-data.test.mjs documents/notes/DONOR-SOURCES.json
           git commit -m "Replace all legacy donor sources with the ClaudeFiles pipeline"
