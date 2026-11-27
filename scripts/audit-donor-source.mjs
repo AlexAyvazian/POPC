@@ -38,7 +38,7 @@ for(const [network,data,identity]of [['jeffries',jeffries,jidentity],['schumer',
     const paths=(kind,n)=>n?Array.from({length:n},(_,i)=>'data/jeffries/'+c.key+'-'+kind+'-'+(i+1)+'.json'):['data/jeffries/'+c.key+'-'+kind+'.json'];
     org=(await Promise.all(paths('organizations',c.no).map(read))).flat();ind=(await Promise.all(paths('individuals',c.ni).map(read))).flat();
    }
-   records=[...org.map(r=>({name:r[0],date:r[2],amount:r[3],memo:r[4],note:r[5],image:r[6],form:r[7],entity:r[8],rawFields:(r.originalFields||r).map((v,i)=>i===1?null:v),type:'organization',category:r[4]?'memo':'organization'})),...ind.map(r=>({name:r[0],employer:r[1],occupation:r[2],date:r[3],amount:r[4],memo:r[5],note:r[6],image:r[7],rawFields:(r.originalFields||r),type:'individual',category:r[5]?'memo':'individual'}))];
+   records=[...org.map(r=>({name:r[0],date:r[2],amount:r[3],memo:r[4],note:c.key==='jfc'?r.originalFields[4]:r[5],image:c.key==='jfc'?r.originalFields[5]:r[6],form:c.key==='jfc'?null:r[7],entity:c.key==='jfc'?r.originalFields[1]:r[8],rawFields:(r.originalFields||r).map((v,i)=>i===1?null:v),type:'organization',category:r[4]?'memo':'organization'})),...ind.map(r=>({name:r[0],employer:r[1],occupation:r[2],date:r[3],amount:r[4],memo:r[5],note:c.key==='jfc'?r.originalFields[5]:r[6],image:c.key==='jfc'?r.originalFields[6]:r[7],rawFields:(r.originalFields||r),type:'individual',category:r[5]?'memo':'individual'}))];
   }
   for(const r of records){
    delete r.sector;
