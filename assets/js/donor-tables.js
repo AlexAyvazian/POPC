@@ -27,6 +27,12 @@ function receiptDetails(group,config){
 function table(host,key,title,description,groups,config){
  const section=document.createElement('section');section.className='donor-table-section';section.dataset.donorGroup=key;
  section.innerHTML=`<h2>${title}</h2><p>${description}</p><p class="donor-table-total">${groups.length.toLocaleString()} donors · <strong>${money(sum(groups))}</strong></p><label>Search this table <input type="search" placeholder="Name, employer, sector…"></label><div data-donor-visuals></div><div class="jvf-table-wrap"><table class="jvf-table"><thead><tr><th scope="col">${key==='organizations'?'PAC / political committee / organization':'Individual donor'}</th>${key==='organizations'?'':'<th scope="col">Reported employer(s)</th><th scope="col">Reported occupation(s)</th>'}<th scope="col">Business identity &amp; research</th><th scope="col">Sector</th><th scope="col">Receiving committees</th><th scope="col">Total donated</th><th scope="col">Receipt details</th></tr></thead><tbody></tbody></table></div><div class="donor-table-pagination"><button type="button" data-prev>Previous</button><span role="status"></span><button type="button" data-next>Next</button></div>`;
+ if(!host.dataset.committee){
+  const downloads=document.createElement('p');downloads.className='donor-downloads';
+  const network=host.dataset.network==='schumer'?'schumer':'jeffries';
+  downloads.innerHTML='<a data-table-download href="/data/downloads/'+network+'-'+key+'.csv" download>Download full table (CSV)</a>';
+  section.querySelector('.donor-table-total').after(downloads);
+ }
  const input=section.querySelector('input'),body=section.querySelector('tbody'),prev=section.querySelector('[data-prev]'),next=section.querySelector('[data-next]'),status=section.querySelector('[role=status]');let page=0,visualQuery=null;
  const visuals=mountDonorVisuals(section.querySelector('[data-donor-visuals]'));
  function draw(){
@@ -51,6 +57,11 @@ async function start(host){
   const identities=await import(schumer?'./schumer-business-directory-data.js?v=categories1':'./business-directory-data.js?v=categories1');
   const groups=groupDonors(records,identities.identifyName);host.replaceChildren();
   const note=document.createElement('p');note.className='donor-table-note';note.textContent='2025–2026 · Verified organization aliases are consolidated using the business research; individual gifts are combined by exact reported donor name within this page’s committees. The $500 cutoff uses each donor’s full total before search. Memo amounts are excluded.';host.append(note);
+  if(!committee){
+   const downloads=document.createElement('p');downloads.className='donor-downloads';
+   downloads.innerHTML='<a data-workbook-download href="/data/downloads/'+(schumer?'schumer':'jeffries')+'-combined-donors.xlsx" download>Download all three tables (Excel)</a><span>Complete tables, research, committee amounts and receipt details.</span>';
+   host.append(downloads);
+  }
   table(host,'organizations','PACs, Political Committees & Organizations','All organizational contributions in one table.',groups.organizations,config);
   table(host,'indirect','Indirect Donors','Individual donors with total contributions of $500 or more, including repeat gifts. Researched employer names appear beside each donor, with the original reported names retained.',groups.indirect,config);
   table(host,'small','Small Donors','Individual donors with total contributions below $500.',groups.small,config);

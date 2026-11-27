@@ -70,6 +70,23 @@ try{
     const bubbleAreas=await visual.locator('[data-bubble-donors]').evaluateAll(nodes=>nodes.map(n=>Number(n.getAttribute('r'))**2/Number(n.dataset.bubbleDonors)));
     if(bubbleAreas.length)assert(bubbleAreas.every(v=>Math.abs(v-bubbleAreas[0])<1e-8),'bubble area scales with donor count');
    }
+   if(!await host.getAttribute('data-committee')){
+    const network=await host.getAttribute('data-network');
+    const workbook=host.locator('[data-workbook-download]');
+    assert.equal(await workbook.count(),1);
+    const [excelDownload]=await Promise.all([page.waitForEvent('download'),workbook.click()]);
+    assert.equal(await excelDownload.failure(),null);
+    assert.equal(excelDownload.suggestedFilename(),network+'-combined-donors.xlsx');
+    const excel=await fs.readFile(await excelDownload.path());assert.equal(excel.subarray(0,4).toString('hex'),'504b0304');
+    for(const section of await host.locator('[data-donor-group]').all()){
+     const key=await section.getAttribute('data-donor-group'),link=section.locator('[data-table-download]');
+     assert.equal(await link.count(),1);
+     const [csvDownload]=await Promise.all([page.waitForEvent('download'),link.click()]);
+     assert.equal(await csvDownload.failure(),null);
+     assert.equal(csvDownload.suggestedFilename(),network+'-'+key+'.csv');
+     const csv=await fs.readFile(await csvDownload.path(),'utf8');assert(csv.startsWith('\ufeff"Donor / organization","Total donated (USD)"'));
+    }
+   }
    assert((await host.locator('thead').first().innerText()).includes('Business identity')); 
    for(const key of ['indirect','small']){
     const section=host.locator('[data-donor-group='+key+']');
