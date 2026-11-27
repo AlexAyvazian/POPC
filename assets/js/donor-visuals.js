@@ -11,9 +11,9 @@ function mark(s,tag,attrs,label,readout,focus=true){const n=node(tag,{...attrs,.
 function legend(card,items,colors){const details=document.createElement('details');details.className='dv-legend';details.open=true;const summary=document.createElement('summary');summary.textContent='Sector key and exact values';const ul=document.createElement('ul');for(const item of items){const li=document.createElement('li'),swatch=document.createElement('span');swatch.className='dv-swatch';swatch.style.background=colors.get(item.name);const button=document.createElement('button');button.type='button';button.textContent=item.label;button.addEventListener('click',()=>{card.querySelector('.dv-readout').textContent=item.label;});li.append(swatch,button);ul.append(li);}details.append(summary,ul);card.append(details);}
 function card(host,kind,title,description){const f=document.createElement('figure');f.className='donor-visual-card';f.dataset.chart=kind;const cap=document.createElement('figcaption'),h=document.createElement('h3'),p=document.createElement('p');h.textContent=title;p.textContent=description;cap.append(h,p);const plot=document.createElement('div');plot.className='dv-plot';const readout=document.createElement('p');readout.className='dv-readout';readout.setAttribute('aria-live','polite');readout.textContent='Tap, focus or hover over a mark for details.';f.append(cap,plot,readout);host.append(f);return {card:f,plot,readout};}
 function empty(target,message){target.plot.textContent=message;target.readout.textContent='';}
-function horizontalBars(target,items,colors,label,format){
+function horizontalBars(target,items,colors,label,format,domain){
  const w=600,h=items.length*48+28,left=12,right=12,span=w-left-right;
- const min=Math.min(0,...items.map(d=>d.value)),max=Math.max(0,...items.map(d=>d.value)),range=max-min||1;
+ const min=domain?.[0]??Math.min(0,...items.map(d=>d.value)),max=domain?.[1]??Math.max(0,...items.map(d=>d.value)),range=max-min||1;
  const x=v=>left+(v-min)/range*span,s=svg(w,h,label);
  s.append(node('line',{x1:x(0),x2:x(0),y1:22,y2:h-6,stroke:'#b69b79','stroke-width':1}));
  items.forEach((d,i)=>{
@@ -28,7 +28,7 @@ function sectorBars(target,model){
  const data=radarData(model).sort((a,b)=>b.amount-a.amount||a.name.localeCompare(b.name));
  if(!model.total||data.some(d=>d.share<0||d.share>1)||model.total<0){empty(target,'Sector percentages require a positive total and nonnegative sector amounts.');return;}
  const colors=sequentialColors(data.map(d=>d.name));
- horizontalBars(target,data.map(d=>({...d,value:d.share,label:`${d.name}: ${(d.share*100).toFixed(2)}% · ${money(d.amount)}`})),colors,'Bar graph: sector shares of net contributions',v=>(v*100).toFixed(1)+'%');
+ horizontalBars(target,data.map(d=>({...d,name:d.name.length>48?d.name.slice(0,47)+'…':d.name,sector:d.name,value:d.share,label:`${d.name}: ${(d.share*100).toFixed(2)}% · ${money(d.amount)}`})),colors,'Bar graph: sector shares of net contributions',v=>(v*100).toFixed(1)+'%',[0,1]);
 }
 function donorBars(target,model){
  if(!model.sectors.length){empty(target,'No donors in this selection.');return;}
@@ -41,10 +41,11 @@ function donorBars(target,model){
  function draw(){
   const selected=select.value?model.sectors.filter(s=>s.name===select.value):model.sectors;
   const leaves=selected.flatMap(s=>s.leaves.map(l=>({...l,sector:s.name,originalSector:l.sector}))).sort((a,b)=>b.amount-a.amount||a.name.localeCompare(b.name)||a.originalSector.localeCompare(b.originalSector));
+  const domain=leaves.reduce(([min,max],d)=>[Math.min(min,d.amount),Math.max(max,d.amount)],[0,0]);
   const start=page*20;target.plot.replaceChildren();target.plot.dataset.donorBarCount=leaves.length;
   if(!leaves.length){empty(target,'No donors in this selection.');}else{
    const rows=leaves.slice(start,start+20).map(d=>({...d,value:d.amount,name:d.name.length>48?d.name.slice(0,47)+'…':d.name,label:`${d.name} · ${d.originalSector}: ${money(d.amount)}`}));
-   horizontalBars(target,rows,colors,'Bar graph: signed net donor allocations',money);
+   horizontalBars(target,rows,colors,'Bar graph: signed net donor allocations',money,domain);
   }
   status.textContent=leaves.length?`${start+1}–${Math.min(start+20,leaves.length)} of ${leaves.length.toLocaleString()} donor allocations`:'0 donor allocations';previous.disabled=page===0;next.disabled=start+20>=leaves.length;
  }
