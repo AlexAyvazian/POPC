@@ -44,8 +44,8 @@ try{
     assert.equal(await section.locator('[data-chart=radar],[data-chart=circle-packing]').count(),0);
     assert.equal(await section.locator('[data-chart=sector-bars]').count(),1);
     const sectorBars=section.locator('[data-chart=sector-bars]'),donorBars=section.locator('[data-chart=donor-bars]'),plot=donorBars.locator('.dv-plot');
-    assert.equal(await sectorBars.locator('.dv-plot').getAttribute('data-bar-orientation'),'vertical','sector bars are vertical columns');
-    assert.equal(await plot.getAttribute('data-bar-orientation'),'vertical','donor bars are vertical columns');
+    assert.equal(await sectorBars.locator('.dv-plot').getAttribute('data-bar-orientation'),'horizontal','sector bars use readable horizontal rows');
+    assert.equal(await plot.getAttribute('data-bar-orientation'),'horizontal','donor bars use readable horizontal rows');
     if(await plot.getAttribute('data-donor-bar-count')){
      const count=Number(await plot.getAttribute('data-donor-bar-count'));
      assert.equal(await plot.locator('rect[data-bar-value]').count(),Math.min(20,count));
@@ -62,7 +62,9 @@ try{
       assert.equal(Number(await plot.getAttribute('data-donor-bar-count')),count);
      }
     }
-    assert(!/Other sectors|Other [\d,]+ donors/.test(await section.locator('[data-donor-visuals]').innerText()),'no synthetic Other buckets');
+    const visualText=await section.locator('[data-donor-visuals]').innerText();
+    assert(!/Other sectors|Other [\d,]+ donors/.test(visualText),'no synthetic Other buckets');
+    assert(!/No sector:|Unresolved \/ ambiguous/.test(visualText),'status buckets are not presented as researched sectors');
 
     const marks=await section.locator('[data-chart] svg rect,[data-chart] svg circle,[data-chart] svg polygon,[data-chart] svg path').evaluateAll(nodes=>nodes.map(n=>({fill:n.getAttribute('fill'),opacity:n.getAttribute('fill-opacity')})));
     for(const mark of marks){if(mark.fill&&!['none','#fff'].includes(mark.fill))assert(approvedChartColors.includes(mark.fill),'selected swatch only: '+mark.fill);if(mark.opacity!==null)assert.equal(Number(mark.opacity),1);}
@@ -81,7 +83,7 @@ try{
     const dotFills=await dotMatrix.locator('svg circle').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('fill')));
     assert(dotFills.every(fill=>approvedChartColors.includes(fill)),'dot matrix uses only approved row-2-through-9 colors');
     const dots=await visual.locator('[data-donor-count]').evaluateAll(nodes=>nodes.reduce((n,d)=>n+Number(d.dataset.donorCount),0));
-    assert.equal(dots,Number(await visual.getAttribute('data-groups')));
+    assert.equal(dots,Number(await visual.getAttribute('data-sector-donors')));
     assert.equal(await visual.locator('[data-donor-count="1"]').count(),dots);
     const bubble=visual.locator('[data-chart=bubble]');
     assert.equal((await bubble.locator('figcaption').innerText()).includes('receipt count'),false,'bubble chart does not measure receipt count');
@@ -147,6 +149,8 @@ try{
    const sectorLabels=await page.locator('#ca-all-sector-pie .ca-legend-name').allInnerTexts();
    assert(sectorLabels.length>0,'researched-sector pie has labels');
    assert(sectorLabels.every(label=>masterSectors.includes(label)),file+' pie uses Claude researched first-hand sectors');
+   assert(!sectorLabels.some(label=>/^No sector:|^Unresolved \/ ambiguous$/.test(label)),file+' pie excludes non-sector status buckets');
+   assert(!(await page.locator('#ca-status').innerText()).startsWith('Unable to load verified data'),file+' combined dashboard loaded');
    const pie=page.locator('#ca-all-sector-pie .ca-donut'),legend=page.locator('#ca-all-sector-pie .ca-legend');
    const pieBox=await pie.boundingBox(),legendBox=await legend.boundingBox();
    assert(pieBox&&legendBox&&legendBox.y>=pieBox.y+pieBox.height-2,file+' puts the researched-sector pie above its legend');
