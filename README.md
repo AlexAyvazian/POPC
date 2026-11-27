@@ -1,28 +1,25 @@
 # POPC
 
-## File organization
+Donor data starts in **ClaudeFiles/**. Its six researched CSVs and workbook supply all donor names, employer research, sector assignments, donor totals and committee allocations.
+
+**ClaudeFiles/receipt-details.json** contains only information those aggregate files lack: the original receipt history and filing links, memos, other receipts, additional FEC fields, and missing identity evidence. It contains no old sector classifications. The superseded donor datasets, spreadsheets and classification modules have been deleted.
+
+Run `python scripts/build-donors.py` to generate **data/donors.json** and its small configuration module. Every donor table, chart and research assistant reads that build through **assets/js/donor-data.js**. The default sector is Claude's supplied donor career view. Household relationships remain explicitly identified in the supplied research.
+
+Run `node scripts/generate-donor-downloads.mjs` to rebuild both Excel workbooks and all six CSV downloads from the same dataset.
+
+The donor workflow rebuilds and verifies these outputs when ClaudeFiles changes. No hosting configuration change is required.
 
 | Folder | Contents |
 | --- | --- |
-| `pages/` | Committee, transaction, research, petition and letter pages |
-| `assets/css/` | Stylesheets |
-| `assets/js/` | Browser code, shared committee renderer and research assistant |
-| `assets/images/` | Illustrations, header assets and petition preview |
-| `data/jeffries/` | Jeffries receipt datasets and business identities |
-| `data/schumer/` | Schumer receipt datasets, manifest, reconciliation and identities |
-| `data/petition/` | Petition preview metadata |
-| `documents/` | Reports, letters, source spreadsheets and research notes |
-| `scripts/` | Data exports and petition capture |
-| `tests/` | Automated regression and site-link checks |
+| ClaudeFiles/ | Authoritative researched inputs and missing receipt details |
+| data/ | Generated donor data, downloads and petition metadata |
+| pages/ | Committee, combined analysis, research, petition and letter pages |
+| assets/ | Browser code, styles and images |
+| documents/ | Reports, letters and project notes |
+| scripts/ | Donor build, downloads and petition capture |
+| tests/ | Data reconciliation, chart, link and browser checks |
 
-The homepage stays at `index.html`. Cloudflare requires `functions/`, `_routes.json`, and `_redirects` at their existing locations. GitHub workflows stay in `.github/workflows/`.
+Use Node 22 and Python 3.12 with openpyxl 3.1.5. Run all data and link checks with `node --test tests/*.test.mjs`, then `node tests/browser-smoke.mjs` with Playwright installed.
 
-Existing public URLs redirect to their new locations. Internal links use the new paths directly. No build step or deployment-setting change is required.
-
-Research engines and assistants share implementations while retaining separate Jeffries and Schumer data. The Battleground Protection and Clark Victory committee pages share a renderer with separate reconciliation totals.
-
-Run all checks with `node --test tests/*.test.mjs` on Node 22. Run the research queue export with `node scripts/business-directory-unreviewed.mjs`.
-
-The hourly petition workflow updates `assets/images/petition-change-org-live.png` and `data/petition/petition-change-org-live.json`.
-
-All sector labels come from one master system: `assets/js/master-sectors.js`. See [Master sectors](documents/notes/MASTER-SECTORS.md).
+The hourly petition preview workflow remains separate.

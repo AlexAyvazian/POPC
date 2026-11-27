@@ -1,6 +1,6 @@
-import {chartSwatches,sequentialColors} from './chart-palette.js?v=refined1';
+import {chartSwatches,sequentialColors} from './chart-palette.js?v=claude1';
 import {hierarchy,pack} from './vendor/d3-hierarchy.js';
-import {buildVisualData,radarData,packingData,dotData} from './donor-visual-data.js?v=refined1';
+import {buildVisualData,radarData,packingData,dotData} from './donor-visual-data.js?v=claude1';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
 const compact=n=>new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(n);

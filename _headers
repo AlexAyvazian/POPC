@@ -2,3 +2,9 @@
 /data/downloads/*
   Content-Disposition: attachment
   Cache-Control: public, max-age=0, must-revalidate
+
+/assets/js/*
+  Cache-Control: no-cache
+
+/data/donors.json
+  Cache-Control: no-cache

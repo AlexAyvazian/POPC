@@ -8,20 +8,25 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - name: Verify the checked-in build matches ClaudeFiles
+        run: |
+          python scripts/build-donors.py
+          git diff --exit-code -- data/donors.json assets/js/donor-config.js
       - name: Check JavaScript syntax
         run: find assets data functions scripts tests -type f \( -name '*.js' -o -name '*.mjs' \) -print0 | xargs -0 -n 1 node --check
-      - name: Run regression and link checks
+      - name: Verify donor data, charts and links
         run: node --test tests/*.test.mjs
-      - name: Check research queue export
-        run: node scripts/business-directory-unreviewed.mjs
-      - name: Install browser testing tools
-        run: npm install --no-save playwright@1.56.0
+      - run: npm install --no-save playwright@1.56.0
       - run: npx playwright install --with-deps chromium
-      - name: Check all pages in Chromium
+      - name: Check every page in Chromium
         run: node tests/browser-smoke.mjs

@@ -1,4 +1,4 @@
-import {sectorGroups} from '../assets/js/master-sectors.js?v=refined1';
+import {sectorGroups,networkData} from '../assets/js/donor-data.js?v=claude1';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
@@ -10,11 +10,11 @@ export const tableNames={organizations:'PACs & Organizations',indirect:'Indirect
 const clean=value=>String(value??'').replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g,c=>'\\u'+c.charCodeAt(0).toString(16).padStart(4,'0'));
 const joined=values=>[...new Set(values||[])].filter(Boolean).sort().map(clean).join('; ');
 export function donorSheet(groups,config,key){
- const headers=['Donor / organization','Total donated (USD)','Sector(s)','Employer(s)','Reported employer(s)','Reported occupation(s)','Reported donor name(s)','Business identity / research status','Parent / related organization','Research scope','Research evidence','Research sources','Receipt count','First receipt','Last receipt',...config.map(c=>c.name+' (USD)'),'Sector group','Sector basis','Researched sector','Research sector basis','Relationship to sector','Ideological / philanthropic profile','Sector research evidence','Sector: first-hand view','Sector: incl. household view'];
+ const headers=['Donor / organization','Total donated (USD)','Sector(s)','Employer(s)','Reported employer(s)','Reported occupation(s)','Reported donor name(s)','Business identity','Parent / related organization','Research scope','Research evidence','Research sources','Receipt count','First receipt','Last receipt',...config.map(c=>c.name+' (USD)'),'Sector group','Sector basis','Researched sector','Research sector basis','Relationship to sector','Ideological / philanthropic profile','Sector research evidence','Sector: first-hand view','Sector: incl. household view'];
  const rows=groups.map(g=>{
   const identities=[...g.businessResearch.values()],research=identities.filter(i=>i.research),dates=g.records.map(r=>r.date).filter(Boolean).sort();
   return [clean(g.name),g.amount/100,joined(g.sectors),joined(g.employers),joined(g.reportedEmployers),joined(g.occupations),joined(g.reportedNames),
-   identities.map(i=>clean(i.name)+' · '+(i.research?.status||'Not reviewed')).join('\n'),
+   identities.map(i=>clean(i.name)).join('\n'),
    joined(research.map(i=>i.research.parent)),
    research.map(i=>clean(i.name)+': '+clean(i.research.scope)).join('\n'),
    research.map(i=>clean(i.name)+': '+clean(i.research.evidence)).join('\n'),
@@ -40,9 +40,9 @@ export function receiptSheet(groups,config){
 }
 export function sectorSummary(groups,grouped=false){
  const totals=new Map(),all=Object.values(groups).flat();
- const label=(g,view)=>{const name=view==='firstHand'?g.classification?.firstHand:view==='household'?g.classification?.household:[...g.sectors][0];return grouped?sectorGroups[name]||'Unresolved':name;};
- for(const g of all)for(const [view,idx]of [['refined',0],['firstHand',1],['household',2]]){const name=label(g,view);if(!totals.has(name))totals.set(name,{values:[0,0,0],donors:0,receipts:0});const row=totals.get(name);row.values[idx]+=g.amount;if(idx===0){row.donors++;row.receipts+=g.records.length;}}
- return {name:grouped?'Sector Groups':'Refined Sectors',headers:[grouped?'Sector group':'Refined sector','Donors','Receipts','Total donated (USD)','Donor career view (USD)','Including household view (USD)'],moneyColumns:[3,4,5],widths:[60,16,18,26,28,32],rows:[...totals].sort((a,b)=>b[1].values[0]-a[1].values[0]||a[0].localeCompare(b[0])).map(([name,t])=>[name,t.donors,t.receipts,...t.values.map(n=>n/100)])};
+ const label=(g,view)=>{const name=view==='firstHand'?g.classification?.firstHand:view==='household'?g.classification?.household:g.classification?.refined||[...g.sectors][0];return grouped?sectorGroups[name]||'Unresolved':name;};
+ for(const g of all)for(const [view,idx]of [['firstHand',0],['refined',1],['household',2]]){const name=label(g,view);if(!totals.has(name))totals.set(name,{values:[0,0,0],donors:0,receipts:0});const row=totals.get(name);row.values[idx]+=g.amount;if(idx===0){row.donors++;row.receipts+=g.records.length;}}
+ return {name:grouped?'Sector Groups':'Refined Sectors',headers:[grouped?'Sector group':'Refined sector','Donors','Receipts','Total donated (USD)','Sector before career research (USD)','Including household view (USD)'],moneyColumns:[3,4,5],widths:[60,16,18,26,28,32],rows:[...totals].sort((a,b)=>b[1].values[0]-a[1].values[0]||a[0].localeCompare(b[0])).map(([name,t])=>[name,t.donors,t.receipts,...t.values.map(n=>n/100)])};
 }
 export async function generate(){
  const root=fileURLToPath(new URL('../',import.meta.url)),output=path.join(root,'data/downloads'),temporary=await fs.mkdtemp(path.join(os.tmpdir(),'popc-donor-downloads-'));
@@ -51,13 +51,13 @@ export async function generate(){
   if(!pathname.startsWith('/data/')||pathname.includes('..'))throw Error('Unexpected data path: '+url);
   return new Response(await fs.readFile(path.join(root,pathname.slice(1))));
  };
- const {groupDonors}=await import('../assets/js/donor-groups.js?v=refined1');
+ const {groupDonors}=await import('../assets/js/donor-groups.js?v=claude1');
  await fs.mkdir(output,{recursive:true});
- const manifest={schemaVersion:2,classification:'Supplied 63-sector and 17-group system',sourceCommit:process.env.GITHUB_SHA||'',networks:{}};
+ const manifest={schemaVersion:3,classification:'ClaudeFiles: donor career sector, 63 sectors and 17 groups',sourceCommit:process.env.GITHUB_SHA||'',networks:{}};
  try{
   for(const network of ['jeffries','schumer']){
-   const prefix=network==='schumer'?'schumer-':'',data=await import('../assets/js/'+prefix+'research-data.js?v=refined1'),identities=await import('../assets/js/'+prefix+'business-directory-data.js?v=refined1');
-   const records=await data.loadResearchRecords(),groups=groupDonors(records,identities.identifyName),sheets=Object.entries(groups).map(([key,items])=>donorSheet(items,data.config,key));
+   const data=networkData(network);
+   const records=await data.loadResearchRecords(),groups=groupDonors(records),sheets=Object.entries(groups).map(([key,items])=>donorSheet(items,data.config,key));
    const totalCents=data.config.reduce((n,c)=>n+c.individual+c.organization,0),receiptCount=data.config.reduce((n,c)=>n+c.individualCount+c.organizationCount,0);
    if(sheets.reduce((n,s)=>n+s.totalCents,0)!==totalCents||sheets.reduce((n,s)=>n+s.receiptCount,0)!==receiptCount)throw Error(network+' exports do not reconcile');
    const payload={network,label:network==='jeffries'?'Hakeem Jeffries network':'Chuck Schumer network',sourceCommit:manifest.sourceCommit,totalCents,receiptCount,sheets,sectorSummaries:[sectorSummary(groups,true),sectorSummary(groups)],receipts:receiptSheet(groups,data.config)};

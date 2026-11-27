@@ -1,6 +1,7 @@
-import {colorAt} from './chart-palette.js?v=refined1';
-import {buildDirectory} from './business-directory-data.js?v=refined1';
-import {config, normalize} from './research-data.js?v=refined1';
+import {colorAt} from './chart-palette.js?v=claude1';
+import {buildDirectory} from './business-data.js?v=claude1';
+import {networkData,normalize} from './donor-data.js?v=claude1';
+const {config}=networkData('jeffries');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dollars=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n/100);
 const exact=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);

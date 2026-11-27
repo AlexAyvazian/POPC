@@ -24,7 +24,7 @@ test('legacy URLs redirect directly to existing files',async()=>{
 });
 test('both research engines keep their own totals and committee labels',async()=>{
  const original=globalThis.fetch;
- globalThis.fetch=async p=>new Response(await fs.readFile(path.join(root,String(p).replace(/^\//,''))));
+ globalThis.fetch=async p=>new Response(await fs.readFile(path.join(root,String(p).split('?')[0].replace(/^\//,''))));
  try{
   for(const [engine,label] of [[jeffries,'All eight committees'],[schumer,'All three committees']]){
    const rows=await engine.loadResearchRecords(), result=engine.evaluate(rows,{});

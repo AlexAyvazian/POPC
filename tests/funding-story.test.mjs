@@ -2,10 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {groupPeople,fundingRoutes} from '../assets/js/funding-story.js';
-import {loadResearchRecords,config} from '../assets/js/research-data.js';
-import {buildDirectory} from '../assets/js/business-directory-data.js';
+import {networkData} from '../assets/js/donor-data.js?v=claude1';
+const {loadResearchRecords,config}=networkData('jeffries');
+import {buildDirectory} from '../assets/js/business-data.js?v=claude1';
 test('funding routes and donor concentration reconcile to all eight source datasets',async()=>{
- globalThis.fetch=async path=>new Response(await fs.readFile(new URL('../' + String(path).replace(/^\//, ''), import.meta.url)));
+ globalThis.fetch=async path=>new Response(await fs.readFile(new URL('../' + String(path).split('?')[0].replace(/^\//, ''), import.meta.url)));
  const records=await loadResearchRecords(),people=groupPeople(records);
  assert.equal(people.reduce((s,p)=>s+p.value,0),config.reduce((s,c)=>s+c.individual,0));
  for(const group of buildDirectory(records)){

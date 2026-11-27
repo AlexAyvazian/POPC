@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 2,
-  "classification": "Supplied 63-sector and 17-group system",
-  "sourceCommit": "0d3303c4194bd0caa2e751e25bb6b351bed56319",
+  "schemaVersion": 3,
+  "classification": "ClaudeFiles: donor career sector, 63 sectors and 17 groups",
+  "sourceCommit": "0c1a9afad90e064d041cb84d8f834acb0f7b7a7d",
   "networks": {
     "jeffries": {
       "totalCents": 2813110270,
@@ -69,43 +69,43 @@
   "files": [
     {
       "name": "jeffries-combined-donors.xlsx",
-      "bytes": 7113616,
-      "sha256": "d7c89c5d10948ad188959aad9065e9f95f31291def59b3dab18949ec9281e7de"
+      "bytes": 7828384,
+      "sha256": "b8b6d19e010d977973bc795ec6dbb464cc7d859f1384ef43aaf0f926542b4af8"
     },
     {
       "name": "jeffries-indirect.csv",
-      "bytes": 1413417,
-      "sha256": "7b827748838d18c238e0b5e565acc727d638136204585e520261e6ce3548712e"
+      "bytes": 1402485,
+      "sha256": "ca16b8729d89782e7317969215e6718c001258a0a793334dd0f5e776cf91cc92"
     },
     {
       "name": "jeffries-organizations.csv",
-      "bytes": 454245,
-      "sha256": "1835f0941f452c63da6f971efc68069db36343bf3e46901e6e2dba4abd9d7a2d"
+      "bytes": 455827,
+      "sha256": "de5ba2a3ae0027cfc33608422b95993c648561ff6195ddd11a91ec4cbdf815b8"
     },
     {
       "name": "jeffries-small.csv",
-      "bytes": 3123503,
-      "sha256": "bf33f72a708d802afa813f4f02bd31ea55f3af27e1d3924f9bad1ceb78cc8ac5"
+      "bytes": 3095451,
+      "sha256": "6d9005b94c9da780b4009517439fd122b2b864177dbc645abfad3d498eae985f"
     },
     {
       "name": "schumer-combined-donors.xlsx",
-      "bytes": 4995220,
-      "sha256": "7ba20bdd0821ac5fef763d890dc9ba4b2eaba30b65909ebdc27947277f687c07"
+      "bytes": 4984306,
+      "sha256": "92f788e9ce4b2af11324b881286e46ec6e273ed8493974e3d2ccbf48dff0d324"
     },
     {
       "name": "schumer-indirect.csv",
-      "bytes": 1567988,
-      "sha256": "037a4bca1e6429e301b210983a8489593f986e1802494a0f4147e2b06475fa5c"
+      "bytes": 1552737,
+      "sha256": "f664988cce63129fd5db117acd7e53aea91123251f80d6e4ed38619d535fc508"
     },
     {
       "name": "schumer-organizations.csv",
-      "bytes": 211532,
-      "sha256": "fe8ec4a8e8bf838cd906fdffa3b0d01bff0daa912b6fa71a8269c1b809126fcd"
+      "bytes": 194834,
+      "sha256": "969a0954253d28b3612e8a76170ea05d1affcdbe00f6f918f95d46a2fd326d4b"
     },
     {
       "name": "schumer-small.csv",
-      "bytes": 2431912,
-      "sha256": "d206135c04ebf0df46aa9beed7d4eee46a5c83619c91016932498324f6d22a55"
+      "bytes": 2415252,
+      "sha256": "784c67b74ef0ba30404fa5e6485e206d455fa8249ee0d5f5b8af21c0a5f6ee17"
     }
   ]
 }

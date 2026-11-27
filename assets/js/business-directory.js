@@ -1,5 +1,7 @@
-import {config} from './research-data.js?v=refined1';
-import {buildDirectory, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js?v=refined1';
+import {networkData} from './donor-data.js?v=claude1';
+const network=document.querySelector('[data-donor-tables]')?.dataset.network||'jeffries';
+const {config,loadDirectoryRecords}=networkData(network);
+import {buildDirectory,selectDirectory,directoryCSV} from './business-data.js?v=claude1';
 
 const $ = id => document.getElementById(id);
 const money = n => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD'}).format(n / 100);
@@ -20,12 +22,12 @@ function updateGroups() {
 }
 
 function render() {
-  filtered = selectDirectory(groups, {query:$('bd-search').value, sector:$('bd-sector').value, view:$('bd-view').value, research:$('bd-research').value});
+  filtered = selectDirectory(groups, {query:$('bd-search').value, sector:$('bd-sector').value, view:$('bd-view').value});
   const pages = Math.max(1, Math.ceil(filtered.length / size));
   page = Math.min(page, pages - 1);
   const totals = filtered.reduce((s, g) => ({organization:s.organization+g.organization, individual:s.individual+g.individual, count:s.count+g.count,memos:s.memos+g.memoCount}), {organization:0,individual:0,count:0,memos:0});
   $('bd-summary').textContent = `${number(filtered.length)} listed names · ${number(totals.count)} direct records · ${number(totals.memos)} memo records`;
-  $('bd-rows').innerHTML = filtered.slice(page*size, (page+1)*size).map((g, i) => `<tr><td><button class="bd-name" type="button" data-index="${page*size+i}">${escape(g.name)}</button></td><td>${escape([...g.sectors].sort().join('; '))}</td><td>${escape(g.research?.status || 'Not reviewed')}<br>${escape([...g.methods].join('; '))}${g.research?.parent ? '<br>Parent: '+escape(g.research.parent) : ''}</td><td>${money(g.organization)}</td><td>${money(g.individual)}</td><td>${number(g.count)} direct<br>${number(g.memoCount)} memo</td></tr>`).join('') || '<tr><td colspan="6">No matching names.</td></tr>';
+  $('bd-rows').innerHTML = filtered.slice(page*size, (page+1)*size).map((g, i) => `<tr><td><button class="bd-name" type="button" data-index="${page*size+i}">${escape(g.name)}</button></td><td>${escape([...g.sectors].sort().join('; '))}</td><td>${escape([...g.methods].join('; '))}${g.research?.parent ? '<br>Parent: '+escape(g.research.parent) : ''}</td><td>${money(g.organization)}</td><td>${money(g.individual)}</td><td>${number(g.count)} direct<br>${number(g.memoCount)} memo</td></tr>`).join('') || '<tr><td colspan="6">No matching names.</td></tr>';
   $('bd-total').innerHTML = `<tr><th scope="row" colspan="3">Filtered totals</th><td>${money(totals.organization)}</td><td>${money(totals.individual)}</td><td>${number(totals.count)} direct<br>${number(totals.memos)} memo</td></tr>`;
   $('bd-page').textContent = `Page ${page+1} of ${pages}`;
   $('bd-prev').disabled = page === 0;
@@ -45,8 +47,8 @@ function showDetails(group) {
   $('bd-detail-title').textContent = group.name;
   $('bd-originals').textContent = 'Original employer / organization names: ' + [...group.names].join('; ');
   $('bd-evidence').innerHTML = group.research
-    ? `<strong>${escape(group.research.status)}</strong> · ${escape(group.research.scope)} · Reviewed ${escape(group.research.reviewed)}${group.research.parent ? '<br>Parent company: '+escape(group.research.parent) : ''}<p>${escape(group.research.evidence)}</p><p>Sources: ${group.research.sources.map((url,i)=>`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${i+1}. ${escape(new URL(url).hostname)}</a>`).join(' · ')}</p>`
-    : 'Not yet researched. Name is taken from the reported employer or organization.';
+    ? `${escape(group.research.scope)}${group.research.parent ? '<br>Parent company: '+escape(group.research.parent) : ''}<p>${escape(group.research.evidence)}</p><p>Sources: ${group.research.sources.map((url,i)=>`<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${i+1}. ${escape(new URL(url).hostname)}</a>`).join(' · ')}</p>`
+    : 'Name is taken from the reported employer or organization.';
   $('bd-detail').hidden = false;
   renderDetails();
   $('bd-detail-title').focus();
@@ -65,13 +67,13 @@ function renderDetails() {
 }
 
 $('bd-committee').addEventListener('change', updateGroups);
-for (const id of ['bd-search','bd-sector','bd-view','bd-research']) $(id).addEventListener(id === 'bd-search' ? 'input' : 'change', () => {page=0;closeDetails();render();});
+for (const id of ['bd-search','bd-sector','bd-view']) $(id).addEventListener(id === 'bd-search' ? 'input' : 'change', () => {page=0;closeDetails();render();});
 $('bd-prev').addEventListener('click', () => {page--;render();});
 $('bd-next').addEventListener('click', () => {page++;render();});
 $('bd-detail-prev').addEventListener('click', () => {detailPage--;renderDetails();});
 $('bd-detail-next').addEventListener('click', () => {detailPage++;renderDetails();});
 $('bd-close').addEventListener('click', () => {closeDetails();$('bd-search').focus();});
-$('bd-reset').addEventListener('click', () => {$('bd-search').value=$('bd-sector').value=$('bd-committee').value=$('bd-research').value='';$('bd-view').value='promoted';updateGroups();});
+$('bd-reset').addEventListener('click', () => {$('bd-search').value=$('bd-sector').value=$('bd-committee').value='';$('bd-view').value='promoted';updateGroups();});
 $('bd-download').addEventListener('click', () => {
   const url = URL.createObjectURL(new Blob(['\uFEFF'+directoryCSV(filtered)],{type:'text/csv;charset=utf-8'}));
   const a = document.createElement('a');a.href=url;a.download='popc-business-organization-names.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -81,7 +83,7 @@ try {
   records = await loadDirectoryRecords();
   for (const c of config) $('bd-committee').add(new Option(c.name,c.key));
   updateGroups();
-  $('bd-status').textContent = `All eight committees loaded · ${number(records.filter(r=>!r.memo).length)} direct records and ${number(records.filter(r=>r.memo).length)} memo records accounted for. Single-donor employer-only names remain preserved. The priority queue also includes single-donor employers when the donor reports a high-influence executive role; all preserved employer names remain available by search or from the Show menu.`;
+  $('bd-status').textContent = `All ${config.length} committees loaded from ClaudeFiles · ${number(records.filter(r=>!r.memo).length)} direct records and ${number(records.filter(r=>r.memo).length)} memo records accounted for. Single-donor employer-only names remain preserved. The priority queue also includes single-donor employers when the donor reports a high-influence executive role; all preserved employer names remain available by search or from the Show menu.`;
   for (const el of document.querySelectorAll('.ca-controls input,.ca-controls select,#bd-reset,#bd-download')) el.disabled=false;
 } catch (error) {
   $('bd-status').textContent = 'Unable to load all committee records. Reload to retry.';

@@ -1,6 +1,7 @@
-import {chartSwatches,chartSequence} from './chart-palette.js?v=refined1';
-import {renderFundingStory} from "./funding-story.js?v=refined1";
-import {config,normalize,occupationGroup,personalCategories,loadCommittee} from "./research-data.js?v=refined1";
+import {chartSwatches,chartSequence} from './chart-palette.js?v=claude1';
+import {renderFundingStory} from "./funding-story.js?v=claude1";
+import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=claude1';
+const {config,loadCommittee}=networkData('jeffries');
 (()=>{"use strict";
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
 // Chart colors sampled from the supplied palette, converted to sRGB.

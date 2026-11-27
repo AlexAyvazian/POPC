@@ -103,11 +103,11 @@ def main():
     summary_rows.append(["All three donor tables", sum(s["donors"] for s in payload["sheets"]), payload["receiptCount"], payload["totalCents"] / 100])
     summary_rows.extend([
         ["Period", "2025–2026", "", ""],
-        ["Sector system", "63 refined sectors in 17 groups", "", ""],
+        ["Sector system", "ClaudeFiles: 63 sectors in 17 groups; donor career view", "", ""],
         ["Scope", payload["label"], "", ""],
         ["Source", "https://popc-8rk.pages.dev/pages/" + ("schumer-" if payload["network"] == "schumer" else "") + "combined-contributions.html", "", ""],
         ["Commit", payload["sourceCommit"], "", ""],
-        ["Organization names", "Verified aliases are consolidated using the site's business research.", "", ""],
+        ["Organization names", "Donor and employer names come from ClaudeFiles; original receipt details supply the transaction history.", "", ""],
         ["Individual names", "Exact reported names are consolidated before applying the $500 cutoff.", "", ""],
         ["Receipt details", "The Receipts sheet contains every direct record underlying the three donor tables. Memo amounts are excluded.", "", ""],
     ])
