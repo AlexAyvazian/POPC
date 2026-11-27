@@ -41,28 +41,28 @@ try{
      assert.deepEqual(colors,expected,'chart uses the palette consecutively from Blue 1');
     }
 
-    const packed=section.locator('[data-chart=circle-packing]');
-    const plot=packed.locator('.dv-plot');
-    if(await plot.getAttribute('data-packed-leaves')){
-     const allLeaves=Number(await plot.getAttribute('data-packed-leaves'));
-     assert.equal(await packed.locator('[data-packed-node=donor]').count(),allLeaves,'every packed donor is rendered');
-     const options=await packed.locator('select option').evaluateAll(nodes=>nodes.map(n=>n.value));
+    assert.equal(await section.locator('[data-chart=radar],[data-chart=circle-packing]').count(),0);
+    assert.equal(await section.locator('[data-chart=sector-bars]').count(),1);
+    const donorBars=section.locator('[data-chart=donor-bars]'),plot=donorBars.locator('.dv-plot');
+    if(await plot.getAttribute('data-donor-bar-count')){
+     const count=Number(await plot.getAttribute('data-donor-bar-count'));
+     assert.equal(await plot.locator('rect[data-bar-value]').count(),Math.min(20,count));
+     if(count>20){
+      await donorBars.getByRole('button',{name:'Next donors'}).click();
+      assert.equal(await plot.locator('rect[data-bar-value]').count(),Math.min(20,count-20));
+      await donorBars.getByRole('button',{name:'Previous donors'}).click();
+     }
+     const options=await donorBars.locator('select option').evaluateAll(nodes=>nodes.map(n=>n.value));
      if(options.length>1){
-      await packed.locator('select').selectOption(options[1]);
-      assert(Number(await plot.getAttribute('data-packed-leaves'))<=allLeaves);
-      await packed.locator('.dv-donors summary').click();
-      assert(await packed.locator('.dv-donors li button').count()>0);
-      await packed.locator('.dv-donors li button').first().focus();
-      await page.keyboard.press('Enter');
-      assert((await packed.locator('.dv-readout').innerText()).includes('$'));
-      await packed.locator('.dv-donors summary').click();
-      await packed.locator('select').selectOption('');
-      assert.equal(Number(await plot.getAttribute('data-packed-leaves')),allLeaves);
+      await donorBars.locator('select').selectOption(options[1]);
+      assert(Number(await plot.getAttribute('data-donor-bar-count'))<=count);
+      await donorBars.locator('select').selectOption('');
+      assert.equal(Number(await plot.getAttribute('data-donor-bar-count')),count);
      }
     }
     assert(!/Other sectors|Other [\d,]+ donors/.test(await section.locator('[data-donor-visuals]').innerText()),'no synthetic Other buckets');
 
-    const marks=await section.locator('[data-chart] svg circle,[data-chart] svg polygon,[data-chart] svg path').evaluateAll(nodes=>nodes.map(n=>({fill:n.getAttribute('fill'),opacity:n.getAttribute('fill-opacity')})));
+    const marks=await section.locator('[data-chart] svg rect,[data-chart] svg circle,[data-chart] svg polygon,[data-chart] svg path').evaluateAll(nodes=>nodes.map(n=>({fill:n.getAttribute('fill'),opacity:n.getAttribute('fill-opacity')})));
     for(const mark of marks){if(mark.fill&&!['none','#fff'].includes(mark.fill))assert(approvedChartColors.includes(mark.fill),'selected swatch only: '+mark.fill);if(mark.opacity!==null)assert.equal(Number(mark.opacity),1);}
     const before=await section.evaluate(el=>Boolean(el.querySelector('[data-donor-visuals]').compareDocumentPosition(el.querySelector('table')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(before);
     const visual=section.locator('[data-donor-visuals]');
