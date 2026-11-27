@@ -11,3 +11,75 @@
 @media(max-width:600px){.dv-radar-key{grid-template-columns:minmax(0,1fr)}}
 
 .donor-downloads{display:flex;align-items:center;flex-wrap:wrap;gap:.65rem;margin:1rem 0;font-size:.9rem}.donor-downloads a{display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:.6rem .9rem;border:1px solid #b69b79;border-radius:6px;background:#fffdf9;color:#665035;text-decoration:none;font-weight:600}.donor-downloads a:hover{background:#f5f0e7}.donor-downloads a:focus-visible{outline:2px solid #987346;outline-offset:3px}.donor-downloads span{color:#655846}
+
+/* Compact tables: the amount and receipt control stay inside the page. */
+.donor-table-section .jvf-table{min-width:0;table-layout:fixed;font-size:14px;line-height:1.45}
+.donor-table-section .jvf-table th{white-space:normal}
+.donor-table-section .jvf-table th,.donor-table-section .jvf-table td{overflow-wrap:anywhere;padding:12px 14px;min-width:0}
+.donor-table-section .jvf-table th:nth-child(1){width:24%}
+.donor-table-section .jvf-table th:nth-child(2){width:24%}
+.donor-table-section .jvf-table th:nth-child(3){width:24%}
+.donor-table-section .jvf-table th:nth-child(4){width:14%}
+.donor-table-section .jvf-table th:nth-child(5){width:14%}
+[data-donor-group=organizations] .jvf-table th:nth-child(1){width:34%}
+[data-donor-group=organizations] .jvf-table th:nth-child(2){width:28%}
+[data-donor-group=organizations] .jvf-table th:nth-child(3){width:20%}
+[data-donor-group=organizations] .jvf-table th:nth-child(4){width:18%}
+.donor-table-section details,.donor-table-section details p{min-width:0;max-width:100%}
+.donor-table-section details{font-size:12px;margin-top:7px}
+.donor-table-section details summary{cursor:pointer;color:#756044}
+.donor-table-section details p{font-size:12px;line-height:1.5}
+.donor-table-section .jvf-money{white-space:nowrap;font-variant-numeric:tabular-nums}
+.donor-name{font-weight:650}.donor-occupation,.donor-committee-count{color:#756c60;font-size:12px}
+.donor-receiving-committees{border-bottom:1px solid #e2d6c3;padding-bottom:8px;margin-bottom:8px}
+.dv-detail-control{display:flex;align-items:center;gap:10px;color:#756044;font-size:14px;margin:12px 0}
+.dv-detail-control select{font:inherit;color:inherit;background:#fff;border:1px solid #b69b79;border-radius:6px;padding:8px}
+.dv-radar-key{max-height:none;overflow:visible;font-size:13px;line-height:1.45;gap:8px 20px}
+.dv-legend ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 14px;max-height:none;overflow:visible}
+.dv-legend li{min-width:0;margin:0;font-size:12px}
+.dv-legend li button{min-height:0;padding:3px 0!important;overflow-wrap:anywhere}
+.donor-visual-card{padding:20px}.dv-grid{align-items:start;gap:20px}
+@media(max-width:760px){
+ .donor-table-section .jvf-table-wrap{overflow:visible;border:0;background:transparent;box-shadow:none}
+ .donor-table-section .jvf-table,.donor-table-section .jvf-table tbody{display:block;width:100%}
+ .donor-table-section .jvf-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+ .donor-table-section .jvf-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;margin:12px 0;border:1px solid #b69b79;border-radius:10px;padding:14px;background:#fffdf9}
+ .donor-table-section .jvf-table td{display:block;border:0;padding:0;min-width:0;background:transparent}
+ .donor-table-section .jvf-table td:first-child{grid-column:1;grid-row:1}
+ .donor-table-section .jvf-table td.jvf-money{grid-column:2;grid-row:1;max-width:none;text-align:right}
+ .donor-table-section .jvf-table td:nth-child(2){grid-column:1 / -1;grid-row:2}
+ .donor-table-section .jvf-table td:nth-child(3):not(.jvf-money){grid-column:1;grid-row:3}
+ .donor-table-section .jvf-table td:last-child{grid-column:2;grid-row:3;max-width:130px}
+ [data-donor-group=organizations] .jvf-table td:last-child{grid-row:2}
+ [data-donor-group=organizations] .jvf-table td:nth-child(2){grid-column:1}
+ .donor-table-section .jvf-table td[data-label]:not(:first-child):not(.jvf-money)::before{content:attr(data-label);display:block;color:#756044;font-size:10px;font-weight:650;margin-bottom:4px}
+ .dv-legend ul{grid-template-columns:1fr}.dv-radar-key{grid-template-columns:1fr}
+ .donor-visual-card{padding:14px}.donor-table-pagination [role=status]{order:3;flex-basis:100%;font-size:13px}
+}
+@media print{
+ @page{size:landscape;margin:12mm}
+ html,body{background:white!important;color:#24211d!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .popc-ai-launcher,.popc-ai-panel,.ca-roosevelt-back,.ca-header-fireflies,.donor-search,.donor-downloads,.donor-table-pagination button,.dv-detail-control,.dv-sector-control,.dv-readout,.dv-donor-pages,.dv-donors,.ca-controls{display:none!important}
+ .jvf-shell.ca-shell,.jvf-shell{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+ .site-hero{max-height:140px;overflow:hidden}.coalition-header{max-height:140px;object-fit:contain}
+ .donor-table-section{padding:12px;border-width:1px;margin:14px 0}
+ .donor-table-section .jvf-table-wrap{overflow:visible!important;border-radius:0;border-width:1px;box-shadow:none}
+ .donor-table-section .jvf-table{min-width:0!important;width:100%!important;table-layout:fixed;font-size:10px}
+ .donor-table-section .jvf-table th,.donor-table-section .jvf-table td{padding:7px;white-space:normal;overflow-wrap:anywhere}
+ .donor-table-section .jvf-money{white-space:nowrap!important}
+ .donor-table-section td small,.donor-table-section td details,.donor-committee-count{font-size:9px}
+ .donor-table-section td details:not([open]):not(:last-child){display:none}
+ .donor-table-section tr{break-inside:avoid}
+ .dv-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .donor-visual-card{break-inside:avoid;padding:12px;box-shadow:none}
+ .dv-plot{max-width:330px;margin:auto}.dv-legend ul,.dv-radar-key{max-height:none!important;overflow:visible!important}
+ .dv-legend ul{grid-template-columns:repeat(2,minmax(0,1fr))}.dv-legend li,.dv-radar-key{font-size:10px;line-height:1.35}
+ .dv-legend li button{font-size:10px}.ca-legend{max-height:none!important;overflow:visible!important}
+ .ca-supporting-tables:not([open]),.original-receipts:not([open]){display:none}
+}
+@media print{
+ .donor-table-section .dv-legend li button{min-height:0;padding:0!important;line-height:1.25}
+ .dv-legend li{margin:2px 0;break-inside:avoid}
+ .dv-legend summary,.dv-radar-key{margin:4px 0}
+ .dv-plot{min-height:0;max-width:265px}
+}

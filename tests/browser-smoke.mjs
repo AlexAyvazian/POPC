@@ -26,6 +26,7 @@ try{
   await page.goto(base+'/'+file,{waitUntil:'networkidle'});
   await page.waitForTimeout(300);
   assert.deepEqual(errors,[],file);
+  if(/(?:^|[-/])transactions\.html$/.test(file))assert.equal(await page.locator('[data-donor-tables],[data-donor-visuals]').count(),0);
   if(await page.locator('[data-donor-tables]').count()){
    await page.waitForSelector('[data-donor-tables][data-ready="true"]',{timeout:60000});
    assert.equal(await page.locator('[data-donor-group]').count(),3,file+' requires three donor tables');
@@ -65,8 +66,16 @@ try{
     for(const mark of marks){if(mark.fill&&!['none','#fff'].includes(mark.fill))assert(approvedChartColors.includes(mark.fill),'selected swatch only: '+mark.fill);if(mark.opacity!==null)assert.equal(Number(mark.opacity),1);}
     const before=await section.evaluate(el=>Boolean(el.querySelector('[data-donor-visuals]').compareDocumentPosition(el.querySelector('table')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(before);
     const visual=section.locator('[data-donor-visuals]');
+    assert.equal(await visual.getAttribute('data-sector-detail'),'groups');
+    const overflow=await section.locator('.jvf-table-wrap').evaluate(el=>el.scrollWidth>el.clientWidth+2);
+    assert.equal(overflow,false,file+' table fits without hidden amount columns');
+    for(const cell of await section.locator('tbody tr:first-child td').all()){
+     const inside=await cell.evaluate(el=>{const frame=el.closest('.jvf-table-wrap').getBoundingClientRect(),r=el.getBoundingClientRect();return r.left>=frame.left-2&&r.right<=frame.right+2;});
+     assert(inside,file+' keeps every column in view');
+    }
     const dots=await visual.locator('[data-donor-count]').evaluateAll(nodes=>nodes.reduce((n,d)=>n+Number(d.dataset.donorCount),0));
     assert.equal(dots,Number(await visual.getAttribute('data-groups')));
+    assert.equal(await visual.locator('[data-donor-count="1"]').count(),dots);
     const bubbleAreas=await visual.locator('[data-bubble-donors]').evaluateAll(nodes=>nodes.map(n=>Number(n.getAttribute('r'))**2/Number(n.dataset.bubbleDonors)));
     if(bubbleAreas.length)assert(bubbleAreas.every(v=>Math.abs(v-bubbleAreas[0])<1e-8),'bubble area scales with donor count');
    }
@@ -87,7 +96,7 @@ try{
      const csv=await fs.readFile(await csvDownload.path(),'utf8');assert(csv.startsWith('\ufeff"Donor / organization","Total donated (USD)"'));
     }
    }
-   assert((await host.locator('thead').first().innerText()).includes('Business identity')); 
+   assert.equal(await host.locator('thead').first().locator('th').count(),4,'organization table uses four readable columns');
    for(const key of ['indirect','small']){
     const section=host.locator('[data-donor-group='+key+']');
     assert((await section.locator('thead').innerText()).includes('Reported employer'));
@@ -121,9 +130,15 @@ try{
    const answer=await page.locator('.popc-ai-messages').innerText();assert(answer.includes(file==='index.html'?'All eight committees':'All three committees'),file+': '+answer);
   }
   if(file==='pages/combined-contributions.html'){
+   const storyBeforeTables=await page.evaluate(()=>Boolean(document.querySelector('#funding-title').compareDocumentPosition(document.querySelector('[data-donor-tables]')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(storyBeforeTables,'funding overview precedes long donor tables');
+   const charts=page.locator('[data-donor-visuals]').first(),originalTotal=await charts.getAttribute('data-total-cents');
+   await charts.locator('.dv-detail-control select').selectOption('sectors');assert.equal(await charts.getAttribute('data-sector-detail'),'sectors');assert.equal(await charts.getAttribute('data-total-cents'),originalTotal);
+   await charts.locator('.dv-detail-control select').selectOption('groups');assert.equal(await charts.getAttribute('data-total-cents'),originalTotal);
    await page.setViewportSize({width:390,height:844});
    await page.waitForTimeout(150);
    assert(await page.locator('[data-donor-visuals]').first().evaluate(el=>el.scrollWidth<=el.clientWidth+2),'charts fit mobile width');
+   assert(await page.locator('[data-donor-tables]').evaluate(el=>el.scrollWidth<=el.clientWidth+2),'tables fit mobile width');
+   for(const table of await page.locator('[data-donor-tables] table').all())assert(await table.evaluate(el=>getComputedStyle(el).display==='block'),'mobile rows use readable cards');
    await page.locator('[data-chart=bubble] [tabindex]').first().focus();
    assert(!(await page.locator('[data-chart=bubble] .dv-readout').first().innerText()).startsWith('Tap, focus'));
   }

@@ -24,3 +24,11 @@
 @media(max-width:650px){.funding-bubbles{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.funding-orbit{width:90px;height:90px}.funding-selected-heading{display:block}.funding-selected-heading>strong{display:block;margin-bottom:16px}.funding-route-head{display:none}.funding-route{grid-template-columns:1fr;gap:0;margin:22px 0}.funding-destinations{margin-left:20px;padding-left:14px}.funding-destinations:before{display:none}.funding-concentration-layout{grid-template-columns:1fr;gap:10px}.funding-dots{max-width:240px}.funding-dot-key{justify-content:center}.funding-destination{gap:6px;font-size:.76rem}.ca-story-page .ca-overview{padding:18px}.funding-bubble{padding:9px}.funding-split{display:grid}.funding-split>span{padding:9px}}
 
 .funding-orbit>span,.is-person .funding-orbit>span{background:var(--funding-color,#ecfeff)}
+
+/* Overview first; all sector group names stay visible beside the charts. */
+.ca-legend{max-height:none;overflow:visible}
+.ca-panel:not(.ca-wide) .ca-chart{grid-template-columns:1fr}
+.ca-panel:not(.ca-wide) .ca-legend{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.ca-panel:not(.ca-wide) .ca-donut{max-width:210px}
+.ca-supporting-tables{margin-top:24px}.ca-supporting-tables>.ca-panel{margin-top:18px}
+@media(max-width:650px){.ca-panel:not(.ca-wide) .ca-legend{grid-template-columns:1fr}}
