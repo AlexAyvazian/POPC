@@ -1,5 +1,4 @@
 // Selected numbered swatches sampled from the supplied image, converted from its embedded ICC profile to sRGB.
-import {masterSectors} from './master-sectors.js';
 export const chartSwatches=Object.freeze({
   "blue1": "#ecfeff",
   "blue2": "#74cbf5",
@@ -41,9 +40,7 @@ export const chartSwatches=Object.freeze({
   "purple4": "#ac41a6"
 });
 export const approvedChartColors=Object.freeze(Object.values(chartSwatches));
-const sectorSwatches=["blue6", "green6", "green5", "orange2", "purple4", "purple2", "yellow4", "teal5", "blue5", "purple3", "orange4", "blue3", "teal4", "teal3", "orange3", "blue4", "red2", "purple1", "pink3", "orange5", "pink4", "red6", "pink2", "green2", "teal2", "red3", "blue2", "yellow3", "pink1", "red4", "green4", "blue1", "orange1", "red1", "green3", "green1", "yellow1"];
-export function sectorColor(name){
- const index=masterSectors.indexOf(name);
- return chartSwatches[index>=0?sectorSwatches[index]:'yellow2'];
-}
-export const chartSequence=Object.freeze(sectorSwatches.map(key=>chartSwatches[key]).concat(chartSwatches.yellow2));
+// Follow the supplied family order and each selected swatch number in ascending order.
+export const chartSequence=approvedChartColors;
+export const colorAt=index=>chartSequence[index%chartSequence.length];
+export function sequentialColors(names){return new Map([...new Set(names)].map((name,index)=>[name,colorAt(index)]));}

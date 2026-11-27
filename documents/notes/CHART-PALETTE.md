@@ -1,6 +1,6 @@
 # Chart palette
 
-The shared palette uses only the numbered swatches selected from the supplied November 24 image. Pixel values were converted using the embedded ICC profile to sRGB before sampling the center of each swatch. No generated tints or data-mark opacity are applied. Each master sector keeps one fixed swatch across both networks and all chart types.
+The shared palette uses only the numbered swatches selected from the supplied November 24 image. Pixel values were converted using the embedded ICC profile to sRGB before sampling the center of each swatch. No generated tints or data-mark opacity are applied. Each chart assigns the palette consecutively to its displayed data order, starting at Blue 1. The order is Blues 1–6, Teals 2–5, Greens 1–6, Yellows 1–4, Oranges 1–5, Reds 1–4 and 6, Pinks 1–4, Purples 1–4. Sector identities do not have fixed colors.
 
 | Swatch | sRGB |
 | --- | --- |

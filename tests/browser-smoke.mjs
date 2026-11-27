@@ -1,4 +1,4 @@
-import {approvedChartColors} from '../assets/js/chart-palette.js';
+import {approvedChartColors,chartSequence} from '../assets/js/chart-palette.js';
 import {chromium} from 'playwright';
 import http from 'node:http';
 import fs from 'node:fs/promises';
@@ -34,6 +34,12 @@ try{
    assert.equal(await host.locator('[data-chart]').count(),12,file+' needs four visuals before each of three tables');
    for(const section of await host.locator('[data-donor-group]').all()){
     assert.equal(await section.locator('[data-chart]').count(),4);
+    for(const chart of await section.locator('[data-chart]').all()){
+     const colors=await chart.locator('.dv-swatch').evaluateAll(nodes=>nodes.map(n=>n.style.background));
+     const expected=await page.evaluate(hex=>hex.map(color=>{const e=document.createElement('span');e.style.background=color;return e.style.background;}),chartSequence.slice(0,colors.length));
+     assert.deepEqual(colors,expected,'chart uses the palette consecutively from Blue 1');
+    }
+
     const marks=await section.locator('[data-chart] svg circle,[data-chart] svg polygon,[data-chart] svg path').evaluateAll(nodes=>nodes.map(n=>({fill:n.getAttribute('fill'),opacity:n.getAttribute('fill-opacity')})));
     for(const mark of marks){if(mark.fill&&!['none','#fff'].includes(mark.fill))assert(approvedChartColors.includes(mark.fill),'selected swatch only: '+mark.fill);if(mark.opacity!==null)assert.equal(Number(mark.opacity),1);}
     const before=await section.evaluate(el=>Boolean(el.querySelector('[data-donor-visuals]').compareDocumentPosition(el.querySelector('table')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(before);

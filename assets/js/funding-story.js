@@ -1,3 +1,4 @@
+import {colorAt} from './chart-palette.js?v=sequential1';
 import {buildDirectory} from './business-directory-data.js?v=master-sectors1';
 import {config, normalize} from './research-data.js?v=master-sectors1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -36,7 +37,7 @@ function draw(){
  const shown=matches.slice(0,8);if(!shown.some(g=>g.name===state.key))state.key=shown[0]?.name||'';
  const max=shown[0]?.value||1;
  document.getElementById('funding-summary').textContent=`${shown.length?`Largest ${shown.length} of ${matches.length.toLocaleString()} ${state.view==='business'?'business / organization connections':'reported donor names'}`:'No matching names'}${state.selected?' · '+committee(state.selected).name:' · All eight committees'}. ${state.view==='business'?'Business totals combine PAC / organization money and personal donations by reported employees.':'Amounts are total personal contributions in these records.'}`;
- const host=document.getElementById('funding-bubbles');host.innerHTML=shown.map((g,i)=>`<button type="button" class="funding-bubble ${state.view==='people'?'is-person':''}" data-index="${i}" aria-pressed="${g.name===state.key}" aria-label="${esc(g.name)}, ${exact(g.value)}. Show connections"><span class="funding-orbit" aria-hidden="true"><span style="width:${100*Math.sqrt(g.value/max)}%;aspect-ratio:1"></span></span><span class="funding-name">${esc(g.name)}</span><strong>${dollars(g.value)}</strong></button>`).join('');
+ const host=document.getElementById('funding-bubbles');host.innerHTML=shown.map((g,i)=>`<button type="button" class="funding-bubble ${state.view==='people'?'is-person':''}" data-index="${i}" aria-pressed="${g.name===state.key}" aria-label="${esc(g.name)}, ${exact(g.value)}. Show connections"><span class="funding-orbit" style="--funding-color:${colorAt(i)}" aria-hidden="true"><span style="width:${100*Math.sqrt(g.value/max)}%;aspect-ratio:1"></span></span><span class="funding-name">${esc(g.name)}</span><strong>${dollars(g.value)}</strong></button>`).join('');
  host.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{state.key=shown[+b.dataset.index].name;host.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));connection(shown[+b.dataset.index]);}));
  connection(shown.find(g=>g.name===state.key));
 }

@@ -1,14 +1,12 @@
-import {chartSwatches,chartSequence,sectorColor} from './chart-palette.js?v=selected-swatches1';
-import {masterSectors} from './master-sectors.js';
-import {renderFundingStory} from "./funding-story.js?v=master-sectors1";
+import {chartSwatches,chartSequence} from './chart-palette.js?v=sequential1';
+import {renderFundingStory} from "./funding-story.js?v=sequential1";
 import {config,normalize,occupationGroup,personalCategories,loadCommittee} from "./research-data.js?v=master-sectors1";
 (()=>{"use strict";
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
 // Chart colors sampled from the supplied palette, converted to sRGB.
-const committeeColors={"jvf":"#ecfeff","jfc":"#74cbf5","jbpf":"#66a8e5","jeff-pac":"#5ca6f1","jmf":"#599aee","jcvf":"#3c57d3","dvtlf":"#acfaf1","jcavf":"#acfaf1"};
 const sequence=chartSequence;
-const indColor=chartSwatches.blue5,orgColor=chartSwatches.teal5;
-function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:masterSectors.includes(item.key||item.name)?sectorColor(item.key||item.name):sequence[i%sequence.length]}));}
+const indColor=sequence[0],orgColor=sequence[1];
+function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:sequence[i%sequence.length]}));}
 let selected="",allRecords=null;
 function roleTotals(rows){
  const m=new Map();
@@ -30,7 +28,7 @@ function chooseCommittee(key){selected=selected===key?"":key;$("ca-committee").v
 function activeCommittees(){return selected?config.filter(x=>x.key===selected):config;}
 function render(){const active=activeCommittees(),ic=sum(active,"individual"),oc=sum(active,"organization"),total=ic+oc,all=sum(config,"individual")+sum(config,"organization");
 $("ca-total").textContent=money(total);$("ca-scope").textContent=selected?active[0].name:"All eight committees";$("ca-ind").textContent=money(ic);$("ca-org").textContent=money(oc);$("ca-count").textContent=num(sum(active,"individualCount")+sum(active,"organizationCount"));
-const ordered=[...config].sort((a,b)=>gross(b)-gross(a));donut($("ca-committee-pie"),ordered.map((x,i)=>({name:x.name,key:x.key,value:gross(x),color:committeeColors[x.key]})),x=>chooseCommittee(x.key),selected,"Combined receipts by committee");
+const ordered=[...config].sort((a,b)=>gross(b)-gross(a));donut($("ca-committee-pie"),ordered.map((x,i)=>({name:x.name,key:x.key,value:gross(x),color:sequence[i%sequence.length]})),x=>chooseCommittee(x.key),selected,"Combined receipts by committee");
 donut($("ca-source-pie"),[{name:"Contributions from people",key:"ind",value:ic,color:indColor},{name:"Contributions from PACs / organizations",key:"org",value:oc,color:orgColor}],null,"","Receipt sources");
 const bars=$("ca-bars");bars.replaceChildren();const key=document.createElement("div");key.className="ca-bar-key";key.innerHTML='<span><i class="ca-swatch" style="background:'+indColor+'"></i>Individual</span><span><i class="ca-swatch" style="background:'+orgColor+'"></i>PAC / organization</span>';bars.append(key);const max=gross(ordered[0]);for(const x of ordered){const b=document.createElement("button");b.type="button";b.className="ca-bar"+(x.key===selected?" ca-selected":"");b.setAttribute("aria-pressed",String(x.key===selected));b.title=x.name+": "+money(gross(x));b.innerHTML='<span>'+esc(x.name)+'</span><span class="ca-track"><span style="background:'+indColor+';width:'+100*x.individual/max+'%"></span><span style="background:'+orgColor+';width:'+100*x.organization/max+'%"></span></span><span class="ca-bar-amount">'+money(gross(x))+'</span>';b.addEventListener("click",()=>chooseCommittee(x.key));bars.append(b);}
 

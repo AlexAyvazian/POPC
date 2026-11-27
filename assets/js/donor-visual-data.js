@@ -1,6 +1,5 @@
 import {masterSectorForRecord} from './master-sectors.js';
 const sort=(a,b)=>b.amount-a.amount||a.name.localeCompare(b.name);
-export {sectorColor} from './chart-palette.js?v=selected-swatches1';
 export function buildVisualData(groups){
  const sectors=new Map();let total=0,receipts=0,positive=0,adjustments=0;
  for(const g of groups){

@@ -1,9 +1,9 @@
-import {chartSwatches,approvedChartColors} from '../assets/js/chart-palette.js';
+import {chartSwatches,approvedChartColors,chartSequence,colorAt,sequentialColors} from '../assets/js/chart-palette.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {groupDonors} from '../assets/js/donor-groups.js';
-import {buildVisualData,radarData,packingData,dotData,sectorColor} from '../assets/js/donor-visual-data.js';
+import {buildVisualData,radarData,packingData,dotData} from '../assets/js/donor-visual-data.js';
 import {masterSectors,loadMasterSectors} from '../assets/js/master-sectors.js';
 import {hierarchy,pack} from '../assets/js/vendor/d3-hierarchy.js';
 const sum=(items,field)=>items.reduce((n,d)=>n+d[field],0);
@@ -36,9 +36,9 @@ test('negative adjustments, split sectors, empty tables and single donors stay e
  assert.equal(m.groups,2);assert.equal(m.total,79900);assert.equal(m.adjustments,-10100);assert.equal(m.areaTotal,80000);
  assert.equal(sum(dotData(m).dots,'count'),2);assert.equal(sum(radarData(m),'amount'),80000);
  const empty=buildVisualData([]);assert.deepEqual(radarData(empty),[]);assert.equal(packingData(empty).children.length,0);assert.equal(dotData(empty).dots.length,0);
- assert.equal(sectorColor('Healthcare'),sectorColor('Healthcare'));
+ assert.deepEqual(chartSequence,approvedChartColors);
  const selected=['blue1','blue2','blue3','blue4','blue5','blue6','teal2','teal3','teal4','teal5','green1','green2','green3','green4','green5','green6','yellow1','yellow2','yellow3','yellow4','orange1','orange2','orange3','orange4','orange5','red1','red2','red3','red4','red6','pink1','pink2','pink3','pink4','purple1','purple2','purple3','purple4'];
  assert.deepEqual(Object.keys(chartSwatches),selected);assert.equal(approvedChartColors.length,38);
- for(const name of [...masterSectors,'Other sectors'])assert(approvedChartColors.includes(sectorColor(name)));
- assert.equal(chartSwatches.blue6,'#3c57d3');assert.equal(chartSwatches.green6,'#62b036');assert.equal(new Set(masterSectors.map(sectorColor)).size,masterSectors.length);
+ const order=sequentialColors(['Largest','Second','Third','Fourth','Fifth','Sixth','Seventh']);assert.deepEqual([...order.values()],approvedChartColors.slice(0,7));assert.equal(colorAt(0),chartSwatches.blue1);assert.equal(colorAt(6),chartSwatches.teal2);
+ assert.equal(chartSwatches.blue6,'#3c57d3');assert.equal(chartSwatches.green6,'#62b036');assert.equal(new Set(chartSequence).size,38);
 });

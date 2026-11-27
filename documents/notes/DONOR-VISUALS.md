@@ -11,7 +11,7 @@ Signed adjustments remain included in net totals and bubble positions. Radar and
 
 ## Rendering and interaction
 
-Each page contains 12 SVG charts in responsive two-column grids, stacked on small screens. Geometry and label spacing recompute from measured plot widths. Colors remain consistent across all tabs and both networks. Marks support hover, tap and keyboard inspection; sector legend buttons provide an alternative to small marks. Exact values remain available in the table.
+Each page contains 12 SVG charts in responsive two-column grids, stacked on small screens. Geometry and label spacing recompute from measured plot widths. Colors follow the selected palette consecutively within each chart, in displayed data order, starting at Blue 1. Marks support hover, tap and keyboard inspection; sector legend buttons provide an alternative to small marks. Exact values remain available in the table.
 
 The data model is separate from SVG rendering. D3 hierarchy 3.1.2 supplies the packing geometry; its pinned ISC-licensed bundle is served locally, with no external script requests. At most 13 leaves per sector are rendered, limiting mark count on pages containing three simultaneous packs. Dot matrices contain at most 437 marks. Search updates the charts; table pagination does not recalculate them. No animation is required, and reduced-motion preferences are respected.
 
