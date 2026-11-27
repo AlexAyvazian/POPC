@@ -11,7 +11,7 @@ import {schumerIdentities} from '../data/schumer/schumer-identities.js?v=refined
 globalThis.fetch=async url=>new Response(await fs.readFile(path.resolve(String(url).split('?')[0].replace(/^\//,''))));
 const read=async p=>JSON.parse(await fs.readFile(p.replace(/^\//,''),'utf8'));
 const normalized=s=>String(s||'').trim().replace(/\s+/g,' ').toUpperCase();
-const result={networks:{},identities:[...businessIdentities,...schumerIdentities]};
+const result={networks:{},identities:[...businessIdentities.map(e=>({...e,networks:['jeffries','schumer']})),...schumerIdentities.map(e=>({...e,networks:['schumer']}))]};
 for(const [network,data,identity]of [['jeffries',jeffries,jidentity],['schumer',schumer,sidentity]]){
  const direct=await data.loadResearchRecords(), grouped=groupDonors(direct,identity.identifyName), donors=Object.entries(grouped).flatMap(([table,groups])=>groups.map(g=>({table,name:g.name,type:g.type,amount:g.amount,count:g.records.length,committees:Object.fromEntries(g.committees),reportedNames:[...g.reportedNames]})));
  const nameIndex=new Map(donors.flatMap(d=>d.reportedNames.map(n=>[d.type+'|'+normalized(n),d.name])));
@@ -40,6 +40,8 @@ for(const [network,data,identity]of [['jeffries',jeffries,jidentity],['schumer',
   }
   for(const r of records){
    delete r.sector;
+   const identityInfo=identity.identifyName({...r,committee:c.key});
+   r.business=identityInfo.research?.status==='Source-backed'?identityInfo.name:null;
    const d=r.category==='individual'||r.category==='organization'?nameIndex.get(r.type+'|'+normalized(r.name)):null;
    if(!r.memo&&r.category!=='other'&&!d)throw Error('Unmatched direct receipt '+r.name);
    rows.push({...r,committee:c.key,donor:d||null});
