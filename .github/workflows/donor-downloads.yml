@@ -1,0 +1,53 @@
+name: Donor table downloads
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate-donor-downloads.mjs'
+      - 'scripts/write-donor-workbook.py'
+      - 'tests/donor-downloads.test.mjs'
+      - '.github/workflows/donor-downloads.yml'
+      - 'assets/js/donor-groups.js'
+      - 'assets/js/master-sectors.js'
+      - 'assets/js/*research-data.js'
+      - 'assets/js/*business-directory-data.js'
+      - 'data/jeffries/**'
+      - 'data/schumer/**'
+permissions:
+  contents: write
+concurrency:
+  group: donor-downloads
+  cancel-in-progress: false
+jobs:
+  export:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Excel writer
+        run: python -m pip install openpyxl==3.1.5
+      - name: Verify export schema and complete donor grouping
+        run: node --test tests/donor-downloads.test.mjs tests/donor-groups.test.mjs tests/master-sectors.test.mjs
+      - name: Generate and verify all eight downloads
+        run: node scripts/generate-donor-downloads.mjs
+      - name: Publish download files
+        run: |
+          git config user.name "POPC Downloads"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/downloads
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Refresh downloadable donor workbooks and tables"
+          git pull --rebase origin main
+          git push origin HEAD:main
