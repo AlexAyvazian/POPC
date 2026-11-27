@@ -1,5 +1,4 @@
-import {chartSwatches,approvedChartColors,chartSequence,colorAt,sequentialColors} from '../assets/js/chart-palette.js';
-import {sectorColor,sectorColors} from '../assets/js/sector-palette.js';
+import {chartSwatches,approvedChartColors,chartSequence,colorAt,sequentialColors,balancedColors} from '../assets/js/chart-palette.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -45,11 +44,15 @@ test('negative adjustments, split sectors, empty tables and single donors stay e
  const order=sequentialColors(Array.from({length:12},(_,i)=>'Sector '+(i+1)));assert.deepEqual([...order.values()],approvedChartColors.slice(0,12));assert.equal(colorAt(0),chartSwatches.blue2);assert.equal(colorAt(7),chartSwatches.blue9);assert.equal(colorAt(8),chartSwatches.teal2);
  assert.equal(chartSwatches.blue2,'#89c9f1');assert.equal(chartSwatches.purple9,'#4d1365');assert.equal(new Set(chartSequence).size,64);
  assert.equal(masterSectors.length,63);
- assert.equal(sectorColor(masterSectors[0]),chartSequence[0]);
- assert.equal(sectorColor(masterSectors[48]),chartSwatches.pink2);
- assert.equal(sectorColor(masterSectors[56]),chartSwatches.purple2);
- assert.equal(sectorColor(masterSectors[62]),chartSwatches.purple8);
- assert.equal(sectorColors(masterSectors).size,63);
+ const forty=[...balancedColors(Array.from({length:40},(_,i)=>'S'+i)).values()];
+ const fortyFamilies=['blue','teal','green','yellow','orange','red','pink','purple'].map(f=>forty.filter(c=>Object.entries(chartSwatches).some(([k,v])=>k.startsWith(f)&&v===c)).length);
+ assert.deepEqual(fortyFamilies,[5,5,5,5,5,5,5,5]);
+ const fifty=[...balancedColors(Array.from({length:50},(_,i)=>'S'+i)).values()];
+ const fiftyFamilies=['blue','teal','green','yellow','orange','red','pink','purple'].map(f=>fifty.filter(c=>Object.entries(chartSwatches).some(([k,v])=>k.startsWith(f)&&v===c)).length);
+ assert.deepEqual(fiftyFamilies,[7,7,6,6,6,6,6,6]);
+ const sixtyThree=[...balancedColors(Array.from({length:63},(_,i)=>'S'+i)).values()];
+ const sixtyThreeFamilies=['blue','teal','green','yellow','orange','red','pink','purple'].map(f=>sixtyThree.filter(c=>Object.entries(chartSwatches).some(([k,v])=>k.startsWith(f)&&v===c)).length);
+ assert.deepEqual(sixtyThreeFamilies,[8,8,8,8,8,8,8,7]);
 });
 
 test('sector-share visuals use Claude researched first-hand sectors by default',()=>{
