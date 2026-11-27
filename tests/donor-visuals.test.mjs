@@ -46,8 +46,10 @@ test('negative adjustments, split sectors, empty tables and single donors stay e
  assert.equal(masterSectors.length,63);
  const firstEight=[...balancedColors(Array.from({length:8},(_,i)=>'F'+i)).values()];
  assert.deepEqual(firstEight,[chartSwatches.blue2,chartSwatches.teal2,chartSwatches.green2,chartSwatches.yellow2,chartSwatches.orange2,chartSwatches.red2,chartSwatches.pink2,chartSwatches.purple2]);
+ const firstEleven=[...balancedColors(Array.from({length:11},(_,i)=>'F'+i)).values()];
+ assert.deepEqual(firstEleven,[chartSwatches.blue2,chartSwatches.blue3,chartSwatches.teal2,chartSwatches.teal3,chartSwatches.green2,chartSwatches.green3,chartSwatches.yellow2,chartSwatches.orange2,chartSwatches.red2,chartSwatches.pink2,chartSwatches.purple2]);
  const firstSixteen=[...balancedColors(Array.from({length:16},(_,i)=>'F'+i)).values()];
- assert.deepEqual(firstSixteen.slice(8),[chartSwatches.blue3,chartSwatches.teal3,chartSwatches.green3,chartSwatches.yellow3,chartSwatches.orange3,chartSwatches.red3,chartSwatches.pink3,chartSwatches.purple3]);
+ assert.deepEqual(firstSixteen,[chartSwatches.blue2,chartSwatches.blue3,chartSwatches.teal2,chartSwatches.teal3,chartSwatches.green2,chartSwatches.green3,chartSwatches.yellow2,chartSwatches.yellow3,chartSwatches.orange2,chartSwatches.orange3,chartSwatches.red2,chartSwatches.red3,chartSwatches.pink2,chartSwatches.pink3,chartSwatches.purple2,chartSwatches.purple3]);
  const forty=[...balancedColors(Array.from({length:40},(_,i)=>'S'+i)).values()];
  const fortyFamilies=['blue','teal','green','yellow','orange','red','pink','purple'].map(f=>forty.filter(c=>Object.entries(chartSwatches).some(([k,v])=>k.startsWith(f)&&v===c)).length);
  assert.deepEqual(fortyFamilies,[5,5,5,5,5,5,5,5]);
