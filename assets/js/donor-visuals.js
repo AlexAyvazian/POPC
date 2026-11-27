@@ -2,8 +2,6 @@ import {chartSwatches,sequentialColors} from './chart-palette.js?v=claude1';
 import {buildVisualData,groupedVisualData,radarData,dotData} from './donor-visual-data.js?v=readable1';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
-const compact=n=>new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(n);
-const shortMoney=n=>'$'+compact(n/100);
 function node(tag,attrs={},text){const n=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attrs))n.setAttribute(k,String(v));if(text!==undefined)n.textContent=text;return n;}
 function svg(width,height,label){const n=node('svg',{viewBox:`0 0 ${width} ${height}`,role:'img','aria-label':label});n.append(node('title',{},label));return n;}
 function text(s,x,y,value,attrs={}){s.append(node('text',{x,y,'font-size':11,fill:'#554b3f',...attrs},value));}
@@ -52,14 +50,24 @@ function donorBars(target,model){
  previous.addEventListener('click',()=>{page--;draw();});next.addEventListener('click',()=>{page++;draw();});select.addEventListener('change',()=>{page=0;draw();});draw();
 }
 function bubbles(target,model,w){
- if(!model.sectors.length){empty(target,'No donors in this selection.');return;}
- const colors=sequentialColors(model.sectors.map(d=>d.name));
- const h=320,left=62,right=26,top=25,bottom=55,xMin=Math.min(0,...model.sectors.map(s=>s.amount)),xMax=Math.max(1,...model.sectors.map(s=>s.amount)),maxReceipts=Math.max(1,...model.sectors.map(s=>s.receipts)),maxDonors=Math.max(1,...model.sectors.map(s=>s.donorCount));
- const x=n=>left+(n-xMin)/(xMax-xMin)*(w-left-right),y=n=>h-bottom-n/maxReceipts*(h-top-bottom),s=svg(w,h,'Bubble chart: sector dollars, receipt counts and donor counts');
- for(let i=0;i<4;i++){const value=xMin+(xMax-xMin)*i/3,xx=x(value);s.append(node('line',{x1:xx,x2:xx,y1:top,y2:h-bottom,stroke:'#e6dfd4','stroke-width':.75}));text(s,xx,h-bottom+18,shortMoney(value),{'text-anchor':'middle','font-size':10});const count=Math.round(maxReceipts*i/3),yy=y(count);if(i>0&&count===Math.round(maxReceipts*(i-1)/3))continue;s.append(node('line',{x1:left,x2:w-right,y1:yy,y2:yy,stroke:'#e6dfd4','stroke-width':.75}));text(s,left-8,yy+4,compact(count),{'text-anchor':'end','font-size':10});}
- text(s,(left+w-right)/2,h-10,'Total contributions ($)',{'text-anchor':'middle','font-size':11});text(s,12,h/2,'Receipt count',{transform:`rotate(-90 12 ${h/2})`,'text-anchor':'middle','font-size':11});
- for(const d of model.sectors){const radius=Math.sqrt(d.donorCount/maxDonors)*22;mark(s,'circle',{cx:x(d.amount),cy:y(d.receipts),r:radius,'data-bubble-donors':d.donorCount,fill:colors.get(d.name),'fill-opacity':1,stroke:d.amount<0?chartSwatches.red6:chartSwatches.blue6,'stroke-width':1},`${d.name}: ${money(d.amount)} · ${d.receipts.toLocaleString()} receipts · ${d.donorCount.toLocaleString()} donors`,target.readout);}
- target.plot.append(s);legend(target.card,model.sectors.map(d=>({name:d.name,label:`${d.name} · ${money(d.amount)} · ${d.donorCount.toLocaleString()} donors`})),colors);
+ const data=[...model.sectors].sort((a,b)=>b.amount-a.amount||a.name.localeCompare(b.name));
+ if(!data.length){empty(target,'No sector contributions in this selection.');return;}
+ const colors=sequentialColors(data.map(d=>d.name));
+ const maxAbs=Math.max(1,...data.map(d=>Math.abs(d.amount)));
+ const cols=Math.max(2,Math.min(4,Math.ceil(Math.sqrt(data.length))));
+ const cellW=w/cols,maxR=Math.min(54,cellW*.34),rowH=maxR*2+58,rows=Math.ceil(data.length/cols),h=rows*rowH+8;
+ const s=svg(w,h,'Bubble chart: total contribution dollars by sector');
+ data.forEach((d,i)=>{
+  const col=i%cols,row=Math.floor(i/cols),cx=(col+.5)*cellW,cy=row*rowH+maxR+8;
+  const radius=Math.sqrt(Math.abs(d.amount)/maxAbs)*maxR;
+  const label=`${d.name}: ${money(d.amount)} in net contributions`;
+  mark(s,'circle',{cx,cy,r:radius,'data-bubble-dollars':d.amount,fill:colors.get(d.name),'fill-opacity':1,stroke:d.amount<0?chartSwatches.red6:chartSwatches.blue6,'stroke-width':1},label,target.readout,radius>=5);
+  const display=d.name.length>24?d.name.slice(0,23)+'…':d.name;
+  text(s,cx,cy+maxR+20,display,{'text-anchor':'middle','font-size':11,'font-weight':600});
+  text(s,cx,cy+maxR+36,money(d.amount),{'text-anchor':'middle','font-size':11});
+ });
+ target.plot.append(s);
+ legend(target.card,data.map(d=>({name:d.name,label:`${d.name} · ${money(d.amount)}`})),colors);
 }
 function matrix(target,model,w){
  const dots=dotData(model);
@@ -88,7 +96,7 @@ export function mountDonorVisuals(host){
   const select=document.createElement('select');select.setAttribute('aria-label','Chart sector detail');select.add(new Option('Sector groups','groups'));select.add(new Option('Detailed sectors','sectors'));select.value=detail;control.append(select);host.append(control);host.dataset.sectorDetail=detail;
   select.addEventListener('change',()=>{detail=select.value;model=detail==='groups'?groupedVisualData(detailedModel):detailedModel;render();});
   const grid=document.createElement('div');grid.className='dv-grid';host.append(grid);const w=Math.max(240,Math.floor((width||host.clientWidth||600)-(width>=760?44:0))/(width>=760?2:1));
-  const specs=[['sector-bars','Sector share bar graph','Share of net contributions across the same sector groups on every tab.',sectorBars],['donor-bars','Donor contribution bar graph','Signed net dollars for every named donor allocation, with sector filtering and pagination.',donorBars],['bubble','Bubble chart','X: total dollars · Y: receipt count · bubble area: donor count.',bubbles],['dot-matrix','Dot matrix','Each dot is one consolidated donor, colored by sector.',matrix]];
+  const specs=[['sector-bars','Sector share bar graph','Share of net contributions across the same sector groups on every tab.',sectorBars],['donor-bars','Donor contribution bar graph','Signed net dollars for every named donor allocation, with sector filtering and pagination.',donorBars],['bubble','Sector donation bubbles','Each bubble is one sector. Bubble area represents that sector’s total net contribution dollars. Larger bubble = more money.',bubbles],['dot-matrix','Dot matrix','Each dot is one consolidated donor, colored by sector.',matrix]];
   for(const [kind,title,description,draw]of specs){const target=card(grid,kind,title,description);draw(target,model,Math.max(240,Math.floor(target.plot.clientWidth||w)));}
   if(model.adjustments<0){const p=document.createElement('p');p.className='dv-adjustments';p.textContent=`Signed adjustments: ${money(model.adjustments)}. Net table total: ${money(model.total)}. `;host.append(p);}
   host.dataset.ready='true';
