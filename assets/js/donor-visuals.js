@@ -32,12 +32,14 @@ function horizontalBars(target,items,colors,label,format,domain){
  target.plot.append(s);
 }
 function sectorBars(target,model){
+ target.plot.dataset.barOrientation='horizontal';
  const view=researchedSectorData(model),data=view.sectors.map(d=>({...d,share:view.total?d.amount/view.total:0})).sort((a,b)=>b.amount-a.amount||a.name.localeCompare(b.name));
  if(!view.total||data.some(d=>d.share<0)||view.total<0){empty(target,'No positive researched-sector total is available for this selection.');return;}
  const colors=balancedColors(data.map(d=>d.name)),max=Math.max(...data.map(d=>d.share),0);
  horizontalBars(target,data.map(d=>({...d,sector:d.name,value:d.share,label:`${d.name}: ${(d.share*100).toFixed(2)}% of researched-sector dollars · ${money(d.amount)}`})),colors,'Horizontal bar graph: researched sector shares',v=>(v*100).toFixed(1)+'%',[0,max*1.08||1]);
 }
 function donorBars(target,model){
+ target.plot.dataset.barOrientation='horizontal';
  const view=researchedSectorData(model);if(!view.sectors.length){empty(target,'No researched-sector donor allocations in this selection.');return;}
  const control=document.createElement('label');control.className='dv-sector-control';control.textContent='Inspect a researched sector ';
  const select=document.createElement('select');select.setAttribute('aria-label','Donor bar graph researched sector');select.add(new Option('All researched sectors',''));
