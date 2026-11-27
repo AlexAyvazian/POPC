@@ -64,7 +64,8 @@ function bubbles(target,model,w){
  if(!data.length){empty(target,'No sector contributions in this selection.');return;}
  const colors=balancedColors(data.map(d=>d.name));
  const maxAbs=Math.max(1,...data.map(d=>Math.abs(d.amount)));
- const cols=Math.max(2,Math.min(4,Math.ceil(Math.sqrt(data.length))));
+ const maxCols=w>=900?6:w>=650?5:4;
+ const cols=Math.max(2,Math.min(maxCols,Math.ceil(Math.sqrt(data.length))));
  const cellW=w/cols,maxR=Math.min(54,cellW*.34),rowH=maxR*2+58,rows=Math.ceil(data.length/cols),h=rows*rowH+8;
  const s=svg(w,h,'Bubble chart: total contribution dollars by sector');
  data.forEach((d,i)=>{
