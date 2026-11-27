@@ -1,4 +1,5 @@
 import {chartSwatches,approvedChartColors,chartSequence,colorAt,sequentialColors} from '../assets/js/chart-palette.js';
+import {sectorColor,sectorColors} from '../assets/js/sector-palette.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -43,6 +44,12 @@ test('negative adjustments, split sectors, empty tables and single donors stay e
  assert(Object.keys(chartSwatches).every(k=>!k.endsWith('1')),'all row-1 colors are excluded');
  const order=sequentialColors(Array.from({length:12},(_,i)=>'Sector '+(i+1)));assert.deepEqual([...order.values()],approvedChartColors.slice(0,12));assert.equal(colorAt(0),chartSwatches.blue2);assert.equal(colorAt(7),chartSwatches.blue9);assert.equal(colorAt(8),chartSwatches.teal2);
  assert.equal(chartSwatches.blue2,'#89c9f1');assert.equal(chartSwatches.purple9,'#4d1365');assert.equal(new Set(chartSequence).size,64);
+ assert.equal(masterSectors.length,63);
+ assert.equal(sectorColor(masterSectors[0]),chartSequence[0]);
+ assert.equal(sectorColor(masterSectors[48]),chartSwatches.pink2);
+ assert.equal(sectorColor(masterSectors[56]),chartSwatches.purple2);
+ assert.equal(sectorColor(masterSectors[62]),chartSwatches.purple8);
+ assert.equal(sectorColors(masterSectors).size,63);
 });
 
 test('sector-share visuals use Claude researched first-hand sectors by default',()=>{
