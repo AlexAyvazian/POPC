@@ -16,8 +16,9 @@ for(const network of Object.keys(baseline))test(network+': every donor, receipt,
  const source=new Map(metadata.donors.map(d=>[d.type+'|'+d.name,d]));
  for(const g of all){
   const d=source.get(g.type+'|'+g.name);assert(d,g.name);assert.equal(g.amount,d.amount);assert.equal(g.records.length,d.count);assert.deepEqual(Object.fromEntries([...g.committees].filter(([,v])=>v)),Object.fromEntries(Object.entries(d.committees).filter(([,v])=>v)));
-  assert.deepEqual([...g.sectors],[d.classification.firstHand]);assert(sectorGroups[d.classification.firstHand]);
-  for(const r of g.records){assert.equal(masterSectorForRecord(r),d.classification.firstHand);assert.equal(r.sector,d.classification.firstHand);}
+  const expectedSector=sectorGroups[d.classification.researchedSector]?d.classification.researchedSector:d.classification.firstHand;
+  assert.deepEqual([...g.sectors],[expectedSector]);assert(sectorGroups[expectedSector]);
+  for(const r of g.records){assert.equal(masterSectorForRecord(r),expectedSector);assert.equal(r.sector,expectedSector);}
  }
  const visualTotals=new Map();
  for(const items of Object.values(groups)){
@@ -25,7 +26,7 @@ for(const network of Object.keys(baseline))test(network+': every donor, receipt,
   for(const s of v.sectors)visualTotals.set(s.name,(visualTotals.get(s.name)||0)+s.amount);
  }
  const sourceSectors=new Map();
- for(const d of metadata.donors)sourceSectors.set(d.classification.firstHand,(sourceSectors.get(d.classification.firstHand)||0)+d.amount);
+ for(const d of metadata.donors){const sector=sectorGroups[d.classification.researchedSector]?d.classification.researchedSector:d.classification.firstHand;sourceSectors.set(sector,(sourceSectors.get(sector)||0)+d.amount);}
  assert.deepEqual([...visualTotals].sort(),[...sourceSectors].sort());
  const directory=buildDirectory(records);assert.equal(directory.reduce((n,g)=>n+g.individual+g.organization,0),expected.total);
  const memoParts=await Promise.all(data.config.map(c=>data.loadCommittee(c,'memo')));assert.equal(memoParts.flat().length,expected.memos);
@@ -40,6 +41,12 @@ test('old donor directories, original spreadsheets and classifier modules are de
   const s=await fs.readFile('assets/js/'+file,'utf8');
   assert(!/data\/(?:jeffries|schumer|sectors)\/|(?:schumer-)?research-data\.js|master-sectors\.js|business-directory-data\.js/.test(s),file+' still uses an old source');
  }
+});
+test('canonical researched sector overrides a no-sector first-hand classification',()=>{
+ const record={sector:'No sector: Retired',classification:{firstHand:'No sector: Retired',refined:'No sector: Retired',household:'No sector: Retired',researchedSector:'Technology'}};
+ assert.equal(masterSectorForRecord(record),'Technology');
+ const fallback={...record,classification:{...record.classification,researchedSector:'Free-form note that is not a taxonomy sector'}};
+ assert.equal(masterSectorForRecord(fallback),'No sector: Retired');
 });
 test('career research is the default and individuals never match across networks',async()=>{
  const j=await loadNetwork('jeffries'),s=await loadNetwork('schumer');
