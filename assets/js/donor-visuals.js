@@ -1,5 +1,5 @@
-import {chartSwatches,balancedColors} from './chart-palette.js?v=balanced1';
-import {buildVisualData,sectorShareData,dotData} from './donor-visual-data.js?v=researched-sectors1';
+import {chartSwatches,balancedColors} from './chart-palette.js?v=balanced2';
+import {buildVisualData,sectorShareData,dotData} from './donor-visual-data.js?v=researched2';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
 const compactMoney=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:1}).format(n/100);
