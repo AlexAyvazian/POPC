@@ -1,10 +1,6 @@
-import {masterSectorForRecord,masterSectors} from './master-sectors.js';
+import {masterSectorForRecord} from './master-sectors.js';
 const sort=(a,b)=>b.amount-a.amount||a.name.localeCompare(b.name);
-export const sectorColor=name=>{
- const colors=['#a27b42','#497e73','#b56250','#89729c','#76884b','#aa795c','#517e91','#9f6680','#8d8943','#b16c32','#627454','#726b98'];
- const i=Math.max(0,masterSectors.indexOf(name)),base=colors[i%colors.length],tint=Math.floor(i/colors.length)*.18;
- return '#'+[1,3,5].map(n=>Math.round(parseInt(base.slice(n,n+2),16)*(1-tint)+255*tint).toString(16).padStart(2,'0')).join('');
-};
+export {sectorColor} from './chart-palette.js?v=selected-swatches1';
 export function buildVisualData(groups){
  const sectors=new Map();let total=0,receipts=0,positive=0,adjustments=0;
  for(const g of groups){

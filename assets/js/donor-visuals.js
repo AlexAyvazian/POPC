@@ -1,5 +1,6 @@
+import {chartSwatches} from './chart-palette.js?v=selected-swatches1';
 import {hierarchy,pack} from './vendor/d3-hierarchy.js';
-import {buildVisualData,radarData,packingData,dotData,sectorColor} from './donor-visual-data.js';
+import {buildVisualData,radarData,packingData,dotData,sectorColor} from './donor-visual-data.js?v=selected-swatches1';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
 const compact=n=>new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(n);
@@ -17,8 +18,8 @@ function radar(target,model,w){
  const s=svg(w,h,'Radar chart: sector shares of positive net contributions'),point=(i,v)=>{const a=i/data.length*Math.PI*2-Math.PI/2;return [cx+Math.cos(a)*r*v,cy+Math.sin(a)*r*v];};
  for(let level=1;level<=4;level++){s.append(node('polygon',{points:data.map((d,i)=>point(i,level/4).join(',')).join(' '),fill:'none',stroke:'#e1d8ca','stroke-width':.75}));text(s,cx+4,cy-r*level/4+10,Math.round(max*level/4*100)+'%',{'font-size':10});}
  data.forEach((d,i)=>{const p=point(i,1),label=point(i,1.14);s.append(node('line',{x1:cx,y1:cy,x2:p[0],y2:p[1],stroke:'#ded5c7','stroke-width':.75}));text(s,label[0],label[1]+4,i+1,{'text-anchor':'middle','font-size':12,'font-weight':600});});
- s.append(node('polygon',{points:data.map((d,i)=>point(i,d.share/max).join(',')).join(' '),fill:'#b69b79', 'fill-opacity':.25,stroke:'#987346','stroke-width':2}));
- data.forEach((d,i)=>{const p=point(i,d.share/max);mark(s,'circle',{cx:p[0],cy:p[1],r:5,fill:sectorColor(d.name)},`${d.name}: ${(d.share*100).toFixed(2)}% · ${money(d.amount)}`,target.readout);});target.plot.append(s);
+ s.append(node('polygon',{points:data.map((d,i)=>point(i,d.share/max).join(',')).join(' '),fill:chartSwatches.blue1,'fill-opacity':1,stroke:chartSwatches.blue6,'stroke-width':2}));
+ data.forEach((d,i)=>{const p=point(i,d.share/max);mark(s,'circle',{cx:p[0],cy:p[1],r:5,fill:sectorColor(d.name),stroke:chartSwatches.blue6,'stroke-width':.7},`${d.name}: ${(d.share*100).toFixed(2)}% · ${money(d.amount)}`,target.readout);});target.plot.append(s);
  const key=document.createElement('ol');key.className='dv-radar-key';for(const d of data){const li=document.createElement('li');li.textContent=`${d.name} · ${(d.share*100).toFixed(1)}%`;key.append(li);}target.card.append(key);
 }
 function packing(target,model,w){
@@ -26,7 +27,7 @@ function packing(target,model,w){
  const h=Math.min(w,440),root=hierarchy(data).sum(d=>d.value||0).sort((a,b)=>b.value-a.value);pack().size([w,h]).padding(3)(root);const s=svg(w,h,'Circle packing: sectors containing donors, sized by positive net dollars');
  for(const n of root.descendants().slice(1)){
   const sector=n.depth===1?n.data.name:n.parent.data.name,label=n.children?`${sector}: ${money(n.value)}`:`${n.data.name} · ${sector}: ${money(n.value)}`;
-  mark(s,'circle',{cx:n.x,cy:n.y,r:n.r,fill:sectorColor(sector),'fill-opacity':n.children ? .15 : .78,stroke:n.children?'#b69b79':'#fff','stroke-width':n.children?1:.5},label,target.readout,n.depth===1||n.r>13);
+  mark(s,'circle',{cx:n.x,cy:n.y,r:n.r,fill:n.children?'none':sectorColor(sector),'fill-opacity':1,stroke:n.children?sectorColor(sector):chartSwatches.blue6,'stroke-width':n.children?1:.5},label,target.readout,n.depth===1||n.r>13);
   if(!n.children&&n.r>24){const maxChars=Math.max(3,Math.floor(n.r/3.6)),name=n.data.name.length>maxChars?n.data.name.slice(0,maxChars-1)+'…':n.data.name;text(s,n.x,n.y-2,name,{'text-anchor':'middle',fill:'#211b15',stroke:'#fffdf9','stroke-width':2,'paint-order':'stroke','font-size':11,'font-weight':600,'pointer-events':'none'});if(n.r>33)text(s,n.x,n.y+13,shortMoney(n.value),{'text-anchor':'middle',fill:'#211b15',stroke:'#fffdf9','stroke-width':2,'paint-order':'stroke','font-size':11,'pointer-events':'none'});}
  }
  target.plot.append(s);legend(target.card,model.sectors.filter(s=>s.leaves.length).map(s=>({name:s.name,label:`${s.name} · ${money(s.leaves.reduce((n,l)=>n+l.amount,0))}`})));
@@ -37,14 +38,14 @@ function bubbles(target,model,w){
  const x=n=>left+(n-xMin)/(xMax-xMin)*(w-left-right),y=n=>h-bottom-Math.sqrt(n/maxReceipts)*(h-top-bottom),s=svg(w,h,'Bubble chart: sector dollars, receipt counts and donor counts');
  for(let i=0;i<4;i++){const value=xMin+(xMax-xMin)*i/3,xx=x(value);s.append(node('line',{x1:xx,x2:xx,y1:top,y2:h-bottom,stroke:'#e6dfd4','stroke-width':.75}));text(s,xx,h-bottom+18,shortMoney(value),{'text-anchor':'middle','font-size':10});const count=Math.round(maxReceipts*(i/3)**2),yy=y(count);if(i>0&&count===Math.round(maxReceipts*((i-1)/3)**2))continue;s.append(node('line',{x1:left,x2:w-right,y1:yy,y2:yy,stroke:'#e6dfd4','stroke-width':.75}));text(s,left-8,yy+4,compact(count),{'text-anchor':'end','font-size':10});}
  text(s,(left+w-right)/2,h-10,'Total contributions ($)',{'text-anchor':'middle','font-size':11});text(s,12,h/2,'Receipts (square-root scale)',{transform:`rotate(-90 12 ${h/2})`,'text-anchor':'middle','font-size':11});
- for(const d of model.sectors){const radius=Math.sqrt(d.donorCount/maxDonors)*22;mark(s,'circle',{cx:x(d.amount),cy:y(d.receipts),r:radius,'data-bubble-donors':d.donorCount,fill:sectorColor(d.name),'fill-opacity':.72,stroke:d.amount<0?'#9d3932':'#fff','stroke-width':1},`${d.name}: ${money(d.amount)} · ${d.receipts.toLocaleString()} receipts · ${d.donorCount.toLocaleString()} donors`,target.readout);}
+ for(const d of model.sectors){const radius=Math.sqrt(d.donorCount/maxDonors)*22;mark(s,'circle',{cx:x(d.amount),cy:y(d.receipts),r:radius,'data-bubble-donors':d.donorCount,fill:sectorColor(d.name),'fill-opacity':1,stroke:d.amount<0?chartSwatches.red6:chartSwatches.blue6,'stroke-width':1},`${d.name}: ${money(d.amount)} · ${d.receipts.toLocaleString()} receipts · ${d.donorCount.toLocaleString()} donors`,target.readout);}
  target.plot.append(s);legend(target.card,model.sectors.map(d=>({name:d.name,label:`${d.name} · ${money(d.amount)} · ${d.donorCount.toLocaleString()} donors`})));
 }
 function matrix(target,model,w){
  const {unit,dots}=dotData(model);if(!dots.length){empty(target,'No donors in this selection.');return;}
  const columns=Math.max(10,Math.floor((w-24)/16)),step=(w-24)/columns,h=Math.max(180,Math.ceil(dots.length/columns)*step+20),s=svg(w,h,`Dot matrix: ${model.groups} donors; each full dot represents ${unit} donors`),focusSectors=new Set();
- dots.forEach((d,i)=>{const cx=12+(i%columns+.5)*step,cy=12+(Math.floor(i/columns)+.5)*step,r=step*.36,label=`${d.sector}: this dot represents ${d.count} ${d.count===1?'donor':'donors'}`;let tag='circle',attrs={cx,cy,r,fill:sectorColor(d.sector)};
-  if(d.fraction<1){s.append(node('circle',{cx,cy,r,fill:'#eee8df'}));const a=d.fraction*2*Math.PI-Math.PI/2,ex=cx+Math.cos(a)*r,ey=cy+Math.sin(a)*r;tag='path';attrs={d:`M ${cx} ${cy} L ${cx} ${cy-r} A ${r} ${r} 0 ${d.fraction>.5?1:0} 1 ${ex} ${ey} Z`,fill:sectorColor(d.sector)};}
+ dots.forEach((d,i)=>{const cx=12+(i%columns+.5)*step,cy=12+(Math.floor(i/columns)+.5)*step,r=step*.36,label=`${d.sector}: this dot represents ${d.count} ${d.count===1?'donor':'donors'}`;let tag='circle',attrs={cx,cy,r,fill:sectorColor(d.sector),stroke:chartSwatches.blue6,'stroke-width':.3};
+  if(d.fraction<1){s.append(node('circle',{cx,cy,r,fill:'#fff',stroke:chartSwatches.blue6,'stroke-width':.3}));const a=d.fraction*2*Math.PI-Math.PI/2,ex=cx+Math.cos(a)*r,ey=cy+Math.sin(a)*r;tag='path';attrs={d:`M ${cx} ${cy} L ${cx} ${cy-r} A ${r} ${r} 0 ${d.fraction>.5?1:0} 1 ${ex} ${ey} Z`,fill:sectorColor(d.sector),stroke:chartSwatches.blue6,'stroke-width':.3};}
   const first=!focusSectors.has(d.sector);focusSectors.add(d.sector);mark(s,tag,{...attrs,'data-donor-count':d.count},label,target.readout,first);
  });target.plot.append(s);const scale=document.createElement('p');scale.className='dv-scale';scale.textContent=`Each full dot = ${unit.toLocaleString()} ${unit===1?'donor':'donors'}. Partial dots show the exact remainder. Donors are assigned to their largest sector by contribution magnitude.`;target.card.append(scale);legend(target.card,model.sectors.filter(d=>d.primaryDonors).map(d=>({name:d.name,label:`${d.name} · ${d.primaryDonors.toLocaleString()} donors`})));
 }

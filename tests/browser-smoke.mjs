@@ -1,3 +1,4 @@
+import {approvedChartColors} from '../assets/js/chart-palette.js';
 import {chromium} from 'playwright';
 import http from 'node:http';
 import fs from 'node:fs/promises';
@@ -33,6 +34,8 @@ try{
    assert.equal(await host.locator('[data-chart]').count(),12,file+' needs four visuals before each of three tables');
    for(const section of await host.locator('[data-donor-group]').all()){
     assert.equal(await section.locator('[data-chart]').count(),4);
+    const marks=await section.locator('[data-chart] svg circle,[data-chart] svg polygon,[data-chart] svg path').evaluateAll(nodes=>nodes.map(n=>({fill:n.getAttribute('fill'),opacity:n.getAttribute('fill-opacity')})));
+    for(const mark of marks){if(mark.fill&&!['none','#fff'].includes(mark.fill))assert(approvedChartColors.includes(mark.fill),'selected swatch only: '+mark.fill);if(mark.opacity!==null)assert.equal(Number(mark.opacity),1);}
     const before=await section.evaluate(el=>Boolean(el.querySelector('[data-donor-visuals]').compareDocumentPosition(el.querySelector('table')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(before);
     const visual=section.locator('[data-donor-visuals]');
     const dots=await visual.locator('[data-donor-count]').evaluateAll(nodes=>nodes.reduce((n,d)=>n+Number(d.dataset.donorCount),0));

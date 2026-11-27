@@ -1,12 +1,13 @@
+import {chartSwatches,chartSequence,sectorColor} from './chart-palette.js?v=selected-swatches1';
+import {masterSectors} from './master-sectors.js';
 import {config,normalize,occupationGroup,personalCategories,loadCommittee} from "./schumer-research-data.js?v=master-sectors1";
 (()=>{"use strict";
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
 // Chart colors sampled from the supplied palette, converted to sRGB.
-const chartPalette={"blue":["#ecfeff","#74cbf5","#66a8e5","#5ca6f1","#599aee","#4063c7"],"teal":["#f2feff","#acfaf1","#a2f2ea","#7fdfd1","#65c9bd"],"green":["#f5fef2","#c0fb74","#b6f16e","#86ec4f","#7fe148","#5a9e31"],"orange":["#f2a43b","#ec722f","#f09638"],"red":["#f1a38a","#e74a41","#ea3a2e","#ed7147","#e04033"],"pink":["#f9d9ef","#f19dc7","#e46cac","#ea8cae"],"purple":["#f9dafa","#dc64d4","#dc69d1"],"yellow":["#fffed9","#fcef6e","#f4e14a","#f2ce45"]};
 const committeeColors={"friends-of-schumer-pac":"#74cbf5","impact-pac":"#5ca6f1","smp-pac":"#65c9bd"};
-const sequence=[...chartPalette.blue,...chartPalette.teal,...chartPalette.green,...chartPalette.yellow,...chartPalette.orange,...chartPalette.red,...chartPalette.pink,...chartPalette.purple];
-const indColor=chartPalette.blue[4],orgColor=chartPalette.teal[4];
-function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:sequence[i%sequence.length]}));}
+const sequence=chartSequence;
+const indColor=chartSwatches.blue5,orgColor=chartSwatches.teal5;
+function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:masterSectors.includes(item.key||item.name)?sectorColor(item.key||item.name):sequence[i%sequence.length]}));}
 let selected="",sectorSelected="",query="",page=0,allRecords=null,mode="organization",roleSelected="",exactOccupation="",occupationPage=0,occupationQuery="",loadFailures=[],loadedCommittees=0;
 const pageSize=50;
 function roleTotals(rows){
