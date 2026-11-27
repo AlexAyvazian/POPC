@@ -87,3 +87,8 @@
 /* Give every donor visualization a full row for readable labels and marks. */
 .dv-grid{grid-template-columns:minmax(0,1fr)!important}
 @media print{.dv-grid{grid-template-columns:minmax(0,1fr)!important}}
+
+
+/* Sector charts show researched sector assignments only; source rows without a researched sector remain in the tables. */
+.dv-coverage{margin:.45rem 0 1rem;padding:.7rem .85rem;border-left:3px solid #b69b79;background:#f8f4ec;color:#655846;font-size:.86rem;line-height:1.5}
+.dv-plot[data-bar-orientation="horizontal"]{min-height:0}
