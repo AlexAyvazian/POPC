@@ -1,4 +1,5 @@
 import {chartSwatches,chartSequence} from './chart-palette.js?v=palette64';
+import {sectorColor} from './sector-palette.js?v=stable1';
 import {renderFundingStory} from "./funding-story.js?v=concentration-only1";
 import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=claude1';
 const {config,loadCommittee}=networkData('jeffries');
@@ -8,6 +9,7 @@ const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,
 const sequence=chartSequence;
 const indColor=sequence[0],orgColor=sequence[1];
 function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:sequence[i%sequence.length]}));}
+function sectorItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map(item=>({...item,color:sectorColor(item.name)}));}
 let selected="",allRecords=null;
 function roleTotals(rows){
  const m=new Map();
@@ -36,9 +38,9 @@ const bars=$("ca-bars");bars.replaceChildren();const key=document.createElement(
 if(!allRecords)return;
 const records=selected?allRecords.filter(r=>r.committee===selected):allRecords;
 const groups=aggregateSectors(records);
-donut($("ca-all-sector-pie"),sequentialItems(groups),null,"","All contributions by sector");
-donut($("ca-sector-pie"),sequentialItems(groups.map(g=>({...g,value:g.organization}))),null,"","PACs and organizations by sector");
-donut($("ca-ind-sector-pie"),sequentialItems(groups.map(g=>({...g,value:g.individual}))),null,"","Personal contributions by employer sector");
+donut($("ca-all-sector-pie"),sectorItems(groups),null,"","All contributions by sector");
+donut($("ca-sector-pie"),sectorItems(groups.map(g=>({...g,value:g.organization}))),null,"","PACs and organizations by sector");
+donut($("ca-ind-sector-pie"),sectorItems(groups.map(g=>({...g,value:g.individual}))),null,"","Personal contributions by employer sector");
 const roles=roleTotals(records);
 $("ca-role-summary").textContent=money(sum(roles,"value"))+" in personal contributions";
 donut($("ca-role-pie"),sequentialItems(roles),null,"","Contributions by reported occupation");
