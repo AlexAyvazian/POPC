@@ -14,5 +14,23 @@ export const chartSwatches=Object.freeze({
 export const approvedChartColors=Object.freeze(Object.values(chartSwatches));
 // Use the supplied family order exactly; never randomize or reshuffle the palette.
 export const chartSequence=approvedChartColors;
+export const chartFamilies=Object.freeze([
+ Object.freeze([chartSwatches.blue2,chartSwatches.blue3,chartSwatches.blue4,chartSwatches.blue5,chartSwatches.blue6,chartSwatches.blue7,chartSwatches.blue8,chartSwatches.blue9]),
+ Object.freeze([chartSwatches.teal2,chartSwatches.teal3,chartSwatches.teal4,chartSwatches.teal5,chartSwatches.teal6,chartSwatches.teal7,chartSwatches.teal8,chartSwatches.teal9]),
+ Object.freeze([chartSwatches.green2,chartSwatches.green3,chartSwatches.green4,chartSwatches.green5,chartSwatches.green6,chartSwatches.green7,chartSwatches.green8,chartSwatches.green9]),
+ Object.freeze([chartSwatches.yellow2,chartSwatches.yellow3,chartSwatches.yellow4,chartSwatches.yellow5,chartSwatches.yellow6,chartSwatches.yellow7,chartSwatches.yellow8,chartSwatches.yellow9]),
+ Object.freeze([chartSwatches.orange2,chartSwatches.orange3,chartSwatches.orange4,chartSwatches.orange5,chartSwatches.orange6,chartSwatches.orange7,chartSwatches.orange8,chartSwatches.orange9]),
+ Object.freeze([chartSwatches.red2,chartSwatches.red3,chartSwatches.red4,chartSwatches.red5,chartSwatches.red6,chartSwatches.red7,chartSwatches.red8,chartSwatches.red9]),
+ Object.freeze([chartSwatches.pink2,chartSwatches.pink3,chartSwatches.pink4,chartSwatches.pink5,chartSwatches.pink6,chartSwatches.pink7,chartSwatches.pink8,chartSwatches.pink9]),
+ Object.freeze([chartSwatches.purple2,chartSwatches.purple3,chartSwatches.purple4,chartSwatches.purple5,chartSwatches.purple6,chartSwatches.purple7,chartSwatches.purple8,chartSwatches.purple9])
+]);
 export const colorAt=index=>chartSequence[index%chartSequence.length];
 export function sequentialColors(names){return new Map([...new Set(names)].map((name,index)=>[name,colorAt(index)]));}
+export function balancedPalette(count){
+ const n=Math.max(0,Math.min(Number(count)||0,chartSequence.length)),base=Math.floor(n/chartFamilies.length),extra=n%chartFamilies.length;
+ return chartFamilies.flatMap((family,index)=>family.slice(0,base+(index<extra?1:0)));
+}
+export function balancedColors(names){
+ const unique=[...new Set(names)],palette=balancedPalette(unique.length);
+ return new Map(unique.map((name,index)=>[name,palette[index]??colorAt(index)]));
+}
