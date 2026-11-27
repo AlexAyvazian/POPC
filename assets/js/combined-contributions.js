@@ -1,5 +1,4 @@
-import {chartSwatches,chartSequence} from './chart-palette.js?v=palette64';
-import {sectorColor} from './sector-palette.js?v=stable1';
+import {chartSwatches,chartSequence,balancedColors} from './chart-palette.js?v=balanced1';
 import {renderFundingStory} from "./funding-story.js?v=concentration-only1";
 import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=claude1';
 const {config,loadCommittee}=networkData('jeffries');
@@ -9,7 +8,7 @@ const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,
 const sequence=chartSequence;
 const indColor=sequence[0],orgColor=sequence[1];
 function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:sequence[i%sequence.length]}));}
-function sectorItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map(item=>({...item,color:sectorColor(item.name)}));}
+function sectorItems(items){const ordered=[...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)),colors=balancedColors(ordered.map(item=>item.name));return ordered.map(item=>({...item,color:colors.get(item.name)}));}
 let selected="",allRecords=null;
 function roleTotals(rows){
  const m=new Map();
