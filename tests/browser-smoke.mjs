@@ -37,8 +37,10 @@ try{
     assert.equal(await section.locator('[data-chart]').count(),4);
     for(const chart of await section.locator('[data-chart]').all()){
      const colors=await chart.locator('.dv-swatch').evaluateAll(nodes=>nodes.map(n=>n.style.background));
-     const expected=await page.evaluate(hex=>hex.map(color=>{const e=document.createElement('span');e.style.background=color;return e.style.background;}),Array.from({length:colors.length},(_,i)=>chartSequence[i%chartSequence.length]));
-     assert.deepEqual(colors,expected,'chart uses the palette consecutively from Blue 1');
+     const kind=await chart.getAttribute('data-chart');
+     const palette=kind==='dot-matrix'?chartSequence.filter(c=>!['#ecfeff','#f5fef2'].includes(c)):chartSequence;
+     const expected=await page.evaluate(hex=>hex.map(color=>{const e=document.createElement('span');e.style.background=color;return e.style.background;}),Array.from({length:colors.length},(_,i)=>palette[i%palette.length]));
+     assert.deepEqual(colors,expected,kind==='dot-matrix'?'dot matrix skips the two near-white swatches':'chart uses the standard palette sequence');
     }
 
     assert.equal(await section.locator('[data-chart=radar],[data-chart=circle-packing]').count(),0);
@@ -73,6 +75,10 @@ try{
      const inside=await cell.evaluate(el=>{const frame=el.closest('.jvf-table-wrap').getBoundingClientRect(),r=el.getBoundingClientRect();return r.left>=frame.left-2&&r.right<=frame.right+2;});
      assert(inside,file+' keeps every column in view');
     }
+    const dotMatrix=visual.locator('[data-chart=dot-matrix]');
+    const dotFills=await dotMatrix.locator('svg circle').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('fill')));
+    assert(!dotFills.includes('#ecfeff'),'dot matrix excludes nearly invisible blue1');
+    assert(!dotFills.includes('#f5fef2'),'dot matrix excludes nearly invisible green1');
     const dots=await visual.locator('[data-donor-count]').evaluateAll(nodes=>nodes.reduce((n,d)=>n+Number(d.dataset.donorCount),0));
     assert.equal(dots,Number(await visual.getAttribute('data-groups')));
     assert.equal(await visual.locator('[data-donor-count="1"]').count(),dots);
