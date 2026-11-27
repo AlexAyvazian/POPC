@@ -46,9 +46,16 @@ export async function loadNetwork(network){
  return networks.get(network);
 }
 export function sectorAssignmentForRecord(record){return record.classification||null;}
+function canonicalResearchedSector(classification){
+ const researched=String(classification?.researchedSector??'').trim();
+ return researched&&sectorGroups[researched]?researched:'';
+}
 export function masterSectorForRecord(record,view='firstHand'){
  const c=record.classification;
- return c?(view==='household'?c.household:view==='refined'?c.refined:c.firstHand):record.sector||'';
+ if(!c)return record.sector||'';
+ if(view==='household')return c.household;
+ if(view==='refined')return c.refined;
+ return canonicalResearchedSector(c)||c.firstHand;
 }
 export function networkData(network){
  const config=networkConfig[network];if(!config)throw Error('Unknown donor network');
@@ -64,7 +71,8 @@ export function networkData(network){
     const r=Object.fromEntries(source.receiptFields.map((field,i)=>[field,values[i]]).filter(([,v])=>v!==null&&v!==undefined&&v!==''));
     const d=r.donor?index.get(r.donor):null;
     if(kind==='direct'&&!d)throw Error('Receipt has no ClaudeFiles donor');
-    return {...r,employer:r.type==='individual'?(r.employer||'NOT REPORTED'):r.employer,occupation:r.type==='individual'?(r.occupation||'NOT REPORTED'):r.occupation,network,committee:c.key,donorName:d?.name||r.name,classification:d?.classification||null,identity:businesses.get(r.business)||null,sector:d?.classification.firstHand||'',memo:kind==='memo'};
+    const classification=d?.classification||null,sector=classification?masterSectorForRecord({classification}):'';
+    return {...r,employer:r.type==='individual'?(r.employer||'NOT REPORTED'):r.employer,occupation:r.type==='individual'?(r.occupation||'NOT REPORTED'):r.occupation,network,committee:c.key,donorName:d?.name||r.name,classification,identity:businesses.get(r.business)||null,sector,memo:kind==='memo'};
    });
    if(kind==='direct'&&(records.length!==c.individualCount+c.organizationCount||records.reduce((n,r)=>n+r.amount,0)!==c.individual+c.organization))throw Error('Committee reconciliation failed: '+c.name);
    if(kind==='memo'&&records.length!==c.memos)throw Error('Memo reconciliation failed: '+c.name);
