@@ -2,6 +2,7 @@ import {chartSwatches,chartSequence,sequentialColors} from './chart-palette.js?v
 import {buildVisualData,groupedVisualData,radarData,dotData} from './donor-visual-data.js?v=readable1';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
+const compactMoney=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:1}).format(n/100);
 function node(tag,attrs={},text){const n=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attrs))n.setAttribute(k,String(v));if(text!==undefined)n.textContent=text;return n;}
 function svg(width,height,label){const n=node('svg',{viewBox:`0 0 ${width} ${height}`,role:'img','aria-label':label});n.append(node('title',{},label));return n;}
 function text(s,x,y,value,attrs={}){s.append(node('text',{x,y,'font-size':11,fill:'#554b3f',...attrs},value));}
@@ -26,7 +27,8 @@ function verticalBars(target,items,colors,label,format,domain){
   const valueY=d.value>=0?Math.max(top+10,yy-6):Math.min(h-bottom-4,yy+14);
   text(s,cx,valueY,format(d.value),{'text-anchor':'middle','font-size':9,'font-weight':600});
   const name=d.name.length>24?d.name.slice(0,23)+'…':d.name;
-  text(s,cx,zero+18,name,{transform:`rotate(-55 ${cx} ${zero+18})`,'text-anchor':'end','font-size':9,'font-weight':600});
+  const labelY=h-bottom+18;
+  text(s,cx,labelY,name,{transform:`rotate(-55 ${cx} ${labelY})`,'text-anchor':'end','font-size':9,'font-weight':600});
  });
  target.plot.append(s);
 }
@@ -51,7 +53,7 @@ function donorBars(target,model){
   const start=page*20;target.plot.replaceChildren();target.plot.dataset.donorBarCount=leaves.length;
   if(!leaves.length){empty(target,'No donors in this selection.');}else{
    const rows=leaves.slice(start,start+20).map(d=>({...d,value:d.amount,name:d.name.length>48?d.name.slice(0,47)+'…':d.name,label:`${d.name} · ${d.originalSector}: ${money(d.amount)}`}));
-   verticalBars(target,rows,colors,'Vertical bar graph: signed net donor allocations',n=>money(n).replace('.00',''),domain);
+   verticalBars(target,rows,colors,'Vertical bar graph: signed net donor allocations',compactMoney,domain);
   }
   status.textContent=leaves.length?`${start+1}–${Math.min(start+20,leaves.length)} of ${leaves.length.toLocaleString()} donor allocations`:'0 donor allocations';previous.disabled=page===0;next.disabled=start+20>=leaves.length;
  }
