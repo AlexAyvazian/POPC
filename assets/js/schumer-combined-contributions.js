@@ -1,4 +1,4 @@
-import {chartSwatches,chartSequence} from './chart-palette.js?v=claude1';
+import {chartSwatches,chartSequence} from './chart-palette.js?v=palette64';
 import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=claude1';
 const {config,loadCommittee}=networkData('schumer');
 (()=>{"use strict";
