@@ -45,7 +45,9 @@ try{
 
     assert.equal(await section.locator('[data-chart=radar],[data-chart=circle-packing]').count(),0);
     assert.equal(await section.locator('[data-chart=sector-bars]').count(),1);
-    const donorBars=section.locator('[data-chart=donor-bars]'),plot=donorBars.locator('.dv-plot');
+    const sectorBars=section.locator('[data-chart=sector-bars]'),donorBars=section.locator('[data-chart=donor-bars]'),plot=donorBars.locator('.dv-plot');
+    assert.equal(await sectorBars.locator('.dv-plot').getAttribute('data-bar-orientation'),'vertical','sector bars are vertical columns');
+    assert.equal(await plot.getAttribute('data-bar-orientation'),'vertical','donor bars are vertical columns');
     if(await plot.getAttribute('data-donor-bar-count')){
      const count=Number(await plot.getAttribute('data-donor-bar-count'));
      assert.equal(await plot.locator('rect[data-bar-value]').count(),Math.min(20,count));
