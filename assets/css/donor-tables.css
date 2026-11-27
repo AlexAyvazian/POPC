@@ -16,15 +16,14 @@
 .donor-table-section .jvf-table{min-width:0;table-layout:fixed;font-size:14px;line-height:1.45}
 .donor-table-section .jvf-table th{white-space:normal}
 .donor-table-section .jvf-table th,.donor-table-section .jvf-table td{overflow-wrap:anywhere;padding:12px 14px;min-width:0}
-.donor-table-section .jvf-table th:nth-child(1){width:24%}
-.donor-table-section .jvf-table th:nth-child(2){width:24%}
-.donor-table-section .jvf-table th:nth-child(3){width:24%}
-.donor-table-section .jvf-table th:nth-child(4){width:14%}
-.donor-table-section .jvf-table th:nth-child(5){width:14%}
-[data-donor-group=organizations] .jvf-table th:nth-child(1){width:34%}
-[data-donor-group=organizations] .jvf-table th:nth-child(2){width:28%}
-[data-donor-group=organizations] .jvf-table th:nth-child(3){width:20%}
-[data-donor-group=organizations] .jvf-table th:nth-child(4){width:18%}
+.donor-table-section .jvf-table th:nth-child(1){width:28%}
+.donor-table-section .jvf-table th:nth-child(2){width:32%}
+.donor-table-section .jvf-table th:nth-child(3){width:16%}
+.donor-table-section .jvf-table th:nth-child(4){width:24%}
+[data-donor-group=organizations] .jvf-table th:nth-child(1){width:52%}
+[data-donor-group=organizations] .jvf-table th:nth-child(2){width:20%}
+[data-donor-group=organizations] .jvf-table th:nth-child(3){width:28%}
+.donor-sector-divider th{background:#f5f0e7;color:#665035;font-size:14px;font-weight:750;letter-spacing:.02em;text-align:left;border-top:2px solid #b69b79!important;border-bottom:1px solid #b69b79!important;padding:10px 14px!important}
 .donor-table-section details,.donor-table-section details p{min-width:0;max-width:100%}
 .donor-table-section details{font-size:12px;margin-top:7px}
 .donor-table-section details summary{cursor:pointer;color:#756044}
@@ -50,8 +49,9 @@
  .donor-table-section .jvf-table td:nth-child(2){grid-column:1 / -1;grid-row:2}
  .donor-table-section .jvf-table td:nth-child(3):not(.jvf-money){grid-column:1;grid-row:3}
  .donor-table-section .jvf-table td:last-child{grid-column:2;grid-row:3;max-width:130px}
- [data-donor-group=organizations] .jvf-table td:last-child{grid-row:2}
- [data-donor-group=organizations] .jvf-table td:nth-child(2){grid-column:1}
+ [data-donor-group=organizations] .jvf-table td:last-child{grid-column:1 / -1;grid-row:2;max-width:none}
+ .donor-table-section .jvf-table tr.donor-sector-divider{display:block;margin:18px 0 6px;padding:0;border:0;background:transparent}
+ .donor-table-section .jvf-table tr.donor-sector-divider th{display:block;width:auto!important;border-radius:7px;padding:10px 12px!important}
  .donor-table-section .jvf-table td[data-label]:not(:first-child):not(.jvf-money)::before{content:attr(data-label);display:block;color:#756044;font-size:10px;font-weight:650;margin-bottom:4px}
  .dv-legend ul{grid-template-columns:1fr}.dv-radar-key{grid-template-columns:1fr}
  .donor-visual-card{padding:14px}.donor-table-pagination [role=status]{order:3;flex-basis:100%;font-size:13px}
