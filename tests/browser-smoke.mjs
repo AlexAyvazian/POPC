@@ -68,6 +68,7 @@ try{
     for(const mark of marks){if(mark.fill&&!['none','#fff'].includes(mark.fill))assert(approvedChartColors.includes(mark.fill),'selected swatch only: '+mark.fill);if(mark.opacity!==null)assert.equal(Number(mark.opacity),1);}
     const before=await section.evaluate(el=>Boolean(el.querySelector('[data-donor-visuals]').compareDocumentPosition(el.querySelector('table')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(before);
     const visual=section.locator('[data-donor-visuals]');
+    assert.equal(await visual.locator('.dv-grid > .donor-visual-card').evaluateAll(nodes=>nodes.every(n=>Math.abs(n.getBoundingClientRect().width-n.parentElement.getBoundingClientRect().width)<3)),true,file+' stacks donor visuals one per row');
     assert.equal(await visual.getAttribute('data-sector-detail'),'sectors','researched sectors are the visual detail');
     assert.equal(await visual.locator('.dv-detail-control').count(),0,'broad sector-group toggle is removed from live visuals');
     const overflow=await section.locator('.jvf-table-wrap').evaluate(el=>el.scrollWidth>el.clientWidth+2);
@@ -141,13 +142,17 @@ try{
   }
   if(file==='pages/combined-contributions.html'||file==='pages/schumer-combined-contributions.html'){
    assert.equal((await page.locator('body').innerText()).includes('contributions by sector group'),false,'combined dashboards label researched sectors, not broad sector groups');
+   assert.equal(await page.locator('#ca-source-pie').count(),0,file+' removes the misleading binary source chart');
+   assert.equal(await page.locator('.ca-grid > .ca-panel').evaluateAll(nodes=>nodes.every(n=>Math.abs(n.getBoundingClientRect().width-n.parentElement.getBoundingClientRect().width)<3)),true,file+' stacks dashboard visual panels full width');
    const sectorLabels=await page.locator('#ca-all-sector-pie .ca-legend-name').allInnerTexts();
    assert(sectorLabels.length>0,'researched-sector pie has labels');
    assert(sectorLabels.every(label=>masterSectors.includes(label)),file+' pie uses Claude researched first-hand sectors');
-
+   const pie=page.locator('#ca-all-sector-pie .ca-donut'),legend=page.locator('#ca-all-sector-pie .ca-legend');
+   const pieBox=await pie.boundingBox(),legendBox=await legend.boundingBox();
+   assert(pieBox&&legendBox&&legendBox.y>=pieBox.y+pieBox.height-2,file+' puts the researched-sector pie above its legend');
   }
   if(file==='pages/combined-contributions.html'){
-   assert.equal(await page.locator('#funding-title,#funding-bubbles,#funding-connection').count(),0,'removed funding bubble panel stays removed');
+   assert.equal(await page.locator('#funding-title,#funding-bubbles,#funding-connection,#funding-concentration').count(),0,'removed funding and donor-concentration panels stay removed');
    const charts=page.locator('[data-donor-visuals]').first(),originalTotal=await charts.getAttribute('data-total-cents');
    assert.equal(await charts.getAttribute('data-sector-detail'),'sectors');assert.equal(await charts.getAttribute('data-total-cents'),originalTotal);
    assert.equal(await charts.locator('.dv-detail-control').count(),0);
