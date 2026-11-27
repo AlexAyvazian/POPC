@@ -107,7 +107,8 @@ try{
      const csv=await fs.readFile(await csvDownload.path(),'utf8');assert(csv.startsWith('\ufeff"Donor / organization","Total donated (USD)"'));
     }
    }
-   assert.equal(await host.locator('thead').first().locator('th').count(),4,'organization table uses four readable columns');
+   assert.equal(await host.locator('[data-donor-group=organizations] thead th').count(),3,'organization table drops the sector column');
+   assert.equal(await host.locator('[data-donor-group=indirect] thead th').count(),4,'individual table drops the sector column');
    for(const key of ['indirect','small']){
     const section=host.locator('[data-donor-group='+key+']');
     assert((await section.locator('thead').innerText()).includes('Reported employer'));
