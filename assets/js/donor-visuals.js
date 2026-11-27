@@ -9,16 +9,24 @@ function mark(s,tag,attrs,label,readout,focus=true){const n=node(tag,{...attrs,.
 function legend(card,items,colors){const details=document.createElement('details');details.className='dv-legend';details.open=true;const summary=document.createElement('summary');summary.textContent='Sector key and exact values';const ul=document.createElement('ul');for(const item of items){const li=document.createElement('li'),swatch=document.createElement('span');swatch.className='dv-swatch';swatch.style.background=colors.get(item.name);const button=document.createElement('button');button.type='button';button.textContent=item.label;button.addEventListener('click',()=>{card.querySelector('.dv-readout').textContent=item.label;});li.append(swatch,button);ul.append(li);}details.append(summary,ul);card.append(details);}
 function card(host,kind,title,description){const f=document.createElement('figure');f.className='donor-visual-card';f.dataset.chart=kind;const cap=document.createElement('figcaption'),h=document.createElement('h3'),p=document.createElement('p');h.textContent=title;p.textContent=description;cap.append(h,p);const plot=document.createElement('div');plot.className='dv-plot';const readout=document.createElement('p');readout.className='dv-readout';readout.setAttribute('aria-live','polite');readout.textContent='Tap, focus or hover over a mark for details.';f.append(cap,plot,readout);host.append(f);return {card:f,plot,readout};}
 function empty(target,message){target.plot.textContent=message;target.readout.textContent='';}
-function horizontalBars(target,items,colors,label,format,domain){
- const w=600,h=items.length*48+28,left=12,right=12,span=w-left-right;
+function verticalBars(target,items,colors,label,format,domain){
+ const w=600,h=390,left=56,right=16,top=30,bottom=122,plotW=w-left-right,plotH=h-top-bottom;
  const min=domain?.[0]??Math.min(0,...items.map(d=>d.value)),max=domain?.[1]??Math.max(0,...items.map(d=>d.value)),range=max-min||1;
- const x=v=>left+(v-min)/range*span,s=svg(w,h,label);
- s.append(node('line',{x1:x(0),x2:x(0),y1:22,y2:h-6,stroke:'#b69b79','stroke-width':1}));
+ const y=v=>top+(max-v)/range*plotH,zero=y(0),slot=plotW/Math.max(1,items.length),barW=Math.max(7,Math.min(30,slot*.64)),s=svg(w,h,label);
+ target.plot.dataset.barOrientation='vertical';
+ for(let i=0;i<=4;i++){
+  const value=min+(max-min)*i/4,yy=y(value);
+  s.append(node('line',{x1:left,x2:w-right,y1:yy,y2:yy,stroke:i===0||i===4?'#d9cfbf':'#ebe4d9','stroke-width':.8}));
+  text(s,left-8,yy+4,format(value),{'text-anchor':'end','font-size':9});
+ }
+ s.append(node('line',{x1:left,x2:w-right,y1:zero,y2:zero,stroke:'#b69b79','stroke-width':1.2}));
  items.forEach((d,i)=>{
-  const y=i*48+8;
-  text(s,left,y+12,d.name,{'font-size':13,'font-weight':600});
-  text(s,w-right,y+12,format(d.value),{'font-size':13,'text-anchor':'end'});
-  const bar=mark(s,'rect',{x:Math.min(x(0),x(d.value)),y:y+19,width:Math.abs(x(d.value)-x(0)),height:15,fill:colors.get(d.sector||d.name),'data-bar-value':d.value},d.label,target.readout);
+  const cx=left+slot*(i+.5),yy=y(d.value),barY=Math.min(zero,yy),barH=Math.max(1,Math.abs(yy-zero));
+  mark(s,'rect',{x:cx-barW/2,y:barY,width:barW,height:barH,fill:colors.get(d.sector||d.name),'data-bar-value':d.value},d.label,target.readout);
+  const valueY=d.value>=0?Math.max(top+10,yy-6):Math.min(h-bottom-4,yy+14);
+  text(s,cx,valueY,format(d.value),{'text-anchor':'middle','font-size':9,'font-weight':600});
+  const name=d.name.length>24?d.name.slice(0,23)+'…':d.name;
+  text(s,cx,zero+18,name,{transform:`rotate(-55 ${cx} ${zero+18})`,'text-anchor':'end','font-size':9,'font-weight':600});
  });
  target.plot.append(s);
 }
@@ -26,7 +34,7 @@ function sectorBars(target,model){
  const data=radarData(model).sort((a,b)=>b.amount-a.amount||a.name.localeCompare(b.name));
  if(!model.total||data.some(d=>d.share<0||d.share>1)||model.total<0){empty(target,'Sector percentages require a positive total and nonnegative sector amounts.');return;}
  const colors=sequentialColors(data.map(d=>d.name));
- horizontalBars(target,data.map(d=>({...d,name:d.name.length>48?d.name.slice(0,47)+'…':d.name,sector:d.name,value:d.share,label:`${d.name}: ${(d.share*100).toFixed(2)}% · ${money(d.amount)}`})),colors,'Bar graph: sector shares of net contributions',v=>(v*100).toFixed(1)+'%',[0,1]);
+ verticalBars(target,data.map(d=>({...d,name:d.name.length>48?d.name.slice(0,47)+'…':d.name,sector:d.name,value:d.share,label:`${d.name}: ${(d.share*100).toFixed(2)}% · ${money(d.amount)}`})),colors,'Vertical bar graph: sector shares of net contributions',v=>(v*100).toFixed(1)+'%',[0,1]);
 }
 function donorBars(target,model){
  if(!model.sectors.length){empty(target,'No donors in this selection.');return;}
@@ -43,7 +51,7 @@ function donorBars(target,model){
   const start=page*20;target.plot.replaceChildren();target.plot.dataset.donorBarCount=leaves.length;
   if(!leaves.length){empty(target,'No donors in this selection.');}else{
    const rows=leaves.slice(start,start+20).map(d=>({...d,value:d.amount,name:d.name.length>48?d.name.slice(0,47)+'…':d.name,label:`${d.name} · ${d.originalSector}: ${money(d.amount)}`}));
-   horizontalBars(target,rows,colors,'Bar graph: signed net donor allocations',money,domain);
+   verticalBars(target,rows,colors,'Vertical bar graph: signed net donor allocations',n=>money(n).replace('.00',''),domain);
   }
   status.textContent=leaves.length?`${start+1}–${Math.min(start+20,leaves.length)} of ${leaves.length.toLocaleString()} donor allocations`:'0 donor allocations';previous.disabled=page===0;next.disabled=start+20>=leaves.length;
  }
@@ -97,7 +105,7 @@ export function mountDonorVisuals(host){
   const select=document.createElement('select');select.setAttribute('aria-label','Chart sector detail');select.add(new Option('Sector groups','groups'));select.add(new Option('Detailed sectors','sectors'));select.value=detail;control.append(select);host.append(control);host.dataset.sectorDetail=detail;
   select.addEventListener('change',()=>{detail=select.value;model=detail==='groups'?groupedVisualData(detailedModel):detailedModel;render();});
   const grid=document.createElement('div');grid.className='dv-grid';host.append(grid);const w=Math.max(240,Math.floor((width||host.clientWidth||600)-(width>=760?44:0))/(width>=760?2:1));
-  const specs=[['sector-bars','Sector share bar graph','Share of net contributions across the same sector groups on every tab.',sectorBars],['donor-bars','Donor contribution bar graph','Signed net dollars for every named donor allocation, with sector filtering and pagination.',donorBars],['bubble','Sector donation bubbles','Each bubble is one sector. Bubble area represents that sector’s total net contribution dollars. Larger bubble = more money.',bubbles],['dot-matrix','Dot matrix','Each dot is one consolidated donor, colored by sector.',matrix]];
+  const specs=[['sector-bars','Sector share bar graph','Vertical bars compare each sector group’s share of net contribution dollars.',sectorBars],['donor-bars','Donor contribution bar graph','Vertical bars compare signed net dollars for named donor allocations, with sector filtering and pagination.',donorBars],['bubble','Sector donation bubbles','Each bubble is one sector. Bubble area represents that sector’s total net contribution dollars. Larger bubble = more money.',bubbles],['dot-matrix','Dot matrix','Each dot is one consolidated donor, colored by sector.',matrix]];
   for(const [kind,title,description,draw]of specs){const target=card(grid,kind,title,description);draw(target,model,Math.max(240,Math.floor(target.plot.clientWidth||w)));}
   if(model.adjustments<0){const p=document.createElement('p');p.className='dv-adjustments';p.textContent=`Signed adjustments: ${money(model.adjustments)}. Net table total: ${money(model.total)}. `;host.append(p);}
   host.dataset.ready='true';
