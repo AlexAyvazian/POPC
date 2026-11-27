@@ -1,4 +1,4 @@
-import {masterSectorForRecord,sectorGroups} from './donor-data.js?v=claude1';
+import {masterSectorForRecord,sectorGroups} from './donor-data.js?v=researched2';
 const sort=(a,b)=>b.amount-a.amount||a.name.localeCompare(b.name);
 export function buildVisualData(groups){
  const sectors=new Map(), donors=[];let total=0,receipts=0,positive=0,adjustments=0;
