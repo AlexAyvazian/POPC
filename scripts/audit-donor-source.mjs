@@ -32,7 +32,7 @@ for(const [network,data,identity]of [['jeffries',jeffries,jidentity],['schumer',
      const unpacked=blocks.flatMap(([count,encoded])=>{const decoded=JSON.parse(gunzipSync(Buffer.from(encoded,'base64')));if(decoded.length!==count)throw Error('Chunk count');return decoded;});
      if(unpacked.length!==group.count)throw Error('Group count');
      console.log('RAW JFC '+kind,JSON.stringify(unpacked.slice(0,2)));
-     const memo=kind.endsWith('-memo'); for(const r of unpacked){copyOriginalFields(r);const copy=[...r];copy[kind.startsWith('organization')?4:5]=memo;(kind.startsWith('organization')?org:ind).push(copy);}
+     const memo=kind.endsWith('-memo'); for(const r of unpacked){const copy=[...r];copy.originalFields=[...r];copy[kind.startsWith('organization')?4:5]=memo;(kind.startsWith('organization')?org:ind).push(copy);}
     }
    }else{
     const paths=(kind,n)=>n?Array.from({length:n},(_,i)=>'data/jeffries/'+c.key+'-'+kind+'-'+(i+1)+'.json'):['data/jeffries/'+c.key+'-'+kind+'.json'];
