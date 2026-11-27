@@ -1,4 +1,4 @@
-import {normalize,occupationGroup} from './donor-data.js?v=claude1';
+import {normalize,occupationGroup} from './donor-data.js?v=researched2';
 const personal=/^(?:NOT EMPLOYED|RETIRED|SELF[ -]?EMPLOYED|SELF|N\/?A|NONE|NULL|NOT REPORTED|INFORMATION REQUESTED(?: PER BEST EFFORTS)?|UNEMPLOYED|HOMEMAKER|HOME MAKER|STUDENT|UNKNOWN|NOT AVAILABLE|REQUESTED|NOT PROVIDED|NOT DISCLOSED|DECLINED|REFUSED)$/;
 export function identifyName(r){
  const reported=normalize(r.type==='individual'?r.employer:r.name)||'NOT REPORTED',isPersonal=r.type==='individual'&&personal.test(reported);
