@@ -32,3 +32,11 @@
 .ca-panel:not(.ca-wide) .ca-donut{max-width:210px}
 .ca-supporting-tables{margin-top:24px}.ca-supporting-tables>.ca-panel{margin-top:18px}
 @media(max-width:650px){.ca-panel:not(.ca-wide) .ca-legend{grid-template-columns:1fr}}
+
+/* Full-width visual flow: one chart panel per row, with each pie above its labels. */
+.ca-grid{grid-template-columns:minmax(0,1fr)}
+.ca-wide{grid-column:auto}
+.ca-chart,.ca-wide .ca-chart,.ca-panel:not(.ca-wide) .ca-chart{grid-template-columns:minmax(0,1fr);align-items:start}
+.ca-donut,.ca-panel:not(.ca-wide) .ca-donut{max-width:280px}
+.ca-legend,.ca-panel:not(.ca-wide) .ca-legend{grid-template-columns:repeat(2,minmax(0,1fr));max-height:none;overflow:visible;width:100%;margin-top:8px}
+@media(max-width:650px){.ca-legend,.ca-panel:not(.ca-wide) .ca-legend{grid-template-columns:minmax(0,1fr)}}
