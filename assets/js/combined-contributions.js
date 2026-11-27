@@ -53,4 +53,4 @@ allRecords=(await Promise.all(config.map(loadCommittee))).flat();
 if(sum(allRecords,"amount")!==sum(config,"individual")+sum(config,"organization")||allRecords.length!==sum(config,"individualCount")+sum(config,"organizationCount"))throw Error("Combined source reconciliation failed");
 $("ca-status").textContent="All eight committees loaded";render();
 }
-start().catch(e=>{allRecords=null;$("ca-status").textContent="Unable to load verified data: "+e.message;$("funding-summary").textContent="Funding visuals unavailable.";$("funding-concentration").textContent="Unavailable until committee data loads.";console.error(e);});})();
+start().catch(e=>{allRecords=null;$("ca-status").textContent="Unable to load verified data: "+e.message;$("funding-concentration").textContent="Unavailable until committee data loads.";console.error(e);});})();
