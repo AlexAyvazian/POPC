@@ -1,5 +1,5 @@
 import {chartSwatches,chartSequence} from './chart-palette.js?v=claude1';
-import {networkData,normalize,occupationGroup,personalCategories,sectorGroups} from './donor-data.js?v=claude1';
+import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=claude1';
 const {config,loadCommittee}=networkData('schumer');
 (()=>{"use strict";
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
@@ -33,7 +33,7 @@ function aggregateDonors(rows,mode){
 }
 function aggregateSectors(rows){
  const m=new Map();
- for(const r of rows){const key=sectorGroups[r.sector]||r.sector;let v=m.get(key);if(!v){v={name:key,key,value:0,individual:0,organization:0,count:0};m.set(key,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
+ for(const r of rows){const key=r.sector||'Unresolved / ambiguous';let v=m.get(key);if(!v){v={name:key,key,value:0,individual:0,organization:0,count:0};m.set(key,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
  return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
 }
 function donut(host,items,onSelect,active,label){host.replaceChildren();const positive=items.filter(x=>x.value>0),den=sum(positive,"value");if(!den){host.textContent="No positive receipts in this selection.";return;}const wrap=document.createElement("div");wrap.className="ca-chart";const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 220 220");svg.setAttribute("class","ca-donut");svg.setAttribute("role","group");svg.setAttribute("aria-label",label);const radius=84,circ=2*Math.PI*radius;let off=0;const legend=document.createElement("div");legend.className="ca-legend";
@@ -97,7 +97,7 @@ $("ca-exact-occupation").hidden=!exactOccupation;$("ca-exact-occupation-label").
 const roleRecords=records.filter(r=>(!roleSelected||(r.type==="individual"&&occupationGroup(r.occupation)===roleSelected))&&(!exactOccupation||(r.type==="individual"&&normalize(r.occupation)===exactOccupation)));
 const candidates=aggregateDonors(roleRecords,mode);
 $("ca-role-heading").hidden=mode==="organization";
-const donors=candidates.filter(x=>(!sectorSelected||[...x.sectors].some(s=>(sectorGroups[s]||s)===sectorSelected))&&(!query||x.name.includes(query)||[...x.employers,...x.occupations].some(v=>v.includes(query))));
+const donors=candidates.filter(x=>(!sectorSelected||[...x.sectors].some(s=>s===sectorSelected))&&(!query||x.name.includes(query)||[...x.employers,...x.occupations].some(v=>v.includes(query))));
 const max=Math.max(1,Math.ceil(donors.length/pageSize));page=Math.max(0,Math.min(page,max-1));const rows=donors.slice(page*pageSize,(page+1)*pageSize);
 $("ca-org-rows").innerHTML=rows.length?rows.map(x=>'<tr><td class="jvf-contributor">'+esc(x.name)+'</td><td>'+esc([...x.sectors].sort().join("; "))+(mode==="individual"?'<small class="jvf-row-note">'+esc([...x.employers].sort().join("; "))+'</small>':"")+'</td>'+(mode==="organization"?"":'<td class="ca-occupation-cell"><details><summary>'+esc([...x.occupations].sort().join("; "))+'</summary><div class="ca-role-details">'+[...x.roleDetails.values()].sort((a,b)=>b.amount-a.amount||a.occupation.localeCompare(b.occupation)).map(d=>'<div><span>'+esc(d.occupation)+'<small>'+esc(d.employer)+'</small></span><strong>'+money(d.amount)+'</strong></div>').join("")+'</div></details></td>')+'<td><details><summary>'+x.committees.size+' '+(x.committees.size===1?"committee":"committees")+'</summary><div class="ca-breakdown">'+[...x.committees].sort((a,b)=>b[1]-a[1]).map(([k,v])=>{const c=config.find(y=>y.key===k);return '<div><a href="'+c.slug+'.html">'+esc(c.name)+'</a><strong>'+money(v)+'</strong></div>';}).join("")+'</div></details></td><td>'+num(x.count)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td></tr>').join(""):'<tr><td colspan="'+(mode==="organization"?5:6)+'">No matching donors.</td></tr>';
 $("ca-result-count").textContent=num(donors.length)+" reported names · "+money(sum(donors,"value"))+(roleSelected?" · Amounts restricted to matching reported-role receipts":"")+(sectorSelected?" · Matching donor sectors":"");$("ca-page").textContent="Page "+(page+1)+" of "+max;$("ca-prev").disabled=page===0;$("ca-next").disabled=page>=max-1;
