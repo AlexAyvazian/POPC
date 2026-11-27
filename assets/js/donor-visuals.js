@@ -1,4 +1,5 @@
-import {chartSwatches,chartSequence,sequentialColors} from './chart-palette.js?v=palette64';
+import {chartSwatches} from './chart-palette.js?v=palette64';
+import {sectorColors} from './sector-palette.js?v=stable1';
 import {buildVisualData,sectorShareData,dotData} from './donor-visual-data.js?v=researched-sectors1';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
@@ -7,7 +8,7 @@ function node(tag,attrs={},text){const n=document.createElementNS(NS,tag);for(co
 function svg(width,height,label){const n=node('svg',{viewBox:`0 0 ${width} ${height}`,role:'img','aria-label':label});n.append(node('title',{},label));return n;}
 function text(s,x,y,value,attrs={}){s.append(node('text',{x,y,'font-size':11,fill:'#554b3f',...attrs},value));}
 function mark(s,tag,attrs,label,readout,focus=true){const n=node(tag,{...attrs,...(focus?{tabindex:0,role:'button','aria-label':label}:{})});n.append(node('title',{},label));const inspect=()=>{readout.textContent=label;};n.addEventListener('pointerenter',inspect);n.addEventListener('focus',inspect);n.addEventListener('click',inspect);n.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();inspect();}});s.append(n);return n;}
-function legend(card,items,colors){const details=document.createElement('details');details.className='dv-legend';details.open=true;const summary=document.createElement('summary');summary.textContent='Sector key and exact values';const ul=document.createElement('ul');for(const item of items){const li=document.createElement('li'),swatch=document.createElement('span');swatch.className='dv-swatch';swatch.style.background=colors.get(item.name);const button=document.createElement('button');button.type='button';button.textContent=item.label;button.addEventListener('click',()=>{card.querySelector('.dv-readout').textContent=item.label;});li.append(swatch,button);ul.append(li);}details.append(summary,ul);card.append(details);}
+function legend(card,items,colors){const details=document.createElement('details');details.className='dv-legend';details.open=true;const summary=document.createElement('summary');summary.textContent='Sector key and exact values';const ul=document.createElement('ul');for(const item of items){const li=document.createElement('li'),swatch=document.createElement('span');swatch.className='dv-swatch';swatch.dataset.sector=item.name;swatch.style.background=colors.get(item.name);const button=document.createElement('button');button.type='button';button.textContent=item.label;button.addEventListener('click',()=>{card.querySelector('.dv-readout').textContent=item.label;});li.append(swatch,button);ul.append(li);}details.append(summary,ul);card.append(details);}
 function card(host,kind,title,description){const f=document.createElement('figure');f.className='donor-visual-card';f.dataset.chart=kind;const cap=document.createElement('figcaption'),h=document.createElement('h3'),p=document.createElement('p');h.textContent=title;p.textContent=description;cap.append(h,p);const plot=document.createElement('div');plot.className='dv-plot';const readout=document.createElement('p');readout.className='dv-readout';readout.setAttribute('aria-live','polite');readout.textContent='Tap, focus or hover over a mark for details.';f.append(cap,plot,readout);host.append(f);return {card:f,plot,readout};}
 function empty(target,message){target.plot.textContent=message;target.readout.textContent='';}
 function verticalBars(target,items,colors,label,format,domain){
@@ -35,7 +36,7 @@ function verticalBars(target,items,colors,label,format,domain){
 function sectorBars(target,model){
  const data=sectorShareData(model).sort((a,b)=>b.amount-a.amount||a.name.localeCompare(b.name));
  if(!model.total||data.some(d=>d.share<0||d.share>1)||model.total<0){empty(target,'Sector percentages require a positive total and nonnegative sector amounts.');return;}
- const colors=sequentialColors(data.map(d=>d.name));
+ const colors=sectorColors(data.map(d=>d.name));
  verticalBars(target,data.map(d=>({...d,name:d.name.length>48?d.name.slice(0,47)+'…':d.name,sector:d.name,value:d.share,label:`${d.name}: ${(d.share*100).toFixed(2)}% · ${money(d.amount)}`})),colors,'Vertical bar graph: sector shares of net contributions',v=>(v*100).toFixed(1)+'%',[0,1]);
 }
 function donorBars(target,model){
@@ -45,7 +46,7 @@ function donorBars(target,model){
  for(const sector of model.sectors)select.add(new Option(sector.name,sector.name));control.append(select);target.plot.before(control);
  const pager=document.createElement('div'),previous=document.createElement('button'),next=document.createElement('button'),status=document.createElement('span');
  pager.className='dv-donor-pages';previous.type=next.type='button';previous.textContent='Previous donors';next.textContent='Next donors';status.setAttribute('role','status');pager.append(previous,status,next);target.plot.after(pager);
- const colors=sequentialColors(model.sectors.map(s=>s.name));let page=0;
+ const colors=sectorColors(model.sectors.map(s=>s.name));let page=0;
  function draw(){
   const selected=select.value?model.sectors.filter(s=>s.name===select.value):model.sectors;
   const leaves=selected.flatMap(s=>s.leaves.map(l=>({...l,sector:s.name,originalSector:l.sector}))).sort((a,b)=>b.amount-a.amount||a.name.localeCompare(b.name)||a.originalSector.localeCompare(b.originalSector));
@@ -62,7 +63,7 @@ function donorBars(target,model){
 function bubbles(target,model,w){
  const data=[...model.sectors].sort((a,b)=>b.amount-a.amount||a.name.localeCompare(b.name));
  if(!data.length){empty(target,'No sector contributions in this selection.');return;}
- const colors=sequentialColors(data.map(d=>d.name));
+ const colors=sectorColors(data.map(d=>d.name));
  const maxAbs=Math.max(1,...data.map(d=>Math.abs(d.amount)));
  const cols=Math.max(2,Math.min(4,Math.ceil(Math.sqrt(data.length))));
  const cellW=w/cols,maxR=Math.min(54,cellW*.34),rowH=maxR*2+58,rows=Math.ceil(data.length/cols),h=rows*rowH+8;
@@ -82,8 +83,7 @@ function bubbles(target,model,w){
 function matrix(target,model,w){
  const dots=dotData(model);
  if(!dots.length){empty(target,'No donors in this selection.');return;}
- const dotPalette=chartSequence;
- const colors=new Map([...new Set(dots.map(d=>d.sector))].map((name,index)=>[name,dotPalette[index%dotPalette.length]]));
+ const colors=sectorColors(dots.map(d=>d.sector));
  const columns=Math.max(1,Math.ceil(Math.sqrt(dots.length*(w-24)/300)));
  const step=Math.min(16,(w-24)/columns),rows=Math.ceil(dots.length/columns);
  const s=svg(w,rows*step+24,'Dot matrix: one circle per consolidated donor');
