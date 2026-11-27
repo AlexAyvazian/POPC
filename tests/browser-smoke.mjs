@@ -76,8 +76,11 @@ try{
     const dots=await visual.locator('[data-donor-count]').evaluateAll(nodes=>nodes.reduce((n,d)=>n+Number(d.dataset.donorCount),0));
     assert.equal(dots,Number(await visual.getAttribute('data-groups')));
     assert.equal(await visual.locator('[data-donor-count="1"]').count(),dots);
-    const bubbleAreas=await visual.locator('[data-bubble-donors]').evaluateAll(nodes=>nodes.map(n=>Number(n.getAttribute('r'))**2/Number(n.dataset.bubbleDonors)));
-    if(bubbleAreas.length)assert(bubbleAreas.every(v=>Math.abs(v-bubbleAreas[0])<1e-8),'bubble area scales with donor count');
+    const bubble=visual.locator('[data-chart=bubble]');
+    assert.equal((await bubble.locator('figcaption').innerText()).includes('receipt count'),false,'bubble chart does not measure receipt count');
+    assert.equal((await bubble.locator('figcaption').innerText()).includes('donor count'),false,'bubble chart does not measure donor count');
+    const bubbleAreas=await bubble.locator('[data-bubble-dollars]').evaluateAll(nodes=>nodes.map(n=>Number(n.getAttribute('r'))**2/Math.abs(Number(n.dataset.bubbleDollars))).filter(Number.isFinite));
+    if(bubbleAreas.length>1)assert(bubbleAreas.every(v=>Math.abs(v-bubbleAreas[0])<1e-8),'bubble area scales with sector contribution dollars');
    }
    if(!await host.getAttribute('data-committee')){
     const network=await host.getAttribute('data-network');
