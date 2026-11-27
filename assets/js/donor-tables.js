@@ -1,12 +1,13 @@
-import {sectorGroups,networkData} from './donor-data.js?v=claude1';
+import {sectorGroups,networkData,masterSectorForRecord} from './donor-data.js?v=claude1';
 import {mountDonorVisuals} from './donor-visuals.js?v=vertical-bars1';
 import {groupDonors} from './donor-groups.js?v=claude1';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const list=set=>[...set].sort().join('; ')||'Not reported';
 const sum=rows=>rows.reduce((n,r)=>n+r.amount,0);
-const pageSize=25;
+const pageSize=100;
 const sameName=(a,b)=>String(a).normalize('NFKC').toUpperCase().replace(/[^\p{L}\p{N}]/gu,'')===String(b).normalize('NFKC').toUpperCase().replace(/[^\p{L}\p{N}]/gu,'');
+const primarySector=group=>{const totals=new Map();for(const r of group.records){const sector=masterSectorForRecord(r)||'Unresolved / ambiguous';totals.set(sector,(totals.get(sector)||0)+r.amount);}return [...totals].sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])||b[1]-a[1]||a[0].localeCompare(b[0]))[0]?.[0]||'Unresolved / ambiguous';};
 const source=r=>/^\d{15,20}$/.test(String(r.image))?`<a href="https://docquery.fec.gov/cgi-bin/fecimg/?${r.image}" target="_blank" rel="noopener noreferrer">FEC filing</a>`:'—';
 function researchDetails(group){
  const seen=new Set();
@@ -40,7 +41,7 @@ function receiptDetails(group,config){
 }
 function table(host,key,title,description,groups,config){
  const section=document.createElement('section');section.className='donor-table-section';section.dataset.donorGroup=key;
- section.innerHTML=`<h2>${title}</h2><p>${description}</p><p class="donor-table-total">${groups.length.toLocaleString()} donors · <strong>${money(sum(groups))}</strong></p><label class="donor-search">Search this table <input type="search" placeholder="Name, employer, sector…"></label><div data-donor-visuals></div><div class="jvf-table-wrap"><table class="jvf-table"><thead><tr><th scope="col">${key==='organizations'?'PAC / organization':'Individual donor'}</th>${key==='organizations'?'':'<th scope="col">Reported employer(s)</th>'}<th scope="col">Sector</th><th scope="col">Total donated</th><th scope="col">Committees &amp; receipts</th></tr></thead><tbody></tbody></table></div><div class="donor-table-pagination"><button type="button" data-prev>Previous</button><span role="status"></span><button type="button" data-next>Next</button></div>`;
+ section.innerHTML=`<h2>${title}</h2><p>${description}</p><p class="donor-table-total">${groups.length.toLocaleString()} donors · <strong>${money(sum(groups))}</strong></p><label class="donor-search">Search this table <input type="search" placeholder="Name, employer, sector…"></label><div data-donor-visuals></div><div class="jvf-table-wrap"><table class="jvf-table"><thead><tr><th scope="col">${key==='organizations'?'PAC / organization':'Individual donor'}</th>${key==='organizations'?'':'<th scope="col">Reported employer(s)</th>'}<th scope="col">Total donated</th><th scope="col">Committees &amp; receipts</th></tr></thead><tbody></tbody></table></div><div class="donor-table-pagination"><button type="button" data-prev>Previous</button><span role="status"></span><button type="button" data-next>Next</button></div>`;
  if(!host.dataset.committee){
   const downloads=document.createElement('p');downloads.className='donor-downloads';
   const network=host.dataset.network==='schumer'?'schumer':'jeffries';
@@ -50,19 +51,22 @@ function table(host,key,title,description,groups,config){
  const input=section.querySelector('input'),body=section.querySelector('tbody'),prev=section.querySelector('[data-prev]'),next=section.querySelector('[data-next]'),status=section.querySelector('[role=status]');let page=0,visualQuery=null;
  const visuals=mountDonorVisuals(section.querySelector('[data-donor-visuals]'));
  function draw(){
-  const q=input.value.trim().toUpperCase(),filtered=groups.filter(g=>!q||[g.name,list(g.employers),list(g.occupations),list(g.sectors),g.classification?.group||'',list(g.reportedNames),list(g.reportedEmployers),...[...g.businessResearch.values()].map(i=>i.research?.parent||'')].join(' ').toUpperCase().includes(q));
-  if(q!==visualQuery){visualQuery=q;visuals.update(filtered);}
-  body.replaceChildren();
+  const q=input.value.trim().toUpperCase(),matched=groups.filter(g=>!q||[g.name,list(g.employers),list(g.occupations),list(g.sectors),g.classification?.group||'',list(g.reportedNames),list(g.reportedEmployers),...[...g.businessResearch.values()].map(i=>i.research?.parent||'')].join(' ').toUpperCase().includes(q));
+  if(q!==visualQuery){visualQuery=q;visuals.update(matched);}
+  const filtered=[...matched].sort((a,b)=>primarySector(a).localeCompare(primarySector(b))||b.amount-a.amount||a.name.localeCompare(b.name));
+  body.replaceChildren();let lastSector=null;
   for(const g of filtered.slice(page*pageSize,(page+1)*pageSize)){
+   const sector=primarySector(g);
+   if(sector!==lastSector){const divider=document.createElement('tr');divider.className='donor-sector-divider';divider.dataset.sectorDivider=sector;divider.innerHTML=`<th colspan="${key==='organizations'?3:4}" scope="rowgroup">${esc(sector)}</th>`;body.append(divider);lastSector=sector;}
    const aliases=[...g.reportedNames].filter(n=>!sameName(n,g.name));
    const names=aliases.length?`<details class="donor-reported-names"><summary>Reported names</summary><p>${esc(aliases.join('; '))}</p></details>`:'';
    const employerAliases=[...g.reportedEmployers].filter(n=>![...g.employers].some(e=>sameName(n,e)));
-   const row=document.createElement('tr');
-   row.innerHTML=`<td><strong class="donor-name">${esc(g.name)}</strong>${key==='organizations'?researchDetails(g):`<small class="donor-occupation">${esc(list(g.occupations))}</small>`}${names}</td>${key==='organizations'?'':`<td>${esc(list(g.employers))}${employerAliases.length?`<details><summary>Reported employer names</summary><p>${esc(employerAliases.join('; '))}</p></details>`:''}${researchDetails(g)}</td>`}<td>${sectorDetails(g)}</td><td class="jvf-money"><strong>${money(g.amount)}</strong></td><td><span class="donor-committee-count">${g.committees.size} ${g.committees.size===1?'committee':'committees'}</span></td>`;
+   const row=document.createElement('tr');row.dataset.donorRow='';
+   row.innerHTML=`<td><strong class="donor-name">${esc(g.name)}</strong>${key==='organizations'?researchDetails(g):`<small class="donor-occupation">${esc(list(g.occupations))}</small>`}${names}</td>${key==='organizations'?'':`<td>${esc(list(g.employers))}${employerAliases.length?`<details><summary>Reported employer names</summary><p>${esc(employerAliases.join('; '))}</p></details>`:''}${researchDetails(g)}</td>`}<td class="jvf-money"><strong>${money(g.amount)}</strong></td><td><span class="donor-committee-count">${g.committees.size} ${g.committees.size===1?'committee':'committees'}</span></td>`;
    for(const [i,cell]of [...row.children].entries())cell.dataset.label=section.querySelectorAll('th')[i].textContent;
    row.lastElementChild.append(receiptDetails(g,config));body.append(row);
   }
-  if(!filtered.length){const row=document.createElement('tr');row.innerHTML=`<td colspan="${key==='organizations'?4:5}">No matching donors.</td>`;body.append(row);}
+  if(!filtered.length){const row=document.createElement('tr');row.innerHTML=`<td colspan="${key==='organizations'?3:4}">No matching donors.</td>`;body.append(row);}
   status.textContent=`${filtered.length? page*pageSize+1:0}–${Math.min((page+1)*pageSize,filtered.length)} of ${filtered.length.toLocaleString()} donors · ${money(sum(filtered))}`;
   prev.disabled=page===0;next.disabled=(page+1)*pageSize>=filtered.length;
  }
