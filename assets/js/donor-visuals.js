@@ -1,6 +1,6 @@
-import {chartSwatches,sequentialColors} from './chart-palette.js?v=sequential1';
+import {chartSwatches,sequentialColors} from './chart-palette.js?v=categories1';
 import {hierarchy,pack} from './vendor/d3-hierarchy.js';
-import {buildVisualData,radarData,packingData,dotData} from './donor-visual-data.js?v=sequential1';
+import {buildVisualData,radarData,packingData,dotData} from './donor-visual-data.js?v=categories1';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
 const compact=n=>new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:1}).format(n);
@@ -15,22 +15,48 @@ function empty(target,message){target.plot.textContent=message;target.readout.te
 function radar(target,model,w){
  const data=radarData(model),colors=sequentialColors(data.map(d=>d.name));if(!data.length){empty(target,'No positive contribution amounts in this selection.');return;}
  const h=Math.min(330,w),cx=w/2,cy=h/2,r=Math.min(w,h)*.36,max=Math.max(.25,...data.map(d=>d.share));
- const s=svg(w,h,'Radar chart: sector shares of positive net contributions'),point=(i,v)=>{const a=i/data.length*Math.PI*2-Math.PI/2;return [cx+Math.cos(a)*r*v,cy+Math.sin(a)*r*v];};
- for(let level=1;level<=4;level++){s.append(node('polygon',{points:data.map((d,i)=>point(i,level/4).join(',')).join(' '),fill:'none',stroke:'#e1d8ca','stroke-width':.75}));text(s,cx+4,cy-r*level/4+10,Math.round(max*level/4*100)+'%',{'font-size':10});}
+ const axes=Math.max(3,data.length);
+ const s=svg(w,h,'Radar chart: sector shares of positive net contributions'),point=(i,v)=>{const a=i/axes*Math.PI*2-Math.PI/2;return [cx+Math.cos(a)*r*v,cy+Math.sin(a)*r*v];};
+ for(let level=1;level<=4;level++){s.append(node('polygon',{points:Array.from({length:axes},(_,i)=>point(i,level/4).join(',')).join(' '),fill:'none',stroke:'#e1d8ca','stroke-width':.75}));text(s,cx+4,cy-r*level/4+10,Math.round(max*level/4*100)+'%',{'font-size':10});}
  data.forEach((d,i)=>{const p=point(i,1),label=point(i,1.14);s.append(node('line',{x1:cx,y1:cy,x2:p[0],y2:p[1],stroke:'#ded5c7','stroke-width':.75}));text(s,label[0],label[1]+4,i+1,{'text-anchor':'middle','font-size':12,'font-weight':600});});
- s.append(node('polygon',{points:data.map((d,i)=>point(i,d.share/max).join(',')).join(' '),fill:chartSwatches.blue1,'fill-opacity':1,stroke:chartSwatches.blue6,'stroke-width':2}));
+ s.append(node('polygon',{points:Array.from({length:axes},(_,i)=>point(i,(data[i]?.share||0)/max).join(',')).join(' '),fill:chartSwatches.blue1,'fill-opacity':1,stroke:chartSwatches.blue6,'stroke-width':2}));
  data.forEach((d,i)=>{const p=point(i,d.share/max);mark(s,'circle',{cx:p[0],cy:p[1],r:5,fill:colors.get(d.name),stroke:chartSwatches.blue6,'stroke-width':.7},`${d.name}: ${(d.share*100).toFixed(2)}% · ${money(d.amount)}`,target.readout);});target.plot.append(s);
  const key=document.createElement('ol');key.className='dv-radar-key';for(const d of data){const li=document.createElement('li');li.textContent=`${d.name} · ${(d.share*100).toFixed(1)}%`;key.append(li);}target.card.append(key);
 }
 function packing(target,model,w){
  const data=packingData(model);if(!data.children.length){empty(target,'No positive net donor amounts in this selection.');return;}
- const h=Math.min(w,440),root=hierarchy(data).sum(d=>d.value||0).sort((a,b)=>b.value-a.value);pack().size([w,h]).padding(3)(root);const colors=sequentialColors(root.children.map(n=>n.data.name)),s=svg(w,h,'Circle packing: sectors containing donors, sized by positive net dollars');
- for(const n of root.descendants().slice(1)){
-  const sector=n.depth===1?n.data.name:n.parent.data.name,label=n.children?`${sector}: ${money(n.value)}`:`${n.data.name} · ${sector}: ${money(n.value)}`;
-  mark(s,'circle',{cx:n.x,cy:n.y,r:n.r,fill:n.children?'none':colors.get(sector),'fill-opacity':1,stroke:n.children?colors.get(sector):chartSwatches.blue6,'stroke-width':n.children?1:.5},label,target.readout,n.depth===1||n.r>13);
-  if(!n.children&&n.r>24){const maxChars=Math.max(3,Math.floor(n.r/3.6)),name=n.data.name.length>maxChars?n.data.name.slice(0,maxChars-1)+'…':n.data.name;text(s,n.x,n.y-2,name,{'text-anchor':'middle',fill:'#211b15',stroke:'#fffdf9','stroke-width':2,'paint-order':'stroke','font-size':11,'font-weight':600,'pointer-events':'none'});if(n.r>33)text(s,n.x,n.y+13,shortMoney(n.value),{'text-anchor':'middle',fill:'#211b15',stroke:'#fffdf9','stroke-width':2,'paint-order':'stroke','font-size':11,'pointer-events':'none'});}
+ data.children.sort((a,b)=>b.children.reduce((v,n)=>v+n.value,0)-a.children.reduce((v,n)=>v+n.value,0)||a.name.localeCompare(b.name));
+ const control=document.createElement('label');control.className='dv-sector-control';control.textContent='Inspect a sector ';
+ const select=document.createElement('select');select.setAttribute('aria-label','Circle packing sector');select.add(new Option('All sectors',''));
+ for(const sector of data.children)select.add(new Option(sector.name,sector.name));control.append(select);target.plot.before(control);
+ const details=document.createElement('details');details.className='dv-donors';const summary=document.createElement('summary'),list=document.createElement('ul'),pager=document.createElement('div'),previous=document.createElement('button'),next=document.createElement('button'),status=document.createElement('span');
+ pager.className='dv-donor-pages';previous.type=next.type='button';previous.textContent='Previous donors';next.textContent='Next donors';status.setAttribute('role','status');pager.append(previous,status,next);details.append(summary,list,pager);target.card.append(details);
+ let page=0,leaves=[];
+ function donorList(){
+  list.replaceChildren();const start=page*20;for(const donor of leaves.slice(start,start+20)){const li=document.createElement('li'),button=document.createElement('button');button.type='button';button.textContent=`${donor.name} · ${donor.sector} · ${money(donor.value)}`;button.addEventListener('click',()=>{target.readout.textContent=button.textContent;});li.append(button);list.append(li);}
+  summary.textContent=`All ${leaves.length.toLocaleString()} named donor allocations`;
+  status.textContent=`${start+1}–${Math.min(start+20,leaves.length)} of ${leaves.length.toLocaleString()}`;previous.disabled=page===0;next.disabled=start+20>=leaves.length;
  }
- target.plot.append(s);legend(target.card,root.children.map(n=>({name:n.data.name,label:`${n.data.name} · ${money(n.value)}`})),colors);
+ previous.addEventListener('click',()=>{page--;donorList();});next.addEventListener('click',()=>{page++;donorList();});
+ function draw(){
+  target.plot.replaceChildren();target.card.querySelector('.dv-legend')?.remove();
+  const selected=select.value?data.children.filter(d=>d.name===select.value):data.children;
+  const h=Math.min(w,440),root=hierarchy({name:'All sectors',children:selected}).sum(d=>d.value||0).sort((a,b)=>b.value-a.value||a.data.name.localeCompare(b.data.name));pack().size([w,h]).padding(1)(root);
+  const colors=sequentialColors(root.children.map(n=>n.data.name)),s=svg(w,h,'Circle packing: every named donor within the displayed sectors, sized by positive net dollars'),labels=new WeakMap();
+  target.plot.dataset.packedLeaves=root.leaves().length;target.plot.dataset.packedCents=root.value;
+  for(const n of root.descendants().slice(1)){
+   const sector=n.depth===1?n.data.name:n.parent.data.name,label=n.children?`${sector}: ${money(n.value)}. Select to inspect sector.`:`${n.data.name} · ${sector}: ${money(n.value)}`,focus=n.depth===1||n.r>13;
+   const circle=node('circle',{cx:n.x,cy:n.y,r:n.r,fill:n.children?'none':colors.get(sector),'fill-opacity':1,stroke:n.children?colors.get(sector):chartSwatches.blue6,'stroke-width':n.children?1:Math.min(.5,n.r/5),...(focus?{tabindex:0,role:'button','aria-label':label}:{}),'data-packed-node':n.children?'sector':'donor'});
+   labels.set(circle,{label,sector:n.children?sector:null});s.append(circle);
+   if(!n.children&&n.r>24){const maxChars=Math.max(3,Math.floor(n.r/3.6)),name=n.data.name.length>maxChars?n.data.name.slice(0,maxChars-1)+'…':n.data.name;text(s,n.x,n.y-2,name,{'text-anchor':'middle',fill:'#211b15',stroke:'#fffdf9','stroke-width':2,'paint-order':'stroke','font-size':11,'font-weight':600,'pointer-events':'none'});if(n.r>33)text(s,n.x,n.y+13,shortMoney(n.value),{'text-anchor':'middle',fill:'#211b15',stroke:'#fffdf9','stroke-width':2,'paint-order':'stroke','font-size':11,'pointer-events':'none'});}
+  }
+  const inspect=e=>{const datum=labels.get(e.target);if(datum)target.readout.textContent=datum.label;};
+  const activate=e=>{const datum=labels.get(e.target);if(!datum)return;target.readout.textContent=datum.label;if(datum.sector){select.value=datum.sector;draw();select.focus();}};
+  s.addEventListener('pointerover',inspect);s.addEventListener('focusin',inspect);s.addEventListener('click',activate);s.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate(e);}});
+  target.plot.append(s);legend(target.card,root.children.map(n=>({name:n.data.name,label:`${n.data.name} · ${money(n.value)}`})),colors);
+  leaves=selected.flatMap(d=>d.children).sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));page=0;donorList();
+ }
+ select.addEventListener('change',()=>{draw();target.readout.textContent=select.value?`Showing every named donor in ${select.value}.`:'Showing every named donor across all sectors.';});draw();
 }
 function bubbles(target,model,w){
  if(!model.sectors.length){empty(target,'No donors in this selection.');return;}
@@ -55,7 +81,7 @@ export function mountDonorVisuals(host){
  function render(){if(!model)return;host.replaceChildren();host.dataset.groups=model.groups;host.dataset.totalCents=model.total;
   const summary=document.createElement('p');summary.className='dv-scope';summary.textContent=`${model.groups.toLocaleString()} donors · ${money(model.total)} · all matching rows across every table page`;host.append(summary);
   const grid=document.createElement('div');grid.className='dv-grid';host.append(grid);const w=Math.max(240,Math.floor((width||host.clientWidth||600)-(width>=760?44:0))/(width>=760?2:1));
-  const specs=[['radar','Radar chart','Sector shares of positive net contributions.',radar],['circle-packing','Circle packing','Sectors contain donors. Leaf circle area represents positive net dollars; smaller donors are grouped and labeled.',packing],['bubble','Bubble chart','X: total dollars · Y: receipt count · bubble area: donor count.',bubbles],['dot-matrix','Dot matrix','The distribution of donors across sectors.',matrix]];
+  const specs=[['radar','Radar chart','Sector shares of positive net contributions.',radar],['circle-packing','Circle packing','Every donor is shown within its sector. Circle area represents positive net dollars. Select a sector to enlarge it.',packing],['bubble','Bubble chart','X: total dollars · Y: receipt count · bubble area: donor count.',bubbles],['dot-matrix','Dot matrix','The distribution of donors across sectors.',matrix]];
   for(const [kind,title,description,draw]of specs){const target=card(grid,kind,title,description);draw(target,model,Math.max(240,Math.floor(target.plot.clientWidth||w)));}
   if(model.adjustments<0){const p=document.createElement('p');p.className='dv-adjustments';p.textContent=`Signed adjustments: ${money(model.adjustments)}. Net table total: ${money(model.total)}. Radar and packed-circle areas use positive net donor amounts within each sector.`;host.append(p);}
   host.dataset.ready='true';

@@ -36,9 +36,30 @@ try{
     assert.equal(await section.locator('[data-chart]').count(),4);
     for(const chart of await section.locator('[data-chart]').all()){
      const colors=await chart.locator('.dv-swatch').evaluateAll(nodes=>nodes.map(n=>n.style.background));
-     const expected=await page.evaluate(hex=>hex.map(color=>{const e=document.createElement('span');e.style.background=color;return e.style.background;}),chartSequence.slice(0,colors.length));
+     const expected=await page.evaluate(hex=>hex.map(color=>{const e=document.createElement('span');e.style.background=color;return e.style.background;}),Array.from({length:colors.length},(_,i)=>chartSequence[i%chartSequence.length]));
      assert.deepEqual(colors,expected,'chart uses the palette consecutively from Blue 1');
     }
+
+    const packed=section.locator('[data-chart=circle-packing]');
+    const plot=packed.locator('.dv-plot');
+    if(await plot.getAttribute('data-packed-leaves')){
+     const allLeaves=Number(await plot.getAttribute('data-packed-leaves'));
+     assert.equal(await packed.locator('[data-packed-node=donor]').count(),allLeaves,'every packed donor is rendered');
+     const options=await packed.locator('select option').evaluateAll(nodes=>nodes.map(n=>n.value));
+     if(options.length>1){
+      await packed.locator('select').selectOption(options[1]);
+      assert(Number(await plot.getAttribute('data-packed-leaves'))<=allLeaves);
+      await packed.locator('.dv-donors summary').click();
+      assert(await packed.locator('.dv-donors li button').count()>0);
+      await packed.locator('.dv-donors li button').first().focus();
+      await page.keyboard.press('Enter');
+      assert((await packed.locator('.dv-readout').innerText()).includes('$'));
+      await packed.locator('.dv-donors summary').click();
+      await packed.locator('select').selectOption('');
+      assert.equal(Number(await plot.getAttribute('data-packed-leaves')),allLeaves);
+     }
+    }
+    assert(!/Other sectors|Other [\d,]+ donors/.test(await section.locator('[data-donor-visuals]').innerText()),'no synthetic Other buckets');
 
     const marks=await section.locator('[data-chart] svg circle,[data-chart] svg polygon,[data-chart] svg path').evaluateAll(nodes=>nodes.map(n=>({fill:n.getAttribute('fill'),opacity:n.getAttribute('fill-opacity')})));
     for(const mark of marks){if(mark.fill&&!['none','#fff'].includes(mark.fill))assert(approvedChartColors.includes(mark.fill),'selected swatch only: '+mark.fill);if(mark.opacity!==null)assert.equal(Number(mark.opacity),1);}
@@ -72,7 +93,7 @@ try{
    await page.locator('.popc-ai-launcher').click();
    await page.getByRole('button',{name:'Total contributions',exact:true}).click();
    await page.waitForFunction(()=>document.querySelector('.popc-ai-state')?.textContent==='Answer ready',{},{timeout:60000});
-   assert((await page.locator('.popc-ai-messages').innerText()).includes(file==='index.html'?'All eight committees':'All three committees'));
+   const answer=await page.locator('.popc-ai-messages').innerText();assert(answer.includes(file==='index.html'?'All eight committees':'All three committees'),file+': '+answer);
   }
   if(file==='pages/combined-contributions.html'){
    await page.setViewportSize({width:390,height:844});

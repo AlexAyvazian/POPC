@@ -1,4 +1,4 @@
-import {renderCommittee} from './committee-tables.js?v=master-sectors1';
+import {renderCommittee} from './committee-tables.js?v=categories1';
 renderCommittee({
   "paths": [
     "/data/jeffries/jbpf-individuals.json",

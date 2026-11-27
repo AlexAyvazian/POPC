@@ -1278,7 +1278,10 @@ export const businessIdentities = [
     "sources": [
       "https://www.foundationsearch.com/990/ARCHIVE/3/THE%20IRVING%20HARRIS%20FOUNDATION%202000%20366055115.PDF"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Education",
+    "sectorEvidence": "The researched legal name identifies a children’s research and education institute.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -2046,7 +2049,10 @@ export const businessIdentities = [
       "https://www.everytown.org/charitable-solicitation-disclosures",
       "https://www.fec.gov/data/committee/C00640086"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Gun safety",
+    "sectorEvidence": "The researched organization and existing sources identify gun-safety advocacy; the separate federal PAC remains distinct.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -3219,7 +3225,10 @@ export const businessIdentities = [
       "https://www.fec.gov/data/committee/C00139659",
       "https://www.jacpac.org/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Political committees & advocacy",
+    "sectorEvidence": "The existing FEC source identifies a qualified nonconnected political committee.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -6286,7 +6295,10 @@ export const businessIdentities = [
       "https://www.wsjhs.org/sites/default/files/documents/WSJHS%20Agents%20of%20Change%20Profile%20-%20Michele%20Rosen.pdf",
       "https://cascadiapoeticslab.org/listen-2/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Civil rights & civic advocacy",
+    "sectorEvidence": "Existing research identifies a women’s leadership conference/civic initiative.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -7138,7 +7150,10 @@ export const businessIdentities = [
     "sources": [
       "https://www.fec.gov/data/committee/C00195024"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Political committees & advocacy",
+    "sectorEvidence": "The existing FEC source identifies a qualified unauthorized PAC.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -7484,9 +7499,13 @@ export const businessIdentities = [
     "evidence": "IRS-derived nonprofit data identifies Satoshi Action Fund under EIN 83-3502943, and the organization's official site identifies Dennis Porter as its leader. The nonprofit remains separate from any affiliated political committee.",
     "sources": [
       "https://projects.propublica.org/nonprofits/organizations/833502943",
-      "https://www.satoshiaction.io/home"
+      "https://www.satoshiaction.io/home",
+      "https://www.satoshiaction.io/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Technology",
+    "sectorEvidence": "Existing research identifies the exact advocacy organization; its official site describes its focus on Bitcoin.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -7516,7 +7535,10 @@ export const businessIdentities = [
       "https://www.ajc.org/sites/default/files/pdf/2025-10/AJC-2024-Form-990-Public-Disclosure-Version.pdf",
       "https://www.pryorcashman.com/e-robert-goodkind"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Foreign policy & advocacy",
+    "sectorEvidence": "The existing identity sources identify the American Jewish Committee.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -7813,7 +7835,10 @@ export const businessIdentities = [
       "https://projects.propublica.org/nonprofits/organizations/821780610",
       "https://leadershipnowproject.org/team/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Civil rights & civic advocacy",
+    "sectorEvidence": "Existing source-backed research identifies the nonprofit civic organization, separately from its education fund and PAC.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -8482,7 +8507,10 @@ export const businessIdentities = [
       "https://www.adl.org/sites/default/files/pdfs/2025-07/FY24%20ADL%20990%20Public%20Disclosure.pdf",
       "https://www.adl.org/staff/dr-sharon-s-nazarian"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Civil rights & civic advocacy",
+    "sectorEvidence": "Existing research identifies a nonprofit civil-rights organization.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -8769,7 +8797,10 @@ export const businessIdentities = [
       "https://familygateway.org/wp-content/uploads/2025/11/Family-Gateway-2024-990.pdf",
       "https://familygateway.org/about/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Nonprofit & philanthropy",
+    "sectorEvidence": "Existing research identifies a family homelessness services nonprofit.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -8832,7 +8863,10 @@ export const businessIdentities = [
       "https://docs.candid.org/990/521/521844823/521844823_2025_202601339349307120_990.pdf",
       "http://hillel.org/executive-leadership"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Nonprofit & philanthropy",
+    "sectorEvidence": "Existing research identifies a Jewish campus-life nonprofit.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -8847,7 +8881,10 @@ export const businessIdentities = [
       "https://icic.org/member/steve-grossman/",
       "https://projects.propublica.org/nonprofits/organizations/133772904"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Nonprofit & philanthropy",
+    "sectorEvidence": "Existing research identifies the nonprofit organization. A more specific industry is not asserted by its identity evidence.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -8967,9 +9004,13 @@ export const businessIdentities = [
     "sources": [
       "https://possiblezone.org/about-us/board-of-directors",
       "https://possiblezone.org/team-member/mark-levin",
-      "https://www.charitynavigator.org/ein/271544896"
+      "https://www.charitynavigator.org/ein/271544896",
+      "https://possiblezone.org/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Education",
+    "sectorEvidence": "The official organization describes entrepreneurship education for young people; the existing research resolves the exact operating/legal identity.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -9000,7 +9041,10 @@ export const businessIdentities = [
       "https://www.digitalcitizensalliance.org/about/meet-digital-citizens-alliance-team",
       "https://www.digitalcitizensalliance.org/about/about-the-digital-citizens-alliance"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Civil rights & civic advocacy",
+    "sectorEvidence": "Existing research identifies a nonprofit advocacy organization.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -9016,7 +9060,10 @@ export const businessIdentities = [
       "https://goddard.org/about/staff",
       "https://goddard.org/press-releases/testimony-of-executive-director-roderick-l-jones-on-the-city-budget"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Nonprofit & philanthropy",
+    "sectorEvidence": "Existing research identifies a community-services nonprofit.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -9124,7 +9171,10 @@ export const businessIdentities = [
       "http://www.jewishcleveland.org/who-we-are/board-staff",
       "https://www.clevelandjewishnews.com/differencemakers/2021_difference_makers/amy-r-kaplan/article_d87aa28c-5869-11ec-992d-dfddae618bb1.html"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Nonprofit & philanthropy",
+    "sectorEvidence": "Existing research identifies a nonprofit federation/community organization.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -9153,7 +9203,10 @@ export const businessIdentities = [
     "sources": [
       "https://authorsguild.org/about/team/staff-directory/mary-rasenberger"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Media & entertainment",
+    "sectorEvidence": "Existing research identifies the authors’ professional membership organization.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -9743,7 +9796,10 @@ export const businessIdentities = [
       "https://theamfund.org/",
       "https://projects.propublica.org/nonprofits/organizations/46956130"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Nonprofit & philanthropy",
+    "sectorEvidence": "Existing research identifies a private philanthropic foundation.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -10157,7 +10213,10 @@ export const businessIdentities = [
     "sources": [
       "https://www.hackensackmeridianhealth.org/-/media/project/hmh/hmh/public/about-us/files/annual-audited-financial-statements/2025/2025-hmh-audited-financial-statements-njdoh-with-hospitals.pdf"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Healthcare",
+    "sectorEvidence": "Existing research identifies an integrated healthcare network.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -10202,7 +10261,10 @@ export const businessIdentities = [
       "https://lbucommunityclinic.org/leadership",
       "https://projects.propublica.org/nonprofits/organizations/751378664"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Healthcare",
+    "sectorEvidence": "Existing research identifies a community health center.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -10337,7 +10399,10 @@ export const businessIdentities = [
       "https://olshf.org/about",
       "https://olshf.org/trustees"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Healthcare",
+    "sectorEvidence": "The researched organization’s name and existing official source identify sight/hearing health services.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -10616,7 +10681,10 @@ export const businessIdentities = [
       "https://www.bitterrootrcd.org/working-with-mna",
       "https://www.blueforest.org/our-impact/insights-news-resources/partner-profile-bitter-root-rcd/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Environment & conservation",
+    "sectorEvidence": "Existing research identifies a resource-conservation and rural-development nonprofit.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -10678,7 +10746,10 @@ export const businessIdentities = [
       "https://www.oregon.gov/oha/FOD/Filings/SCAN-Communication-dated-3-27-2023-PUBLIC-RECORDS-VERSION.pdf",
       "https://opengovus.com/sam-entity/LM6ZPVK2JTM5"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Health insurance",
+    "sectorEvidence": "Existing research identifies the legal nonprofit health-plan entity.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -10721,7 +10792,10 @@ export const businessIdentities = [
     "sources": [
       "https://projects.propublica.org/nonprofits/organizations/522204367"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Nonprofit & philanthropy",
+    "sectorEvidence": "Existing research identifies a private philanthropic foundation.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -10899,7 +10973,10 @@ export const businessIdentities = [
       "https://www.als.org/",
       "https://tnpa.org/jobs/pam-knott/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Healthcare",
+    "sectorEvidence": "The researched national nonprofit is focused on ALS.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -10914,7 +10991,10 @@ export const businessIdentities = [
       "https://www.westcoastblacktheatre.org/directory/julie-leach/",
       "https://projects.propublica.org/nonprofits/organizations/651040662"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Media & entertainment",
+    "sectorEvidence": "Existing research identifies a performing-arts nonprofit.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -11044,7 +11124,10 @@ export const businessIdentities = [
       "https://citizensunion.org/document/2025-02-07/citizens-union-announces-retirement-of-executive-director-betsy-gotbaum/",
       "https://citizensunion.org/leadership-and-staff-2/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Civil rights & civic advocacy",
+    "sectorEvidence": "Existing research identifies a New York civic-reform nonprofit.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -11276,7 +11359,10 @@ export const businessIdentities = [
       "https://www.woodruffcenter.org/people/eleanor-tarvin/",
       "https://projects.propublica.org/nonprofits/organizations/580633971"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Media & entertainment",
+    "sectorEvidence": "Existing research identifies the legal arts organization.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -11790,7 +11876,10 @@ export const businessIdentities = [
       "https://philanthropy.org/990/report/472566672/transition-express-inc",
       "https://www.charitynavigator.org/ein/472566672"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Nonprofit & philanthropy",
+    "sectorEvidence": "Existing research identifies a human-services nonprofit.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -11805,7 +11894,10 @@ export const businessIdentities = [
       "https://projects.propublica.org/nonprofits/organizations/455316035",
       "https://www.archdaily.com/777536/rex-to-design-world-trade-center-performing-arts-building"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Media & entertainment",
+    "sectorEvidence": "Existing research identifies a performing-arts organization.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -14951,7 +15043,10 @@ export const businessIdentities = [
     "sources": [
       "https://tcf.org/about/"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Public policy research",
+    "sectorEvidence": "The existing official source identifies an independent public-policy think tank.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -16677,7 +16772,10 @@ export const businessIdentities = [
     "sources": [
       "https://www.fec.gov/data/committee/C00488387/?cycle=2026&tab=about-committee"
     ],
-    "reviewed": "2026-11-25"
+    "reviewed": "2026-11-25",
+    "sector": "Political committees & advocacy",
+    "sectorEvidence": "The existing FEC source identifies a federal political committee.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -18760,5 +18858,45 @@ export const businessIdentities = [
       "https://kdlm.com/about-us-kdlm/"
     ],
     "reviewed": "2026-11-25"
+  },
+  {
+    "aliases": [
+      "SOLANA FOUNDATION"
+    ],
+    "name": "SOLANA FOUNDATION",
+    "status": "Source-backed",
+    "scope": "Nonprofit foundation / blockchain ecosystem organization",
+    "parent": "",
+    "sector": "Technology",
+    "evidence": "The official site identifies Solana Foundation as the nonprofit focused on decentralization, adoption and security of the Solana ecosystem. The exact reported employer name is retained; no parent or employee role is asserted.",
+    "sources": [
+      "https://solana.org/"
+    ],
+    "reviewed": "2026-11-26",
+    "recordTypes": [
+      "individual"
+    ],
+    "sectorEvidence": "The official site identifies Solana Foundation as the nonprofit focused on decentralization, adoption and security of the Solana ecosystem. The exact reported employer name is retained; no parent or employee role is asserted.",
+    "sectorReviewed": "2026-11-26"
+  },
+  {
+    "aliases": [
+      "BROOKINGS"
+    ],
+    "name": "BROOKINGS",
+    "status": "Source-backed",
+    "scope": "Public-facing organization name / public-policy research institution",
+    "parent": "",
+    "sector": "Public policy research",
+    "evidence": "Brookings’ official About Us page identifies its nonpartisan research and policy-strategy mission. The reported employer name is retained at public-facing organization scope.",
+    "sources": [
+      "https://www.brookings.edu/about-us/"
+    ],
+    "reviewed": "2026-11-26",
+    "recordTypes": [
+      "individual"
+    ],
+    "sectorEvidence": "Brookings’ official About Us page identifies its nonpartisan research and policy-strategy mission. The reported employer name is retained at public-facing organization scope.",
+    "sectorReviewed": "2026-11-26"
   }
 ];

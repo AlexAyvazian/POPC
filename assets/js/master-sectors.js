@@ -1,6 +1,6 @@
-import {businessIdentities} from '../../data/jeffries/business-identities.js';
-import {schumerIdentities} from '../../data/schumer/schumer-identities.js';
-export const masterSectors=Object.freeze(["Aerospace & defense","Agriculture, food & beverage","Cannabis","Construction & infrastructure","Diversified business group","Education","Energy & utilities","Facilities & environmental services","Finance & investment","Foreign policy & advocacy","Furniture & woodworking","Government & public sector","Health insurance","Healthcare","Hospitality & gaming","Insurance","Labor unions","Legal services","Lobbying & public affairs","Manufacturing & automotive","Media & entertainment","Metals & materials processing","Nonprofit & philanthropy","Other advocacy","Pharmaceuticals & biotechnology","Political committees & advocacy","Professional services","Real estate & housing","Retail & consumer","Security services","Technology","Telecommunications","Trade associations","Transportation","Tribal nations & governments","Personal status / unreported employer","Sector unresolved / ambiguous"]);
+import {businessIdentities} from '../../data/jeffries/business-identities.js?v=categories1';
+import {schumerIdentities} from '../../data/schumer/schumer-identities.js?v=categories1';
+export const masterSectors=Object.freeze(["Aerospace & defense","Agriculture, food & beverage","Cannabis","Construction & infrastructure","Diversified business group","Education","Energy & utilities","Facilities & environmental services","Finance & investment","Foreign policy & advocacy","Furniture & woodworking","Government & public sector","Health insurance","Healthcare","Hospitality & gaming","Insurance","Labor unions","Legal services","Lobbying & public affairs","Manufacturing & automotive","Media & entertainment","Metals & materials processing","Nonprofit & philanthropy","Civil rights & civic advocacy","Environment & conservation","Gun safety","Public policy research","Pharmaceuticals & biotechnology","Political committees & advocacy","Professional services","Real estate & housing","Retail & consumer","Security services","Technology","Telecommunications","Trade associations","Transportation","Tribal nations & governments","Personal status / unreported employer","Sector unresolved / ambiguous"]);
 const status=/^(NOT EMPLOYED|RETIRED|SELF[ -]?EMPLOYED|SELF|N\/A|NA|NONE|NULL|NOT REPORTED|INFORMATION REQUESTED|INFORMATION REQUESTED PER BEST EFFORTS|UNEMPLOYED|HOMEMAKER|HOME MAKER|STUDENT|UNKNOWN|NOT AVAILABLE|REQUESTED|NOT PROVIDED|NOT DISCLOSED|DECLINED|REFUSED)$/i;
 const rules=[
 ["Tribal Nations & Governments",/\b(TRIBE|TRIBAL|INDIAN NATION|INDIAN COMMUNITY|BAND OF (?:INDIANS|MIWOK)|POTAWATOMI|POTTAWATOMI|CHICKASAW NATION|ONEIDA NATION|CHEROKEE NATION|SEMINOLE TRIBE|POARCH BAND|YOCHA DEHE|PECHANGA)\b/],
@@ -27,7 +27,14 @@ const rules=[
 ["Retail & Consumer Goods",/\b(RETAIL|GROCERY|CONVENIENCE STORES|WALMART|TARGETCITIZENS|BEST BUY|HOME DEPOT|LOWE'S|GAP INC|TRACTOR SUPPLY|PROCTER & GAMBLE|CONSUMER BRANDS|COUPANG|ALBERTSONS|WAWA|AWAY|ORCHID BAY|LTD X LIZZIE TISCH)\b/],
 ["Cannabis",/\b(CANNABIS|DUTCHIE|GREEN THUMB INDUSTRIES|TRULIEVE|VERANO|NABIS|JUSHI|C3 INDUSTRIES|BUCKEYE RELIEF)\b/],
 ["Education & School Choice",/\b(UNIVERSITY|COLLEGE|SCHOOL DISTRICT|SCHOOLS|SCHOOL|KIPP|EDUCATION REFORM|DEMOCRATS FOR EDUCATION REFORM|TEACHERS|EDUCATION|ACADEMY|CHARTER SCHOOL|UNIV\.)\b/],
-["Civil Rights, Environment & Other Advocacy",/\b(HUMAN RIGHTS CAMPAIGN|GIFFORDS|JSTREET|J STREET|END CITIZENS UNITED|SIERRA CLUB|LEAGUE OF CONSERVATION VOTERS|HUMANE SOCIETY|HUMANE WORLD|PLANNED PARENTHOOD|NATIONAL ORGANIZATION FOR WOMEN|DISABILITY REPRESENTATIVES|SOCIAL WORKERS|MURMURATION|CHICAGO CRED|ARNOLD VENTURES|PIVOTAL VENTURES|FOUNDATION|NONPROFIT|CHARITY)\b/],
+["Gun safety",/\b(EVERYTOWN|GIFFORDS|GUN SAFETY|GUN VIOLENCE)\b/],
+["Environment & conservation",/\b(SIERRA CLUB|LEAGUE OF CONSERVATION VOTERS|HUMANE SOCIETY|HUMANE WORLD|RESOURCE CONSERVATION|CONSERVATION AND DEVELOPMENT)\b/],
+["Civil rights & civic advocacy",/\b(HUMAN RIGHTS CAMPAIGN|ANTI-DEFAMATION LEAGUE|CITIZENS UNION|NATIONAL ORGANIZATION FOR WOMEN|DISABILITY REPRESENTATIVES|SOCIAL WORKERS|CHICAGO CRED|LEADERSHIP NOW PROJECT|INTERNATIONAL WOMEN'S CONFERENCE)\b/],
+["Public policy research",/\b(BROOKINGS|CENTURY FOUNDATION|THINK TANK)\b/],
+["Foreign policy & advocacy",/\b(JSTREET|J STREET|AMERICAN JEWISH COMMITTEE)\b/],
+["Healthcare",/\b(PLANNED PARENTHOOD|ALS ASSOCIATION|HEMOPHILIA|MENTAL HYGIENE)\b/],
+["Nonprofit & philanthropy",/\b(ARNOLD VENTURES|PIVOTAL VENTURES|FOUNDATION|NONPROFIT|CHARITY)\b/],
+["Political committees & advocacy",/\b(END CITIZENS UNITED)\b/],
 ["Government & Public Sector",/\b(CITY OF|COUNTY OF|STATE OF|U\.S\. DEPARTMENT|US DEPARTMENT|GOVERNMENT OF|GOVERNMENT AGENCY|DEPARTMENT OF|PUBLIC SECTOR|US GOVERNMENT|FEDERAL GOVERNMENT|NATIONAL WEATHER SERVICE|NARFE)\b/],
 ["Political Committees & Fundraising Intermediaries",/\b(ACTBLUE|DEMOCRATIC|DEMOCRATS|DEMINGS PAC|CROSSPARTISAN|LEADERSHIP PAC|VICTORY FUND|POLITICAL PARTY|POLITICAL COMMITTEES|CAMPAIGN COMMITTEE)\b/]
 ];
@@ -37,6 +44,7 @@ const normalize=s=>String(s||"").trim().replace(/\s+/g," ").toUpperCase();
 export function canonicalSector(name,label){
 const l=String(label||"").trim(), lower=l.toLowerCase();
 if(masterSectors.includes(l))return l;
+if(/^(Other advocacy|Civil Rights, Environment & Other Advocacy)$/i.test(l))return name?canonicalSector(name,sector(name)):"Sector unresolved / ambiguous";
 if(/cosmetics|personal care|electrical equipment|^manufacturing$/i.test(l))return "Manufacturing & automotive";
 if(/landscaping|waste|environmental services/i.test(l))return "Facilities & environmental services";
 if(/window coverings|commercial shade contractor/i.test(l))return "Construction & infrastructure";
@@ -82,7 +90,11 @@ if(/lobby|public affairs|government relations/i.test(l))return "Lobbying & publi
 if(/government|public sector/i.test(l))return "Government & public sector";
 if(/consulting|professional|accounting/i.test(l))return "Professional services";
 if(/nonprofit|philanthrop/i.test(l))return "Nonprofit & philanthropy";
-if(/civil rights|environment|advocacy/i.test(l))return "Other advocacy";
+if(/civil rights|social action|civic/i.test(l))return "Civil rights & civic advocacy";
+if(/environment|conservation/i.test(l))return "Environment & conservation";
+if(/gun safety|gun violence/i.test(l))return "Gun safety";
+if(/think tank|public.policy research/i.test(l))return "Public policy research";
+if(/advocacy/i.test(l))return "Political committees & advocacy";
 if(!l){
   const inferred=sector(name);
   return /unconfirmed|unverified|unclear|unresolved|ambiguous/i.test(inferred)?"Sector unresolved / ambiguous":canonicalSector(name,inferred);
@@ -96,7 +108,7 @@ const exactSectorOverrides=new Map(Object.entries({
 "STREAM LINE CIRCLE LLC":"Transportation",
 "LIBRA GROUP":"Diversified business group",
 "BHANDAL SECURITY":"Security services",
-"NW INTERNATIONAL WOMEN'S CONFERENCE":"Other advocacy",
+"NW INTERNATIONAL WOMEN'S CONFERENCE":"Civil rights & civic advocacy",
 "JSI":"Healthcare",
 "HSK CONSULTING LLC":"Professional services",
 "HSK CONSULTING":"Professional services",
@@ -126,7 +138,7 @@ const exactSectorOverrides=new Map(Object.entries({
 "WEST AND FEINBERG, P.C.":"Legal services",
 "HOUSTON INTERNATIONAL DANCE COALITION":"Media & entertainment",
 "BERGER SINGERMAN LLP":"Legal services",
-"BROOKINGS":"Other advocacy",
+"BROOKINGS":"Public policy research",
 "WEINBERG & COMPANY P.C.":"Professional services",
 "MARYLAND GENERAL ASSEMBLY":"Government & public sector",
 "WASHINGTON INDEPENDENT PRODUCTIONS":"Media & entertainment",
@@ -161,6 +173,11 @@ function sectorFromIdentityScope(name,type="*"){
   if(!entry||entry.status!=="Source-backed")return "";
   const s=String(entry.scope||"").toUpperCase();
   const scopeRules=[
+    ["Public policy research",/\b(THINK TANK|PUBLIC[- ]POLICY RESEARCH)\b/],
+    ["Health insurance",/\b(HEALTH[- ]PLAN|HEALTH INSURANCE|MANAGED CARE)\b/],
+    ["Gun safety",/\b(GUN SAFETY|GUN VIOLENCE)\b/],
+    ["Environment & conservation",/\b(RESOURCE[- ]CONSERVATION|ENVIRONMENTAL ADVOCACY)\b/],
+    ["Civil rights & civic advocacy",/\b(CIVIL[- ]RIGHTS|CIVIC[- ]REFORM|CIVIC INITIATIVE|WOMEN'S CONFERENCE)\b/],
     ["Political committees & advocacy",/\b(FEDERAL .*POLITICAL COMMITTEE|POLITICAL COMMITTEE|CAMPAIGN COMMITTEE|PAC\b)/],
     ["Government & public sector",/\b(PUBLIC AUTHORITY|GOVERNMENT|PUBLIC SECTOR|SOVEREIGN TRIBAL)\b/],
     ["Finance & investment",/\b(INVESTMENT|VENTURE[- ]CAPITAL|PRIVATE[- ]EQUITY|HEDGE FUND|ASSET|TRADING|BROKERAGE|FINANCIAL[- ]SERVICES|FAMILY OFFICE|PRIVATE[- ]CAPITAL)\b/],
@@ -183,7 +200,7 @@ function sectorFromIdentityScope(name,type="*"){
     ["Professional services",/\b(CONSULTING|CONSULTANCY|ADVISORY|STRATEGY|COMMUNICATIONS FIRM|INTERIOR[- ]DESIGN|INTERIOR DESIGN|PROFESSIONAL[- ]SERVICES|STAFFING|PLACEMENT)\b/],
     ["Manufacturing & automotive",/\b(MANUFACTURING|MANUFACTURER|INDUSTRIAL|AUTOMOTIVE)\b/],
     ["Agriculture, food & beverage",/\b(AGRICULTURAL|AGRICULTURE|FOOD|BEVERAGE|SEAFOOD|FARM)\b/],
-    ["Other advocacy",/\b(NONPROFIT|PHILANTHROP|ADVOCACY|FOUNDATION|CIVIC INITIATIVE|WOMEN'S CONFERENCE)\b/]
+    ["Nonprofit & philanthropy",/\b(NONPROFIT|PHILANTHROP|FOUNDATION)\b/]
   ];
   for(const [label,re] of scopeRules)if(re.test(s))return label;
   return "";
@@ -203,6 +220,17 @@ for(const entry of [...businessIdentities,...schumerIdentities]){
 function lookupIdentity(name,type='*'){
  const key=normalize(name);
  return researchIndex.get(type+'|'+key)||researchIndex.get('*|'+key);
+}
+function refineBroadSector(name,label,type){
+ if(label==="Political committees & advocacy"){
+  const focused=canonicalSector(name,sector(name));
+  return ["Gun safety","Environment & conservation","Civil rights & civic advocacy","Foreign policy & advocacy"].includes(focused)?focused:label;
+ }
+ if(label!=="Nonprofit & philanthropy")return label;
+ const activity=sectorFromIdentityScope(name,type);
+ if(activity)return activity;
+ const named=canonicalSector(name,sector(name));
+ return named!=="Sector unresolved / ambiguous"&&named!=="Personal status / unreported employer"?named:label;
 }
 function hintKey(name,type){const entry=lookupIdentity(name,type);return type+'|'+normalize(entry?.status==='Source-backed'?entry.name:name);}
 let masterHints=new Map(),conflictingHints=new Set(),pending;
@@ -243,16 +271,16 @@ export function classifySectorLabel(name,mappedLabel='',globalSectors=new Map(),
  if(exact)return canonicalSector('',exact);
  // Shared direct-receipt hints are loaded once; memo rows never contribute hints.
  const key=hintKey(n,type),shared=masterHints.get(key);
- if(shared)return shared;
+ if(shared)return refineBroadSector(canonical,shared,type);
  if(type==='*'){
   const labels=new Set(['individual','organization'].map(t=>masterHints.get(hintKey(n,t))).filter(Boolean));
-  if(labels.size===1)return [...labels][0];
+  if(labels.size===1)return refineBroadSector(canonical,[...labels][0],type);
  }
  const supplied=globalSectors.get(n);
- if(supplied&&!unknownSectorLabel(supplied))return canonicalSector(n,supplied);
- if(mappedLabel&&!unknownSectorLabel(mappedLabel)&&!conflictingHints.has(key))return canonicalSector(n,mappedLabel);
+ if(supplied&&!unknownSectorLabel(supplied))return refineBroadSector(canonical,canonicalSector(n,supplied),type);
+ if(mappedLabel&&!unknownSectorLabel(mappedLabel)&&!conflictingHints.has(key))return refineBroadSector(canonical,canonicalSector(n,mappedLabel),type);
  const researched=sectorFromIdentityScope(canonical,type);
- if(researched)return researched;
+ if(researched)return refineBroadSector(canonical,researched,type);
  return canonicalSector(canonical,sector(canonical));
 }
 export function masterSectorForRecord(record){

@@ -1,4 +1,4 @@
-import {loadMasterSectors,normalizeSectorRows} from './master-sectors.js';
+import {loadMasterSectors,normalizeSectorRows} from './master-sectors.js?v=categories1';
 (() => {
   "use strict";
   const currency = new Intl.NumberFormat("en-US", {style:"currency",currency:"USD"});

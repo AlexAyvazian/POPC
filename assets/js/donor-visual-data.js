@@ -1,4 +1,4 @@
-import {masterSectorForRecord} from './master-sectors.js';
+import {masterSectorForRecord} from './master-sectors.js?v=categories1';
 const sort=(a,b)=>b.amount-a.amount||a.name.localeCompare(b.name);
 export function buildVisualData(groups){
  const sectors=new Map();let total=0,receipts=0,positive=0,adjustments=0;
@@ -22,17 +22,10 @@ export function buildVisualData(groups){
  return {groups:groups.length,total,receipts,positive,adjustments,sectors:result,areaTotal:result.reduce((n,s)=>n+s.leaves.reduce((a,l)=>a+l.amount,0),0)};
 }
 export function radarData(model){
- const all=model.sectors.map(s=>({name:s.name,amount:s.leaves.reduce((n,l)=>n+l.amount,0)})).filter(s=>s.amount>0).sort(sort);
- const result=all.slice(0,7),other=all.slice(7).reduce((n,s)=>n+s.amount,0);if(other)result.push({name:'Other sectors',amount:other});
- while(result.length>0&&result.length<3)result.push({name:'No additional sector',amount:0});
- return result.map(s=>({...s,share:model.areaTotal?s.amount/model.areaTotal:0}));
+ return model.sectors.map(s=>({name:s.name,amount:s.leaves.reduce((n,l)=>n+l.amount,0)})).filter(s=>s.amount>0).sort(sort).map(s=>({...s,share:model.areaTotal?s.amount/model.areaTotal:0}));
 }
-export function packingData(model,limit=12){
- return {name:'All sectors',children:model.sectors.filter(s=>s.leaves.length).map(s=>{
-  const leaves=s.leaves.slice(0,limit).map(l=>({...l,value:l.amount}));
-  const rest=s.leaves.slice(limit);if(rest.length)leaves.push({name:`Other ${rest.length.toLocaleString()} donors`,sector:s.name,value:rest.reduce((n,l)=>n+l.amount,0),aggregate:true});
-  return {name:s.name,children:leaves};
- })};
+export function packingData(model){
+ return {name:'All sectors',children:model.sectors.filter(s=>s.leaves.length).map(s=>({name:s.name,children:s.leaves.map(l=>({...l,value:l.amount}))}))};
 }
 export function dotData(model){
  const unit=Math.max(1,Math.ceil(model.groups/400)),dots=[];

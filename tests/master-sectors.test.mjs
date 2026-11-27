@@ -70,3 +70,21 @@ test('verified aliases receive the same sector as their canonical identity',asyn
   }
  }
 });
+
+test('researched activities replace the former mixed advocacy category',async()=>{
+ globalThis.fetch=read;await loadMasterSectors();
+ for(const [name,type,want] of [
+ ['MAJORITY FORWARD','organization','Political committees & advocacy'],
+ ['GOOD VENTURES','individual','Nonprofit & philanthropy'],
+ ['CAREOREGON','individual','Health insurance'],
+ ['THE CENTURY FOUNDATION','individual','Public policy research'],
+ ['BROOKINGS','individual','Public policy research'],
+ ['SATOSHI ACTION FUND','individual','Technology'],
+ ['LBUCC','individual','Healthcare'],
+ ['PACWTC','individual','Media & entertainment'],
+ ['EVERYTOWN FOR GUN SAFETY ACTION FUND, INC. PAC (EVERYTOWN PAC)','organization','Gun safety'],
+ ['UNITED ACTION CONNECTICUT','individual','Civil rights & civic advocacy']
+ ])assert.equal(classifySectorLabel(name,'',new Map(),type),want,name);
+ assert(!masterSectors.some(s=>/\bother\b/i.test(s)));
+ assert.equal(classifySectorLabel('UNIDENTIFIED TEST ENTITY','Other advocacy'), 'Sector unresolved / ambiguous');
+});

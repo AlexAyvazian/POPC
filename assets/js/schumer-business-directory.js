@@ -1,5 +1,5 @@
-import {config} from './schumer-research-data.js?v=master-sectors1';
-import {buildDirectory, selectDirectory, directoryCSV, loadDirectoryRecords} from './schumer-business-directory-data.js?v=master-sectors1';
+import {config} from './schumer-research-data.js?v=categories1';
+import {buildDirectory, selectDirectory, directoryCSV, loadDirectoryRecords} from './schumer-business-directory-data.js?v=categories1';
 
 const $ = id => document.getElementById(id);
 const money = n => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD'}).format(n / 100);

@@ -1,4 +1,4 @@
-import {masterSectorForRecord} from './master-sectors.js';
+import {masterSectorForRecord} from './master-sectors.js?v=categories1';
 // Amounts are integer cents. Consolidate the full page scope before filtering.
 const normalize = value => String(value ?? '').trim().replace(/\s+/g, ' ').toUpperCase();
 export function groupDonors(records, identifyName = null) {

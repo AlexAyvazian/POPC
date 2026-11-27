@@ -1,5 +1,5 @@
-import {mountDonorVisuals} from './donor-visuals.js?v=sequential1';
-import {groupDonors} from './donor-groups.js?v=master-sectors1';
+import {mountDonorVisuals} from './donor-visuals.js?v=categories1';
+import {groupDonors} from './donor-groups.js?v=categories1';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const list=set=>[...set].sort().join('; ')||'Not reported';
@@ -11,7 +11,7 @@ function researchDetails(group){
   const r=identity.research;
   if(!r)return `<div>${esc(identity.reported)}<small>Not reviewed</small></div>`;
   const sources=(r.sources||[]).filter(url=>/^https?:\/\//i.test(url));
-  return `<details class="donor-business-research"><summary>${esc(identity.name)} · ${esc(r.status)}</summary><p>Reported as: ${esc(identity.reported)}</p><p>${esc(r.scope||'')}</p>${r.parent?`<p>Parent company: ${esc(r.parent)}</p>`:''}<p>${esc(r.evidence||'')}</p><p>${sources.map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ${i+1}</a>`).join(' · ')}</p><p>Reviewed: ${esc(r.reviewed||'')}</p></details>`;
+  return `<details class="donor-business-research"><summary>${esc(identity.name)} · ${esc(r.status)}</summary><p>Reported as: ${esc(identity.reported)}</p><p>${esc(r.scope||'')}</p>${r.parent?`<p>Parent company: ${esc(r.parent)}</p>`:''}<p>${esc(r.evidence||'')}</p>${r.sectorEvidence?`<p>Sector: ${esc(r.sector)} · ${esc(r.sectorEvidence)}</p>`:''}<p>${sources.map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ${i+1}</a>`).join(' · ')}</p><p>Reviewed: ${esc(r.reviewed||'')}</p></details>`;
  }).join('');
 }
 function receiptDetails(group,config){
@@ -45,10 +45,10 @@ function table(host,key,title,description,groups,config){
 }
 async function start(host){
  try{
-  const schumer=host.dataset.network==='schumer',data=await import(schumer?'./schumer-research-data.js?v=master-sectors1':'./research-data.js?v=master-sectors1');
+  const schumer=host.dataset.network==='schumer',data=await import(schumer?'./schumer-research-data.js?v=categories1':'./research-data.js?v=categories1');
   const config=data.config,committee=host.dataset.committee;
   const records=committee?await data.loadCommittee(config.find(c=>c.key===committee)):await data.loadResearchRecords();
-  const identities=await import(schumer?'./schumer-business-directory-data.js?v=master-sectors1':'./business-directory-data.js?v=master-sectors1');
+  const identities=await import(schumer?'./schumer-business-directory-data.js?v=categories1':'./business-directory-data.js?v=categories1');
   const groups=groupDonors(records,identities.identifyName);host.replaceChildren();
   const note=document.createElement('p');note.className='donor-table-note';note.textContent='2025–2026 · Verified organization aliases are consolidated using the business research; individual gifts are combined by exact reported donor name within this page’s committees. The $500 cutoff uses each donor’s full total before search. Memo amounts are excluded.';host.append(note);
   table(host,'organizations','PACs, Political Committees & Organizations','All organizational contributions in one table.',groups.organizations,config);

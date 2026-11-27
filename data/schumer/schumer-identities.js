@@ -8,16 +8,19 @@ export const schumerIdentities = [
     "status": "Source-backed",
     "scope": "501(c)(4) nonprofit",
     "parent": "",
-    "sector": "Other advocacy",
+    "sector": "Political committees & advocacy",
     "evidence": "IRS-derived nonprofit record matches the reported Washington address; FactCheck identifies its affiliation with SMP, which is a separate committee, not a parent.",
     "sources": [
       "https://www.causeiq.com/organizations/majority-forward%2C833690373/",
-      "https://www.factcheck.org/2026/08/senate-majority-pac-7/"
+      "https://www.factcheck.org/2026/08/senate-majority-pac-7/",
+      "https://www.fec.gov/files/legal/murs/8215/8215_06.pdf"
     ],
     "reviewed": "2026-11-25",
     "recordTypes": [
       "organization"
-    ]
+    ],
+    "sectorEvidence": "Existing research identifies the SMP-affiliated advocacy nonprofit. The FEC counsel report describes its progressive-policy advocacy and voter-registration mission.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -27,7 +30,7 @@ export const schumerIdentities = [
     "status": "Source-backed",
     "scope": "501(c)(4) nonprofit",
     "parent": "",
-    "sector": "Other advocacy",
+    "sector": "Civil rights & civic advocacy",
     "evidence": "IRS-derived nonprofit profile identifies a Washington, DC social-welfare organization of this exact name; the public FEC-derived SMP receipt listing identifies the same organization. No corporate parent is established.",
     "sources": [
       "https://projects.propublica.org/nonprofits/organizations/992078540",
@@ -36,7 +39,9 @@ export const schumerIdentities = [
     "reviewed": "2026-11-25",
     "recordTypes": [
       "organization"
-    ]
+    ],
+    "sectorEvidence": "The IRS-derived nonprofit profile classifies the organization under civil rights, social action and advocacy. Its specific program focus is not inferred.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -65,16 +70,19 @@ export const schumerIdentities = [
     "status": "Source-backed",
     "scope": "501(c)(4) nonprofit",
     "parent": "",
-    "sector": "Other advocacy",
+    "sector": "Civil rights & civic advocacy",
     "evidence": "The IRS exemption determination names the organization at 420 Florida Avenue NE, Suite 114, Washington, DC, matching the uploaded contributor address; EIN 33-2238677. Do not merge the similarly named Nevada nonprofit.",
     "sources": [
       "https://apps.irs.gov/pub/epostcard/dl/FinalLetter_33-2238677_AMERICANOPPORTUNITYACTION_01172025_00.pdf",
-      "https://www.charitynavigator.org/ein/332238677"
+      "https://www.charitynavigator.org/ein/332238677",
+      "https://americanopportunityaction.org/"
     ],
     "reviewed": "2026-11-25",
     "recordTypes": [
       "organization"
-    ]
+    ],
+    "sectorEvidence": "Its official mission covers public education and advocacy on economic opportunity, reproductive rights, healthcare and education for women and families.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -104,7 +112,7 @@ export const schumerIdentities = [
     "status": "Source-backed",
     "scope": "501(c)(4) nonprofit",
     "parent": "",
-    "sector": "Other advocacy",
+    "sector": "Civil rights & civic advocacy",
     "evidence": "Official organization website distinguishes its 501(c)(4) Action Fund from the federal PAC. IRS-derived nonprofit records confirm the separate organization.",
     "sources": [
       "https://wedefendthevote.org/",
@@ -113,7 +121,9 @@ export const schumerIdentities = [
     "reviewed": "2026-11-25",
     "recordTypes": [
       "organization"
-    ]
+    ],
+    "sectorEvidence": "The official joint website identifies the separate Action Fund as advocating fair elections, voting access, voter education and voter protection.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -239,7 +249,7 @@ export const schumerIdentities = [
     "status": "Source-backed",
     "scope": "Philanthropic foundation / group",
     "parent": "",
-    "sector": "Other advocacy",
+    "sector": "Nonprofit & philanthropy",
     "evidence": "Official site confirms Cari Tuna co-founded Good Ventures; its governance page distinguishes the foundation and associated entities, so no exact legal employing entity is inferred.",
     "sources": [
       "https://goodventures.org/our-story/",
@@ -249,7 +259,9 @@ export const schumerIdentities = [
     "recordTypes": [
       "individual"
     ],
-    "batch": 2
+    "batch": 2,
+    "sectorEvidence": "Existing source-backed research identifies a philanthropic foundation/group.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -279,7 +291,7 @@ export const schumerIdentities = [
     "status": "Source-backed",
     "scope": "Nonprofit organization",
     "parent": "",
-    "sector": "Other advocacy",
+    "sector": "Nonprofit & philanthropy",
     "evidence": "The foundation's official history names Lyna Lam as founder; the name and donor context agree.",
     "sources": [
       "https://www.akhmerbuddhistfoundation.org/about"
@@ -288,7 +300,9 @@ export const schumerIdentities = [
     "recordTypes": [
       "individual"
     ],
-    "batch": 2
+    "batch": 2,
+    "sectorEvidence": "Existing source-backed research identifies the faith-based nonprofit foundation.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -647,7 +661,7 @@ export const schumerIdentities = [
     "status": "Source-backed",
     "scope": "501(c)(4) nonprofit",
     "parent": "",
-    "sector": "Other advocacy",
+    "sector": "Political committees & advocacy",
     "evidence": "Official website and nonprofit records identify the exact advocacy fund, separately from the affiliated foundation.",
     "sources": [
       "https://campionadvocacyfund.org/about/",
@@ -657,7 +671,9 @@ export const schumerIdentities = [
     "recordTypes": [
       "organization"
     ],
-    "batch": 4
+    "batch": 4,
+    "sectorEvidence": "The official website describes direct advocacy in legislative and political arenas, covering housing/homelessness and public lands/climate. The separate charitable foundation is not merged.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [
@@ -7386,7 +7402,7 @@ export const schumerIdentities = [
     "status": "Source-backed",
     "scope": "501(c)(3) nonprofit",
     "parent": "",
-    "sector": "Civil rights / social action / advocacy",
+    "sector": "Civil rights & civic advocacy",
     "evidence": "Aliases / DBA: United Action Connecticut; UACT. Resolved to United Action Connecticut Inc., EIN 06-1525092, Meriden, Connecticut. ProPublica Nonprofit Explorer identifies it as a 501(c)(3) civil-rights/social-action/advocacy nonprofit. SMP donor John S. Volpini is reported as its President.",
     "sources": [
       "https://raw.githubusercontent.com/AlexAyvazian/POPC/main/schumer_remaining_entity_research_COMPLETED.csv",
@@ -7396,7 +7412,9 @@ export const schumerIdentities = [
     "reviewed": "2026-11-25",
     "recordTypes": [
       "individual"
-    ]
+    ],
+    "sectorEvidence": "Existing source-backed research identifies civil-rights/social-action advocacy.",
+    "sectorReviewed": "2026-11-26"
   },
   {
     "aliases": [

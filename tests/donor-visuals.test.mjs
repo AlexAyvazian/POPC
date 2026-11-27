@@ -23,7 +23,8 @@ test('all three table datasets in all 13 tabs reconcile to their four visual mod
    assert.equal(sum(dots.dots,'count'),groups.length);
    assert.equal(sum(radar,'amount'),model.areaTotal);
    assert.equal(packed.children.flatMap(s=>s.children).reduce((n,l)=>n+l.value,0),model.areaTotal);
-   assert(packed.children.every(s=>s.children.length<=13));assert(dots.dots.length<=437);
+   assert.deepEqual(packed.children.map(s=>[s.name,s.children.length]),model.sectors.filter(s=>s.leaves.length).map(s=>[s.name,s.leaves.length]));
+   assert(radar.every(s=>masterSectors.includes(s.name)));assert(packed.children.every(s=>s.children.every(l=>l.key&&!l.aggregate)));assert(dots.dots.length<=440);
    assert(model.sectors.every(s=>masterSectors.includes(s.name)));
    if(packed.children.length){const tree=pack().size([300,300]).padding(3)(hierarchy(packed).sum(d=>d.value||0));for(const leaf of tree.leaves())assert(Number.isFinite(leaf.r)&&leaf.r>=0);}
   }
@@ -41,4 +42,10 @@ test('negative adjustments, split sectors, empty tables and single donors stay e
  assert.deepEqual(Object.keys(chartSwatches),selected);assert.equal(approvedChartColors.length,38);
  const order=sequentialColors(['Largest','Second','Third','Fourth','Fifth','Sixth','Seventh']);assert.deepEqual([...order.values()],approvedChartColors.slice(0,7));assert.equal(colorAt(0),chartSwatches.blue1);assert.equal(colorAt(6),chartSwatches.teal2);
  assert.equal(chartSwatches.blue6,'#3c57d3');assert.equal(chartSwatches.green6,'#62b036');assert.equal(new Set(chartSequence).size,38);
+});
+
+ test('radar and packing retain named categories beyond the former seven-sector and twelve-donor limits',()=>{
+ const sectors=Array.from({length:10},(_,i)=>({name:'Named sector '+i,leaves:Array.from({length:30},(_,j)=>({name:'Donor '+j,key:i+'|'+j,amount:100,sector:'Named sector '+i}))}));
+ const model={sectors,areaTotal:30000};assert.equal(radarData(model).length,10);assert.equal(packingData(model).children.flatMap(s=>s.children).length,300);
+ assert.equal(sum(radarData(model),'amount'),30000);assert.equal(radarData({sectors:[sectors[0]],areaTotal:3000}).length,1);
 });

@@ -1,5 +1,5 @@
-import {businessIdentities} from '../../data/jeffries/business-identities.js?v=master-sectors1';
-import {normalize, config, occupationGroup, classifySectorLabel, loadResearchRecords} from './research-data.js?v=master-sectors1';
+import {businessIdentities} from '../../data/jeffries/business-identities.js?v=categories1';
+import {normalize, config, occupationGroup, classifySectorLabel, loadResearchRecords} from './research-data.js?v=categories1';
 
 export async function loadDirectoryRecords() {
   const direct = await loadResearchRecords();
