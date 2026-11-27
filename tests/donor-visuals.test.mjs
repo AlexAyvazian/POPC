@@ -38,10 +38,11 @@ test('negative adjustments, split sectors, empty tables and single donors stay e
  assert.equal(dotData(m).length,2);assert.equal(sum(sectorShareData(m),'amount'),79900);
  const empty=buildVisualData([]);assert.equal(sectorShareData(empty).length,0);assert.equal(packingData(empty).children.length,0);assert.equal(dotData(empty).length,0);
  assert.deepEqual(chartSequence,approvedChartColors);
- const selected=['blue1','blue2','blue3','blue4','blue5','blue6','teal2','teal3','teal4','teal5','green1','green2','green3','green4','green5','green6','yellow1','yellow2','yellow3','yellow4','orange1','orange2','orange3','orange4','orange5','red1','red2','red3','red4','red6','pink1','pink2','pink3','pink4','purple1','purple2','purple3','purple4'];
- assert.deepEqual(Object.keys(chartSwatches),selected);assert.equal(approvedChartColors.length,38);
- const order=sequentialColors(['Largest','Second','Third','Fourth','Fifth','Sixth','Seventh']);assert.deepEqual([...order.values()],approvedChartColors.slice(0,7));assert.equal(colorAt(0),chartSwatches.blue1);assert.equal(colorAt(6),chartSwatches.teal2);
- assert.equal(chartSwatches.blue6,'#3c57d3');assert.equal(chartSwatches.green6,'#62b036');assert.equal(new Set(chartSequence).size,38);
+ const selected=['blue2','blue3','blue4','blue5','blue6','blue7','blue8','blue9','teal2','teal3','teal4','teal5','teal6','teal7','teal8','teal9','green2','green3','green4','green5','green6','green7','green8','green9','yellow2','yellow3','yellow4','yellow5','yellow6','yellow7','yellow8','yellow9','orange2','orange3','orange4','orange5','orange6','orange7','orange8','orange9','red2','red3','red4','red5','red6','red7','red8','red9','pink2','pink3','pink4','pink5','pink6','pink7','pink8','pink9','purple2','purple3','purple4','purple5','purple6','purple7','purple8','purple9'];
+ assert.deepEqual(Object.keys(chartSwatches),selected);assert.equal(approvedChartColors.length,64);
+ assert(Object.keys(chartSwatches).every(k=>!k.endsWith('1')),'all row-1 colors are excluded');
+ const order=sequentialColors(Array.from({length:12},(_,i)=>'Sector '+(i+1)));assert.deepEqual([...order.values()],approvedChartColors.slice(0,12));assert.equal(colorAt(0),chartSwatches.blue2);assert.equal(colorAt(7),chartSwatches.blue9);assert.equal(colorAt(8),chartSwatches.teal2);
+ assert.equal(chartSwatches.blue2,'#89c9f1');assert.equal(chartSwatches.purple9,'#4d1365');assert.equal(new Set(chartSequence).size,64);
 });
 
 test('sector-share visuals use Claude researched first-hand sectors by default',()=>{
