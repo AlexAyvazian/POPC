@@ -1,5 +1,5 @@
 import {chartSwatches,chartSequence,sequentialColors} from './chart-palette.js?v=claude1';
-import {buildVisualData,groupedVisualData,sectorShareData,dotData} from './donor-visual-data.js?v=researched-sectors1';
+import {buildVisualData,sectorShareData,dotData} from './donor-visual-data.js?v=researched-sectors1';
 const NS='http://www.w3.org/2000/svg';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n/100);
 const compactMoney=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',notation:'compact',maximumFractionDigits:1}).format(n/100);
@@ -100,18 +100,15 @@ function matrix(target,model,w){
  legend(target.card,model.sectors.filter(d=>d.primaryDonors).map(d=>({name:d.name,label:d.name+' · '+d.primaryDonors.toLocaleString()+' donors'})),colors);
 }
 export function mountDonorVisuals(host){
- let detailedModel=null,model=null,width=0,detail='sectors';host.className='donor-visuals';
- function render(){if(!model)return;host.replaceChildren();host.dataset.groups=model.groups;host.dataset.totalCents=model.total;
-  const summary=document.createElement('p');summary.className='dv-scope';summary.textContent=`${model.groups.toLocaleString()} donors · ${money(model.total)} · all matching donors`;host.append(summary);
-  const control=document.createElement('label');control.className='dv-detail-control';control.textContent='Sector classification ';
-  const select=document.createElement('select');select.setAttribute('aria-label','Chart sector detail');select.add(new Option('Researched sectors','sectors'));select.add(new Option('Broad sector groups','groups'));select.value=detail;control.append(select);host.append(control);host.dataset.sectorDetail=detail;
-  select.addEventListener('change',()=>{detail=select.value;model=detail==='groups'?groupedVisualData(detailedModel):detailedModel;render();});
+ let model=null,width=0;host.className='donor-visuals';
+ function render(){if(!model)return;host.replaceChildren();host.dataset.groups=model.groups;host.dataset.totalCents=model.total;host.dataset.sectorDetail='sectors';
+  const summary=document.createElement('p');summary.className='dv-scope';summary.textContent=`${model.groups.toLocaleString()} donors · ${money(model.total)} · all matching donors · ClaudeFiles researched sectors`;host.append(summary);
   const grid=document.createElement('div');grid.className='dv-grid';host.append(grid);const w=Math.max(240,Math.floor((width||host.clientWidth||600)-(width>=760?44:0))/(width>=760?2:1));
-  const specs=[['sector-bars','Sector share bar graph','Vertical bars compare each Claude-researched sector’s share of net contribution dollars.',sectorBars],['donor-bars','Donor contribution bar graph','Vertical bars compare signed net dollars for named donor allocations, with sector filtering and pagination.',donorBars],['bubble','Sector donation bubbles','Each bubble is one sector. Bubble area represents that sector’s total net contribution dollars. Larger bubble = more money.',bubbles],['dot-matrix','Dot matrix','Each dot is one consolidated donor, colored by sector.',matrix]];
+  const specs=[['sector-bars','Sector share bar graph','Vertical bars compare each ClaudeFiles researched first-hand sector’s share of net contribution dollars.',sectorBars],['donor-bars','Donor contribution bar graph','Vertical bars compare signed net dollars for named donor allocations, grouped by researched sector.',donorBars],['bubble','Sector donation bubbles','Each bubble is one ClaudeFiles researched sector. Bubble area represents that sector’s total net contribution dollars. Larger bubble = more money.',bubbles],['dot-matrix','Dot matrix','Each dot is one consolidated donor, colored by ClaudeFiles researched sector.',matrix]];
   for(const [kind,title,description,draw]of specs){const target=card(grid,kind,title,description);draw(target,model,Math.max(240,Math.floor(target.plot.clientWidth||w)));}
   if(model.adjustments<0){const p=document.createElement('p');p.className='dv-adjustments';p.textContent=`Signed adjustments: ${money(model.adjustments)}. Net table total: ${money(model.total)}. `;host.append(p);}
   host.dataset.ready='true';
  }
  const observer=new ResizeObserver(entries=>{const next=Math.floor(entries[0].contentRect.width);if(Math.abs(next-width)>2){width=next;render();}});observer.observe(host);
- return {update(groups){detailedModel=buildVisualData(groups);model=detail==='groups'?groupedVisualData(detailedModel):detailedModel;render();},disconnect(){observer.disconnect();}};
+ return {update(groups){model=buildVisualData(groups);render();},disconnect(){observer.disconnect();}};
 }
