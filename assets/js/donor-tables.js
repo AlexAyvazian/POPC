@@ -1,5 +1,5 @@
 import {sectorGroups,networkData,masterSectorForRecord} from './donor-data.js?v=researched2';
-import {mountDonorVisuals} from './donor-visuals.js?v=balanced2';
+import {mountDonorVisuals} from './donor-visuals.js?v=regroup3';
 import {groupDonors} from './donor-groups.js?v=researched2';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
