@@ -51,6 +51,8 @@ function concentration(){
 export function renderFundingStory(records,selected=''){
  if(state.records!==records||state.selected!==selected){state.records=records;state.selected=selected;const filtered=selected?records.filter(r=>r.committee===selected):records;
  state.businesses=buildDirectory(filtered).filter(g=>!g.personal&&g.organization+g.individual>0).map(g=>({...g,value:g.organization+g.individual})).sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));state.people=groupPeople(filtered);concentration();}
- if(!state.bound){state.bound=true;document.getElementById('funding-view').addEventListener('change',e=>{state.view=e.target.value;state.key='';draw();});document.getElementById('funding-search').addEventListener('input',e=>{state.query=normalize(e.target.value);draw();});document.getElementById('ca-reset').addEventListener('click',()=>{state.view='business';state.query=state.key='';document.getElementById('funding-view').value='business';document.getElementById('funding-search').value='';draw();});}
+ const view=document.getElementById('funding-view'),search=document.getElementById('funding-search');
+ if(!view||!search||!document.getElementById('funding-bubbles')||!document.getElementById('funding-connection')||!document.getElementById('funding-summary'))return;
+ if(!state.bound){state.bound=true;view.addEventListener('change',e=>{state.view=e.target.value;state.key='';draw();});search.addEventListener('input',e=>{state.query=normalize(e.target.value);draw();});document.getElementById('ca-reset').addEventListener('click',()=>{state.view='business';state.query=state.key='';view.value='business';search.value='';draw();});}
  draw();
 }
