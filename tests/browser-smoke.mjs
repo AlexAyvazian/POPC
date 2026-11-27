@@ -71,7 +71,8 @@ try{
     for(const mark of marks){if(mark.fill&&!['none','#fff'].includes(mark.fill))assert(approvedChartColors.includes(mark.fill),'selected swatch only: '+mark.fill);if(mark.opacity!==null)assert.equal(Number(mark.opacity),1);}
     const before=await section.evaluate(el=>Boolean(el.querySelector('[data-donor-visuals]').compareDocumentPosition(el.querySelector('table')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(before);
     const visual=section.locator('[data-donor-visuals]');
-    assert.equal(await visual.getAttribute('data-sector-detail'),'sectors','researched sectors are the default visual detail');
+    assert.equal(await visual.getAttribute('data-sector-detail'),'sectors','researched sectors are the visual detail');
+    assert.equal(await visual.locator('.dv-detail-control').count(),0,'broad sector-group toggle is removed from live visuals');
     const overflow=await section.locator('.jvf-table-wrap').evaluate(el=>el.scrollWidth>el.clientWidth+2);
     assert.equal(overflow,false,file+' table fits without hidden amount columns');
     for(const cell of await section.locator('tbody tr:first-child td').all()){
@@ -151,8 +152,8 @@ try{
   if(file==='pages/combined-contributions.html'){
    assert.equal(await page.locator('#funding-title,#funding-bubbles,#funding-connection').count(),0,'removed funding bubble panel stays removed');
    const charts=page.locator('[data-donor-visuals]').first(),originalTotal=await charts.getAttribute('data-total-cents');
-   await charts.locator('.dv-detail-control select').selectOption('groups');assert.equal(await charts.getAttribute('data-sector-detail'),'groups');assert.equal(await charts.getAttribute('data-total-cents'),originalTotal);
-   await charts.locator('.dv-detail-control select').selectOption('sectors');assert.equal(await charts.getAttribute('data-sector-detail'),'sectors');assert.equal(await charts.getAttribute('data-total-cents'),originalTotal);
+   assert.equal(await charts.getAttribute('data-sector-detail'),'sectors');assert.equal(await charts.getAttribute('data-total-cents'),originalTotal);
+   assert.equal(await charts.locator('.dv-detail-control').count(),0);
    await page.setViewportSize({width:390,height:844});
    await page.waitForTimeout(150);
    assert(await page.locator('[data-donor-visuals]').first().evaluate(el=>el.scrollWidth<=el.clientWidth+2),'charts fit mobile width');
