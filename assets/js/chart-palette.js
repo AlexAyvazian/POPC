@@ -28,7 +28,9 @@ export const colorAt=index=>chartSequence[index%chartSequence.length];
 export function sequentialColors(names){return new Map([...new Set(names)].map((name,index)=>[name,colorAt(index)]));}
 export function balancedPalette(count){
  const n=Math.max(0,Math.min(Number(count)||0,chartSequence.length)),base=Math.floor(n/chartFamilies.length),extra=n%chartFamilies.length;
- return chartFamilies.flatMap((family,index)=>family.slice(0,base+(index<extra?1:0)));
+ const quotas=chartFamilies.map((_,index)=>base+(index<extra?1:0)),palette=[];
+ for(let shade=0;shade<8;shade++)for(let family=0;family<chartFamilies.length;family++)if(shade<quotas[family])palette.push(chartFamilies[family][shade]);
+ return palette;
 }
 export function balancedColors(names){
  const unique=[...new Set(names)],palette=balancedPalette(unique.length);
