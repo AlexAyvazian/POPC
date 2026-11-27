@@ -1,4 +1,5 @@
 import {approvedChartColors,chartSequence} from '../assets/js/chart-palette.js';
+import {masterSectors} from '../assets/js/donor-data.js?v=claude1';
 import {chromium} from 'playwright';
 import http from 'node:http';
 import fs from 'node:fs/promises';
@@ -143,6 +144,9 @@ try{
   }
   if(file==='pages/combined-contributions.html'||file==='pages/schumer-combined-contributions.html'){
    assert.equal((await page.locator('body').innerText()).includes('contributions by sector group'),false,'combined dashboards label researched sectors, not broad sector groups');
+   const sectorLabels=await page.locator('#ca-all-sector-pie .ca-legend-name').allInnerTexts();
+   assert(sectorLabels.length>0,'researched-sector pie has labels');
+   assert(sectorLabels.every(label=>masterSectors.includes(label)),file+' pie uses Claude researched first-hand sectors');
   }
   if(file==='pages/combined-contributions.html'){
    assert.equal(await page.locator('#funding-title,#funding-bubbles,#funding-connection').count(),0,'removed funding bubble panel stays removed');
