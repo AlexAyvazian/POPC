@@ -24,3 +24,8 @@ test('CSV quotes multiline text and literal formula-like names while retaining s
  assert(csv.includes('"A ""quoted""\nname","123.45"'));
  const empty=csvText({headers:['Name'],moneyColumns:[],rows:[]});assert.equal(empty,'\ufeff"Name"\r\n');
 });
+
+test('classification exports contain refined sectors, groups and connection evidence without review or confidence fields',()=>{
+ const g={name:'Donor',amount:50000,records:[],sectors:new Set(['Banking']),employers:new Set(),reportedEmployers:new Set(),occupations:new Set(),reportedNames:new Set(['Donor']),committees:new Map(),businessResearch:new Map(),classification:{group:'Finance',basis:'employer name',firstHand:'Banking',household:'Banking'}};
+ const s=donorSheet([g],[],'indirect');assert.equal(s.rows[0][s.headers.indexOf('Sector group')],'Finance');assert.equal(s.rows[0][s.headers.indexOf('Sector(s)')],'Banking');assert(!s.headers.some(h=>/confidence|review.?flag/i.test(h)));
+});

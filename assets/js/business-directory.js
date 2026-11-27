@@ -1,5 +1,5 @@
-import {config} from './research-data.js?v=categories1';
-import {buildDirectory, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js?v=categories1';
+import {config} from './research-data.js?v=refined1';
+import {buildDirectory, selectDirectory, directoryCSV, loadDirectoryRecords} from './business-directory-data.js?v=refined1';
 
 const $ = id => document.getElementById(id);
 const money = n => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD'}).format(n / 100);

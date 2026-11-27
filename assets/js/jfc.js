@@ -1,4 +1,4 @@
-import {classifySectorLabel,loadMasterSectors} from './master-sectors.js?v=categories1';
+import {classifySectorLabel,loadMasterSectors} from './master-sectors.js?v=refined1';
 (() => {
 "use strict";
 const $=id=>document.getElementById(id);

@@ -1,4 +1,4 @@
-import {loadMasterSectors,normalizeSectorRows} from './master-sectors.js?v=categories1';
+import {loadMasterSectors,normalizeSectorRows} from './master-sectors.js?v=refined1';
 export function renderCommittee({paths,counts,totals,memoLabel,errorLabel}) {
   const currency = new Intl.NumberFormat("en-US", {style:"currency",currency:"USD"});
   const escape = (v) => String(v ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));

@@ -1,5 +1,6 @@
-import {mountDonorVisuals} from './donor-visuals.js?v=categories1';
-import {groupDonors} from './donor-groups.js?v=categories1';
+import {sectorGroups} from './master-sectors.js?v=refined1';
+import {mountDonorVisuals} from './donor-visuals.js?v=refined1';
+import {groupDonors} from './donor-groups.js?v=refined1';
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const list=set=>[...set].sort().join('; ')||'Not reported';
@@ -11,8 +12,14 @@ function researchDetails(group){
   const r=identity.research;
   if(!r)return `<div>${esc(identity.reported)}<small>Not reviewed</small></div>`;
   const sources=(r.sources||[]).filter(url=>/^https?:\/\//i.test(url));
-  return `<details class="donor-business-research"><summary>${esc(identity.name)} · ${esc(r.status)}</summary><p>Reported as: ${esc(identity.reported)}</p><p>${esc(r.scope||'')}</p>${r.parent?`<p>Parent company: ${esc(r.parent)}</p>`:''}<p>${esc(r.evidence||'')}</p>${r.sectorEvidence?`<p>Sector: ${esc(r.sector)} · ${esc(r.sectorEvidence)}</p>`:''}<p>${sources.map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ${i+1}</a>`).join(' · ')}</p><p>Reviewed: ${esc(r.reviewed||'')}</p></details>`;
+  return `<details class="donor-business-research"><summary>${esc(identity.name)} · ${esc(r.status)}</summary><p>Reported as: ${esc(identity.reported)}</p><p>${esc(r.scope||'')}</p>${r.parent?`<p>Parent company: ${esc(r.parent)}</p>`:''}<p>${esc(r.evidence||'')}</p><p>${sources.map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ${i+1}</a>`).join(' · ')}</p><p>Reviewed: ${esc(r.reviewed||'')}</p></details>`;
  }).join('');
+}
+function sectorDetails(group){
+ const c=group.classification,sector=list(group.sectors),label=`<strong>${esc(sector)}</strong><small>${esc(c?.group||sectorGroups[sector]||'')}</small>`;
+ if(!c?.researchedSector)return label;
+ const urls=[...new Set((c.evidence||'').match(/https?:\/\/[^\s;]+/g)||[])];
+ return label+`<details class="donor-sector-context"><summary>Industry connections</summary><p>${esc(c.relationship||'')}</p>${c.profile?`<p>${esc(c.profile)}</p>`:''}<p>Donor career: ${esc(c.firstHand)}</p><p>Including household: ${esc(c.household)}</p><p>${urls.map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ${i+1}</a>`).join(' · ')}</p></details>`;
 }
 function receiptDetails(group,config){
  const details=document.createElement('details'),summary=document.createElement('summary');
@@ -36,11 +43,11 @@ function table(host,key,title,description,groups,config){
  const input=section.querySelector('input'),body=section.querySelector('tbody'),prev=section.querySelector('[data-prev]'),next=section.querySelector('[data-next]'),status=section.querySelector('[role=status]');let page=0,visualQuery=null;
  const visuals=mountDonorVisuals(section.querySelector('[data-donor-visuals]'));
  function draw(){
-  const q=input.value.trim().toUpperCase(),filtered=groups.filter(g=>!q||[g.name,list(g.employers),list(g.occupations),list(g.sectors),list(g.reportedNames),list(g.reportedEmployers),...[...g.businessResearch.values()].map(i=>i.research?.parent||'')].join(' ').toUpperCase().includes(q));
+  const q=input.value.trim().toUpperCase(),filtered=groups.filter(g=>!q||[g.name,list(g.employers),list(g.occupations),list(g.sectors),g.classification?.group||'',list(g.reportedNames),list(g.reportedEmployers),...[...g.businessResearch.values()].map(i=>i.research?.parent||'')].join(' ').toUpperCase().includes(q));
   if(q!==visualQuery){visualQuery=q;visuals.update(filtered);}
   body.replaceChildren();
   for(const g of filtered.slice(page*50,page*50+50)){
-   const row=document.createElement('tr');row.innerHTML=`<td>${esc(g.name)}${key==='organizations'&&[...g.reportedNames].some(n=>n!==g.name)?`<small>Reported as: ${esc(list(g.reportedNames))}</small>`:''}</td>${key==='organizations'?'':`<td>${esc(list(g.employers))}${list(g.reportedEmployers)!==list(g.employers)?`<small>Reported as: ${esc(list(g.reportedEmployers))}</small>`:''}</td><td>${esc(list(g.occupations))}</td>`}<td>${researchDetails(g)}</td><td>${esc(list(g.sectors))}</td><td>${[...g.committees].map(([k,v])=>{const c=config.find(c=>c.key===k);return `<div><a href="/pages/${esc(c?.slug)}.html">${esc(c?.name||k)}</a> · ${money(v)}</div>`;}).join('')}</td><td class="jvf-money"><strong>${money(g.amount)}</strong></td><td></td>`;
+   const row=document.createElement('tr');row.innerHTML=`<td>${esc(g.name)}${key==='organizations'&&[...g.reportedNames].some(n=>n!==g.name)?`<small>Reported as: ${esc(list(g.reportedNames))}</small>`:''}</td>${key==='organizations'?'':`<td>${esc(list(g.employers))}${list(g.reportedEmployers)!==list(g.employers)?`<small>Reported as: ${esc(list(g.reportedEmployers))}</small>`:''}</td><td>${esc(list(g.occupations))}</td>`}<td>${researchDetails(g)}</td><td>${sectorDetails(g)}</td><td>${[...g.committees].map(([k,v])=>{const c=config.find(c=>c.key===k);return `<div><a href="/pages/${esc(c?.slug)}.html">${esc(c?.name||k)}</a> · ${money(v)}</div>`;}).join('')}</td><td class="jvf-money"><strong>${money(g.amount)}</strong></td><td></td>`;
    row.lastElementChild.append(receiptDetails(g,config));body.append(row);
   }
   if(!filtered.length){const row=document.createElement('tr');row.innerHTML=`<td colspan="${key==='organizations'?7:9}">No matching donors.</td>`;body.append(row);}
@@ -51,10 +58,10 @@ function table(host,key,title,description,groups,config){
 }
 async function start(host){
  try{
-  const schumer=host.dataset.network==='schumer',data=await import(schumer?'./schumer-research-data.js?v=categories1':'./research-data.js?v=categories1');
+  const schumer=host.dataset.network==='schumer',data=await import(schumer?'./schumer-research-data.js?v=refined1':'./research-data.js?v=refined1');
   const config=data.config,committee=host.dataset.committee;
   const records=committee?await data.loadCommittee(config.find(c=>c.key===committee)):await data.loadResearchRecords();
-  const identities=await import(schumer?'./schumer-business-directory-data.js?v=categories1':'./business-directory-data.js?v=categories1');
+  const identities=await import(schumer?'./schumer-business-directory-data.js?v=refined1':'./business-directory-data.js?v=refined1');
   const groups=groupDonors(records,identities.identifyName);host.replaceChildren();
   const note=document.createElement('p');note.className='donor-table-note';note.textContent='2025–2026 · Verified organization aliases are consolidated using the business research; individual gifts are combined by exact reported donor name within this page’s committees. The $500 cutoff uses each donor’s full total before search. Memo amounts are excluded.';host.append(note);
   if(!committee){

@@ -92,6 +92,14 @@ try{
     const section=host.locator('[data-donor-group='+key+']');
     assert((await section.locator('thead').innerText()).includes('Reported employer'));
    }
+   assert(!/review flag|confidence/i.test(await host.locator('thead').allInnerTexts().then(v=>v.join(' '))));
+   if(file==='pages/combined-contributions.html'||file==='pages/schumer-combined-contributions.html'){
+    const organizations=host.locator('[data-donor-group=organizations]');
+    await organizations.locator('input').fill('HONEYWELL');
+    assert((await organizations.locator('tbody').innerText()).includes('Defense & Aerospace Contractors'));
+    assert((await organizations.locator('tbody').innerText()).includes('Defense & Aerospace'));
+    await organizations.locator('input').fill('');
+   }
    const small=host.locator('[data-donor-group=small]');
    await small.locator('input').fill('ZZZ no matching donor ZZZ');
    assert((await small.locator('tbody').innerText()).includes('No matching donors'));

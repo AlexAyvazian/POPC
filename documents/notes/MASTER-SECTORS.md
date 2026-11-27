@@ -1,72 +1,79 @@
-# Master sectors
+# Master sector system
 
-All Jeffries and Schumer tables, charts, research queries and memo views use `assets/js/master-sectors.js`.
+Both networks use the user-supplied 63 refined sectors and 17 sector groups. `assets/js/master-sectors.js` resolves these classifications for all 11 committee tabs, the two combined tabs, their charts, the research queries and direct/memo receipt views.
 
-The vocabulary contains 40 labels. Employer status and unresolved classification are separate from business industries.
+`data/sectors/jeffries.json` and `data/sectors/schumer.json` retain all 24,638 supplied donor classifications. `data/sectors/taxonomy.js` is the shared vocabulary. `source-manifest.json` records the seven input filenames and SHA-256 hashes. The importer reconciles every uploaded donor, contribution amount, receipt count and per-committee amount against the site exports before producing the shared data files.
 
-Priority: explicit source-backed research sector; existing exact-name research overrides; consistent direct-receipt source classifications; researched business description; shared name rules; unresolved. Memo rows never supply classification hints. Original source datasets remain unchanged. Parent-company relationships are not aggregation keys.
+Organizations and corporate PACs use the industry supplied in the new classifications. Individuals use the supplied donor-level refined sector within their network; common names are not matched across networks. The same classification applies to the donor's committee-level rows and combined total. Verified business aliases remain separate from parent-company relationships, and sector propagation does not merge identities or money.
 
-The same type-aware resolver handles both networks and verified aliases. Source sectors with conflicting labels fall back to the shared research/rules instead of choosing a committee-specific label.
+The original refined sector remains the primary classification. The supplied donor-career and household views, relationship context and evidence are retained separately. Review flags, confidence fields and strong/weak labels are excluded from the public tables and downloads.
 
-## Labels
+All 160,122 direct receipt records and 138,902 memo records retain their original amounts and treatment. Source receipt files remain unchanged. Refreshed workbooks include the three donor tables, 17-group and refined-sector summaries, and underlying direct receipts.
 
-- Aerospace & defense
-- Agriculture, food & beverage
-- Cannabis
-- Construction & infrastructure
-- Diversified business group
-- Education
-- Energy & utilities
-- Facilities & environmental services
-- Finance & investment
-- Foreign policy & advocacy
-- Furniture & woodworking
-- Government & public sector
-- Health insurance
-- Healthcare
-- Hospitality & gaming
-- Insurance
-- Labor unions
-- Legal services
-- Lobbying & public affairs
-- Manufacturing & automotive
-- Media & entertainment
-- Metals & materials processing
-- Nonprofit & philanthropy
-- Civil rights & civic advocacy
-- Environment & conservation
-- Gun safety
-- Public policy research
-- Pharmaceuticals & biotechnology
-- Political committees & advocacy
-- Professional services
-- Real estate & housing
-- Retail & consumer
-- Security services
-- Technology
-- Telecommunications
-- Trade associations
-- Transportation
-- Tribal nations & governments
-- Personal status / unreported employer
-- Sector unresolved / ambiguous
+## Vocabulary
 
-## Broad category correction (2026-11-26)
-
-The former “Other advocacy” label mixed political committees, social-welfare advocacy, healthcare, cultural organizations, educational nonprofits and philanthropy. It is no longer a valid master sector. Legacy mixed labels supply no industry hint; the resolver consults the shared research or named activity instead. Unidentified activities remain explicitly unresolved.
-
-Forty existing source-backed identity entries received reviewed activity sectors, preserving their identity scope and original sources. Two exact employer identities, Solana Foundation and Brookings, received official-source classification evidence. Sector evidence is displayed in donor-table research details. A generic nonprofit hint can no longer outweigh a researched health plan, healthcare provider or other specific activity. Source-backed explicit sector reviews remain authoritative.
-
-Examples: Majority Forward → Political committees & advocacy; Good Ventures → Nonprofit & philanthropy; CareOregon → Health insurance; The Century Foundation and Brookings → Public policy research; the Everytown gun-safety organizations → Gun safety; Satoshi Action Fund and Solana Foundation → Technology. The Economic Opportunity Fund classification uses the IRS-derived civil-rights/social-action NTEE label, without inventing a narrower program mission.
-
-Additional official sources reviewed:
-- https://www.fec.gov/files/legal/murs/8215/8215_06.pdf (Majority Forward advocacy/voter-registration mission)
-- https://americanopportunityaction.org/ (multi-issue advocacy mission)
-- https://wedefendthevote.org/ (the Action Fund’s election/voting-rights advocacy, separate from the PAC)
-- https://campionadvocacyfund.org/about/ (direct political/legislative advocacy, separate from the charitable foundation)
-- https://www.satoshiaction.io/ (Bitcoin/digital-asset activity)
-- https://possiblezone.org/ (educational programming)
-- https://solana.org/ (blockchain ecosystem foundation)
-- https://www.brookings.edu/about-us/ (public-policy research)
-
-These changes preserve contribution amounts, memo treatment, all original receipt rows and verified alias boundaries. Unknown sectors and missing employer/status records are retained, not folded into an invented industry.
+| Sector group | Refined sector |
+|---|---|
+| Consumer, Retail & Hospitality | Alcohol, Beverage & Tobacco |
+| Consumer, Retail & Hospitality | Cannabis |
+| Consumer, Retail & Hospitality | Hospitality, Gaming & Sports |
+| Consumer, Retail & Hospitality | Retail, Restaurants & Consumer Goods |
+| Defense & Aerospace | Defense & Aerospace Contractors |
+| Education & Nonprofit | Education |
+| Education & Nonprofit | Nonprofit & Philanthropy |
+| Energy, Industry & Agriculture | Agriculture & Food |
+| Energy, Industry & Agriculture | Clean Energy & Solar |
+| Energy, Industry & Agriculture | Electric Utilities & Power |
+| Energy, Industry & Agriculture | Energy (type not specified) |
+| Energy, Industry & Agriculture | Manufacturing & Heavy Equipment |
+| Energy, Industry & Agriculture | Mining, Metals & Chemicals |
+| Energy, Industry & Agriculture | Oil, Gas & Fuels |
+| Finance | Banking |
+| Finance | Consumer Finance & Payments |
+| Finance | Crypto & Digital Assets |
+| Finance | Hedge Funds & Proprietary Trading |
+| Finance | Investment, Asset Management & Securities |
+| Finance | Mortgage & Title |
+| Finance | Private Equity & Venture Capital |
+| Government & Tribal Nations | Government & Public Sector |
+| Government & Tribal Nations | Tribal Nations & Governments |
+| Health & Pharma | Health Advocacy & Patient Groups |
+| Health & Pharma | Healthcare (type not specified) |
+| Health & Pharma | Hospitals, Health Providers & Telehealth |
+| Health & Pharma | Nurses, PAs, Dental & Allied Health Professionals |
+| Health & Pharma | Pharma, Pharmacy & Health Products |
+| Health & Pharma | Physicians & Medical Specialty Societies |
+| Insurance | Health Insurance |
+| Insurance | Insurance (type not specified) |
+| Insurance | Insurance Agents, Brokers & Advisors |
+| Insurance | Life, Annuity & Benefits Insurance |
+| Insurance | Property & Casualty Insurance |
+| Labor Unions | Labor Unions |
+| Legal, Lobbying & Professional Services | Accounting & Consulting |
+| Legal, Lobbying & Professional Services | Facilities & Environmental Services |
+| Legal, Lobbying & Professional Services | Law Firms & Legal Services |
+| Legal, Lobbying & Professional Services | Lobbying & Public Affairs |
+| Legal, Lobbying & Professional Services | Other Professional & Business Services |
+| Legal, Lobbying & Professional Services | Security Services |
+| Multi-industry & Diversified | Diversified Holding Companies |
+| Multi-industry & Diversified | Multi-Industry Business Associations |
+| No sector (individual) | No sector: Employer & occupation not reported |
+| No sector (individual) | No sector: Not employed / homemaker / student |
+| No sector (individual) | No sector: Retired |
+| No sector (individual) | No sector: Self-employed (field not given) |
+| Political, Advocacy & Civic | Civil Rights & Civic Advocacy |
+| Political, Advocacy & Civic | Environment & Conservation |
+| Political, Advocacy & Civic | Foreign Policy Advocacy |
+| Political, Advocacy & Civic | Gun Safety |
+| Political, Advocacy & Civic | Political Committees & Advocacy |
+| Political, Advocacy & Civic | Public Policy Research |
+| Real Estate & Construction | Construction & Engineering |
+| Real Estate & Construction | Real Estate & Property Management |
+| Technology, Telecom & Media | Media & Entertainment |
+| Technology, Telecom & Media | Technology |
+| Technology, Telecom & Media | Telecom & Cable |
+| Transportation | Airlines |
+| Transportation | Automotive & Marine |
+| Transportation | Freight, Rail & Logistics |
+| Transportation | Transportation (type not specified) |
+| Unresolved | Unresolved / ambiguous |

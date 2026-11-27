@@ -5,30 +5,14 @@ import {buildDirectory, identifyName, connectedBusinessName, isResearchEligibleG
 import {loadResearchRecords, config, classifySectorLabel} from '../assets/js/research-data.js';
 
 
-test('sector classification reuses verified cross-committee and researched identity data before falling back to unconfirmed', () => {
-  const global=new Map([['AWAY','Retail & consumer']]);
-  assert.equal(classifySectorLabel('AWAY','Sector unconfirmed / further research',global),'Retail & consumer');
-  assert.equal(classifySectorLabel('TRISOLARIS LLC','Sector unconfirmed / further research',new Map()),'Energy & utilities');
-  assert.equal(classifySectorLabel('RENAISSANCE TECH CORP','',new Map([['RENAISSANCE TECH CORP','Finance & investment']])),'Finance & investment');
-  assert.equal(classifySectorLabel('D.E. SHAW','',new Map()),'Finance & investment');
-  assert.equal(classifySectorLabel('GJELAJ LAW','',new Map()),'Legal services');
-  assert.equal(classifySectorLabel('STREAM LINE CIRCLE LLC','',new Map()),'Transportation');
-  assert.equal(classifySectorLabel('NOT EMPLOYED','Finance',new Map()),'Personal status / unreported employer');
-  assert.equal(classifySectorLabel('UNITED','',new Map()),'Sector unresolved / ambiguous');
+test('sector classification uses the supplied finer industry assignments and separates personal status', async () => {
+  globalThis.fetch=async path=>new Response(await fs.readFile(new URL('../'+String(path).replace(/^\//,''),import.meta.url)));
+  const {loadMasterSectors}=await import('../assets/js/master-sectors.js?v=refined1');await loadMasterSectors();
+  for(const [name,want]of [['AWAY','Retail, Restaurants & Consumer Goods'],['TRISOLARIS LLC','Clean Energy & Solar'],['RENAISSANCE TECH CORP','Hedge Funds & Proprietary Trading'],['D.E. SHAW','Hedge Funds & Proprietary Trading'],['GJELAJ LAW','Law Firms & Legal Services'],['STREAM LINE CIRCLE LLC','Construction & Engineering'],['NOT EMPLOYED','No sector: Not employed / homemaker / student'],['UNITED','Unresolved / ambiguous']])assert.equal(classifySectorLabel(name,'',new Map()),want,name);
 });
 
-
-test('sector taxonomy canonicalizes legacy labels instead of creating duplicate buckets', () => {
-  assert.equal(classifySectorLabel('EXAMPLE','Security Services',new Map()),'Security services');
-  assert.equal(classifySectorLabel('EXAMPLE','Foreign Policy & Advocacy',new Map()),'Foreign policy & advocacy');
-  assert.equal(classifySectorLabel('EXAMPLE','Tribal Governments & Organizations',new Map()),'Tribal nations & governments');
-  assert.equal(classifySectorLabel('EXAMPLE','Political Fundraising Intermediaries',new Map()),'Political committees & advocacy');
-  assert.equal(classifySectorLabel('EXAMPLE','Political Advocacy & Fundraising',new Map()),'Political committees & advocacy');
-  assert.equal(classifySectorLabel('EXAMPLE','Earmarking Intermediaries',new Map()),'Political committees & advocacy');
-  assert.equal(classifySectorLabel('EXAMPLE','Consulting',new Map()),'Professional services');
-  assert.equal(classifySectorLabel('EXAMPLE','Nonprofit & Philanthropy',new Map()),'Nonprofit & philanthropy');
-  assert.equal(classifySectorLabel('EXAMPLE','Trade Associations',new Map()),'Trade associations');
-  assert.equal(classifySectorLabel('EXAMPLE','Unknown Legacy Bucket',new Map()),'Sector unresolved / ambiguous');
+test('sector taxonomy canonicalizes legacy labels into the supplied vocabulary', () => {
+  for(const [label,want]of [['Security Services','Security Services'],['Foreign Policy & Advocacy','Foreign Policy Advocacy'],['Tribal Governments & Organizations','Tribal Nations & Governments'],['Political Fundraising Intermediaries','Political Committees & Advocacy'],['Political Advocacy & Fundraising','Political Committees & Advocacy'],['Consulting','Accounting & Consulting'],['Nonprofit & Philanthropy','Nonprofit & Philanthropy'],['Trade Associations','Multi-Industry Business Associations'],['Unknown Legacy Bucket','Unresolved / ambiguous']])assert.equal(classifySectorLabel('EXAMPLE',label,new Map()),want,label);
 });
 
 test('memo sectors cannot contaminate direct-dollar sector filtering', () => {

@@ -1,6 +1,6 @@
-import {chartSwatches,chartSequence} from './chart-palette.js?v=categories1';
-import {renderFundingStory} from "./funding-story.js?v=categories1";
-import {config,normalize,occupationGroup,personalCategories,loadCommittee} from "./research-data.js?v=categories1";
+import {chartSwatches,chartSequence} from './chart-palette.js?v=refined1';
+import {renderFundingStory} from "./funding-story.js?v=refined1";
+import {config,normalize,occupationGroup,personalCategories,loadCommittee} from "./research-data.js?v=refined1";
 (()=>{"use strict";
 const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n/100),num=n=>n.toLocaleString("en-US"),sum=(a,k)=>a.reduce((n,r)=>n+r[k],0),gross=r=>r.individual+r.organization,pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0.00%";
 // Chart colors sampled from the supplied palette, converted to sRGB.
@@ -15,7 +15,7 @@ function roleTotals(rows){
 }
 function aggregateSectors(rows){
  const m=new Map();
- for(const r of rows){let v=m.get(r.sector);if(!v){v={name:r.sector==="Personal status / unreported employer"?"Donors without an identified business sector":r.sector,key:r.sector,value:0,individual:0,organization:0,count:0};m.set(r.sector,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
+ for(const r of rows){let v=m.get(r.sector);if(!v){v={name:r.sector,key:r.sector,value:0,individual:0,organization:0,count:0};m.set(r.sector,v);}v.value+=r.amount;v[r.type]+=r.amount;v.count++;}
  return [...m.values()].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name));
 }
 function donut(host,items,onSelect,active,label){host.replaceChildren();const positive=items.filter(x=>x.value>0),den=sum(positive,"value");if(!den){host.textContent="No positive receipts in this selection.";return;}const wrap=document.createElement("div");wrap.className="ca-chart";const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 220 220");svg.setAttribute("class","ca-donut");svg.setAttribute("role","group");svg.setAttribute("aria-label",label);const radius=84,circ=2*Math.PI*radius;let off=0;const legend=document.createElement("div");legend.className="ca-legend";

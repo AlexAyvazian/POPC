@@ -1,4 +1,4 @@
-import {masterSectorForRecord} from './master-sectors.js?v=categories1';
+import {masterSectorForRecord,sectorAssignmentForRecord} from './master-sectors.js?v=refined1';
 // Amounts are integer cents. Consolidate the full page scope before filtering.
 const normalize = value => String(value ?? '').trim().replace(/\s+/g, ' ').toUpperCase();
 export function groupDonors(records, identifyName = null) {
@@ -11,7 +11,7 @@ export function groupDonors(records, identifyName = null) {
     const displayName=r.type==='organization' && verified ? identity.name : r.name;
     const name = normalize(displayName);
     const key = JSON.stringify([r.type, name || `unreported-${index}`]);
-    if (!groups.has(key)) groups.set(key, {key, name:displayName || 'Not reported', reportedNames:new Set(), reportedEmployers:new Set(), businessResearch:new Map(), type:r.type, amount:0, employers:new Set(), occupations:new Set(), sectors:new Set(), committees:new Map(), records:[]});
+    if (!groups.has(key)) groups.set(key, {key, name:displayName || 'Not reported', reportedNames:new Set(), reportedEmployers:new Set(), businessResearch:new Map(), type:r.type, classification:sectorAssignmentForRecord(r), amount:0, employers:new Set(), occupations:new Set(), sectors:new Set(), committees:new Map(), records:[]});
     const g=groups.get(key);
     g.amount+=r.amount;
     g.reportedNames.add(r.name || 'Not reported');

@@ -14,6 +14,7 @@ on:
       - 'assets/js/*business-directory-data.js'
       - 'data/jeffries/**'
       - 'data/schumer/**'
+      - 'data/sectors/**'
 permissions:
   contents: write
 concurrency:

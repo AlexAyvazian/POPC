@@ -6,19 +6,9 @@ import * as jeffries from '../assets/js/research-data.js';
 import * as schumer from '../assets/js/schumer-research-data.js';
 
 const read=async path=>new Response(await fs.readFile(new URL('../'+String(path).replace(/^\//,''),import.meta.url)));
-test('legacy labels collapse into the one master vocabulary',()=>{
- for(const [raw,want]of [
-  ['Arts & entertainment','Media & entertainment'],
-  ['Financial services','Finance & investment'],
-  ['Personal care / cosmetics manufacturing','Manufacturing & automotive'],
-  ['Political Fundraising Intermediaries','Political committees & advocacy'],
-  ['Religion / faith-based nonprofit','Nonprofit & philanthropy'],
-  ['Waste & environmental services','Facilities & environmental services'],
-  ['Restaurants / food service','Hospitality & gaming'],
-  ['Tribal Governments & Organizations','Tribal nations & governments']
- ])assert.equal(canonicalSector('',raw),want);
- assert.equal(new Set(masterSectors).size,masterSectors.length);
- for(const label of masterSectors)assert.equal(canonicalSector('',label),label);
+test('legacy labels normalize into the supplied 63-sector and 17-group vocabulary',()=>{
+ for(const [raw,want]of [['Arts & entertainment','Media & Entertainment'],['Financial services','Investment, Asset Management & Securities'],['Personal care / cosmetics manufacturing','Manufacturing & Heavy Equipment'],['Political Fundraising Intermediaries','Political Committees & Advocacy'],['Religion / faith-based nonprofit','Nonprofit & Philanthropy'],['Waste & environmental services','Facilities & Environmental Services'],['Restaurants / food service','Retail, Restaurants & Consumer Goods'],['Tribal Governments & Organizations','Tribal Nations & Governments']])assert.equal(canonicalSector('',raw),want);
+ assert.equal(new Set(masterSectors).size,63);for(const label of masterSectors)assert.equal(canonicalSector('',label),label);
 });
 test('all direct and memo records use the same master labels and reconcile across both networks',async()=>{
  globalThis.fetch=read;await loadMasterSectors();
@@ -31,7 +21,7 @@ test('all direct and memo records use the same master labels and reconcile acros
    assert(masterSectors.includes(expected),expected);
    assert.equal(r.sector,expected,JSON.stringify([r.type,r.name,r.employer,r.sector,expected]));
    const name=String(r.type==='individual'?r.employer:r.name).trim().replace(/\s+/g,' ').toUpperCase();
-   const key=r.type+'|'+name;
+   const key=r.committee+'|'+r.type+'|'+String(r.name).trim().toUpperCase();
    if(seen.has(key)){assert.equal(r.sector,seen.get(key));shared++;}else seen.set(key,r.sector);
   }
  }
@@ -71,20 +61,31 @@ test('verified aliases receive the same sector as their canonical identity',asyn
  }
 });
 
-test('researched activities replace the former mixed advocacy category',async()=>{
+test('every supplied donor classification is applied exactly to both networks and all committee scopes',async()=>{
  globalThis.fetch=read;await loadMasterSectors();
- for(const [name,type,want] of [
- ['MAJORITY FORWARD','organization','Political committees & advocacy'],
- ['GOOD VENTURES','individual','Nonprofit & philanthropy'],
- ['CAREOREGON','individual','Health insurance'],
- ['THE CENTURY FOUNDATION','individual','Public policy research'],
- ['BROOKINGS','individual','Public policy research'],
- ['SATOSHI ACTION FUND','individual','Technology'],
- ['LBUCC','individual','Healthcare'],
- ['PACWTC','individual','Media & entertainment'],
- ['EVERYTOWN FOR GUN SAFETY ACTION FUND, INC. PAC (EVERYTOWN PAC)','organization','Gun safety'],
- ['UNITED ACTION CONNECTICUT','individual','Civil rights & civic advocacy']
- ])assert.equal(classifySectorLabel(name,'',new Map(),type),want,name);
- assert(!masterSectors.some(s=>/\bother\b/i.test(s)));
- assert.equal(classifySectorLabel('UNIDENTIFIED TEST ENTITY','Other advocacy'), 'Sector unresolved / ambiguous');
+ const {groupDonors}=await import('../assets/js/donor-groups.js');const {sectorGroups,masterSectorGroups}=await import('../assets/js/master-sectors.js');assert.equal(masterSectorGroups.length,17);
+ let checked=0;
+ for(const [network,prefix]of [['jeffries',''],['schumer','schumer-']]){
+  const source=JSON.parse(await fs.readFile(new URL('../data/sectors/'+network+'.json',import.meta.url)));
+  const index=new Map(source.rows.map(r=>[JSON.stringify([r[0],r[1].trim().toUpperCase()]),r]));
+  const data=await import('../assets/js/'+prefix+'research-data.js'),identities=await import('../assets/js/'+prefix+'business-directory-data.js'),records=await data.loadResearchRecords();
+  for(const scope of [records,...data.config.map(c=>records.filter(r=>r.committee===c.key))]){
+   for(const g of Object.values(groupDonors(scope,identities.identifyName)).flat()){
+    const supplied=index.get(JSON.stringify([g.type,g.name.trim().toUpperCase()]));assert(supplied,g.name);assert.deepEqual([...g.sectors],[supplied[2]],g.name);assert.equal(g.classification.group,sectorGroups[supplied[2]]);assert(!Object.keys(g.classification).some(k=>/confidence|review.?flag/i.test(k)));
+   }
+  }
+  checked+=source.rows.length;
+ }
+ assert.equal(checked,24638);
+});
+test('career and household views retain the separate assignments supplied in the workbook',async()=>{
+ globalThis.fetch=read;await loadMasterSectors();
+ const a={type:'individual',committee:'smp-pac',name:'LAUFER, MARSHA Z.'};
+ assert.equal(masterSectorForRecord(a),'No sector: Retired');
+ assert.equal(masterSectorForRecord(a,'firstHand'),'No sector: Retired');
+ assert.equal(masterSectorForRecord(a,'household'),'Hedge Funds & Proprietary Trading');
+ const b={type:'organization',committee:'impact-pac',name:'HONEYWELL INTERNATIONAL POLITICAL ACTION COMMITTEE'};
+ assert.equal(masterSectorForRecord(b),'Defense & Aerospace Contractors');
+ const c={type:'organization',committee:'jeff-pac',name:'THE FARM CREDIT COUNCIL POLITICAL ACTION COMMITTEE'};
+ assert.equal(masterSectorForRecord(c),'Banking');
 });

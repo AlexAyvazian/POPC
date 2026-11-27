@@ -76,6 +76,10 @@ def validate(path, payload, specs):
                     assert (a or "") == e, (spec["name"], count)
         assert count == len(spec["rows"]), spec["name"]
     book.close()
+    for spec in payload.get("sectorSummaries", []):
+        for column in [3, 4, 5]:
+            assert sum(cents(r[column]) for r in spec["rows"]) == payload["totalCents"]
+    assert not any("confidence" in h.lower() or "review flag" in h.lower() for spec in specs for h in spec["headers"])
     # The CSV files contain the complete donor tables, not the website's 50-row pagination.
     for table in payload["sheets"]:
         csv_path = path.parent / f"{payload['network']}-{table['key']}.csv"
@@ -99,6 +103,7 @@ def main():
     summary_rows.append(["All three donor tables", sum(s["donors"] for s in payload["sheets"]), payload["receiptCount"], payload["totalCents"] / 100])
     summary_rows.extend([
         ["Period", "2025–2026", "", ""],
+        ["Sector system", "63 refined sectors in 17 groups", "", ""],
         ["Scope", payload["label"], "", ""],
         ["Source", "https://popc-8rk.pages.dev/pages/" + ("schumer-" if payload["network"] == "schumer" else "") + "combined-contributions.html", "", ""],
         ["Commit", payload["sourceCommit"], "", ""],
@@ -107,7 +112,7 @@ def main():
         ["Receipt details", "The Receipts sheet contains every direct record underlying the three donor tables. Memo amounts are excluded.", "", ""],
     ])
     summary = {"name": "Summary", "headers": ["Table / information", "Donors / value", "Receipts", "Total donated (USD)"], "rows": summary_rows, "moneyColumns": [3], "widths": [38, 100, 18, 25]}
-    specs = [summary, *payload["sheets"], payload["receipts"]]
+    specs = [summary, *payload["sheets"], *payload.get("sectorSummaries", []), payload["receipts"]]
     workbook = Workbook(write_only=True)
     workbook.properties.title = payload["label"] + " — Combined Donor Tables"
     workbook.properties.creator = "People Over Power Coalition"

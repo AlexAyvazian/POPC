@@ -1,8 +1,8 @@
-import {businessIdentities} from '../../data/jeffries/business-identities.js?v=categories1';
-import {schumerIdentities} from '../../data/schumer/schumer-identities.js?v=categories1';
-import {normalize, config, occupationGroup, loadResearchRecords} from './schumer-research-data.js?v=categories1';
+import {businessIdentities} from '../../data/jeffries/business-identities.js?v=refined1';
+import {schumerIdentities} from '../../data/schumer/schumer-identities.js?v=refined1';
+import {normalize, config, occupationGroup, loadResearchRecords} from './schumer-research-data.js?v=refined1';
 
-export {loadDirectoryRecords} from './schumer-research-data.js?v=categories1';
+export {loadDirectoryRecords} from './schumer-research-data.js?v=refined1';
 
 const personal = /^(?:NOT EMPLOYED|RETIRED|SELF[ -]?EMPLOYED|SELF|N\/?A|NONE|NULL|NOT REPORTED|INFORMATION REQUESTED(?: PER BEST EFFORTS)?|UNEMPLOYED|HOMEMAKER|HOME MAKER|STUDENT|UNKNOWN|NOT AVAILABLE|REQUESTED|NOT PROVIDED|NOT DISCLOSED|DECLINED|REFUSED)$/;
 

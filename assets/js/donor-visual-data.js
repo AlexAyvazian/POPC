@@ -1,4 +1,4 @@
-import {masterSectorForRecord} from './master-sectors.js?v=categories1';
+import {masterSectorForRecord} from './master-sectors.js?v=refined1';
 const sort=(a,b)=>b.amount-a.amount||a.name.localeCompare(b.name);
 export function buildVisualData(groups){
  const sectors=new Map();let total=0,receipts=0,positive=0,adjustments=0;
