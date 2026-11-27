@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "e3e71d49eb3d49380e0221d75f3e058c374830c3",
+  "networks": {
+    "jeffries": {
+      "totalCents": 2813110270,
+      "receiptCount": 110817,
+      "workbook": "jeffries-combined-donors.xlsx",
+      "tables": [
+        {
+          "key": "organizations",
+          "name": "PACs & Organizations",
+          "donors": 526,
+          "totalCents": 458729900,
+          "receiptCount": 1006,
+          "csv": "jeffries-organizations.csv"
+        },
+        {
+          "key": "indirect",
+          "name": "Indirect Donors",
+          "donors": 2822,
+          "totalCents": 2207058437,
+          "receiptCount": 48251,
+          "csv": "jeffries-indirect.csv"
+        },
+        {
+          "key": "small",
+          "name": "Small Donors",
+          "donors": 7734,
+          "totalCents": 147321933,
+          "receiptCount": 61560,
+          "csv": "jeffries-small.csv"
+        }
+      ]
+    },
+    "schumer": {
+      "totalCents": 31446265691,
+      "receiptCount": 49305,
+      "workbook": "schumer-combined-donors.xlsx",
+      "tables": [
+        {
+          "key": "organizations",
+          "name": "PACs & Organizations",
+          "donors": 257,
+          "totalCents": 21597352077,
+          "receiptCount": 469,
+          "csv": "schumer-organizations.csv"
+        },
+        {
+          "key": "indirect",
+          "name": "Indirect Donors",
+          "donors": 5092,
+          "totalCents": 9662834717,
+          "receiptCount": 23148,
+          "csv": "schumer-indirect.csv"
+        },
+        {
+          "key": "small",
+          "name": "Small Donors",
+          "donors": 8207,
+          "totalCents": 186078897,
+          "receiptCount": 25688,
+          "csv": "schumer-small.csv"
+        }
+      ]
+    }
+  },
+  "files": [
+    {
+      "name": "jeffries-combined-donors.xlsx",
+      "bytes": 6556804,
+      "sha256": "44f4df13f993bb0396fd0919536efbafe04b25858a5af9d8eb208ea3462a8bb5"
+    },
+    {
+      "name": "jeffries-indirect.csv",
+      "bytes": 996649,
+      "sha256": "8af9f9fa23a668e3c8a9dacbf51f7402e725b45e1faaba9d0067c7d30957f8a1"
+    },
+    {
+      "name": "jeffries-organizations.csv",
+      "bytes": 397784,
+      "sha256": "810358c97e447423e3a5a69c7a2304beb4a2843866aaca72823ae4579e721348"
+    },
+    {
+      "name": "jeffries-small.csv",
+      "bytes": 1961773,
+      "sha256": "658b6c56824e9a0242a6cf0d454d760dfdec5011b5f28ad82561d2feb2194087"
+    },
+    {
+      "name": "schumer-combined-donors.xlsx",
+      "bytes": 4423741,
+      "sha256": "d896af077066855ce83ca71acd111ffd46626a2d8b1bbe0fe7eb457560d0d5fe"
+    },
+    {
+      "name": "schumer-indirect.csv",
+      "bytes": 1077570,
+      "sha256": "00de2c660a898db2dbb5fd949070fa1e9d9af1f591dcd2b0f227fdf3f333d0a9"
+    },
+    {
+      "name": "schumer-organizations.csv",
+      "bytes": 184270,
+      "sha256": "6f3042f33010b7a6d0658bd1a155b9e0e2e73017a069a613795db655533323cf"
+    },
+    {
+      "name": "schumer-small.csv",
+      "bytes": 1609879,
+      "sha256": "2f98fd1044e58da3ab0e081216a42fcf218cb4bb49e843911c40a9db8f89e76f"
+    }
+  ]
+}
