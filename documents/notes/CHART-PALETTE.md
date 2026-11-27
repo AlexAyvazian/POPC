@@ -1,6 +1,6 @@
 # Chart palette
 
-The shared palette uses only the numbered swatches selected from the supplied November 24 image. Pixel values were converted using the embedded ICC profile to sRGB before sampling the center of each swatch. No generated tints or data-mark opacity are applied. Each chart assigns the palette consecutively to its displayed data order, starting at Blue 1. The order is Blues 1–6, Teals 2–5, Greens 1–6, Yellows 1–4, Oranges 1–5, Reds 1–4 and 6, Pinks 1–4, Purples 1–4. Sector identities do not have fixed colors.
+The shared palette uses only the numbered swatches selected from the supplied November 24 image. Balanced charts first choose how many swatches each color family receives by round-robin quota, then regroup those selected swatches before assignment into the fixed family order Blue → Teal → Green → Yellow → Orange → Red → Pink → Purple, with shade numbers ascending within each family. This regrouping rule is hardcoded once in `balancedPalette()` and is shared by every donor visual. Pixel values were converted using the embedded ICC profile to sRGB before sampling the center of each swatch. No generated tints or data-mark opacity are applied. Each chart assigns the palette consecutively to its displayed data order, starting at Blue 1. The order is Blues 1–6, Teals 2–5, Greens 1–6, Yellows 1–4, Oranges 1–5, Reds 1–4 and 6, Pinks 1–4, Purples 1–4. Sector identities do not have fixed colors.
 
 | Swatch | sRGB |
 | --- | --- |
