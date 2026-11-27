@@ -1,4 +1,5 @@
 import {chartSwatches,chartSequence} from './chart-palette.js?v=palette64';
+import {sectorColor} from './sector-palette.js?v=stable1';
 import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=claude1';
 const {config,loadCommittee}=networkData('schumer');
 (()=>{"use strict";
@@ -7,6 +8,7 @@ const $=id=>document.getElementById(id),esc=v=>String(v??"").replace(/[&<>"']/g,
 const sequence=chartSequence;
 const indColor=sequence[0],orgColor=sequence[1];
 function sequentialItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map((item,i)=>({...item,color:sequence[i%sequence.length]}));}
+function sectorItems(items){return [...items].sort((a,b)=>b.value-a.value||a.name.localeCompare(b.name)).map(item=>({...item,color:sectorColor(item.name)}));}
 let selected="",sectorSelected="",query="",page=0,allRecords=null,mode="organization",roleSelected="",exactOccupation="",occupationPage=0,occupationQuery="",loadFailures=[],loadedCommittees=0;
 const pageSize=50;
 function roleTotals(rows){
@@ -55,11 +57,11 @@ function renderOrganizations(){
 if(!allRecords){$("ca-org-rows").innerHTML='<tr><td colspan="5">Loading all eight committee datasets…</td></tr>';$("ca-prev").disabled=$("ca-next").disabled=true;return;}
 const records=selected?allRecords.filter(x=>x.committee===selected):allRecords;
 const groups=aggregateSectors(records),opt=$("ca-sector");opt.replaceChildren(new Option("All sectors",""));for(const x of [...groups].sort((a,b)=>a.name.localeCompare(b.name)))opt.add(new Option(x.name,x.name));if(!groups.some(x=>x.name===sectorSelected))sectorSelected="";opt.value=sectorSelected;
-const combinedColored=sequentialItems(groups);
+const combinedColored=sectorItems(groups);
 const combinedColors=new Map(combinedColored.filter(x=>x.value>0).map(x=>[x.name,x.color]));
 donut($("ca-all-sector-pie"),combinedColored,x=>chooseSector(x.key),sectorSelected,"All direct receipts by sector");
-donut($("ca-sector-pie"),sequentialItems(groups.filter(x=>x.organization!==0).map(x=>({...x,value:x.organization}))),x=>{mode="organization";$("ca-mode").value=mode;chooseSector(x.key);},sectorSelected,"Direct organizations by sector");
-donut($("ca-ind-sector-pie"),sequentialItems(groups.filter(x=>x.individual!==0).map(x=>({...x,value:x.individual}))),x=>{mode="individual";$("ca-mode").value=mode;chooseSector(x.key);},sectorSelected,"Individual receipts by employer sector");
+donut($("ca-sector-pie"),sectorItems(groups.filter(x=>x.organization!==0).map(x=>({...x,value:x.organization}))),x=>{mode="organization";$("ca-mode").value=mode;chooseSector(x.key);},sectorSelected,"Direct organizations by sector");
+donut($("ca-ind-sector-pie"),sectorItems(groups.filter(x=>x.individual!==0).map(x=>({...x,value:x.individual}))),x=>{mode="individual";$("ca-mode").value=mode;chooseSector(x.key);},sectorSelected,"Individual receipts by employer sector");
 const denominator=sum(groups,"value");
 $("ca-sector-rows").innerHTML=groups.map(x=>'<tr><td><button type="button" class="ca-sector-link" data-sector="'+esc(x.name)+'"><span class="ca-swatch ca-sector-swatch" style="background:'+(combinedColors.get(x.name)||'transparent')+'" aria-hidden="true"></span>'+esc(x.name)+'</button></td><td class="jvf-money">'+money(x.organization)+'</td><td class="jvf-money">'+money(x.individual)+'</td><td class="jvf-money"><strong>'+money(x.value)+'</strong></td><td>'+pct(x.value,denominator)+'</td></tr>').join("")+'<tr><th scope="row">'+(loadFailures.length?"Loaded subtotal":"Total")+'</th><td>'+money(sum(groups,"organization"))+'</td><td>'+money(sum(groups,"individual"))+'</td><td><strong>'+money(denominator)+'</strong></td><td>'+(denominator?"100.00%":"—")+'</td></tr>';
 for(const b of $("ca-sector-rows").querySelectorAll("button"))b.addEventListener("click",()=>chooseSector(b.dataset.sector));
