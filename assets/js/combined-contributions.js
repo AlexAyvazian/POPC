@@ -1,5 +1,5 @@
 import {chartSwatches,chartSequence} from './chart-palette.js?v=claude1';
-import {renderFundingStory} from "./funding-story.js?v=claude1";
+import {renderFundingStory} from "./funding-story.js?v=concentration-only1";
 import {networkData,normalize,occupationGroup,personalCategories,sectorGroups} from './donor-data.js?v=claude1';
 const {config,loadCommittee}=networkData('jeffries');
 (()=>{"use strict";
