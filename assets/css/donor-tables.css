@@ -83,3 +83,7 @@
  .dv-legend summary,.dv-radar-key{margin:4px 0}
  .dv-plot{min-height:0;max-width:265px}
 }
+
+/* Give every donor visualization a full row for readable labels and marks. */
+.dv-grid{grid-template-columns:minmax(0,1fr)!important}
+@media print{.dv-grid{grid-template-columns:minmax(0,1fr)!important}}
