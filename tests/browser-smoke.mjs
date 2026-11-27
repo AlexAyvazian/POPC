@@ -139,7 +139,7 @@ try{
    const answer=await page.locator('.popc-ai-messages').innerText();assert(answer.includes(file==='index.html'?'All eight committees':'All three committees'),file+': '+answer);
   }
   if(file==='pages/combined-contributions.html'){
-   const storyBeforeTables=await page.evaluate(()=>Boolean(document.querySelector('#funding-title').compareDocumentPosition(document.querySelector('[data-donor-tables]')) & Node.DOCUMENT_POSITION_FOLLOWING));assert(storyBeforeTables,'funding overview precedes long donor tables');
+   assert.equal(await page.locator('#funding-title,#funding-bubbles,#funding-connection').count(),0,'removed funding bubble panel stays removed');
    const charts=page.locator('[data-donor-visuals]').first(),originalTotal=await charts.getAttribute('data-total-cents');
    await charts.locator('.dv-detail-control select').selectOption('sectors');assert.equal(await charts.getAttribute('data-sector-detail'),'sectors');assert.equal(await charts.getAttribute('data-total-cents'),originalTotal);
    await charts.locator('.dv-detail-control select').selectOption('groups');assert.equal(await charts.getAttribute('data-total-cents'),originalTotal);
