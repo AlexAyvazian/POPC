@@ -1,5 +1,4 @@
 import {chartSwatches,chartSequence,balancedColors} from './chart-palette.js?v=balanced1';
-import {renderFundingStory} from "./funding-story.js?v=concentration-only1";
 import {networkData,normalize,occupationGroup,personalCategories} from './donor-data.js?v=claude1';
 const {config,loadCommittee}=networkData('jeffries');
 (()=>{"use strict";
@@ -31,7 +30,6 @@ function activeCommittees(){return selected?config.filter(x=>x.key===selected):c
 function render(){const active=activeCommittees(),ic=sum(active,"individual"),oc=sum(active,"organization"),total=ic+oc,all=sum(config,"individual")+sum(config,"organization");
 $("ca-total").textContent=money(total);$("ca-scope").textContent=selected?active[0].name:"All eight committees";$("ca-ind").textContent=money(ic);$("ca-org").textContent=money(oc);$("ca-count").textContent=num(sum(active,"individualCount")+sum(active,"organizationCount"));
 const ordered=[...config].sort((a,b)=>gross(b)-gross(a));donut($("ca-committee-pie"),ordered.map((x,i)=>({name:x.name,key:x.key,value:gross(x),color:sequence[i%sequence.length]})),x=>chooseCommittee(x.key),selected,"Combined receipts by committee");
-donut($("ca-source-pie"),[{name:"Contributions from people",key:"ind",value:ic,color:indColor},{name:"Contributions from PACs / organizations",key:"org",value:oc,color:orgColor}],null,"","Receipt sources");
 const bars=$("ca-bars");bars.replaceChildren();const key=document.createElement("div");key.className="ca-bar-key";key.innerHTML='<span><i class="ca-swatch" style="background:'+indColor+'"></i>Individual</span><span><i class="ca-swatch" style="background:'+orgColor+'"></i>PAC / organization</span>';bars.append(key);const max=gross(ordered[0]);for(const x of ordered){const b=document.createElement("button");b.type="button";b.className="ca-bar"+(x.key===selected?" ca-selected":"");b.setAttribute("aria-pressed",String(x.key===selected));b.title=x.name+": "+money(gross(x));b.innerHTML='<span>'+esc(x.name)+'</span><span class="ca-track"><span style="background:'+indColor+';width:'+100*x.individual/max+'%"></span><span style="background:'+orgColor+';width:'+100*x.organization/max+'%"></span></span><span class="ca-bar-amount">'+money(gross(x))+'</span>';b.addEventListener("click",()=>chooseCommittee(x.key));bars.append(b);}
 
 if(!allRecords)return;
@@ -43,7 +41,6 @@ donut($("ca-ind-sector-pie"),sectorItems(groups.map(g=>({...g,value:g.individual
 const roles=roleTotals(records);
 $("ca-role-summary").textContent=money(sum(roles,"value"))+" in personal contributions";
 donut($("ca-role-pie"),sequentialItems(roles),null,"","Contributions by reported occupation");
-renderFundingStory(allRecords,selected);
 }
 async function start(){
 for(const c of config)$("ca-committee").add(new Option(c.name,c.key));
@@ -54,4 +51,4 @@ allRecords=(await Promise.all(config.map(loadCommittee))).flat();
 if(sum(allRecords,"amount")!==sum(config,"individual")+sum(config,"organization")||allRecords.length!==sum(config,"individualCount")+sum(config,"organizationCount"))throw Error("Combined source reconciliation failed");
 $("ca-status").textContent="All eight committees loaded";render();
 }
-start().catch(e=>{allRecords=null;$("ca-status").textContent="Unable to load verified data: "+e.message;$("funding-concentration").textContent="Unavailable until committee data loads.";console.error(e);});})();
+start().catch(e=>{allRecords=null;$("ca-status").textContent="Unable to load verified data: "+e.message;console.error(e);});})();
