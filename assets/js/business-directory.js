@@ -1,4 +1,4 @@
-import {networkData} from './donor-data.js?v=claude1';
+import {networkData} from './donor-data.js?v=researched2';
 const network=document.querySelector('[data-donor-tables]')?.dataset.network||'jeffries';
 const {config,loadDirectoryRecords}=networkData(network);
 import {buildDirectory,selectDirectory,directoryCSV} from './business-data.js?v=claude1';
