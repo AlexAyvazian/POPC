@@ -9,21 +9,20 @@ const committeeName=id=>committeeById(id)?.name||id;
 const idSet=new Set(committees.map(x=>x.id));
 const nameLink=id=>'<a href="/pages/centrist-committee.html?id='+e(id)+'">'+e(committeeName(id))+'</a>';
 const filing=r=>/^\d{10,25}$/.test(r.image)?'<a href="https://docquery.fec.gov/cgi-bin/fecimg/?'+e(r.image)+'" target="_blank" rel="noopener">FEC filing</a>':'—';
-async function saved(params={}){const u=new URL('/api/fec-saved',location.origin);for(const [k,v]of Object.entries(params))u.searchParams.set(k,v);const r=await fetch(u);const d=await r.json();if(!r.ok)throw Error(d.error||'Saved data unavailable');return d;}
-const catalog=()=>saved();
+async function live(id,dataset,cursor,signal){const u=new URL('/api/fec-live',location.origin);u.searchParams.set('id',id);u.searchParams.set('dataset',dataset);if(cursor)u.searchParams.set('cursor',JSON.stringify(cursor));const r=await fetch(u,{signal,cache:'no-store'});let d;try{d=await r.json();}catch{throw Error('Live FEC request failed (HTTP '+r.status+')');}if(!r.ok)throw Error(d.error+(d.reportedName?' — FEC lists '+d.reportedName:''));return d;}
 const root=$('fec-dashboard'),status=$('fec-status'),landingStatus=$('fec-import-status');
-if(landingStatus)catalog().then(d=>{const n=d.snapshots.filter(x=>x.published).length;landingStatus.textContent=n+' of '+(committees.length*4)+' data snapshots saved. Missing or failed snapshots are not treated as zero.';}).catch(()=>landingStatus.textContent='Saved-data status unavailable.');
+if(landingStatus)landingStatus.textContent='2025–2026 FEC records load directly when a transaction view is opened.';
 function section(title,description=''){const s=document.createElement('section');s.className='ca-panel ca-wide fec-section';s.innerHTML='<h2>'+e(title)+'</h2>'+(description?'<p class="ca-muted">'+e(description)+'</p>':'');$('fec-content').append(s);return s;}
 function table(host,title,rows,columns,searchText=x=>Object.values(x).join(' ')){
  const s=section(title);if(host)host.append(s);
  const label=document.createElement('label');label.className='donor-search';label.textContent='Search this table ';const input=document.createElement('input');input.type='search';label.append(input);s.append(label);
  const wrap=document.createElement('div');wrap.className='jvf-table-wrap';const t=document.createElement('table');t.className='jvf-table';t.innerHTML='<thead><tr>'+columns.map(c=>'<th scope="col">'+e(c[0])+'</th>').join('')+'</tr></thead><tbody></tbody>';wrap.append(t);s.append(wrap);
  const nav=document.createElement('div');nav.className='donor-table-pagination';const prev=document.createElement('button'),next=document.createElement('button'),info=document.createElement('span');prev.textContent='Previous';next.textContent='Next';nav.append(prev,info,next);s.append(nav);let page=0;const size=100;
- function draw(){const q=normalize(input.value),filtered=rows.filter(r=>!q||normalize(searchText(r)).includes(q)),pages=Math.max(1,Math.ceil(filtered.length/size));page=Math.min(page,pages-1);t.tBodies[0].innerHTML=filtered.slice(page*size,(page+1)*size).map(r=>'<tr>'+columns.map(c=>'<td>'+c[1](r)+'</td>').join('')+'</tr>').join('')||'<tr><td colspan="'+columns.length+'">No matching records in saved snapshots.</td></tr>';info.textContent='Page '+(page+1)+' of '+pages+' · '+num(filtered.length)+' records';prev.disabled=page===0;next.disabled=page>=pages-1;}
+ function draw(){const q=normalize(input.value),filtered=rows.filter(r=>!q||normalize(searchText(r)).includes(q)),pages=Math.max(1,Math.ceil(filtered.length/size));page=Math.min(page,pages-1);t.tBodies[0].innerHTML=filtered.slice(page*size,(page+1)*size).map(r=>'<tr>'+columns.map(c=>'<td>'+c[1](r)+'</td>').join('')+'</tr>').join('')||'<tr><td colspan="'+columns.length+'">No matching records in the currently loaded data.</td></tr>';info.textContent='Page '+(page+1)+' of '+pages+' · '+num(filtered.length)+' records';prev.disabled=page===0;next.disabled=page>=pages-1;}
  input.oninput=()=>{page=0;draw()};prev.onclick=()=>{page--;draw()};next.onclick=()=>{page++;draw()};draw();return s;
 }
 function bars(title,rows){const s=section(title),max=Math.max(1,...rows.map(x=>Math.abs(x.amount))),palette=balancedPalette(rows.length);for(const [i,r]of rows.entries()){const line=document.createElement('div');line.className='fec-bar';line.innerHTML='<span>'+e(r.name)+'</span><span class="fec-track"><i style="width:'+Math.abs(r.amount)/max*100+'%;background:'+palette[i]+'"></i></span><strong>'+money(r.amount)+'</strong>';s.append(line);}}
-function overview(items){const s=section('Saved records overview');s.className='ca-overview fec-overview';const d=document.createElement('div');d.className='ca-metrics';for(const [label,value]of items){const cell=document.createElement('div');cell.innerHTML='<span>'+e(label)+'</span><strong>'+e(value)+'</strong>';d.append(cell);}s.append(d);}
+function overview(items){const s=section('Loaded records overview');s.className='ca-overview fec-overview';const d=document.createElement('div');d.className='ca-metrics';for(const [label,value]of items){const cell=document.createElement('div');cell.innerHTML='<span>'+e(label)+'</span><strong>'+e(value)+'</strong>';d.append(cell);}s.append(d);}
 function grouped(rows){const m=new Map();for(const r of rows){if(r.memo)continue;const key=r.donorId||[normalize(r.name),r.individual?'individual':'organization'].join('|');const g=m.get(key)||{name:r.name||'Not reported',amount:0,count:0,individual:r.individual,employers:new Set(),roles:new Set(),committees:new Map()};g.amount+=r.amount;g.count++;if(r.employer)g.employers.add(r.employer);if(r.occupation)g.roles.add(r.occupation);g.committees.set(r.committee,(g.committees.get(r.committee)||0)+r.amount);m.set(key,g);}return [...m.values()].sort((a,b)=>b.amount-a.amount);}
 function receipts(rows){const t=summarizeReceipts(rows,idSet);overview([['Non-memo itemized receipts',money(t.gross)],['Receipts excluding identified internal transfers',money(t.external)],['Identified internal receipts',money(t.internal)],['Memo records excluded',num(t.memos)]]);
  const by=committees.map(c=>({name:c.name,amount:rows.filter(r=>r.committee===c.id&&!r.memo).reduce((n,r)=>n+r.amount,0)})).filter(x=>x.amount!==0).sort((a,b)=>b.amount-a.amount);bars('Reported receipts by committee',by);
@@ -43,13 +42,28 @@ if(root)(async()=>{
  const combined=root.dataset.combined==='true',id=new URLSearchParams(location.search).get('id'),c=committeeById(id);
  if(!combined&&!c){status.textContent='Unknown committee.';return;}
  if(c){$('fec-title').textContent=c.name.toUpperCase();$('fec-kicker').textContent='2025–2026 · '+c.id+' · '+c.relation;const a=document.createElement('a');a.href='https://www.fec.gov/data/committee/'+c.id+'/?cycle=2026';a.textContent='Official FEC registration';$('fec-kicker').after(a);}
- const scope=combined?committees:[c],cache=new Map();let generation=0;
- async function draw(view){const token=++generation;$('fec-content').replaceChildren();for(const b of root.querySelectorAll('[data-view]'))b.setAttribute('aria-pressed',String(b.dataset.view===view));status.textContent='Loading saved '+view+' snapshots…';try{
- const d=await catalog(),available=scope.filter(x=>d.snapshots.some(s=>s.committee_id===x.id&&s.dataset===view&&s.published)),missing=scope.filter(x=>!available.includes(x));let rows=[],fail=[];
- const load=async c=>{const k=c.id+'|'+view;if(cache.has(k))return cache.get(k);let all=[],start=0,total;do{const p=await saved({id:c.id,dataset:view,start,limit:10});total=p.total;all.push(...p.rows);start=p.next;}while(start!==null);if(all.length!==total)throw Error('Saved row count mismatch');cache.set(k,all);return all;};
- for(let i=0;i<available.length;i+=3){const results=await Promise.allSettled(available.slice(i,i+3).map(load));results.forEach((r,j)=>{if(r.status==='fulfilled')rows.push(...r.value);else fail.push(available[i+j].name);});if(token!==generation)return;status.textContent='Reading saved records: '+num(rows.length)+' rows…';}
- if(token!==generation)return;rows=uniqueRows(rows);const incomplete=missing.length||fail.length;status.textContent=(incomplete?'PARTIAL DATA — ':'')+(available.length-fail.length)+' of '+scope.length+' completed snapshots · '+num(rows.length)+' unique records'+(missing.length?' · Not yet available: '+missing.map(x=>x.name).join('; '):'')+(fail.length?' · Read failures: '+fail.join('; '):'');if(!available.length||available.length===fail.length)return;
- if(view==='receipts')receipts(rows);else if(view==='disbursements')disbursements(rows);else expenditures(rows,view==='notices');
- }catch(err){if(token===generation)status.textContent='Saved data could not be read: '+err.message;}}
- for(const b of root.querySelectorAll('[data-view]'))b.onclick=()=>draw(b.dataset.view);await draw('receipts');
-})().catch(err=>{status.textContent='Saved data unavailable: '+err.message;});
+ const scope=combined?committees:[c],cache=new Map();let generation=0,controller;
+ const stop=document.createElement('button');stop.type='button';stop.textContent='Stop loading';stop.hidden=true;root.querySelector('.fec-tabs').append(stop);
+ stop.onclick=()=>controller?.abort();
+ function render(view,rows,complete){$('fec-content').replaceChildren();if(!rows.length&&!complete)return;if(view==='receipts')receipts(rows);else if(view==='disbursements')disbursements(rows);else expenditures(rows,view==='notices');}
+ async function draw(view){controller?.abort();controller=new AbortController();const signal=controller.signal,token=++generation;const content=$('fec-content');content.replaceChildren();
+ for(const b of root.querySelectorAll('[data-view]'))b.setAttribute('aria-pressed',String(b.dataset.view===view));
+ const existing=cache.get(view);if(existing){status.textContent='Complete live results · '+num(existing.length)+' unique records';stop.hidden=true;render(view,existing,true);return;}
+ stop.hidden=false;status.textContent='Connecting to the FEC…';let rows=[],complete=0,failed=[],started=0,rendered=false;
+ const tasks=scope.map(c=>({c,cursor:null,done:false,failed:false}));
+ function update(){if(token!==generation)return;status.textContent='PARTIAL DATA — '+num(rows.length)+' records loaded · '+complete+' of '+scope.length+' entities complete'+(failed.length?' · Unavailable: '+failed.join('; '):'');}
+ async function batch(batch){await Promise.all(batch.map(async task=>{try{const p=await live(task.c.id,view,task.cursor,signal);if(signal.aborted||token!==generation)return;rows.push(...p.rows);task.cursor=p.next;started++;if(!p.next){task.done=true;complete++;}}catch(e){if(signal.aborted)return;task.failed=true;failed.push(task.c.name+': '+e.message);} }));}
+ try{
+ // Start with one page per committee before fetching additional pages, with bounded concurrency.
+ for(let i=0;i<tasks.length&&!signal.aborted;i+=4){await batch(tasks.slice(i,i+4));if(token!==generation)return;update();}
+ if(token!==generation)return;if(rows.length){render(view,uniqueRows(rows),false);rendered=true;}
+ while(!signal.aborted){const remaining=tasks.filter(t=>!t.done&&!t.failed);if(!remaining.length)break;for(let i=0;i<remaining.length&&!signal.aborted;i+=4){await batch(remaining.slice(i,i+4));if(token!==generation)return;update();}}
+ if(token!==generation)return;rows=uniqueRows(rows);const allComplete=complete===scope.length&&!failed.length;
+ if(allComplete){cache.set(view,rows);status.textContent='Complete live results · '+num(rows.length)+' unique records · '+complete+' entities';}
+ else status.textContent='PARTIAL DATA — '+num(rows.length)+' unique records · '+complete+' of '+scope.length+' entities complete'+(signal.aborted?' · Loading stopped. Select the tab to retry.':'')+(failed.length?' · Unavailable: '+failed.join('; '):'');
+ if(rows.length||allComplete)render(view,rows,allComplete);else if(!rendered)content.textContent='No records could be retrieved. Select the tab to retry.';
+ }catch(err){if(token===generation)status.textContent='Live data incomplete: '+err.message;}finally{if(token===generation)stop.hidden=true;}
+ }
+ for(const b of root.querySelectorAll('[data-view]'))b.onclick=()=>draw(b.dataset.view);
+ window.addEventListener('pagehide',()=>controller?.abort(),{once:true});await draw('receipts');
+})().catch(err=>{status.textContent='Live data unavailable: '+err.message;});
