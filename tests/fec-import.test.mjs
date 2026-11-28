@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {validIdentity,requestParams} from '../functions/api/fec-import.js';
+test('import checks ID and FEC committee name, tolerates punctuation',()=>{const c={id:'C00000001',expected:'WELCOME PAC'};assert.equal(validIdentity({committee_id:c.id,name:'WelcomePAC'},c),true);assert.equal(validIdentity({committee_id:'C00000002',name:'WelcomePAC'},c),false);assert.equal(validIdentity({committee_id:c.id,name:'Other PAC'},c),false);});
+test('receipt and expenditure queries use correct cycle and separate notices',()=>{assert.equal(requestParams('C00000001','receipts',{last_index:'123'}).two_year_transaction_period,2026);assert.equal(requestParams('C00000001','receipts',{last_index:'123'}).last_index,'123');assert.equal(requestParams('C00000001','independent',null).is_notice,false);assert.equal(requestParams('C00000001','notices',null).is_notice,true);});
