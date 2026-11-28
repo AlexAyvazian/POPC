@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "classification": "ClaudeFiles: donor career sector, 63 sectors and 17 groups",
-  "sourceCommit": "48a236835ceb25ba3e6515041729afae2a5ee6b7",
+  "sourceCommit": "f48cb301cc9711cae37bc3fbc140a337f2b0bd24",
   "networks": {
     "jeffries": {
       "totalCents": 2813110270,
@@ -70,7 +70,7 @@
     {
       "name": "jeffries-combined-donors.xlsx",
       "bytes": 7828588,
-      "sha256": "2087255197913b6f9cc49625b1ba2682747debbc0a7e38964c36f657a56c2ff6"
+      "sha256": "0b51fd928e4383d32ccca82bb6b00739c5580e04e5ed2bcfdce2bf0435c4e47a"
     },
     {
       "name": "jeffries-indirect.csv",
@@ -89,8 +89,8 @@
     },
     {
       "name": "schumer-combined-donors.xlsx",
-      "bytes": 4984449,
-      "sha256": "f49575b76fdfa158d719f77924ed3cd1aa808305070d26c87b18ace9d34b7d40"
+      "bytes": 4984446,
+      "sha256": "14b5e30bea6cf81ef32f579f37f1cb88f7179123261ce0c35f52808a4fc21ede"
     },
     {
       "name": "schumer-indirect.csv",
