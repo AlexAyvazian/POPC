@@ -4,7 +4,8 @@
     "/api/research",
     "/api/web-search",
     "/api/letter",
-    "/api/petition"
+    "/api/petition",
+    "/api/fec-saved"
   ],
   "exclude": []
 }
